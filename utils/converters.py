@@ -22,6 +22,7 @@ class CommandConverter(commands.Converter):
 
         return obj
 
+
 class Query(commands.Converter):
     def __init__(self, *, multi=True, **kwargs):
         self.multi = multi
