@@ -4,6 +4,8 @@ import random
 import discord
 from discord.ext import commands
 
+import utils
+
 
 class Meta:
     @commands.command()
@@ -19,6 +21,17 @@ class Meta:
 
             filetype = r.headers.get('Content-Type').partition('/')[-1]
             filename = f'{member.name}.{filetype}'
+            file = discord.File(io.BytesIO(await r.read()), filename)
+            await ctx.send(file=file)
+
+    @commands.command()
+    async def emoji(self, ctx, emoji: utils.EmojiConverter):
+        async with ctx.session.get(emoji.url) as r:
+            if r.status != 200:
+                return await ctx.send('Failed to download avatar.')
+
+            filetype = r.headers.get('Content-Type').partition('/')[-1]
+            filename = f'{emoji.name}.{filetype}'
             file = discord.File(io.BytesIO(await r.read()), filename)
             await ctx.send(file=file)
 

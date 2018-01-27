@@ -3,12 +3,13 @@ import datetime
 
 import parsedatetime as pdt
 from dateutil.relativedelta import relativedelta
+import discord
 from discord.ext import commands
 
 from . import CaseInsensitiveDict
 
 
-__all__ = ('Group', 'group', 'CommandConverter', 'Query', 'Time')
+__all__ = ('Group', 'group', 'EmojiConverter', 'Emoji', 'CommandConverter', 'Query', 'Time')
 
 
 class Group(commands.Group):
@@ -20,6 +21,35 @@ class Group(commands.Group):
 
 def group(**attrs):
     return commands.command(cls=Group, **attrs)
+
+
+class EmojiConverter(commands.Converter):
+    compiled = re.compile(r'<a?:(.+?):([0-9]{15,21})>')
+    async def convert(self, ctx, argument):
+        match = self.compiled.match(argument)
+        if not match:
+            try:
+                kwargs = {'id': int(argument)}
+            except ValueError:
+                kwargs = {'name': argument}
+            emoji = discord.utils.get(ctx.guild.emojis, **kwargs)
+            if emoji is None:
+                raise commands.BadArgument('This is not a custom Emoji.')
+            return emoji
+
+        return Emoji(match.group(1), match.group(2), argument.startswith('<a:'))
+
+
+class Emoji:
+    def __init__(self, name, id, animated):
+        self.name = name
+        self.id = id
+        self.animated = animated
+
+    @property
+    def url(self):
+        _format = 'gif' if self.animated else 'png'
+        return f'https://cdn.discordapp.com/emojis/{self.id}.{_format}'
 
 
 class CommandConverter(commands.Converter):
