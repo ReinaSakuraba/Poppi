@@ -47,7 +47,6 @@ class Meta:
 
         embed = discord.Embed(title='Feedback', description=message)
         embed.timestamp = ctx.message.created_at
-        embed.color = 0xFF0000
         embed.set_author(name=ctx.author, icon_url=ctx.author.avatar_url)
         embed.set_footer(text=f'Author ID: {ctx.author.id}')
 
