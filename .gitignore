@@ -1,3 +1,4 @@
 *.pyc
 *.json
 config.py
+!xenox/json/*.json

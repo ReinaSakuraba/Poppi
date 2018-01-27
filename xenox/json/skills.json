@@ -1,0 +1,472 @@
+{
+  "steel flesh": {
+    "Name": "Steel Flesh",
+    "Class/Rank": "Striker 2",
+    "Effect": "Boosts maximum HP by [10/15/20/25/30]%."
+  },
+  "unwavering courage": {
+    "Name": "Unwavering Courage",
+    "Class/Rank": "Striker 3",
+    "Effect": "Boosts melee accuracy by [12/14/16/18/20]%."
+  },
+  "flame trigger": {
+    "Name": "Flame Trigger",
+    "Class/Rank": "Striker 5",
+    "Effect": "Boosts Blaze Damage by [12/14/16/18/20]%."
+  },
+  "mighty muscle": {
+    "Name": "Mighty Muscle",
+    "Class/Rank": "Striker 7",
+    "Effect": "Boosts melee attack by [10/15/20/25/30]%."
+  },
+  "combat presence": {
+    "Name": "Combat Presence",
+    "Class/Rank": "Striker 9",
+    "Effect": "Extends Taunt effects by [10/12/14/16/18] seconds."
+  },
+  "dismantler": {
+    "Name": "Dismantler",
+    "Class/Rank": "Striker 10",
+    "Effect": "Grants a [25/30/35/40/45]% chance of dealing [50/75/100/125/150]% more damage to appendage with Melee Arts."
+  },
+  "cqc master": {
+    "Name": "CQC Master",
+    "Class/Rank": "Samurai Gunner 2",
+    "Effect": "Boosts critical chance by [30/35/40/45/50]% when triggering a melee combo."
+  },
+  "auto melee boost": {
+    "Name": "Auto Melee Boost",
+    "Class/Rank": "Samurai Gunner 3",
+    "Effect": "Boosts melee auto-attack damage by [30/35/40/45/50]%."
+  },
+  "iron knuckle": {
+    "Name": "Iron Knuckle",
+    "Class/Rank": "Samurai Gunner 4",
+    "Effect": "Boosts physical damage by [30/35/40/45/50]%."
+  },
+  "healing aura": {
+    "Name": "Healing Aura",
+    "Class/Rank": "Samurai Gunner 5",
+    "Effect": "Recovers [12/14/16/18/20]% of your HP when you use an aura."
+  },
+  "weapon guard": {
+    "Name": "Weapon Guard",
+    "Class/Rank": "Samurai Gunner 6",
+    "Effect": "Boosts physical resistance by [12/14/16/18/20] when wielding a melee weapon."
+  },
+  "blazing auto": {
+    "Name": "Blazing Auto",
+    "Class/Rank": "Samurai Gunner 7",
+    "Effect": "Grants a [10/12/14/16/18]% chance to inflict Blaze [I/I/II/II/III] when melee auto-attacking."
+  },
+  "theroid slayer": {
+    "Name": "Theroid Slayer",
+    "Class/Rank": "Samurai Gunner 9",
+    "Effect": "Boosts damage to theroid enemies by [30/35/40/45/50]%."
+  },
+  "yamato spirit": {
+    "Name": "Yamato Spirit",
+    "Class/Rank": "Samurai Gunner 10",
+    "Effect": "Boosts TP by [20/30/40/50/60] when using a Melee Art; double that if you have an aura active."
+  },
+  "conflagrant edge": {
+    "Name": "Conflagrant Edge",
+    "Class/Rank": "Duelist 2",
+    "Effect": "Boosts thermal damage by [10/20/30/40/50]%."
+  },
+  "aggro boost": {
+    "Name": "Aggro Boost",
+    "Class/Rank": "Duelist 3",
+    "Effect": "Boosts damage to taunted enemies by [20/40/60/80/100]%."
+  },
+  "fortified flesh": {
+    "Name": "Fortified Flesh",
+    "Class/Rank": "Duelist 5",
+    "Effect": "Boosts maximum HP by[30/35/40/45/50]%."
+  },
+  "grand procession": {
+    "Name": "Grand Procession",
+    "Class/Rank": "Duelist 7",
+    "Effect": "Boosts entire party's TP by [300/350/400/450/500] when activating Overdrive."
+  },
+  "thermal shield": {
+    "Name": "Thermal Shield",
+    "Class/Rank": "Shield Trooper 2",
+    "Effect": "Boosts thermal resistance by [12/14/16/18/20] when wielding a melee weapon."
+  },
+  "topple toppler": {
+    "Name": "Topple Toppler",
+    "Class/Rank": "Shield Trooper 3",
+    "Effect": "Reduces enemy Topple resistance by [10/15/20/25/30]%."
+  },
+  "shield screen": {
+    "Name": "Shield Screen",
+    "Class/Rank": "Shield Trooper 4",
+    "Effect": "Reduces damage by [10/15/20/25/30]% when wielding a shield."
+  },
+  "rising renewal": {
+    "Name": "Rising Renewal",
+    "Class/Rank": "Shield Trooper 5",
+    "Effect": "Boosts HP recovery by [10/15/20/25/30]% when revived."
+  },
+  "long topple": {
+    "Name": "Long Topple",
+    "Class/Rank": "Shield Trooper 6",
+    "Effect": "Extends Topple effects by [1/2/3/4/5] second(s)"
+  },
+  "trauma tension": {
+    "Name": "Trauma Tension",
+    "Class/Rank": "Shield Trooper 8",
+    "Effect": "Grants a 15% chance of receiving [50/75/100/125/150] TP when taking damage."
+  },
+  "dirty fighter": {
+    "Name": "Dirty Fighter",
+    "Class/Rank": "Shield Trooper 9",
+    "Effect": "Boosts Melee Art damage by [20/40/60/80/100]% to enemies inflicted with Topple."
+  },
+  "stand strong": {
+    "Name": "Stand Strong",
+    "Class/Rank": "Shield Trooper 10",
+    "Effect": "Boosts resistance to Stagger, Topple, Knockback, and Launch by [20/40/60/80/100] when wielding a shield."
+  },
+  "machine gunner": {
+    "Name": "Machine Gunner",
+    "Class/Rank": "Bastion Warrior 2",
+    "Effect": "Boosts ranged damage by [20/40/60/80/100]% when fighting two or more enemies."
+  },
+  "heatseeker": {
+    "Name": "Heatseeker",
+    "Class/Rank": "Bastion Warrior 5",
+    "Effect": "Boosts critical chance by [50/60/70/80/100]% when attacking enemies inflicted with Blaze."
+  },
+  "double spike": {
+    "Name": "Double Spike",
+    "Class/Rank": "Bastion Warrior 9",
+    "Effect": "Boosts spike damage by [20/40/60/80/100]%."
+  },
+  "double reflect": {
+    "Name": "Double Reflect",
+    "Class/Rank": "Bastion Warrior 10",
+    "Effect": "Boosts reflect damage by [20/40/60/80/100]%."
+  },
+  "agile gunslinger": {
+    "Name": "Agile Gunslinger",
+    "Class/Rank": "Commando 2",
+    "Effect": "Boosts evasion by [12/14/16/18/20]% when wielding a ranged weapon."
+  },
+  "steady hand": {
+    "Name": "Steady Hand",
+    "Class/Rank": "Commando 3",
+    "Effect": "Boosts ranged accuracy by [12/14/16/18/20]%."
+  },
+  "boosted bullets": {
+    "Name": "Boosted Bullets",
+    "Class/Rank": "Commando 4",
+    "Effect": "Boosts ranged attack by [10/15/20/25/30]%."
+  },
+  "background noise": {
+    "Name": "Background Noise",
+    "Class/Rank": "Commando 5",
+    "Effect": "Boosts damage by [25/50/75/100/125]% when using Melee Arts from behind."
+  },
+  "combo gunner": {
+    "Name": "Combo Gunner",
+    "Class/Rank": "Commando 7",
+    "Effect": "Boosts damage by [25/50/75/100/125]% when triggering ranged combos."
+  },
+  "third eye": {
+    "Name": "Third Eye",
+    "Class/Rank": "Commando 8",
+    "Effect": "Boosts TP by [20/30/40/50/60] when using a Ranged Art; double that if you have an aura active."
+  },
+  "master edge": {
+    "Name": "Master Edge",
+    "Class/Rank": "Commando 9",
+    "Effect": "Boosts critical chance by [5/6/7/8/10]% when wielding a melee weapon."
+  },
+  "aura burst": {
+    "Name": "Aura Burst",
+    "Class/Rank": "Commando 10",
+    "Effect": "Extends Aura effects by [4/5/6/7/8] seconds"
+  },
+  "deep fang": {
+    "Name": "Deep Fang",
+    "Class/Rank": "Winged Viper 2",
+    "Effect": "Reduces enemy debuff resistance by [10/15/20/25/30]% when attacking from the side."
+  },
+  "mortal enemy": {
+    "Name": "Mortal Enemy",
+    "Class/Rank": "Winged Viper 3",
+    "Effect": "Boosts damage to humanoid enemies by [30/35/40/45/50]%."
+  },
+  "trigger happy": {
+    "Name": "Trigger Happy",
+    "Class/Rank": "Winged Viper 5",
+    "Effect": "Reduces an Art's cooldown by [30/35/40/45/50]% when triggering a ranged combo."
+  },
+  "lifeline": {
+    "Name": "Lifeline",
+    "Class/Rank": "Winged Viper 7",
+    "Effect": "Recovers [10/15/20/25/30]% of your HP when HP is at 50% or less and you use an aura."
+  },
+  "mindscape": {
+    "Name": "Mindscape",
+    "Class/Rank": "Winged Viper 9",
+    "Effect": "Boosts maximum TP by [500/750/1000/1250/1500]."
+  },
+  "hellhound": {
+    "Name": "Hellhound",
+    "Class/Rank": "Winged Viper 10",
+    "Effect": "Extends Overdrive duration by [5/6/7/8/10] seconds."
+  },
+  "night vision": {
+    "Name": "Night Vision",
+    "Class/Rank": "Full Metal Jaguar 2",
+    "Effect": "Boosts damage by [20/40/60/80/100]% during the nighttime."
+  },
+  "zero lapse": {
+    "Name": "Zero Lapse",
+    "Class/Rank": "Full Metal Jaguar 3",
+    "Effect": "Reduces cooldown for melee auto-attacks by [30/35/40/45/50]%."
+  },
+  "red zone": {
+    "Name": "Red Zone",
+    "Class/Rank": "Full Metal Jaguar 5",
+    "Effect": "Boosts critical chance by [20/25/30/35/40]% during Overdrive."
+  },
+  "crisis catalyst": {
+    "Name": "Crisis Catalyst",
+    "Class/Rank": "Full Metal Jaguar 7",
+    "Effect": "Boosts critical chance by [10/15/20/25/30]% when HP is 50% or less. Effect doubles when HP is 25% or less."
+  },
+  "blood carnival": {
+    "Name": "Blood Carnival",
+    "Class/Rank": "Full Metal Jaguar 9",
+    "Effect": "Grants a [5/10/15/20/25]% chance of converting [4/6/8/10/12]% of damage dealt to HP when melee auto-attacking."
+  },
+  "phantom counter": {
+    "Name": "Phantom Counter",
+    "Class/Rank": "Full Metal Jaguar 10",
+    "Effect": "Boosts your Overdrive count by [4/6/8/10/12] when activating Overdrive."
+  },
+  "killshot": {
+    "Name": "Killshot",
+    "Class/Rank": "Partisan Eagle 2",
+    "Effect": "Boosts critical chance for ranged auto-attacks by [5/6/7/8/10]%."
+  },
+  "electric guard": {
+    "Name": "Electric Guard",
+    "Class/Rank": "Partisan Eagle 3",
+    "Effect": "Boosts electric resistance by [12/14/16/18/20] when wielding a melee weapon."
+  },
+  "electric boost": {
+    "Name": "Electric Boost",
+    "Class/Rank": "Partisan Eagle 5",
+    "Effect": "Boosts electric damage by [30/35/40/45/50]%."
+  },
+  "knock 'n' shock": {
+    "Name": "Knock 'n' Shock",
+    "Class/Rank": "Partisan Eagle 7",
+    "Effect": "Grants a [10/12/14/16/18]% chance of inflicting Shock [I/I/II/II/III] when using Melee Arts."
+  },
+  "fleet feet": {
+    "Name": "Fleet Feet",
+    "Class/Rank": "Partisan Eagle 9",
+    "Effect": "Boosts evasion by [10/15/20/25/30]% when wielding a melee weapon."
+  },
+  "piscinoid slayer": {
+    "Name": "Piscinoid Slayer",
+    "Class/Rank": "Partisan Eagle 10",
+    "Effect": "Boosts damage to piscinoid enemies by [30/35/40/45/50]%."
+  },
+  "long shot": {
+    "Name": "Long Shot",
+    "Class/Rank": "Astral Crusader 2",
+    "Effect": "Boosts ranged weapon range by [5/10/15/20/25]m."
+  },
+  "unstoppable": {
+    "Name": "Unstoppable",
+    "Class/Rank": "Astral Crusader 3",
+    "Effect": "Boosts resistances to Stagger, Topple, Knockback, and Launch by [20/40/60/80/100] when sprinting."
+  },
+  "quick reload": {
+    "Name": "Quick Reload",
+    "Class/Rank": "Astral Crusader 5",
+    "Effect": "Reduces cooldown for ranged auto-attacks by [30/35/40/45/50]%."
+  },
+  "conductive strike": {
+    "Name": "Conductive Strike",
+    "Class/Rank": "Astral Crusader 7",
+    "Effect": "Boosts electric damage by [200/225/250/275/300]% to enemies inflicted with Shock."
+  },
+  "electric flesh": {
+    "Name": "Electric Flesh",
+    "Class/Rank": "Astral Crusader 9",
+    "Effect": "Grants a [10/15/20/25/30]% chance of dealing electric spike damage when taking a hit."
+  },
+  "tp overdrive": {
+    "Name": "TP Overdrive",
+    "Class/Rank": "Astral Crusader 10",
+    "Effect": "Boosts TP by [100/110/120/130/150] when using an Art while in Overdrive."
+  },
+  "inner search": {
+    "Name": "Inner Search",
+    "Class/Rank": "Enforcer 2",
+    "Effect": "Boosts potential by [12/14/16/18/20]%."
+  },
+  "beam boost": {
+    "Name": "Beam Boost",
+    "Class/Rank": "Enforcer 4",
+    "Effect": "Boosts beam damage by [30/35/40/45/50]%."
+  },
+  "beam guard": {
+    "Name": "Beam Guard",
+    "Class/Rank": "Enforcer 6",
+    "Effect": "Boosts beam resistance by [12/14/16/18/20] when wielding a ranged weapon."
+  },
+  "buff heal": {
+    "Name": "Buff Heal",
+    "Class/Rank": "Enforcer 8",
+    "Effect": "Recovers [100/200/300/400/500] HP when receiving a buff."
+  },
+  "healing touch": {
+    "Name": "Healing Touch",
+    "Class/Rank": "Enforcer 9",
+    "Effect": "Boosts the HP recovery of party members you revive by [30/35/40/45/50]%."
+  },
+  "high tension": {
+    "Name": "High Tension",
+    "Class/Rank": "Enforcer 10",
+    "Effect": "Boosts maximum TP by [500/750/1000/1250/1500]."
+  },
+  "beauty sleep": {
+    "Name": "Beauty Sleep",
+    "Class/Rank": "Psycorruptor 2",
+    "Effect": "Extends Sleep effects by [10/12/14/16/18] seconds."
+  },
+  "brain wall": {
+    "Name": "Brain Wall",
+    "Class/Rank": "Psycorruptor 3",
+    "Effect": "Boosts resistance to Sleep, Control, and Slow Arts by [20/40/60/80/100] when you have an aura active."
+  },
+  "gentle approach": {
+    "Name": "Gentle Approach",
+    "Class/Rank": "Psycorruptor 4",
+    "Effect": "Grants a [50/60/70/80/100]% chance of not waking up a sleeping enemy when auto-attacking."
+  },
+  "king's decree": {
+    "Name": "King's Decree",
+    "Class/Rank": "Psycorruptor 5",
+    "Effect": "Reduces enemy Control resistance by [10/15/20/25/30]% and raises debuff tier by 1."
+  },
+  "extra armor": {
+    "Name": "Extra Armor",
+    "Class/Rank": "Psycorruptor 6",
+    "Effect": "Boosts Barrier's damage absorbtion by [3/6/9/12/15]%."
+  },
+  "feather touch": {
+    "Name": "Feather Touch",
+    "Class/Rank": "Psycorruptor 8",
+    "Effect": "Grants a [80/85/90/95/100]% chance of not waking a sleeping enemy when attacking with an Art."
+  },
+  "unpleasant dream": {
+    "Name": "Unpleasant Dream",
+    "Class/Rank": "Psycorruptor 9",
+    "Effect": "Boosts damage to sleeping enemies by [50/75/100/125/150]%."
+  },
+  "core crusher": {
+    "Name": "Core Crusher",
+    "Class/Rank": "Psycorruptor 10",
+    "Effect": "Negates appendage damage from your Ether attacks, but boosts primary damage by [50/75/100/125/150]%."
+  },
+  "ether guard": {
+    "Name": "Ether Guard",
+    "Class/Rank": "Mastermind 1",
+    "Effect": "Boosts ether resistance by [12/14/16/18/20] when wielding a ranged weapon."
+  },
+  "gravity boost": {
+    "Name": "Gravity Boost",
+    "Class/Rank": "Mastermind 3",
+    "Effect": "Boosts gravity damage by [10/20/30/40/50]%."
+  },
+  "well-weathered": {
+    "Name": "Well-Weathered",
+    "Class/Rank": "Mastermind 4",
+    "Effect": "Boosts TP by [200/225/250/275/300] when taking weather damage."
+  },
+  "appendage erosion": {
+    "Name": "Appendage Erosion",
+    "Class/Rank": "Mastermind 5",
+    "Effect": "Boosts appendage damage by [10/20/30/40/50]% for every debuff on the enemy."
+  },
+  "resistant flesh": {
+    "Name": "Resistant Flesh",
+    "Class/Rank": "Mastermind 6",
+    "Effect": "Boosts resistance to all debuffs by [12/15/18/21/24]%."
+  },
+  "tactical analyst": {
+    "Name": "Tactical Analyst",
+    "Class/Rank": "Mastermind 7",
+    "Effect": "Reduces enemy debuff resistance by [12/15/18/21/24]% when landing an attack."
+  },
+  "king's boon": {
+    "Name": "King's Boon",
+    "Class/Rank": "Mastermind 9",
+    "Effect": "Grants All Abilities Up [I/II/III/IV/V] to enemies under your Control."
+  },
+  "secondary accelerator": {
+    "Name": "Secondary Accelerator",
+    "Class/Rank": "Mastermind 10",
+    "Effect": "Reduces secondary cooldown by [10/20/30/40/50]%."
+  },
+  "ether boost": {
+    "Name": "Ether Boost",
+    "Class/Rank": "Blast Fencer 1",
+    "Effect": "Boosts ether damage by [30/35/40/45/50]%."
+  },
+  "mechanoid slayer": {
+    "Name": "Mechanoid Slayer",
+    "Class/Rank": "Blast Fencer 3",
+    "Effect": "Boosts damage to mechanoid enemies by +[30/35/40/45/50]%."
+  },
+  "knight's soul": {
+    "Name": "Knight's Soul",
+    "Class/Rank": "Blast Fencer 5",
+    "Effect": "Boosts maximum TP by [500/750/1000/1250/1500]."
+  },
+  "aura assault": {
+    "Name": "Aura Assault",
+    "Class/Rank": "Blast Fencer 7",
+    "Effect": "Boosts melee attack and melee accuracy by [10/15/20/25/30]% when you have an aura active."
+  },
+  "buff extender": {
+    "Name": "Buff Extender",
+    "Class/Rank": "Blast Fencer 9",
+    "Effect": "Extends buff effects by [5/6/7/8/10] seconds."
+  },
+  "supreme sword": {
+    "Name": "Supreme Sword",
+    "Class/Rank": "Blast Fencer 10",
+    "Effect": "Boosts damage by [20/40/60/80/100]% when triggering melee combos."
+  },
+  "gravity guard": {
+    "Name": "Gravity Guard",
+    "Class/Rank": "Galactic Knight 2",
+    "Effect": "Boosts gravity resistance by [12/14/16/18/20] when wielding a ranged weapon."
+  },
+  "fast forward": {
+    "Name": "Fast Forward",
+    "Class/Rank": "Galactic Knight 5",
+    "Effect": "Reduces an Art's cooldown by [10/20/30/40/50]% when triggering a melee combo."
+  },
+  "stellar entry": {
+    "Name": "Stellar Entry",
+    "Class/Rank": "Galactic Knight 9",
+    "Effect": "Boosts GP by [1000/1250/1500/1750/2000] when boarding your Skell while in Overdrive."
+  },
+  "synchrony": {
+    "Name": "Synchrony",
+    "Class/Rank": "Galactic Knight 10",
+    "Effect": "Boosts Skell melee attack, ranged attack, melee & ranged accuracy, potential, and evasion by [4/6/8/10/12]%."
+  }
+}
