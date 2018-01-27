@@ -13,7 +13,7 @@ class MissingPerms(commands.MissingPermissions):
         if roles and perms:
             stuffs.append('You need either a role with one of these names:')
         elif roles:
-            stuff.append('You need a role with one of these names:')
+            stuffs.append('You need a role with one of these names:')
         elif perms:
             stuffs.append('You need one of the following permissions:')
 
