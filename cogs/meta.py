@@ -53,6 +53,12 @@ class Meta:
         await channel.send(embed=embed)
         await ctx.send('Successfully sent feedback')
 
+    @commands.command()
+    async def support(self, ctx):
+        """For supporting the bot and bot creator."""
+
+        await ctx.send('https://www.patreon.com/ReinaSakuraba')
+
 
 def setup(bot):
     bot.add_cog(Meta())
