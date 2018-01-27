@@ -18,6 +18,7 @@ class Info:
         query = 'SELECT COUNT(*) FROM commands WHERE used > $1;'
         commands_used = await ctx.pool.fetchval(query, ctx.bot.start_time)
         version = pkg_resources.get_distribution('discord.py')
+        recent_changes, _ = await self.get_recent_changes(limit=3)
 
         embed = discord.Embed(timestamp=ctx.bot.start_time)
         embed.set_author(name=ctx.bot.owner, icon_url=ctx.bot.owner.avatar_url)
@@ -28,6 +29,7 @@ class Info:
         embed.add_field(name='Commands Run', value=commands_used)
         embed.add_field(name='Memory Usage', value=ctx.bot.memory_usage)
         embed.add_field(name='CPU Usage', value=ctx.bot.cpu_usage)
+        embed.add_field(name='Recent Changes', value=recent_changes, inline=False)
         embed.set_footer(text=f'Made with {version}', icon_url='http://i.imgur.com/5BFecvA.png')
 
         await ctx.send(embed=embed)
