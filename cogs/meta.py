@@ -26,6 +26,8 @@ class Meta:
 
     @commands.command()
     async def emoji(self, ctx, emoji: utils.EmojiConverter):
+        """Posts an enlarged version of a custom emoji."""
+
         async with ctx.session.get(emoji.url) as r:
             if r.status != 200:
                 return await ctx.send('Failed to download avatar.')
