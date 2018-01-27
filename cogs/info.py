@@ -93,9 +93,31 @@ class Info:
         final_url = f'{source_url}/blob/{branch}/{location}#L{first_line}-L{last_line}'
         await ctx.send(final_url)
 
+    @commands.command()
+    async def changelog(self, ctx):
+        """Shows recent changes made to the bot."""
+
+        changes, _ = await self.get_recent_changes()
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=changes.split('\n'))
+            paginator.embed.title = 'Change Log'
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
+
     async def get_github_url(self):
         result = await utils.run_subprocess('git remote get-url origin')
         return result[0].strip()[:-4]
+
+    async def get_recent_changes(self, *, limit=None):
+        url = await self.get_github_url()
+        cmd = f'git log --pretty=format:"[%s]({url}/commit/%H) (%cr)"'
+        if limit is not None:
+            cmd += f' -{limit}'
+
+        result = await utils.run_subprocess(cmd)
+        return result
 
 
 def setup(bot):
