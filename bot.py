@@ -66,6 +66,12 @@ class Bot(commands.Bot):
         info = await self.application_info()
         self.owner_id = info.owner.id
 
+        feedback_channel = self.get_channel(config.feedback_channel)
+        if feedback_channel is None:
+            self.remove_command('feedback')
+        else:
+            self.feedback_channel = feedback_channel
+
     async def set_prefixes(self, guild_id, prefixes):
         if len(prefixes) > 10:
             raise RuntimeError('Cannot have more than 10 custom prefixes.')
