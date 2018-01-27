@@ -34,6 +34,26 @@ class Meta:
             choices = choices.split(',')
         await ctx.send('Obviously, the answer is {}.'.format(random.choice(choices)))
 
+    @commands.command()
+    async def feedback(self, ctx, *, message: str):
+        """Gives feedback about the bot.
+
+        Used to request features or bug fixes.
+        """
+
+        channel = ctx.bot.feedback_channel
+        if channel is None:
+            return
+
+        embed = discord.Embed(title='Feedback', description=message)
+        embed.timestamp = ctx.message.created_at
+        embed.color = 0xFF0000
+        embed.set_author(name=ctx.author, icon_url=ctx.author.avatar_url)
+        embed.set_footer(text=f'Author ID: {ctx.author.id}')
+
+        await channel.send(embed=embed)
+        await ctx.send('Successfully sent feedback')
+
 
 def setup(bot):
     bot.add_cog(Meta())
