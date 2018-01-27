@@ -1,6 +1,14 @@
+import re
+import datetime
+
+import parsedatetime as pdt
+from dateutil.relativedelta import relativedelta
 from discord.ext import commands
 
 from . import CaseInsensitiveDict
+
+
+__all__ = ('Group', 'group', 'CommandConverter', 'Query', 'Time')
 
 
 class Group(commands.Group):
@@ -61,3 +69,75 @@ class Query(commands.Converter):
         }
         params.update(self.params)
         return params
+
+
+class Time(commands.Converter):
+    calendar = pdt.Calendar(version=pdt.VERSION_CONTEXT_STYLE)
+    compiled = re.compile("""(?:(?P<years>[0-9])(?:years?|y))?             # e.g. 2y
+                             (?:(?P<months>[0-9]{1,2})(?:months?|mo))?     # e.g. 2months
+                             (?:(?P<weeks>[0-9]{1,4})(?:weeks?|w))?        # e.g. 10w
+                             (?:(?P<days>[0-9]{1,5})(?:days?|d))?          # e.g. 14d
+                             (?:(?P<hours>[0-9]{1,5})(?:hours?|h))?        # e.g. 12h
+                             (?:(?P<minutes>[0-9]{1,5})(?:minutes?|m))?    # e.g. 10m
+                             (?:(?P<seconds>[0-9]{1,5})(?:seconds?|s))?    # e.g. 15s
+                          """, re.VERBOSE)
+
+    async def check_constraints(self, ctx, now, remaining):
+        if self.dt < now:
+            raise commands.BadArgument('This time is in the past.')
+
+        self.message = await commands.clean_content().convert(ctx, remaining or 'something')
+
+        return self
+
+    async def convert(self, ctx, argument):
+        now = datetime.datetime.utcnow()
+
+        match = self.compiled.match(argument)
+        if match is not None and match.group(0):
+            data = { k: int(v) for k, v in match.groupdict(default=0).items() }
+            remaining = argument[match.end():].strip()
+            self.dt = now + relativedelta(**data)
+            return await self.check_constraints(ctx, now, remaining)
+
+        if argument.endswith('from now'):
+            argument = argument[:-8].strip()
+
+        if argument[0:2] == 'me':
+            if argument[0:6] in ('me to ', 'me in '):
+                argument = argument[6:]
+
+        elements = self.calendar.nlp(argument, sourceTime=now)
+        if elements is None or len(elements) == 0:
+            raise commands.BadArgument('Invalid time provided, try e.g. "tomorrow" or "3 days".')
+
+        dt, status, begin, end, dt_string = elements[0]
+
+        if not status.hasDateOrTime:
+            raise commands.BadArgument('Invalid time provided, try e.g. "tomorrow" or "3 days".')
+
+        if begin not in (0, 1) and end != len(argument):
+            raise commands.BadArgument('Time is either in an inappropriate location, which ' \
+                                       'must be either at the end or beginning of your input, ' \
+                                       'or I just flat out did not understand what you meant. Sorry.')
+
+        if not status.hasTime:
+            dt = dt.replace(hour=now.hour, minute=now.minute, second=now.second, microsecond=now.microsecond)
+
+        self.dt =  dt
+
+        if begin in (0, 1):
+            if begin == 1:
+                if argument[0] != '"':
+                    raise commands.BadArgument('Expected quote before time input...')
+
+                if not (end < len(argument) and argument[end] == '"'):
+                    raise commands.BadArgument('If the time is quoted, you must unquote it.')
+
+                remaining = argument[end + 1:].lstrip(' ,.!')
+            else:
+                remaining = argument[end:].lstrip(' ,.!')
+        elif len(argument) == end:
+            remaining = argument[:begin].strip()
+
+        return await self.check_constraints(ctx, now, remaining)
