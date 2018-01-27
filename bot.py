@@ -96,6 +96,10 @@ class Bot(commands.Bot):
         cpu_usage = self.process.cpu_percent() / psutil.cpu_count()
         return f'{cpu_usage}%'
 
+    @property
+    def config(self):
+        return config
+
     async def close(self):
         await self.session.close()
         await super().close()

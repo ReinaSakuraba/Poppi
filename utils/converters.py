@@ -21,3 +21,42 @@ class CommandConverter(commands.Converter):
             raise commands.BadArgument(f'No command called "{argument}" found.')
 
         return obj
+
+class Query(commands.Converter):
+    def __init__(self, *, multi=True, **kwargs):
+        self.multi = multi
+        self.params = {'part': 'id'}
+        self.params.update(kwargs)
+
+    def parse_argument(self, argument):
+        if not self.multi:
+            return argument, 1
+
+        view = commands.view.StringView(argument)
+        limit = commands.view.quoted_word(view)
+        view.skip_ws()
+        query = view.read_rest()
+        try:
+            limit = int(limit)
+        except ValueError:
+            query = f'{limit} {query}'
+            limit = 1
+
+        if not query:
+            query = str(limit)
+            limit = 1
+
+        if limit <= 0:
+            raise commands.BadArgument('Search limit must be greater than 0.')
+
+        return query, limit
+
+    async def convert(self, ctx, argument):
+        query, limit = self.parse_argument(argument)
+
+        params = {
+            'q': query,
+            'maxResults': limit,
+        }
+        params.update(self.params)
+        return params
