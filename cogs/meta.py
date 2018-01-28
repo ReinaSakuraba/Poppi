@@ -52,6 +52,8 @@ class Meta:
 
     @commands.command()
     async def roll(self, ctx, die: str):
+        """Rolls a die in NdN or N#NdN format."""
+
         match = re.match('((?P<times>\d+)#)?(?P<rolls>\d+)d(?P<limit>\d+)', die)
         if match is None:
             return await ctx.send('Format has to be in NdN or N#NdN!')
