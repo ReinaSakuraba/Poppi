@@ -1,3 +1,4 @@
+import re
 import io
 import random
 
@@ -48,6 +49,28 @@ class Meta:
         else:
             choices = choices.split(',')
         await ctx.send('Obviously, the answer is {}.'.format(random.choice(choices)))
+
+    @commands.command()
+    async def roll(self, ctx, die: str):
+        match = re.match('((?P<times>\d+)#)?(?P<rolls>\d+)d(?P<limit>\d+)', die)
+        if match is None:
+            return await ctx.send('Format has do be in NdN or N#NdN!')
+
+        times = match.group('times')
+        rolls = int(match.group('rolls'))
+        limit = int(match.group('limit'))
+
+        def roll_die(rolls, limit):
+            return [random.randint(1, limit) for r in range(rolls)]
+
+        if times:
+            times = int(times)
+            result = '\n'.join([f'{sum(l)}: {", ".join(map(str, l))}' for l in [roll_die(rolls, limit) for i in range(times)]])
+        else:
+            rolls = roll_die(rolls, limit)
+            result = f'{sum(rolls)}: {", ".join(map(str, rolls))}'
+
+        await ctx.send(result)
 
     @commands.command()
     async def feedback(self, ctx, *, message: str):
