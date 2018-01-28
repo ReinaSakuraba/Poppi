@@ -54,7 +54,7 @@ class Meta:
     async def roll(self, ctx, die: str):
         match = re.match('((?P<times>\d+)#)?(?P<rolls>\d+)d(?P<limit>\d+)', die)
         if match is None:
-            return await ctx.send('Format has do be in NdN or N#NdN!')
+            return await ctx.send('Format has to be in NdN or N#NdN!')
 
         times = int(match.group('times')) if match.group('times') else 1
         rolls = int(match.group('rolls'))
