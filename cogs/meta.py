@@ -30,7 +30,7 @@ class Meta:
 
         async with ctx.session.get(emoji.url) as r:
             if r.status != 200:
-                return await ctx.send('Failed to download avatar.')
+                return await ctx.send('Failed to download emoji.')
 
             filetype = r.headers.get('Content-Type').partition('/')[-1]
             filename = f'{emoji.name}.{filetype}'
