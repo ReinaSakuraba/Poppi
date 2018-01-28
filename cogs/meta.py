@@ -56,19 +56,11 @@ class Meta:
         if match is None:
             return await ctx.send('Format has do be in NdN or N#NdN!')
 
-        times = match.group('times')
+        times = int(match.group('times')) if match.group('times') else 1
         rolls = int(match.group('rolls'))
         limit = int(match.group('limit'))
 
-        def roll_die(rolls, limit):
-            return [random.randint(1, limit) for r in range(rolls)]
-
-        if times:
-            times = int(times)
-            result = '\n'.join([f'{sum(l)}: {", ".join(map(str, l))}' for l in [roll_die(rolls, limit) for i in range(times)]])
-        else:
-            rolls = roll_die(rolls, limit)
-            result = f'{sum(rolls)}: {", ".join(map(str, rolls))}'
+        result = '\n'.join([f'{sum(l)}: {", ".join(map(str, l))}' for l in [[random.randint(1, limit) for r in range(rolls)] for i in range(times)]])
 
         await ctx.send(result)
 
