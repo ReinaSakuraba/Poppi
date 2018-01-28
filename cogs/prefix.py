@@ -18,6 +18,11 @@ def valid_prefix(argument):
 class Prefix:
     """Commands used to manage custom prefixes."""
 
+    def __local_check(self, ctx):
+        if not ctx.guild:
+            raise commands.NoPrivateMessage()
+        return True
+
     async def __error(self, ctx, exception):
         if isinstance(exception, commands.BadArgument):
             await ctx.send(exception)

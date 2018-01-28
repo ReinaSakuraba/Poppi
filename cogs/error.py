@@ -1,0 +1,47 @@
+import traceback
+
+import discord
+from discord.ext import commands
+
+import utils
+
+
+class ErrorHandler:
+    handler = {
+        commands.DisabledCommand: 'The "{command_name}" command has been disabled.',
+        commands.NoPrivateMessage: 'The "{command_name}" command may not be used in Direct Messages.',
+        utils.MissingPerms: '```\n{exception}\n```'
+    }
+
+    async def on_command_error(self, ctx, exception):
+        error  = getattr(exception, 'original', exception)
+
+        ignored = (commands.CommandNotFound)
+        if isinstance(error, ignored):
+            return
+
+        try:
+            message = self.handler[type(exception)]
+        except KeyError:
+            pass
+        else:
+            return await ctx.send(message.format(exception=exception, command_name=ctx.command.qualified_name))
+
+        embed = discord.Embed(title=f'Command Exception', color=discord.Color.red())
+        embed.set_footer(text='Occured on')
+        embed.timestamp = ctx.message.created_at
+
+        exc = ''.join(traceback.format_exception(type(exception), exception, exception.__traceback__, chain=False))
+        exc = exc.replace('`', '\u200b')
+        embed.description = f'```py\n{exc}\n```'
+
+        embed.add_field(name='Command', value=ctx.command.qualified_name)
+        embed.add_field(name='Invoker', value=ctx.author)
+        embed.add_field(name='Location', value=f'Guild: {ctx.guild}\nChannel: {ctx.channel}')
+        embed.add_field(name='Message', value=ctx.message.clean_content)
+
+        await ctx.bot.feedback_channel.send(embed=embed)
+
+
+def setup(bot):
+    bot.add_cog(ErrorHandler())
