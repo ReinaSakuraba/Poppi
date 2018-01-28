@@ -52,17 +52,23 @@ class Meta:
 
     @commands.command()
     async def roll(self, ctx, die: str):
-        """Rolls a die in NdN or N#NdN format."""
+        """Rolls a die in N#NdN+N format."""
 
-        match = re.match('((?P<times>\d+)#)?(?P<rolls>\d+)d(?P<limit>\d+)', die)
+        match = re.match('((?P<times>\d+)#)?(?P<rolls>\d+)d(?P<limit>\d+)(?P<modifier>[+/-]\d+)?', die)
         if match is None:
-            return await ctx.send('Format has to be in NdN or N#NdN!')
+            return await ctx.send('Format has to be in N#NdN+N!')
 
         times = int(match.group('times')) if match.group('times') else 1
         rolls = int(match.group('rolls'))
         limit = int(match.group('limit'))
+        modifier = match.group('modifier')
+        int_modifier = int(modifier) if modifier else 0
 
-        result = '\n'.join([f'{sum(l)}: {", ".join(map(str, l))}' for l in [[random.randint(1, limit) for r in range(rolls)] for i in range(times)]])
+        rolls = [[random.randint(1, limit) for r in range(rolls)] for i in range(times)]
+        if modifier:
+            result = '\n'.join([f'{sum(l) + int_modifier}: ({", ".join(map(str, l))}) {modifier}' for l in rolls])
+        else:
+            result = '\n'.join([f'{sum(l) + int_modifier}: {", ".join(map(str, l))}' for l in rolls ])
 
         await ctx.send(result)
 
