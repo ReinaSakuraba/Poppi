@@ -14,10 +14,10 @@ class ErrorHandler:
     }
 
     async def on_command_error(self, ctx, exception):
-        error  = getattr(exception, 'original', exception)
+        exception = getattr(exception, 'original', exception)
 
-        ignored = (commands.CommandNotFound)
-        if isinstance(error, ignored):
+        ignored = (commands.CommandNotFound, commands.UserInputError)
+        if isinstance(exception, ignored):
             return
 
         try:
