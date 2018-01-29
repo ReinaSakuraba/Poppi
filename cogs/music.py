@@ -312,7 +312,7 @@ class Music:
         if vc.is_playing() or vc.is_paused():
             if value is not None:
                 try:
-                    await utils.role_or_permissions(ctx, 'Admin', manage_guild=True)
+                    utils.role_or_permissions(ctx, 'Admin', manage_guild=True)
                 except commands.MissingPermissions as e:
                     await ctx.send(f'```\n{e}\n```')
                 else:
