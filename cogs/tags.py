@@ -243,7 +243,7 @@ class Tags:
         records = await ctx.pool.fetch(query, ctx.guild.id, name)
 
         if records:
-            entries = [f'{index}: {record[0]}' for index, record in enumerate(records)]
+            entries = [f'{index}: {record[0]}' for index, record in enumerate(records, 1)]
             try:
                 paginator = utils.EmbedPaginator(ctx, entries=entries)
                 await paginator.paginate()
