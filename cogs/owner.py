@@ -230,6 +230,42 @@ class Owner:
             except discord.HTTPException as e:
                 await ctx.send(f'Unexpected error: `{e}`')
 
+    @commands.command(hidden=True)
+    async def sql(self, ctx, *, query: str):
+        """Run some SQL."""
+
+        query = self.cleanup_code(query)
+
+        is_multistatement = query.count(';') > 1
+        if is_multistatement:
+            strategy = ctx.pool.execute
+        else:
+            strategy = ctx.pool.fetch
+
+        try:
+            start = time.perf_counter()
+            results = await strategy(query)
+            dt = (time.perf_counter() - start) * 1000.0
+        except Exception:
+            return await ctx.send(f'```py\n{traceback.format_exc()}\n```')
+
+        rows = len(results)
+        if is_multistatement or rows == 0:
+            return await ctx.send(f'`{dt:.2f}ms: {results}`')
+
+        headers = list(results[0].keys())
+        table = utils.TabularData()
+        table.set_columns(headers)
+        table.add_rows(list(r.values()) for r in results)
+        render = table.render()
+
+        fmt = f'```\n{render}\n```\n*Returned {utils.plural("row", rows)} in {dt:.2f}ms*'
+        if len(fmt) > 2000:
+            fp = io.BytesIO(fmt.encode('utf-8'))
+            await ctx.send('Too many results...', file=discord.File(fp, 'results.txt'))
+        else:
+            await ctx.send(fmt)
+
 
 def setup(bot):
     bot.add_cog(Owner())
