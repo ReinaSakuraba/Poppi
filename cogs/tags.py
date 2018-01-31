@@ -44,6 +44,12 @@ class Tags:
 
     @utils.group(invoke_without_command=True)
     async def tag(self, ctx, *, tag: utils.TagName):
+        """Allows you to tag text for later retrieval.
+
+        If a subcommand is not called, then this will search the tag
+        database for the tag requested.
+        """
+
         try:
             row = await self.get_tag(ctx.guild.id, tag, pool=ctx.pool)
         except RuntimeError as e:
