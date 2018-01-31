@@ -10,7 +10,7 @@ import utils
 
 class Tags:
     async def __error(self, ctx, exception):
-        if isinstance(exception, commands.BadArgument):
+        if isinstance(exception, commands.MissingRequiredArgument):
             await ctx.send(exception)
 
     @utils.group(invoke_without_command=True)
