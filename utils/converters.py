@@ -9,7 +9,7 @@ from discord.ext import commands
 from . import CaseInsensitiveDict
 
 
-__all__ = ('Group', 'group', 'EmojiConverter', 'Emoji', 'CommandConverter', 'Query', 'Time')
+__all__ = ('Group', 'group', 'EmojiConverter', 'Emoji', 'CommandConverter', 'Query', 'TagName', 'Time')
 
 
 class Group(commands.Group):
@@ -99,6 +99,20 @@ class Query(commands.Converter):
         }
         params.update(self.params)
         return params
+
+
+class TagName(commands.clean_content):
+    async def convert(self, ctx, argument):
+        converted = await super().convert(ctx, argument)
+
+        if len(converted) > 100:
+            raise commands.BadArgument('Tag name cannot have over 100 characters.')
+
+        command = ctx.bot.get_command('tag')
+        if converted.lower().startswith(tuple(command.all_commands)):
+            raise commands.BadArgument('This tag name starts with a reserved word.')
+
+        return converted
 
 
 class Time(commands.Converter):

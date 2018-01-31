@@ -10,11 +10,11 @@ import utils
 
 class Tags:
     async def __error(self, ctx, exception):
-        if isinstance(exception, commands.MissingRequiredArgument):
+        if isinstance(exception, commands.UserInputError):
             await ctx.send(exception)
 
     @utils.group(invoke_without_command=True)
-    async def tag(self, ctx, *, tag: str):
+    async def tag(self, ctx, *, tag: utils.TagName):
         query = """
                 SELECT id, content
                 FROM tags
@@ -31,7 +31,7 @@ class Tags:
         await ctx.pool.execute(query, row['id'])
 
     @tag.command(name='raw')
-    async def tag_raw(self, ctx, *, tag: str):
+    async def tag_raw(self, ctx, *, tag: utils.TagName):
         """Gets the raw content of the tag.
 
         This is with markdown escaped. Useful for editing.
@@ -60,7 +60,7 @@ class Tags:
         await ctx.send(pattern.sub(replace, row['content']))
 
     @tag.command(name='create')
-    async def tag_create(self, ctx, name: commands.clean_content, *, content: commands.clean_content):
+    async def tag_create(self, ctx, name: utils.TagName, *, content: commands.clean_content):
         """Creates a new tag owned by you.
 
         This tag is server-specific and cannot be used in other servers.
@@ -84,7 +84,7 @@ class Tags:
             await ctx.send(f'Tag {name} succesfully created.')
 
     @tag.command(name='remove', aliases=['delete'])
-    async def tag_remove(self, ctx, *, name: commands.clean_content):
+    async def tag_remove(self, ctx, *, name: utils.TagName):
         """Removes a tag that you own.
 
         The tag owner can always delete their own tags. If someone requests
@@ -117,7 +117,7 @@ class Tags:
         await ctx.send('Tag successfully removed.')
 
     @tag.command(name='edit')
-    async def tag_edit(self, ctx, name: commands.clean_content, *, content: commands.clean_content):
+    async def tag_edit(self, ctx, name: utils.TagName, *, content: commands.clean_content):
         """Modifies an existing tag that you own.
 
         This command completely replaces the original text. If
@@ -134,7 +134,7 @@ class Tags:
         await ctx.send('Tag successfully edited.')
 
     @tag.command(name='rename')
-    async def tag_rename(self, ctx, name: commands.clean_content, *, new_name: commands.clean_content):
+    async def tag_rename(self, ctx, name: utils.TagName, *, new_name: utils.TagName):
         """Renames an existing tag that you own.
 
         This command completely replaces the original name.
@@ -284,7 +284,7 @@ class Tags:
         await ctx.send(f'{row["name"]}: {row["content"]}')
 
     @tag.command(name='info')
-    async def tag_info(self, ctx, *, tag: str):
+    async def tag_info(self, ctx, *, tag: utils.TagName):
         """Retrieves info about a tag.
 
         The info includes things like the owner and how many times it was used.
