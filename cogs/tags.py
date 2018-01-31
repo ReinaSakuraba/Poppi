@@ -13,17 +13,41 @@ class Tags:
         if isinstance(exception, commands.UserInputError):
             await ctx.send(exception)
 
-    @utils.group(invoke_without_command=True)
-    async def tag(self, ctx, *, tag: utils.TagName):
+    async def get_tag(self, guild_id, name, *, pool):
         query = """
                 SELECT id, content
                 FROM tags
-                WHERE location_id=$1 AND LOWER(name)=$2;
+                WHERE location_id=$1
+                AND LOWER(name)=$2;
                 """
-        row = await ctx.pool.fetchrow(query, ctx.guild.id, tag.lower())
+        row = await pool.fetchrow(query, guild_id, name.lower())
 
-        if row is None:
-            return await ctx.send('No tag found')
+        if row is not None:
+            return row
+
+        query = """
+                SELECT ARRAY(
+                    SELECT name
+                    FROM tags
+                    WHERE location_id=$1
+                    AND name % $2
+                    ORDER BY SIMILARITY(name, $2) DESC
+                );
+                """
+        possible_tags = await pool.fetchval(query, guild_id, name.lower())
+        if possible_tags is None:
+            raise RuntimeError('Tag not found.')
+
+        names = '\n'.join(possible_tags)
+        raise RuntimeError(f'Tag not found. Did you mean...\n{names}')
+
+
+    @utils.group(invoke_without_command=True)
+    async def tag(self, ctx, *, tag: utils.TagName):
+        try:
+            row = await self.get_tag(ctx.guild.id, tag, pool=ctx.pool)
+        except RuntimeError as e:
+            return await ctx.send(e)
 
         await ctx.send(row['content'])
 
@@ -37,15 +61,10 @@ class Tags:
         This is with markdown escaped. Useful for editing.
         """
 
-        query = """
-                SELECT id, content
-                FROM tags
-                WHERE location_id=$1 AND LOWER(name)=$2;
-                """
-        row = await ctx.pool.fetchrow(query, ctx.guild.id, tag.lower())
-
-        if row is None:
-            return await ctx.send('No tag found')
+        try:
+            row = await self.get_tag(ctx.guild.id, tag, pool=ctx.pool)
+        except RuntimeError as e:
+            return await ctx.send(e)
 
 
         transformations = {
