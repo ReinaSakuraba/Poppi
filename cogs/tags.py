@@ -26,8 +26,8 @@ class Tags:
         query = 'UPDATE tags SET uses = uses + 1 WHERE id=$1'
         await ctx.pool.execute(query, row['id'])
 
-    @tag.command()
-    async def raw(self, ctx, *, tag: str):
+    @tag.command(name='raw')
+    async def tag_raw(self, ctx, *, tag: str):
         """Gets the raw content of the tag.
 
         This is with markdown escaped. Useful for editing.
@@ -55,8 +55,8 @@ class Tags:
         pattern = re.compile('|'.join(transformations.keys()))
         await ctx.send(pattern.sub(replace, row['content']))
 
-    @tag.command()
-    async def create(self, ctx, name: commands.clean_content, *, content: commands.clean_content):
+    @tag.command(name='create')
+    async def tag_create(self, ctx, name: commands.clean_content, *, content: commands.clean_content):
         """Creates a new tag owned by you.
 
         This tag is server-specific and cannot be used in other servers.
@@ -79,8 +79,8 @@ class Tags:
         else:
             await ctx.send(f'Tag {name} succesfully created.')
 
-    @tag.command(aliases=['delete'])
-    async def remove(self, ctx, *, name: commands.clean_content):
+    @tag.command(name='remove', aliases=['delete'])
+    async def tag_remove(self, ctx, *, name: commands.clean_content):
         """Removes a tag that you own.
 
         The tag owner can always delete their own tags. If someone requests
@@ -112,8 +112,8 @@ class Tags:
 
         await ctx.send('Tag successfully removed.')
 
-    @tag.command()
-    async def edit(self, ctx, name: commands.clean_content, *, content: commands.clean_content):
+    @tag.command(name='edit')
+    async def tag_edit(self, ctx, name: commands.clean_content, *, content: commands.clean_content):
         """Modifies an existing tag that you own.
 
         This command completely replaces the original text. If
@@ -129,8 +129,8 @@ class Tags:
 
         await ctx.send('Tag successfully edited.')
 
-    @tag.command()
-    async def rename(self, ctx, name: commands.clean_content, *, new_name: commands.clean_content):
+    @tag.command(name='rename')
+    async def tag_rename(self, ctx, name: commands.clean_content, *, new_name: commands.clean_content):
         """Renames an existing tag that you own.
 
         This command completely replaces the original name.
@@ -189,9 +189,9 @@ class Tags:
         else:
             await ctx.send('This server has no server-specific tags.')
 
-    @tag.command()
+    @tag.command(name='purge')
     @utils.mod_or_permissions(manage_messages=True)
-    async def purge(self, ctx, *, member: discord.Member):
+    async def tag_purge(self, ctx, *, member: discord.Member):
         """Removes all server-specific tags by a user.
 
         You must have the Manage Messages permission to use this.
@@ -252,8 +252,8 @@ class Tags:
         else:
             await ctx.send('No tags found.')
 
-    @tag.command()
-    async def random(self, ctx, *, name: str = None):
+    @tag.command(name='random')
+    async def tag_random(self, ctx, *, name: str = None):
         """Displays a random tag.
 
         A tag showing up in this does not get its usage count increased.
