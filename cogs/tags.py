@@ -108,7 +108,7 @@ class Tags:
         deleted = await ctx.pool.fetchval(query, *params)
 
         if not deleted:
-            return await ctx.send('You do not have permissions to delete this tag.')
+            return await ctx.send('Either this tag does not exist or you do not have permission to edit it.')
 
         await ctx.send('Tag successfully removed.')
 
@@ -125,7 +125,7 @@ class Tags:
         status = await ctx.pool.fetchval(query, content, name, ctx.guild.id, ctx.author.id)
 
         if not status:
-            return await ctx.send('Either this tag does not exist or you do not have permission to edit it')
+            return await ctx.send('Either this tag does not exist or you do not have permission to edit it.')
 
         await ctx.send('Tag successfully edited.')
 
@@ -143,7 +143,7 @@ class Tags:
             return await ctx.send('A tag with that name already exists.')
 
         if not status:
-            return await ctx.send('Either this tag does not exist or you do not have permission to rename it')
+            return await ctx.send('Either this tag does not exist or you do not have permission to rename it.')
 
         await ctx.send('Tag successfully renamed.')
 
