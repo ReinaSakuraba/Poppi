@@ -9,6 +9,10 @@ import utils
 
 
 class Tags:
+    async def __error(self, ctx, exception):
+        if isinstance(exception, commands.BadArgument):
+            await ctx.send(exception)
+
     @utils.group(invoke_without_command=True)
     async def tag(self, ctx, *, tag: str):
         query = """
