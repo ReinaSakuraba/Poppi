@@ -122,7 +122,7 @@ class Tags:
         delete it.
         """
 
-        params = [name, ctx.guild.id]
+        params = [name.lower(), ctx.guild.id]
         pred = ''
 
         try:
@@ -156,7 +156,7 @@ class Tags:
         """
 
         query = 'UPDATE tags SET content=$1 WHERE LOWER(name)=$2 AND location_id=$3 AND owner_id=$4 RETURNING 1;'
-        status = await ctx.pool.fetchval(query, content, name, ctx.guild.id, ctx.author.id)
+        status = await ctx.pool.fetchval(query, content, name.lower(), ctx.guild.id, ctx.author.id)
 
         if not status:
             return await ctx.send('Either this tag does not exist or you do not have permission to edit it.')
@@ -172,7 +172,7 @@ class Tags:
 
         query = 'UPDATE tags SET name=$1 WHERE LOWER(name)=$2 AND location_id=$3 AND owner_id=$4 RETURNING 1;'
         try:
-            status = await ctx.pool.fetchval(query, new_name, name, ctx.guild.id, ctx.author.id)
+            status = await ctx.pool.fetchval(query, new_name, name.lower(), ctx.guild.id, ctx.author.id)
         except asyncpg.UniqueViolationError:
             return await ctx.send('A tag with that name already exists.')
 
