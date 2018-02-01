@@ -6,9 +6,14 @@ import discord
 from discord.ext import commands
 
 import utils
+from .prefix import valid_prefix
 
 
 class Tags:
+    def __init__(self, pool):
+        self.pool = pool
+        self.config = utils.Config('tag_prefixes.json')
+
     async def __error(self, ctx, exception):
         if isinstance(exception, commands.UserInputError):
             await ctx.send(exception)
@@ -349,6 +354,29 @@ class Tags:
 
         await ctx.send(embed=embed)
 
+    @tag.command(name='prefix')
+    @utils.mod_or_permissions()
+    async def tag_prefix(self, ctx, *, prefix: valid_prefix):
+        """Sets a prefix to be used as a shortcut for the tag command."""
+
+        await self.config.put(ctx.guild.id, prefix)
+        await ctx.send('Tag shortcut prefix set')
+
+    async def on_message(self, message):
+        view = commands.view.StringView(message.content)
+        prefix = self.config.get(message.guild.id)
+        if not prefix:
+            return
+
+        if not view.skip_string(prefix):
+            return
+
+        tag_name = view.read_rest().strip()
+        query = 'SELECT content FROM tags WHERE location_id=$1 AND LOWER(name)=$2;'
+        content = await self.pool.fetchval(query, message.guild.id, tag_name.lower())
+        if content:
+            await message.channel.send(content)
+
 
 def setup(bot):
-    bot.add_cog(Tags())
+    bot.add_cog(Tags(bot.pool))
