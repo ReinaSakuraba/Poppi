@@ -134,7 +134,7 @@ class Tags:
         try:
             name = await ctx.bot.wait_for('message', timeout=30.0, check=check)
         except asyncio.TimeoutError:
-            return await ctx.send('You took long. Goodbye.')
+            return await ctx.send('You took too long. Goodbye.')
 
         try:
             name = await utils.TagName().convert(ctx, name.content)
