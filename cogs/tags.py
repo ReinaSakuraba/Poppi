@@ -16,6 +16,8 @@ class Tags:
 
     async def __error(self, ctx, exception):
         if isinstance(exception, commands.UserInputError):
+            if ctx.commands.qualified_name == 'tag make':
+                return
             await ctx.send(exception)
 
     async def get_tag(self, guild_id, name, *, pool):
@@ -112,6 +114,58 @@ class Tags:
             await ctx.send('This tag already exists.')
         else:
             await ctx.send(f'Tag {name} succesfully created.')
+
+    @tag.command(name='make', ignore_extra=False)
+    async def tag_make(self, ctx):
+        """Interactive makes a tag for you.
+
+        This walks you through the process of creating a tag with
+        its name and its content. This works similar to the tag
+        create command.
+        """
+
+        await ctx.send('Hello. What would you like the name tag to be?')
+
+        original = ctx.message
+
+        def check(msg):
+            return msg.author == ctx.author and ctx.channel == msg.channel
+
+        try:
+            name = await ctx.bot.wait_for('message', timeout=30.0, check=check)
+        except asyncio.TimeoutError:
+            return await ctx.send('You took long. Goodbye.')
+
+        try:
+            name = await utils.TagName().convert(ctx, name.content)
+        except commands.BadArgument as e:
+            return await ctx.send(f'{e}. Redo the command "{ctx.prefix}tag make" to retry.')
+
+        query = 'SELECT 1 FROM tags WHERE location_id=$1 AND LOWER(name)=$2;'
+        exists = await ctx.pool.fetchval(query, ctx.guild.id, name.lower())
+
+        if exists:
+            mas = f'Sorry. A tag with that name already exists. Redo the command "{ctx.prefix}tag make" to retry.'
+            return await ctx.send(msg)
+
+        await ctx.send(f'Neat. So the name is {name}. What about the tag\'s content?')
+
+        try:
+            msg = await ctx.bot.wait_for('message', check=check, timeout=300.0)
+        except asyncio.TimeoutError:
+            return await ctx.send('You took too long. Goodbye.')
+
+        content = await commands.clean_content().convert(ctx, msg.content)
+
+        if msg.attachments:
+            content = f'{content}\n{msg.attachments[0].url}'
+
+        await ctx.invoke(self.tag_create, name=name, content=content)
+
+    @tag_make.error
+    async def tag_make_error(self, ctx, exception):
+        if isinstance(exception, commands.TooManyArguments):
+            await ctx.send(f'Please call just {ctx.prefix}tag make.')
 
     @tag.command(name='remove', aliases=['delete'])
     async def tag_remove(self, ctx, *, name: utils.TagName):
