@@ -426,10 +426,12 @@ class Tags:
             return
 
         tag_name = view.read_rest().strip()
-        query = 'SELECT content FROM tags WHERE location_id=$1 AND LOWER(name)=$2;'
-        content = await self.pool.fetchval(query, message.guild.id, tag_name.lower())
-        if content:
-            await message.channel.send(content)
+        query = 'SELECT id, content FROM tags WHERE location_id=$1 AND LOWER(name)=$2;'
+        row = await self.pool.fetchrow(query, message.guild.id, tag_name.lower())
+        if row:
+            await message.channel.send(row['content'])
+            query = 'UPDATE tags SET uses = uses + 1 WHERE id=$1'
+            await self.pool.execute(query, row['id'])
 
 
 def setup(bot):
