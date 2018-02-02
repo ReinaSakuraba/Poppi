@@ -16,7 +16,7 @@ class Tags:
 
     async def __error(self, ctx, exception):
         if isinstance(exception, commands.UserInputError):
-            if ctx.commands.qualified_name == 'tag make':
+            if ctx.command.qualified_name == 'tag make':
                 return
             await ctx.send(exception)
 
