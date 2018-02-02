@@ -18,6 +18,14 @@ class Group(commands.Group):
         if case_insensitive:
             self.all_commands = CaseInsensitiveDict()
 
+    def group(self, *args, **kwargs):
+        def decorator(func):
+            result = group(*args, **kwargs)
+            self.add_command(result)
+            return result
+
+        return decorator
+
 
 def group(**attrs):
     return commands.command(cls=Group, **attrs)
@@ -107,10 +115,6 @@ class TagName(commands.clean_content):
 
         if len(converted) > 100:
             raise commands.BadArgument('Tag name cannot have over 100 characters.')
-
-        command = ctx.bot.get_command('tag')
-        if converted.lower().startswith(tuple(command.all_commands)):
-            raise commands.BadArgument('This tag name starts with a reserved word.')
 
         return converted
 
