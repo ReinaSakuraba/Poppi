@@ -42,7 +42,7 @@ class Tags:
                 );
                 """
         possible_tags = await pool.fetchval(query, guild_id, name.lower())
-        if possible_tags is None:
+        if not possible_tags:
             raise RuntimeError('Tag not found.')
 
         names = '\n'.join(possible_tags)
