@@ -145,7 +145,7 @@ class Tags:
         exists = await ctx.pool.fetchval(query, ctx.guild.id, name.lower())
 
         if exists:
-            mas = f'Sorry. A tag with that name already exists. Redo the command "{ctx.prefix}tag make" to retry.'
+            msg = f'Sorry. A tag with that name already exists. Redo the command "{ctx.prefix}tag make" to retry.'
             return await ctx.send(msg)
 
         await ctx.send(f'Neat. So the name is {name}. What about the tag\'s content?')
