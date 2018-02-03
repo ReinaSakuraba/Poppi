@@ -63,7 +63,7 @@ class YouTube:
     @utils.group(invoke_without_command=True)
     async def info(self, ctx, link: str):
         """Gets info from your YouTube link.
-        
+
         If you don't pass in a subcommand, this will
         get info for a video.
         """
@@ -75,9 +75,9 @@ class YouTube:
         video_id = match.group('video_id')
 
         params = {
-        	    'id': video_id,
-        	    'part': 'snippet,statistics',
-        	}
+            'id': video_id,
+            'part': 'snippet,statistics',
+        }
 
         data = await self.request(ctx, 'videos', params)
 
