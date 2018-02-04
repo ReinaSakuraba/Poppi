@@ -17,7 +17,7 @@ class Info:
 
         query = 'SELECT COUNT(*) FROM commands WHERE used > $1;'
         commands_used = await ctx.pool.fetchval(query, ctx.bot.start_time)
-        version = pkg_resources.get_distribution('discord.py')
+        version = str(pkg_resources.get_distribution('discord.py')).split('+')[0]
         recent_changes, _ = await self.get_recent_changes(limit=3)
 
         embed = discord.Embed(timestamp=ctx.bot.start_time)
