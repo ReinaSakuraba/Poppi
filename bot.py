@@ -11,10 +11,6 @@ import config
 import utils
 
 
-def _check(ctx):
-    return not ctx.author.bot
-
-
 def _get_prefix(bot, message, *, mentions=True):
     prefixes = commands.when_mentioned(bot, message) if mentions else []
     if message.guild is None:
@@ -97,6 +93,9 @@ class Bot(commands.Bot):
         print('---------')
 
     async def on_message(self, message):
+        if message.author.bot:
+            return
+
         ctx = await self.get_context(message, cls=utils.Context)
         await self.invoke(ctx)
 
