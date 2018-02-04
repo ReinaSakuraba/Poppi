@@ -425,7 +425,7 @@ class Tags:
             await ctx.send('You must wrap the prefix in quotes.')
 
     async def on_message(self, message):
-        if not message.guild:
+        if not message.guild or message.author.bot:
             return
 
         view = commands.view.StringView(message.content)
