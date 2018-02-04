@@ -109,8 +109,8 @@ class Info:
             await ctx.send(e)
 
     async def get_github_url(self):
-        result = await utils.run_subprocess('git remote get-url origin')
-        return result[0].strip()[:-4]
+        result, _ = await utils.run_subprocess('git remote get-url origin')
+        return result.strip()[:-4]
 
     async def get_recent_changes(self, *, limit=None):
         url = await self.get_github_url()
