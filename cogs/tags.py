@@ -408,9 +408,9 @@ class Tags:
 
         await ctx.send(embed=embed)
 
-    @tag.command(name='prefix')
+    @tag.command(name='prefix', ignore_extra=False)
     @utils.mod_or_permissions()
-    async def tag_prefix(self, ctx, *, prefix: valid_prefix):
+    async def tag_prefix(self, ctx, prefix: valid_prefix):
         """Sets a prefix to be used as a shortcut for the tag command."""
 
         if prefix in ctx.bot.command_prefix(ctx.bot, ctx.message):
@@ -418,6 +418,11 @@ class Tags:
 
         await self.config.put(ctx.guild.id, prefix)
         await ctx.send('Tag shortcut prefix set')
+
+    @tag_prefix.error
+    async def tag_prefix_error(self, ctx, exception):
+        if isinstance(exception, commands.TooManyArguments):
+            await ctx.send('You must wrap the prefix in quotes.')
 
     async def on_message(self, message):
         view = commands.view.StringView(message.content)
