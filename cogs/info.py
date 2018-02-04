@@ -18,7 +18,7 @@ class Info:
         query = 'SELECT COUNT(*) FROM commands WHERE used > $1;'
         commands_used = await ctx.pool.fetchval(query, ctx.bot.start_time)
         version = str(pkg_resources.get_distribution('discord.py')).split('+')[0]
-        recent_changes, _ = await self.get_recent_changes(limit=3)
+        recent_changes = await self.get_recent_changes(limit=3)
 
         embed = discord.Embed(timestamp=ctx.bot.start_time)
         embed.set_author(name=ctx.bot.owner, icon_url=ctx.bot.owner.avatar_url)
@@ -99,7 +99,7 @@ class Info:
     async def changelog(self, ctx):
         """Shows recent changes made to the bot."""
 
-        changes, _ = await self.get_recent_changes()
+        changes = await self.get_recent_changes()
 
         try:
             paginator = utils.EmbedPaginator(ctx, entries=changes.split('\n'))
@@ -118,7 +118,7 @@ class Info:
         if limit is not None:
             cmd += f' -{limit}'
 
-        result = await utils.run_subprocess(cmd)
+        result, _ = await utils.run_subprocess(cmd)
         return result
 
 
