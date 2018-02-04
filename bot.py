@@ -24,16 +24,6 @@ def _get_prefix(bot, message, *, mentions=True):
     return prefixes
 
 
-class Context(commands.Context):
-    @property
-    def session(self):
-        return self.bot.session
-
-    @property
-    def pool(self):
-        return self.bot.pool
-
-
 class Bot(commands.Bot):
     def __init__(self, *, pool, **kwargs):
         super().__init__(command_prefix=_get_prefix, description=config.description,
@@ -107,7 +97,7 @@ class Bot(commands.Bot):
         print('---------')
 
     async def on_message(self, message):
-        ctx = await self.get_context(message, cls=Context)
+        ctx = await self.get_context(message, cls=utils.Context)
         await self.invoke(ctx)
 
     async def on_command(self, ctx):
