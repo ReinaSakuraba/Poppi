@@ -20,7 +20,7 @@ class Group(commands.Group):
 
     def group(self, *args, **kwargs):
         def decorator(func):
-            result = group(*args, **kwargs)
+            result = group(*args, **kwargs)(func)
             self.add_command(result)
             return result
 
