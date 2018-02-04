@@ -29,7 +29,7 @@ class Info:
         embed.add_field(name='Commands Run', value=commands_used)
         embed.add_field(name='Memory Usage', value=ctx.bot.memory_usage)
         embed.add_field(name='CPU Usage', value=ctx.bot.cpu_usage)
-        embed.add_field(name='Recent Changes', value=recent_changes, inline=False)
+        embed.add_field(name='Recent Changes', value=recent_changes)
         embed.set_footer(text=f'Made with {version}', icon_url='http://i.imgur.com/5BFecvA.png')
 
         await ctx.send(embed=embed)
