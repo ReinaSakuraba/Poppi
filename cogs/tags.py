@@ -103,7 +103,7 @@ class Tags:
                 INSERT INTO tags (
                     name,
                     content,
-                    owner_id, 
+                    owner_id,
                     location_id
                 ) VALUES ($1, $2, $3, $4);
                 """
