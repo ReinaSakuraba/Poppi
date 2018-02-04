@@ -441,6 +441,16 @@ class Tags:
             query = 'UPDATE tags SET uses = uses + 1 WHERE id=$1'
             await self.pool.execute(query, row['id'])
 
+            query = """
+                    INSERT INTO commands (
+                        guild_id,
+                        channel_id,
+                        author_id,
+                        prefix,
+                        command
+                    ) VALUES ($1, $2, $3, $4, $5)
+                    """
+            await self.pool.execute(query, message.guild.id, message.channel.id, message.author.id, prefix, 'tag')
 
 def setup(bot):
     bot.add_cog(Tags(bot.pool))
