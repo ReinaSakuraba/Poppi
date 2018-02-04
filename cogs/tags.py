@@ -413,6 +413,9 @@ class Tags:
     async def tag_prefix(self, ctx, *, prefix: valid_prefix):
         """Sets a prefix to be used as a shortcut for the tag command."""
 
+        if prefix in ctx.bot.command_prefix(ctx.bot, ctx.message):
+            return await ctx.send('This prefix is already used as a normal prefix.')
+
         await self.config.put(ctx.guild.id, prefix)
         await ctx.send('Tag shortcut prefix set')
 
