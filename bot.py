@@ -1,10 +1,8 @@
-import asyncio
 import datetime
 import traceback
 from pathlib import Path
 
 import psutil
-import asyncpg
 import aiohttp
 import discord
 from discord.ext import commands
@@ -124,14 +122,3 @@ class Bot(commands.Bot):
                 ) VALUES ($1, $2, $3, $4, $5)
                 """
         await self.pool.execute(query, guild_id, ctx.channel.id, ctx.author.id, ctx.prefix, ctx.command.qualified_name)
-
-
-def main():
-    loop = asyncio.get_event_loop()
-    pool = loop.run_until_complete(asyncpg.create_pool(config.dsn, command_timeout=60))
-    bot = Bot(pool=pool, loop=loop)
-    bot.run(config.token)
-
-
-if __name__ == '__main__':
-    main()
