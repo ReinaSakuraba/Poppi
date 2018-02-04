@@ -26,7 +26,6 @@ class Bot(commands.Bot):
                           pm_help=None, game=discord.Game(name=config.game), **kwargs)
 
         self.all_commands = utils.CaseInsensitiveDict(self.all_commands)
-        self.add_check(_check)
 
         self.pool = pool
         self.prefixes = utils.Config('prefixes.json', loop=self.loop)
