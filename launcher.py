@@ -22,8 +22,11 @@ async def create_db(pool):
             CREATE TABLE IF NOT EXISTS plonks (
                 id SERIAL,
                 author_id BIGINT,
-                guild_id BIGINT
+                guild_id BIGINT DEFAULT 0,
+                PRIMARY KEY(author_id, guild_id)
             );
+
+            CREATE INDEX IF NOT EXISTS plonks_guild_idx ON plonks(guild_id);
 
             CREATE TABLE IF NOT EXISTS reminders (
                 id SERIAL,

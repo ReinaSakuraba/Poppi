@@ -1,3 +1,4 @@
+import asyncpg
 import discord
 from discord.ext import commands
 
@@ -25,23 +26,15 @@ class Mod:
             return not is_plonked
         return True
 
-    async def is_plonked(self, pool, user_id, guild_id=None):
-        if guild_id:
-            query = f'SELECT 1 FROM plonks WHERE author_id=$1 AND guild_id=$2;'
-            is_plonked = await pool.fetchval(query, user_id, guild_id)
-        else:
-            query = f'SELECT 1 FROM plonks WHERE author_id=$1 AND guild_id IS NULL;'
-            is_plonked = await pool.fetchval(query, user_id)
+    async def is_plonked(self, pool, user_id, guild_id=0):
+        query = f'SELECT 1 FROM plonks WHERE author_id=$1 AND guild_id=$2;'
+        is_plonked = await pool.fetchval(query, user_id, guild_id)
 
         return is_plonked
 
-    async def get_plonks(self, pool, guild_id=None):
-        if guild_id:
-            query = f'SELECT ARRAY(SELECT author_id FROM plonks WHERE guild_id=$1);'
-            plonks = await pool.fetchval(query, guild_id)
-        else:
-            query = f'SELECT ARRAY(SELECT author_id FROM plonks WHERE guild_id IS NULL);'
-            plonks = await pool.fetchval(query)
+    async def get_plonks(self, pool, guild_id=0):
+        query = f'SELECT ARRAY(SELECT author_id FROM plonks WHERE guild_id=$1);'
+        plonks = await pool.fetchval(query, guild_id)
 
         return plonks
 
@@ -87,18 +80,16 @@ class Mod:
         You must have Manage Server permissions to run this command.
         """
 
-        is_plonked = await self.is_plonked(ctx.pool, member.id, ctx.guild.id)
-
-        if is_plonked:
-            return await ctx.send('This user is already bot banned in this server.')
-
         query = """
                 INSERT INTO plonks (
                     author_id,
                     guild_id
                 ) VALUES ($1, $2);
                 """
-        await ctx.pool.execute(query, member.id, ctx.guild.id)
+        try:
+            await ctx.pool.execute(query, member.id, ctx.guild.id)
+        except asyncpg.UniqueViolationError:
+            return await ctx.send('This user is already bot banned in this server.')
 
         await ctx.send(f'{member.display_name} has been banned from using the bot in this server.')
 
@@ -107,13 +98,11 @@ class Mod:
     async def plonk_global(self, ctx, *, user: discord.User):
         """Globally bans a user from using the bot."""
 
-        is_globally_plonked = await self.is_plonked(ctx.pool, user.id)
-
-        if is_globally_plonked:
-            return await ctx.send('This user is already globally bot banned.')
-
         query = 'INSERT INTO plonks (author_id) VALUES ($1);'
-        await ctx.pool.execute(query, user.id)
+        try:
+            await ctx.pool.execute(query, user.id)
+        except asyncpg.UniqueViolationError:
+            return await ctx.send('This user is already globally bot banned.')
 
         await ctx.send(f'{user.display_name} has been globally bot banned.')
 
@@ -138,7 +127,7 @@ class Mod:
     async def unplonk_global(self, ctx, *, user: discord.User):
         """Globally unbans a user from using the bot."""
 
-        query = 'DELETE FROM plonks WHERE author_id=$1 AND guild_id IS NULL RETURNING 1'
+        query = 'DELETE FROM plonks WHERE author_id=$1 AND guild_id=0 RETURNING 1'
         was_globally_plonked = await ctx.pool.fetchval(query, user.id)
 
         if not was_globally_plonked:
