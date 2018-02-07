@@ -4,3 +4,4 @@ python-dateutil
 parsedatetime
 psutil
 youtube_dl
+pillow
