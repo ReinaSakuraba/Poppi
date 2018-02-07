@@ -6,7 +6,7 @@ Poppi
   :target: https://www.python.org
 
 .. image:: https://img.shields.io/badge/License-MIT-blue.svg
-  :target: https://github.com/ReinaSakuraba/blob/master/LICENSE
+  :target: https://github.com/ReinaSakuraba/Poppi/blob/master/LICENSE
 
 --------------
 Inviting Poppi
