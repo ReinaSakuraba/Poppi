@@ -40,7 +40,7 @@ class Owner:
     @commands.command()
     async def setavatar(self, ctx, link: str):
         """Sets the bot's avatar."""
- 
+
         async with ctx.session.get(link) as r:
             if r.status == 200:
                 try:
