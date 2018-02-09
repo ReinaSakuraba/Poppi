@@ -436,7 +436,7 @@ class Music:
 
         queue = self.get_queue(ctx.guild).songs
 
-        if len(queue._queue) == 0:
+        if len(queue) == 0:
             return await ctx.invoke(self.playing)
         songs = [f'[{song.entry.title}]({song.entry.url})\nRequested by {song.requester}' for song in queue]
         try:
@@ -458,7 +458,7 @@ class Music:
 
         queue = self.get_queue(ctx.guild).songs
 
-        if len(queue._queue) == 0:
+        if len(queue) == 0:
             return await ctx.send('No songs in the queue.')
 
         queue.shuffle()
