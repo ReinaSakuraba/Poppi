@@ -233,7 +233,7 @@ class XenobladeX:
         await ctx.send(embed=embed)
 
     @augment.error
-    async def art_error(self, ctx, error):
+    async def augment_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing augment name.')
 
