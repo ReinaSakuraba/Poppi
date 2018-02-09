@@ -46,6 +46,27 @@ async def {0}_search_error(ctx, error):
 
 
 class XenobladeX:
+    classes = [
+        'Drifter', 'Deulist', 'Bastion Warrior','Full Metal Jaguar',
+        'Astral Crusader', 'Mastermind', 'Galactic Knight'
+    ]
+
+    melee_weapons = [
+        'Longsword', 'Shield', 'Dual Swords',
+        'Javelin', 'Knife', 'Photon Saber'
+    ]
+
+    ranged_weapons = [
+        'Assault Rifle', 'Gatling Gun', 'Dual Guns', 'Sniper Rifle',
+        'Raygun', 'Psycho Launchers', 'Multigun'
+    ]
+
+    party_members = [
+        'Elma', 'Lin', 'Gwin', 'Irina', 'Lao', 'Doug', 'L',
+        'Murderess', 'Hope', 'Mia', 'Nagi', 'Phog', 'Frye',
+        'Celica', 'Boze', 'Alexa', 'Yelv', 'H.B.'
+    ]
+
     def __init__(self):
         self.data = {}
         self.colors = {
@@ -215,6 +236,15 @@ class XenobladeX:
     async def art_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing augment name.')
+
+    @commands.command()
+    async def loadout(self, ctx):
+        fmt = f'Class: {random.choice(self.classes)}\n' \
+              f'Melee Weapon: {random.choice(self.melee_weapons)}\n' \
+              f'Ranged Weapon: {random.choice(self.ranged_weapons)}\n' \
+              f'Party Members: {", ".join(random.sample(self.party_members, 3))}'
+
+        await ctx.send(fmt)
 
 
 def setup(bot):
