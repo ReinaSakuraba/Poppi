@@ -6,6 +6,9 @@ class Playlist(asyncio.Queue):
     def __iter__(self):
         return iter(self._queue)
 
+    def __len__(self):
+        return len(self._queue)
+
     def shuffle(self):
         random.shuffle(self._queue)
 
