@@ -32,7 +32,16 @@ class YouTube:
             if r.status == 200:
                 return await r.json()
 
-    @utils.group(aliases=['youtube'], usage='[amount=1] <query>', invoke_without_command=True)
+    @commands.command()
+    async def youtube(self, ctx, *, query: utils.Query(multi=False, type='video')):
+        """Searches YouTube for your query.
+
+        Unlike search this does not search for multiple videos.
+        """
+
+        await self.show_entries(ctx, query)
+
+    @utils.group(usage='[amount=1] <query>', invoke_without_command=True)
     async def search(self, ctx, *, params: utils.Query(type='video')):
         """Searches YouTube for your query.
 
