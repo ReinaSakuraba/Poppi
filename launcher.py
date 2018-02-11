@@ -51,6 +51,7 @@ async def create_db(pool):
             CREATE UNIQUE INDEX IF NOT EXISTS tags_unique_idx ON tags(LOWER(name), location_id);
             CREATE INDEX IF NOT EXISTS tags_name_idx ON tags(LOWER(name));
             CREATE INDEX IF NOT EXISTS tags_location_idx ON tags(location_id);
+            CREATE INDEX IF NOT EXISTS tags_owner_idx ON TAGS(owner_id);
             CREATE INDEX IF NOT EXISTS tags_trgm_idx ON tags USING GIN (name gin_trgm_ops);
             """
     await pool.execute(query)
