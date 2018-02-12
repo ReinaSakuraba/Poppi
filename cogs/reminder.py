@@ -131,6 +131,12 @@ class Reminders:
         except utils.CannotPaginate as e:
             await ctx.send(e)
 
+    @commands.command()
+    async def reminders(self, ctx):
+        """An alias for the reminder list command."""
+
+        await ctx.invoke(self.reminder_list)
+
     @reminder.command(name='remove', aliases=['delete'])
     async def reminder_remove(self, ctx, id: int):
         """Removes a currently running reminder.
