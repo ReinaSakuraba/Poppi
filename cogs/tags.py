@@ -256,7 +256,7 @@ class Tags:
 
     @commands.command()
     async def tags(self, ctx, *, member: discord.Member = None):
-        """An alias for tag list command."""
+        """An alias for the tag list command."""
 
         await ctx.invoke(self.tag_list, member=member)
 
