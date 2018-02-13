@@ -145,17 +145,13 @@ class Reminders:
         command.
         """
 
-        query = 'SELECT author_id FROM reminders WHERE id=$1;'
-        author_id = await ctx.pool.fetchval(query, id)
-        if author_id is None:
-            return await ctx.send(f'A reminder with an ID of {id} does not exist.')
+        query = 'DELETE FROM reminders WHERE author_id=$1 AND id=$2 RETURNING 1;'
+        deleted = await ctx.pool.fetchval(query, ctx.author.id, id)
 
-        if ctx.author.id != author_id:
-            return await ctx.send('You do not own this reminder.')
+        if not deleted:
+            return await ctx.send('Either this reminder does not exist or you do not have permission to remove it.')
 
-        query = 'DELETE FROM reminders WHERE id=$1;'
-        await ctx.pool.execute(query, id)
-        await ctx.send('This reminder has been removed.')
+        await ctx.send('Reminder successfully removed.')
 
 
 def setup(bot):
