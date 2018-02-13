@@ -87,6 +87,9 @@ class XenobladeX:
             env.update(globals())
             exec(thing.format(key, 'an' if key[0] == 'a' else 'a'), env)
 
+        with open('xenox/json/materials.json') as f:
+            self.materials = json.load(f)
+
     def get_entry(self, entry_type, name):
         data = self.data[entry_type.lower()]
         try:
@@ -198,11 +201,8 @@ class XenobladeX:
         except RuntimeError as e:
             return await ctx.send(e)
 
-        name = augment['Name']
-        effect = augment['Effect']
-        rarity = augment.get('Rarity')
         type = augment['Type']
-        price = augment.get('Sell Price')
+        price = augment['Sell Price']
         miranium = augment.get('Required Miranium')
         mat_1 = augment.get('Material 1')
         mat_2 = augment.get('Material 2')
@@ -210,26 +210,55 @@ class XenobladeX:
         drop = augment.get('Drop')
         resource = augment.get('Precious Resource')
 
-        embed = discord.Embed(title=name)
-        if rarity:
-            embed.color = self.colors[rarity]
-        embed.add_field(name='Effect', value=effect, inline=False)
-        if type != 'Augment':
+        total_tickets = 0
+
+        embed = discord.Embed(title=augment['Name'], color=self.colors[augment["Rarity"]])
+        embed.add_field(name='Effect', value=augment['Effect'], inline=False)
+
+        if type != 'Augment': # Remove when augment json fully updated
             embed.add_field(name='Type', value=type)
-        if price:
+
+        if price != 0: # Remove when augment json fully updated
             embed.add_field(name='Sell Price', value=price)
+
         if miranium:
             embed.add_field(name='Required Miranium', value=miranium)
+
         if mat_1:
-            embed.add_field(name='Material 1', value=f'{mat_1["Amount"]} {mat_1["Name"]}')
+            name = mat_1["Name"]
+            amount = mat_1["Amount"]
+
+            tickets = self.materials[name.lower()]['price'] * amount
+            total_tickets += tickets
+
+            embed.add_field(name='Material 1', value=f'{amount} {name}\n({tickets} Tickets)')
+
         if mat_2:
-            embed.add_field(name='Material 2', value=f'{mat_2["Amount"]} {mat_2["Name"]}')
+            name = mat_2["Name"]
+            amount = mat_2["Amount"]
+
+            tickets = self.materials[name.lower()]['price'] * amount
+            total_tickets += tickets
+
+            embed.add_field(name='Material 2', value=f'{amount} {name}\n({tickets} Tickets)')
+
         if mat_3:
-            embed.add_field(name='Material 3', value=f'{mat_3["Amount"]} {mat_3["Name"]}')
+            name = mat_3["Name"]
+            amount = mat_3["Amount"]
+
+            tickets = self.materials[name.lower()]['price'] * amount
+            total_tickets += tickets
+
+            embed.add_field(name='Material 3', value=f'{amount} {name}\n({tickets} Tickets)')
+
         if drop:
             embed.add_field(name='Drop', value=drop)
         if resource:
             embed.add_field(name='Precious Resource', value=f'{resource["Amount"]} {resource["Name"]}', inline=False)
+
+        if total_tickets != 0:
+            embed.add_field(name='Total Tickets', value=total_tickets)
+
         await ctx.send(embed=embed)
 
     @augment.error
