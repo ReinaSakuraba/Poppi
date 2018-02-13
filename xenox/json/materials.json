@@ -1,0 +1,1970 @@
+{
+  "active cells": {
+    "name": "Active Cells",
+    "price": 54
+  },
+  "adsecula gold nugget": {
+    "name": "Adsecula Gold Nugget",
+    "price": 34
+  },
+  "adsecula oil drop": {
+    "name": "Adsecula Oil Drop",
+    "price": 50
+  },
+  "adsecula straw": {
+    "name": "Adsecula Straw",
+    "price": 30
+  },
+  "advanced chamber": {
+    "name": "Advanced Chamber",
+    "price": 138
+  },
+  "advanced core": {
+    "name": "Advanced Core",
+    "price": 138
+  },
+  "advanced crank": {
+    "name": "Advanced Crank",
+    "price": 138
+  },
+  "advanced jet": {
+    "name": "Advanced Jet",
+    "price": 54
+  },
+  "advanced lens": {
+    "name": "Advanced Lens",
+    "price": 98
+  },
+  "advanced thruster": {
+    "name": "Advanced Thruster",
+    "price": 42
+  },
+  "aeviter death stone": {
+    "name": "Aeviter Death Stone",
+    "price": 138
+  },
+  "aeviter membrane": {
+    "name": "Aeviter Membrane",
+    "price": 108
+  },
+  "aeviter star wing": {
+    "name": "Aeviter Star Wing",
+    "price": 138
+  },
+  "all-purpose plug": {
+    "name": "All-Purpose Plug",
+    "price": 42
+  },
+  "alluring lophid extract": {
+    "name": "Alluring Lophid Extract",
+    "price": 114
+  },
+  "alluring papil scales": {
+    "name": "Alluring Papil Scales",
+    "price": 34
+  },
+  "amber aetrygon horn": {
+    "name": "Amber Aetrygon Horn",
+    "price": 54
+  },
+  "amber cervus antlers": {
+    "name": "Amber Cervus Antlers",
+    "price": 114
+  },
+  "amber dilus eye": {
+    "name": "Amber Dilus Eye",
+    "price": 90
+  },
+  "amethyst metal": {
+    "name": "Amethyst Metal",
+    "price": 138
+  },
+  "ancient armor": {
+    "name": "Ancient Armor",
+    "price": 138
+  },
+  "appetizing suid tail": {
+    "name": "Appetizing Suid Tail",
+    "price": 30
+  },
+  "aprica back moss": {
+    "name": "Aprica Back Moss",
+    "price": 90
+  },
+  "arenatect shell": {
+    "name": "Arenatect Shell",
+    "price": 72
+  },
+  "auravis courtship feather": {
+    "name": "Auravis Courtship Feather",
+    "price": 54
+  },
+  "auravis croaking bag": {
+    "name": "Auravis Croaking Bag",
+    "price": 54
+  },
+  "auravis horn": {
+    "name": "Auravis Horn",
+    "price": 54
+  },
+  "auravis laughing bag": {
+    "name": "Auravis Laughing Bag",
+    "price": 54
+  },
+  "azure sacrifole feather": {
+    "name": "Azure Sacrifole Feather",
+    "price": 54
+  },
+  "beryl aetrygon horn": {
+    "name": "Beryl Aetrygon Horn",
+    "price": 42
+  },
+  "big balaena sand bag": {
+    "name": "Big Balaena Sand Bag",
+    "price": 114
+  },
+  "big balaena water bag": {
+    "name": "Big Balaena Water Bag",
+    "price": 138
+  },
+  "black blatta wing": {
+    "name": "Black Blatta Wing",
+    "price": 24
+  },
+  "black colubrim tail": {
+    "name": "Black Colubrim Tail",
+    "price": 198
+  },
+  "black electrical tentacle": {
+    "name": "Black Electrical Tentacle",
+    "price": 90
+  },
+  "black filiavent tentacle": {
+    "name": "Black Filiavent Tentacle",
+    "price": 168
+  },
+  "black fog deposits": {
+    "name": "Black Fog Deposits",
+    "price": 26
+  },
+  "black gyrocompass": {
+    "name": "Black Gyrocompass",
+    "price": 54
+  },
+  "black meaty caecus liver": {
+    "name": "Black Meaty Caecus Liver",
+    "price": 66
+  },
+  "black petramand silk": {
+    "name": "Black Petramand Silk",
+    "price": 90
+  },
+  "black puff": {
+    "name": "Black Puff",
+    "price": 42
+  },
+  "black scintimure tentacle": {
+    "name": "Black Scintimure Tentacle",
+    "price": 90
+  },
+  "black stabilizer": {
+    "name": "Black Stabilizer",
+    "price": 108
+  },
+  "black steel heavy armor": {
+    "name": "Black Steel Heavy Armor",
+    "price": 66
+  },
+  "black sylooth brace": {
+    "name": "Black Sylooth Brace",
+    "price": 114
+  },
+  "black thallus antenna": {
+    "name": "Black Thallus Antenna",
+    "price": 90
+  },
+  "black turba nectar": {
+    "name": "Black Turba Nectar",
+    "price": 50
+  },
+  "black vigent rock scalp": {
+    "name": "Black Vigent Rock Scalp",
+    "price": 138
+  },
+  "black yggralith nut": {
+    "name": "Black Yggralith Nut",
+    "price": 138
+  },
+  "black yggralith scale": {
+    "name": "Black Yggralith Scale",
+    "price": 78
+  },
+  "blazing gas sac": {
+    "name": "Blazing Gas Sac",
+    "price": 114
+  },
+  "blinding lophid extract": {
+    "name": "Blinding Lophid Extract",
+    "price": 138
+  },
+  "bloodied face": {
+    "name": "Bloodied Face",
+    "price": 72
+  },
+  "blue electrical tentacle": {
+    "name": "Blue Electrical Tentacle",
+    "price": 42
+  },
+  "blue forfex shell": {
+    "name": "Blue Forfex Shell",
+    "price": 36
+  },
+  "blue fungi": {
+    "name": "Blue Fungi",
+    "price": 54
+  },
+  "blue jacul wing": {
+    "name": "Blue Jacul Wing",
+    "price": 72
+  },
+  "blue milsaasi hood": {
+    "name": "Blue Milsaasi Hood",
+    "price": 48
+  },
+  "blue progen wing": {
+    "name": "Blue Progen Wing",
+    "price": 72
+  },
+  "blue sylooth brace": {
+    "name": "Blue Sylooth Brace",
+    "price": 114
+  },
+  "blue vigent rock scalp": {
+    "name": "Blue Vigent Rock Scalp",
+    "price": 138
+  },
+  "bone-in thight meat": {
+    "name": "Bone-In Thight Meat",
+    "price": 42
+  },
+  "brilliant murra liquid": {
+    "name": "Brilliant Murra Liquid",
+    "price": 42
+  },
+  "brilliant tersqual liquid": {
+    "name": "Brilliant Tersqual Liquid",
+    "price": 90
+  },
+  "brilliant visigel liquid": {
+    "name": "Brilliant Visigel Liquid",
+    "price": 54
+  },
+  "broken antenna": {
+    "name": "Broken Antenna",
+    "price": 22
+  },
+  "broken buckle": {
+    "name": "Broken Buckle",
+    "price": 20
+  },
+  "broken pincer": {
+    "name": "Broken Pincer",
+    "price": 24
+  },
+  "brown colubrim tail": {
+    "name": "Brown Colubrim Tail",
+    "price": 198
+  },
+  "brown monocerus horn": {
+    "name": "Brown Monocerus Horn",
+    "price": 90
+  },
+  "caecus crest": {
+    "name": "Caecus Crest",
+    "price": 54
+  },
+  "caro tail light": {
+    "name": "Caro Tail Light",
+    "price": 54
+  },
+  "ceto roe": {
+    "name": "Ceto Roe",
+    "price": 178
+  },
+  "chipped talon": {
+    "name": "Chipped Talon",
+    "price": 34
+  },
+  "cimmerian pom pom": {
+    "name": "Cimmerian Pom Pom",
+    "price": 42
+  },
+  "cinicula shell": {
+    "name": "Cinicula Shell",
+    "price": 90
+  },
+  "clear gerrid soup": {
+    "name": "Clear Gerrid Soup",
+    "price": 90
+  },
+  "cloudy eyeball": {
+    "name": "Cloudy Eyeball",
+    "price": 72
+  },
+  "cloudy gerrid soup": {
+    "name": "Cloudy Gerrid Soup",
+    "price": 90
+  },
+  "coconut oil": {
+    "name": "Coconut Oil",
+    "price": 114
+  },
+  "colubrim eel kebab": {
+    "name": "Colubrim Eel Kebab",
+    "price": 198
+  },
+  "combat boost meds": {
+    "name": "Combat Boost Meds",
+    "price": 34
+  },
+  "coronid dung": {
+    "name": "Coronid Dung",
+    "price": 168
+  },
+  "coronid larynx": {
+    "name": "Coronid Larynx",
+    "price": 168
+  },
+  "cracked bill": {
+    "name": "Cracked Bill",
+    "price": 42
+  },
+  "cracked claw": {
+    "name": "Cracked Claw",
+    "price": 24
+  },
+  "creare glyph": {
+    "name": "Creare Glyph",
+    "price": 90
+  },
+  "crimson dilus eye": {
+    "name": "Crimson Dilus Eye",
+    "price": 90
+  },
+  "crimson sacrifole feather": {
+    "name": "Crimson Sacrifole Feather",
+    "price": 78
+  },
+  "crude nielnail mask": {
+    "name": "Crude Nielnail Mask",
+    "price": 210
+  },
+  "dagahn's adamant band": {
+    "name": "Dagahn's Adamant Band",
+    "price": 162
+  },
+  "damask metal": {
+    "name": "Damask Metal",
+    "price": 138
+  },
+  "decrepit wing": {
+    "name": "Decrepit Wing",
+    "price": 198
+  },
+  "demoninc jewel": {
+    "name": "Demoninc Jewel",
+    "price": 42
+  },
+  "deva caladar's red ear": {
+    "name": "Deva Caladar's Red Ear",
+    "price": 210
+  },
+  "developed balaena fat": {
+    "name": "Developed Balaena Fat",
+    "price": 146
+  },
+  "dialek glyph": {
+    "name": "Dialek Glyph",
+    "price": 114
+  },
+  "diamond seed": {
+    "name": "Diamond Seed",
+    "price": 66
+  },
+  "dirty cloth": {
+    "name": "Dirty Cloth",
+    "price": 26
+  },
+  "distilled sap": {
+    "name": "Distilled Sap",
+    "price": 82
+  },
+  "dried seaweed lichen": {
+    "name": "Dried Seaweed Lichen",
+    "price": 42
+  },
+  "dual boards": {
+    "name": "Dual Boards",
+    "price": 42
+  },
+  "dull stone": {
+    "name": "Dull Stone",
+    "price": 34
+  },
+  "duoguill broth": {
+    "name": "Duoguill Broth",
+    "price": 50
+  },
+  "e.m. unit": {
+    "name": "E.M. Unit",
+    "price": 90
+  },
+  "ebony evello egg": {
+    "name": "Ebony Evello Egg",
+    "price": 50
+  },
+  "eerie lightning tentacle": {
+    "name": "Eerie Lightning Tentacle",
+    "price": 66
+  },
+  "electric tersqual tear": {
+    "name": "Electric Tersqual Tear",
+    "price": 138
+  },
+  "electrified xeno blood": {
+    "name": "Electrified Xeno Blood",
+    "price": 54
+  },
+  "elemental cluster": {
+    "name": "Elemental Cluster",
+    "price": 54
+  },
+  "elemental fragment": {
+    "name": "Elemental Fragment",
+    "price": 54
+  },
+  "emerald horn": {
+    "name": "Emerald Horn",
+    "price": 42
+  },
+  "emerald whiskey": {
+    "name": "Emerald Whiskey",
+    "price": 72
+  },
+  "energy tube": {
+    "name": "Energy Tube",
+    "price": 22
+  },
+  "esse glyph": {
+    "name": "Esse Glyph",
+    "price": 90
+  },
+  "eternal arenatect moss": {
+    "name": "Eternal Arenatect Moss",
+    "price": 72
+  },
+  "evergreen aprica antlers": {
+    "name": "Evergreen Aprica Antlers",
+    "price": 90
+  },
+  "evolved insidia claw": {
+    "name": "Evolved Insidia Claw",
+    "price": 66
+  },
+  "experia glyph": {
+    "name": "Experia Glyph",
+    "price": 90
+  },
+  "falsaxum shell": {
+    "name": "Falsaxum Shell",
+    "price": 90
+  },
+  "fal-swo solar crest": {
+    "name": "Fal-swo Solar Crest",
+    "price": 90
+  },
+  "fatty fish belly": {
+    "name": "Fatty Fish Belly",
+    "price": 50
+  },
+  "fertilized jacul egg": {
+    "name": "Fertilized Jacul Egg",
+    "price": 90
+  },
+  "filiavent intestine": {
+    "name": "Filiavent Intestine",
+    "price": 218
+  },
+  "filthy wing": {
+    "name": "Filthy Wing",
+    "price": 26
+  },
+  "fine aprica wood": {
+    "name": "Fine Aprica Wood",
+    "price": 114
+  },
+  "fine black belt": {
+    "name": "Fine Black Belt",
+    "price": 22
+  },
+  "fine duoguill fishmeal": {
+    "name": "Fine Duoguill Fishmeal",
+    "price": 42
+  },
+  "fine red belt": {
+    "name": "Fine Red Belt",
+    "price": 30
+  },
+  "fine transparent belt": {
+    "name": "Fine Transparent Belt",
+    "price": 26
+  },
+  "fine white belt": {
+    "name": "Fine White Belt",
+    "price": 30
+  },
+  "flaming rock": {
+    "name": "Flaming Rock",
+    "price": 50
+  },
+  "fleecy fur": {
+    "name": "Fleecy Fur",
+    "price": 22
+  },
+  "flowering germivore scales": {
+    "name": "Flowering Germivore Scales",
+    "price": 24
+  },
+  "flowering papil scales": {
+    "name": "Flowering Papil Scales",
+    "price": 34
+  },
+  "fluffy tuft": {
+    "name": "Fluffy Tuft",
+    "price": 26
+  },
+  "forfex miso": {
+    "name": "Forfex Miso",
+    "price": 36
+  },
+  "fossilized bone": {
+    "name": "Fossilized Bone",
+    "price": 138
+  },
+  "fresh fish meat": {
+    "name": "Fresh Fish Meat",
+    "price": 34
+  },
+  "galaxial jewel": {
+    "name": "Galaxial Jewel",
+    "price": 42
+  },
+  "galdr head": {
+    "name": "Galdr Head",
+    "price": 90
+  },
+  "genuine chamber": {
+    "name": "Genuine Chamber",
+    "price": 138
+  },
+  "genuine crank": {
+    "name": "Genuine Crank",
+    "price": 54
+  },
+  "genuine frame": {
+    "name": "Genuine Frame",
+    "price": 72
+  },
+  "genuine plate": {
+    "name": "Genuine Plate",
+    "price": 72
+  },
+  "genuine shaft": {
+    "name": "Genuine Shaft",
+    "price": 72
+  },
+  "gerrid navel": {
+    "name": "Gerrid Navel",
+    "price": 72
+  },
+  "gerrid shell": {
+    "name": "Gerrid Shell",
+    "price": 72
+  },
+  "giant blue pearl": {
+    "name": "Giant Blue Pearl",
+    "price": 42
+  },
+  "giant cavity": {
+    "name": "Giant Cavity",
+    "price": 114
+  },
+  "giant cinicula jaw": {
+    "name": "Giant Cinicula Jaw",
+    "price": 90
+  },
+  "giant falsaxum jaw": {
+    "name": "Giant Falsaxum Jaw",
+    "price": 90
+  },
+  "giant jade pearl": {
+    "name": "Giant Jade Pearl",
+    "price": 66
+  },
+  "giant proteirn": {
+    "name": "Giant Proteirn",
+    "price": 168
+  },
+  "glossy saltat fan": {
+    "name": "Glossy Saltat Fan",
+    "price": 42
+  },
+  "glowing retina": {
+    "name": "Glowing Retina",
+    "price": 42
+  },
+  "goetia's black heel": {
+    "name": "Goetia's Black Heel",
+    "price": 162
+  },
+  "gold ceto membrane": {
+    "name": "Gold Ceto Membrane",
+    "price": 138
+  },
+  "gold monocerus horn": {
+    "name": "Gold Monocerus Horn",
+    "price": 72
+  },
+  "gold sylooth brace": {
+    "name": "Gold Sylooth Brace",
+    "price": 114
+  },
+  "golden armor": {
+    "name": "Golden Armor",
+    "price": 66
+  },
+  "golden blatta wing": {
+    "name": "Golden Blatta Wing",
+    "price": 36
+  },
+  "golden cantor tooth": {
+    "name": "Golden Cantor Tooth",
+    "price": 108
+  },
+  "golden gyrocompass": {
+    "name": "Golden Gyrocompass",
+    "price": 54
+  },
+  "golden jewel": {
+    "name": "Golden Jewel",
+    "price": 42
+  },
+  "golden mortifole feather": {
+    "name": "Golden Mortifole Feather",
+    "price": 30
+  },
+  "golden petramand silk": {
+    "name": "Golden Petramand Silk",
+    "price": 90
+  },
+  "golden progen wing": {
+    "name": "Golden Progen Wing",
+    "price": 72
+  },
+  "golden puff": {
+    "name": "Golden Puff",
+    "price": 4
+  },
+  "golden simius mane": {
+    "name": "Golden Simius Mane",
+    "price": 54
+  },
+  "golden stabilizer": {
+    "name": "Golden Stabilizer",
+    "price": 90
+  },
+  "golden yggralith heart": {
+    "name": "Golden Yggralith Heart",
+    "price": 636
+  },
+  "golden yggralith nut": {
+    "name": "Golden Yggralith Nut",
+    "price": 276
+  },
+  "gooey gunge": {
+    "name": "Gooey Gunge",
+    "price": 36
+  },
+  "gray shell": {
+    "name": "Gray Shell",
+    "price": 90
+  },
+  "green blatta wing": {
+    "name": "Green Blatta Wing",
+    "price": 24
+  },
+  "green crystal": {
+    "name": "Green Crystal",
+    "price": 114
+  },
+  "green jacul wing": {
+    "name": "Green Jacul Wing",
+    "price": 72
+  },
+  "green monoceros horn": {
+    "name": "Green Monoceros Horn",
+    "price": 72
+  },
+  "green mortifole feather": {
+    "name": "Green Mortifole Feather",
+    "price": 42
+  },
+  "green puff": {
+    "name": "Green Puff",
+    "price": 42
+  },
+  "green simius mane": {
+    "name": "Green Simius Mane",
+    "price": 54
+  },
+  "gremlin stone": {
+    "name": "Gremlin Stone",
+    "price": 114
+  },
+  "grex wisdom tooth": {
+    "name": "Grex Wisdom Tooth",
+    "price": 34
+  },
+  "gularthian everflame": {
+    "name": "Gularthian Everflame",
+    "price": 146
+  },
+  "gularthian flint": {
+    "name": "Gularthian Flint",
+    "price": 114
+  },
+  "hard backbone": {
+    "name": "Hard Backbone",
+    "price": 42
+  },
+  "hard pom pom": {
+    "name": "Hard Pom Pom",
+    "price": 30
+  },
+  "herculean beast hair": {
+    "name": "Herculean Beast Hair",
+    "price": 54
+  },
+  "hidden cantor hoard": {
+    "name": "Hidden Cantor Hoard",
+    "price": 90
+  },
+  "hi-spec sensor module": {
+    "name": "Hi-Spec Sensor Module",
+    "price": 54
+  },
+  "honey oil": {
+    "name": "Honey Oil",
+    "price": 114
+  },
+  "hot potamus juice": {
+    "name": "Hot Potamus Juice",
+    "price": 30
+  },
+  "hulking incisor": {
+    "name": "Hulking Incisor",
+    "price": 30
+  },
+  "ictus shell": {
+    "name": "Ictus Shell",
+    "price": 90
+  },
+  "infinite telethia pen": {
+    "name": "Infinite Telethia Pen",
+    "price": 207
+  },
+  "imperial sphinx fang": {
+    "name": "Imperial Sphinx Fang",
+    "price": 210
+  },
+  "ingrown virago claw": {
+    "name": "Ingrown Virago Claw",
+    "price": 138
+  },
+  "insect jaw": {
+    "name": "Insect Jaw",
+    "price": 22
+  },
+  "insidia mohawk": {
+    "name": "Insidia Mohawk",
+    "price": 54
+  },
+  "iron lump": {
+    "name": "Iron Lump",
+    "price": 66
+  },
+  "jacul horn": {
+    "name": "Jacul Horn",
+    "price": 72
+  },
+  "jacul waterfall orb": {
+    "name": "Jacul Waterfall Orb",
+    "price": 72
+  },
+  "jagged grex tail": {
+    "name": "Jagged Grex Tail",
+    "price": 30
+  },
+  "juicy wild meat": {
+    "name": "Juicy Wild Meat",
+    "price": 26
+  },
+  "large hoof": {
+    "name": "Large Hoof",
+    "price": 54
+  },
+  "large lophid liver": {
+    "name": "Large Lophid Liver",
+    "price": 146
+  },
+  "large purgovent liver": {
+    "name": "Large Purgovent Liver",
+    "price": 114
+  },
+  "large saw tooth": {
+    "name": "Large Saw Tooth",
+    "price": 138
+  },
+  "laser light": {
+    "name": "Laser Light",
+    "price": 66
+  },
+  "lava crystal": {
+    "name": "Lava Crystal",
+    "price": 82
+  },
+  "lead carapace": {
+    "name": "Lead Carapace",
+    "price": 36
+  },
+  "lepyx elastic cell": {
+    "name": "Lepyx Elastic Cell",
+    "price": 36
+  },
+  "lepyx jaw meat": {
+    "name": "Lepyx Jaw Meat",
+    "price": 36
+  },
+  "lepyx moonstone": {
+    "name": "Lepyx Moonstone",
+    "price": 72
+  },
+  "lepyx sunstone": {
+    "name": "Lepyx Sunstone",
+    "price": 36
+  },
+  "levitath feather": {
+    "name": "Levitath Feather",
+    "price": 138
+  },
+  "levitath sun bead": {
+    "name": "Levitath Sun Bead",
+    "price": 138
+  },
+  "libertas glyph": {
+    "name": "Libertas Glyph",
+    "price": 114
+  },
+  "liceor horn": {
+    "name": "Liceor Horn",
+    "price": 50
+  },
+  "liceor sun bead": {
+    "name": "Liceor Sun Bead",
+    "price": 42
+  },
+  "light-speed jet fin": {
+    "name": "Light-Speed Jet Fin",
+    "price": 50
+  },
+  "lightweight pelt": {
+    "name": "Lightweight Pelt",
+    "price": 34
+  },
+  "lone purple ictus stinger": {
+    "name": "Lone Purple Ictus Stinger",
+    "price": 114
+  },
+  "lone red ictus stinger": {
+    "name": "Lone Red Ictus Stinger",
+    "price": 114
+  },
+  "lone white ictus stinger": {
+    "name": "Lone White Ictus Stinger",
+    "price": 114
+  },
+  "longevity bough": {
+    "name": "Longevity Bough",
+    "price": 114
+  },
+  "lophid jaw meat": {
+    "name": "Lophid Jaw Meat",
+    "price": 114
+  },
+  "lovely pom pom": {
+    "name": "Lovely Pom Pom",
+    "price": 30
+  },
+  "lucky cervus sapling": {
+    "name": "Lucky Cervus Sapling",
+    "price": 146
+  },
+  "lucky rainbow whisker": {
+    "name": "Lucky Rainbow Whisker",
+    "price": 114
+  },
+  "luminescent antenna": {
+    "name": "Luminescent Antenna",
+    "price": 54
+  },
+  "luminescent tail": {
+    "name": "Luminescent Tail",
+    "price": 72
+  },
+  "malevolent petramand silk": {
+    "name": "Malevolent Petramand Silk",
+    "price": 90
+  },
+  "maple oil": {
+    "name": "Maple Oil",
+    "price": 114
+  },
+  "marbled suid fillet": {
+    "name": "Marbled Suid Fillet",
+    "price": 34
+  },
+  "meaty evello egg": {
+    "name": "Meaty Evello Egg",
+    "price": 50
+  },
+  "medicinal blatta oil": {
+    "name": "Medicinal Blatta Oil",
+    "price": 26
+  },
+  "melon oil": {
+    "name": "Melon Oil",
+    "price": 114
+  },
+  "mephite ear hair": {
+    "name": "Mephite Ear Hair",
+    "price": 42
+  },
+  "mephite stinkbag": {
+    "name": "Mephite Stinkbag",
+    "price": 50
+  },
+  "metal xeno chain": {
+    "name": "Metal Xeno Chain",
+    "price": 54
+  },
+  "millepod ice rock": {
+    "name": "Millepod Ice Rock",
+    "price": 198
+  },
+  "millesaur dung": {
+    "name": "Millesaur Dung",
+    "price": 168
+  },
+  "millesaur larynx": {
+    "name": "Millesaur Larynx",
+    "price": 168
+  },
+  "mollusk mucus": {
+    "name": "Mollusk Mucus",
+    "price": 68
+  },
+  "monocerus hoof hook": {
+    "name": "Monocerus Hoof Hook",
+    "price": 90
+  },
+  "monocerus wing": {
+    "name": "Monocerus Wing",
+    "price": 72
+  },
+  "mortifole pollen": {
+    "name": "Mortifole Pollen",
+    "price": 30
+  },
+  "moving dilus tail": {
+    "name": "Moving Dilus Tail",
+    "price": 72
+  },
+  "moving thallus tail": {
+    "name": "Moving Thallus Tail",
+    "price": 90
+  },
+  "moving vivohast tail": {
+    "name": "Moving Vivohast Tail",
+    "price": 90
+  },
+  "muddy pelt": {
+    "name": "Muddy Pelt",
+    "price": 22
+  },
+  "multicolor murra wing": {
+    "name": "Multicolor Murra Wing",
+    "price": 50
+  },
+  "multi-wire": {
+    "name": "Multi-Wire",
+    "price": 42
+  },
+  "murky potamus water": {
+    "name": "Murky Potamus Water",
+    "price": 30
+  },
+  "muscled cantor bulge": {
+    "name": "Muscled Cantor Bulge",
+    "price": 72
+  },
+  "muscled simius bulge": {
+    "name": "Muscled Simius Bulge",
+    "price": 54
+  },
+  "muscled suid bulge": {
+    "name": "Muscled Suid Bulge",
+    "price": 30
+  },
+  "musky nectar": {
+    "name": "Musky Nectar",
+    "price": 26
+  },
+  "new cylinder": {
+    "name": "New Cylinder",
+    "price": 66
+  },
+  "noble yggralith scale": {
+    "name": "Noble Yggralith Scale",
+    "price": 396
+  },
+  "nutritious microbes": {
+    "name": "Nutritious Microbes",
+    "price": 54
+  },
+  "o.x. unit": {
+    "name": "O.X. Unit",
+    "price": 90
+  },
+  "obsidian cluster": {
+    "name": "Obsidian Cluster",
+    "price": 168
+  },
+  "obsidian fragment": {
+    "name": "Obsidian Fragment",
+    "price": 118
+  },
+  "ocher stabilizer": {
+    "name": "Ocher Stabilizer",
+    "price": 72
+  },
+  "oc-serv eastern crest": {
+    "name": "Oc-serv Eastern Crest",
+    "price": 98
+  },
+  "oc-serv hand": {
+    "name": "Oc-serv Hand",
+    "price": 54
+  },
+  "oc-serv northern crest": {
+    "name": "Oc-serv Northern Crest",
+    "price": 78
+  },
+  "oc-serv southern crest": {
+    "name": "Oc-serv Southern Crest",
+    "price": 98
+  },
+  "oc-serv western crest": {
+    "name": "Oc-serv Western Crest",
+    "price": 78
+  },
+  "octopus board": {
+    "name": "Octopus Board",
+    "price": 98
+  },
+  "odorous tentacle": {
+    "name": "Odorous Tentacle",
+    "price": 72
+  },
+  "opaque membrane": {
+    "name": "Opaque Membrane",
+    "price": 26
+  },
+  "opaque mirror": {
+    "name": "Opaque Mirror",
+    "price": 42
+  },
+  "orange tequila": {
+    "name": "Orange Tequila",
+    "price": 54
+  },
+  "orichalcum metal": {
+    "name": "Orichalcum Metal",
+    "price": 138
+  },
+  "ornate insidia claw": {
+    "name": "Ornate Insidia Claw",
+    "price": 82
+  },
+  "ornate petramand claw": {
+    "name": "Ornate Petramand Claw",
+    "price": 90
+  },
+  "ornate progen horn": {
+    "name": "Ornate Progen Horn",
+    "price": 72
+  },
+  "ovis polishing stone": {
+    "name": "Ovis Polishing Stone",
+    "price": 30
+  },
+  "papil straw": {
+    "name": "Papil Straw",
+    "price": 30
+  },
+  "parasitic capsule": {
+    "name": "Parasitic Capsule",
+    "price": 34
+  },
+  "perforated oar": {
+    "name": "Perforated Oar",
+    "price": 26
+  },
+  "pink ceto membrane": {
+    "name": "Pink Ceto Membrane",
+    "price": 138
+  },
+  "poisonous needle": {
+    "name": "Poisonous Needle",
+    "price": 30
+  },
+  "potamus life lung": {
+    "name": "Potamus Life Lung",
+    "price": 34
+  },
+  "pristine bristle": {
+    "name": "Pristine Bristle",
+    "price": 66
+  },
+  "pristine claw": {
+    "name": "Pristine Claw",
+    "price": 36
+  },
+  "pristine dorsal fine": {
+    "name": "Pristine Dorsal Fine",
+    "price": 72
+  },
+  "pristine insect jaw": {
+    "name": "Pristine Insect Jaw",
+    "price": 54
+  },
+  "pristine insect leg": {
+    "name": "Pristine Insect Leg",
+    "price": 30
+  },
+  "pristine pincer": {
+    "name": "Pristine Pincer",
+    "price": 36
+  },
+  "pristine spicule": {
+    "name": "Pristine Spicule",
+    "price": 34
+  },
+  "pristine whiskers": {
+    "name": "Pristine Whiskers",
+    "price": 78
+  },
+  "progen hoof seal": {
+    "name": "Progen Hoof Seal",
+    "price": 90
+  },
+  "prone coin purse": {
+    "name": "Prone Coin Purse",
+    "price": 26
+  },
+  "puge counter": {
+    "name": "Puge Counter",
+    "price": 26
+  },
+  "puge self-destruct mechanism": {
+    "name": "Puge Self-Destruct Mechanism",
+    "price": 26
+  },
+  "pugilith lamp": {
+    "name": "Pugilith Lamp",
+    "price": 66
+  },
+  "pure white caro tusk": {
+    "name": "Pure White Caro Tusk",
+    "price": 66
+  },
+  "purgovent jaw meat": {
+    "name": "Purgovent Jaw Meat",
+    "price": 90
+  },
+  "purple cervus antlers": {
+    "name": "Purple Cervus Antlers",
+    "price": 138
+  },
+  "purple scintimure tentacle": {
+    "name": "Purple Scintimure Tentacle",
+    "price": 114
+  },
+  "purple virago alloy plate": {
+    "name": "Purple Virago Alloy Plate",
+    "price": 138
+  },
+  "qmoevan capacitor": {
+    "name": "Qmoevan Capacitor",
+    "price": 72
+  },
+  "quality core": {
+    "name": "Quality Core",
+    "price": 58
+  },
+  "quality crank": {
+    "name": "Quality Crank",
+    "price": 36
+  },
+  "quality fuse": {
+    "name": "Quality Fuse",
+    "price": 54
+  },
+  "quality giant cells": {
+    "name": "Quality Giant Cells",
+    "price": 114
+  },
+  "quality pelt": {
+    "name": "Quality Pelt",
+    "price": 54
+  },
+  "quality scale": {
+    "name": "Quality Scale",
+    "price": 138
+  },
+  "quality shaft": {
+    "name": "Quality Shaft",
+    "price": 72
+  },
+  "quality skin": {
+    "name": "Quality Skin",
+    "price": 118
+  },
+  "quality vigent claw": {
+    "name": "Quality Vigent Claw",
+    "price": 138
+  },
+  "quirky liver": {
+    "name": "Quirky Liver",
+    "price": 66
+  },
+  "quo pod": {
+    "name": "Quo Pod",
+    "price": 54
+  },
+  "r.b. unit": {
+    "name": "R.B. Unit",
+    "price": 90
+  },
+  "rainbow carving shard": {
+    "name": "Rainbow Carving Shard",
+    "price": 66
+  },
+  "rainbow metal": {
+    "name": "Rainbow Metal",
+    "price": 114
+  },
+  "raw meaty caecus liver": {
+    "name": "Raw Meaty Caecus Liver",
+    "price": 66
+  },
+  "red blatta wing": {
+    "name": "Red Blatta Wing",
+    "price": 24
+  },
+  "red brandy": {
+    "name": "Red Brandy",
+    "price": 90
+  },
+  "red filiavent tentacle": {
+    "name": "Red Filiavent Tentacle",
+    "price": 168
+  },
+  "red forfex shell": {
+    "name": "Red Forfex Shell",
+    "price": 36
+  },
+  "red milsaadi hood": {
+    "name": "Red Milsaadi Hood",
+    "price": 42
+  },
+  "red mortifole feather": {
+    "name": "Red Mortifole Feather",
+    "price": 66
+  },
+  "red scintimure tecntacle": {
+    "name": "Red Scintimure Tecntacle",
+    "price": 66
+  },
+  "red simius mane": {
+    "name": "Red Simius Mane",
+    "price": 54
+  },
+  "red thallus antenna": {
+    "name": "Red Thallus Antenna",
+    "price": 90
+  },
+  "red vigent rock scalp": {
+    "name": "Red Vigent Rock Scalp",
+    "price": 138
+  },
+  "redwood aprica antlers": {
+    "name": "Redwood Aprica Antlers",
+    "price": 90
+  },
+  "refined horn": {
+    "name": "Refined Horn",
+    "price": 66
+  },
+  "reinforced crank": {
+    "name": "Reinforced Crank",
+    "price": 30
+  },
+  "reinforced frame": {
+    "name": "Reinforced Frame",
+    "price": 90
+  },
+  "reinforced jet": {
+    "name": "Reinforced Jet",
+    "price": 36
+  },
+  "reinforced plug": {
+    "name": "Reinforced Plug",
+    "price": 90
+  },
+  "reinforced plunger": {
+    "name": "Reinforced Plunger",
+    "price": 54
+  },
+  "reinforced thruster": {
+    "name": "Reinforced Thruster",
+    "price": 24
+  },
+  "reverse colubrim fin": {
+    "name": "Reverse Colubrim Fin",
+    "price": 198
+  },
+  "reverse millepod fin": {
+    "name": "Reverse Millepod Fin",
+    "price": 198
+  },
+  "rexoskell sucker": {
+    "name": "Rexoskell Sucker",
+    "price": 210
+  },
+  "rich scintimure meat": {
+    "name": "Rich Scintimure Meat",
+    "price": 82
+  },
+  "robust evello horn": {
+    "name": "Robust Evello Horn",
+    "price": 42
+  },
+  "rotten meat": {
+    "name": "Rotten Meat",
+    "price": 26
+  },
+  "rough skin": {
+    "name": "Rough skin",
+    "price": 42
+  },
+  "rugged skin": {
+    "name": "Rugged Skin",
+    "price": 58
+  },
+  "ryyz's silver piercings": {
+    "name": "Ryyz's Silver Piercings",
+    "price": 162
+  },
+  "s.p. unit": {
+    "name": "S.P. Unit",
+    "price": 90
+  },
+  "sabula backbone": {
+    "name": "Sabula Backbone",
+    "price": 90
+  },
+  "saltat horn": {
+    "name": "Saltat Horn",
+    "price": 50
+  },
+  "sapphire horn": {
+    "name": "Sapphire Horn",
+    "price": 42
+  },
+  "scienti glyph": {
+    "name": "Scienti Glyph",
+    "price": 90
+  },
+  "scintimure fat": {
+    "name": "Scintimure Fat",
+    "price": 66
+  },
+  "scirpo cyanide sac": {
+    "name": "Scirpo Cyanide Sac",
+    "price": 36
+  },
+  "scirpo malic acid sac": {
+    "name": "Scirpo Malic Acid Sac",
+    "price": 36
+  },
+  "scirpo silk": {
+    "name": "Scirpo Silk",
+    "price": 42
+  },
+  "scirpo sulfuric acid sac": {
+    "name": "Scirpo Sulfuric Acid Sac",
+    "price": 54
+  },
+  "scorching giant cells": {
+    "name": "Scorching Giant Cells",
+    "price": 114
+  },
+  "scratched jewel": {
+    "name": "Scratched Jewel",
+    "price": 30
+  },
+  "seidr control device": {
+    "name": "Seidr Control Device",
+    "price": 138
+  },
+  "sharp ear": {
+    "name": "Sharp Ear",
+    "price": 30
+  },
+  "sharp germivore jaw": {
+    "name": "Sharp Germivore Jaw",
+    "price": 26
+  },
+  "sharp vivohast jaw": {
+    "name": "Sharp Vivohast Jaw",
+    "price": 72
+  },
+  "shed germivore scales": {
+    "name": "Shed Germivore Scales",
+    "price": 24
+  },
+  "shimmering silk": {
+    "name": "Shimmering Silk",
+    "price": 42
+  },
+  "shiny black caro plate": {
+    "name": "Shiny Black Caro Plate",
+    "price": 54
+  },
+  "shiny copper caro plate": {
+    "name": "Shiny Copper Caro Plate",
+    "price": 54
+  },
+  "shiny mortifole seed": {
+    "name": "Shiny Mortifole Seed",
+    "price": 34
+  },
+  "shiny silver caro plate": {
+    "name": "Shiny Silver Caro Plate",
+    "price": 66
+  },
+  "shrad eye": {
+    "name": "Shrad Eye",
+    "price": 54
+  },
+  "silver blatta wind": {
+    "name": "Silver Blatta Wind",
+    "price": 24
+  },
+  "silver cantor tooth": {
+    "name": "Silver Cantor Tooth",
+    "price": 72
+  },
+  "silver petramand silk": {
+    "name": "Silver Petramand Silk",
+    "price": 90
+  },
+  "silver progen wing": {
+    "name": "Silver Progen Wing",
+    "price": 72
+  },
+  "silver sacrifole feather": {
+    "name": "Silver Sacrifole Feather",
+    "price": 54
+  },
+  "silver vita core": {
+    "name": "Silver Vita Core",
+    "price": 210
+  },
+  "silver yggralith nut": {
+    "name": "Silver Yggralith Nut",
+    "price": 156
+  },
+  "simius snack stash": {
+    "name": "Simius Snack Stash",
+    "price": 66
+  },
+  "sky jewel": {
+    "name": "Sky Jewel",
+    "price": 42
+  },
+  "slender horn": {
+    "name": "Slender Horn",
+    "price": 54
+  },
+  "slimy epithelium": {
+    "name": "Slimy Epithelium",
+    "price": 30
+  },
+  "slimy tongue": {
+    "name": "Slimy Tongue",
+    "price": 26
+  },
+  "small dorsal fin": {
+    "name": "Small Dorsal Fin",
+    "price": 26
+  },
+  "small insect leg": {
+    "name": "Small Insect Leg",
+    "price": 22
+  },
+  "small scale": {
+    "name": "Small Scale",
+    "price": 26
+  },
+  "small shell": {
+    "name": "Small Shell",
+    "price": 30
+  },
+  "smelly fish meat": {
+    "name": "Smelly Fish Meat",
+    "price": 42
+  },
+  "smooth tail fin": {
+    "name": "Smooth Tail Fin",
+    "price": 90
+  },
+  "sparkling blue gem": {
+    "name": "Sparkling Blue Gem",
+    "price": 178
+  },
+  "sparkling purple gem": {
+    "name": "Sparkling Purple Gem",
+    "price": 178
+  },
+  "sparkling red gem": {
+    "name": "Sparkling Red Gem",
+    "price": 178
+  },
+  "spathi glyph": {
+    "name": "Spathi Glyph",
+    "price": 114
+  },
+  "spicy sacrifole pollen": {
+    "name": "Spicy Sacrifole Pollen",
+    "price": 54
+  },
+  "spiked tail fin": {
+    "name": "Spiked Tail Fin",
+    "price": 114
+  },
+  "squishy cartilage": {
+    "name": "Squishy Cartilage",
+    "price": 42
+  },
+  "standard blade module": {
+    "name": "Standard Blade Module",
+    "price": 54
+  },
+  "standard coil": {
+    "name": "Standard Coil",
+    "price": 30
+  },
+  "standard crank": {
+    "name": "Standard Crank",
+    "price": 20
+  },
+  "standard jammer": {
+    "name": "Standard Jammer",
+    "price": 30
+  },
+  "standard sensor part": {
+    "name": "Standard Sensor Part",
+    "price": 36
+  },
+  "standard shaft": {
+    "name": "Standard Shaft",
+    "price": 72
+  },
+  "steel unafulge cell": {
+    "name": "Steel Unafulge Cell",
+    "price": 42
+  },
+  "sticky mucus": {
+    "name": "Sticky Mucus",
+    "price": 20
+  },
+  "sticky scirpo silk": {
+    "name": "Sticky Scirpo Silk",
+    "price": 36
+  },
+  "stiff hair": {
+    "name": "Stiff Hair",
+    "price": 30
+  },
+  "stout purgovent extract": {
+    "name": "Stout Purgovent Extract",
+    "price": 90
+  },
+  "stripped plating": {
+    "name": "Stripped Plating",
+    "price": 30
+  },
+  "strong purgovent extract": {
+    "name": "Strong Purgovent Extract",
+    "price": 114
+  },
+  "sturdy drakebone": {
+    "name": "Sturdy Drakebone",
+    "price": 58
+  },
+  "succulent meat": {
+    "name": "Succulent Meat",
+    "price": 26
+  },
+  "suid fillet": {
+    "name": "Suid Fillet",
+    "price": 34
+  },
+  "supple leather": {
+    "name": "Supple Leather",
+    "price": 22
+  },
+  "supple tail": {
+    "name": "Supple Tail",
+    "price": 54
+  },
+  "sylooth tonic water": {
+    "name": "Sylooth Tonic Water",
+    "price": 146
+  },
+  "t.p unit": {
+    "name": "T.P Unit",
+    "price": 90
+  },
+  "tasty fish belly": {
+    "name": "Tasty Fish Belly",
+    "price": 82
+  },
+  "tatty insect wing": {
+    "name": "Tatty Insect Wing",
+    "price": 20
+  },
+  "taut leather": {
+    "name": "Taut Leather",
+    "price": 22
+  },
+  "tectinsula back moss": {
+    "name": "Tectinsula Back Moss",
+    "price": 54
+  },
+  "tectinsula shell": {
+    "name": "Tectinsula Shell",
+    "price": 54
+  },
+  "telethia emerald": {
+    "name": "Telethia Emerald",
+    "price": 387
+  },
+  "telethia mirror": {
+    "name": "Telethia Mirror",
+    "price": 117
+  },
+  "telethia ring": {
+    "name": "Telethia Ring",
+    "price": 477
+  },
+  "telethia stem cell": {
+    "name": "Telethia Stem Cell",
+    "price": 297
+  },
+  "tempered blade module": {
+    "name": "Tempered Blade Module",
+    "price": 54
+  },
+  "tempus glyph": {
+    "name": "Tempus Glyph",
+    "price": 114
+  },
+  "terebra oil grease": {
+    "name": "Terebra Oil Grease",
+    "price": 30
+  },
+  "terebra paw stamp": {
+    "name": "Terebra Paw Stamp",
+    "price": 34
+  },
+  "terebra water grease": {
+    "name": "Terebra Water Grease",
+    "price": 30
+  },
+  "tersqual eel kebab": {
+    "name": "Tersqual Eel Kebab",
+    "price": 90
+  },
+  "tersqual fire pouch": {
+    "name": "Tersqual Fire Pouch",
+    "price": 114
+  },
+  "thallus crescnt hook": {
+    "name": "Thallus Crescnt Hook",
+    "price": 72
+  },
+  "thick cinicula horn": {
+    "name": "Thick Cinicula Horn",
+    "price": 90
+  },
+  "thick coronid hide": {
+    "name": "Thick Coronid Hide",
+    "price": 168
+  },
+  "thick falsaxum horn": {
+    "name": "Thick Falsaxum Horn",
+    "price": 90
+  },
+  "thick millesaur hide": {
+    "name": "Thick Millesaur Hide",
+    "price": 168
+  },
+  "topaz wind": {
+    "name": "Topaz Wind",
+    "price": 54
+  },
+  "tough humpsteak": {
+    "name": "Tough Humpsteak",
+    "price": 30
+  },
+  "tough tendon": {
+    "name": "Tough Tendon",
+    "price": 168
+  },
+  "transparent membrane": {
+    "name": "Transparent Membrane",
+    "price": 34
+  },
+  "tricolored ovis meat": {
+    "name": "Tricolored Ovis Meat",
+    "price": 34
+  },
+  "turba nectar": {
+    "name": "Turba Nectar",
+    "price": 50
+  },
+  "turba straw": {
+    "name": "Turba Straw",
+    "price": 42
+  },
+  "turquoise metal": {
+    "name": "Turquoise Metal",
+    "price": 138
+  },
+  "unafulge death toxin": {
+    "name": "Unafulge Death Toxin",
+    "price": 98
+  },
+  "unafulge numbing toxin": {
+    "name": "Unafulge Numbing Toxin",
+    "price": 50
+  },
+  "unfertilized auravis egg": {
+    "name": "Unfertilized Auravis Egg",
+    "price": 66
+  },
+  "unlucky black whisker": {
+    "name": "Unlucky Black Whisker",
+    "price": 138
+  },
+  "upgraded coil": {
+    "name": "Upgraded Coil",
+    "price": 42
+  },
+  "upgraded jammer": {
+    "name": "Upgraded Jammer",
+    "price": 42
+  },
+  "upgraded lens": {
+    "name": "Upgraded Lens",
+    "price": 58
+  },
+  "upgraded sensor part": {
+    "name": "Upgraded Sensor Part",
+    "price": 54
+  },
+  "upgraded shaft part": {
+    "name": "Upgraded Shaft Part",
+    "price": 72
+  },
+  "upgraded spindle part": {
+    "name": "Upgraded Spindle Part",
+    "price": 66
+  },
+  "used cylinder": {
+    "name": "Used Cylinder",
+    "price": 54
+  },
+  "vasara war medal": {
+    "name": "Vasara War Medal",
+    "price": 210
+  },
+  "vesper fang": {
+    "name": "Vesper Fang",
+    "price": 30
+  },
+  "vesper fry": {
+    "name": "Vesper Fry",
+    "price": 34
+  },
+  "vesper hair clip": {
+    "name": "Vesper Hair Clip",
+    "price": 30
+  },
+  "vibrant plume": {
+    "name": "Vibrant Plume",
+    "price": 34
+  },
+  "vigent blood": {
+    "name": "Vigent Blood",
+    "price": 138
+  },
+  "virago alloy plate": {
+    "name": "Virago Alloy Plate",
+    "price": 138
+  },
+  "virago blood sweat": {
+    "name": "Virago Blood Sweat",
+    "price": 138
+  },
+  "viscous humour": {
+    "name": "Viscous Humour",
+    "price": 22
+  },
+  "visigel poision orb": {
+    "name": "Visigel Poision Orb",
+    "price": 66
+  },
+  "visigel waterfall orb": {
+    "name": "Visigel Waterfall Orb",
+    "price": 66
+  },
+  "vivohast crescent hook": {
+    "name": "Vivohast Crescent Hook",
+    "price": 72
+  },
+  "warrior race's seal": {
+    "name": "Warrior Race's Seal",
+    "price": 98
+  },
+  "white forfex shell": {
+    "name": "White Forfex Shell",
+    "price": 36
+  },
+  "white fungal egg": {
+    "name": "White Fungal Egg",
+    "price": 50
+  },
+  "white meaty caecus liver": {
+    "name": "White Meaty Caecus Liver",
+    "price": 82
+  },
+  "white mirrorglass": {
+    "name": "White Mirrorglass",
+    "price": 30
+  },
+  "white mortifole feather": {
+    "name": "White Mortifole Feather",
+    "price": 42
+  },
+  "white scintimure tentacle": {
+    "name": "White Scintimure Tentacle",
+    "price": 90
+  },
+  "white stabilizer": {
+    "name": "White Stabilizer",
+    "price": 90
+  },
+  "white sylooth brace": {
+    "name": "White Sylooth Brace",
+    "price": 114
+  },
+  "white yggralith nut": {
+    "name": "White Yggralith Nut",
+    "price": 78
+  },
+  "white yggralith scale": {
+    "name": "White Yggralith Scale",
+    "price": 72
+  },
+  "worn muscle fiber": {
+    "name": "Worn Muscle Fiber",
+    "price": 26
+  },
+  "xe-dom crimson crest": {
+    "name": "Xe-dom Crimson Crest",
+    "price": 178
+  },
+  "xe-dom golden crest": {
+    "name": "Xe-dom Golden Crest",
+    "price": 178
+  },
+  "xe-dom hand": {
+    "name": "Xe-dom Hand",
+    "price": 138
+  },
+  "xe-dom jet-black crest": {
+    "name": "Xe-dom Jet-Black Crest",
+    "price": 178
+  },
+  "xe-dom silver crest": {
+    "name": "Xe-dom Silver Crest",
+    "price": 178
+  },
+  "xiphias mine egg": {
+    "name": "Xiphias Mine Egg",
+    "price": 50
+  },
+  "yellow millepod rock": {
+    "name": "Yellow Millepod Rock",
+    "price": 198
+  },
+  "yggralith gold": {
+    "name": "Yggralith Gold",
+    "price": 516
+  },
+  "yggralith horn": {
+    "name": "Yggralith Horn",
+    "price": 258
+  },
+  "yggralith recovery horn": {
+    "name": "Yggralith Recovery Horn",
+    "price": 258
+  },
+  "ziggian long antennae": {
+    "name": "Ziggian Long Antennae",
+    "price": 90
+  }
+}
