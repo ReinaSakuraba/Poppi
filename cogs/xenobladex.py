@@ -47,7 +47,7 @@ async def {0}_search_error(ctx, error):
 
 class XenobladeX:
     classes = [
-        'Drifter', 'Deulist', 'Bastion Warrior','Full Metal Jaguar',
+        'Drifter', 'Deulist', 'Bastion Warrior', 'Full Metal Jaguar',
         'Astral Crusader', 'Mastermind', 'Galactic Knight'
     ]
 
