@@ -196,7 +196,7 @@ class Tags:
         deleted = await ctx.pool.fetchval(query, *params)
 
         if not deleted:
-            return await ctx.send('Either this tag does not exist or you do not have permission to edit it.')
+            return await ctx.send('Either this tag does not exist or you do not have permission to remove it.')
 
         await ctx.send('Tag successfully removed.')
 
