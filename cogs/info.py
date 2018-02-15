@@ -22,7 +22,7 @@ class Info:
 
         embed = discord.Embed(timestamp=ctx.bot.start_time)
         embed.title = 'Official Bot Server Invite'
-        embed.url = 'https://discord.gg/hDjwqz'
+        embed.url = 'https://discord.gg/hDdjwqz'
         embed.set_author(name=ctx.bot.owner, icon_url=ctx.bot.owner.avatar_url)
         embed.add_field(name='Uptime', value=ctx.bot.uptime, inline=False)
         embed.add_field(name='Users', value=len(ctx.bot.users))
