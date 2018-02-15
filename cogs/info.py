@@ -21,6 +21,8 @@ class Info:
         recent_changes = await self.get_recent_changes(limit=3)
 
         embed = discord.Embed(timestamp=ctx.bot.start_time)
+        embed.title = 'Official Bot Server Invite'
+        embed.url = 'https://discord.gg/hDjwqz'
         embed.set_author(name=ctx.bot.owner, icon_url=ctx.bot.owner.avatar_url)
         embed.add_field(name='Uptime', value=ctx.bot.uptime, inline=False)
         embed.add_field(name='Users', value=len(ctx.bot.users))
