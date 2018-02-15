@@ -408,6 +408,58 @@ class Tags:
 
         await ctx.send(embed=embed)
 
+    @tag.command(name='stats')
+    async def tag_stats(self, ctx):
+        embed = discord.Embed(title='Tag Stats')
+
+        query = 'SELECT COUNT(*) FROM tags WHERE location_id=$1;'
+        count = await ctx.pool.fetchval(query, ctx.guild.id)
+
+        embed.description = f'{count} tags'
+
+        query = """
+                SELECT name, uses
+                FROM tags
+                WHERE location_id=$1
+                ORDER BY uses DESC
+                LIMIT 5;
+                """
+        records = await ctx.pool.fetch(query, ctx.guild.id)
+        value = '\n'.join(f'{index}: {tag} ({uses} uses)' for (index, (tag, uses)) in enumerate(records, 1))
+
+        embed.add_field(name='Top Tags', value=value, inline=False)
+
+        query = """
+                SELECT author_id, COUNT(*) AS tag_uses
+                FROM commands
+                WHERE guild_id=$1
+                AND command='tag'
+                GROUP BY author_id
+                ORDER BY tag_uses DESC
+                LIMIT 5;
+                """
+        records = await ctx.pool.fetch(query, ctx.guild.id)
+        value = '\n'.join(f'{index}: <@!{author_id}> ({uses} uses)'
+                          for (index, (author_id, uses)) in enumerate(records, 1))
+
+        embed.add_field(name='Top Tag Users', value=value, inline=False)
+
+        query = """
+                SELECT owner_id, COUNT(*) AS tags_created
+                FROM tags
+                WHERE location_id=$1
+                GROUP BY owner_id
+                ORDER BY tags_created DESC
+                LIMIT 5;
+                """
+        records = await ctx.pool.fetch(query, ctx.guild.id)
+        value = '\n'.join(f'{index}: <@!{owner_id}> ({uses} uses)'
+                          for (index, (owner_id, uses)) in enumerate(records, 1))
+
+        embed.add_field(name='Top Tag Creators', value=value, inline=False)
+
+        await ctx.send(embed=embed)
+
     @tag.command(name='prefix', ignore_extra=False)
     @utils.mod_or_permissions()
     async def tag_prefix(self, ctx, prefix: valid_prefix):
