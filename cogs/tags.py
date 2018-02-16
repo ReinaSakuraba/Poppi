@@ -408,9 +408,52 @@ class Tags:
 
         await ctx.send(embed=embed)
 
-    @tag.command(name='stats')
-    async def tag_stats(self, ctx):
-        embed = discord.Embed(title='Tag Stats')
+    @tag.group(name='stats', invoke_without_command=True)
+    async def tag_stats(self, ctx, *, member: discord.Member = None):
+        member = member or ctx.author
+
+        embed = discord.Embed(color=member.color)
+        embed.set_author(name=member, icon_url=member.avatar_url)
+
+        query = """
+                SELECT COUNT(*)
+                FROM commands
+                WHERE guild_id=$1
+                AND author_id=$2
+                AND command='tag';
+                """
+        count = await ctx.pool.fetchval(query, ctx.guild.id, member.id)
+
+        embed.add_field(name='Tag Command Uses', value=count)
+
+        query = 'SELECT COUNT(*) FROM tags WHERE location_id=$1 AND owner_id=$2;'
+        count = await ctx.pool.fetchval(query, ctx.guild.id, member.id)
+
+        embed.add_field(name='Owned Tags', value=count)
+
+        query = 'SELECT SUM(uses) FROM tags WHERE location_id=$1 AND owner_id=$2;'
+        count = await ctx.pool.fetchval(query, ctx.guild.id, member.id)
+
+        embed.add_field(name='Owned Tag Uses', value=count)
+
+        query = """
+                SELECT name, uses
+                FROM tags
+                WHERE location_id=$1
+                AND owner_id=$2
+                ORDER BY uses DESC
+                LIMIT 5;
+                """
+        records = await ctx.pool.fetch(query, ctx.guild.id, member.id)
+        value = '\n'.join(f'{index}: {tag} ({uses} uses)' for (index, (tag, uses)) in enumerate(records, 1))
+
+        embed.add_field(name='Top Owned Tags', value=value, inline=False)
+
+        await ctx.send(embed=embed)
+
+    @tag_stats.command(name='server')
+    async def tag_stats_server(self, ctx):
+        embed = discord.Embed(title='Server Tag Stats')
 
         query = 'SELECT COUNT(*) FROM tags WHERE location_id=$1;'
         count = await ctx.pool.fetchval(query, ctx.guild.id)
