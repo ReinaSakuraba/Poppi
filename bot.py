@@ -107,6 +107,6 @@ class Bot(commands.Bot):
                     author_id,
                     prefix,
                     command
-                ) VALUES ($1, $2, $3, $4, $5)
+                ) VALUES ($1, $2, $3, $4, $5);
                 """
         await self.pool.execute(query, guild_id, ctx.channel.id, ctx.author.id, ctx.prefix, ctx.command.qualified_name)
