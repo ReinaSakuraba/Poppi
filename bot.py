@@ -32,10 +32,9 @@ class Bot(commands.Bot):
         self.session = aiohttp.ClientSession(loop=self.loop)
         self.process = psutil.Process()
 
-        startup_extensions = [x.stem for x in Path('cogs').glob('*.py')]
-        for extension in startup_extensions:
+        for extension in self.startup_extensions:
             try:
-                self.load_extension(f'cogs.{extension}')
+                self.load_extension(extension)
             except Exception as e:
                 print(f'Failed to load extension {extension}')
                 traceback.print_exc()
@@ -78,6 +77,11 @@ class Bot(commands.Bot):
     def cpu_usage(self):
         cpu_usage = self.process.cpu_percent() / psutil.cpu_count()
         return f'{cpu_usage}%'
+
+    @property
+    def startup_extentions(self):
+        startup_extensions = [f'cogs.{x.stem}' for x in Path('cogs').glob('*.py')]
+        return startup_extentions
 
     @property
     def config(self):
