@@ -82,7 +82,7 @@ class Owner:
         else:
             await ctx.send('\N{OK HAND SIGN}')
 
-    @commands.command()
+    @utils.group(invoke_without_command=True)
     async def reload(self, ctx, *, module: str):
         """Reloads a module."""
 
@@ -94,6 +94,19 @@ class Owner:
             await ctx.send(f'```py\n{type(e).__name__}: {e}\n```')
         else:
             await ctx.send('\N{OK HAND SIGN}')
+
+    @reload.command(name='all')
+    async def reload_all(self, ctx):
+        """Reloads all modules."""
+
+        for extension in ctx.bot.startup_extentions:
+            try:
+                ctx.bot.unload_extension(extension)
+                ctx.bot.load_extension(extension)
+            except Exception as e:
+                await ctx.send(f'```py\nFailed to load extension {extension}\n{type(e).__name__}: {e}\n```')
+
+        await ctx.send('\N{OK HAND SIGN}')
 
     @commands.command(name='eval')
     async def _eval(self, ctx, *, body: str):
