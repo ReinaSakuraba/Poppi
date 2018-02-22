@@ -80,8 +80,7 @@ class Bot(commands.Bot):
 
     @property
     def startup_extentions(self):
-        startup_extensions = [f'cogs.{x.stem}' for x in Path('cogs').glob('*.py')]
-        return startup_extentions
+        return [f'cogs.{x.stem}' for x in Path('cogs').glob('*.py')]
 
     @property
     def config(self):
