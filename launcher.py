@@ -53,6 +53,17 @@ async def create_db(pool):
             CREATE INDEX IF NOT EXISTS tags_location_idx ON tags(location_id);
             CREATE INDEX IF NOT EXISTS tags_owner_idx ON TAGS(owner_id);
             CREATE INDEX IF NOT EXISTS tags_trgm_idx ON tags USING GIN (name gin_trgm_ops);
+
+            CREATE TABLE IF NOT EXISTS profile (
+                id SERIAL,
+                user_id BIGINT PRIMARY KEY,
+                steam TEXT,
+                nnid TEXT,
+                fc_3ds TEXT,
+                fc_switch TEXT,
+                psn TEXT,
+                other TEXT
+            );
             """
     await pool.execute(query)
 
