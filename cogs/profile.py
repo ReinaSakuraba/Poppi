@@ -50,7 +50,7 @@ class Profiles:
             await ctx.send(error)
 
     async def get_profile(self, ctx, member):
-        query = """SELECT * FROM profile WHERE user_id=$1;"""
+        query = """SELECT * FROM profiles WHERE user_id=$1;"""
 
         profile = await ctx.pool.fetchrow(query, member.id)
 
@@ -86,7 +86,7 @@ class Profiles:
 
     async def edit_field(self, attr, ctx, data):
         query = f"""
-                INSERT INTO profile (
+                INSERT INTO profiles (
                     user_id,
                     {attr}
                 ) VALUES ($1, $2)
@@ -150,7 +150,7 @@ class Profiles:
 
         if field is None:
             query = """
-                    DELETE FROM profile
+                    DELETE FROM profiles
                     WHERE user_id=$1
                     RETURNING 1;
                     """

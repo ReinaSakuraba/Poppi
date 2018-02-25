@@ -54,7 +54,7 @@ async def create_db(pool):
             CREATE INDEX IF NOT EXISTS tags_owner_idx ON TAGS(owner_id);
             CREATE INDEX IF NOT EXISTS tags_trgm_idx ON tags USING GIN (name gin_trgm_ops);
 
-            CREATE TABLE IF NOT EXISTS profile (
+            CREATE TABLE IF NOT EXISTS profiles (
                 id SERIAL,
                 user_id BIGINT PRIMARY KEY,
                 steam TEXT,
