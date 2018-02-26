@@ -80,6 +80,7 @@ class Profiles:
 
         All commands will create a profile for you.
         """
+
         member = member or ctx.author
 
         await self.get_profile(ctx, member)
@@ -99,36 +100,42 @@ class Profiles:
     @profile.command()
     async def steam(self, ctx, *, steam_url: str):
         """Sets the Steam URL portion of your profile."""
+
         await self.edit_field('steam', ctx, steam_url)
         await ctx.send('Updated Steam URL.')
 
     @profile.command()
     async def nnid(self, ctx, *, NNID: valid_nnid):
         """Sets the NNID portion of your profile."""
+
         await self.edit_field('nnid', ctx, NNID)
         await ctx.send('Updated NNID.')
 
     @profile.command(name='3ds')
     async def profile_3ds(self, ctx, *, friend_code: valid_fc):
         """Sets the 3DS Friend Code portion of your profile."""
+
         await self.edit_field('fc_3ds', ctx, friend_code)
         await ctx.send('Updated 3DS friend code.')
 
     @profile.command()
     async def switch(self, ctx, *, friend_code: valid_fc):
         """Sets the Switch Friend Code portion of your profile."""
+
         await self.edit_field('fc_switch', ctx, friend_code)
         await ctx.send('Updated Switch friend code.')
 
     @profile.command()
     async def psn(self, ctx, *, psn_id: valid_psn):
         """Sets the PSN ID portion of your profile."""
+
         await self.edit_field('psn', ctx, psn_id)
         await ctx.send('Updated PSN ID.')
 
     @profile.command()
     async def other(self, ctx, *, other: str):
         """Sets the Other portion of your profile."""
+
         await self.edit_field('other', ctx, other)
         await ctx.send('Updated Other.')
 
