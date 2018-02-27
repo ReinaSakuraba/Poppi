@@ -34,8 +34,7 @@ def valid_fc(argument):
 
 class Profiles:
     """Profile related commands."""
-    def __init__(self, bot):
-        self.bot = bot
+    def __init__(self):
         self.attrs = {
             'steam': 'Steam URL',
             'nnid': 'Nintendo Network ID',
@@ -186,4 +185,4 @@ class Profiles:
 
 
 def setup(bot):
-    bot.add_cog(Profiles(bot))
+    bot.add_cog(Profiles())
