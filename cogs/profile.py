@@ -34,6 +34,7 @@ def valid_fc(argument):
 
 class Profiles:
     """Profile related commands."""
+
     def __init__(self):
         self.attrs = {
             'steam': 'Steam URL',
