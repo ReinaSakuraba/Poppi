@@ -35,16 +35,6 @@ def valid_fc(argument):
 class Profiles:
     """Profile related commands."""
 
-    def __init__(self):
-        self.attrs = {
-            'steam': 'Steam URL',
-            'nnid': 'Nintendo Network ID',
-            'fc_3ds': '3DS Friend Code',
-            'fc_switch': 'Switch Friend Code',
-            'psn': 'PlayStation Network ID',
-            'other': 'Other'
-        }
-
     async def __error(self, ctx, error):
         if isinstance(error, commands.BadArgument):
             await ctx.send(error)
@@ -63,7 +53,16 @@ class Profiles:
             embed = discord.Embed()
             embed.set_author(name=member, icon_url=member.avatar_url)
 
-            for attr, name in self.attrs.items():
+            attrs = {
+                'steam': 'Steam URL',
+                'nnid': 'Nintendo Network ID',
+                'fc_3ds': '3DS Friend Code',
+                'fc_switch': 'Switch Friend Code',
+                'psn': 'PlayStation Network ID',
+                'other': 'Other'
+            }
+
+            for attr, name in attrs.items():
                 value = profile[attr]
                 if value != 'N/A':
                     embed.add_field(name=name, value=value)
