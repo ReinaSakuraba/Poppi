@@ -64,7 +64,7 @@ class Profiles:
 
             for attr, name in attrs.items():
                 value = profile[attr]
-                if value != 'N/A':
+                if value is not None:
                     embed.add_field(name=name, value=value)
 
             await ctx.send(embed=embed)
@@ -169,7 +169,7 @@ class Profiles:
 
             query = f"""
                     UPDATE profile
-                    SET {field} = 'N/A'
+                    SET {field} = NULL
                     WHERE user_id=$1
                     RETURNING 2;
                     """
