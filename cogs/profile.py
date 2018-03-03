@@ -168,7 +168,7 @@ class Profiles:
             field = {'3ds': 'fc_3ds', 'switch': 'fc_switch'}.get(field, field)
 
             query = f"""
-                    UPDATE profile
+                    UPDATE profiles
                     SET {field} = NULL
                     WHERE user_id=$1
                     RETURNING 2;
