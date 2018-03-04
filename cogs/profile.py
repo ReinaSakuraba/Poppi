@@ -32,7 +32,7 @@ def valid_fc(argument):
     return '{one}-{two}-{three}'.format(**m.groupdict())
 
 
-class Profiles:
+class Profile:
     """Profile related commands."""
 
     async def __error(self, ctx, error):
@@ -185,4 +185,4 @@ class Profiles:
 
 
 def setup(bot):
-    bot.add_cog(Profiles())
+    bot.add_cog(Profile())
