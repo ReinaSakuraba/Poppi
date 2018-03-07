@@ -16653,7 +16653,23 @@
     "Effect": "Skell Melee Pow +50",
     "Sell Price": 0,
     "Rarity": "Rare",
-    "Required Miranium": 100
+    "Required Miranium": 100,
+    "Material 1": {
+      "Name": "Blue Sylooth Brace",
+      "Amount": 8
+    },
+    "Material 2": {
+      "Name": "White Sylooth Brace",
+      "Amount": 8
+    },
+    "Material 3": {
+      "Name": "Muscled Cantor Bulge",
+      "Amount": 8
+    },
+    "Precious Resource": {
+      "Name": "Everfreeze Ore",
+      "Amount": 2
+    }
   },
   "specup.m-atk xv": {
     "Name": "SpecUp.M-ATK XV",
@@ -16661,7 +16677,23 @@
     "Effect": "Skell Melee Pow +75",
     "Sell Price": 0,
     "Rarity": "Unique",
-    "Required Miranium": 1500
+    "Required Miranium": 1500,
+    "Material 1": {
+      "Name": "Blue Sylooth Brace",
+      "Amount": 16
+    },
+    "Material 2": {
+      "Name": "White Sylooth Brace",
+      "Amount": 16
+    },
+    "Material 3": {
+      "Name": "Muscled Cantor Bulge",
+      "Amount": 16
+    },
+    "Precious Resource": {
+      "Name": "Foucaultium",
+      "Amount": 4
+    }
   },
   "specup.m-atk xx": {
     "Name": "SpecUp.M-ATK XX",
@@ -16669,7 +16701,23 @@
     "Effect": "Skell Melee Pow +100",
     "Sell Price": 0,
     "Rarity": "Intergalactic",
-    "Required Miranium": 2000
+    "Required Miranium": 2000,
+    "Material 1": {
+      "Name": "Blue Sylooth Brace",
+      "Amount": 32
+    },
+    "Material 2": {
+      "Name": "White Sylooth Brace",
+      "Amount": 32
+    },
+    "Material 3": {
+      "Name": "Muscled Cantor Bulge",
+      "Amount": 32
+    },
+    "Precious Resource": {
+      "Name": "Bonjelium",
+      "Amount": 8
+    }
   },
   "specup.r-atk i": {
     "Name": "SpecUp.R-ATK I",
