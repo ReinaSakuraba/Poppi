@@ -124,7 +124,7 @@ class Tags:
         create command.
         """
 
-        await ctx.send('Hello. What would you like the name tag to be?')
+        await ctx.send('Hello. What would you like the tag name to be?')
 
         original = ctx.message
 
