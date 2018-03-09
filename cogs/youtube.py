@@ -32,7 +32,7 @@ class YouTube:
             if r.status == 200:
                 return await r.json()
 
-    @commands.command()
+    @commands.command(aliases=['yt'])
     async def youtube(self, ctx, *, query: utils.Query(multi=False, type='video')):
         """Searches YouTube for your query.
 
