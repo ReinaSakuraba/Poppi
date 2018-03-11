@@ -64,6 +64,13 @@ async def create_db(pool):
                 psn TEXT,
                 other TEXT
             );
+
+            CREATE TABLE IF NOT EXISTS announcements (
+                guild_id BIGINT PRIMARY KEY,
+                channel_id BIGINT,
+                greeting TEXT,
+                farewell TEXT
+            );
             """
     await pool.execute(query)
 
