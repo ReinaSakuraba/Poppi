@@ -72,7 +72,7 @@ async def create_db(pool):
                 farewell TEXT
             );
 
-            CREATE TABLE IF NOT EXISTS log (
+            CREATE TABLE IF NOT EXISTS logs (
                 guild_id BIGINT PRIMARY KEY,
                 channel_id BIGINT
             );

@@ -21,7 +21,7 @@ class Announcements:
         is_join = event == 'joined'
         message_row = 'greeting' if is_join else 'farewell'
 
-        for table in ('announcements', 'log'):
+        for table in ('announcements', 'logs'):
             query = f'SELECT * FROM {table} WHERE guild_id=$1;'
             record = await self.pool.fetchrow(query, guild.id)
 
