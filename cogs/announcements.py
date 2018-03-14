@@ -21,22 +21,20 @@ class Announcements:
         is_join = event == 'joined'
         message_row = 'greeting' if is_join else 'farewell'
 
-        for table in ('announcements', 'logs'):
-            query = f'SELECT * FROM {table} WHERE guild_id=$1;'
-            record = await self.pool.fetchrow(query, guild.id)
+        query = f'SELECT * FROM announcements WHERE guild_id=$1;'
+        record = await self.pool.fetchrow(query, guild.id)
 
-            if record is None:
-                continue
+        if record is None:
+            return
 
-            channel = guild.get_channel(record['channel_id'])
-            if channel is None:
-                continue
+        channel = guild.get_channel(record['channel_id'])
+        if channel is not None:
+            message = record[message_row]
+            await self.send_notice(member, channel, message, is_join)
 
-            if table == 'log':
-                await self.send_log_message(member, channel, event)
-            else:
-                message = record[message_row]
-                await self.send_notice(member, channel, message, is_join)
+        log_channel = guild.get_channel(record['log_channel_id'])
+        if log_channel:
+            await self.send_log_message(member, log_channel, event)
 
     async def send_notice(self, member, channel, message, is_join):
         repl = {
