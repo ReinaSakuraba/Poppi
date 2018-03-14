@@ -66,6 +66,7 @@ async def create_db(pool):
             );
 
             CREATE TABLE IF NOT EXISTS announcements (
+                id SERIAL,
                 guild_id BIGINT PRIMARY KEY,
                 channel_id BIGINT,
                 greeting TEXT,
@@ -73,6 +74,7 @@ async def create_db(pool):
             );
 
             CREATE TABLE IF NOT EXISTS logs (
+                id SERIAL,
                 guild_id BIGINT PRIMARY KEY,
                 channel_id BIGINT
             );
