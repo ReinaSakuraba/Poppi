@@ -36,7 +36,7 @@ class Stats:
                 FROM commands
                 WHERE guild_id=$1
                 AND author_id=$2
-                and used > (CURRENT_TIMESTAMP - INTERVAL '1 day')
+                AND used > (CURRENT_TIMESTAMP - INTERVAL '1 day')
                 GROUP BY command
                 ORDER BY uses DESC
                 LIMIT 5;
@@ -77,7 +77,7 @@ class Stats:
                 SELECT command, COUNT(*) AS uses
                 FROM commands
                 WHERE author_id=$1
-                and used > (CURRENT_TIMESTAMP - INTERVAL '1 day')
+                AND used > (CURRENT_TIMESTAMP - INTERVAL '1 day')
                 GROUP BY command
                 ORDER BY uses DESC
                 LIMIT 5;
@@ -116,7 +116,7 @@ class Stats:
                 SELECT command, COUNT(*) AS uses
                 FROM commands
                 WHERE guild_id=$1
-                and used > (CURRENT_TIMESTAMP - INTERVAL '1 day')
+                AND used > (CURRENT_TIMESTAMP - INTERVAL '1 day')
                 GROUP BY command
                 ORDER BY uses DESC
                 LIMIT 5;
