@@ -79,7 +79,7 @@ class Bot(commands.Bot):
         return f'{cpu_usage}%'
 
     @property
-    def startup_extentions(self):
+    def startup_extensions(self):
         return [f'cogs.{x.stem}' for x in Path('cogs').glob('*.py')]
 
     @property
