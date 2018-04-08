@@ -1,4 +1,5 @@
 import json
+import math
 import random
 import difflib
 import discord
@@ -274,6 +275,29 @@ class XenobladeX:
               f'Party Members: {", ".join(random.sample(self.party_members, 3))}'
 
         await ctx.send(fmt)
+
+    @commands.command()
+    async def stat(self, ctx, level: int):
+        hp = math.floor((level * 99.48) + 150.52)
+        tp = 3000
+        racc = math.floor((level * 2.593) + 103.407)
+        macc = math.floor((level * 2.72) + 101.28)
+        ratk = math.floor((level * 0.67) + 13.33)
+        matk = math.floor((level * 1.035) + 17.01)
+        eva = math.floor((level * 1.735) + 8.265)
+        pot = math.floor((level * 0.92) + 9.08)
+
+        fmt = f'```\nHP: {hp}\n' \
+              f'TP: {tp}\n' \
+              f'Ranged Accuracy: {racc}\n' \
+              f'Melee Accuracy: {macc}\n' \
+              f'Ranged Attack: {ratk}\n' \
+              f'Melee Attack: {matk}\n' \
+              f'Evasion: {eva}\n' \
+              f'Potential: {pot}\n```' \
+
+        await ctx.send(fmt)
+
 
 
 def setup(bot):
