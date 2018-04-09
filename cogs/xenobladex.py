@@ -278,14 +278,14 @@ class XenobladeX:
 
     @commands.command()
     async def stat(self, ctx, level: int):
-        hp = math.floor((level * 99.48) + 150.52)
+        hp = math.floor((((10000 - 250) / (99 - 1)) * (level - 1)) + 250)
         tp = 3000
-        racc = math.floor((level * 2.593) + 103.407)
-        macc = math.floor((level * 2.72) + 101.28)
-        ratk = math.floor((level * 0.67) + 13.33)
-        matk = math.floor((level * 1.035) + 17.01)
-        eva = math.floor((level * 1.735) + 8.265)
-        pot = math.floor((level * 0.92) + 9.08)
+        racc = math.floor((((360 - 105) / (99 - 1)) * (level - 1)) + 105)
+        macc = math.floor((((370 - 104) / (99 - 1)) * (level - 1)) + 104)
+        ratk = math.floor((((80 - 14) / (99 - 1)) * (level - 1)) + 14)
+        matk = math.floor((((120 - 18) / (99 - 1)) * (level - 1)) + 18)
+        eva = math.floor((((180 - 10) / (99 - 1)) * (level - 1)) + 10)
+        pot = math.floor((((100 - 10) / (99 - 1)) * (level - 1)) + 10)
 
         fmt = f'```\nHP: {hp}\n' \
               f'TP: {tp}\n' \
