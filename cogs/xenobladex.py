@@ -78,7 +78,7 @@ class XenobladeX:
             'Intergalactic': 0xAB6C02,
         }
 
-        for filename in ['skills', 'arts', 'augments']:
+        for filename in ['skills', 'arts', 'augments', 'weapons']:
             with open(f'xenox/json/{filename}.json') as f:
                 setattr(self, filename, json.load(f))
                 self.data[filename[:-1]] = getattr(self, filename)
@@ -258,6 +258,43 @@ class XenobladeX:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing augment name.')
 
+    @commands.group(invoke_without_command=True)
+    async def weapon(self, ctx, *, name: str):
+        """Gives you information about a weapon."""
+
+        try:
+            weapon = self.get_entry('Weapon', name.lower())
+        except RuntimeError as e:
+            return await ctx.send(e)
+
+        embed = discord.Embed(title=weapon['Name'])
+
+        embed.add_field(name='Attack', value=weapon['Attack'])
+        embed.add_field(name='Level', value=weapon['Level'])
+        embed.add_field(name='Maker', value=weapon['Maker']['Name'])
+        embed.add_field(name='Cooldown', value=weapon['Cooldown'])
+        embed.add_field(name='TP Gain', value=weapon['TP Gain'])
+        if weapon['Ammo']:
+            embed.add_field(name='Ammo', value=weapon['Ammo'])
+        embed.add_field(name='Attribute', value=weapon['Attribute'])
+        embed.add_field(name='Stability', value=weapon['Stability'])
+        embed.add_field(name='Upgrades', value=weapon['Upgrades'])
+        embed.add_field(name='Sell Price', value=weapon['Sell Price'])
+
+        if weapon['Innate Traits']:
+            embed.add_field(name='Innate Traits', value='\n'.join(weapon['Innate Traits']), inline=False)
+
+        if weapon['Possible Traits']:
+            embed.add_field(name='Possible Traits', value='\n'.join(weapon['Possible Traits']), inline=False)
+
+        await ctx.send(embed=embed)
+
+    @weapon.error
+    async def weapon_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing weapon name.')
+
+        
     @commands.command()
     async def loadout(self, ctx):
         fmt = f'Class: {random.choice(self.classes)}\n' \
