@@ -78,7 +78,7 @@ class XenobladeX:
             'Intergalactic': 0xAB6C02,
         }
 
-        for filename in ['skills', 'arts', 'augments', 'weapons']:
+        for filename in ['skills', 'arts', 'augments', 'weapons', 'armors']:
             with open(f'xenox/json/{filename}.json') as f:
                 setattr(self, filename, json.load(f))
                 self.data[filename[:-1]] = getattr(self, filename)
@@ -294,6 +294,45 @@ class XenobladeX:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing weapon name.')
 
+    @commands.group(invoke_without_command=True)
+    async def armor(self, ctx, *, name: str):
+        """Gives you information about an armor piece."""
+
+        try:
+            armor = self.get_entry('Armor', name.lower())
+        except RuntimeError as e:
+            return await ctx.send(e)
+
+        embed = discord.Embed(title=armor['Name'])
+
+        defenses = f'Defense: {armor["Defense"]}\n' \
+                   f'Physical Res: {armor["Physical Resistance"]}\n' \
+                   f'Beam Res: {armor["Beam Resistance"]}\n' \
+                   f'Ether Res: {armor["Ether Resistance"]}\n' \
+                   f'Electric Res: {armor["Electric Resistance"]}\n' \
+                   f'Thermal Res: {armor["Thermal Resistance"]}\n' \
+                   f'Gravity Res: {armor["Gravity Resistance"]}'
+
+        embed.add_field(name='Level', value=armor['Level'])
+        embed.add_field(name='Slot', value=armor['Armor Slot'])
+        embed.add_field(name='Type', value=armor['Armor Type'])
+        embed.add_field(name='Maker', value=armor['Maker']['Name'])
+        embed.add_field(name='Upgrades', value=armor['Upgrades'])
+        embed.add_field(name='Sell Price', value=armor['Sell Price'])
+        embed.add_field(name='Defenses', value=defenses)
+
+        if armor['Innate Traits']:
+            embed.add_field(name='Innate Traits', value='\n'.join(armor['Innate Traits']))
+
+        if armor['Possible Traits']:
+            embed.add_field(name='Possible Traits', value='\n'.join(armor['Possible Traits']))
+
+        await ctx.send(embed=embed)
+
+    @armor.error
+    async def armor_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing armor name.')
         
     @commands.command()
     async def loadout(self, ctx):
