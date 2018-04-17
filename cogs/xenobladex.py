@@ -294,7 +294,7 @@ class XenobladeX:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing weapon name.')
 
-    @commands.group(invoke_without_command=True)
+    @commands.group(invoke_without_command=True, aliases=['armour'])
     async def armor(self, ctx, *, name: str):
         """Gives you information about an armor piece."""
 
