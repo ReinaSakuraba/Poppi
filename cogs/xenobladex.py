@@ -107,20 +107,26 @@ class XenobladeX:
             raise RuntimeError(f'{entry_type} not found. Did you mean...\n{possible_entries}')
 
     @utils.group(invoke_without_command=True)
-    async def skill(self, ctx, *, skill: str):
+    async def skill(self, ctx, *, name: str.lower):
         """Gives you information about a skill."""
 
-        try:
-            skill = self.get_entry('Skill', skill.lower())
-        except RuntimeError as e:
-            return await ctx.send(e)
+        query = """
+                SELECT name, effect, learned
+                FROM xenox.skills
+                WHERE LOWER(name)=$1;
+                """
 
-        name = skill['Name']
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            await ctx.send('Skill not found.')
+
+        name, effect, learned = record
 
         embed = discord.Embed(title=name)
         embed.set_thumbnail(url='attachment://skill.png')
-        embed.add_field(name='Learned', value=skill['Class/Rank'], inline=False)
-        embed.add_field(name='Effect', value=skill['Effect'])
+        embed.add_field(name='Learned', value=learned, inline=False)
+        embed.add_field(name='Effect', value=effect)
 
         await ctx.send(file=discord.File(f'xenox/skills/{name}.png', 'skill.png'), embed=embed)
 
