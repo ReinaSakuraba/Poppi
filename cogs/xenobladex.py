@@ -350,15 +350,28 @@ class XenobladeX:
         await ctx.send(fmt)
 
     @commands.command()
-    async def stat(self, ctx, level: int):
-        hp = math.floor((((10000 - 250) / (99 - 1)) * (level - 1)) + 250)
+    async def stat(self, ctx, level: int, *, name: str.lower = 'drifter'):
+        """Calculates stats for a class."""
+
+        query = """
+                SELECT hp, macc, racc, matk, ratk, eva, pot
+                FROM xenox.class_stats
+                WHERE LOWER(class)=$1;
+                """
+
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await ctx.send('Invalid Class.')
+
+        hp = math.floor(((((10000 - 250) / (99 - 1)) * (level - 1)) + 250) * float(record['hp']))
         tp = 3000
-        racc = math.floor((((360 - 105) / (99 - 1)) * (level - 1)) + 105)
-        macc = math.floor((((370 - 104) / (99 - 1)) * (level - 1)) + 104)
-        ratk = math.floor((((80 - 14) / (99 - 1)) * (level - 1)) + 14)
-        matk = math.floor((((120 - 18) / (99 - 1)) * (level - 1)) + 18)
-        eva = math.floor((((180 - 10) / (99 - 1)) * (level - 1)) + 10)
-        pot = math.floor((((100 - 10) / (99 - 1)) * (level - 1)) + 10)
+        racc = math.floor(((((360 - 105) / (99 - 1)) * (level - 1)) + 105) * float(record['racc']))
+        macc = math.floor(((((370 - 104) / (99 - 1)) * (level - 1)) + 104) * float(record['macc']))
+        ratk = math.floor(((((80 - 14) / (99 - 1)) * (level - 1)) + 14) * float(record['ratk']))
+        matk = math.floor(((((120 - 18) / (99 - 1)) * (level - 1)) + 18) * float(record['matk']))
+        eva = math.floor(((((180 - 10) / (99 - 1)) * (level - 1)) + 10) * float(record['eva']))
+        pot = math.floor(((((100 - 10) / (99 - 1)) * (level - 1)) + 10) * float(record['pot']))
 
         fmt = f'```\nHP: {hp}\n' \
               f'TP: {tp}\n' \
