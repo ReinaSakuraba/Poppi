@@ -111,9 +111,15 @@ class XenobladeX:
         """Gives you information about a skill."""
 
         query = """
-                SELECT name, effect, learned
+                SELECT
+                    name,
+                    effect,
+                    STRING_AGG(class || ' ' || level, E'\n')
                 FROM xenox.skills
-                WHERE LOWER(name)=$1;
+                JOIN xenox.class_skills
+                ON skills.name = class_skills.skill
+                WHERE LOWER(name)=$1
+                GROUP BY name, effect;
                 """
 
         record = await ctx.pool.fetchrow(query, name)
