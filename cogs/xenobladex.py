@@ -125,7 +125,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            await ctx.send('Skill not found.')
+            return await ctx.send('Skill not found.')
 
         name, effect, learned = record
 
