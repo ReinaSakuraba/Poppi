@@ -125,7 +125,19 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await ctx.send('Skill not found.')
+            query = """
+                    SELECT
+                        STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
+                    FROM xenox.skills
+                    WHERE name % $1;
+                    """
+
+            possible_skills = await ctx.pool.fetchval(query, name)
+
+            if not possible_skills:
+                return await ctx.send('Skill not found.')
+
+            return await ctx.send(f'Skill not found. Did you mean...\n{possible_skills}')
 
         name, effect, learned = record
 
@@ -367,7 +379,19 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await ctx.send('Invalid Class.')
+            query = """
+                    SELECT
+                        STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
+                    FROM xenox.classes
+                    WHERE name % $1;
+                    """
+
+            possible_classes = await ctx.pool.fetchval(query, name)
+
+            if not possible_classes:
+                return await ctx.send('Class not found.')
+
+            return await ctx.send(f'Class not found. Did you mean...\n{possible_classes}')
 
         hp = math.floor(((((10000 - 250) / (99 - 1)) * (level - 1)) + 250) * float(record['hp']))
         tp = 3000
