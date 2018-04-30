@@ -125,19 +125,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            query = """
-                    SELECT
-                        STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
-                    FROM xenox.skills
-                    WHERE name % $1;
-                    """
-
-            possible_skills = await ctx.pool.fetchval(query, name)
-
-            if not possible_skills:
-                return await ctx.send('Skill not found.')
-
-            return await ctx.send(f'Skill not found. Did you mean...\n{possible_skills}')
+            return await self.show_possibilities(ctx, 'skills', name)
 
         name, effect, learned = record
 
@@ -379,19 +367,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            query = """
-                    SELECT
-                        STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
-                    FROM xenox.classes
-                    WHERE name % $1;
-                    """
-
-            possible_classes = await ctx.pool.fetchval(query, name)
-
-            if not possible_classes:
-                return await ctx.send('Class not found.')
-
-            return await ctx.send(f'Class not found. Did you mean...\n{possible_classes}')
+            return await self.show_possibilities(ctx, 'classes', name)
 
         hp = math.floor(((((10000 - 250) / (99 - 1)) * (level - 1)) + 250) * float(record['hp']))
         tp = 3000
@@ -413,6 +389,23 @@ class XenobladeX:
 
         await ctx.send(fmt)
 
+    async def show_possibilities(self, ctx, table_name, name):
+        query = f"""
+                SELECT
+                    STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
+                FROM xenox.{table_name}
+                WHERE name % $1;
+                """
+
+        possibilities = await ctx.pool.fetchval(query, name)
+
+        strip = 2 if table_name.endswith('es') else 1
+        type_name = table_name[:-strip].title()
+
+        if not possibilities:
+            return await ctx.send(f'{type_name} not found.')
+
+        await ctx.send(f'{type_name} not found. Did you mean...\n{possibilities}')
 
 
 def setup(bot):
