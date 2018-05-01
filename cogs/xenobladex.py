@@ -389,6 +389,64 @@ class XenobladeX:
 
         await ctx.send(fmt)
 
+    @commands.command(name='class')
+    async def _class(self, ctx, *, name: str.lower):
+        """Shows information for a class."""
+
+        query = """
+                SELECT
+                    name,
+                    description,
+                    melee_weapon,
+                    ranged_weapon,
+                    skill_slots,
+                    max_level,
+                    ARRAY_AGG(DISTINCT art || ' ' || class_arts.level) AS arts,
+                    ARRAY_AGG(DISTINCT skill || ' ' || class_skills.level) AS skills,
+                    hp,
+                    macc,
+                    racc,
+                    matk,
+                    ratk,
+                    eva,
+                    pot
+                FROM xenox.classes
+                JOIN xenox.class_arts
+                ON classes.name = class_arts.class
+                LEFT JOIN xenox.class_skills
+                ON classes.name = class_skills.class
+                JOIN xenox.class_stats
+                ON classes.name = class_stats.class
+                WHERE LOWER(name)=$1
+                GROUP BY name, hp, macc, racc, matk, ratk, eva, pot;
+                """
+
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'classes', name)
+
+        name, description, melee, ranged, slots, max_level, arts, skills, hp, macc, racc, matk, ratk, eva, pot = record
+        stats = f'HP: {hp:0%}\n' \
+                f'Ranged Accuracy: {racc:0%}\n' \
+                f'Melee Accuracy: {macc:0%}\n' \
+                f'Ranged Attack: {ratk:0%}\n' \
+                f'Melee Attack: {matk:0%}\n' \
+                f'Evasion: {eva:0%}\n' \
+                f'Potential: {pot:0%}'
+
+        embed = discord.Embed(title=name, description=description)
+        embed.add_field(name='Melee Weapon', value=melee)
+        embed.add_field(name='Ranged Weapon', value=ranged)
+        embed.add_field(name='Skill Slots', value=slots)
+        embed.add_field(name='Max Level', value=max_level, inline=False)
+        embed.add_field(name='Arts', value='\n'.join(sorted(arts, key=lambda x: int(x.split()[-1]))))
+        embed.add_field(name='Skills', value='\n'.join(sorted(skills, key=lambda x: int(x.split()[-1]))) if skills[0] else 'None')
+
+        embed.add_field(name='Stats', value=stats)
+
+        await ctx.send(embed=embed)
+
     async def show_possibilities(self, ctx, table_name, name):
         query = f"""
                 SELECT
