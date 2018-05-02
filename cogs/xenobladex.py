@@ -401,8 +401,6 @@ class XenobladeX:
                     ranged_weapon,
                     skill_slots,
                     max_level,
-                    ARRAY_AGG(DISTINCT art || ' ' || class_arts.level) AS arts,
-                    ARRAY_AGG(DISTINCT skill || ' ' || class_skills.level) AS skills,
                     hp,
                     macc,
                     racc,
@@ -411,14 +409,9 @@ class XenobladeX:
                     eva,
                     pot
                 FROM xenox.classes
-                JOIN xenox.class_arts
-                ON classes.name = class_arts.class
-                LEFT JOIN xenox.class_skills
-                ON classes.name = class_skills.class
                 JOIN xenox.class_stats
                 ON classes.name = class_stats.class
-                WHERE LOWER(name)=$1
-                GROUP BY name, hp, macc, racc, matk, ratk, eva, pot;
+                WHERE LOWER(name)=$1;
                 """
 
         record = await ctx.pool.fetchrow(query, name)
@@ -426,7 +419,7 @@ class XenobladeX:
         if record is None:
             return await self.show_possibilities(ctx, 'classes', name)
 
-        name, description, melee, ranged, slots, max_level, arts, skills, hp, macc, racc, matk, ratk, eva, pot = record
+        name, description, melee, ranged, slots, max_level, hp, macc, racc, matk, ratk, eva, pot = record
         stats = f'HP: {hp:0%}\n' \
                 f'Ranged Accuracy: {racc:0%}\n' \
                 f'Melee Accuracy: {macc:0%}\n' \
@@ -435,14 +428,31 @@ class XenobladeX:
                 f'Evasion: {eva:0%}\n' \
                 f'Potential: {pot:0%}'
 
+        query = """
+                SELECT
+                    STRING_AGG(art || ' ' || level, E'\n' ORDER BY level) AS arts
+                FROM xenox.class_arts
+                WHERE class=$1;
+                """
+
+        arts = await ctx.pool.fetchval(query, name)
+
+        query = """
+                SELECT
+                    STRING_AGG(skill || ' ' || level, E'\n' ORDER BY level) AS skills
+                FROM xenox.class_skills
+                WHERE class=$1;
+                """
+
+        skills = await ctx.pool.fetchval(query, name)
+
         embed = discord.Embed(title=name, description=description)
         embed.add_field(name='Melee Weapon', value=melee)
         embed.add_field(name='Ranged Weapon', value=ranged)
         embed.add_field(name='Skill Slots', value=slots)
         embed.add_field(name='Max Level', value=max_level, inline=False)
-        embed.add_field(name='Arts', value='\n'.join(sorted(arts, key=lambda x: int(x.split()[-1]))))
-        embed.add_field(name='Skills', value='\n'.join(sorted(skills, key=lambda x: int(x.split()[-1]))) if skills[0] else 'None')
-
+        embed.add_field(name='Arts', value=arts)
+        embed.add_field(name='Skills', value=skills)
         embed.add_field(name='Stats', value=stats)
 
         await ctx.send(embed=embed)
