@@ -396,7 +396,6 @@ class XenobladeX:
         query = """
                 SELECT
                     name,
-                    description,
                     melee_weapon,
                     ranged_weapon,
                     skill_slots,
@@ -419,7 +418,7 @@ class XenobladeX:
         if record is None:
             return await self.show_possibilities(ctx, 'classes', name)
 
-        name, description, melee, ranged, slots, max_level, hp, macc, racc, matk, ratk, eva, pot = record
+        name, melee, ranged, slots, max_level, hp, macc, racc, matk, ratk, eva, pot = record
         stats = f'HP: {hp:0%}\n' \
                 f'Ranged Accuracy: {racc:0%}\n' \
                 f'Melee Accuracy: {macc:0%}\n' \
@@ -446,7 +445,7 @@ class XenobladeX:
 
         skills = await ctx.pool.fetchval(query, name)
 
-        embed = discord.Embed(title=name, description=description)
+        embed = discord.Embed(title=name)
         embed.add_field(name='Melee Weapon', value=melee)
         embed.add_field(name='Ranged Weapon', value=ranged)
         embed.add_field(name='Skill Slots', value=slots)

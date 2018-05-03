@@ -89,7 +89,6 @@ ALTER TABLE xenox.class_stats OWNER TO poppi;
 
 CREATE TABLE xenox.classes (
     name text NOT NULL,
-    description text,
     melee_weapon text,
     ranged_weapon text,
     skill_slots smallint,
@@ -814,41 +813,41 @@ Mia	0.80	0.95	1.10	0.85	1.40	1.05	1.40
 -- Data for Name: classes; Type: TABLE DATA; Schema: xenox; Owner: poppi
 --
 
-COPY xenox.classes (name, description, melee_weapon, ranged_weapon, skill_slots, max_level) FROM stdin;
-Drifter	The class you start out with. Offers a balanced variety of Arts, but provides no stat bonuses.	Knife	Assault Rifle	5	10
-Striker	Choose this route if you want to go in guns blazing. Mixes offensive and defensive Arts, and provides HP and melee-attack bonuses. Well balanced and suited for beginners.	Longsword	Assault Rifle	1	10
-Samurai Gunner	The standard progression from Striker. Retains the mix of offensive and defensive Arts and the bonuses to HP and melee attack. Well balanced and suited for beginners.	Longsword	Assault Rifle	2	10
-Duelist	An advanced Samurai Gunner. Shifts the focus more toward offense. Provides bonuses to HP and melee attack.	Longsword	Assault Rifle	3	10
-Shield Trooper	An alternate progression from Striker with new weapons and a focus on defense. Greatly improves HP and melee attack.	Shield	Gatling Gun	3	10
-Bastion Warrior	An advanced Shield Trooper that increases attribute resistance in addition to defense. Greatly improves HP and melee attack.	Shield	Gatling Gun	4	10
-Commando	Choose this route if you want to rack up damage. Focuses on skillful application of damage buffs, and provides bonuses to melee accuracy, ranged accuracy, and evasion.	Dual Swords	Dual Guns	2	10
-Winged Viper	The standard progression from Commando. Improves your damage-dealing capabilities and retains the bonuses to melee accuracy, ranged accuracy, and evasion.	Dual Swords	Dual Guns	3	10
-Full Metal Jaguar	An advanced Winged Viper that features tricky offensive Arts and offers bonuses to melee accuracy, ranged accuracy, and evasion.	Dual Swords	Dual Guns	4	10
-Partisan Eagle	An alternate progression from Commando with new weapons and an emphasis on ranged attacks. Provides bonuses to ranged attack and accuracy.	Javelin	Sniper Rifle	3	10
-Astral Crusader	An advanced Partisan Eagle that continues to be centered on ranged attacks and provide bonuses to ranged attack and accuracy.	Javelin	Sniper Rifle	4	10
-Enforcer	Choose this route if you want to provide support from afar. Offers many ranged Arts and bonuses to ranged attack and potential. Tricky to master and suited for professionals.	Knife	Raygun	2	10
-Psycorruptor	The standard progression from Enforcer. Weaken the enemy using debuffs and gain bonuses to ranged attack and potential. Tricky to master and suited for professionals.	Knife	Raygun	3	10
-Mastermind	An advanced Psycorruptor that adds ally support Arts to the mix of enemy debuffs. Improves ranged attack and potential.	Knife	Raygun	4	10
-Blast Fencer	An alternate progression from Enforcer with new weapons and a balanced offense and defense. Provides bonuses to both melee and ranged attack.	Photon Saber	Psycho Launchers	3	10
-Galactic Knight	An advanced Blast Fencer that adds recovery Arts to its even mix of offense and defense. Improves melee and ranged attack.	Photon Saber	Psycho Launchers	4	10
-Nagi		Longsword	Gatling Gun	5	20
-L		Shield	Psycho Launchers	3	20
-Lao		Javelin	Sniper Rifle	3	20
-H.B.		Shield	Assault Rifle	4	20
-Gwin		Longsword	Assault Rifle	3	20
-Frye		Longsword	Gatling Gun	3	20
-Doug		Photon Saber	Raygun	4	20
-Yelv		Photon Saber	Raygun	3	20
-Boze		Javelin	Sniper Rifle	3	20
-Phog		Dual Swords	Dual Guns	3	20
-Elma		Dual Swords	Dual Guns	4	20
-Lin		Shield	Gatling Gun	3	20
-Celica		Knife	Dual Guns	3	20
-Irina		Knife	Assault Rifle	4	20
-Murderess		Dual Swords	Psycho Launchers	3	20
-Alexa		Javelin	Assault Rifle	3	20
-Hope		Knife	Psycho Launchers	3	20
-Mia		Knife	Raygun	3	20
+COPY xenox.classes (name, melee_weapon, ranged_weapon, skill_slots, max_level) FROM stdin;
+Drifter	Knife	Assault Rifle	5	10
+Striker	Longsword	Assault Rifle	1	10
+Samurai Gunner	Longsword	Assault Rifle	2	10
+Duelist	Longsword	Assault Rifle	3	10
+Shield Trooper	Shield	Gatling Gun	3	10
+Bastion Warrior	Shield	Gatling Gun	4	10
+Commando	Dual Swords	Dual Guns	2	10
+Winged Viper	Dual Swords	Dual Guns	3	10
+Full Metal Jaguar	Dual Swords	Dual Guns	4	10
+Partisan Eagle	Javelin	Sniper Rifle	3	10
+Astral Crusader	Javelin	Sniper Rifle	4	10
+Enforcer	Knife	Raygun	2	10
+Psycorruptor	Knife	Raygun	3	10
+Mastermind	Knife	Raygun	4	10
+Blast Fencer	Photon Saber	Psycho Launchers	3	10
+Galactic Knight	Photon Saber	Psycho Launchers	4	10
+Nagi	Longsword	Gatling Gun	5	20
+L	Shield	Psycho Launchers	3	20
+Lao	Javelin	Sniper Rifle	3	20
+H.B.	Shield	Assault Rifle	4	20
+Gwin	Longsword	Assault Rifle	3	20
+Frye	Longsword	Gatling Gun	3	20
+Doug	Photon Saber	Raygun	4	20
+Yelv	Photon Saber	Raygun	3	20
+Boze	Javelin	Sniper Rifle	3	20
+Phog	Dual Swords	Dual Guns	3	20
+Elma	Dual Swords	Dual Guns	4	20
+Lin	Shield	Gatling Gun	3	20
+Celica	Knife	Dual Guns	3	20
+Irina	Knife	Assault Rifle	4	20
+Murderess	Dual Swords	Psycho Launchers	3	20
+Alexa	Javelin	Assault Rifle	3	20
+Hope	Knife	Psycho Launchers	3	20
+Mia	Knife	Raygun	3	20
 \.
 
 
