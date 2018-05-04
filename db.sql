@@ -40,6 +40,20 @@ CREATE TABLE xenox.affixes (
 ALTER TABLE xenox.affixes OWNER TO poppi;
 
 --
+-- Name: augments; Type: TABLE; Schema: xenox; Owner: poppi
+--
+
+CREATE TABLE xenox.augments (
+    name text NOT NULL,
+    sell_price smallint NOT NULL,
+    rarity text NOT NULL,
+    miranium smallint
+);
+
+
+ALTER TABLE xenox.augments OWNER TO poppi;
+
+--
 -- Name: class_arts; Type: TABLE; Schema: xenox; Owner: poppi
 --
 
@@ -6398,6 +6412,6281 @@ Weather.DAMAGE-RES XX	Reduces weather damage by 100% when in your Skell.
 
 
 --
+-- Data for Name: augments; Type: TABLE DATA; Schema: xenox; Owner: poppi
+--
+
+COPY xenox.augments (name, sell_price, rarity, miranium) FROM stdin;
+Max HP Up I	100	Common	100
+Max HP Up II	120	Common	100
+Max HP Up III	140	Common	100
+Max HP Up IV	160	Common	100
+Max HP Up V	180	Common	100
+Max HP Up VI	200	Rare	100
+Max HP Up VII	220	Rare	100
+Max HP Up VIII	240	Rare	100
+Max HP Up IX	260	Rare	100
+Max HP Up X	280	Rare	100
+Max HP Up XI	300	Unique	1100
+Max HP Up XII	320	Unique	1200
+Max HP Up XIII	340	Unique	1300
+Max HP Up XIV	360	Unique	1400
+Max HP Up XV	380	Unique	1500
+Max HP Up XVI	400	Prime	1600
+Max HP Up XVII	420	Prime	1700
+Max HP Up XVIII	440	Prime	1800
+Max HP Up XIX	460	Prime	1900
+Max HP Up XX	500	Intergalactic	2000
+Max TP Up I	100	Common	100
+Max TP Up II	120	Common	100
+Max TP Up III	140	Common	100
+Max TP Up IV	160	Common	100
+Max TP Up V	180	Common	100
+Max TP Up VI	200	Rare	100
+Max TP Up VII	220	Rare	100
+Max TP Up VIII	240	Rare	100
+Max TP Up IX	260	Rare	100
+Max TP Up X	280	Rare	100
+Max TP Up XI	300	Unique	1100
+Max TP Up XII	320	Unique	1200
+Max TP Up XIII	340	Unique	1300
+Max TP Up XIV	360	Unique	1400
+Max TP Up XV	380	Unique	1500
+Max TP Up XVI	400	Prime	1600
+Max TP Up XVII	420	Prime	1700
+Max TP Up XVIII	440	Prime	1800
+Max TP Up XIX	460	Prime	1900
+Max TP Up XX	500	Intergalactic	2000
+Melee Accuracy Up I	50	Common	100
+Melee Accuracy Up II	60	Common	100
+Melee Accuracy Up III	70	Common	100
+Melee Accuracy Up IV	80	Common	100
+Melee Accuracy Up V	90	Common	100
+Melee Accuracy Up VI	100	Rare	100
+Melee Accuracy Up VII	110	Rare	100
+Melee Accuracy Up VIII	120	Rare	100
+Melee Accuracy Up IX	130	Rare	100
+Melee Accuracy Up X	140	Rare	100
+Melee Accuracy Up XI	150	Unique	1100
+Melee Accuracy Up XII	160	Unique	1200
+Melee Accuracy Up XIII	170	Unique	1300
+Melee Accuracy Up XIV	180	Unique	1400
+Melee Accuracy Up XV	190	Unique	1500
+Melee Accuracy Up XVI	200	Prime	1600
+Melee Accuracy Up XVII	210	Prime	1700
+Melee Accuracy Up XVIII	220	Prime	1800
+Melee Accuracy Up XIX	230	Prime	1900
+Melee Accuracy Up XX	250	Intergalactic	2000
+Ranged Accuracy Up I	50	Common	100
+Ranged Accuracy Up II	60	Common	100
+Ranged Accuracy Up III	70	Common	100
+Ranged Accuracy Up IV	80	Common	100
+Ranged Accuracy Up V	90	Common	100
+Ranged Accuracy Up VI	100	Rare	100
+Ranged Accuracy Up VII	110	Rare	100
+Ranged Accuracy Up VIII	120	Rare	100
+Ranged Accuracy Up IX	130	Rare	100
+Ranged Accuracy Up X	140	Rare	100
+Ranged Accuracy Up XI	150	Unique	1100
+Ranged Accuracy Up XII	160	Unique	1200
+Ranged Accuracy Up XIII	170	Unique	1300
+Ranged Accuracy Up XIV	180	Unique	1400
+Ranged Accuracy Up XV	190	Unique	1500
+Ranged Accuracy Up XVI	200	Prime	1600
+Ranged Accuracy Up XVII	210	Prime	1700
+Ranged Accuracy Up XVIII	220	Prime	1800
+Ranged Accuracy Up XIX	230	Prime	1900
+Ranged Accuracy Up XX	250	Intergalactic	2000
+Evasion Up I	50	Common	100
+Evasion Up II	60	Common	100
+Evasion Up III	70	Common	100
+Evasion Up IV	80	Common	100
+Evasion Up V	90	Common	100
+Evasion Up VI	100	Rare	100
+Evasion Up VII	110	Rare	100
+Evasion Up VIII	120	Rare	100
+Evasion Up IX	130	Rare	100
+Evasion Up X	140	Rare	100
+Evasion Up XI	150	Unique	1100
+Evasion Up XII	160	Unique	1200
+Evasion Up XIII	170	Unique	1300
+Evasion Up XIV	180	Unique	1400
+Evasion Up XV	190	Unique	1500
+Evasion Up XVI	200	Prime	1600
+Evasion Up XVII	210	Prime	1700
+Evasion Up XVIII	220	Prime	1800
+Evasion Up XIX	230	Prime	1900
+Evasion Up XX	250	Intergalactic	2000
+Melee Attack Up I	50	Common	100
+Melee Attack Up II	60	Common	100
+Melee Attack Up III	70	Common	100
+Melee Attack Up IV	80	Common	100
+Melee Attack Up V	90	Common	100
+Melee Attack Up VI	100	Rare	100
+Melee Attack Up VII	110	Rare	100
+Melee Attack Up VIII	120	Rare	100
+Melee Attack Up IX	130	Rare	100
+Melee Attack Up X	140	Rare	100
+Melee Attack Up XI	150	Unique	1100
+Melee Attack Up XII	160	Unique	1200
+Melee Attack Up XIII	170	Unique	1300
+Melee Attack Up XIV	180	Unique	1400
+Melee Attack Up XV	190	Unique	1500
+Melee Attack Up XVI	200	Prime	1600
+Melee Attack Up XVII	210	Prime	1700
+Melee Attack Up XVIII	220	Prime	1800
+Melee Attack Up XIX	230	Prime	1900
+Melee Attack Up XX	250	Intergalactic	2000
+Ranged Attack Up I	50	Common	100
+Ranged Attack Up II	60	Common	100
+Ranged Attack Up III	70	Common	100
+Ranged Attack Up IV	80	Common	100
+Ranged Attack Up V	90	Common	100
+Ranged Attack Up VI	100	Rare	100
+Ranged Attack Up VII	110	Rare	100
+Ranged Attack Up VIII	120	Rare	100
+Ranged Attack Up IX	130	Rare	100
+Ranged Attack Up X	140	Rare	100
+Ranged Attack Up XI	150	Unique	1100
+Ranged Attack Up XII	160	Unique	1200
+Ranged Attack Up XIII	170	Unique	1300
+Ranged Attack Up XIV	180	Unique	1400
+Ranged Attack Up XV	190	Unique	1500
+Ranged Attack Up XVI	200	Prime	1600
+Ranged Attack Up XVII	210	Prime	1700
+Ranged Attack Up XVIII	220	Prime	1800
+Ranged Attack Up XIX	230	Prime	1900
+Ranged Attack Up XX	250	Intergalactic	2000
+Potential Up I	50	Common	100
+Potential Up II	60	Common	100
+Potential Up III	70	Common	100
+Potential Up IV	80	Common	100
+Potential Up V	90	Common	100
+Potential Up VI	100	Rare	100
+Potential Up VII	110	Rare	100
+Potential Up VIII	120	Rare	100
+Potential Up IX	130	Rare	100
+Potential Up X	140	Rare	100
+Potential Up XI	150	Unique	1100
+Potential Up XII	160	Unique	1200
+Potential Up XIII	170	Unique	1300
+Potential Up XIV	180	Unique	1400
+Potential Up XV	190	Unique	1500
+Potential Up XVI	200	Prime	1600
+Potential Up XVII	210	Prime	1700
+Potential Up XVIII	220	Prime	1800
+Potential Up XIX	230	Prime	1900
+Potential Up XX	250	Intergalactic	2000
+Max HP Boost I	500	Common	100
+Max HP Boost II	600	Common	100
+Max HP Boost III	700	Common	100
+Max HP Boost IV	800	Common	100
+Max HP Boost V	900	Common	100
+Max HP Boost VI	1000	Rare	100
+Max HP Boost VII	1100	Rare	100
+Max HP Boost VIII	1200	Rare	100
+Max HP Boost IX	1300	Rare	100
+Max HP Boost X	1400	Rare	100
+Max HP Boost XI	1500	Unique	1100
+Max HP Boost XII	1600	Unique	1200
+Max HP Boost XIII	1700	Unique	1300
+Max HP Boost XIV	1800	Unique	1400
+Max HP Boost XV	1900	Unique	1500
+Max HP Boost XVI	2000	Prime	1600
+Max HP Boost XVII	2100	Prime	1700
+Max HP Boost XVIII	2200	Prime	1800
+Max HP Boost XIX	2300	Prime	1900
+Max HP Boost XX	2500	Intergalactic	2000
+Max TP Boost I	500	Common	100
+Max TP Boost II	600	Common	100
+Max TP Boost III	700	Common	100
+Max TP Boost IV	800	Common	100
+Max TP Boost V	900	Common	100
+Max TP Boost VI	1000	Rare	100
+Max TP Boost VII	1100	Rare	100
+Max TP Boost VIII	1200	Rare	100
+Max TP Boost IX	1300	Rare	100
+Max TP Boost X	1400	Rare	100
+Max TP Boost XI	1500	Unique	1100
+Max TP Boost XII	1600	Unique	1200
+Max TP Boost XIII	1700	Unique	1300
+Max TP Boost XIV	1800	Unique	1400
+Max TP Boost XV	1900	Unique	1500
+Max TP Boost XVI	2000	Prime	1600
+Max TP Boost XVII	2100	Prime	1700
+Max TP Boost XVIII	2200	Prime	1800
+Max TP Boost XIX	2300	Prime	1900
+Max TP Boost XX	2500	Intergalactic	2000
+Melee Accuracy Boost I	500	Common	100
+Melee Accuracy Boost II	600	Common	100
+Melee Accuracy Boost III	700	Common	100
+Melee Accuracy Boost IV	800	Common	100
+Melee Accuracy Boost V	900	Common	100
+Melee Accuracy Boost VI	1000	Rare	100
+Melee Accuracy Boost VII	1100	Rare	100
+Melee Accuracy Boost VIII	1200	Rare	100
+Melee Accuracy Boost IX	1300	Rare	100
+Melee Accuracy Boost X	1400	Rare	100
+Melee Accuracy Boost XI	1500	Unique	1100
+Melee Accuracy Boost XII	1600	Unique	1200
+Melee Accuracy Boost XIII	1700	Unique	1300
+Melee Accuracy Boost XIV	1800	Unique	1400
+Melee Accuracy Boost XV	1900	Unique	1500
+Melee Accuracy Boost XVI	2000	Prime	1600
+Melee Accuracy Boost XVII	2100	Prime	1700
+Melee Accuracy Boost XVIII	2200	Prime	1800
+Melee Accuracy Boost XIX	2300	Prime	1900
+Melee Accuracy Boost XX	2500	Intergalactic	2000
+Ranged Accuracy Boost I	500	Common	100
+Ranged Accuracy Boost II	600	Common	100
+Ranged Accuracy Boost III	700	Common	100
+Ranged Accuracy Boost IV	800	Common	100
+Ranged Accuracy Boost V	900	Common	100
+Ranged Accuracy Boost VI	1000	Rare	100
+Ranged Accuracy Boost VII	1100	Rare	100
+Ranged Accuracy Boost VIII	1200	Rare	100
+Ranged Accuracy Boost IX	1300	Rare	100
+Ranged Accuracy Boost X	1400	Rare	100
+Ranged Accuracy Boost XI	1500	Unique	1100
+Ranged Accuracy Boost XII	1600	Unique	1200
+Ranged Accuracy Boost XIII	1700	Unique	1300
+Ranged Accuracy Boost XIV	1800	Unique	1400
+Ranged Accuracy Boost XV	1900	Unique	1500
+Ranged Accuracy Boost XVI	2000	Prime	1600
+Ranged Accuracy Boost XVII	2100	Prime	1700
+Ranged Accuracy Boost XVIII	2200	Prime	1800
+Ranged Accuracy Boost XIX	2300	Prime	1900
+Ranged Accuracy Boost XX	2500	Intergalactic	2000
+Evasion Boost I	500	Common	100
+Evasion Boost II	600	Common	100
+Evasion Boost III	700	Common	100
+Evasion Boost IV	800	Common	100
+Evasion Boost V	900	Common	100
+Evasion Boost VI	1000	Rare	100
+Evasion Boost VII	1100	Rare	100
+Evasion Boost VIII	1200	Rare	100
+Evasion Boost IX	1300	Rare	100
+Evasion Boost X	1400	Rare	100
+Evasion Boost XI	1500	Unique	1100
+Evasion Boost XII	1600	Unique	1200
+Evasion Boost XIII	1700	Unique	1300
+Evasion Boost XIV	1800	Unique	1400
+Evasion Boost XV	1900	Unique	1500
+Evasion Boost XVI	2000	Prime	1600
+Evasion Boost XVII	2100	Prime	1700
+Evasion Boost XVIII	2200	Prime	1800
+Evasion Boost XIX	2300	Prime	1900
+Evasion Boost XX	2500	Intergalactic	2000
+Melee Attack Boost I	500	Common	100
+Melee Attack Boost II	600	Common	100
+Melee Attack Boost III	700	Common	100
+Melee Attack Boost IV	800	Common	100
+Melee Attack Boost V	900	Common	100
+Melee Attack Boost VI	1000	Rare	100
+Melee Attack Boost VII	1100	Rare	100
+Melee Attack Boost VIII	1200	Rare	100
+Melee Attack Boost IX	1300	Rare	100
+Melee Attack Boost X	1400	Rare	100
+Melee Attack Boost XI	1500	Unique	1100
+Melee Attack Boost XII	1600	Unique	1200
+Melee Attack Boost XIII	1700	Unique	1300
+Melee Attack Boost XIV	1800	Unique	1400
+Melee Attack Boost XV	1900	Unique	1500
+Melee Attack Boost XVI	2000	Prime	1600
+Melee Attack Boost XVII	2100	Prime	1700
+Melee Attack Boost XVIII	2200	Prime	1800
+Melee Attack Boost XIX	2300	Prime	1900
+Melee Attack Boost XX	2500	Intergalactic	2000
+Ranged Attack Boost I	500	Common	100
+Ranged Attack Boost II	600	Common	100
+Ranged Attack Boost III	700	Common	100
+Ranged Attack Boost IV	800	Common	100
+Ranged Attack Boost V	900	Common	100
+Ranged Attack Boost VI	1000	Rare	100
+Ranged Attack Boost VII	1100	Rare	100
+Ranged Attack Boost VIII	1200	Rare	100
+Ranged Attack Boost IX	1300	Rare	100
+Ranged Attack Boost X	1400	Rare	100
+Ranged Attack Boost XI	1500	Unique	1100
+Ranged Attack Boost XII	1600	Unique	1200
+Ranged Attack Boost XIII	1700	Unique	1300
+Ranged Attack Boost XIV	1800	Unique	1400
+Ranged Attack Boost XV	1900	Unique	1500
+Ranged Attack Boost XVI	2000	Prime	1600
+Ranged Attack Boost XVII	2100	Prime	1700
+Ranged Attack Boost XVIII	2200	Prime	1800
+Ranged Attack Boost XIX	2300	Prime	1900
+Ranged Attack Boost XX	2500	Intergalactic	2000
+Potential Boost I	500	Common	100
+Potential Boost II	600	Common	100
+Potential Boost III	700	Common	100
+Potential Boost IV	800	Common	100
+Potential Boost V	900	Common	100
+Potential Boost VI	1000	Rare	100
+Potential Boost VII	1100	Rare	100
+Potential Boost VIII	1200	Rare	100
+Potential Boost IX	1300	Rare	100
+Potential Boost X	1400	Rare	100
+Potential Boost XI	1500	Unique	1100
+Potential Boost XII	1600	Unique	1200
+Potential Boost XIII	1700	Unique	1300
+Potential Boost XIV	1800	Unique	1400
+Potential Boost XV	1900	Unique	1500
+Potential Boost XVI	2000	Prime	1600
+Potential Boost XVII	2100	Prime	1700
+Potential Boost XVIII	2200	Prime	1800
+Potential Boost XIX	2300	Prime	1900
+Potential Boost XX	2500	Intergalactic	2000
+Max HP Drive I	500	Common	100
+Max HP Drive II	600	Common	100
+Max HP Drive III	700	Common	100
+Max HP Drive IV	800	Common	100
+Max HP Drive V	900	Common	100
+Max HP Drive VI	1000	Rare	100
+Max HP Drive VII	1100	Rare	100
+Max HP Drive VIII	1200	Rare	100
+Max HP Drive IX	1300	Rare	100
+Max HP Drive X	1400	Rare	100
+Max HP Drive XI	1500	Unique	1100
+Max HP Drive XII	1600	Unique	1200
+Max HP Drive XIII	1700	Unique	1300
+Max HP Drive XIV	1800	Unique	1400
+Max HP Drive XV	1900	Unique	1500
+Max HP Drive XVI	2000	Prime	1600
+Max HP Drive XVII	2100	Prime	1700
+Max HP Drive XVIII	2200	Prime	1800
+Max HP Drive XIX	2300	Prime	1900
+Max HP Drive XX	2500	Intergalactic	2000
+Max GP Drive I	500	Common	100
+Max GP Drive II	600	Common	100
+Max GP Drive III	700	Common	100
+Max GP Drive IV	800	Common	100
+Max GP Drive V	900	Common	100
+Max GP Drive VI	1000	Rare	100
+Max GP Drive VII	1100	Rare	100
+Max GP Drive VIII	1200	Rare	100
+Max GP Drive IX	1300	Rare	100
+Max GP Drive X	1400	Rare	100
+Max GP Drive XI	1500	Unique	1100
+Max GP Drive XII	1600	Unique	1200
+Max GP Drive XIII	1700	Unique	1300
+Max GP Drive XIV	1800	Unique	1400
+Max GP Drive XV	1900	Unique	1500
+Max GP Drive XVI	2000	Prime	1600
+Max GP Drive XVII	2100	Prime	1700
+Max GP Drive XVIII	2200	Prime	1800
+Max GP Drive XIX	2300	Prime	1900
+Max GP Drive XX	2500	Intergalactic	2000
+Melee Accuracy Drive I	500	Common	100
+Melee Accuracy Drive II	600	Common	100
+Melee Accuracy Drive III	700	Common	100
+Melee Accuracy Drive IV	800	Common	100
+Melee Accuracy Drive V	900	Common	100
+Melee Accuracy Drive VI	1000	Rare	100
+Melee Accuracy Drive VII	1100	Rare	100
+Melee Accuracy Drive VIII	1200	Rare	100
+Melee Accuracy Drive IX	1300	Rare	100
+Melee Accuracy Drive X	1400	Rare	100
+Melee Accuracy Drive XI	1500	Unique	1100
+Melee Accuracy Drive XII	1600	Unique	1200
+Melee Accuracy Drive XIII	1700	Unique	1300
+Melee Accuracy Drive XIV	1800	Unique	1400
+Melee Accuracy Drive XV	1900	Unique	1500
+Melee Accuracy Drive XVI	2000	Prime	1600
+Melee Accuracy Drive XVII	2100	Prime	1700
+Melee Accuracy Drive XVIII	2200	Prime	1800
+Melee Accuracy Drive XIX	2300	Prime	1900
+Melee Accuracy Drive XX	2500	Intergalactic	2000
+Ranged Accuracy Drive I	500	Common	100
+Ranged Accuracy Drive II	600	Common	100
+Ranged Accuracy Drive III	700	Common	100
+Ranged Accuracy Drive IV	800	Common	100
+Ranged Accuracy Drive V	900	Common	100
+Ranged Accuracy Drive VI	1000	Rare	100
+Ranged Accuracy Drive VII	1100	Rare	100
+Ranged Accuracy Drive VIII	1200	Rare	100
+Ranged Accuracy Drive IX	1300	Rare	100
+Ranged Accuracy Drive X	1400	Rare	100
+Ranged Accuracy Drive XI	1500	Unique	1100
+Ranged Accuracy Drive XII	1600	Unique	1200
+Ranged Accuracy Drive XIII	1700	Unique	1300
+Ranged Accuracy Drive XIV	1800	Unique	1400
+Ranged Accuracy Drive XV	1900	Unique	1500
+Ranged Accuracy Drive XVI	2000	Prime	1600
+Ranged Accuracy Drive XVII	2100	Prime	1700
+Ranged Accuracy Drive XVIII	2200	Prime	1800
+Ranged Accuracy Drive XIX	2300	Prime	1900
+Ranged Accuracy Drive XX	2500	Intergalactic	2000
+Evasion Drive I	500	Common	100
+Evasion Drive II	600	Common	100
+Evasion Drive III	700	Common	100
+Evasion Drive IV	800	Common	100
+Evasion Drive V	900	Common	100
+Evasion Drive VI	1000	Rare	100
+Evasion Drive VII	1100	Rare	100
+Evasion Drive VIII	1200	Rare	100
+Evasion Drive IX	1300	Rare	100
+Evasion Drive X	1400	Rare	100
+Evasion Drive XI	1500	Unique	1100
+Evasion Drive XII	1600	Unique	1200
+Evasion Drive XIII	1700	Unique	1300
+Evasion Drive XIV	1800	Unique	1400
+Evasion Drive XV	1900	Unique	1500
+Evasion Drive XVI	2000	Prime	1600
+Evasion Drive XVII	2100	Prime	1700
+Evasion Drive XVIII	2200	Prime	1800
+Evasion Drive XIX	2300	Prime	1900
+Evasion Drive XX	2500	Intergalactic	2000
+Melee Attack Drive I	500	Common	100
+Melee Attack Drive II	600	Common	100
+Melee Attack Drive III	700	Common	100
+Melee Attack Drive IV	800	Common	100
+Melee Attack Drive V	900	Common	100
+Melee Attack Drive VI	1000	Rare	100
+Melee Attack Drive VII	1100	Rare	100
+Melee Attack Drive VIII	1200	Rare	100
+Melee Attack Drive IX	1300	Rare	100
+Melee Attack Drive X	1400	Rare	100
+Melee Attack Drive XI	1500	Unique	1100
+Melee Attack Drive XII	1600	Unique	1200
+Melee Attack Drive XIII	1700	Unique	1300
+Melee Attack Drive XIV	1800	Unique	1400
+Melee Attack Drive XV	1900	Unique	1500
+Melee Attack Drive XVI	2000	Prime	1600
+Melee Attack Drive XVII	2100	Prime	1700
+Melee Attack Drive XVIII	2200	Prime	1800
+Melee Attack Drive XIX	2300	Prime	1900
+Melee Attack Drive XX	2500	Intergalactic	2000
+Ranged Attack Drive I	500	Common	100
+Ranged Attack Drive II	600	Common	100
+Ranged Attack Drive III	700	Common	100
+Ranged Attack Drive IV	800	Common	100
+Ranged Attack Drive V	900	Common	100
+Ranged Attack Drive VI	1000	Rare	100
+Ranged Attack Drive VII	1100	Rare	100
+Ranged Attack Drive VIII	1200	Rare	100
+Ranged Attack Drive IX	1300	Rare	100
+Ranged Attack Drive X	1400	Rare	100
+Ranged Attack Drive XI	1500	Unique	1100
+Ranged Attack Drive XII	1600	Unique	1200
+Ranged Attack Drive XIII	1700	Unique	1300
+Ranged Attack Drive XIV	1800	Unique	1400
+Ranged Attack Drive XV	1900	Unique	1500
+Ranged Attack Drive XVI	2000	Prime	1600
+Ranged Attack Drive XVII	2100	Prime	1700
+Ranged Attack Drive XVIII	2200	Prime	1800
+Ranged Attack Drive XIX	2300	Prime	1900
+Ranged Attack Drive XX	2500	Intergalactic	2000
+Potential Drive I	500	Common	100
+Potential Drive II	600	Common	100
+Potential Drive III	700	Common	100
+Potential Drive IV	800	Common	100
+Potential Drive V	900	Common	100
+Potential Drive VI	1000	Rare	100
+Potential Drive VII	1100	Rare	100
+Potential Drive VIII	1200	Rare	100
+Potential Drive IX	1300	Rare	100
+Potential Drive X	1400	Rare	100
+Potential Drive XI	1500	Unique	1100
+Potential Drive XII	1600	Unique	1200
+Potential Drive XIII	1700	Unique	1300
+Potential Drive XIV	1800	Unique	1400
+Potential Drive XV	1900	Unique	1500
+Potential Drive XVI	2000	Prime	1600
+Potential Drive XVII	2100	Prime	1700
+Potential Drive XVIII	2200	Prime	1800
+Potential Drive XIX	2300	Prime	1900
+Potential Drive XX	2500	Intergalactic	2000
+Bind: Refuel I	800	Common	100
+Bind: Refuel II	960	Common	100
+Bind: Refuel III	1120	Common	100
+Bind: Refuel IV	1280	Common	100
+Bind: Refuel V	1440	Common	100
+Bind: Refuel VI	1600	Rare	100
+Bind: Refuel VII	1760	Rare	100
+Bind: Refuel VIII	1920	Rare	100
+Bind: Refuel IX	2080	Rare	100
+Bind: Refuel X	2240	Rare	100
+Bind: Refuel XI	2400	Unique	1100
+Bind: Refuel XII	2560	Unique	1200
+Bind: Refuel XIII	2720	Unique	1300
+Bind: Refuel XIV	2880	Unique	1400
+Bind: Refuel XV	3040	Unique	1500
+Bind: Refuel XVI	3200	Prime	1600
+Bind: Refuel XVII	3360	Prime	1700
+Bind: Refuel XVIII	3520	Prime	1800
+Bind: Refuel XIX	3680	Prime	1900
+Bind: Refuel XX	4000	Intergalactic	2000
+Fuel Efficiency Up I	800	Common	100
+Fuel Efficiency Up II	960	Common	100
+Fuel Efficiency Up III	1120	Common	100
+Fuel Efficiency Up IV	1280	Common	100
+Fuel Efficiency Up V	1440	Common	100
+Fuel Efficiency Up VI	1600	Rare	100
+Fuel Efficiency Up VII	1760	Rare	100
+Fuel Efficiency Up VIII	1920	Rare	100
+Fuel Efficiency Up IX	2080	Rare	100
+Fuel Efficiency Up X	2240	Rare	100
+Fuel Efficiency Up XI	2400	Unique	1100
+Fuel Efficiency Up XII	2560	Unique	1200
+Fuel Efficiency Up XIII	2720	Unique	1300
+Fuel Efficiency Up XIV	2880	Unique	1400
+Fuel Efficiency Up XV	3040	Unique	1500
+Fuel Efficiency Up XVI	3200	Prime	1600
+Fuel Efficiency Up XVII	3360	Prime	1700
+Fuel Efficiency Up XVIII	3520	Prime	1800
+Fuel Efficiency Up XIX	3680	Prime	1900
+Fuel Efficiency Up XX	4000	Intergalactic	2000
+Physical Resistance Up I	300	Common	100
+Physical Resistance Up II	360	Common	100
+Physical Resistance Up III	420	Common	100
+Physical Resistance Up IV	480	Common	100
+Physical Resistance Up V	540	Common	100
+Physical Resistance Up VI	600	Rare	100
+Physical Resistance Up VII	660	Rare	100
+Physical Resistance Up VIII	720	Rare	100
+Physical Resistance Up IX	780	Rare	100
+Physical Resistance Up X	840	Rare	100
+Physical Resistance Up XI	900	Unique	1100
+Physical Resistance Up XII	960	Unique	1200
+Physical Resistance Up XIII	1020	Unique	1300
+Physical Resistance Up XIV	1080	Unique	1400
+Physical Resistance Up XV	1140	Unique	1500
+Physical Resistance Up XVI	1200	Prime	1600
+Physical Resistance Up XVII	1260	Prime	1700
+Physical Resistance Up XVIII	1320	Prime	1800
+Physical Resistance Up XIX	1380	Prime	1900
+Physical Resistance Up XX	1500	Intergalactic	2000
+Beam Resistance Up I	300	Common	100
+Beam Resistance Up II	360	Common	100
+Beam Resistance Up III	420	Common	100
+Beam Resistance Up IV	480	Common	100
+Beam Resistance Up V	540	Common	100
+Beam Resistance Up VI	600	Rare	100
+Beam Resistance Up VII	660	Rare	100
+Beam Resistance Up VIII	720	Rare	100
+Beam Resistance Up IX	780	Rare	100
+Beam Resistance Up X	840	Rare	100
+Beam Resistance Up XI	900	Unique	1100
+Beam Resistance Up XII	960	Unique	1200
+Beam Resistance Up XIII	1020	Unique	1300
+Beam Resistance Up XIV	1080	Unique	1400
+Beam Resistance Up XV	1140	Unique	1500
+Beam Resistance Up XVI	1200	Prime	1600
+Beam Resistance Up XVII	1260	Prime	1700
+Beam Resistance Up XVIII	1320	Prime	1800
+Beam Resistance Up XIX	1380	Prime	1900
+Beam Resistance Up XX	1500	Intergalactic	2000
+Electric Resistance Up I	300	Common	100
+Electric Resistance Up II	360	Common	100
+Electric Resistance Up III	420	Common	100
+Electric Resistance Up IV	480	Common	100
+Electric Resistance Up V	540	Common	100
+Electric Resistance Up VI	600	Rare	100
+Electric Resistance Up VII	660	Rare	100
+Electric Resistance Up VIII	720	Rare	100
+Electric Resistance Up IX	780	Rare	100
+Electric Resistance Up X	840	Rare	100
+Electric Resistance Up XI	900	Unique	1100
+Electric Resistance Up XII	960	Unique	1200
+Electric Resistance Up XIII	1020	Unique	1300
+Electric Resistance Up XIV	1080	Unique	1400
+Electric Resistance Up XV	1140	Unique	1500
+Electric Resistance Up XVI	1200	Prime	1600
+Electric Resistance Up XVII	1260	Prime	1700
+Electric Resistance Up XVIII	1320	Prime	1800
+Electric Resistance Up XIX	1380	Prime	1900
+Electric Resistance Up XX	1500	Intergalactic	2000
+Thermal Resistance Up I	300	Common	100
+Thermal Resistance Up II	360	Common	100
+Thermal Resistance Up III	420	Common	100
+Thermal Resistance Up IV	480	Common	100
+Thermal Resistance Up V	540	Common	100
+Thermal Resistance Up VI	600	Rare	100
+Thermal Resistance Up VII	660	Rare	100
+Thermal Resistance Up VIII	720	Rare	100
+Thermal Resistance Up IX	780	Rare	100
+Thermal Resistance Up X	840	Rare	100
+Thermal Resistance Up XI	900	Unique	1100
+Thermal Resistance Up XII	960	Unique	1200
+Thermal Resistance Up XIII	1020	Unique	1300
+Thermal Resistance Up XIV	1080	Unique	1400
+Thermal Resistance Up XV	1140	Unique	1500
+Thermal Resistance Up XVI	1200	Prime	1600
+Thermal Resistance Up XVII	1260	Prime	1700
+Thermal Resistance Up XVIII	1320	Prime	1800
+Thermal Resistance Up XIX	1380	Prime	1900
+Thermal Resistance Up XX	1500	Intergalactic	2000
+Ether Resistance Up I	300	Common	100
+Ether Resistance Up II	360	Common	100
+Ether Resistance Up III	420	Common	100
+Ether Resistance Up IV	480	Common	100
+Ether Resistance Up V	540	Common	100
+Ether Resistance Up VI	600	Rare	100
+Ether Resistance Up VII	660	Rare	100
+Ether Resistance Up VIII	720	Rare	100
+Ether Resistance Up IX	780	Rare	100
+Ether Resistance Up X	840	Rare	100
+Ether Resistance Up XI	900	Unique	1100
+Ether Resistance Up XII	960	Unique	1200
+Ether Resistance Up XIII	1020	Unique	1300
+Ether Resistance Up XIV	1080	Unique	1400
+Ether Resistance Up XV	1140	Unique	1500
+Ether Resistance Up XVI	1200	Prime	1600
+Ether Resistance Up XVII	1260	Prime	1700
+Ether Resistance Up XVIII	1320	Prime	1800
+Ether Resistance Up XIX	1380	Prime	1900
+Ether Resistance Up XX	1500	Intergalactic	2000
+Gravity Resistance Up I	300	Common	100
+Gravity Resistance Up II	360	Common	100
+Gravity Resistance Up III	420	Common	100
+Gravity Resistance Up IV	480	Common	100
+Gravity Resistance Up V	540	Common	100
+Gravity Resistance Up VI	600	Rare	100
+Gravity Resistance Up VII	660	Rare	100
+Gravity Resistance Up VIII	720	Rare	100
+Gravity Resistance Up IX	780	Rare	100
+Gravity Resistance Up X	840	Rare	100
+Gravity Resistance Up XI	900	Unique	1100
+Gravity Resistance Up XII	960	Unique	1200
+Gravity Resistance Up XIII	1020	Unique	1300
+Gravity Resistance Up XIV	1080	Unique	1400
+Gravity Resistance Up XV	1140	Unique	1500
+Gravity Resistance Up XVI	1200	Prime	1600
+Gravity Resistance Up XVII	1260	Prime	1700
+Gravity Resistance Up XVIII	1320	Prime	1800
+Gravity Resistance Up XIX	1380	Prime	1900
+Gravity Resistance Up XX	1500	Intergalactic	2000
+Weapon Attack Power Up I	500	Common	100
+Weapon Attack Power Up II	600	Common	100
+Weapon Attack Power Up III	700	Common	100
+Weapon Attack Power Up IV	800	Common	100
+Weapon Attack Power Up V	900	Common	100
+Weapon Attack Power Up VI	1000	Rare	100
+Weapon Attack Power Up VII	1100	Rare	100
+Weapon Attack Power Up VIII	1200	Rare	100
+Weapon Attack Power Up IX	1300	Rare	100
+Weapon Attack Power Up X	1400	Rare	100
+Weapon Attack Power Up XI	1500	Unique	1100
+Weapon Attack Power Up XII	1600	Unique	1200
+Weapon Attack Power Up XIII	1700	Unique	1300
+Weapon Attack Power Up XIV	1800	Unique	1400
+Weapon Attack Power Up XV	1900	Unique	1500
+Weapon Attack Power Up XVI	2000	Prime	1600
+Weapon Attack Power Up XVII	2100	Prime	1700
+Weapon Attack Power Up XVIII	2200	Prime	1800
+Weapon Attack Power Up XIX	2300	Prime	1900
+Weapon Attack Power Up XX	2500	Intergalactic	2000
+Stabilizer I	500	Common	100
+Stabilizer II	600	Common	100
+Stabilizer III	700	Common	100
+Stabilizer IV	800	Common	100
+Stabilizer V	900	Common	100
+Stabilizer VI	1000	Rare	100
+Stabilizer VII	1100	Rare	100
+Stabilizer VIII	1200	Rare	100
+Stabilizer IX	1300	Rare	100
+Stabilizer X	1400	Rare	100
+Stabilizer XI	1500	Unique	1100
+Stabilizer XII	1600	Unique	1200
+Stabilizer XIII	1700	Unique	1300
+Stabilizer XIV	1800	Unique	1400
+Stabilizer XV	1900	Unique	1500
+Stabilizer XVI	2000	Prime	1600
+Stabilizer XVII	2100	Prime	1700
+Stabilizer XVIII	2200	Prime	1800
+Stabilizer XIX	2300	Prime	1900
+Stabilizer XX	2500	Intergalactic	2000
+Destabilizer I	500	Common	100
+Destabilizer II	600	Common	100
+Destabilizer III	700	Common	100
+Destabilizer IV	800	Common	100
+Destabilizer V	900	Common	100
+Destabilizer VI	1000	Rare	100
+Destabilizer VII	1100	Rare	100
+Destabilizer VIII	1200	Rare	100
+Destabilizer IX	1300	Rare	100
+Destabilizer X	1400	Rare	100
+Destabilizer XI	1500	Unique	1100
+Destabilizer XII	1600	Unique	1200
+Destabilizer XIII	1700	Unique	1300
+Destabilizer XIV	1800	Unique	1400
+Destabilizer XV	1900	Unique	1500
+Destabilizer XVI	2000	Prime	1600
+Destabilizer XVII	2100	Prime	1700
+Destabilizer XVIII	2200	Prime	1800
+Destabilizer XIX	2300	Prime	1900
+Destabilizer XX	2500	Intergalactic	2000
+Magazine Capacity Up I	500	Common	100
+Magazine Capacity Up II	600	Common	100
+Magazine Capacity Up III	700	Common	100
+Magazine Capacity Up IV	800	Common	100
+Magazine Capacity Up V	900	Common	100
+Magazine Capacity Up VI	1000	Rare	100
+Magazine Capacity Up VII	1100	Rare	100
+Magazine Capacity Up VIII	1200	Rare	100
+Magazine Capacity Up IX	1300	Rare	100
+Magazine Capacity Up X	1400	Rare	100
+Magazine Capacity Up XI	1500	Unique	1100
+Magazine Capacity Up XII	1600	Unique	1200
+Magazine Capacity Up XIII	1700	Unique	1300
+Magazine Capacity Up XIV	1800	Unique	1400
+Magazine Capacity Up XV	1900	Unique	1500
+Magazine Capacity Up XVI	2000	Prime	1600
+Magazine Capacity Up XVII	2100	Prime	1700
+Magazine Capacity Up XVIII	2200	Prime	1800
+Magazine Capacity Up XIX	2300	Prime	1900
+Magazine Capacity Up XX	2500	Intergalactic	2000
+Melee: TP Gain Up	1000	Unique	100
+Ranged: TP Gain Up	1000	Unique	100
+Cooldown Reducer I	500	Common	100
+Cooldown Reducer II	600	Common	100
+Cooldown Reducer III	700	Common	100
+Cooldown Reducer IV	800	Common	100
+Cooldown Reducer V	900	Common	100
+Cooldown Reducer VI	1000	Rare	100
+Cooldown Reducer VII	1100	Rare	100
+Cooldown Reducer VIII	1200	Rare	100
+Cooldown Reducer IX	1300	Rare	100
+Cooldown Reducer X	1400	Rare	100
+Cooldown Reducer XI	1500	Unique	1100
+Cooldown Reducer XII	1600	Unique	1200
+Cooldown Reducer XIII	1700	Unique	1300
+Cooldown Reducer XIV	1800	Unique	1400
+Cooldown Reducer XV	1900	Unique	1500
+Cooldown Reducer XVI	2000	Prime	1600
+Cooldown Reducer XVII	2100	Prime	1700
+Cooldown Reducer XVIII	2200	Prime	1800
+Cooldown Reducer XIX	2300	Prime	1900
+Cooldown Reducer XX	2500	Intergalactic	2000
+Firing Range Up I	500	Common	100
+Firing Range Up II	600	Common	100
+Firing Range Up III	700	Common	100
+Firing Range Up IV	800	Common	100
+Firing Range Up V	900	Common	100
+Firing Range Up VI	1000	Rare	100
+Firing Range Up VII	1100	Rare	100
+Firing Range Up VIII	1200	Rare	100
+Firing Range Up IX	1300	Rare	100
+Firing Range Up X	1400	Rare	100
+Firing Range Up XI	1500	Unique	1100
+Firing Range Up XII	1600	Unique	1200
+Firing Range Up XIII	1700	Unique	1300
+Firing Range Up XIV	1800	Unique	1400
+Firing Range Up XV	1900	Unique	1500
+Firing Range Up XVI	2000	Prime	1600
+Firing Range Up XVII	2100	Prime	1700
+Firing Range Up XVIII	2200	Prime	1800
+Firing Range Up XIX	2300	Prime	1900
+Firing Range Up XX	2500	Intergalactic	2000
+Resist Stagger I	300	Common	100
+Resist Stagger II	360	Common	100
+Resist Stagger III	420	Common	100
+Resist Stagger IV	480	Common	100
+Resist Stagger V	540	Common	100
+Resist Stagger VI	600	Rare	100
+Resist Stagger VII	660	Rare	100
+Resist Stagger VIII	720	Rare	100
+Resist Stagger IX	780	Rare	100
+Resist Stagger X	840	Rare	100
+Resist Stagger XI	900	Unique	1100
+Resist Stagger XII	960	Unique	1200
+Resist Stagger XIII	1020	Unique	1300
+Resist Stagger XIV	1080	Unique	1400
+Resist Stagger XV	1140	Unique	1500
+Resist Stagger XVI	1200	Prime	1600
+Resist Stagger XVII	1260	Prime	1700
+Resist Stagger XVIII	1320	Prime	1800
+Resist Stagger XIX	1380	Prime	1900
+Resist Stagger XX	1500	Intergalactic	2000
+Resist Flinch I	300	Common	100
+Resist Flinch II	360	Common	100
+Resist Flinch III	420	Common	100
+Resist Flinch IV	480	Common	100
+Resist Flinch V	540	Common	100
+Resist Flinch VI	600	Rare	100
+Resist Flinch VII	660	Rare	100
+Resist Flinch VIII	720	Rare	100
+Resist Flinch IX	780	Rare	100
+Resist Flinch X	840	Rare	100
+Resist Flinch XI	900	Unique	1100
+Resist Flinch XII	960	Unique	1200
+Resist Flinch XIII	1020	Unique	1300
+Resist Flinch XIV	1080	Unique	1400
+Resist Flinch XV	1140	Unique	1500
+Resist Flinch XVI	1200	Prime	1600
+Resist Flinch XVII	1260	Prime	1700
+Resist Flinch XVIII	1320	Prime	1800
+Resist Flinch XIX	1380	Prime	1900
+Resist Flinch XX	1500	Intergalactic	2000
+Resist Topple I	300	Common	100
+Resist Topple II	360	Common	100
+Resist Topple III	420	Common	100
+Resist Topple IV	480	Common	100
+Resist Topple V	540	Common	100
+Resist Topple VI	600	Rare	100
+Resist Topple VII	660	Rare	100
+Resist Topple VIII	720	Rare	100
+Resist Topple IX	780	Rare	100
+Resist Topple X	840	Rare	100
+Resist Topple XI	900	Unique	1100
+Resist Topple XII	960	Unique	1200
+Resist Topple XIII	1020	Unique	1300
+Resist Topple XIV	1080	Unique	1400
+Resist Topple XV	1140	Unique	1500
+Resist Topple XVI	1200	Prime	1600
+Resist Topple XVII	1260	Prime	1700
+Resist Topple XVIII	1320	Prime	1800
+Resist Topple XIX	1380	Prime	1900
+Resist Topple XX	1500	Intergalactic	2000
+Resist Knockback I	300	Common	100
+Resist Knockback II	360	Common	100
+Resist Knockback III	420	Common	100
+Resist Knockback IV	480	Common	100
+Resist Knockback V	540	Common	100
+Resist Knockback VI	600	Rare	100
+Resist Knockback VII	660	Rare	100
+Resist Knockback VIII	720	Rare	100
+Resist Knockback IX	780	Rare	100
+Resist Knockback X	840	Rare	100
+Resist Knockback XI	900	Unique	1100
+Resist Knockback XII	960	Unique	1200
+Resist Knockback XIII	1020	Unique	1300
+Resist Knockback XIV	1080	Unique	1400
+Resist Knockback XV	1140	Unique	1500
+Resist Knockback XVI	1200	Prime	1600
+Resist Knockback XVII	1260	Prime	1700
+Resist Knockback XVIII	1320	Prime	1800
+Resist Knockback XIX	1380	Prime	1900
+Resist Knockback XX	1500	Intergalactic	2000
+Resist Launch I	300	Common	100
+Resist Launch II	360	Common	100
+Resist Launch III	420	Common	100
+Resist Launch IV	480	Common	100
+Resist Launch V	540	Common	100
+Resist Launch VI	600	Rare	100
+Resist Launch VII	660	Rare	100
+Resist Launch VIII	720	Rare	100
+Resist Launch IX	780	Rare	100
+Resist Launch X	840	Rare	100
+Resist Launch XI	900	Unique	1100
+Resist Launch XII	960	Unique	1200
+Resist Launch XIII	1020	Unique	1300
+Resist Launch XIV	1080	Unique	1400
+Resist Launch XV	1140	Unique	1500
+Resist Launch XVI	1200	Prime	1600
+Resist Launch XVII	1260	Prime	1700
+Resist Launch XVIII	1320	Prime	1800
+Resist Launch XIX	1380	Prime	1900
+Resist Launch XX	1500	Intergalactic	2000
+Resist Stun I	300	Common	100
+Resist Stun II	360	Common	100
+Resist Stun III	420	Common	100
+Resist Stun IV	480	Common	100
+Resist Stun V	540	Common	100
+Resist Stun VI	600	Rare	100
+Resist Stun VII	660	Rare	100
+Resist Stun VIII	720	Rare	100
+Resist Stun IX	780	Rare	100
+Resist Stun X	840	Rare	100
+Resist Stun XI	900	Unique	1100
+Resist Stun XII	960	Unique	1200
+Resist Stun XIII	1020	Unique	1300
+Resist Stun XIV	1080	Unique	1400
+Resist Stun XV	1140	Unique	1500
+Resist Stun XVI	1200	Prime	1600
+Resist Stun XVII	1260	Prime	1700
+Resist Stun XVIII	1320	Prime	1800
+Resist Stun XIX	1380	Prime	1900
+Resist Stun XX	1500	Intergalactic	2000
+Resist Sleep I	300	Common	100
+Resist Sleep II	360	Common	100
+Resist Sleep III	420	Common	100
+Resist Sleep IV	480	Common	100
+Resist Sleep V	540	Common	100
+Resist Sleep VI	600	Rare	100
+Resist Sleep VII	660	Rare	100
+Resist Sleep VIII	720	Rare	100
+Resist Sleep IX	780	Rare	100
+Resist Sleep X	840	Rare	100
+Resist Sleep XI	900	Unique	1100
+Resist Sleep XII	960	Unique	1200
+Resist Sleep XIII	1020	Unique	1300
+Resist Sleep XIV	1080	Unique	1400
+Resist Sleep XV	1140	Unique	1500
+Resist Sleep XVI	1200	Prime	1600
+Resist Sleep XVII	1260	Prime	1700
+Resist Sleep XVIII	1320	Prime	1800
+Resist Sleep XIX	1380	Prime	1900
+Resist Sleep XX	1500	Intergalactic	2000
+Resist Taunt I	300	Common	100
+Resist Taunt II	360	Common	100
+Resist Taunt III	420	Common	100
+Resist Taunt IV	480	Common	100
+Resist Taunt V	540	Common	100
+Resist Taunt VI	600	Rare	100
+Resist Taunt VII	660	Rare	100
+Resist Taunt VIII	720	Rare	100
+Resist Taunt IX	780	Rare	100
+Resist Taunt X	840	Rare	100
+Resist Taunt XI	900	Unique	1100
+Resist Taunt XII	960	Unique	1200
+Resist Taunt XIII	1020	Unique	1300
+Resist Taunt XIV	1080	Unique	1400
+Resist Taunt XV	1140	Unique	1500
+Resist Taunt XVI	1200	Prime	1600
+Resist Taunt XVII	1260	Prime	1700
+Resist Taunt XVIII	1320	Prime	1800
+Resist Taunt XIX	1380	Prime	1900
+Resist Taunt XX	1500	Intergalactic	2000
+Resist Control I	300	Common	100
+Resist Control II	360	Common	100
+Resist Control III	420	Common	100
+Resist Control IV	480	Common	100
+Resist Control V	540	Common	100
+Resist Control VI	600	Rare	100
+Resist Control VII	660	Rare	100
+Resist Control VIII	720	Rare	100
+Resist Control IX	780	Rare	100
+Resist Control X	840	Rare	100
+Resist Control XI	900	Unique	1100
+Resist Control XII	960	Unique	1200
+Resist Control XIII	1020	Unique	1300
+Resist Control XIV	1080	Unique	1400
+Resist Control XV	1140	Unique	1500
+Resist Control XVI	1200	Prime	1600
+Resist Control XVII	1260	Prime	1700
+Resist Control XVIII	1320	Prime	1800
+Resist Control XIX	1380	Prime	1900
+Resist Control XX	1500	Intergalactic	2000
+Resist Virus I	300	Common	100
+Resist Virus II	360	Common	100
+Resist Virus III	420	Common	100
+Resist Virus IV	480	Common	100
+Resist Virus V	540	Common	100
+Resist Virus VI	600	Rare	100
+Resist Virus VII	660	Rare	100
+Resist Virus VIII	720	Rare	100
+Resist Virus IX	780	Rare	100
+Resist Virus X	840	Rare	100
+Resist Virus XI	900	Unique	1100
+Resist Virus XII	960	Unique	1200
+Resist Virus XIII	1020	Unique	1300
+Resist Virus XIV	1080	Unique	1400
+Resist Virus XV	1140	Unique	1500
+Resist Virus XVI	1200	Prime	1600
+Resist Virus XVII	1260	Prime	1700
+Resist Virus XVIII	1320	Prime	1800
+Resist Virus XIX	1380	Prime	1900
+Resist Virus XX	1500	Intergalactic	2000
+Resist Blackout I	300	Common	100
+Resist Blackout II	360	Common	100
+Resist Blackout III	420	Common	100
+Resist Blackout IV	480	Common	100
+Resist Blackout V	540	Common	100
+Resist Blackout VI	600	Rare	100
+Resist Blackout VII	660	Rare	100
+Resist Blackout VIII	720	Rare	100
+Resist Blackout IX	780	Rare	100
+Resist Blackout X	840	Rare	100
+Resist Blackout XI	900	Unique	1100
+Resist Blackout XII	960	Unique	1200
+Resist Blackout XIII	1020	Unique	1300
+Resist Blackout XIV	1080	Unique	1400
+Resist Blackout XV	1140	Unique	1500
+Resist Blackout XVI	1200	Prime	1600
+Resist Blackout XVII	1260	Prime	1700
+Resist Blackout XVIII	1320	Prime	1800
+Resist Blackout XIX	1380	Prime	1900
+Resist Blackout XX	1500	Intergalactic	2000
+Resist Fatigue I	300	Common	100
+Resist Fatigue II	360	Common	100
+Resist Fatigue III	420	Common	100
+Resist Fatigue IV	480	Common	100
+Resist Fatigue V	540	Common	100
+Resist Fatigue VI	600	Rare	100
+Resist Fatigue VII	660	Rare	100
+Resist Fatigue VIII	720	Rare	100
+Resist Fatigue IX	780	Rare	100
+Resist Fatigue X	840	Rare	100
+Resist Fatigue XI	900	Unique	1100
+Resist Fatigue XII	960	Unique	1200
+Resist Fatigue XIII	1020	Unique	1300
+Resist Fatigue XIV	1080	Unique	1400
+Resist Fatigue XV	1140	Unique	1500
+Resist Fatigue XVI	1200	Prime	1600
+Resist Fatigue XVII	1260	Prime	1700
+Resist Fatigue XVIII	1320	Prime	1800
+Resist Fatigue XIX	1380	Prime	1900
+Resist Fatigue XX	1500	Intergalactic	2000
+Resist Slow Arts I	300	Common	100
+Resist Slow Arts II	360	Common	100
+Resist Slow Arts III	420	Common	100
+Resist Slow Arts IV	480	Common	100
+Resist Slow Arts V	540	Common	100
+Resist Slow Arts VI	600	Rare	100
+Resist Slow Arts VII	660	Rare	100
+Resist Slow Arts VIII	720	Rare	100
+Resist Slow Arts IX	780	Rare	100
+Resist Slow Arts X	840	Rare	100
+Resist Slow Arts XI	900	Unique	1100
+Resist Slow Arts XII	960	Unique	1200
+Resist Slow Arts XIII	1020	Unique	1300
+Resist Slow Arts XIV	1080	Unique	1400
+Resist Slow Arts XV	1140	Unique	1500
+Resist Slow Arts XVI	1200	Prime	1600
+Resist Slow Arts XVII	1260	Prime	1700
+Resist Slow Arts XVIII	1320	Prime	1800
+Resist Slow Arts XIX	1380	Prime	1900
+Resist Slow Arts XX	1500	Intergalactic	2000
+Resist Physical Res Down I	300	Common	100
+Resist Physical Res Down II	360	Common	100
+Resist Physical Res Down III	420	Common	100
+Resist Physical Res Down IV	480	Common	100
+Resist Physical Res Down V	540	Common	100
+Resist Physical Res Down VI	600	Rare	100
+Resist Physical Res Down VII	660	Rare	100
+Resist Physical Res Down VIII	720	Rare	100
+Resist Physical Res Down IX	780	Rare	100
+Resist Physical Res Down X	840	Rare	100
+Resist Physical Res Down XI	900	Unique	1100
+Resist Physical Res Down XII	960	Unique	1200
+Resist Physical Res Down XIII	1020	Unique	1300
+Resist Physical Res Down XIV	1080	Unique	1400
+Resist Physical Res Down XV	1140	Unique	1500
+Resist Physical Res Down XVI	1200	Prime	1600
+Resist Physical Res Down XVII	1260	Prime	1700
+Resist Physical Res Down XVIII	1320	Prime	1800
+Resist Physical Res Down XIX	1380	Prime	1900
+Resist Physical Res Down XX	1500	Intergalactic	2000
+Resist Beam Res Down I	300	Common	100
+Resist Beam Res Down II	360	Common	100
+Resist Beam Res Down III	420	Common	100
+Resist Beam Res Down IV	480	Common	100
+Resist Beam Res Down V	540	Common	100
+Resist Beam Res Down VI	600	Rare	100
+Resist Beam Res Down VII	660	Rare	100
+Resist Beam Res Down VIII	720	Rare	100
+Resist Beam Res Down IX	780	Rare	100
+Resist Beam Res Down X	840	Rare	100
+Resist Beam Res Down XI	900	Unique	1100
+Resist Beam Res Down XII	960	Unique	1200
+Resist Beam Res Down XIII	1020	Unique	1300
+Resist Beam Res Down XIV	1080	Unique	1400
+Resist Beam Res Down XV	1140	Unique	1500
+Resist Beam Res Down XVI	1200	Prime	1600
+Resist Beam Res Down XVII	1260	Prime	1700
+Resist Beam Res Down XVIII	1320	Prime	1800
+Resist Beam Res Down XIX	1380	Prime	1900
+Resist Beam Res Down XX	1500	Intergalactic	2000
+Resist Thermal Res Down I	300	Common	100
+Resist Thermal Res Down II	360	Common	100
+Resist Thermal Res Down III	420	Common	100
+Resist Thermal Res Down IV	480	Common	100
+Resist Thermal Res Down V	540	Common	100
+Resist Thermal Res Down VI	600	Rare	100
+Resist Thermal Res Down VII	660	Rare	100
+Resist Thermal Res Down VIII	720	Rare	100
+Resist Thermal Res Down IX	780	Rare	100
+Resist Thermal Res Down X	840	Rare	100
+Resist Thermal Res Down XI	900	Unique	1100
+Resist Thermal Res Down XII	960	Unique	1200
+Resist Thermal Res Down XIII	1020	Unique	1300
+Resist Thermal Res Down XIV	1080	Unique	1400
+Resist Thermal Res Down XV	1140	Unique	1500
+Resist Thermal Res Down XVI	1200	Prime	1600
+Resist Thermal Res Down XVII	1260	Prime	1700
+Resist Thermal Res Down XVIII	1320	Prime	1800
+Resist Thermal Res Down XIX	1380	Prime	1900
+Resist Thermal Res Down XX	1500	Intergalactic	2000
+Resist Electric Res Down I	300	Common	100
+Resist Electric Res Down II	360	Common	100
+Resist Electric Res Down III	420	Common	100
+Resist Electric Res Down IV	480	Common	100
+Resist Electric Res Down V	540	Common	100
+Resist Electric Res Down VI	600	Rare	100
+Resist Electric Res Down VII	660	Rare	100
+Resist Electric Res Down VIII	720	Rare	100
+Resist Electric Res Down IX	780	Rare	100
+Resist Electric Res Down X	840	Rare	100
+Resist Electric Res Down XI	900	Unique	1100
+Resist Electric Res Down XII	960	Unique	1200
+Resist Electric Res Down XIII	1020	Unique	1300
+Resist Electric Res Down XIV	1080	Unique	1400
+Resist Electric Res Down XV	1140	Unique	1500
+Resist Electric Res Down XVI	1200	Prime	1600
+Resist Electric Res Down XVII	1260	Prime	1700
+Resist Electric Res Down XVIII	1320	Prime	1800
+Resist Electric Res Down XIX	1380	Prime	1900
+Resist Electric Res Down XX	1500	Intergalactic	2000
+Resist Ether Res Down I	300	Common	100
+Resist Ether Res Down II	360	Common	100
+Resist Ether Res Down III	420	Common	100
+Resist Ether Res Down IV	480	Common	100
+Resist Ether Res Down V	540	Common	100
+Resist Ether Res Down VI	600	Rare	100
+Resist Ether Res Down VII	660	Rare	100
+Resist Ether Res Down VIII	720	Rare	100
+Resist Ether Res Down IX	780	Rare	100
+Resist Ether Res Down X	840	Rare	100
+Resist Ether Res Down XI	900	Unique	1100
+Resist Ether Res Down XII	960	Unique	1200
+Resist Ether Res Down XIII	1020	Unique	1300
+Resist Ether Res Down XIV	1080	Unique	1400
+Resist Ether Res Down XV	1140	Unique	1500
+Resist Ether Res Down XVI	1200	Prime	1600
+Resist Ether Res Down XVII	1260	Prime	1700
+Resist Ether Res Down XVIII	1320	Prime	1800
+Resist Ether Res Down XIX	1380	Prime	1900
+Resist Ether Res Down XX	1500	Intergalactic	2000
+Resist Gravity Res Down I	300	Common	100
+Resist Gravity Res Down II	360	Common	100
+Resist Gravity Res Down III	420	Common	100
+Resist Gravity Res Down IV	480	Common	100
+Resist Gravity Res Down V	540	Common	100
+Resist Gravity Res Down VI	600	Rare	100
+Resist Gravity Res Down VII	660	Rare	100
+Resist Gravity Res Down VIII	720	Rare	100
+Resist Gravity Res Down IX	780	Rare	100
+Resist Gravity Res Down X	840	Rare	100
+Resist Gravity Res Down XI	900	Unique	1100
+Resist Gravity Res Down XII	960	Unique	1200
+Resist Gravity Res Down XIII	1020	Unique	1300
+Resist Gravity Res Down XIV	1080	Unique	1400
+Resist Gravity Res Down XV	1140	Unique	1500
+Resist Gravity Res Down XVI	1200	Prime	1600
+Resist Gravity Res Down XVII	1260	Prime	1700
+Resist Gravity Res Down XVIII	1320	Prime	1800
+Resist Gravity Res Down XIX	1380	Prime	1900
+Resist Gravity Res Down XX	1500	Intergalactic	2000
+Resist Time Bomb I	300	Common	100
+Resist Time Bomb II	360	Common	100
+Resist Time Bomb III	420	Common	100
+Resist Time Bomb IV	480	Common	100
+Resist Time Bomb V	540	Common	100
+Resist Time Bomb VI	600	Rare	100
+Resist Time Bomb VII	660	Rare	100
+Resist Time Bomb VIII	720	Rare	100
+Resist Time Bomb IX	780	Rare	100
+Resist Time Bomb X	840	Rare	100
+Resist Time Bomb XI	900	Unique	1100
+Resist Time Bomb XII	960	Unique	1200
+Resist Time Bomb XIII	1020	Unique	1300
+Resist Time Bomb XIV	1080	Unique	1400
+Resist Time Bomb XV	1140	Unique	1500
+Resist Time Bomb XVI	1200	Prime	1600
+Resist Time Bomb XVII	1260	Prime	1700
+Resist Time Bomb XVIII	1320	Prime	1800
+Resist Time Bomb XIX	1380	Prime	1900
+Resist Time Bomb XX	1500	Intergalactic	2000
+Resist Debuff Res Down I	300	Common	100
+Resist Debuff Res Down II	360	Common	100
+Resist Debuff Res Down III	420	Common	100
+Resist Debuff Res Down IV	480	Common	100
+Resist Debuff Res Down V	540	Common	100
+Resist Debuff Res Down VI	600	Rare	100
+Resist Debuff Res Down VII	660	Rare	100
+Resist Debuff Res Down VIII	720	Rare	100
+Resist Debuff Res Down IX	780	Rare	100
+Resist Debuff Res Down X	840	Rare	100
+Resist Debuff Res Down XI	900	Unique	1100
+Resist Debuff Res Down XII	960	Unique	1200
+Resist Debuff Res Down XIII	1020	Unique	1300
+Resist Debuff Res Down XIV	1080	Unique	1400
+Resist Debuff Res Down XV	1140	Unique	1500
+Resist Debuff Res Down XVI	1200	Prime	1600
+Resist Debuff Res Down XVII	1260	Prime	1700
+Resist Debuff Res Down XVIII	1320	Prime	1800
+Resist Debuff Res Down XIX	1380	Prime	1900
+Resist Debuff Res Down XX	1500	Intergalactic	2000
+Resist HP Recovery Down I	300	Common	100
+Resist HP Recovery Down II	360	Common	100
+Resist HP Recovery Down III	420	Common	100
+Resist HP Recovery Down IV	480	Common	100
+Resist HP Recovery Down V	540	Common	100
+Resist HP Recovery Down VI	600	Rare	100
+Resist HP Recovery Down VII	660	Rare	100
+Resist HP Recovery Down VIII	720	Rare	100
+Resist HP Recovery Down IX	780	Rare	100
+Resist HP Recovery Down X	840	Rare	100
+Resist HP Recovery Down XI	900	Unique	1100
+Resist HP Recovery Down XII	960	Unique	1200
+Resist HP Recovery Down XIII	1020	Unique	1300
+Resist HP Recovery Down XIV	1080	Unique	1400
+Resist HP Recovery Down XV	1140	Unique	1500
+Resist HP Recovery Down XVI	1200	Prime	1600
+Resist HP Recovery Down XVII	1260	Prime	1700
+Resist HP Recovery Down XVIII	1320	Prime	1800
+Resist HP Recovery Down XIX	1380	Prime	1900
+Resist HP Recovery Down XX	1500	Intergalactic	2000
+Resist Blaze I	300	Common	100
+Resist Blaze II	360	Common	100
+Resist Blaze III	420	Common	100
+Resist Blaze IV	480	Common	100
+Resist Blaze V	540	Common	100
+Resist Blaze VI	600	Rare	100
+Resist Blaze VII	660	Rare	100
+Resist Blaze VIII	720	Rare	100
+Resist Blaze IX	780	Rare	100
+Resist Blaze X	840	Rare	100
+Resist Blaze XI	900	Unique	1100
+Resist Blaze XII	960	Unique	1200
+Resist Blaze XIII	1020	Unique	1300
+Resist Blaze XIV	1080	Unique	1400
+Resist Blaze XV	1140	Unique	1500
+Resist Blaze XVI	1200	Prime	1600
+Resist Blaze XVII	1260	Prime	1700
+Resist Blaze XVIII	1320	Prime	1800
+Resist Blaze XIX	1380	Prime	1900
+Resist Blaze XX	1500	Intergalactic	2000
+Resist Shock I	300	Common	100
+Resist Shock II	360	Common	100
+Resist Shock III	420	Common	100
+Resist Shock IV	480	Common	100
+Resist Shock V	540	Common	100
+Resist Shock VI	600	Rare	100
+Resist Shock VII	660	Rare	100
+Resist Shock VIII	720	Rare	100
+Resist Shock IX	780	Rare	100
+Resist Shock X	840	Rare	100
+Resist Shock XI	900	Unique	1100
+Resist Shock XII	960	Unique	1200
+Resist Shock XIII	1020	Unique	1300
+Resist Shock XIV	1080	Unique	1400
+Resist Shock XV	1140	Unique	1500
+Resist Shock XVI	1200	Prime	1600
+Resist Shock XVII	1260	Prime	1700
+Resist Shock XVIII	1320	Prime	1800
+Resist Shock XIX	1380	Prime	1900
+Resist Shock XX	1500	Intergalactic	2000
+Debuff Suppressor I	500	Common	100
+Debuff Suppressor II	600	Common	100
+Debuff Suppressor III	700	Common	100
+Debuff Suppressor IV	800	Common	100
+Debuff Suppressor V	900	Common	100
+Debuff Suppressor VI	1000	Rare	100
+Debuff Suppressor VII	1100	Rare	100
+Debuff Suppressor VIII	1200	Rare	100
+Debuff Suppressor IX	1300	Rare	100
+Debuff Suppressor X	1400	Rare	100
+Debuff Suppressor XI	1500	Unique	1100
+Debuff Suppressor XII	1600	Unique	1200
+Debuff Suppressor XIII	1700	Unique	1300
+Debuff Suppressor XIV	1800	Unique	1400
+Debuff Suppressor XV	1900	Unique	1500
+Debuff Suppressor XVI	2000	Prime	1600
+Debuff Suppressor XVII	2100	Prime	1700
+Debuff Suppressor XVIII	2200	Prime	1800
+Debuff Suppressor XIX	2300	Prime	1900
+Debuff Suppressor XX	2500	Intergalactic	2000
+Critical Chance Up I	300	Common	100
+Critical Chance Up II	360	Common	100
+Critical Chance Up III	420	Common	100
+Critical Chance Up IV	480	Common	100
+Critical Chance Up V	540	Common	100
+Critical Chance Up VI	600	Rare	100
+Critical Chance Up VII	660	Rare	100
+Critical Chance Up VIII	720	Rare	100
+Critical Chance Up IX	780	Rare	100
+Critical Chance Up X	840	Rare	100
+Critical Chance Up XI	900	Unique	1100
+Critical Chance Up XII	960	Unique	1200
+Critical Chance Up XIII	1020	Unique	1300
+Critical Chance Up XIV	1080	Unique	1400
+Critical Chance Up XV	1140	Unique	1500
+Critical Chance Up XVI	1200	Prime	1600
+Critical Chance Up XVII	1260	Prime	1700
+Critical Chance Up XVIII	1320	Prime	1800
+Critical Chance Up XIX	1380	Prime	1900
+Critical Chance Up XX	1500	Intergalactic	2000
+Theroid Criticals Up I	300	Common	100
+Theroid Criticals Up II	360	Common	100
+Theroid Criticals Up III	420	Common	100
+Theroid Criticals Up IV	480	Common	100
+Theroid Criticals Up V	540	Common	100
+Theroid Criticals Up VI	600	Rare	100
+Theroid Criticals Up VII	660	Rare	100
+Theroid Criticals Up VIII	720	Rare	100
+Theroid Criticals Up IX	780	Rare	100
+Theroid Criticals Up X	840	Rare	100
+Theroid Criticals Up XI	900	Unique	1100
+Theroid Criticals Up XII	960	Unique	1200
+Theroid Criticals Up XIII	1020	Unique	1300
+Theroid Criticals Up XIV	1080	Unique	1400
+Theroid Criticals Up XV	1140	Unique	1500
+Theroid Criticals Up XVI	1200	Prime	1600
+Theroid Criticals Up XVII	1260	Prime	1700
+Theroid Criticals Up XVIII	1320	Prime	1800
+Theroid Criticals Up XIX	1380	Prime	1900
+Theroid Criticals Up XX	1500	Intergalactic	2000
+Insectoid Criticals Up I	300	Common	100
+Insectoid Criticals Up II	360	Common	100
+Insectoid Criticals Up III	420	Common	100
+Insectoid Criticals Up IV	480	Common	100
+Insectoid Criticals Up V	540	Common	100
+Insectoid Criticals Up VI	600	Rare	100
+Insectoid Criticals Up VII	660	Rare	100
+Insectoid Criticals Up VIII	720	Rare	100
+Insectoid Criticals Up IX	780	Rare	100
+Insectoid Criticals Up X	840	Rare	100
+Insectoid Criticals Up XI	900	Unique	1100
+Insectoid Criticals Up XII	960	Unique	1200
+Insectoid Criticals Up XIII	1020	Unique	1300
+Insectoid Criticals Up XIV	1080	Unique	1400
+Insectoid Criticals Up XV	1140	Unique	1500
+Insectoid Criticals Up XVI	1200	Prime	1600
+Insectoid Criticals Up XVII	1260	Prime	1700
+Insectoid Criticals Up XVIII	1320	Prime	1800
+Insectoid Criticals Up XIX	1380	Prime	1900
+Insectoid Criticals Up XX	1500	Intergalactic	2000
+Piscinoid Criticals Up I	300	Common	100
+Piscinoid Criticals Up II	360	Common	100
+Piscinoid Criticals Up III	420	Common	100
+Piscinoid Criticals Up IV	480	Common	100
+Piscinoid Criticals Up V	540	Common	100
+Piscinoid Criticals Up VI	600	Rare	100
+Piscinoid Criticals Up VII	660	Rare	100
+Piscinoid Criticals Up VIII	720	Rare	100
+Piscinoid Criticals Up IX	780	Rare	100
+Piscinoid Criticals Up X	840	Rare	100
+Piscinoid Criticals Up XI	900	Unique	1100
+Piscinoid Criticals Up XII	960	Unique	1200
+Piscinoid Criticals Up XIII	1020	Unique	1300
+Piscinoid Criticals Up XIV	1080	Unique	1400
+Piscinoid Criticals Up XV	1140	Unique	1500
+Piscinoid Criticals Up XVI	1200	Prime	1600
+Piscinoid Criticals Up XVII	1260	Prime	1700
+Piscinoid Criticals Up XVIII	1320	Prime	1800
+Piscinoid Criticals Up XIX	1380	Prime	1900
+Piscinoid Criticals Up XX	1500	Intergalactic	2000
+Humanoid Criticals Up I	300	Common	100
+Humanoid Criticals Up II	360	Common	100
+Humanoid Criticals Up III	420	Common	100
+Humanoid Criticals Up IV	480	Common	100
+Humanoid Criticals Up V	540	Common	100
+Humanoid Criticals Up VI	600	Rare	100
+Humanoid Criticals Up VII	660	Rare	100
+Humanoid Criticals Up VIII	720	Rare	100
+Humanoid Criticals Up IX	780	Rare	100
+Humanoid Criticals Up X	840	Rare	100
+Humanoid Criticals Up XI	900	Unique	1100
+Humanoid Criticals Up XII	960	Unique	1200
+Humanoid Criticals Up XIII	1020	Unique	1300
+Humanoid Criticals Up XIV	1080	Unique	1400
+Humanoid Criticals Up XV	1140	Unique	1500
+Humanoid Criticals Up XVI	1200	Prime	1600
+Humanoid Criticals Up XVII	1260	Prime	1700
+Humanoid Criticals Up XVIII	1320	Prime	1800
+Humanoid Criticals Up XIX	1380	Prime	1900
+Humanoid Criticals Up XX	1500	Intergalactic	2000
+Mechanoid Criticals Up I	300	Common	100
+Mechanoid Criticals Up II	360	Common	100
+Mechanoid Criticals Up III	420	Common	100
+Mechanoid Criticals Up IV	480	Common	100
+Mechanoid Criticals Up V	540	Common	100
+Mechanoid Criticals Up VI	600	Rare	100
+Mechanoid Criticals Up VII	660	Rare	100
+Mechanoid Criticals Up VIII	720	Rare	100
+Mechanoid Criticals Up IX	780	Rare	100
+Mechanoid Criticals Up X	840	Rare	100
+Mechanoid Criticals Up XI	900	Unique	1100
+Mechanoid Criticals Up XII	960	Unique	1200
+Mechanoid Criticals Up XIII	1020	Unique	1300
+Mechanoid Criticals Up XIV	1080	Unique	1400
+Mechanoid Criticals Up XV	1140	Unique	1500
+Mechanoid Criticals Up XVI	1200	Prime	1600
+Mechanoid Criticals Up XVII	1260	Prime	1700
+Mechanoid Criticals Up XVIII	1320	Prime	1800
+Mechanoid Criticals Up XIX	1380	Prime	1900
+Mechanoid Criticals Up XX	1500	Intergalactic	2000
+Chimeroid Criticals Up I	300	Common	100
+Chimeroid Criticals Up II	360	Common	100
+Chimeroid Criticals Up III	420	Common	100
+Chimeroid Criticals Up IV	480	Common	100
+Chimeroid Criticals Up V	540	Common	100
+Chimeroid Criticals Up VI	600	Rare	100
+Chimeroid Criticals Up VII	660	Rare	100
+Chimeroid Criticals Up VIII	720	Rare	100
+Chimeroid Criticals Up IX	780	Rare	100
+Chimeroid Criticals Up X	840	Rare	100
+Chimeroid Criticals Up XI	900	Unique	1100
+Chimeroid Criticals Up XII	960	Unique	1200
+Chimeroid Criticals Up XIII	1020	Unique	1300
+Chimeroid Criticals Up XIV	1080	Unique	1400
+Chimeroid Criticals Up XV	1140	Unique	1500
+Chimeroid Criticals Up XVI	1200	Prime	1600
+Chimeroid Criticals Up XVII	1260	Prime	1700
+Chimeroid Criticals Up XVIII	1320	Prime	1800
+Chimeroid Criticals Up XIX	1380	Prime	1900
+Chimeroid Criticals Up XX	1500	Intergalactic	2000
+Ultrafauna Criticals Up I	300	Common	100
+Ultrafauna Criticals Up II	360	Common	100
+Ultrafauna Criticals Up III	420	Common	100
+Ultrafauna Criticals Up IV	480	Common	100
+Ultrafauna Criticals Up V	540	Common	100
+Ultrafauna Criticals Up VI	600	Rare	100
+Ultrafauna Criticals Up VII	660	Rare	100
+Ultrafauna Criticals Up VIII	720	Rare	100
+Ultrafauna Criticals Up IX	780	Rare	100
+Ultrafauna Criticals Up X	840	Rare	100
+Ultrafauna Criticals Up XI	900	Unique	1100
+Ultrafauna Criticals Up XII	960	Unique	1200
+Ultrafauna Criticals Up XIII	1020	Unique	1300
+Ultrafauna Criticals Up XIV	1080	Unique	1400
+Ultrafauna Criticals Up XV	1140	Unique	1500
+Ultrafauna Criticals Up XVI	1200	Prime	1600
+Ultrafauna Criticals Up XVII	1260	Prime	1700
+Ultrafauna Criticals Up XVIII	1320	Prime	1800
+Ultrafauna Criticals Up XIX	1380	Prime	1900
+Ultrafauna Criticals Up XX	1500	Intergalactic	2000
+Extend Critical Power I	300	Common	100
+Extend Critical Power II	360	Common	100
+Extend Critical Power III	420	Common	100
+Extend Critical Power IV	480	Common	100
+Extend Critical Power V	540	Common	100
+Extend Critical Power VI	600	Rare	100
+Extend Critical Power VII	660	Rare	100
+Extend Critical Power VIII	720	Rare	100
+Extend Critical Power IX	780	Rare	100
+Extend Critical Power X	840	Rare	100
+Extend Critical Power XI	900	Unique	1100
+Extend Critical Power XII	960	Unique	1200
+Extend Critical Power XIII	1020	Unique	1300
+Extend Critical Power XIV	1080	Unique	1400
+Extend Critical Power XV	1140	Unique	1500
+Extend Critical Power XVI	1200	Prime	1600
+Extend Critical Power XVII	1260	Prime	1700
+Extend Critical Power XVIII	1320	Prime	1800
+Extend Critical Power XIX	1380	Prime	1900
+Extend Critical Power XX	1500	Intergalactic	2000
+Theroid Slayer I	300	Common	100
+Theroid Slayer II	360	Common	100
+Theroid Slayer III	420	Common	100
+Theroid Slayer IV	480	Common	100
+Theroid Slayer V	540	Common	100
+Theroid Slayer VI	600	Rare	100
+Theroid Slayer VII	660	Rare	100
+Theroid Slayer VIII	720	Rare	100
+Theroid Slayer IX	780	Rare	100
+Theroid Slayer X	840	Rare	100
+Theroid Slayer XI	900	Unique	1100
+Theroid Slayer XII	960	Unique	1200
+Theroid Slayer XIII	1020	Unique	1300
+Theroid Slayer XIV	1080	Unique	1400
+Theroid Slayer XV	1140	Unique	1500
+Theroid Slayer XVI	1200	Prime	1600
+Theroid Slayer XVII	1260	Prime	1700
+Theroid Slayer XVIII	1320	Prime	1800
+Theroid Slayer XIX	1380	Prime	1900
+Theroid Slayer XX	1500	Intergalactic	2000
+Insectoid Slayer I	300	Common	100
+Insectoid Slayer II	360	Common	100
+Insectoid Slayer III	420	Common	100
+Insectoid Slayer IV	480	Common	100
+Insectoid Slayer V	540	Common	100
+Insectoid Slayer VI	600	Rare	100
+Insectoid Slayer VII	660	Rare	100
+Insectoid Slayer VIII	720	Rare	100
+Insectoid Slayer IX	780	Rare	100
+Insectoid Slayer X	840	Rare	100
+Insectoid Slayer XI	900	Unique	1100
+Insectoid Slayer XII	960	Unique	1200
+Insectoid Slayer XIII	1020	Unique	1300
+Insectoid Slayer XIV	1080	Unique	1400
+Insectoid Slayer XV	1140	Unique	1500
+Insectoid Slayer XVI	1200	Prime	1600
+Insectoid Slayer XVII	1260	Prime	1700
+Insectoid Slayer XVIII	1320	Prime	1800
+Insectoid Slayer XIX	1380	Prime	1900
+Insectoid Slayer XX	1500	Intergalactic	2000
+Piscinoid Slayer I	300	Common	100
+Piscinoid Slayer II	360	Common	100
+Piscinoid Slayer III	420	Common	100
+Piscinoid Slayer IV	480	Common	100
+Piscinoid Slayer V	540	Common	100
+Piscinoid Slayer VI	600	Rare	100
+Piscinoid Slayer VII	660	Rare	100
+Piscinoid Slayer VIII	720	Rare	100
+Piscinoid Slayer IX	780	Rare	100
+Piscinoid Slayer X	840	Rare	100
+Piscinoid Slayer XI	900	Unique	1100
+Piscinoid Slayer XII	960	Unique	1200
+Piscinoid Slayer XIII	1020	Unique	1300
+Piscinoid Slayer XIV	1080	Unique	1400
+Piscinoid Slayer XV	1140	Unique	1500
+Piscinoid Slayer XVI	1200	Prime	1600
+Piscinoid Slayer XVII	1260	Prime	1700
+Piscinoid Slayer XVIII	1320	Prime	1800
+Piscinoid Slayer XIX	1380	Prime	1900
+Piscinoid Slayer XX	1500	Intergalactic	2000
+Humanoid Slayer I	300	Common	100
+Humanoid Slayer II	360	Common	100
+Humanoid Slayer III	420	Common	100
+Humanoid Slayer IV	480	Common	100
+Humanoid Slayer V	540	Common	100
+Humanoid Slayer VI	600	Rare	100
+Humanoid Slayer VII	660	Rare	100
+Humanoid Slayer VIII	720	Rare	100
+Humanoid Slayer IX	780	Rare	100
+Humanoid Slayer X	840	Rare	100
+Humanoid Slayer XI	900	Unique	1100
+Humanoid Slayer XII	960	Unique	1200
+Humanoid Slayer XIII	1020	Unique	1300
+Humanoid Slayer XIV	1080	Unique	1400
+Humanoid Slayer XV	1140	Unique	1500
+Humanoid Slayer XVI	1200	Prime	1600
+Humanoid Slayer XVII	1260	Prime	1700
+Humanoid Slayer XVIII	1320	Prime	1800
+Humanoid Slayer XIX	1380	Prime	1900
+Humanoid Slayer XX	1500	Intergalactic	2000
+Mechanoid Slayer I	300	Common	100
+Mechanoid Slayer II	360	Common	100
+Mechanoid Slayer III	420	Common	100
+Mechanoid Slayer IV	480	Common	100
+Mechanoid Slayer V	540	Common	100
+Mechanoid Slayer VI	600	Rare	100
+Mechanoid Slayer VII	660	Rare	100
+Mechanoid Slayer VIII	720	Rare	100
+Mechanoid Slayer IX	780	Rare	100
+Mechanoid Slayer X	840	Rare	100
+Mechanoid Slayer XI	900	Unique	1100
+Mechanoid Slayer XII	960	Unique	1200
+Mechanoid Slayer XIII	1020	Unique	1300
+Mechanoid Slayer XIV	1080	Unique	1400
+Mechanoid Slayer XV	1140	Unique	1500
+Mechanoid Slayer XVI	1200	Prime	1600
+Mechanoid Slayer XVII	1260	Prime	1700
+Mechanoid Slayer XVIII	1320	Prime	1800
+Mechanoid Slayer XIX	1380	Prime	1900
+Mechanoid Slayer XX	1500	Intergalactic	2000
+Chimeroid Slayer I	300	Common	100
+Chimeroid Slayer II	360	Common	100
+Chimeroid Slayer III	420	Common	100
+Chimeroid Slayer IV	480	Common	100
+Chimeroid Slayer V	540	Common	100
+Chimeroid Slayer VI	600	Rare	100
+Chimeroid Slayer VII	660	Rare	100
+Chimeroid Slayer VIII	720	Rare	100
+Chimeroid Slayer IX	780	Rare	100
+Chimeroid Slayer X	840	Rare	100
+Chimeroid Slayer XI	900	Unique	1100
+Chimeroid Slayer XII	960	Unique	1200
+Chimeroid Slayer XIII	1020	Unique	1300
+Chimeroid Slayer XIV	1080	Unique	1400
+Chimeroid Slayer XV	1140	Unique	1500
+Chimeroid Slayer XVI	1200	Prime	1600
+Chimeroid Slayer XVII	1260	Prime	1700
+Chimeroid Slayer XVIII	1320	Prime	1800
+Chimeroid Slayer XIX	1380	Prime	1900
+Chimeroid Slayer XX	1500	Intergalactic	2000
+Ultrafauna Slayer I	300	Common	100
+Ultrafauna Slayer II	360	Common	100
+Ultrafauna Slayer III	420	Common	100
+Ultrafauna Slayer IV	480	Common	100
+Ultrafauna Slayer V	540	Common	100
+Ultrafauna Slayer VI	600	Rare	100
+Ultrafauna Slayer VII	660	Rare	100
+Ultrafauna Slayer VIII	720	Rare	100
+Ultrafauna Slayer IX	780	Rare	100
+Ultrafauna Slayer X	840	Rare	100
+Ultrafauna Slayer XI	900	Unique	1100
+Ultrafauna Slayer XII	960	Unique	1200
+Ultrafauna Slayer XIII	1020	Unique	1300
+Ultrafauna Slayer XIV	1080	Unique	1400
+Ultrafauna Slayer XV	1140	Unique	1500
+Ultrafauna Slayer XVI	1200	Prime	1600
+Ultrafauna Slayer XVII	1260	Prime	1700
+Ultrafauna Slayer XVIII	1320	Prime	1800
+Ultrafauna Slayer XIX	1380	Prime	1900
+Ultrafauna Slayer XX	1500	Intergalactic	2000
+Physical Attack Plus I	500	Common	100
+Physical Attack Plus II	600	Common	100
+Physical Attack Plus III	700	Common	100
+Physical Attack Plus IV	800	Common	100
+Physical Attack Plus V	900	Common	100
+Physical Attack Plus VI	1000	Rare	100
+Physical Attack Plus VII	1100	Rare	100
+Physical Attack Plus VIII	1200	Rare	100
+Physical Attack Plus IX	1300	Rare	100
+Physical Attack Plus X	1400	Rare	100
+Physical Attack Plus XI	1500	Unique	1100
+Physical Attack Plus XII	1600	Unique	1200
+Physical Attack Plus XIII	1700	Unique	1300
+Physical Attack Plus XIV	1800	Unique	1400
+Physical Attack Plus XV	1900	Unique	1500
+Physical Attack Plus XVI	2000	Prime	1600
+Physical Attack Plus XVII	2100	Prime	1700
+Physical Attack Plus XVIII	2200	Prime	1800
+Physical Attack Plus XIX	2300	Prime	1900
+Physical Attack Plus XX	2500	Intergalactic	2000
+Beam Attack Plus I	500	Common	100
+Beam Attack Plus II	600	Common	100
+Beam Attack Plus III	700	Common	100
+Beam Attack Plus IV	800	Common	100
+Beam Attack Plus V	900	Common	100
+Beam Attack Plus VI	1000	Rare	100
+Beam Attack Plus VII	1100	Rare	100
+Beam Attack Plus VIII	1200	Rare	100
+Beam Attack Plus IX	1300	Rare	100
+Beam Attack Plus X	1400	Rare	100
+Beam Attack Plus XI	1500	Unique	1100
+Beam Attack Plus XII	1600	Unique	1200
+Beam Attack Plus XIII	1700	Unique	1300
+Beam Attack Plus XIV	1800	Unique	1400
+Beam Attack Plus XV	1900	Unique	1500
+Beam Attack Plus XVI	2000	Prime	1600
+Beam Attack Plus XVII	2100	Prime	1700
+Beam Attack Plus XVIII	2200	Prime	1800
+Beam Attack Plus XIX	2300	Prime	1900
+Beam Attack Plus XX	2500	Intergalactic	2000
+Ether Attack Plus I	500	Common	100
+Ether Attack Plus II	600	Common	100
+Ether Attack Plus III	700	Common	100
+Ether Attack Plus IV	800	Common	100
+Ether Attack Plus V	900	Common	100
+Ether Attack Plus VI	1000	Rare	100
+Ether Attack Plus VII	1100	Rare	100
+Ether Attack Plus VIII	1200	Rare	100
+Ether Attack Plus IX	1300	Rare	100
+Ether Attack Plus X	1400	Rare	100
+Ether Attack Plus XI	1500	Unique	1100
+Ether Attack Plus XII	1600	Unique	1200
+Ether Attack Plus XIII	1700	Unique	1300
+Ether Attack Plus XIV	1800	Unique	1400
+Ether Attack Plus XV	1900	Unique	1500
+Ether Attack Plus XVI	2000	Prime	1600
+Ether Attack Plus XVII	2100	Prime	1700
+Ether Attack Plus XVIII	2200	Prime	1800
+Ether Attack Plus XIX	2300	Prime	1900
+Ether Attack Plus XX	2500	Intergalactic	2000
+Thermal Attack Plus I	500	Common	100
+Thermal Attack Plus II	600	Common	100
+Thermal Attack Plus III	700	Common	100
+Thermal Attack Plus IV	800	Common	100
+Thermal Attack Plus V	900	Common	100
+Thermal Attack Plus VI	1000	Rare	100
+Thermal Attack Plus VII	1100	Rare	100
+Thermal Attack Plus VIII	1200	Rare	100
+Thermal Attack Plus IX	1300	Rare	100
+Thermal Attack Plus X	1400	Rare	100
+Thermal Attack Plus XI	1500	Unique	1100
+Thermal Attack Plus XII	1600	Unique	1200
+Thermal Attack Plus XIII	1700	Unique	1300
+Thermal Attack Plus XIV	1800	Unique	1400
+Thermal Attack Plus XV	1900	Unique	1500
+Thermal Attack Plus XVI	2000	Prime	1600
+Thermal Attack Plus XVII	2100	Prime	1700
+Thermal Attack Plus XVIII	2200	Prime	1800
+Thermal Attack Plus XIX	2300	Prime	1900
+Thermal Attack Plus XX	2500	Intergalactic	2000
+Electric Attack Plus I	500	Common	100
+Electric Attack Plus II	600	Common	100
+Electric Attack Plus III	700	Common	100
+Electric Attack Plus IV	800	Common	100
+Electric Attack Plus V	900	Common	100
+Electric Attack Plus VI	1000	Rare	100
+Electric Attack Plus VII	1100	Rare	100
+Electric Attack Plus VIII	1200	Rare	100
+Electric Attack Plus IX	1300	Rare	100
+Electric Attack Plus X	1400	Rare	100
+Electric Attack Plus XI	1500	Unique	1100
+Electric Attack Plus XII	1600	Unique	1200
+Electric Attack Plus XIII	1700	Unique	1300
+Electric Attack Plus XIV	1800	Unique	1400
+Electric Attack Plus XV	1900	Unique	1500
+Electric Attack Plus XVI	2000	Prime	1600
+Electric Attack Plus XVII	2100	Prime	1700
+Electric Attack Plus XVIII	2200	Prime	1800
+Electric Attack Plus XIX	2300	Prime	1900
+Electric Attack Plus XX	2500	Intergalactic	2000
+Gravity Attack Plus I	500	Common	100
+Gravity Attack Plus II	600	Common	100
+Gravity Attack Plus III	700	Common	100
+Gravity Attack Plus IV	800	Common	100
+Gravity Attack Plus V	900	Common	100
+Gravity Attack Plus VI	1000	Rare	100
+Gravity Attack Plus VII	1100	Rare	100
+Gravity Attack Plus VIII	1200	Rare	100
+Gravity Attack Plus IX	1300	Rare	100
+Gravity Attack Plus X	1400	Rare	100
+Gravity Attack Plus XI	1500	Unique	1100
+Gravity Attack Plus XII	1600	Unique	1200
+Gravity Attack Plus XIII	1700	Unique	1300
+Gravity Attack Plus XIV	1800	Unique	1400
+Gravity Attack Plus XV	1900	Unique	1500
+Gravity Attack Plus XVI	2000	Prime	1600
+Gravity Attack Plus XVII	2100	Prime	1700
+Gravity Attack Plus XVIII	2200	Prime	1800
+Gravity Attack Plus XIX	2300	Prime	1900
+Gravity Attack Plus XX	2500	Intergalactic	2000
+Front Attack Plus I	500	Common	100
+Front Attack Plus II	600	Common	100
+Front Attack Plus III	700	Common	100
+Front Attack Plus IV	800	Common	100
+Front Attack Plus V	900	Common	100
+Front Attack Plus VI	1000	Rare	100
+Front Attack Plus VII	1100	Rare	100
+Front Attack Plus VIII	1200	Rare	100
+Front Attack Plus IX	1300	Rare	100
+Front Attack Plus X	1400	Rare	100
+Front Attack Plus XI	1500	Unique	1100
+Front Attack Plus XII	1600	Unique	1200
+Front Attack Plus XIII	1700	Unique	1300
+Front Attack Plus XIV	1800	Unique	1400
+Front Attack Plus XV	1900	Unique	1500
+Front Attack Plus XVI	2000	Prime	1600
+Front Attack Plus XVII	2100	Prime	1700
+Front Attack Plus XVIII	2200	Prime	1800
+Front Attack Plus XIX	2300	Prime	1900
+Front Attack Plus XX	2500	Intergalactic	2000
+Side Attack Plus I	500	Common	100
+Side Attack Plus II	600	Common	100
+Side Attack Plus III	700	Common	100
+Side Attack Plus IV	800	Common	100
+Side Attack Plus V	900	Common	100
+Side Attack Plus VI	1000	Rare	100
+Side Attack Plus VII	1100	Rare	100
+Side Attack Plus VIII	1200	Rare	100
+Side Attack Plus IX	1300	Rare	100
+Side Attack Plus X	1400	Rare	100
+Side Attack Plus XI	1500	Unique	1100
+Side Attack Plus XII	1600	Unique	1200
+Side Attack Plus XIII	1700	Unique	1300
+Side Attack Plus XIV	1800	Unique	1400
+Side Attack Plus XV	1900	Unique	1500
+Side Attack Plus XVI	2000	Prime	1600
+Side Attack Plus XVII	2100	Prime	1700
+Side Attack Plus XVIII	2200	Prime	1800
+Side Attack Plus XIX	2300	Prime	1900
+Side Attack Plus XX	2500	Intergalactic	2000
+Back Attack Plus I	500	Common	100
+Back Attack Plus II	600	Common	100
+Back Attack Plus III	700	Common	100
+Back Attack Plus IV	800	Common	100
+Back Attack Plus V	900	Common	100
+Back Attack Plus VI	1000	Rare	100
+Back Attack Plus VII	1100	Rare	100
+Back Attack Plus VIII	1200	Rare	100
+Back Attack Plus IX	1300	Rare	100
+Back Attack Plus X	1400	Rare	100
+Back Attack Plus XI	1500	Unique	1100
+Back Attack Plus XII	1600	Unique	1200
+Back Attack Plus XIII	1700	Unique	1300
+Back Attack Plus XIV	1800	Unique	1400
+Back Attack Plus XV	1900	Unique	1500
+Back Attack Plus XVI	2000	Prime	1600
+Back Attack Plus XVII	2100	Prime	1700
+Back Attack Plus XVIII	2200	Prime	1800
+Back Attack Plus XIX	2300	Prime	1900
+Back Attack Plus XX	2500	Intergalactic	2000
+Vantage Attack Plus I	500	Common	100
+Vantage Attack Plus II	600	Common	100
+Vantage Attack Plus III	700	Common	100
+Vantage Attack Plus IV	800	Common	100
+Vantage Attack Plus V	900	Common	100
+Vantage Attack Plus VI	1000	Rare	100
+Vantage Attack Plus VII	1100	Rare	100
+Vantage Attack Plus VIII	1200	Rare	100
+Vantage Attack Plus IX	1300	Rare	100
+Vantage Attack Plus X	1400	Rare	100
+Vantage Attack Plus XI	1500	Unique	1100
+Vantage Attack Plus XII	1600	Unique	1200
+Vantage Attack Plus XIII	1700	Unique	1300
+Vantage Attack Plus XIV	1800	Unique	1400
+Vantage Attack Plus XV	1900	Unique	1500
+Vantage Attack Plus XVI	2000	Prime	1600
+Vantage Attack Plus XVII	2100	Prime	1700
+Vantage Attack Plus XVIII	2200	Prime	1800
+Vantage Attack Plus XIX	2300	Prime	1900
+Vantage Attack Plus XX	2500	Intergalactic	2000
+Melee: Blackout I	200	Common	100
+Melee: Blackout II	240	Common	100
+Melee: Blackout III	280	Common	100
+Melee: Blackout IV	320	Common	100
+Melee: Blackout V	360	Common	100
+Melee: Blackout VI	400	Rare	100
+Melee: Blackout VII	440	Rare	100
+Melee: Blackout VIII	480	Rare	100
+Melee: Blackout IX	520	Rare	100
+Melee: Blackout X	560	Rare	100
+Melee: Blackout XI	600	Unique	1100
+Melee: Blackout XII	640	Unique	1200
+Melee: Blackout XIII	680	Unique	1300
+Melee: Blackout XIV	720	Unique	1400
+Melee: Blackout XV	760	Unique	1500
+Melee: Blackout XVI	800	Prime	1600
+Melee: Blackout XVII	840	Prime	1700
+Melee: Blackout XVIII	880	Prime	1800
+Melee: Blackout XIX	920	Prime	1900
+Melee: Blackout XX	1000	Intergalactic	2000
+Melee: Fatigue I	200	Common	100
+Melee: Fatigue II	240	Common	100
+Melee: Fatigue III	280	Common	100
+Melee: Fatigue IV	320	Common	100
+Melee: Fatigue V	360	Common	100
+Melee: Fatigue VI	400	Rare	100
+Melee: Fatigue VII	440	Rare	100
+Melee: Fatigue VIII	480	Rare	100
+Melee: Fatigue IX	520	Rare	100
+Melee: Fatigue X	560	Rare	100
+Melee: Fatigue XI	600	Unique	1100
+Melee: Fatigue XII	640	Unique	1200
+Melee: Fatigue XIII	680	Unique	1300
+Melee: Fatigue XIV	720	Unique	1400
+Melee: Fatigue XV	760	Unique	1500
+Melee: Fatigue XVI	800	Prime	1600
+Melee: Fatigue XVII	840	Prime	1700
+Melee: Fatigue XVIII	880	Prime	1800
+Melee: Fatigue XIX	920	Prime	1900
+Melee: Fatigue XX	1000	Intergalactic	2000
+Melee: Physical Res Down I	200	Common	100
+Melee: Physical Res Down II	240	Common	100
+Melee: Physical Res Down III	280	Common	100
+Melee: Physical Res Down IV	320	Common	100
+Melee: Physical Res Down V	360	Common	100
+Melee: Physical Res Down VI	400	Rare	100
+Melee: Physical Res Down VII	440	Rare	100
+Melee: Physical Res Down VIII	480	Rare	100
+Melee: Physical Res Down IX	520	Rare	100
+Melee: Physical Res Down X	560	Rare	100
+Melee: Physical Res Down XI	600	Unique	1100
+Melee: Physical Res Down XII	640	Unique	1200
+Melee: Physical Res Down XIII	680	Unique	1300
+Melee: Physical Res Down XIV	720	Unique	1400
+Melee: Physical Res Down XV	760	Unique	1500
+Melee: Physical Res Down XVI	800	Prime	1600
+Melee: Physical Res Down XVII	840	Prime	1700
+Melee: Physical Res Down XVIII	880	Prime	1800
+Melee: Physical Res Down XIX	920	Prime	1900
+Melee: Physical Res Down XX	1000	Intergalactic	2000
+Melee: Beam Res Down I	200	Common	100
+Melee: Beam Res Down II	240	Common	100
+Melee: Beam Res Down III	280	Common	100
+Melee: Beam Res Down IV	320	Common	100
+Melee: Beam Res Down V	360	Common	100
+Melee: Beam Res Down VI	400	Rare	100
+Melee: Beam Res Down VII	440	Rare	100
+Melee: Beam Res Down VIII	480	Rare	100
+Melee: Beam Res Down IX	520	Rare	100
+Melee: Beam Res Down X	560	Rare	100
+Melee: Beam Res Down XI	600	Unique	1100
+Melee: Beam Res Down XII	640	Unique	1200
+Melee: Beam Res Down XIII	680	Unique	1300
+Melee: Beam Res Down XIV	720	Unique	1400
+Melee: Beam Res Down XV	760	Unique	1500
+Melee: Beam Res Down XVI	800	Prime	1600
+Melee: Beam Res Down XVII	840	Prime	1700
+Melee: Beam Res Down XVIII	880	Prime	1800
+Melee: Beam Res Down XIX	920	Prime	1900
+Melee: Beam Res Down XX	1000	Intergalactic	2000
+Melee: Ether Res Down I	200	Common	100
+Melee: Ether Res Down II	240	Common	100
+Melee: Ether Res Down III	280	Common	100
+Melee: Ether Res Down IV	320	Common	100
+Melee: Ether Res Down V	360	Common	100
+Melee: Ether Res Down VI	400	Rare	100
+Melee: Ether Res Down VII	440	Rare	100
+Melee: Ether Res Down VIII	480	Rare	100
+Melee: Ether Res Down IX	520	Rare	100
+Melee: Ether Res Down X	560	Rare	100
+Melee: Ether Res Down XI	600	Unique	1100
+Melee: Ether Res Down XII	640	Unique	1200
+Melee: Ether Res Down XIII	680	Unique	1300
+Melee: Ether Res Down XIV	720	Unique	1400
+Melee: Ether Res Down XV	760	Unique	1500
+Melee: Ether Res Down XVI	800	Prime	1600
+Melee: Ether Res Down XVII	840	Prime	1700
+Melee: Ether Res Down XVIII	880	Prime	1800
+Melee: Ether Res Down XIX	920	Prime	1900
+Melee: Ether Res Down XX	1000	Intergalactic	2000
+Melee: Thermal Res Down I	200	Common	100
+Melee: Thermal Res Down II	240	Common	100
+Melee: Thermal Res Down III	280	Common	100
+Melee: Thermal Res Down IV	320	Common	100
+Melee: Thermal Res Down V	360	Common	100
+Melee: Thermal Res Down VI	400	Rare	100
+Melee: Thermal Res Down VII	440	Rare	100
+Melee: Thermal Res Down VIII	480	Rare	100
+Melee: Thermal Res Down IX	520	Rare	100
+Melee: Thermal Res Down X	560	Rare	100
+Melee: Thermal Res Down XI	600	Unique	1100
+Melee: Thermal Res Down XII	640	Unique	1200
+Melee: Thermal Res Down XIII	680	Unique	1300
+Melee: Thermal Res Down XIV	720	Unique	1400
+Melee: Thermal Res Down XV	760	Unique	1500
+Melee: Thermal Res Down XVI	800	Prime	1600
+Melee: Thermal Res Down XVII	840	Prime	1700
+Melee: Thermal Res Down XVIII	880	Prime	1800
+Melee: Thermal Res Down XIX	920	Prime	1900
+Melee: Thermal Res Down XX	1000	Intergalactic	2000
+Melee: Electric Res Down I	200	Common	100
+Melee: Electric Res Down II	240	Common	100
+Melee: Electric Res Down III	280	Common	100
+Melee: Electric Res Down IV	320	Common	100
+Melee: Electric Res Down V	360	Common	100
+Melee: Electric Res Down VI	400	Rare	100
+Melee: Electric Res Down VII	440	Rare	100
+Melee: Electric Res Down VIII	480	Rare	100
+Melee: Electric Res Down IX	520	Rare	100
+Melee: Electric Res Down X	560	Rare	100
+Melee: Electric Res Down XI	600	Unique	1100
+Melee: Electric Res Down XII	640	Unique	1200
+Melee: Electric Res Down XIII	680	Unique	1300
+Melee: Electric Res Down XIV	720	Unique	1400
+Melee: Electric Res Down XV	760	Unique	1500
+Melee: Electric Res Down XVI	800	Prime	1600
+Melee: Electric Res Down XVII	840	Prime	1700
+Melee: Electric Res Down XVIII	880	Prime	1800
+Melee: Electric Res Down XIX	920	Prime	1900
+Melee: Electric Res Down XX	1000	Intergalactic	2000
+Melee: Gravity Res Down I	200	Common	100
+Melee: Gravity Res Down II	240	Common	100
+Melee: Gravity Res Down III	280	Common	100
+Melee: Gravity Res Down IV	320	Common	100
+Melee: Gravity Res Down V	360	Common	100
+Melee: Gravity Res Down VI	400	Rare	100
+Melee: Gravity Res Down VII	440	Rare	100
+Melee: Gravity Res Down VIII	480	Rare	100
+Melee: Gravity Res Down IX	520	Rare	100
+Melee: Gravity Res Down X	560	Rare	100
+Melee: Gravity Res Down XI	600	Unique	1100
+Melee: Gravity Res Down XII	640	Unique	1200
+Melee: Gravity Res Down XIII	680	Unique	1300
+Melee: Gravity Res Down XIV	720	Unique	1400
+Melee: Gravity Res Down XV	760	Unique	1500
+Melee: Gravity Res Down XVI	800	Prime	1600
+Melee: Gravity Res Down XVII	840	Prime	1700
+Melee: Gravity Res Down XVIII	880	Prime	1800
+Melee: Gravity Res Down XIX	920	Prime	1900
+Melee: Gravity Res Down XX	1000	Intergalactic	2000
+Melee: Blaze I	200	Common	100
+Melee: Blaze II	240	Common	100
+Melee: Blaze III	280	Common	100
+Melee: Blaze IV	320	Common	100
+Melee: Blaze V	360	Common	100
+Melee: Blaze VI	400	Rare	100
+Melee: Blaze VII	440	Rare	100
+Melee: Blaze VIII	480	Rare	100
+Melee: Blaze IX	520	Rare	100
+Melee: Blaze X	560	Rare	100
+Melee: Blaze XI	600	Unique	1100
+Melee: Blaze XII	640	Unique	1200
+Melee: Blaze XIII	680	Unique	1300
+Melee: Blaze XIV	720	Unique	1400
+Melee: Blaze XV	760	Unique	1500
+Melee: Blaze XVI	800	Prime	1600
+Melee: Blaze XVII	840	Prime	1700
+Melee: Blaze XVIII	880	Prime	1800
+Melee: Blaze XIX	920	Prime	1900
+Melee: Blaze XX	1000	Intergalactic	2000
+Melee: Shock I	200	Common	100
+Melee: Shock II	240	Common	100
+Melee: Shock III	280	Common	100
+Melee: Shock IV	320	Common	100
+Melee: Shock V	360	Common	100
+Melee: Shock VI	400	Rare	100
+Melee: Shock VII	440	Rare	100
+Melee: Shock VIII	480	Rare	100
+Melee: Shock IX	520	Rare	100
+Melee: Shock X	560	Rare	100
+Melee: Shock XI	600	Unique	1100
+Melee: Shock XII	640	Unique	1200
+Melee: Shock XIII	680	Unique	1300
+Melee: Shock XIV	720	Unique	1400
+Melee: Shock XV	760	Unique	1500
+Melee: Shock XVI	800	Prime	1600
+Melee: Shock XVII	840	Prime	1700
+Melee: Shock XVIII	880	Prime	1800
+Melee: Shock XIX	920	Prime	1900
+Melee: Shock XX	1000	Intergalactic	2000
+Melee: Recover HP I	500	Common	100
+Melee: Recover HP II	600	Common	100
+Melee: Recover HP III	700	Common	100
+Melee: Recover HP IV	800	Common	100
+Melee: Recover HP V	900	Common	100
+Melee: Recover HP VI	1000	Rare	100
+Melee: Recover HP VII	1100	Rare	100
+Melee: Recover HP VIII	1200	Rare	100
+Melee: Recover HP IX	1300	Rare	100
+Melee: Recover HP X	1400	Rare	100
+Melee: Recover HP XI	1500	Unique	1100
+Melee: Recover HP XII	1600	Unique	1200
+Melee: Recover HP XIII	1700	Unique	1300
+Melee: Recover HP XIV	1800	Unique	1400
+Melee: Recover HP XV	1900	Unique	1500
+Melee: Recover HP XVI	2000	Prime	1600
+Melee: Recover HP XVII	2100	Prime	1700
+Melee: Recover HP XVIII	2200	Prime	1800
+Melee: Recover HP XIX	2300	Prime	1900
+Melee: Recover HP XX	2500	Intergalactic	2000
+Soft Touch I	300	Common	100
+Soft Touch II	360	Common	100
+Soft Touch III	420	Common	100
+Soft Touch IV	480	Common	100
+Soft Touch V	540	Common	100
+Soft Touch VI	600	Rare	100
+Soft Touch VII	660	Rare	100
+Soft Touch VIII	720	Rare	100
+Soft Touch IX	780	Rare	100
+Soft Touch X	840	Rare	100
+Soft Touch XI	900	Unique	1100
+Soft Touch XII	960	Unique	1200
+Soft Touch XIII	1020	Unique	1300
+Soft Touch XIV	1080	Unique	1400
+Soft Touch XV	1140	Unique	1500
+Soft Touch XVI	1200	Prime	1600
+Soft Touch XVII	1260	Prime	1700
+Soft Touch XVIII	1320	Prime	1800
+Soft Touch XIX	1380	Prime	1900
+Soft Touch XX	1500	Intergalactic	2000
+HP Rebound I	500	Common	100
+HP Rebound II	600	Common	100
+HP Rebound III	700	Common	100
+HP Rebound IV	800	Common	100
+HP Rebound V	900	Common	100
+HP Rebound VI	1000	Rare	100
+HP Rebound VII	1100	Rare	100
+HP Rebound VIII	1200	Rare	100
+HP Rebound IX	1300	Rare	100
+HP Rebound X	1400	Rare	100
+HP Rebound XI	1500	Unique	1100
+HP Rebound XII	1600	Unique	1200
+HP Rebound XIII	1700	Unique	1300
+HP Rebound XIV	1800	Unique	1400
+HP Rebound XV	1900	Unique	1500
+HP Rebound XVI	2000	Prime	1600
+HP Rebound XVII	2100	Prime	1700
+HP Rebound XVIII	2200	Prime	1800
+HP Rebound XIX	2300	Prime	1900
+HP Rebound XX	2500	Intergalactic	2000
+TP Rebound I	500	Common	100
+TP Rebound II	600	Common	100
+TP Rebound III	700	Common	100
+TP Rebound IV	800	Common	100
+TP Rebound V	900	Common	100
+TP Rebound VI	1000	Rare	100
+TP Rebound VII	1100	Rare	100
+TP Rebound VIII	1200	Rare	100
+TP Rebound IX	1300	Rare	100
+TP Rebound X	1400	Rare	100
+TP Rebound XI	1500	Unique	1100
+TP Rebound XII	1600	Unique	1200
+TP Rebound XIII	1700	Unique	1300
+TP Rebound XIV	1800	Unique	1400
+TP Rebound XV	1900	Unique	1500
+TP Rebound XVI	2000	Prime	1600
+TP Rebound XVII	2100	Prime	1700
+TP Rebound XVIII	2200	Prime	1800
+TP Rebound XIX	2300	Prime	1900
+TP Rebound XX	2500	Intergalactic	2000
+Taunt: Barrier I	200	Common	100
+Taunt: Barrier II	240	Common	100
+Taunt: Barrier III	280	Common	100
+Taunt: Barrier IV	320	Common	100
+Taunt: Barrier V	360	Common	100
+Taunt: Barrier VI	400	Rare	100
+Taunt: Barrier VII	440	Rare	100
+Taunt: Barrier VIII	480	Rare	100
+Taunt: Barrier IX	520	Rare	100
+Taunt: Barrier X	560	Rare	100
+Taunt: Barrier XI	600	Unique	1100
+Taunt: Barrier XII	640	Unique	1200
+Taunt: Barrier XIII	680	Unique	1300
+Taunt: Barrier XIV	720	Unique	1400
+Taunt: Barrier XV	760	Unique	1500
+Taunt: Barrier XVI	800	Prime	1600
+Taunt: Barrier XVII	840	Prime	1700
+Taunt: Barrier XVIII	880	Prime	1800
+Taunt: Barrier XIX	920	Prime	1900
+Taunt: Barrier XX	1000	Intergalactic	2000
+Taunt: Decoy I	200	Common	100
+Taunt: Decoy II	240	Common	100
+Taunt: Decoy III	280	Common	100
+Taunt: Decoy IV	320	Common	100
+Taunt: Decoy V	360	Common	100
+Taunt: Decoy VI	400	Rare	100
+Taunt: Decoy VII	440	Rare	100
+Taunt: Decoy VIII	480	Rare	100
+Taunt: Decoy IX	520	Rare	100
+Taunt: Decoy X	560	Rare	100
+Taunt: Decoy XI	600	Unique	1100
+Taunt: Decoy XII	640	Unique	1200
+Taunt: Decoy XIII	680	Unique	1300
+Taunt: Decoy XIV	720	Unique	1400
+Taunt: Decoy XV	760	Unique	1500
+Taunt: Decoy XVI	800	Prime	1600
+Taunt: Decoy XVII	840	Prime	1700
+Taunt: Decoy XVIII	880	Prime	1800
+Taunt: Decoy XIX	920	Prime	1900
+Taunt: Decoy XX	1000	Intergalactic	2000
+Taunt: Supercharge I	200	Common	100
+Taunt: Supercharge II	240	Common	100
+Taunt: Supercharge III	280	Common	100
+Taunt: Supercharge IV	320	Common	100
+Taunt: Supercharge V	360	Common	100
+Taunt: Supercharge VI	400	Rare	100
+Taunt: Supercharge VII	440	Rare	100
+Taunt: Supercharge VIII	480	Rare	100
+Taunt: Supercharge IX	520	Rare	100
+Taunt: Supercharge X	560	Rare	100
+Taunt: Supercharge XI	600	Unique	1100
+Taunt: Supercharge XII	640	Unique	1200
+Taunt: Supercharge XIII	680	Unique	1300
+Taunt: Supercharge XIV	720	Unique	1400
+Taunt: Supercharge XV	760	Unique	1500
+Taunt: Supercharge XVI	800	Prime	1600
+Taunt: Supercharge XVII	840	Prime	1700
+Taunt: Supercharge XVIII	880	Prime	1800
+Taunt: Supercharge XIX	920	Prime	1900
+Taunt: Supercharge XX	1000	Intergalactic	2000
+Topple: Barrier I	200	Common	100
+Topple: Barrier II	240	Common	100
+Topple: Barrier III	280	Common	100
+Topple: Barrier IV	320	Common	100
+Topple: Barrier V	360	Common	100
+Topple: Barrier VI	400	Rare	100
+Topple: Barrier VII	440	Rare	100
+Topple: Barrier VIII	480	Rare	100
+Topple: Barrier IX	520	Rare	100
+Topple: Barrier X	560	Rare	100
+Topple: Barrier XI	600	Unique	1100
+Topple: Barrier XII	640	Unique	1200
+Topple: Barrier XIII	680	Unique	1300
+Topple: Barrier XIV	720	Unique	1400
+Topple: Barrier XV	760	Unique	1500
+Topple: Barrier XVI	800	Prime	1600
+Topple: Barrier XVII	840	Prime	1700
+Topple: Barrier XVIII	880	Prime	1800
+Topple: Barrier XIX	920	Prime	1900
+Topple: Barrier XX	1000	Intergalactic	2000
+Topple: Decoy I	200	Common	100
+Topple: Decoy II	240	Common	100
+Topple: Decoy III	280	Common	100
+Topple: Decoy IV	320	Common	100
+Topple: Decoy V	360	Common	100
+Topple: Decoy VI	400	Rare	100
+Topple: Decoy VII	440	Rare	100
+Topple: Decoy VIII	480	Rare	100
+Topple: Decoy IX	520	Rare	100
+Topple: Decoy X	560	Rare	100
+Topple: Decoy XI	600	Unique	1100
+Topple: Decoy XII	640	Unique	1200
+Topple: Decoy XIII	680	Unique	1300
+Topple: Decoy XIV	720	Unique	1400
+Topple: Decoy XV	760	Unique	1500
+Topple: Decoy XVI	800	Prime	1600
+Topple: Decoy XVII	840	Prime	1700
+Topple: Decoy XVIII	880	Prime	1800
+Topple: Decoy XIX	920	Prime	1900
+Topple: Decoy XX	1000	Intergalactic	2000
+Stun: Barrier I	200	Common	100
+Stun: Barrier II	240	Common	100
+Stun: Barrier III	280	Common	100
+Stun: Barrier IV	320	Common	100
+Stun: Barrier V	360	Common	100
+Stun: Barrier VI	400	Rare	100
+Stun: Barrier VII	440	Rare	100
+Stun: Barrier VIII	480	Rare	100
+Stun: Barrier IX	520	Rare	100
+Stun: Barrier X	560	Rare	100
+Stun: Barrier XI	600	Unique	1100
+Stun: Barrier XII	640	Unique	1200
+Stun: Barrier XIII	680	Unique	1300
+Stun: Barrier XIV	720	Unique	1400
+Stun: Barrier XV	760	Unique	1500
+Stun: Barrier XVI	800	Prime	1600
+Stun: Barrier XVII	840	Prime	1700
+Stun: Barrier XVIII	880	Prime	1800
+Stun: Barrier XIX	920	Prime	1900
+Stun: Barrier XX	1000	Intergalactic	2000
+Stun: Decoy I	200	Common	100
+Stun: Decoy II	240	Common	100
+Stun: Decoy III	280	Common	100
+Stun: Decoy IV	320	Common	100
+Stun: Decoy V	360	Common	100
+Stun: Decoy VI	400	Rare	100
+Stun: Decoy VII	440	Rare	100
+Stun: Decoy VIII	480	Rare	100
+Stun: Decoy IX	520	Rare	100
+Stun: Decoy X	560	Rare	100
+Stun: Decoy XI	600	Unique	1100
+Stun: Decoy XII	640	Unique	1200
+Stun: Decoy XIII	680	Unique	1300
+Stun: Decoy XIV	720	Unique	1400
+Stun: Decoy XV	760	Unique	1500
+Stun: Decoy XVI	800	Prime	1600
+Stun: Decoy XVII	840	Prime	1700
+Stun: Decoy XVIII	880	Prime	1800
+Stun: Decoy XIX	920	Prime	1900
+Stun: Decoy XX	1000	Intergalactic	2000
+Reflect: Physical	1000	Unique	\N
+Reflect: Beam	1000	Unique	\N
+Reflect: Ether	1000	Unique	\N
+Reflect: Thermal	1000	Unique	\N
+Reflect: Electric	1000	Unique	\N
+Reflect: Gravity	1000	Unique	\N
+Reflect Damage Up I	500	Common	100
+Reflect Damage Up II	600	Common	100
+Reflect Damage Up III	700	Common	100
+Reflect Damage Up IV	800	Common	100
+Reflect Damage Up V	900	Common	100
+Reflect Damage Up VI	1000	Rare	100
+Reflect Damage Up VII	1100	Rare	100
+Reflect Damage Up VIII	1200	Rare	100
+Reflect Damage Up IX	1300	Rare	100
+Reflect Damage Up X	1400	Rare	100
+Reflect Damage Up XI	1500	Unique	1100
+Reflect Damage Up XII	1600	Unique	1200
+Reflect Damage Up XIII	1700	Unique	1300
+Reflect Damage Up XIV	1800	Unique	1400
+Reflect Damage Up XV	1900	Unique	1500
+Reflect Damage Up XVI	2000	Prime	1600
+Reflect Damage Up XVII	2100	Prime	1700
+Reflect Damage Up XVIII	2200	Prime	1800
+Reflect Damage Up XIX	2300	Prime	1900
+Reflect Damage Up XX	2500	Intergalactic	2000
+Nullify Physical Reflect I	300	Common	100
+Nullify Physical Reflect II	360	Common	100
+Nullify Physical Reflect III	420	Common	100
+Nullify Physical Reflect IV	480	Common	100
+Nullify Physical Reflect V	540	Common	100
+Nullify Physical Reflect VI	600	Rare	100
+Nullify Physical Reflect VII	660	Rare	100
+Nullify Physical Reflect VIII	720	Rare	100
+Nullify Physical Reflect IX	780	Rare	100
+Nullify Physical Reflect X	840	Rare	100
+Nullify Physical Reflect XI	900	Unique	1100
+Nullify Physical Reflect XII	960	Unique	1200
+Nullify Physical Reflect XIII	1020	Unique	1300
+Nullify Physical Reflect XIV	1080	Unique	1400
+Nullify Physical Reflect XV	1140	Unique	1500
+Nullify Physical Reflect XVI	1200	Prime	1600
+Nullify Physical Reflect XVII	1260	Prime	1700
+Nullify Physical Reflect XVIII	1320	Prime	1800
+Nullify Physical Reflect XIX	1380	Prime	1900
+Nullify Physical Reflect XX	1500	Intergalactic	2000
+Nullify Beam Reflect I	300	Common	100
+Nullify Beam Reflect II	360	Common	100
+Nullify Beam Reflect III	420	Common	100
+Nullify Beam Reflect IV	480	Common	100
+Nullify Beam Reflect V	540	Common	100
+Nullify Beam Reflect VI	600	Rare	100
+Nullify Beam Reflect VII	660	Rare	100
+Nullify Beam Reflect VIII	720	Rare	100
+Nullify Beam Reflect IX	780	Rare	100
+Nullify Beam Reflect X	840	Rare	100
+Nullify Beam Reflect XI	900	Unique	1100
+Nullify Beam Reflect XII	960	Unique	1200
+Nullify Beam Reflect XIII	1020	Unique	1300
+Nullify Beam Reflect XIV	1080	Unique	1400
+Nullify Beam Reflect XV	1140	Unique	1500
+Nullify Beam Reflect XVI	1200	Prime	1600
+Nullify Beam Reflect XVII	1260	Prime	1700
+Nullify Beam Reflect XVIII	1320	Prime	1800
+Nullify Beam Reflect XIX	1380	Prime	1900
+Nullify Beam Reflect XX	1500	Intergalactic	2000
+Nullify Ether Reflect I	300	Common	100
+Nullify Ether Reflect II	360	Common	100
+Nullify Ether Reflect III	420	Common	100
+Nullify Ether Reflect IV	480	Common	100
+Nullify Ether Reflect V	540	Common	100
+Nullify Ether Reflect VI	600	Rare	100
+Nullify Ether Reflect VII	660	Rare	100
+Nullify Ether Reflect VIII	720	Rare	100
+Nullify Ether Reflect IX	780	Rare	100
+Nullify Ether Reflect X	840	Rare	100
+Nullify Ether Reflect XI	900	Unique	1100
+Nullify Ether Reflect XII	960	Unique	1200
+Nullify Ether Reflect XIII	1020	Unique	1300
+Nullify Ether Reflect XIV	1080	Unique	1400
+Nullify Ether Reflect XV	1140	Unique	1500
+Nullify Ether Reflect XVI	1200	Prime	1600
+Nullify Ether Reflect XVII	1260	Prime	1700
+Nullify Ether Reflect XVIII	1320	Prime	1800
+Nullify Ether Reflect XIX	1380	Prime	1900
+Nullify Ether Reflect XX	1500	Intergalactic	2000
+Nullify Thermal Reflect I	300	Common	100
+Nullify Thermal Reflect II	360	Common	100
+Nullify Thermal Reflect III	420	Common	100
+Nullify Thermal Reflect IV	480	Common	100
+Nullify Thermal Reflect V	540	Common	100
+Nullify Thermal Reflect VI	600	Rare	100
+Nullify Thermal Reflect VII	660	Rare	100
+Nullify Thermal Reflect VIII	720	Rare	100
+Nullify Thermal Reflect IX	780	Rare	100
+Nullify Thermal Reflect X	840	Rare	100
+Nullify Thermal Reflect XI	900	Unique	1100
+Nullify Thermal Reflect XII	960	Unique	1200
+Nullify Thermal Reflect XIII	1020	Unique	1300
+Nullify Thermal Reflect XIV	1080	Unique	1400
+Nullify Thermal Reflect XV	1140	Unique	1500
+Nullify Thermal Reflect XVI	1200	Prime	1600
+Nullify Thermal Reflect XVII	1260	Prime	1700
+Nullify Thermal Reflect XVIII	1320	Prime	1800
+Nullify Thermal Reflect XIX	1380	Prime	1900
+Nullify Thermal Reflect XX	1500	Intergalactic	2000
+Nullify Electric Reflect I	300	Common	100
+Nullify Electric Reflect II	360	Common	100
+Nullify Electric Reflect III	420	Common	100
+Nullify Electric Reflect IV	480	Common	100
+Nullify Electric Reflect V	540	Common	100
+Nullify Electric Reflect VI	600	Rare	100
+Nullify Electric Reflect VII	660	Rare	100
+Nullify Electric Reflect VIII	720	Rare	100
+Nullify Electric Reflect IX	780	Rare	100
+Nullify Electric Reflect X	840	Rare	100
+Nullify Electric Reflect XI	900	Unique	1100
+Nullify Electric Reflect XII	960	Unique	1200
+Nullify Electric Reflect XIII	1020	Unique	1300
+Nullify Electric Reflect XIV	1080	Unique	1400
+Nullify Electric Reflect XV	1140	Unique	1500
+Nullify Electric Reflect XVI	1200	Prime	1600
+Nullify Electric Reflect XVII	1260	Prime	1700
+Nullify Electric Reflect XVIII	1320	Prime	1800
+Nullify Electric Reflect XIX	1380	Prime	1900
+Nullify Electric Reflect XX	1500	Intergalactic	2000
+Nullify Gravity Reflect I	300	Common	100
+Nullify Gravity Reflect II	360	Common	100
+Nullify Gravity Reflect III	420	Common	100
+Nullify Gravity Reflect IV	480	Common	100
+Nullify Gravity Reflect V	540	Common	100
+Nullify Gravity Reflect VI	600	Rare	100
+Nullify Gravity Reflect VII	660	Rare	100
+Nullify Gravity Reflect VIII	720	Rare	100
+Nullify Gravity Reflect IX	780	Rare	100
+Nullify Gravity Reflect X	840	Rare	100
+Nullify Gravity Reflect XI	900	Unique	1100
+Nullify Gravity Reflect XII	960	Unique	1200
+Nullify Gravity Reflect XIII	1020	Unique	1300
+Nullify Gravity Reflect XIV	1080	Unique	1400
+Nullify Gravity Reflect XV	1140	Unique	1500
+Nullify Gravity Reflect XVI	1200	Prime	1600
+Nullify Gravity Reflect XVII	1260	Prime	1700
+Nullify Gravity Reflect XVIII	1320	Prime	1800
+Nullify Gravity Reflect XIX	1380	Prime	1900
+Nullify Gravity Reflect XX	1500	Intergalactic	2000
+Overdrive: Recover HP I	500	Common	100
+Overdrive: Recover HP II	600	Common	100
+Overdrive: Recover HP III	700	Common	100
+Overdrive: Recover HP IV	800	Common	100
+Overdrive: Recover HP V	900	Common	100
+Overdrive: Recover HP VI	1000	Rare	100
+Overdrive: Recover HP VII	1100	Rare	100
+Overdrive: Recover HP VIII	1200	Rare	100
+Overdrive: Recover HP IX	1300	Rare	100
+Overdrive: Recover HP X	1400	Rare	100
+Overdrive: Recover HP XI	1500	Unique	1100
+Overdrive: Recover HP XII	1600	Unique	1200
+Overdrive: Recover HP XIII	1700	Unique	1300
+Overdrive: Recover HP XIV	1800	Unique	1400
+Overdrive: Recover HP XV	1900	Unique	1500
+Overdrive: Recover HP XVI	2000	Prime	1600
+Overdrive: Recover HP XVII	2100	Prime	1700
+Overdrive: Recover HP XVIII	2200	Prime	1800
+Overdrive: Recover HP XIX	2300	Prime	1900
+Overdrive: Recover HP XX	2500	Intergalactic	2000
+Overdrive: Gain TP I	500	Common	100
+Overdrive: Gain TP II	600	Common	100
+Overdrive: Gain TP III	700	Common	100
+Overdrive: Gain TP IV	800	Common	100
+Overdrive: Gain TP V	900	Common	100
+Overdrive: Gain TP VI	1000	Rare	100
+Overdrive: Gain TP VII	1100	Rare	100
+Overdrive: Gain TP VIII	1200	Rare	100
+Overdrive: Gain TP IX	1300	Rare	100
+Overdrive: Gain TP X	1400	Rare	100
+Overdrive: Gain TP XI	1500	Unique	1100
+Overdrive: Gain TP XII	1600	Unique	1200
+Overdrive: Gain TP XIII	1700	Unique	1300
+Overdrive: Gain TP XIV	1800	Unique	1400
+Overdrive: Gain TP XV	1900	Unique	1500
+Overdrive: Gain TP XVI	2000	Prime	1600
+Overdrive: Gain TP XVII	2100	Prime	1700
+Overdrive: Gain TP XVIII	2200	Prime	1800
+Overdrive: Gain TP XIX	2300	Prime	1900
+Overdrive: Gain TP XX	2500	Intergalactic	2000
+Overdrive Count Up I	500	Common	100
+Overdrive Count Up II	600	Common	100
+Overdrive Count Up III	700	Common	100
+Overdrive Count Up IV	800	Common	100
+Overdrive Count Up V	900	Common	100
+Overdrive Count Up VI	1000	Rare	100
+Overdrive Count Up VII	1100	Rare	100
+Overdrive Count Up VIII	1200	Rare	100
+Overdrive Count Up IX	1300	Rare	100
+Overdrive Count Up X	1400	Rare	100
+Overdrive Count Up XI	1500	Unique	1100
+Overdrive Count Up XII	1600	Unique	1200
+Overdrive Count Up XIII	1700	Unique	1300
+Overdrive Count Up XIV	1800	Unique	1400
+Overdrive Count Up XV	1900	Unique	1500
+Overdrive Count Up XVI	2000	Prime	1600
+Overdrive Count Up XVII	2100	Prime	1700
+Overdrive Count Up XVIII	2200	Prime	1800
+Overdrive Count Up XIX	2300	Prime	1900
+Overdrive Count Up XX	2500	Intergalactic	2000
+Extend Overdrive I	500	Common	100
+Extend Overdrive II	600	Common	100
+Extend Overdrive III	700	Common	100
+Extend Overdrive IV	800	Common	100
+Extend Overdrive V	900	Common	100
+Extend Overdrive VI	1000	Rare	100
+Extend Overdrive VII	1100	Rare	100
+Extend Overdrive VIII	1200	Rare	100
+Extend Overdrive IX	1300	Rare	100
+Extend Overdrive X	1400	Rare	100
+Extend Overdrive XI	1500	Unique	1100
+Extend Overdrive XII	1600	Unique	1200
+Extend Overdrive XIII	1700	Unique	1300
+Extend Overdrive XIV	1800	Unique	1400
+Extend Overdrive XV	1900	Unique	1500
+Extend Overdrive XVI	2000	Prime	1600
+Extend Overdrive XVII	2100	Prime	1700
+Extend Overdrive XVIII	2200	Prime	1800
+Extend Overdrive XIX	2300	Prime	1900
+Extend Overdrive XX	2500	Intergalactic	2000
+Overdrive Blue Bonus	1000	Unique	100
+Overdrive Green Bonus	1000	Unique	100
+Extend Aura I	500	Common	100
+Extend Aura II	600	Common	100
+Extend Aura III	700	Common	100
+Extend Aura IV	800	Common	100
+Extend Aura V	900	Common	100
+Extend Aura VI	1000	Rare	100
+Extend Aura VII	1100	Rare	100
+Extend Aura VIII	1200	Rare	100
+Extend Aura IX	1300	Rare	100
+Extend Aura X	1400	Rare	100
+Extend Aura XI	1500	Unique	1100
+Extend Aura XII	1600	Unique	1200
+Extend Aura XIII	1700	Unique	1300
+Extend Aura XIV	1800	Unique	1400
+Extend Aura XV	1900	Unique	1500
+Extend Aura XVI	2000	Prime	1600
+Extend Aura XVII	2100	Prime	1700
+Extend Aura XVIII	2200	Prime	1800
+Extend Aura XIX	2300	Prime	1900
+Extend Aura XX	2500	Intergalactic	2000
+Aura Rapid Cooldown I	500	Common	100
+Aura Rapid Cooldown II	600	Common	100
+Aura Rapid Cooldown III	700	Common	100
+Aura Rapid Cooldown IV	800	Common	100
+Aura Rapid Cooldown V	900	Common	100
+Aura Rapid Cooldown VI	1000	Rare	100
+Aura Rapid Cooldown VII	1100	Rare	100
+Aura Rapid Cooldown VIII	1200	Rare	100
+Aura Rapid Cooldown IX	1300	Rare	100
+Aura Rapid Cooldown X	1400	Rare	100
+Aura Rapid Cooldown XI	1500	Unique	1100
+Aura Rapid Cooldown XII	1600	Unique	1200
+Aura Rapid Cooldown XIII	1700	Unique	1300
+Aura Rapid Cooldown XIV	1800	Unique	1400
+Aura Rapid Cooldown XV	1900	Unique	1500
+Aura Rapid Cooldown XVI	2000	Prime	1600
+Aura Rapid Cooldown XVII	2100	Prime	1700
+Aura Rapid Cooldown XVIII	2200	Prime	1800
+Aura Rapid Cooldown XIX	2300	Prime	1900
+Aura Rapid Cooldown XX	2500	Intergalactic	2000
+Aura: Refuel I	500	Common	100
+Aura: Refuel II	600	Common	100
+Aura: Refuel III	700	Common	100
+Aura: Refuel IV	800	Common	100
+Aura: Refuel V	900	Common	100
+Aura: Refuel VI	1000	Rare	100
+Aura: Refuel VII	1100	Rare	100
+Aura: Refuel VIII	1200	Rare	100
+Aura: Refuel IX	1300	Rare	100
+Aura: Refuel X	1400	Rare	100
+Aura: Refuel XI	1500	Unique	1100
+Aura: Refuel XII	1600	Unique	1200
+Aura: Refuel XIII	1700	Unique	1300
+Aura: Refuel XIV	1800	Unique	1400
+Aura: Refuel XV	1900	Unique	1500
+Aura: Refuel XVI	2000	Prime	1600
+Aura: Refuel XVII	2100	Prime	1700
+Aura: Refuel XVIII	2200	Prime	1800
+Aura: Refuel XIX	2300	Prime	1900
+Aura: Refuel XX	2500	Intergalactic	2000
+Arts: Gain TP I	500	Common	100
+Arts: Gain TP II	600	Common	100
+Arts: Gain TP III	700	Common	100
+Arts: Gain TP IV	800	Common	100
+Arts: Gain TP V	900	Common	100
+Arts: Gain TP VI	1000	Rare	100
+Arts: Gain TP VII	1100	Rare	100
+Arts: Gain TP VIII	1200	Rare	100
+Arts: Gain TP IX	1300	Rare	100
+Arts: Gain TP X	1400	Rare	100
+Arts: Gain TP XI	1500	Unique	1100
+Arts: Gain TP XII	1600	Unique	1200
+Arts: Gain TP XIII	1700	Unique	1300
+Arts: Gain TP XIV	1800	Unique	1400
+Arts: Gain TP XV	1900	Unique	1500
+Arts: Gain TP XVI	2000	Prime	1600
+Arts: Gain TP XVII	2100	Prime	1700
+Arts: Gain TP XVIII	2200	Prime	1800
+Arts: Gain TP XIX	2300	Prime	1900
+Arts: Gain TP XX	2500	Intergalactic	2000
+Arts: Recover HP I	500	Common	100
+Arts: Recover HP II	600	Common	100
+Arts: Recover HP III	700	Common	100
+Arts: Recover HP IV	800	Common	100
+Arts: Recover HP V	900	Common	100
+Arts: Recover HP VI	1000	Rare	100
+Arts: Recover HP VII	1100	Rare	100
+Arts: Recover HP VIII	1200	Rare	100
+Arts: Recover HP IX	1300	Rare	100
+Arts: Recover HP X	1400	Rare	100
+Arts: Recover HP XI	1500	Unique	1100
+Arts: Recover HP XII	1600	Unique	1200
+Arts: Recover HP XIII	1700	Unique	1300
+Arts: Recover HP XIV	1800	Unique	1400
+Arts: Recover HP XV	1900	Unique	1500
+Arts: Recover HP XVI	2000	Prime	1600
+Arts: Recover HP XVII	2100	Prime	1700
+Arts: Recover HP XVIII	2200	Prime	1800
+Arts: Recover HP XIX	2300	Prime	1900
+Arts: Recover HP XX	2500	Intergalactic	2000
+Secondary CD Reducer I	500	Common	100
+Secondary CD Reducer II	600	Common	100
+Secondary CD Reducer III	700	Common	100
+Secondary CD Reducer IV	800	Common	100
+Secondary CD Reducer V	900	Common	100
+Secondary CD Reducer VI	1000	Rare	100
+Secondary CD Reducer VII	1100	Rare	100
+Secondary CD Reducer VIII	1200	Rare	100
+Secondary CD Reducer IX	1300	Rare	100
+Secondary CD Reducer X	1400	Rare	100
+Secondary CD Reducer XI	1500	Unique	1100
+Secondary CD Reducer XII	1600	Unique	1200
+Secondary CD Reducer XIII	1700	Unique	1300
+Secondary CD Reducer XIV	1800	Unique	1400
+Secondary CD Reducer XV	1900	Unique	1500
+Secondary CD Reducer XVI	2000	Prime	1600
+Secondary CD Reducer XVII	2100	Prime	1700
+Secondary CD Reducer XVIII	2200	Prime	1800
+Secondary CD Reducer XIX	2300	Prime	1900
+Secondary CD Reducer XX	2500	Intergalactic	2000
+Extend Taunt I	200	Common	100
+Extend Taunt II	240	Common	100
+Extend Taunt III	280	Common	100
+Extend Taunt IV	320	Common	100
+Extend Taunt V	360	Common	100
+Extend Taunt VI	400	Rare	100
+Extend Taunt VII	440	Rare	100
+Extend Taunt VIII	480	Rare	100
+Extend Taunt IX	520	Rare	100
+Extend Taunt X	560	Rare	100
+Extend Taunt XI	600	Unique	1100
+Extend Taunt XII	640	Unique	1200
+Extend Taunt XIII	680	Unique	1300
+Extend Taunt XIV	720	Unique	1400
+Extend Taunt XV	760	Unique	1500
+Extend Taunt XVI	800	Prime	1600
+Extend Taunt XVII	840	Prime	1700
+Extend Taunt XVIII	880	Prime	1800
+Extend Taunt XIX	920	Prime	1900
+Extend Taunt XX	1000	Intergalactic	2000
+Extend Control I	200	Common	100
+Extend Control II	240	Common	100
+Extend Control III	280	Common	100
+Extend Control IV	320	Common	100
+Extend Control V	360	Common	100
+Extend Control VI	400	Rare	100
+Extend Control VII	440	Rare	100
+Extend Control VIII	480	Rare	100
+Extend Control IX	520	Rare	100
+Extend Control X	560	Rare	100
+Extend Control XI	600	Unique	1100
+Extend Control XII	640	Unique	1200
+Extend Control XIII	680	Unique	1300
+Extend Control XIV	720	Unique	1400
+Extend Control XV	760	Unique	1500
+Extend Control XVI	800	Prime	1600
+Extend Control XVII	840	Prime	1700
+Extend Control XVIII	880	Prime	1800
+Extend Control XIX	920	Prime	1900
+Extend Control XX	1000	Intergalactic	2000
+Extend Virus I	200	Common	100
+Extend Virus II	240	Common	100
+Extend Virus III	280	Common	100
+Extend Virus IV	320	Common	100
+Extend Virus V	360	Common	100
+Extend Virus VI	400	Rare	100
+Extend Virus VII	440	Rare	100
+Extend Virus VIII	480	Rare	100
+Extend Virus IX	520	Rare	100
+Extend Virus X	560	Rare	100
+Extend Virus XI	600	Unique	1100
+Extend Virus XII	640	Unique	1200
+Extend Virus XIII	680	Unique	1300
+Extend Virus XIV	720	Unique	1400
+Extend Virus XV	760	Unique	1500
+Extend Virus XVI	800	Prime	1600
+Extend Virus XVII	840	Prime	1700
+Extend Virus XVIII	880	Prime	1800
+Extend Virus XIX	920	Prime	1900
+Extend Virus XX	1000	Intergalactic	2000
+Extend Blackout I	200	Common	100
+Extend Blackout II	240	Common	100
+Extend Blackout III	280	Common	100
+Extend Blackout IV	320	Common	100
+Extend Blackout V	360	Common	100
+Extend Blackout VI	400	Rare	100
+Extend Blackout VII	440	Rare	100
+Extend Blackout VIII	480	Rare	100
+Extend Blackout IX	520	Rare	100
+Extend Blackout X	560	Rare	100
+Extend Blackout XI	600	Unique	1100
+Extend Blackout XII	640	Unique	1200
+Extend Blackout XIII	680	Unique	1300
+Extend Blackout XIV	720	Unique	1400
+Extend Blackout XV	760	Unique	1500
+Extend Blackout XVI	800	Prime	1600
+Extend Blackout XVII	840	Prime	1700
+Extend Blackout XVIII	880	Prime	1800
+Extend Blackout XIX	920	Prime	1900
+Extend Blackout XX	1000	Intergalactic	2000
+Extend Fatigue I	200	Common	100
+Extend Fatigue II	240	Common	100
+Extend Fatigue III	280	Common	100
+Extend Fatigue IV	320	Common	100
+Extend Fatigue V	360	Common	100
+Extend Fatigue VI	400	Rare	100
+Extend Fatigue VII	440	Rare	100
+Extend Fatigue VIII	480	Rare	100
+Extend Fatigue IX	520	Rare	100
+Extend Fatigue X	560	Rare	100
+Extend Fatigue XI	600	Unique	1100
+Extend Fatigue XII	640	Unique	1200
+Extend Fatigue XIII	680	Unique	1300
+Extend Fatigue XIV	720	Unique	1400
+Extend Fatigue XV	760	Unique	1500
+Extend Fatigue XVI	800	Prime	1600
+Extend Fatigue XVII	840	Prime	1700
+Extend Fatigue XVIII	880	Prime	1800
+Extend Fatigue XIX	920	Prime	1900
+Extend Fatigue XX	1000	Intergalactic	2000
+Extend Slow Arts I	200	Common	100
+Extend Slow Arts II	240	Common	100
+Extend Slow Arts III	280	Common	100
+Extend Slow Arts IV	320	Common	100
+Extend Slow Arts V	360	Common	100
+Extend Slow Arts VI	400	Rare	100
+Extend Slow Arts VII	440	Rare	100
+Extend Slow Arts VIII	480	Rare	100
+Extend Slow Arts IX	520	Rare	100
+Extend Slow Arts X	560	Rare	100
+Extend Slow Arts XI	600	Unique	1100
+Extend Slow Arts XII	640	Unique	1200
+Extend Slow Arts XIII	680	Unique	1300
+Extend Slow Arts XIV	720	Unique	1400
+Extend Slow Arts XV	760	Unique	1500
+Extend Slow Arts XVI	800	Prime	1600
+Extend Slow Arts XVII	840	Prime	1700
+Extend Slow Arts XVIII	880	Prime	1800
+Extend Slow Arts XIX	920	Prime	1900
+Extend Slow Arts XX	1000	Intergalactic	2000
+Extend Debuff Res Down I	200	Common	100
+Extend Debuff Res Down II	240	Common	100
+Extend Debuff Res Down III	280	Common	100
+Extend Debuff Res Down IV	320	Common	100
+Extend Debuff Res Down V	360	Common	100
+Extend Debuff Res Down VI	400	Rare	100
+Extend Debuff Res Down VII	440	Rare	100
+Extend Debuff Res Down VIII	480	Rare	100
+Extend Debuff Res Down IX	520	Rare	100
+Extend Debuff Res Down X	560	Rare	100
+Extend Debuff Res Down XI	600	Unique	1100
+Extend Debuff Res Down XII	640	Unique	1200
+Extend Debuff Res Down XIII	680	Unique	1300
+Extend Debuff Res Down XIV	720	Unique	1400
+Extend Debuff Res Down XV	760	Unique	1500
+Extend Debuff Res Down XVI	800	Prime	1600
+Extend Debuff Res Down XVII	840	Prime	1700
+Extend Debuff Res Down XVIII	880	Prime	1800
+Extend Debuff Res Down XIX	920	Prime	1900
+Extend Debuff Res Down XX	1000	Intergalactic	2000
+Extend Blaze I	200	Common	100
+Extend Blaze II	240	Common	100
+Extend Blaze III	280	Common	100
+Extend Blaze IV	320	Common	100
+Extend Blaze V	360	Common	100
+Extend Blaze VI	400	Rare	100
+Extend Blaze VII	440	Rare	100
+Extend Blaze VIII	480	Rare	100
+Extend Blaze IX	520	Rare	100
+Extend Blaze X	560	Rare	100
+Extend Blaze XI	600	Unique	1100
+Extend Blaze XII	640	Unique	1200
+Extend Blaze XIII	680	Unique	1300
+Extend Blaze XIV	720	Unique	1400
+Extend Blaze XV	760	Unique	1500
+Extend Blaze XVI	800	Prime	1600
+Extend Blaze XVII	840	Prime	1700
+Extend Blaze XVIII	880	Prime	1800
+Extend Blaze XIX	920	Prime	1900
+Extend Blaze XX	1000	Intergalactic	2000
+Extend Shock I	200	Common	100
+Extend Shock II	240	Common	100
+Extend Shock III	280	Common	100
+Extend Shock IV	320	Common	100
+Extend Shock V	360	Common	100
+Extend Shock VI	400	Rare	100
+Extend Shock VII	440	Rare	100
+Extend Shock VIII	480	Rare	100
+Extend Shock IX	520	Rare	100
+Extend Shock X	560	Rare	100
+Extend Shock XI	600	Unique	1100
+Extend Shock XII	640	Unique	1200
+Extend Shock XIII	680	Unique	1300
+Extend Shock XIV	720	Unique	1400
+Extend Shock XV	760	Unique	1500
+Extend Shock XVI	800	Prime	1600
+Extend Shock XVII	840	Prime	1700
+Extend Shock XVIII	880	Prime	1800
+Extend Shock XIX	920	Prime	1900
+Extend Shock XX	1000	Intergalactic	2000
+Extend Physical Res Down I	200	Common	100
+Extend Physical Res Down II	240	Common	100
+Extend Physical Res Down III	280	Common	100
+Extend Physical Res Down IV	320	Common	100
+Extend Physical Res Down V	360	Common	100
+Extend Physical Res Down VI	400	Rare	100
+Extend Physical Res Down VII	440	Rare	100
+Extend Physical Res Down VIII	480	Rare	100
+Extend Physical Res Down IX	520	Rare	100
+Extend Physical Res Down X	560	Rare	100
+Extend Physical Res Down XI	600	Unique	1100
+Extend Physical Res Down XII	640	Unique	1200
+Extend Physical Res Down XIII	680	Unique	1300
+Extend Physical Res Down XIV	720	Unique	1400
+Extend Physical Res Down XV	760	Unique	1500
+Extend Physical Res Down XVI	800	Prime	1600
+Extend Physical Res Down XVII	840	Prime	1700
+Extend Physical Res Down XVIII	880	Prime	1800
+Extend Physical Res Down XIX	920	Prime	1900
+Extend Physical Res Down XX	1000	Intergalactic	2000
+Extend Beam Res Down I	200	Common	100
+Extend Beam Res Down II	240	Common	100
+Extend Beam Res Down III	280	Common	100
+Extend Beam Res Down IV	320	Common	100
+Extend Beam Res Down V	360	Common	100
+Extend Beam Res Down VI	400	Rare	100
+Extend Beam Res Down VII	440	Rare	100
+Extend Beam Res Down VIII	480	Rare	100
+Extend Beam Res Down IX	520	Rare	100
+Extend Beam Res Down X	560	Rare	100
+Extend Beam Res Down XI	600	Unique	1100
+Extend Beam Res Down XII	640	Unique	1200
+Extend Beam Res Down XIII	680	Unique	1300
+Extend Beam Res Down XIV	720	Unique	1400
+Extend Beam Res Down XV	760	Unique	1500
+Extend Beam Res Down XVI	800	Prime	1600
+Extend Beam Res Down XVII	840	Prime	1700
+Extend Beam Res Down XVIII	880	Prime	1800
+Extend Beam Res Down XIX	920	Prime	1900
+Extend Beam Res Down XX	1000	Intergalactic	2000
+Extend Ether Res Down I	200	Common	100
+Extend Ether Res Down II	240	Common	100
+Extend Ether Res Down III	280	Common	100
+Extend Ether Res Down IV	320	Common	100
+Extend Ether Res Down V	360	Common	100
+Extend Ether Res Down VI	400	Rare	100
+Extend Ether Res Down VII	440	Rare	100
+Extend Ether Res Down VIII	480	Rare	100
+Extend Ether Res Down IX	520	Rare	100
+Extend Ether Res Down X	560	Rare	100
+Extend Ether Res Down XI	600	Unique	1100
+Extend Ether Res Down XII	640	Unique	1200
+Extend Ether Res Down XIII	680	Unique	1300
+Extend Ether Res Down XIV	720	Unique	1400
+Extend Ether Res Down XV	760	Unique	1500
+Extend Ether Res Down XVI	800	Prime	1600
+Extend Ether Res Down XVII	840	Prime	1700
+Extend Ether Res Down XVIII	880	Prime	1800
+Extend Ether Res Down XIX	920	Prime	1900
+Extend Ether Res Down XX	1000	Intergalactic	2000
+Extend Thermal Res Down I	200	Common	100
+Extend Thermal Res Down II	240	Common	100
+Extend Thermal Res Down III	280	Common	100
+Extend Thermal Res Down IV	320	Common	100
+Extend Thermal Res Down V	360	Common	100
+Extend Thermal Res Down VI	400	Rare	100
+Extend Thermal Res Down VII	440	Rare	100
+Extend Thermal Res Down VIII	480	Rare	100
+Extend Thermal Res Down IX	520	Rare	100
+Extend Thermal Res Down X	560	Rare	100
+Extend Thermal Res Down XI	600	Unique	1100
+Extend Thermal Res Down XII	640	Unique	1200
+Extend Thermal Res Down XIII	680	Unique	1300
+Extend Thermal Res Down XIV	720	Unique	1400
+Extend Thermal Res Down XV	760	Unique	1500
+Extend Thermal Res Down XVI	800	Prime	1600
+Extend Thermal Res Down XVII	840	Prime	1700
+Extend Thermal Res Down XVIII	880	Prime	1800
+Extend Thermal Res Down XIX	920	Prime	1900
+Extend Thermal Res Down XX	1000	Intergalactic	2000
+Extend Electric Res Down I	200	Common	100
+Extend Electric Res Down II	240	Common	100
+Extend Electric Res Down III	280	Common	100
+Extend Electric Res Down IV	320	Common	100
+Extend Electric Res Down V	360	Common	100
+Extend Electric Res Down VI	400	Rare	100
+Extend Electric Res Down VII	440	Rare	100
+Extend Electric Res Down VIII	480	Rare	100
+Extend Electric Res Down IX	520	Rare	100
+Extend Electric Res Down X	560	Rare	100
+Extend Electric Res Down XI	600	Unique	1100
+Extend Electric Res Down XII	640	Unique	1200
+Extend Electric Res Down XIII	680	Unique	1300
+Extend Electric Res Down XIV	720	Unique	1400
+Extend Electric Res Down XV	760	Unique	1500
+Extend Electric Res Down XVI	800	Prime	1600
+Extend Electric Res Down XVII	840	Prime	1700
+Extend Electric Res Down XVIII	880	Prime	1800
+Extend Electric Res Down XIX	920	Prime	1900
+Extend Electric Res Down XX	1000	Intergalactic	2000
+Extend Gravity Res Down I	200	Common	100
+Extend Gravity Res Down II	240	Common	100
+Extend Gravity Res Down III	280	Common	100
+Extend Gravity Res Down IV	320	Common	100
+Extend Gravity Res Down V	360	Common	100
+Extend Gravity Res Down VI	400	Rare	100
+Extend Gravity Res Down VII	440	Rare	100
+Extend Gravity Res Down VIII	480	Rare	100
+Extend Gravity Res Down IX	520	Rare	100
+Extend Gravity Res Down X	560	Rare	100
+Extend Gravity Res Down XI	600	Unique	1100
+Extend Gravity Res Down XII	640	Unique	1200
+Extend Gravity Res Down XIII	680	Unique	1300
+Extend Gravity Res Down XIV	720	Unique	1400
+Extend Gravity Res Down XV	760	Unique	1500
+Extend Gravity Res Down XVI	800	Prime	1600
+Extend Gravity Res Down XVII	840	Prime	1700
+Extend Gravity Res Down XVIII	880	Prime	1800
+Extend Gravity Res Down XIX	920	Prime	1900
+Extend Gravity Res Down XX	1000	Intergalactic	2000
+Opening Art: Damage Up I	500	Common	100
+Opening Art: Damage Up II	600	Common	100
+Opening Art: Damage Up III	700	Common	100
+Opening Art: Damage Up IV	800	Common	100
+Opening Art: Damage Up V	900	Common	100
+Opening Art: Damage Up VI	1000	Rare	100
+Opening Art: Damage Up VII	1100	Rare	100
+Opening Art: Damage Up VIII	1200	Rare	100
+Opening Art: Damage Up IX	1300	Rare	100
+Opening Art: Damage Up X	1400	Rare	100
+Opening Art: Damage Up XI	1500	Unique	1100
+Opening Art: Damage Up XII	1600	Unique	1200
+Opening Art: Damage Up XIII	1700	Unique	1300
+Opening Art: Damage Up XIV	1800	Unique	1400
+Opening Art: Damage Up XV	1900	Unique	1500
+Opening Art: Damage Up XVI	2000	Prime	1600
+Opening Art: Damage Up XVII	2100	Prime	1700
+Opening Art: Damage Up XVIII	2200	Prime	1800
+Opening Art: Damage Up XIX	2300	Prime	1900
+Opening Art: Damage Up XX	2500	Intergalactic	2000
+Melee Draw Surge I	300	Common	100
+Melee Draw Surge II	360	Common	100
+Melee Draw Surge III	420	Common	100
+Melee Draw Surge IV	480	Common	100
+Melee Draw Surge V	540	Common	100
+Melee Draw Surge VI	600	Rare	100
+Melee Draw Surge VII	660	Rare	100
+Melee Draw Surge VIII	720	Rare	100
+Melee Draw Surge IX	780	Rare	100
+Melee Draw Surge X	840	Rare	100
+Melee Draw Surge XI	900	Unique	1100
+Melee Draw Surge XII	960	Unique	1200
+Melee Draw Surge XIII	1020	Unique	1300
+Melee Draw Surge XIV	1080	Unique	1400
+Melee Draw Surge XV	1140	Unique	1500
+Melee Draw Surge XVI	1200	Prime	1600
+Melee Draw Surge XVII	1260	Prime	1700
+Melee Draw Surge XVIII	1320	Prime	1800
+Melee Draw Surge XIX	1380	Prime	1900
+Melee Draw Surge XX	1500	Intergalactic	2000
+Ranged Draw Surge I	300	Common	100
+Ranged Draw Surge II	360	Common	100
+Ranged Draw Surge III	420	Common	100
+Ranged Draw Surge IV	480	Common	100
+Ranged Draw Surge V	540	Common	100
+Ranged Draw Surge VI	600	Rare	100
+Ranged Draw Surge VII	660	Rare	100
+Ranged Draw Surge VIII	720	Rare	100
+Ranged Draw Surge IX	780	Rare	100
+Ranged Draw Surge X	840	Rare	100
+Ranged Draw Surge XI	900	Unique	1100
+Ranged Draw Surge XII	960	Unique	1200
+Ranged Draw Surge XIII	1020	Unique	1300
+Ranged Draw Surge XIV	1080	Unique	1400
+Ranged Draw Surge XV	1140	Unique	1500
+Ranged Draw Surge XVI	1200	Prime	1600
+Ranged Draw Surge XVII	1260	Prime	1700
+Ranged Draw Surge XVIII	1320	Prime	1800
+Ranged Draw Surge XIX	1380	Prime	1900
+Ranged Draw Surge XX	1500	Intergalactic	2000
+Art Draw Surge I	300	Common	100
+Art Draw Surge II	360	Common	100
+Art Draw Surge III	420	Common	100
+Art Draw Surge IV	480	Common	100
+Art Draw Surge V	540	Common	100
+Art Draw Surge VI	600	Rare	100
+Art Draw Surge VII	660	Rare	100
+Art Draw Surge VIII	720	Rare	100
+Art Draw Surge IX	780	Rare	100
+Art Draw Surge X	840	Rare	100
+Art Draw Surge XI	900	Unique	1100
+Art Draw Surge XII	960	Unique	1200
+Art Draw Surge XIII	1020	Unique	1300
+Art Draw Surge XIV	1080	Unique	1400
+Art Draw Surge XV	1140	Unique	1500
+Art Draw Surge XVI	1200	Prime	1600
+Art Draw Surge XVII	1260	Prime	1700
+Art Draw Surge XVIII	1320	Prime	1800
+Art Draw Surge XIX	1380	Prime	1900
+Art Draw Surge XX	1500	Intergalactic	2000
+Danger Surge I	300	Common	100
+Danger Surge II	360	Common	100
+Danger Surge III	420	Common	100
+Danger Surge IV	480	Common	100
+Danger Surge V	540	Common	100
+Danger Surge VI	600	Rare	100
+Danger Surge VII	660	Rare	100
+Danger Surge VIII	720	Rare	100
+Danger Surge IX	780	Rare	100
+Danger Surge X	840	Rare	100
+Danger Surge XI	900	Unique	1100
+Danger Surge XII	960	Unique	1200
+Danger Surge XIII	1020	Unique	1300
+Danger Surge XIV	1080	Unique	1400
+Danger Surge XV	1140	Unique	1500
+Danger Surge XVI	1200	Prime	1600
+Danger Surge XVII	1260	Prime	1700
+Danger Surge XVIII	1320	Prime	1800
+Danger Surge XIX	1380	Prime	1900
+Danger Surge XX	1500	Intergalactic	2000
+High Danger Surge I	300	Common	100
+High Danger Surge II	360	Common	100
+High Danger Surge III	420	Common	100
+High Danger Surge IV	480	Common	100
+High Danger Surge V	540	Common	100
+High Danger Surge VI	600	Rare	100
+High Danger Surge VII	660	Rare	100
+High Danger Surge VIII	720	Rare	100
+High Danger Surge IX	780	Rare	100
+High Danger Surge X	840	Rare	100
+High Danger Surge XI	900	Unique	1100
+High Danger Surge XII	960	Unique	1200
+High Danger Surge XIII	1020	Unique	1300
+High Danger Surge XIV	1080	Unique	1400
+High Danger Surge XV	1140	Unique	1500
+High Danger Surge XVI	1200	Prime	1600
+High Danger Surge XVII	1260	Prime	1700
+High Danger Surge XVIII	1320	Prime	1800
+High Danger Surge XIX	1380	Prime	1900
+High Danger Surge XX	1500	Intergalactic	2000
+Incapacitation Surge I	300	Common	100
+Incapacitation Surge II	360	Common	100
+Incapacitation Surge III	420	Common	100
+Incapacitation Surge IV	480	Common	100
+Incapacitation Surge V	540	Common	100
+Incapacitation Surge VI	600	Rare	100
+Incapacitation Surge VII	660	Rare	100
+Incapacitation Surge VIII	720	Rare	100
+Incapacitation Surge IX	780	Rare	100
+Incapacitation Surge X	840	Rare	100
+Incapacitation Surge XI	900	Unique	1100
+Incapacitation Surge XII	960	Unique	1200
+Incapacitation Surge XIII	1020	Unique	1300
+Incapacitation Surge XIV	1080	Unique	1400
+Incapacitation Surge XV	1140	Unique	1500
+Incapacitation Surge XVI	1200	Prime	1600
+Incapacitation Surge XVII	1260	Prime	1700
+Incapacitation Surge XVIII	1320	Prime	1800
+Incapacitation Surge XIX	1380	Prime	1900
+Incapacitation Surge XX	1500	Intergalactic	2000
+Critical Surge I	300	Common	100
+Critical Surge II	360	Common	100
+Critical Surge III	420	Common	100
+Critical Surge IV	480	Common	100
+Critical Surge V	540	Common	100
+Critical Surge VI	600	Rare	100
+Critical Surge VII	660	Rare	100
+Critical Surge VIII	720	Rare	100
+Critical Surge IX	780	Rare	100
+Critical Surge X	840	Rare	100
+Critical Surge XI	900	Unique	1100
+Critical Surge XII	960	Unique	1200
+Critical Surge XIII	1020	Unique	1300
+Critical Surge XIV	1080	Unique	1400
+Critical Surge XV	1140	Unique	1500
+Critical Surge XVI	1200	Prime	1600
+Critical Surge XVII	1260	Prime	1700
+Critical Surge XVIII	1320	Prime	1800
+Critical Surge XIX	1380	Prime	1900
+Critical Surge XX	1500	Intergalactic	2000
+Crush Surge I	300	Common	100
+Crush Surge II	360	Common	100
+Crush Surge III	420	Common	100
+Crush Surge IV	480	Common	100
+Crush Surge V	540	Common	100
+Crush Surge VI	600	Rare	100
+Crush Surge VII	660	Rare	100
+Crush Surge VIII	720	Rare	100
+Crush Surge IX	780	Rare	100
+Crush Surge X	840	Rare	100
+Crush Surge XI	900	Unique	1100
+Crush Surge XII	960	Unique	1200
+Crush Surge XIII	1020	Unique	1300
+Crush Surge XIV	1080	Unique	1400
+Crush Surge XV	1140	Unique	1500
+Crush Surge XVI	1200	Prime	1600
+Crush Surge XVII	1260	Prime	1700
+Crush Surge XVIII	1320	Prime	1800
+Crush Surge XIX	1380	Prime	1900
+Crush Surge XX	1500	Intergalactic	2000
+Underdog Surge I	300	Common	100
+Underdog Surge II	360	Common	100
+Underdog Surge III	420	Common	100
+Underdog Surge IV	480	Common	100
+Underdog Surge V	540	Common	100
+Underdog Surge VI	600	Rare	100
+Underdog Surge VII	660	Rare	100
+Underdog Surge VIII	720	Rare	100
+Underdog Surge IX	780	Rare	100
+Underdog Surge X	840	Rare	100
+Underdog Surge XI	900	Unique	1100
+Underdog Surge XII	960	Unique	1200
+Underdog Surge XIII	1020	Unique	1300
+Underdog Surge XIV	1080	Unique	1400
+Underdog Surge XV	1140	Unique	1500
+Underdog Surge XVI	1200	Prime	1600
+Underdog Surge XVII	1260	Prime	1700
+Underdog Surge XVIII	1320	Prime	1800
+Underdog Surge XIX	1380	Prime	1900
+Underdog Surge XX	1500	Intergalactic	2000
+Artful Execution Surge I	300	Common	100
+Artful Execution Surge II	360	Common	100
+Artful Execution Surge III	420	Common	100
+Artful Execution Surge IV	480	Common	100
+Artful Execution Surge V	540	Common	100
+Artful Execution Surge VI	600	Rare	100
+Artful Execution Surge VII	660	Rare	100
+Artful Execution Surge VIII	720	Rare	100
+Artful Execution Surge IX	780	Rare	100
+Artful Execution Surge X	840	Rare	100
+Artful Execution Surge XI	900	Unique	1100
+Artful Execution Surge XII	960	Unique	1200
+Artful Execution Surge XIII	1020	Unique	1300
+Artful Execution Surge XIV	1080	Unique	1400
+Artful Execution Surge XV	1140	Unique	1500
+Artful Execution Surge XVI	1200	Prime	1600
+Artful Execution Surge XVII	1260	Prime	1700
+Artful Execution Surge XVIII	1320	Prime	1800
+Artful Execution Surge XIX	1380	Prime	1900
+Artful Execution Surge XX	1500	Intergalactic	2000
+Aura Surge I	300	Common	100
+Aura Surge II	360	Common	100
+Aura Surge III	420	Common	100
+Aura Surge IV	480	Common	100
+Aura Surge V	540	Common	100
+Aura Surge VI	600	Rare	100
+Aura Surge VII	660	Rare	100
+Aura Surge VIII	720	Rare	100
+Aura Surge IX	780	Rare	100
+Aura Surge X	840	Rare	100
+Aura Surge XI	900	Unique	1100
+Aura Surge XII	960	Unique	1200
+Aura Surge XIII	1020	Unique	1300
+Aura Surge XIV	1080	Unique	1400
+Aura Surge XV	1140	Unique	1500
+Aura Surge XVI	1200	Prime	1600
+Aura Surge XVII	1260	Prime	1700
+Aura Surge XVIII	1320	Prime	1800
+Aura Surge XIX	1380	Prime	1900
+Aura Surge XX	1500	Intergalactic	2000
+Overdrive Surge I	300	Common	100
+Overdrive Surge II	360	Common	100
+Overdrive Surge III	420	Common	100
+Overdrive Surge IV	480	Common	100
+Overdrive Surge V	540	Common	100
+Overdrive Surge VI	600	Rare	100
+Overdrive Surge VII	660	Rare	100
+Overdrive Surge VIII	720	Rare	100
+Overdrive Surge IX	780	Rare	100
+Overdrive Surge X	840	Rare	100
+Overdrive Surge XI	900	Unique	1100
+Overdrive Surge XII	960	Unique	1200
+Overdrive Surge XIII	1020	Unique	1300
+Overdrive Surge XIV	1080	Unique	1400
+Overdrive Surge XV	1140	Unique	1500
+Overdrive Surge XVI	1200	Prime	1600
+Overdrive Surge XVII	1260	Prime	1700
+Overdrive Surge XVIII	1320	Prime	1800
+Overdrive Surge XIX	1380	Prime	1900
+Overdrive Surge XX	1500	Intergalactic	2000
+Reinvigorate I	300	Common	100
+Reinvigorate II	360	Common	100
+Reinvigorate III	420	Common	100
+Reinvigorate IV	480	Common	100
+Reinvigorate V	540	Common	100
+Reinvigorate VI	600	Rare	100
+Reinvigorate VII	660	Rare	100
+Reinvigorate VIII	720	Rare	100
+Reinvigorate IX	780	Rare	100
+Reinvigorate X	840	Rare	100
+Reinvigorate XI	900	Unique	1100
+Reinvigorate XII	960	Unique	1200
+Reinvigorate XIII	1020	Unique	1300
+Reinvigorate XIV	1080	Unique	1400
+Reinvigorate XV	1140	Unique	1500
+Reinvigorate XVI	1200	Prime	1600
+Reinvigorate XVII	1260	Prime	1700
+Reinvigorate XVIII	1320	Prime	1800
+Reinvigorate XIX	1380	Prime	1900
+Reinvigorate XX	1500	Intergalactic	2000
+EXP Boost I	500	Common	100
+EXP Boost II	600	Common	100
+EXP Boost III	700	Common	100
+EXP Boost IV	800	Common	100
+EXP Boost V	900	Common	100
+EXP Boost VI	1000	Rare	100
+EXP Boost VII	1100	Rare	100
+EXP Boost VIII	1200	Rare	100
+EXP Boost IX	1300	Rare	100
+EXP Boost X	1400	Rare	100
+EXP Boost XI	1500	Unique	1100
+EXP Boost XII	1600	Unique	1200
+EXP Boost XIII	1700	Unique	1300
+EXP Boost XIV	1800	Unique	1400
+EXP Boost XV	1900	Unique	1500
+EXP Boost XVI	2000	Prime	1600
+EXP Boost XVII	2100	Prime	1700
+EXP Boost XVIII	2200	Prime	1800
+EXP Boost XIX	2300	Prime	1900
+EXP Boost XX	2500	Intergalactic	2000
+Visual Cloaking I	300	Common	100
+Visual Cloaking II	360	Common	100
+Visual Cloaking III	420	Common	100
+Visual Cloaking IV	480	Common	100
+Visual Cloaking V	540	Common	100
+Visual Cloaking VI	600	Rare	100
+Visual Cloaking VII	660	Rare	100
+Visual Cloaking VIII	720	Rare	100
+Visual Cloaking IX	780	Rare	100
+Visual Cloaking X	840	Rare	100
+Visual Cloaking XI	900	Unique	1100
+Visual Cloaking XII	960	Unique	1200
+Visual Cloaking XIII	1020	Unique	1300
+Visual Cloaking XIV	1080	Unique	1400
+Visual Cloaking XV	1140	Unique	1500
+Visual Cloaking XVI	1200	Prime	1600
+Visual Cloaking XVII	1260	Prime	1700
+Visual Cloaking XVIII	1320	Prime	1800
+Visual Cloaking XIX	1380	Prime	1900
+Visual Cloaking XX	1500	Intergalactic	2000
+Aural Cloaking I	300	Common	100
+Aural Cloaking II	360	Common	100
+Aural Cloaking III	420	Common	100
+Aural Cloaking IV	480	Common	100
+Aural Cloaking V	540	Common	100
+Aural Cloaking VI	600	Rare	100
+Aural Cloaking VII	660	Rare	100
+Aural Cloaking VIII	720	Rare	100
+Aural Cloaking IX	780	Rare	100
+Aural Cloaking X	840	Rare	100
+Aural Cloaking XI	900	Unique	1100
+Aural Cloaking XII	960	Unique	1200
+Aural Cloaking XIII	1020	Unique	1300
+Aural Cloaking XIV	1080	Unique	1400
+Aural Cloaking XV	1140	Unique	1500
+Aural Cloaking XVI	1200	Prime	1600
+Aural Cloaking XVII	1260	Prime	1700
+Aural Cloaking XVIII	1320	Prime	1800
+Aural Cloaking XIX	1380	Prime	1900
+Aural Cloaking XX	1500	Intergalactic	2000
+Appendage Crusher	1000	Unique	100
+Crush: Gain TP I	500	Common	100
+Crush: Gain TP II	600	Common	100
+Crush: Gain TP III	700	Common	100
+Crush: Gain TP IV	800	Common	100
+Crush: Gain TP V	900	Common	100
+Crush: Gain TP VI	1000	Rare	100
+Crush: Gain TP VII	1100	Rare	100
+Crush: Gain TP VIII	1200	Rare	100
+Crush: Gain TP IX	1300	Rare	100
+Crush: Gain TP X	1400	Rare	100
+Crush: Gain TP XI	1500	Unique	1100
+Crush: Gain TP XII	1600	Unique	1200
+Crush: Gain TP XIII	1700	Unique	1300
+Crush: Gain TP XIV	1800	Unique	1400
+Crush: Gain TP XV	1900	Unique	1500
+Crush: Gain TP XVI	2000	Prime	1600
+Crush: Gain TP XVII	2100	Prime	1700
+Crush: Gain TP XVIII	2200	Prime	1800
+Crush: Gain TP XIX	2300	Prime	1900
+Crush: Gain TP XX	2500	Intergalactic	2000
+Ranged Appendage Damage I	300	Common	100
+Ranged Appendage Damage II	360	Common	100
+Ranged Appendage Damage III	420	Common	100
+Ranged Appendage Damage IV	480	Common	100
+Ranged Appendage Damage V	540	Common	100
+Ranged Appendage Damage VI	600	Rare	100
+Ranged Appendage Damage VII	660	Rare	100
+Ranged Appendage Damage VIII	720	Rare	100
+Ranged Appendage Damage IX	780	Rare	100
+Ranged Appendage Damage X	840	Rare	100
+Ranged Appendage Damage XI	900	Unique	1100
+Ranged Appendage Damage XII	960	Unique	1200
+Ranged Appendage Damage XIII	1020	Unique	1300
+Ranged Appendage Damage XIV	1080	Unique	1400
+Ranged Appendage Damage XV	1140	Unique	1500
+Ranged Appendage Damage XVI	1200	Prime	1600
+Ranged Appendage Damage XVII	1260	Prime	1700
+Ranged Appendage Damage XVIII	1320	Prime	1800
+Ranged Appendage Damage XIX	1380	Prime	1900
+Ranged Appendage Damage XX	1500	Intergalactic	2000
+Terrain Damage Reducer I	300	Common	100
+Terrain Damage Reducer II	360	Common	100
+Terrain Damage Reducer III	420	Common	100
+Terrain Damage Reducer IV	480	Common	100
+Terrain Damage Reducer V	540	Common	100
+Terrain Damage Reducer VI	600	Rare	100
+Terrain Damage Reducer VII	660	Rare	100
+Terrain Damage Reducer VIII	720	Rare	100
+Terrain Damage Reducer IX	780	Rare	100
+Terrain Damage Reducer X	840	Rare	100
+Terrain Damage Reducer XI	900	Unique	1100
+Terrain Damage Reducer XII	960	Unique	1200
+Terrain Damage Reducer XIII	1020	Unique	1300
+Terrain Damage Reducer XIV	1080	Unique	1400
+Terrain Damage Reducer XV	1140	Unique	1500
+Terrain Damage Reducer XVI	1200	Prime	1600
+Terrain Damage Reducer XVII	1260	Prime	1700
+Terrain Damage Reducer XVIII	1320	Prime	1800
+Terrain Damage Reducer XIX	1380	Prime	1900
+Terrain Damage Reducer XX	1500	Intergalactic	2000
+Antispike I	300	Common	100
+Antispike II	360	Common	100
+Antispike III	420	Common	100
+Antispike IV	480	Common	100
+Antispike V	540	Common	100
+Antispike VI	600	Rare	100
+Antispike VII	660	Rare	100
+Antispike VIII	720	Rare	100
+Antispike IX	780	Rare	100
+Antispike X	840	Rare	100
+Antispike XI	900	Unique	1100
+Antispike XII	960	Unique	1200
+Antispike XIII	1020	Unique	1300
+Antispike XIV	1080	Unique	1400
+Antispike XV	1140	Unique	1500
+Antispike XVI	1200	Prime	1600
+Antispike XVII	1260	Prime	1700
+Antispike XVIII	1320	Prime	1800
+Antispike XIX	1380	Prime	1900
+Antispike XX	1500	Intergalactic	2000
+Resistance Reducer I	300	Common	100
+Resistance Reducer II	360	Common	100
+Resistance Reducer III	420	Common	100
+Resistance Reducer IV	480	Common	100
+Resistance Reducer V	540	Common	100
+Resistance Reducer VI	600	Rare	100
+Resistance Reducer VII	660	Rare	100
+Resistance Reducer VIII	720	Rare	100
+Resistance Reducer IX	780	Rare	100
+Resistance Reducer X	840	Rare	100
+Resistance Reducer XI	900	Unique	1100
+Resistance Reducer XII	960	Unique	1200
+Resistance Reducer XIII	1020	Unique	1300
+Resistance Reducer XIV	1080	Unique	1400
+Resistance Reducer XV	1140	Unique	1500
+Resistance Reducer XVI	1200	Prime	1600
+Resistance Reducer XVII	1260	Prime	1700
+Resistance Reducer XVIII	1320	Prime	1800
+Resistance Reducer XIX	1380	Prime	1900
+Resistance Reducer XX	1500	Intergalactic	2000
+Treasure Sensor I	300	Common	100
+Treasure Sensor II	360	Common	100
+Treasure Sensor III	420	Common	100
+Treasure Sensor IV	480	Common	100
+Treasure Sensor V	540	Common	100
+Treasure Sensor VI	600	Rare	100
+Treasure Sensor VII	660	Rare	100
+Treasure Sensor VIII	720	Rare	100
+Treasure Sensor IX	780	Rare	100
+Treasure Sensor X	840	Rare	100
+Treasure Sensor XI	900	Unique	1100
+Treasure Sensor XII	960	Unique	1200
+Treasure Sensor XIII	1020	Unique	1300
+Treasure Sensor XIV	1080	Unique	1400
+Treasure Sensor XV	1140	Unique	1500
+Treasure Sensor XVI	1200	Prime	1600
+Treasure Sensor XVII	1260	Prime	1700
+Treasure Sensor XVIII	1320	Prime	1800
+Treasure Sensor XIX	1380	Prime	1900
+Treasure Sensor XX	1500	Intergalactic	2000
+Untouchable Dash I	300	Common	100
+Untouchable Dash II	360	Common	100
+Untouchable Dash III	420	Common	100
+Untouchable Dash IV	480	Common	100
+Untouchable Dash V	540	Common	100
+Untouchable Dash VI	600	Rare	100
+Untouchable Dash VII	660	Rare	100
+Untouchable Dash VIII	720	Rare	100
+Untouchable Dash IX	780	Rare	100
+Untouchable Dash X	840	Rare	100
+Untouchable Dash XI	900	Unique	1100
+Untouchable Dash XII	960	Unique	1200
+Untouchable Dash XIII	1020	Unique	1300
+Untouchable Dash XIV	1080	Unique	1400
+Untouchable Dash XV	1140	Unique	1500
+Untouchable Dash XVI	1200	Prime	1600
+Untouchable Dash XVII	1260	Prime	1700
+Untouchable Dash XVIII	1320	Prime	1800
+Untouchable Dash XIX	1380	Prime	1900
+Untouchable Dash XX	1500	Intergalactic	2000
+Night Vision I	300	Common	100
+Night Vision II	360	Common	100
+Night Vision III	420	Common	100
+Night Vision IV	480	Common	100
+Night Vision V	540	Common	100
+Night Vision VI	600	Rare	100
+Night Vision VII	660	Rare	100
+Night Vision VIII	720	Rare	100
+Night Vision IX	780	Rare	100
+Night Vision X	840	Rare	100
+Night Vision XI	900	Unique	1100
+Night Vision XII	960	Unique	1200
+Night Vision XIII	1020	Unique	1300
+Night Vision XIV	1080	Unique	1400
+Night Vision XV	1140	Unique	1500
+Night Vision XVI	1200	Prime	1600
+Night Vision XVII	1260	Prime	1700
+Night Vision XVIII	1320	Prime	1800
+Night Vision XIX	1380	Prime	1900
+Night Vision XX	1500	Intergalactic	2000
+Focused Evasion I	300	Common	100
+Focused Evasion II	360	Common	100
+Focused Evasion III	420	Common	100
+Focused Evasion IV	480	Common	100
+Focused Evasion V	540	Common	100
+Focused Evasion VI	600	Rare	100
+Focused Evasion VII	660	Rare	100
+Focused Evasion VIII	720	Rare	100
+Focused Evasion IX	780	Rare	100
+Focused Evasion X	840	Rare	100
+Focused Evasion XI	900	Unique	1100
+Focused Evasion XII	960	Unique	1200
+Focused Evasion XIII	1020	Unique	1300
+Focused Evasion XIV	1080	Unique	1400
+Focused Evasion XV	1140	Unique	1500
+Focused Evasion XVI	1200	Prime	1600
+Focused Evasion XVII	1260	Prime	1700
+Focused Evasion XVIII	1320	Prime	1800
+Focused Evasion XIX	1380	Prime	1900
+Focused Evasion XX	1500	Intergalactic	2000
+Fog Screen	1000	Unique	100
+Rain Screen	1000	Unique	100
+Heavy Rain Screen	1000	Unique	100
+Heat Wave Screen	1000	Unique	100
+Sandstorm Screen	1000	Unique	100
+Thunderstorm Screen	1000	Unique	100
+EM Storm Screen	1000	Unique	100
+Energy Mist Screen	1000	Unique	100
+Rising Energy Mist Screen	1000	Unique	100
+Brimstone Rain Screen	1000	Unique	100
+Aurora Screen	1000	Unique	100
+Crimson Aurora Screen	1000	Unique	100
+Spore Screen	1000	Unique	100
+Meteor Shower Screen	1000	Unique	100
+Weather Master I	300	Common	100
+Weather Master II	360	Common	100
+Weather Master III	420	Common	100
+Weather Master IV	480	Common	100
+Weather Master V	540	Common	100
+Weather Master VI	600	Rare	100
+Weather Master VII	660	Rare	100
+Weather Master VIII	720	Rare	100
+Weather Master IX	780	Rare	100
+Weather Master X	840	Rare	100
+Weather Master XI	900	Unique	1100
+Weather Master XII	960	Unique	1200
+Weather Master XIII	1020	Unique	1300
+Weather Master XIV	1080	Unique	1400
+Weather Master XV	1140	Unique	1500
+Weather Master XVI	1200	Prime	1600
+Weather Master XVII	1260	Prime	1700
+Weather Master XVIII	1320	Prime	1800
+Weather Master XIX	1380	Prime	1900
+Weather Master XX	1500	Intergalactic	2000
+SpecUp.HP-MAX I	100	Common	100
+SpecUp.HP-MAX II	120	Common	100
+SpecUp.HP-MAX III	140	Common	100
+SpecUp.HP-MAX IV	160	Common	100
+SpecUp.HP-MAX V	180	Common	100
+SpecUp.HP-MAX VI	200	Rare	100
+SpecUp.HP-MAX VII	220	Rare	100
+SpecUp.HP-MAX VIII	240	Rare	100
+SpecUp.HP-MAX IX	260	Rare	100
+SpecUp.HP-MAX X	280	Rare	100
+SpecUp.HP-MAX XI	300	Unique	1100
+SpecUp.HP-MAX XII	320	Unique	1200
+SpecUp.HP-MAX XIII	340	Unique	1300
+SpecUp.HP-MAX XIV	360	Unique	1400
+SpecUp.HP-MAX XV	380	Unique	1500
+SpecUp.HP-MAX XVI	400	Prime	1600
+SpecUp.HP-MAX XVII	420	Prime	1700
+SpecUp.HP-MAX XVIII	440	Prime	1800
+SpecUp.HP-MAX XIX	460	Prime	1900
+SpecUp.HP-MAX XX	500	Intergalactic	2000
+SpecUp.GP-MAX I	50	Common	100
+SpecUp.GP-MAX II	60	Common	100
+SpecUp.GP-MAX III	70	Common	100
+SpecUp.GP-MAX IV	80	Common	100
+SpecUp.GP-MAX V	90	Common	100
+SpecUp.GP-MAX VI	100	Rare	100
+SpecUp.GP-MAX VII	110	Rare	100
+SpecUp.GP-MAX VIII	120	Rare	100
+SpecUp.GP-MAX IX	130	Rare	100
+SpecUp.GP-MAX X	140	Rare	100
+SpecUp.GP-MAX XI	150	Unique	100
+SpecUp.GP-MAX XII	160	Unique	100
+SpecUp.GP-MAX XIII	170	Unique	100
+SpecUp.GP-MAX XIV	180	Unique	100
+SpecUp.GP-MAX XV	190	Unique	100
+SpecUp.GP-MAX XVI	200	Prime	100
+SpecUp.GP-MAX XVII	210	Prime	100
+SpecUp.GP-MAX XVIII	220	Prime	100
+SpecUp.GP-MAX XIX	230	Prime	100
+SpecUp.GP-MAX XX	250	Intergalactic	100
+SpecUp.M-ACC I	50	Common	100
+SpecUp.M-ACC II	60	Common	100
+SpecUp.M-ACC III	70	Common	100
+SpecUp.M-ACC IV	80	Common	100
+SpecUp.M-ACC V	90	Common	100
+SpecUp.M-ACC VI	100	Rare	100
+SpecUp.M-ACC VII	110	Rare	100
+SpecUp.M-ACC VIII	120	Rare	100
+SpecUp.M-ACC IX	130	Rare	100
+SpecUp.M-ACC X	140	Rare	100
+SpecUp.M-ACC XI	150	Unique	1100
+SpecUp.M-ACC XII	160	Unique	1200
+SpecUp.M-ACC XIII	170	Unique	1300
+SpecUp.M-ACC XIV	180	Unique	1400
+SpecUp.M-ACC XV	190	Unique	1500
+SpecUp.M-ACC XVI	200	Prime	1600
+SpecUp.M-ACC XVII	210	Prime	1700
+SpecUp.M-ACC XVIII	220	Prime	1800
+SpecUp.M-ACC XIX	230	Prime	1900
+SpecUp.M-ACC XX	250	Intergalactic	2000
+SpecUp.R-ACC I	50	Common	100
+SpecUp.R-ACC II	60	Common	100
+SpecUp.R-ACC III	70	Common	100
+SpecUp.R-ACC IV	80	Common	100
+SpecUp.R-ACC V	90	Common	100
+SpecUp.R-ACC VI	100	Rare	100
+SpecUp.R-ACC VII	110	Rare	100
+SpecUp.R-ACC VIII	120	Rare	100
+SpecUp.R-ACC IX	130	Rare	100
+SpecUp.R-ACC X	140	Rare	100
+SpecUp.R-ACC XI	150	Unique	1100
+SpecUp.R-ACC XII	160	Unique	1200
+SpecUp.R-ACC XIII	170	Unique	1300
+SpecUp.R-ACC XIV	180	Unique	1400
+SpecUp.R-ACC XV	190	Unique	1500
+SpecUp.R-ACC XVI	200	Prime	1600
+SpecUp.R-ACC XVII	210	Prime	1700
+SpecUp.R-ACC XVIII	220	Prime	1800
+SpecUp.R-ACC XIX	230	Prime	1900
+SpecUp.R-ACC XX	250	Intergalactic	2000
+SpecUp.EVA I	50	Common	100
+SpecUp.EVA II	60	Common	100
+SpecUp.EVA III	70	Common	100
+SpecUp.EVA IV	80	Common	100
+SpecUp.EVA V	90	Common	100
+SpecUp.EVA VI	100	Rare	100
+SpecUp.EVA VII	110	Rare	100
+SpecUp.EVA VIII	120	Rare	100
+SpecUp.EVA IX	130	Rare	100
+SpecUp.EVA X	140	Rare	100
+SpecUp.EVA XI	150	Unique	1100
+SpecUp.EVA XII	160	Unique	1200
+SpecUp.EVA XIII	170	Unique	1300
+SpecUp.EVA XIV	180	Unique	1400
+SpecUp.EVA XV	190	Unique	1500
+SpecUp.EVA XVI	200	Prime	1600
+SpecUp.EVA XVII	210	Prime	1700
+SpecUp.EVA XVIII	220	Prime	1800
+SpecUp.EVA XIX	230	Prime	1900
+SpecUp.EVA XX	250	Intergalactic	2000
+SpecUp.M-ATK I	50	Common	100
+SpecUp.M-ATK II	60	Common	100
+SpecUp.M-ATK III	70	Common	100
+SpecUp.M-ATK IV	80	Common	100
+SpecUp.M-ATK V	90	Common	100
+SpecUp.M-ATK VI	100	Rare	100
+SpecUp.M-ATK VII	110	Rare	100
+SpecUp.M-ATK VIII	120	Rare	100
+SpecUp.M-ATK IX	130	Rare	100
+SpecUp.M-ATK X	140	Rare	100
+SpecUp.M-ATK XI	150	Unique	1100
+SpecUp.M-ATK XII	160	Unique	1200
+SpecUp.M-ATK XIII	170	Unique	1300
+SpecUp.M-ATK XIV	180	Unique	1400
+SpecUp.M-ATK XV	190	Unique	1500
+SpecUp.M-ATK XVI	200	Prime	1600
+SpecUp.M-ATK XVII	210	Prime	1700
+SpecUp.M-ATK XVIII	220	Prime	1800
+SpecUp.M-ATK XIX	230	Prime	1900
+SpecUp.M-ATK XX	250	Intergalactic	2000
+SpecUp.R-ATK I	50	Common	100
+SpecUp.R-ATK II	60	Common	100
+SpecUp.R-ATK III	70	Common	100
+SpecUp.R-ATK IV	80	Common	100
+SpecUp.R-ATK V	90	Common	100
+SpecUp.R-ATK VI	100	Rare	100
+SpecUp.R-ATK VII	110	Rare	100
+SpecUp.R-ATK VIII	120	Rare	100
+SpecUp.R-ATK IX	130	Rare	100
+SpecUp.R-ATK X	140	Rare	100
+SpecUp.R-ATK XI	150	Unique	1100
+SpecUp.R-ATK XII	160	Unique	1200
+SpecUp.R-ATK XIII	170	Unique	1300
+SpecUp.R-ATK XIV	180	Unique	1400
+SpecUp.R-ATK XV	190	Unique	1500
+SpecUp.R-ATK XVI	200	Prime	1600
+SpecUp.R-ATK XVII	210	Prime	1700
+SpecUp.R-ATK XVIII	220	Prime	1800
+SpecUp.R-ATK XIX	230	Prime	1900
+SpecUp.R-ATK XX	250	Intergalactic	2000
+SpecUp.PTL I	50	Common	100
+SpecUp.PTL II	60	Common	100
+SpecUp.PTL III	70	Common	100
+SpecUp.PTL IV	80	Common	100
+SpecUp.PTL V	90	Common	100
+SpecUp.PTL VI	100	Rare	100
+SpecUp.PTL VII	110	Rare	100
+SpecUp.PTL VIII	120	Rare	100
+SpecUp.PTL IX	130	Rare	100
+SpecUp.PTL X	140	Rare	100
+SpecUp.PTL XI	150	Unique	1100
+SpecUp.PTL XII	160	Unique	1200
+SpecUp.PTL XIII	170	Unique	1300
+SpecUp.PTL XIV	180	Unique	1400
+SpecUp.PTL XV	190	Unique	1500
+SpecUp.PTL XVI	200	Prime	1600
+SpecUp.PTL XVII	210	Prime	1700
+SpecUp.PTL XVIII	220	Prime	1800
+SpecUp.PTL XIX	230	Prime	1900
+SpecUp.PTL XX	250	Intergalactic	2000
+SpecUp.APP-HP I	100	Common	100
+SpecUp.APP-HP II	120	Common	100
+SpecUp.APP-HP III	140	Common	100
+SpecUp.APP-HP IV	160	Common	100
+SpecUp.APP-HP V	180	Common	100
+SpecUp.APP-HP VI	200	Rare	100
+SpecUp.APP-HP VII	220	Rare	100
+SpecUp.APP-HP VIII	240	Rare	100
+SpecUp.APP-HP IX	260	Rare	100
+SpecUp.APP-HP X	280	Rare	100
+SpecUp.APP-HP XI	300	Unique	1100
+SpecUp.APP-HP XII	320	Unique	1200
+SpecUp.APP-HP XIII	340	Unique	1300
+SpecUp.APP-HP XIV	360	Unique	1400
+SpecUp.APP-HP XV	380	Unique	1500
+SpecUp.APP-HP XVI	400	Prime	1600
+SpecUp.APP-HP XVII	420	Prime	1700
+SpecUp.APP-HP XVIII	440	Prime	1800
+SpecUp.APP-HP XIX	460	Prime	1900
+SpecUp.APP-HP XX	500	Intergalactic	2000
+Boost.HP-MAX I	500	Common	100
+Boost.HP-MAX II	600	Common	100
+Boost.HP-MAX III	700	Common	100
+Boost.HP-MAX IV	800	Common	100
+Boost.HP-MAX V	900	Common	100
+Boost.HP-MAX VI	1000	Rare	100
+Boost.HP-MAX VII	1100	Rare	100
+Boost.HP-MAX VIII	1200	Rare	100
+Boost.HP-MAX IX	1300	Rare	100
+Boost.HP-MAX X	1400	Rare	100
+Boost.HP-MAX XI	1500	Unique	1100
+Boost.HP-MAX XII	1600	Unique	1200
+Boost.HP-MAX XIII	1700	Unique	1300
+Boost.HP-MAX XIV	1800	Unique	1400
+Boost.HP-MAX XV	1900	Unique	1500
+Boost.HP-MAX XVI	2000	Prime	1600
+Boost.HP-MAX XVII	2100	Prime	1700
+Boost.HP-MAX XVIII	2200	Prime	1800
+Boost.HP-MAX XIX	2300	Prime	1900
+Boost.HP-MAX XX	2500	Intergalactic	2000
+Boost.GP-MAX I	300	Common	100
+Boost.GP-MAX II	360	Common	100
+Boost.GP-MAX III	420	Common	100
+Boost.GP-MAX IV	480	Common	100
+Boost.GP-MAX V	540	Common	100
+Boost.GP-MAX VI	600	Rare	100
+Boost.GP-MAX VII	660	Rare	100
+Boost.GP-MAX VIII	720	Rare	100
+Boost.GP-MAX IX	780	Rare	100
+Boost.GP-MAX X	840	Rare	100
+Boost.GP-MAX XI	900	Unique	100
+Boost.GP-MAX XII	960	Unique	100
+Boost.GP-MAX XIII	1020	Unique	100
+Boost.GP-MAX XIV	1080	Unique	100
+Boost.GP-MAX XV	1140	Unique	100
+Boost.GP-MAX XVI	1200	Prime	100
+Boost.GP-MAX XVII	1260	Prime	100
+Boost.GP-MAX XVIII	1320	Prime	100
+Boost.GP-MAX XIX	1380	Prime	100
+Boost.GP-MAX XX	1500	Intergalactic	100
+Boost.M-ACC I	300	Common	100
+Boost.M-ACC II	360	Common	100
+Boost.M-ACC III	420	Common	100
+Boost.M-ACC IV	480	Common	100
+Boost.M-ACC V	540	Common	100
+Boost.M-ACC VI	600	Rare	100
+Boost.M-ACC VII	660	Rare	100
+Boost.M-ACC VIII	720	Rare	100
+Boost.M-ACC IX	780	Rare	100
+Boost.M-ACC X	840	Rare	100
+Boost.M-ACC XI	900	Unique	1100
+Boost.M-ACC XII	960	Unique	1200
+Boost.M-ACC XIII	1020	Unique	1300
+Boost.M-ACC XIV	1080	Unique	1400
+Boost.M-ACC XV	1140	Unique	1500
+Boost.M-ACC XVI	1200	Prime	1600
+Boost.M-ACC XVII	1260	Prime	1700
+Boost.M-ACC XVIII	1320	Prime	1800
+Boost.M-ACC XIX	1380	Prime	1900
+Boost.M-ACC XX	1500	Intergalactic	2000
+Boost.R-ACC I	300	Common	100
+Boost.R-ACC II	360	Common	100
+Boost.R-ACC III	420	Common	100
+Boost.R-ACC IV	480	Common	100
+Boost.R-ACC V	540	Common	100
+Boost.R-ACC VI	600	Rare	100
+Boost.R-ACC VII	660	Rare	100
+Boost.R-ACC VIII	720	Rare	100
+Boost.R-ACC IX	780	Rare	100
+Boost.R-ACC X	840	Rare	100
+Boost.R-ACC XI	900	Unique	1100
+Boost.R-ACC XII	960	Unique	1200
+Boost.R-ACC XIII	1020	Unique	1300
+Boost.R-ACC XIV	1080	Unique	1400
+Boost.R-ACC XV	1140	Unique	1500
+Boost.R-ACC XVI	1200	Prime	1600
+Boost.R-ACC XVII	1260	Prime	1700
+Boost.R-ACC XVIII	1320	Prime	1800
+Boost.R-ACC XIX	1380	Prime	1900
+Boost.R-ACC XX	1500	Intergalactic	2000
+Boost.EVA I	300	Common	100
+Boost.EVA II	360	Common	100
+Boost.EVA III	420	Common	100
+Boost.EVA IV	480	Common	100
+Boost.EVA V	540	Common	100
+Boost.EVA VI	600	Rare	100
+Boost.EVA VII	660	Rare	100
+Boost.EVA VIII	720	Rare	100
+Boost.EVA IX	780	Rare	100
+Boost.EVA X	840	Rare	100
+Boost.EVA XI	900	Unique	1100
+Boost.EVA XII	960	Unique	1200
+Boost.EVA XIII	1020	Unique	1300
+Boost.EVA XIV	1080	Unique	1400
+Boost.EVA XV	1140	Unique	1500
+Boost.EVA XVI	1200	Prime	1600
+Boost.EVA XVII	1260	Prime	1700
+Boost.EVA XVIII	1320	Prime	1800
+Boost.EVA XIX	1380	Prime	1900
+Boost.EVA XX	1500	Intergalactic	2000
+Boost.M-ATK I	300	Common	100
+Boost.M-ATK II	360	Common	100
+Boost.M-ATK III	420	Common	100
+Boost.M-ATK IV	480	Common	100
+Boost.M-ATK V	540	Common	100
+Boost.M-ATK VI	600	Rare	100
+Boost.M-ATK VII	660	Rare	100
+Boost.M-ATK VIII	720	Rare	100
+Boost.M-ATK IX	780	Rare	100
+Boost.M-ATK X	840	Rare	100
+Boost.M-ATK XI	900	Unique	1100
+Boost.M-ATK XII	960	Unique	1200
+Boost.M-ATK XIII	1020	Unique	1300
+Boost.M-ATK XIV	1080	Unique	1400
+Boost.M-ATK XV	1140	Unique	1500
+Boost.M-ATK XVI	1200	Prime	1600
+Boost.M-ATK XVII	1260	Prime	1700
+Boost.M-ATK XVIII	1320	Prime	1800
+Boost.M-ATK XIX	1380	Prime	1900
+Boost.M-ATK XX	1500	Intergalactic	2000
+Boost.R-ATK I	300	Common	100
+Boost.R-ATK II	360	Common	100
+Boost.R-ATK III	420	Common	100
+Boost.R-ATK IV	480	Common	100
+Boost.R-ATK V	540	Common	100
+Boost.R-ATK VI	600	Rare	100
+Boost.R-ATK VII	660	Rare	100
+Boost.R-ATK VIII	720	Rare	100
+Boost.R-ATK IX	780	Rare	100
+Boost.R-ATK X	840	Rare	100
+Boost.R-ATK XI	900	Unique	1100
+Boost.R-ATK XII	960	Unique	1200
+Boost.R-ATK XIII	1020	Unique	1300
+Boost.R-ATK XIV	1080	Unique	1400
+Boost.R-ATK XV	1140	Unique	1500
+Boost.R-ATK XVI	1200	Prime	1600
+Boost.R-ATK XVII	1260	Prime	1700
+Boost.R-ATK XVIII	1320	Prime	1800
+Boost.R-ATK XIX	1380	Prime	1900
+Boost.R-ATK XX	1500	Intergalactic	2000
+Boost.PTL I	300	Common	100
+Boost.PTL II	360	Common	100
+Boost.PTL III	420	Common	100
+Boost.PTL IV	480	Common	100
+Boost.PTL V	540	Common	100
+Boost.PTL VI	600	Rare	100
+Boost.PTL VII	660	Rare	100
+Boost.PTL VIII	720	Rare	100
+Boost.PTL IX	780	Rare	100
+Boost.PTL X	840	Rare	100
+Boost.PTL XI	900	Unique	1100
+Boost.PTL XII	960	Unique	1200
+Boost.PTL XIII	1020	Unique	1300
+Boost.PTL XIV	1080	Unique	1400
+Boost.PTL XV	1140	Unique	1500
+Boost.PTL XVI	1200	Prime	1600
+Boost.PTL XVII	1260	Prime	1700
+Boost.PTL XVIII	1320	Prime	1800
+Boost.PTL XIX	1380	Prime	1900
+Boost.PTL XX	1500	Intergalactic	2000
+SpecUp.PHYS-RES I	300	Common	100
+SpecUp.PHYS-RES II	360	Common	100
+SpecUp.PHYS-RES III	420	Common	100
+SpecUp.PHYS-RES IV	480	Common	100
+SpecUp.PHYS-RES V	540	Common	100
+SpecUp.PHYS-RES VI	600	Rare	100
+SpecUp.PHYS-RES VII	660	Rare	100
+SpecUp.PHYS-RES VIII	720	Rare	100
+SpecUp.PHYS-RES IX	780	Rare	100
+SpecUp.PHYS-RES X	840	Rare	100
+SpecUp.PHYS-RES XI	900	Unique	1100
+SpecUp.PHYS-RES XII	960	Unique	1200
+SpecUp.PHYS-RES XIII	1020	Unique	1300
+SpecUp.PHYS-RES XIV	1080	Unique	1400
+SpecUp.PHYS-RES XV	1140	Unique	1500
+SpecUp.PHYS-RES XVI	1200	Prime	1600
+SpecUp.PHYS-RES XVII	1260	Prime	1700
+SpecUp.PHYS-RES XVIII	1320	Prime	1800
+SpecUp.PHYS-RES XIX	1380	Prime	1900
+SpecUp.PHYS-RES XX	1500	Intergalactic	2000
+SpecUp.BEAM-RES I	300	Common	100
+SpecUp.BEAM-RES II	360	Common	100
+SpecUp.BEAM-RES III	420	Common	100
+SpecUp.BEAM-RES IV	480	Common	100
+SpecUp.BEAM-RES V	540	Common	100
+SpecUp.BEAM-RES VI	600	Rare	100
+SpecUp.BEAM-RES VII	660	Rare	100
+SpecUp.BEAM-RES VIII	720	Rare	100
+SpecUp.BEAM-RES IX	780	Rare	100
+SpecUp.BEAM-RES X	840	Rare	100
+SpecUp.BEAM-RES XI	900	Unique	1100
+SpecUp.BEAM-RES XII	960	Unique	1200
+SpecUp.BEAM-RES XIII	1020	Unique	1300
+SpecUp.BEAM-RES XIV	1080	Unique	1400
+SpecUp.BEAM-RES XV	1140	Unique	1500
+SpecUp.BEAM-RES XVI	1200	Prime	1600
+SpecUp.BEAM-RES XVII	1260	Prime	1700
+SpecUp.BEAM-RES XVIII	1320	Prime	1800
+SpecUp.BEAM-RES XIX	1380	Prime	1900
+SpecUp.BEAM-RES XX	1500	Intergalactic	2000
+SpecUp.ELEC-RES I	300	Common	100
+SpecUp.ELEC-RES II	360	Common	100
+SpecUp.ELEC-RES III	420	Common	100
+SpecUp.ELEC-RES IV	480	Common	100
+SpecUp.ELEC-RES V	540	Common	100
+SpecUp.ELEC-RES VI	600	Rare	100
+SpecUp.ELEC-RES VII	660	Rare	100
+SpecUp.ELEC-RES VIII	720	Rare	100
+SpecUp.ELEC-RES IX	780	Rare	100
+SpecUp.ELEC-RES X	840	Rare	100
+SpecUp.ELEC-RES XI	900	Unique	1100
+SpecUp.ELEC-RES XII	960	Unique	1200
+SpecUp.ELEC-RES XIII	1020	Unique	1300
+SpecUp.ELEC-RES XIV	1080	Unique	1400
+SpecUp.ELEC-RES XV	1140	Unique	1500
+SpecUp.ELEC-RES XVI	1200	Prime	1600
+SpecUp.ELEC-RES XVII	1260	Prime	1700
+SpecUp.ELEC-RES XVIII	1320	Prime	1800
+SpecUp.ELEC-RES XIX	1380	Prime	1900
+SpecUp.ELEC-RES XX	1500	Intergalactic	2000
+SpecUp.THERM-RES I	300	Common	100
+SpecUp.THERM-RES II	360	Common	100
+SpecUp.THERM-RES III	420	Common	100
+SpecUp.THERM-RES IV	480	Common	100
+SpecUp.THERM-RES V	540	Common	100
+SpecUp.THERM-RES VI	600	Rare	100
+SpecUp.THERM-RES VII	660	Rare	100
+SpecUp.THERM-RES VIII	720	Rare	100
+SpecUp.THERM-RES IX	780	Rare	100
+SpecUp.THERM-RES X	840	Rare	100
+SpecUp.THERM-RES XI	900	Unique	1100
+SpecUp.THERM-RES XII	960	Unique	1200
+SpecUp.THERM-RES XIII	1020	Unique	1300
+SpecUp.THERM-RES XIV	1080	Unique	1400
+SpecUp.THERM-RES XV	1140	Unique	1500
+SpecUp.THERM-RES XVI	1200	Prime	1600
+SpecUp.THERM-RES XVII	1260	Prime	1700
+SpecUp.THERM-RES XVIII	1320	Prime	1800
+SpecUp.THERM-RES XIX	1380	Prime	1900
+SpecUp.THERM-RES XX	1500	Intergalactic	2000
+SpecUp.ETHER-RES I	300	Common	100
+SpecUp.ETHER-RES II	360	Common	100
+SpecUp.ETHER-RES III	420	Common	100
+SpecUp.ETHER-RES IV	480	Common	100
+SpecUp.ETHER-RES V	540	Common	100
+SpecUp.ETHER-RES VI	600	Rare	100
+SpecUp.ETHER-RES VII	660	Rare	100
+SpecUp.ETHER-RES VIII	720	Rare	100
+SpecUp.ETHER-RES IX	780	Rare	100
+SpecUp.ETHER-RES X	840	Rare	100
+SpecUp.ETHER-RES XI	900	Unique	1100
+SpecUp.ETHER-RES XII	960	Unique	1200
+SpecUp.ETHER-RES XIII	1020	Unique	1300
+SpecUp.ETHER-RES XIV	1080	Unique	1400
+SpecUp.ETHER-RES XV	1140	Unique	1500
+SpecUp.ETHER-RES XVI	1200	Prime	1600
+SpecUp.ETHER-RES XVII	1260	Prime	1700
+SpecUp.ETHER-RES XVIII	1320	Prime	1800
+SpecUp.ETHER-RES XIX	1380	Prime	1900
+SpecUp.ETHER-RES XX	1500	Intergalactic	2000
+SpecUp.GRAV-RES I	300	Common	100
+SpecUp.GRAV-RES II	360	Common	100
+SpecUp.GRAV-RES III	420	Common	100
+SpecUp.GRAV-RES IV	480	Common	100
+SpecUp.GRAV-RES V	540	Common	100
+SpecUp.GRAV-RES VI	600	Rare	100
+SpecUp.GRAV-RES VII	660	Rare	100
+SpecUp.GRAV-RES VIII	720	Rare	100
+SpecUp.GRAV-RES IX	780	Rare	100
+SpecUp.GRAV-RES X	840	Rare	100
+SpecUp.GRAV-RES XI	900	Unique	1100
+SpecUp.GRAV-RES XII	960	Unique	1200
+SpecUp.GRAV-RES XIII	1020	Unique	1300
+SpecUp.GRAV-RES XIV	1080	Unique	1400
+SpecUp.GRAV-RES XV	1140	Unique	1500
+SpecUp.GRAV-RES XVI	1200	Prime	1600
+SpecUp.GRAV-RES XVII	1260	Prime	1700
+SpecUp.GRAV-RES XVIII	1320	Prime	1800
+SpecUp.GRAV-RES XIX	1380	Prime	1900
+SpecUp.GRAV-RES XX	1500	Intergalactic	2000
+SpecUp.FUEL-MAX I	500	Common	100
+SpecUp.FUEL-MAX II	600	Common	100
+SpecUp.FUEL-MAX III	700	Common	100
+SpecUp.FUEL-MAX IV	800	Common	100
+SpecUp.FUEL-MAX V	900	Common	100
+SpecUp.FUEL-MAX VI	1000	Rare	100
+SpecUp.FUEL-MAX VII	1100	Rare	100
+SpecUp.FUEL-MAX VIII	1200	Rare	100
+SpecUp.FUEL-MAX IX	1300	Rare	100
+SpecUp.FUEL-MAX X	1400	Rare	100
+SpecUp.FUEL-MAX XI	1500	Unique	1100
+SpecUp.FUEL-MAX XII	1600	Unique	1200
+SpecUp.FUEL-MAX XIII	1700	Unique	1300
+SpecUp.FUEL-MAX XIV	1800	Unique	1400
+SpecUp.FUEL-MAX XV	1900	Unique	1500
+SpecUp.FUEL-MAX XVI	2000	Prime	1600
+SpecUp.FUEL-MAX XVII	2100	Prime	1700
+SpecUp.FUEL-MAX XVIII	2200	Prime	1800
+SpecUp.FUEL-MAX XIX	2300	Prime	1900
+SpecUp.FUEL-MAX XX	2500	Intergalactic	2000
+SpecUp.FUEL-COST I	500	Common	100
+SpecUp.FUEL-COST II	600	Common	100
+SpecUp.FUEL-COST III	700	Common	100
+SpecUp.FUEL-COST IV	800	Common	100
+SpecUp.FUEL-COST V	900	Common	100
+SpecUp.FUEL-COST VI	1000	Rare	100
+SpecUp.FUEL-COST VII	1100	Rare	100
+SpecUp.FUEL-COST VIII	1200	Rare	100
+SpecUp.FUEL-COST IX	1300	Rare	100
+SpecUp.FUEL-COST X	1400	Rare	100
+SpecUp.FUEL-COST XI	1500	Unique	1100
+SpecUp.FUEL-COST XII	1600	Unique	1200
+SpecUp.FUEL-COST XIII	1700	Unique	1300
+SpecUp.FUEL-COST XIV	1800	Unique	1400
+SpecUp.FUEL-COST XV	1900	Unique	1500
+SpecUp.FUEL-COST XVI	2000	Prime	1600
+SpecUp.FUEL-COST XVII	2100	Prime	1700
+SpecUp.FUEL-COST XVIII	2200	Prime	1800
+SpecUp.FUEL-COST XIX	2300	Prime	1900
+SpecUp.FUEL-COST XX	2500	Intergalactic	2000
+SpecUp.FUEL-PARK I	500	Common	100
+SpecUp.FUEL-PARK II	600	Common	100
+SpecUp.FUEL-PARK III	700	Common	100
+SpecUp.FUEL-PARK IV	800	Common	100
+SpecUp.FUEL-PARK V	900	Common	100
+SpecUp.FUEL-PARK VI	1000	Rare	100
+SpecUp.FUEL-PARK VII	1100	Rare	100
+SpecUp.FUEL-PARK VIII	1200	Rare	100
+SpecUp.FUEL-PARK IX	1300	Rare	100
+SpecUp.FUEL-PARK X	1400	Rare	100
+SpecUp.FUEL-PARK XI	1500	Unique	1100
+SpecUp.FUEL-PARK XII	1600	Unique	1200
+SpecUp.FUEL-PARK XIII	1700	Unique	1300
+SpecUp.FUEL-PARK XIV	1800	Unique	1400
+SpecUp.FUEL-PARK XV	1900	Unique	1500
+SpecUp.FUEL-PARK XVI	2000	Prime	1600
+SpecUp.FUEL-PARK XVII	2100	Prime	1700
+SpecUp.FUEL-PARK XVIII	2200	Prime	1800
+SpecUp.FUEL-PARK XIX	2300	Prime	1900
+SpecUp.FUEL-PARK XX	2500	Intergalactic	2000
+SpecUp.FUEL-BIND I	500	Common	100
+SpecUp.FUEL-BIND II	600	Common	100
+SpecUp.FUEL-BIND III	700	Common	100
+SpecUp.FUEL-BIND IV	800	Common	100
+SpecUp.FUEL-BIND V	900	Common	100
+SpecUp.FUEL-BIND VI	1000	Rare	100
+SpecUp.FUEL-BIND VII	1100	Rare	100
+SpecUp.FUEL-BIND VIII	1200	Rare	100
+SpecUp.FUEL-BIND IX	1300	Rare	100
+SpecUp.FUEL-BIND X	1400	Rare	100
+SpecUp.FUEL-BIND XI	1500	Unique	1100
+SpecUp.FUEL-BIND XII	1600	Unique	1200
+SpecUp.FUEL-BIND XIII	1700	Unique	1300
+SpecUp.FUEL-BIND XIV	1800	Unique	1400
+SpecUp.FUEL-BIND XV	1900	Unique	1500
+SpecUp.FUEL-BIND XVI	2000	Prime	1600
+SpecUp.FUEL-BIND XVII	2100	Prime	1700
+SpecUp.FUEL-BIND XVIII	2200	Prime	1800
+SpecUp.FUEL-BIND XIX	2300	Prime	1900
+SpecUp.FUEL-BIND XX	2500	Intergalactic	2000
+SpecUp.FUEL-OD I	500	Common	100
+SpecUp.FUEL-OD II	600	Common	100
+SpecUp.FUEL-OD III	700	Common	100
+SpecUp.FUEL-OD IV	800	Common	100
+SpecUp.FUEL-OD V	900	Common	100
+SpecUp.FUEL-OD VI	1000	Rare	100
+SpecUp.FUEL-OD VII	1100	Rare	100
+SpecUp.FUEL-OD VIII	1200	Rare	100
+SpecUp.FUEL-OD IX	1300	Rare	100
+SpecUp.FUEL-OD X	1400	Rare	100
+SpecUp.FUEL-OD XI	1500	Unique	1100
+SpecUp.FUEL-OD XII	1600	Unique	1200
+SpecUp.FUEL-OD XIII	1700	Unique	1300
+SpecUp.FUEL-OD XIV	1800	Unique	1400
+SpecUp.FUEL-OD XV	1900	Unique	1500
+SpecUp.FUEL-OD XVI	2000	Prime	1600
+SpecUp.FUEL-OD XVII	2100	Prime	1700
+SpecUp.FUEL-OD XVIII	2200	Prime	1800
+SpecUp.FUEL-OD XIX	2300	Prime	1900
+SpecUp.FUEL-OD XX	2500	Intergalactic	2000
+Custom.WP-ATK I	500	Common	100
+Custom.WP-ATK II	600	Common	100
+Custom.WP-ATK III	700	Common	100
+Custom.WP-ATK IV	800	Common	100
+Custom.WP-ATK V	900	Common	100
+Custom.WP-ATK VI	1000	Rare	100
+Custom.WP-ATK VII	1100	Rare	100
+Custom.WP-ATK VIII	1200	Rare	100
+Custom.WP-ATK IX	1300	Rare	100
+Custom.WP-ATK X	1400	Rare	100
+Custom.WP-ATK XI	1500	Unique	1100
+Custom.WP-ATK XII	1600	Unique	1200
+Custom.WP-ATK XIII	1700	Unique	1300
+Custom.WP-ATK XIV	1800	Unique	1400
+Custom.WP-ATK XV	1900	Unique	1500
+Custom.WP-ATK XVI	2000	Prime	1600
+Custom.WP-ATK XVII	2100	Prime	1700
+Custom.WP-ATK XVIII	2200	Prime	1800
+Custom.WP-ATK XIX	2300	Prime	1900
+Custom.WP-ATK XX	2500	Intergalactic	2000
+Custom.WP-STABLE I	500	Common	100
+Custom.WP-STABLE II	600	Common	100
+Custom.WP-STABLE III	700	Common	100
+Custom.WP-STABLE IV	800	Common	100
+Custom.WP-STABLE V	900	Common	100
+Custom.WP-STABLE VI	1000	Rare	100
+Custom.WP-STABLE VII	1100	Rare	100
+Custom.WP-STABLE VIII	1200	Rare	100
+Custom.WP-STABLE IX	1300	Rare	100
+Custom.WP-STABLE X	1400	Rare	100
+Custom.WP-STABLE XI	1500	Unique	1100
+Custom.WP-STABLE XII	1600	Unique	1200
+Custom.WP-STABLE XIII	1700	Unique	1300
+Custom.WP-STABLE XIV	1800	Unique	1400
+Custom.WP-STABLE XV	1900	Unique	1500
+Custom.WP-STABLE XVI	2000	Prime	1600
+Custom.WP-STABLE XVII	2100	Prime	1700
+Custom.WP-STABLE XVIII	2200	Prime	1800
+Custom.WP-STABLE XIX	2300	Prime	1900
+Custom.WP-STABLE XX	2500	Intergalactic	2000
+Custom.WP-DESTABLE I	500	Common	100
+Custom.WP-DESTABLE II	600	Common	100
+Custom.WP-DESTABLE III	700	Common	100
+Custom.WP-DESTABLE IV	800	Common	100
+Custom.WP-DESTABLE V	900	Common	100
+Custom.WP-DESTABLE VI	1000	Rare	100
+Custom.WP-DESTABLE VII	1100	Rare	100
+Custom.WP-DESTABLE VIII	1200	Rare	100
+Custom.WP-DESTABLE IX	1300	Rare	100
+Custom.WP-DESTABLE X	1400	Rare	100
+Custom.WP-DESTABLE XI	1500	Unique	1100
+Custom.WP-DESTABLE XII	1600	Unique	1200
+Custom.WP-DESTABLE XIII	1700	Unique	1300
+Custom.WP-DESTABLE XIV	1800	Unique	1400
+Custom.WP-DESTABLE XV	1900	Unique	1500
+Custom.WP-DESTABLE XVI	2000	Prime	1600
+Custom.WP-DESTABLE XVII	2100	Prime	1700
+Custom.WP-DESTABLE XVIII	2200	Prime	1800
+Custom.WP-DESTABLE XIX	2300	Prime	1900
+Custom.WP-DESTABLE XX	2500	Intergalactic	2000
+Custom.WP-RFL-MAG I	500	Common	\N
+Custom.WP-RFL-MAG II	600	Common	\N
+Custom.WP-RFL-MAG III	700	Common	\N
+Custom.WP-RFL-MAG IV	800	Common	\N
+Custom.WP-RFL-MAG V	900	Common	\N
+Custom.WP-RFL-MAG VI	1000	Rare	\N
+Custom.WP-RFL-MAG VII	1100	Rare	\N
+Custom.WP-RFL-MAG VIII	1200	Rare	\N
+Custom.WP-RFL-MAG IX	1300	Rare	\N
+Custom.WP-RFL-MAG X	1400	Rare	\N
+Custom.WP-RFL-MAG XI	1500	Unique	\N
+Custom.WP-RFL-MAG XII	1600	Unique	\N
+Custom.WP-RFL-MAG XIII	1700	Unique	\N
+Custom.WP-RFL-MAG XIV	1800	Unique	\N
+Custom.WP-RFL-MAG XV	1900	Unique	\N
+Custom.WP-RFL-MAG XVI	2000	Prime	\N
+Custom.WP-RFL-MAG XVII	2100	Prime	\N
+Custom.WP-RFL-MAG XVIII	2200	Prime	\N
+Custom.WP-RFL-MAG XIX	2300	Prime	\N
+Custom.WP-RFL-MAG XX	2500	Intergalactic	\N
+Custom.WP-MSL-MAG I	500	Common	\N
+Custom.WP-MSL-MAG II	600	Common	\N
+Custom.WP-MSL-MAG III	700	Common	\N
+Custom.WP-MSL-MAG IV	800	Common	\N
+Custom.WP-MSL-MAG V	900	Common	\N
+Custom.WP-MSL-MAG VI	1000	Rare	\N
+Custom.WP-MSL-MAG VII	1100	Rare	\N
+Custom.WP-MSL-MAG VIII	1200	Rare	\N
+Custom.WP-MSL-MAG IX	1300	Rare	\N
+Custom.WP-MSL-MAG X	1400	Rare	\N
+Custom.WP-MSL-MAG XI	1500	Unique	\N
+Custom.WP-MSL-MAG XII	1600	Unique	\N
+Custom.WP-MSL-MAG XIII	1700	Unique	\N
+Custom.WP-MSL-MAG XIV	1800	Unique	\N
+Custom.WP-MSL-MAG XV	1900	Unique	\N
+Custom.WP-MSL-MAG XVI	2000	Prime	\N
+Custom.WP-MSL-MAG XVII	2100	Prime	\N
+Custom.WP-MSL-MAG XVIII	2200	Prime	\N
+Custom.WP-MSL-MAG XIX	2300	Prime	\N
+Custom.WP-MSL-MAG XX	2500	Intergalactic	\N
+Custom.WP-M-GP	1000	Unique	100
+Custom.WP-R-GP	1000	Unique	100
+Custom.WP-SPEED I	500	Common	100
+Custom.WP-SPEED II	600	Common	100
+Custom.WP-SPEED III	700	Common	100
+Custom.WP-SPEED IV	800	Common	100
+Custom.WP-SPEED V	900	Common	100
+Custom.WP-SPEED VI	1000	Rare	100
+Custom.WP-SPEED VII	1100	Rare	100
+Custom.WP-SPEED VIII	1200	Rare	100
+Custom.WP-SPEED IX	1300	Rare	100
+Custom.WP-SPEED X	1400	Rare	100
+Custom.WP-SPEED XI	1500	Unique	1100
+Custom.WP-SPEED XII	1600	Unique	1200
+Custom.WP-SPEED XIII	1700	Unique	1300
+Custom.WP-SPEED XIV	1800	Unique	1400
+Custom.WP-SPEED XV	1900	Unique	1500
+Custom.WP-SPEED XVI	2000	Prime	1600
+Custom.WP-SPEED XVII	2100	Prime	1700
+Custom.WP-SPEED XVIII	2200	Prime	1800
+Custom.WP-SPEED XIX	2300	Prime	1900
+Custom.WP-SPEED XX	2500	Intergalactic	2000
+Custom.WP-R-RANGE I	500	Common	100
+Custom.WP-R-RANGE II	600	Common	100
+Custom.WP-R-RANGE III	700	Common	100
+Custom.WP-R-RANGE IV	800	Common	100
+Custom.WP-R-RANGE V	900	Common	100
+Custom.WP-R-RANGE VI	1000	Rare	100
+Custom.WP-R-RANGE VII	1100	Rare	100
+Custom.WP-R-RANGE VIII	1200	Rare	100
+Custom.WP-R-RANGE IX	1300	Rare	100
+Custom.WP-R-RANGE X	1400	Rare	100
+Custom.WP-R-RANGE XI	1500	Unique	1100
+Custom.WP-R-RANGE XII	1600	Unique	1200
+Custom.WP-R-RANGE XIII	1700	Unique	1300
+Custom.WP-R-RANGE XIV	1800	Unique	1400
+Custom.WP-R-RANGE XV	1900	Unique	1500
+Custom.WP-R-RANGE XVI	2000	Prime	1600
+Custom.WP-R-RANGE XVII	2100	Prime	1700
+Custom.WP-R-RANGE XVIII	2200	Prime	1800
+Custom.WP-R-RANGE XIX	2300	Prime	1900
+Custom.WP-R-RANGE XX	2500	Intergalactic	2000
+Custom.WP-FUEL I	500	Common	100
+Custom.WP-FUEL II	600	Common	100
+Custom.WP-FUEL III	700	Common	100
+Custom.WP-FUEL IV	800	Common	100
+Custom.WP-FUEL V	900	Common	100
+Custom.WP-FUEL VI	1000	Rare	100
+Custom.WP-FUEL VII	1100	Rare	100
+Custom.WP-FUEL VIII	1200	Rare	100
+Custom.WP-FUEL IX	1300	Rare	100
+Custom.WP-FUEL X	1400	Rare	100
+Custom.WP-FUEL XI	1500	Unique	1100
+Custom.WP-FUEL XII	1600	Unique	1200
+Custom.WP-FUEL XIII	1700	Unique	1300
+Custom.WP-FUEL XIV	1800	Unique	1400
+Custom.WP-FUEL XV	1900	Unique	1500
+Custom.WP-FUEL XVI	2000	Prime	1600
+Custom.WP-FUEL XVII	2100	Prime	1700
+Custom.WP-FUEL XVIII	2200	Prime	1800
+Custom.WP-FUEL XIX	2300	Prime	1900
+Custom.WP-FUEL XX	2500	Intergalactic	2000
+Resist.STAGGER I	300	Common	100
+Resist.STAGGER II	360	Common	100
+Resist.STAGGER III	420	Common	100
+Resist.STAGGER IV	480	Common	100
+Resist.STAGGER V	540	Common	100
+Resist.STAGGER VI	600	Rare	100
+Resist.STAGGER VII	660	Rare	100
+Resist.STAGGER VIII	720	Rare	100
+Resist.STAGGER IX	780	Rare	100
+Resist.STAGGER X	840	Rare	100
+Resist.STAGGER XI	900	Unique	1100
+Resist.STAGGER XII	960	Unique	1200
+Resist.STAGGER XIII	1020	Unique	1300
+Resist.STAGGER XIV	1080	Unique	1400
+Resist.STAGGER XV	1140	Unique	1500
+Resist.STAGGER XVI	1200	Prime	1600
+Resist.STAGGER XVII	1260	Prime	1700
+Resist.STAGGER XVIII	1320	Prime	1800
+Resist.STAGGER XIX	1380	Prime	1900
+Resist.STAGGER XX	1500	Intergalactic	2000
+Resist.FLINCH I	300	Common	100
+Resist.FLINCH II	360	Common	100
+Resist.FLINCH III	420	Common	100
+Resist.FLINCH IV	480	Common	100
+Resist.FLINCH V	540	Common	100
+Resist.FLINCH VI	600	Rare	100
+Resist.FLINCH VII	660	Rare	100
+Resist.FLINCH VIII	720	Rare	100
+Resist.FLINCH IX	780	Rare	100
+Resist.FLINCH X	840	Rare	100
+Resist.FLINCH XI	900	Unique	1100
+Resist.FLINCH XII	960	Unique	1200
+Resist.FLINCH XIII	1020	Unique	1300
+Resist.FLINCH XIV	1080	Unique	1400
+Resist.FLINCH XV	1140	Unique	1500
+Resist.FLINCH XVI	1200	Prime	1600
+Resist.FLINCH XVII	1260	Prime	1700
+Resist.FLINCH XVIII	1320	Prime	1800
+Resist.FLINCH XIX	1380	Prime	1900
+Resist.FLINCH XX	1500	Intergalactic	2000
+Resist.TOPPLE I	300	Common	100
+Resist.TOPPLE II	360	Common	100
+Resist.TOPPLE III	420	Common	100
+Resist.TOPPLE IV	480	Common	100
+Resist.TOPPLE V	540	Common	100
+Resist.TOPPLE VI	600	Rare	100
+Resist.TOPPLE VII	660	Rare	100
+Resist.TOPPLE VIII	720	Rare	100
+Resist.TOPPLE IX	780	Rare	100
+Resist.TOPPLE X	840	Rare	100
+Resist.TOPPLE XI	900	Unique	1100
+Resist.TOPPLE XII	960	Unique	1200
+Resist.TOPPLE XIII	1020	Unique	1300
+Resist.TOPPLE XIV	1080	Unique	1400
+Resist.TOPPLE XV	1140	Unique	1500
+Resist.TOPPLE XVI	1200	Prime	1600
+Resist.TOPPLE XVII	1260	Prime	1700
+Resist.TOPPLE XVIII	1320	Prime	1800
+Resist.TOPPLE XIX	1380	Prime	1900
+Resist.TOPPLE XX	1500	Intergalactic	2000
+Resist.KNOCKBACK I	300	Common	100
+Resist.KNOCKBACK II	360	Common	100
+Resist.KNOCKBACK III	420	Common	100
+Resist.KNOCKBACK IV	480	Common	100
+Resist.KNOCKBACK V	540	Common	100
+Resist.KNOCKBACK VI	600	Rare	100
+Resist.KNOCKBACK VII	660	Rare	100
+Resist.KNOCKBACK VIII	720	Rare	100
+Resist.KNOCKBACK IX	780	Rare	100
+Resist.KNOCKBACK X	840	Rare	100
+Resist.KNOCKBACK XI	900	Unique	1100
+Resist.KNOCKBACK XII	960	Unique	1200
+Resist.KNOCKBACK XIII	1020	Unique	1300
+Resist.KNOCKBACK XIV	1080	Unique	1400
+Resist.KNOCKBACK XV	1140	Unique	1500
+Resist.KNOCKBACK XVI	1200	Prime	1600
+Resist.KNOCKBACK XVII	1260	Prime	1700
+Resist.KNOCKBACK XVIII	1320	Prime	1800
+Resist.KNOCKBACK XIX	1380	Prime	1900
+Resist.KNOCKBACK XX	1500	Intergalactic	2000
+Resist.LAUNCH I	300	Common	100
+Resist.LAUNCH II	360	Common	100
+Resist.LAUNCH III	420	Common	100
+Resist.LAUNCH IV	480	Common	100
+Resist.LAUNCH V	540	Common	100
+Resist.LAUNCH VI	600	Rare	100
+Resist.LAUNCH VII	660	Rare	100
+Resist.LAUNCH VIII	720	Rare	100
+Resist.LAUNCH IX	780	Rare	100
+Resist.LAUNCH X	840	Rare	100
+Resist.LAUNCH XI	900	Unique	1100
+Resist.LAUNCH XII	960	Unique	1200
+Resist.LAUNCH XIII	1020	Unique	1300
+Resist.LAUNCH XIV	1080	Unique	1400
+Resist.LAUNCH XV	1140	Unique	1500
+Resist.LAUNCH XVI	1200	Prime	1600
+Resist.LAUNCH XVII	1260	Prime	1700
+Resist.LAUNCH XVIII	1320	Prime	1800
+Resist.LAUNCH XIX	1380	Prime	1900
+Resist.LAUNCH XX	1500	Intergalactic	2000
+Resist.STUN I	300	Common	100
+Resist.STUN II	360	Common	100
+Resist.STUN III	420	Common	100
+Resist.STUN IV	480	Common	100
+Resist.STUN V	540	Common	100
+Resist.STUN VI	600	Rare	100
+Resist.STUN VII	660	Rare	100
+Resist.STUN VIII	720	Rare	100
+Resist.STUN IX	780	Rare	100
+Resist.STUN X	840	Rare	100
+Resist.STUN XI	900	Unique	1100
+Resist.STUN XII	960	Unique	1200
+Resist.STUN XIII	1020	Unique	1300
+Resist.STUN XIV	1080	Unique	1400
+Resist.STUN XV	1140	Unique	1500
+Resist.STUN XVI	1200	Prime	1600
+Resist.STUN XVII	1260	Prime	1700
+Resist.STUN XVIII	1320	Prime	1800
+Resist.STUN XIX	1380	Prime	1900
+Resist.STUN XX	1500	Intergalactic	2000
+Resist.SLEEP I	300	Common	100
+Resist.SLEEP II	360	Common	100
+Resist.SLEEP III	420	Common	100
+Resist.SLEEP IV	480	Common	100
+Resist.SLEEP V	540	Common	100
+Resist.SLEEP VI	600	Rare	100
+Resist.SLEEP VII	660	Rare	100
+Resist.SLEEP VIII	720	Rare	100
+Resist.SLEEP IX	780	Rare	100
+Resist.SLEEP X	840	Rare	100
+Resist.SLEEP XI	900	Unique	1100
+Resist.SLEEP XII	960	Unique	1200
+Resist.SLEEP XIII	1020	Unique	1300
+Resist.SLEEP XIV	1080	Unique	1400
+Resist.SLEEP XV	1140	Unique	1500
+Resist.SLEEP XVI	1200	Prime	1600
+Resist.SLEEP XVII	1260	Prime	1700
+Resist.SLEEP XVIII	1320	Prime	1800
+Resist.SLEEP XIX	1380	Prime	1900
+Resist.SLEEP XX	1500	Intergalactic	2000
+Resist.TAUNT I	300	Common	100
+Resist.TAUNT II	360	Common	100
+Resist.TAUNT III	420	Common	100
+Resist.TAUNT IV	480	Common	100
+Resist.TAUNT V	540	Common	100
+Resist.TAUNT VI	600	Rare	100
+Resist.TAUNT VII	660	Rare	100
+Resist.TAUNT VIII	720	Rare	100
+Resist.TAUNT IX	780	Rare	100
+Resist.TAUNT X	840	Rare	100
+Resist.TAUNT XI	900	Unique	1100
+Resist.TAUNT XII	960	Unique	1200
+Resist.TAUNT XIII	1020	Unique	1300
+Resist.TAUNT XIV	1080	Unique	1400
+Resist.TAUNT XV	1140	Unique	1500
+Resist.TAUNT XVI	1200	Prime	1600
+Resist.TAUNT XVII	1260	Prime	1700
+Resist.TAUNT XVIII	1320	Prime	1800
+Resist.TAUNT XIX	1380	Prime	1900
+Resist.TAUNT XX	1500	Intergalactic	2000
+Resist.CONTROL I	300	Common	100
+Resist.CONTROL II	360	Common	100
+Resist.CONTROL III	420	Common	100
+Resist.CONTROL IV	480	Common	100
+Resist.CONTROL V	540	Common	100
+Resist.CONTROL VI	600	Rare	100
+Resist.CONTROL VII	660	Rare	100
+Resist.CONTROL VIII	720	Rare	100
+Resist.CONTROL IX	780	Rare	100
+Resist.CONTROL X	840	Rare	100
+Resist.CONTROL XI	900	Unique	1100
+Resist.CONTROL XII	960	Unique	1200
+Resist.CONTROL XIII	1020	Unique	1300
+Resist.CONTROL XIV	1080	Unique	1400
+Resist.CONTROL XV	1140	Unique	1500
+Resist.CONTROL XVI	1200	Prime	1600
+Resist.CONTROL XVII	1260	Prime	1700
+Resist.CONTROL XVIII	1320	Prime	1800
+Resist.CONTROL XIX	1380	Prime	1900
+Resist.CONTROL XX	1500	Intergalactic	2000
+Resist.VIRUS I	300	Common	100
+Resist.VIRUS II	360	Common	100
+Resist.VIRUS III	420	Common	100
+Resist.VIRUS IV	480	Common	100
+Resist.VIRUS V	540	Common	100
+Resist.VIRUS VI	600	Rare	100
+Resist.VIRUS VII	660	Rare	100
+Resist.VIRUS VIII	720	Rare	100
+Resist.VIRUS IX	780	Rare	100
+Resist.VIRUS X	840	Rare	100
+Resist.VIRUS XI	900	Unique	1100
+Resist.VIRUS XII	960	Unique	1200
+Resist.VIRUS XIII	1020	Unique	1300
+Resist.VIRUS XIV	1080	Unique	1400
+Resist.VIRUS XV	1140	Unique	1500
+Resist.VIRUS XVI	1200	Prime	1600
+Resist.VIRUS XVII	1260	Prime	1700
+Resist.VIRUS XVIII	1320	Prime	1800
+Resist.VIRUS XIX	1380	Prime	1900
+Resist.VIRUS XX	1500	Intergalactic	2000
+Resist.BLACKOUT I	300	Common	100
+Resist.BLACKOUT II	360	Common	100
+Resist.BLACKOUT III	420	Common	100
+Resist.BLACKOUT IV	480	Common	100
+Resist.BLACKOUT V	540	Common	100
+Resist.BLACKOUT VI	600	Rare	100
+Resist.BLACKOUT VII	660	Rare	100
+Resist.BLACKOUT VIII	720	Rare	100
+Resist.BLACKOUT IX	780	Rare	100
+Resist.BLACKOUT X	840	Rare	100
+Resist.BLACKOUT XI	900	Unique	1100
+Resist.BLACKOUT XII	960	Unique	1200
+Resist.BLACKOUT XIII	1020	Unique	1300
+Resist.BLACKOUT XIV	1080	Unique	1400
+Resist.BLACKOUT XV	1140	Unique	1500
+Resist.BLACKOUT XVI	1200	Prime	1600
+Resist.BLACKOUT XVII	1260	Prime	1700
+Resist.BLACKOUT XVIII	1320	Prime	1800
+Resist.BLACKOUT XIX	1380	Prime	1900
+Resist.BLACKOUT XX	1500	Intergalactic	2000
+Resist.FATIGUE I	300	Common	100
+Resist.FATIGUE II	360	Common	100
+Resist.FATIGUE III	420	Common	100
+Resist.FATIGUE IV	480	Common	100
+Resist.FATIGUE V	540	Common	100
+Resist.FATIGUE VI	600	Rare	100
+Resist.FATIGUE VII	660	Rare	100
+Resist.FATIGUE VIII	720	Rare	100
+Resist.FATIGUE IX	780	Rare	100
+Resist.FATIGUE X	840	Rare	100
+Resist.FATIGUE XI	900	Unique	1100
+Resist.FATIGUE XII	960	Unique	1200
+Resist.FATIGUE XIII	1020	Unique	1300
+Resist.FATIGUE XIV	1080	Unique	1400
+Resist.FATIGUE XV	1140	Unique	1500
+Resist.FATIGUE XVI	1200	Prime	1600
+Resist.FATIGUE XVII	1260	Prime	1700
+Resist.FATIGUE XVIII	1320	Prime	1800
+Resist.FATIGUE XIX	1380	Prime	1900
+Resist.FATIGUE XX	1500	Intergalactic	2000
+Resist.SLOW-ARTS I	300	Common	100
+Resist.SLOW-ARTS II	360	Common	100
+Resist.SLOW-ARTS III	420	Common	100
+Resist.SLOW-ARTS IV	480	Common	100
+Resist.SLOW-ARTS V	540	Common	100
+Resist.SLOW-ARTS VI	600	Rare	100
+Resist.SLOW-ARTS VII	660	Rare	100
+Resist.SLOW-ARTS VIII	720	Rare	100
+Resist.SLOW-ARTS IX	780	Rare	100
+Resist.SLOW-ARTS X	840	Rare	100
+Resist.SLOW-ARTS XI	900	Unique	1100
+Resist.SLOW-ARTS XII	960	Unique	1200
+Resist.SLOW-ARTS XIII	1020	Unique	1300
+Resist.SLOW-ARTS XIV	1080	Unique	1400
+Resist.SLOW-ARTS XV	1140	Unique	1500
+Resist.SLOW-ARTS XVI	1200	Prime	1600
+Resist.SLOW-ARTS XVII	1260	Prime	1700
+Resist.SLOW-ARTS XVIII	1320	Prime	1800
+Resist.SLOW-ARTS XIX	1380	Prime	1900
+Resist.SLOW-ARTS XX	1500	Intergalactic	2000
+Resist.PHYS-DOWN I	300	Common	100
+Resist.PHYS-DOWN II	360	Common	100
+Resist.PHYS-DOWN III	420	Common	100
+Resist.PHYS-DOWN IV	480	Common	100
+Resist.PHYS-DOWN V	540	Common	100
+Resist.PHYS-DOWN VI	600	Rare	100
+Resist.PHYS-DOWN VII	660	Rare	100
+Resist.PHYS-DOWN VIII	720	Rare	100
+Resist.PHYS-DOWN IX	780	Rare	100
+Resist.PHYS-DOWN X	840	Rare	100
+Resist.PHYS-DOWN XI	900	Unique	1100
+Resist.PHYS-DOWN XII	960	Unique	1200
+Resist.PHYS-DOWN XIII	1020	Unique	1300
+Resist.PHYS-DOWN XIV	1080	Unique	1400
+Resist.PHYS-DOWN XV	1140	Unique	1500
+Resist.PHYS-DOWN XVI	1200	Prime	1600
+Resist.PHYS-DOWN XVII	1260	Prime	1700
+Resist.PHYS-DOWN XVIII	1320	Prime	1800
+Resist.PHYS-DOWN XIX	1380	Prime	1900
+Resist.PHYS-DOWN XX	1500	Intergalactic	2000
+Resist.BEAM-DOWN I	300	Common	100
+Resist.BEAM-DOWN II	360	Common	100
+Resist.BEAM-DOWN III	420	Common	100
+Resist.BEAM-DOWN IV	480	Common	100
+Resist.BEAM-DOWN V	540	Common	100
+Resist.BEAM-DOWN VI	600	Rare	100
+Resist.BEAM-DOWN VII	660	Rare	100
+Resist.BEAM-DOWN VIII	720	Rare	100
+Resist.BEAM-DOWN IX	780	Rare	100
+Resist.BEAM-DOWN X	840	Rare	100
+Resist.BEAM-DOWN XI	900	Unique	1100
+Resist.BEAM-DOWN XII	960	Unique	1200
+Resist.BEAM-DOWN XIII	1020	Unique	1300
+Resist.BEAM-DOWN XIV	1080	Unique	1400
+Resist.BEAM-DOWN XV	1140	Unique	1500
+Resist.BEAM-DOWN XVI	1200	Prime	1600
+Resist.BEAM-DOWN XVII	1260	Prime	1700
+Resist.BEAM-DOWN XVIII	1320	Prime	1800
+Resist.BEAM-DOWN XIX	1380	Prime	1900
+Resist.BEAM-DOWN XX	1500	Intergalactic	2000
+Resist.THERM-DOWN I	300	Common	100
+Resist.THERM-DOWN II	360	Common	100
+Resist.THERM-DOWN III	420	Common	100
+Resist.THERM-DOWN IV	480	Common	100
+Resist.THERM-DOWN V	540	Common	100
+Resist.THERM-DOWN VI	600	Rare	100
+Resist.THERM-DOWN VII	660	Rare	100
+Resist.THERM-DOWN VIII	720	Rare	100
+Resist.THERM-DOWN IX	780	Rare	100
+Resist.THERM-DOWN X	840	Rare	100
+Resist.THERM-DOWN XI	900	Unique	1100
+Resist.THERM-DOWN XII	960	Unique	1200
+Resist.THERM-DOWN XIII	1020	Unique	1300
+Resist.THERM-DOWN XIV	1080	Unique	1400
+Resist.THERM-DOWN XV	1140	Unique	1500
+Resist.THERM-DOWN XVI	1200	Prime	1600
+Resist.THERM-DOWN XVII	1260	Prime	1700
+Resist.THERM-DOWN XVIII	1320	Prime	1800
+Resist.THERM-DOWN XIX	1380	Prime	1900
+Resist.THERM-DOWN XX	1500	Intergalactic	2000
+Resist.ELEC-DOWN I	300	Common	100
+Resist.ELEC-DOWN II	360	Common	100
+Resist.ELEC-DOWN III	420	Common	100
+Resist.ELEC-DOWN IV	480	Common	100
+Resist.ELEC-DOWN V	540	Common	100
+Resist.ELEC-DOWN VI	600	Rare	100
+Resist.ELEC-DOWN VII	660	Rare	100
+Resist.ELEC-DOWN VIII	720	Rare	100
+Resist.ELEC-DOWN IX	780	Rare	100
+Resist.ELEC-DOWN X	840	Rare	100
+Resist.ELEC-DOWN XI	900	Unique	1100
+Resist.ELEC-DOWN XII	960	Unique	1200
+Resist.ELEC-DOWN XIII	1020	Unique	1300
+Resist.ELEC-DOWN XIV	1080	Unique	1400
+Resist.ELEC-DOWN XV	1140	Unique	1500
+Resist.ELEC-DOWN XVI	1200	Prime	1600
+Resist.ELEC-DOWN XVII	1260	Prime	1700
+Resist.ELEC-DOWN XVIII	1320	Prime	1800
+Resist.ELEC-DOWN XIX	1380	Prime	1900
+Resist.ELEC-DOWN XX	1500	Intergalactic	2000
+Resist.ETHER-DOWN I	300	Common	100
+Resist.ETHER-DOWN II	360	Common	100
+Resist.ETHER-DOWN III	420	Common	100
+Resist.ETHER-DOWN IV	480	Common	100
+Resist.ETHER-DOWN V	540	Common	100
+Resist.ETHER-DOWN VI	600	Rare	100
+Resist.ETHER-DOWN VII	660	Rare	100
+Resist.ETHER-DOWN VIII	720	Rare	100
+Resist.ETHER-DOWN IX	780	Rare	100
+Resist.ETHER-DOWN X	840	Rare	100
+Resist.ETHER-DOWN XI	900	Unique	1100
+Resist.ETHER-DOWN XII	960	Unique	1200
+Resist.ETHER-DOWN XIII	1020	Unique	1300
+Resist.ETHER-DOWN XIV	1080	Unique	1400
+Resist.ETHER-DOWN XV	1140	Unique	1500
+Resist.ETHER-DOWN XVI	1200	Prime	1600
+Resist.ETHER-DOWN XVII	1260	Prime	1700
+Resist.ETHER-DOWN XVIII	1320	Prime	1800
+Resist.ETHER-DOWN XIX	1380	Prime	1900
+Resist.ETHER-DOWN XX	1500	Intergalactic	2000
+Resist.GRAV-DOWN I	300	Common	100
+Resist.GRAV-DOWN II	360	Common	100
+Resist.GRAV-DOWN III	420	Common	100
+Resist.GRAV-DOWN IV	480	Common	100
+Resist.GRAV-DOWN V	540	Common	100
+Resist.GRAV-DOWN VI	600	Rare	100
+Resist.GRAV-DOWN VII	660	Rare	100
+Resist.GRAV-DOWN VIII	720	Rare	100
+Resist.GRAV-DOWN IX	780	Rare	100
+Resist.GRAV-DOWN X	840	Rare	100
+Resist.GRAV-DOWN XI	900	Unique	1100
+Resist.GRAV-DOWN XII	960	Unique	1200
+Resist.GRAV-DOWN XIII	1020	Unique	1300
+Resist.GRAV-DOWN XIV	1080	Unique	1400
+Resist.GRAV-DOWN XV	1140	Unique	1500
+Resist.GRAV-DOWN XVI	1200	Prime	1600
+Resist.GRAV-DOWN XVII	1260	Prime	1700
+Resist.GRAV-DOWN XVIII	1320	Prime	1800
+Resist.GRAV-DOWN XIX	1380	Prime	1900
+Resist.GRAV-DOWN XX	1500	Intergalactic	2000
+Resist.TIME-BOMB I	300	Common	100
+Resist.TIME-BOMB II	360	Common	100
+Resist.TIME-BOMB III	420	Common	100
+Resist.TIME-BOMB IV	480	Common	100
+Resist.TIME-BOMB V	540	Common	100
+Resist.TIME-BOMB VI	600	Rare	100
+Resist.TIME-BOMB VII	660	Rare	100
+Resist.TIME-BOMB VIII	720	Rare	100
+Resist.TIME-BOMB IX	780	Rare	100
+Resist.TIME-BOMB X	840	Rare	100
+Resist.TIME-BOMB XI	900	Unique	1100
+Resist.TIME-BOMB XII	960	Unique	1200
+Resist.TIME-BOMB XIII	1020	Unique	1300
+Resist.TIME-BOMB XIV	1080	Unique	1400
+Resist.TIME-BOMB XV	1140	Unique	1500
+Resist.TIME-BOMB XVI	1200	Prime	1600
+Resist.TIME-BOMB XVII	1260	Prime	1700
+Resist.TIME-BOMB XVIII	1320	Prime	1800
+Resist.TIME-BOMB XIX	1380	Prime	1900
+Resist.TIME-BOMB XX	1500	Intergalactic	2000
+Resist.DEBUFF-DOWN I	300	Common	100
+Resist.DEBUFF-DOWN II	360	Common	100
+Resist.DEBUFF-DOWN III	420	Common	100
+Resist.DEBUFF-DOWN IV	480	Common	100
+Resist.DEBUFF-DOWN V	540	Common	100
+Resist.DEBUFF-DOWN VI	600	Rare	100
+Resist.DEBUFF-DOWN VII	660	Rare	100
+Resist.DEBUFF-DOWN VIII	720	Rare	100
+Resist.DEBUFF-DOWN IX	780	Rare	100
+Resist.DEBUFF-DOWN X	840	Rare	100
+Resist.DEBUFF-DOWN XI	900	Unique	1100
+Resist.DEBUFF-DOWN XII	960	Unique	1200
+Resist.DEBUFF-DOWN XIII	1020	Unique	1300
+Resist.DEBUFF-DOWN XIV	1080	Unique	1400
+Resist.DEBUFF-DOWN XV	1140	Unique	1500
+Resist.DEBUFF-DOWN XVI	1200	Prime	1600
+Resist.DEBUFF-DOWN XVII	1260	Prime	1700
+Resist.DEBUFF-DOWN XVIII	1320	Prime	1800
+Resist.DEBUFF-DOWN XIX	1380	Prime	1900
+Resist.DEBUFF-DOWN XX	1500	Intergalactic	2000
+Resist.RECOV-DOWN I	300	Common	100
+Resist.RECOV-DOWN II	360	Common	100
+Resist.RECOV-DOWN III	420	Common	100
+Resist.RECOV-DOWN IV	480	Common	100
+Resist.RECOV-DOWN V	540	Common	100
+Resist.RECOV-DOWN VI	600	Rare	100
+Resist.RECOV-DOWN VII	660	Rare	100
+Resist.RECOV-DOWN VIII	720	Rare	100
+Resist.RECOV-DOWN IX	780	Rare	100
+Resist.RECOV-DOWN X	840	Rare	100
+Resist.RECOV-DOWN XI	900	Unique	100
+Resist.RECOV-DOWN XII	960	Unique	100
+Resist.RECOV-DOWN XIII	1020	Unique	100
+Resist.RECOV-DOWN XIV	1080	Unique	100
+Resist.RECOV-DOWN XV	1140	Unique	100
+Resist.RECOV-DOWN XVI	1200	Prime	100
+Resist.RECOV-DOWN XVII	1260	Prime	100
+Resist.RECOV-DOWN XVIII	1320	Prime	100
+Resist.RECOV-DOWN XIX	1380	Prime	100
+Resist.RECOV-DOWN XX	1500	Intergalactic	100
+Resist.BLAZE I	300	Common	100
+Resist.BLAZE II	360	Common	100
+Resist.BLAZE III	420	Common	100
+Resist.BLAZE IV	480	Common	100
+Resist.BLAZE V	540	Common	100
+Resist.BLAZE VI	600	Rare	100
+Resist.BLAZE VII	660	Rare	100
+Resist.BLAZE VIII	720	Rare	100
+Resist.BLAZE IX	780	Rare	100
+Resist.BLAZE X	840	Rare	100
+Resist.BLAZE XI	900	Unique	1100
+Resist.BLAZE XII	960	Unique	1200
+Resist.BLAZE XIII	1020	Unique	1300
+Resist.BLAZE XIV	1080	Unique	1400
+Resist.BLAZE XV	1140	Unique	1500
+Resist.BLAZE XVI	1200	Prime	1600
+Resist.BLAZE XVII	1260	Prime	1700
+Resist.BLAZE XVIII	1320	Prime	1800
+Resist.BLAZE XIX	1380	Prime	1900
+Resist.BLAZE XX	1500	Intergalactic	2000
+Resist.SHOCK I	300	Common	100
+Resist.SHOCK II	360	Common	100
+Resist.SHOCK III	420	Common	100
+Resist.SHOCK IV	480	Common	100
+Resist.SHOCK V	540	Common	100
+Resist.SHOCK VI	600	Rare	100
+Resist.SHOCK VII	660	Rare	100
+Resist.SHOCK VIII	720	Rare	100
+Resist.SHOCK IX	780	Rare	100
+Resist.SHOCK X	840	Rare	100
+Resist.SHOCK XI	900	Unique	1100
+Resist.SHOCK XII	960	Unique	1200
+Resist.SHOCK XIII	1020	Unique	1300
+Resist.SHOCK XIV	1080	Unique	1400
+Resist.SHOCK XV	1140	Unique	1500
+Resist.SHOCK XVI	1200	Prime	1600
+Resist.SHOCK XVII	1260	Prime	1700
+Resist.SHOCK XVIII	1320	Prime	1800
+Resist.SHOCK XIX	1380	Prime	1900
+Resist.SHOCK XX	1500	Intergalactic	2000
+CutTime.DEBUFF I	500	Common	100
+CutTime.DEBUFF II	600	Common	100
+CutTime.DEBUFF III	700	Common	100
+CutTime.DEBUFF IV	800	Common	100
+CutTime.DEBUFF V	900	Common	100
+CutTime.DEBUFF VI	1000	Rare	100
+CutTime.DEBUFF VII	1100	Rare	100
+CutTime.DEBUFF VIII	1200	Rare	100
+CutTime.DEBUFF IX	1300	Rare	100
+CutTime.DEBUFF X	1400	Rare	100
+CutTime.DEBUFF XI	1500	Unique	1100
+CutTime.DEBUFF XII	1600	Unique	1200
+CutTime.DEBUFF XIII	1700	Unique	1300
+CutTime.DEBUFF XIV	1800	Unique	1400
+CutTime.DEBUFF XV	1900	Unique	1500
+CutTime.DEBUFF XVI	2000	Prime	1600
+CutTime.DEBUFF XVII	2100	Prime	1700
+CutTime.DEBUFF XVIII	2200	Prime	1800
+CutTime.DEBUFF XIX	2300	Prime	1900
+CutTime.DEBUFF XX	2500	Intergalactic	2000
+CriticalUp I	500	Common	100
+CriticalUp II	600	Common	100
+CriticalUp III	700	Common	100
+CriticalUp IV	800	Common	100
+CriticalUp V	900	Common	100
+CriticalUp VI	1000	Rare	100
+CriticalUp VII	1100	Rare	100
+CriticalUp VIII	1200	Rare	100
+CriticalUp IX	1300	Rare	100
+CriticalUp X	1400	Rare	100
+CriticalUp XI	1500	Unique	1100
+CriticalUp XII	1600	Unique	1200
+CriticalUp XIII	1700	Unique	1300
+CriticalUp XIV	1800	Unique	1400
+CriticalUp XV	1900	Unique	1500
+CriticalUp XVI	2000	Prime	1600
+CriticalUp XVII	2100	Prime	1700
+CriticalUp XVIII	2200	Prime	1800
+CriticalUp XIX	2300	Prime	1900
+CriticalUp XX	2500	Intergalactic	2000
+CritUp.THEROID I	300	Common	100
+CritUp.THEROID II	360	Common	100
+CritUp.THEROID III	420	Common	100
+CritUp.THEROID IV	480	Common	100
+CritUp.THEROID V	540	Common	100
+CritUp.THEROID VI	600	Rare	100
+CritUp.THEROID VII	660	Rare	100
+CritUp.THEROID VIII	720	Rare	100
+CritUp.THEROID IX	780	Rare	100
+CritUp.THEROID X	840	Rare	100
+CritUp.THEROID XI	900	Unique	1100
+CritUp.THEROID XII	960	Unique	1200
+CritUp.THEROID XIII	1020	Unique	1300
+CritUp.THEROID XIV	1080	Unique	1400
+CritUp.THEROID XV	1140	Unique	1500
+CritUp.THEROID XVI	1200	Prime	1600
+CritUp.THEROID XVII	1260	Prime	1700
+CritUp.THEROID XVIII	1320	Prime	1800
+CritUp.THEROID XIX	1380	Prime	1900
+CritUp.THEROID XX	1500	Intergalactic	2000
+CritUp.INSECTOID I	300	Common	100
+CritUp.INSECTOID II	360	Common	100
+CritUp.INSECTOID III	420	Common	100
+CritUp.INSECTOID IV	480	Common	100
+CritUp.INSECTOID V	540	Common	100
+CritUp.INSECTOID VI	600	Rare	100
+CritUp.INSECTOID VII	660	Rare	100
+CritUp.INSECTOID VIII	720	Rare	100
+CritUp.INSECTOID IX	780	Rare	100
+CritUp.INSECTOID X	840	Rare	100
+CritUp.INSECTOID XI	900	Unique	1100
+CritUp.INSECTOID XII	960	Unique	1200
+CritUp.INSECTOID XIII	1020	Unique	1300
+CritUp.INSECTOID XIV	1080	Unique	1400
+CritUp.INSECTOID XV	1140	Unique	1500
+CritUp.INSECTOID XVI	1200	Prime	1600
+CritUp.INSECTOID XVII	1260	Prime	1700
+CritUp.INSECTOID XVIII	1320	Prime	1800
+CritUp.INSECTOID XIX	1380	Prime	1900
+CritUp.INSECTOID XX	1500	Intergalactic	2000
+CritUp.PISCINOID I	300	Common	100
+CritUp.PISCINOID II	360	Common	100
+CritUp.PISCINOID III	420	Common	100
+CritUp.PISCINOID IV	480	Common	100
+CritUp.PISCINOID V	540	Common	100
+CritUp.PISCINOID VI	600	Rare	100
+CritUp.PISCINOID VII	660	Rare	100
+CritUp.PISCINOID VIII	720	Rare	100
+CritUp.PISCINOID IX	780	Rare	100
+CritUp.PISCINOID X	840	Rare	100
+CritUp.PISCINOID XI	900	Unique	1100
+CritUp.PISCINOID XII	960	Unique	1200
+CritUp.PISCINOID XIII	1020	Unique	1300
+CritUp.PISCINOID XIV	1080	Unique	1400
+CritUp.PISCINOID XV	1140	Unique	1500
+CritUp.PISCINOID XVI	1200	Prime	1600
+CritUp.PISCINOID XVII	1260	Prime	1700
+CritUp.PISCINOID XVIII	1320	Prime	1800
+CritUp.PISCINOID XIX	1380	Prime	1900
+CritUp.PISCINOID XX	1500	Intergalactic	2000
+CritUp.HUMANOID I	300	Common	100
+CritUp.HUMANOID II	360	Common	100
+CritUp.HUMANOID III	420	Common	100
+CritUp.HUMANOID IV	480	Common	100
+CritUp.HUMANOID V	540	Common	100
+CritUp.HUMANOID VI	600	Rare	100
+CritUp.HUMANOID VII	660	Rare	100
+CritUp.HUMANOID VIII	720	Rare	100
+CritUp.HUMANOID IX	780	Rare	100
+CritUp.HUMANOID X	840	Rare	100
+CritUp.HUMANOID XI	900	Unique	1100
+CritUp.HUMANOID XII	960	Unique	1200
+CritUp.HUMANOID XIII	1020	Unique	1300
+CritUp.HUMANOID XIV	1080	Unique	1400
+CritUp.HUMANOID XV	1140	Unique	1500
+CritUp.HUMANOID XVI	1200	Prime	1600
+CritUp.HUMANOID XVII	1260	Prime	1700
+CritUp.HUMANOID XVIII	1320	Prime	1800
+CritUp.HUMANOID XIX	1380	Prime	1900
+CritUp.HUMANOID XX	1500	Intergalactic	2000
+CritUp.MECHANOID I	300	Common	100
+CritUp.MECHANOID II	360	Common	100
+CritUp.MECHANOID III	420	Common	100
+CritUp.MECHANOID IV	480	Common	100
+CritUp.MECHANOID V	540	Common	100
+CritUp.MECHANOID VI	600	Rare	100
+CritUp.MECHANOID VII	660	Rare	100
+CritUp.MECHANOID VIII	720	Rare	100
+CritUp.MECHANOID IX	780	Rare	100
+CritUp.MECHANOID X	840	Rare	100
+CritUp.MECHANOID XI	900	Unique	1100
+CritUp.MECHANOID XII	960	Unique	1200
+CritUp.MECHANOID XIII	1020	Unique	1300
+CritUp.MECHANOID XIV	1080	Unique	1400
+CritUp.MECHANOID XV	1140	Unique	1500
+CritUp.MECHANOID XVI	1200	Prime	1600
+CritUp.MECHANOID XVII	1260	Prime	1700
+CritUp.MECHANOID XVIII	1320	Prime	1800
+CritUp.MECHANOID XIX	1380	Prime	1900
+CritUp.MECHANOID XX	1500	Intergalactic	2000
+CritUp.CHIMEROID I	300	Common	100
+CritUp.CHIMEROID II	360	Common	100
+CritUp.CHIMEROID III	420	Common	100
+CritUp.CHIMEROID IV	480	Common	100
+CritUp.CHIMEROID V	540	Common	100
+CritUp.CHIMEROID VI	600	Rare	100
+CritUp.CHIMEROID VII	660	Rare	100
+CritUp.CHIMEROID VIII	720	Rare	100
+CritUp.CHIMEROID IX	780	Rare	100
+CritUp.CHIMEROID X	840	Rare	100
+CritUp.CHIMEROID XI	900	Unique	1100
+CritUp.CHIMEROID XII	960	Unique	1200
+CritUp.CHIMEROID XIII	1020	Unique	1300
+CritUp.CHIMEROID XIV	1080	Unique	1400
+CritUp.CHIMEROID XV	1140	Unique	1500
+CritUp.CHIMEROID XVI	1200	Prime	1600
+CritUp.CHIMEROID XVII	1260	Prime	1700
+CritUp.CHIMEROID XVIII	1320	Prime	1800
+CritUp.CHIMEROID XIX	1380	Prime	1900
+CritUp.CHIMEROID XX	1500	Intergalactic	2000
+CritUp.ULTRAFAUNA I	300	Common	100
+CritUp.ULTRAFAUNA II	360	Common	100
+CritUp.ULTRAFAUNA III	420	Common	100
+CritUp.ULTRAFAUNA IV	480	Common	100
+CritUp.ULTRAFAUNA V	540	Common	100
+CritUp.ULTRAFAUNA VI	600	Rare	100
+CritUp.ULTRAFAUNA VII	660	Rare	100
+CritUp.ULTRAFAUNA VIII	720	Rare	100
+CritUp.ULTRAFAUNA IX	780	Rare	100
+CritUp.ULTRAFAUNA X	840	Rare	100
+CritUp.ULTRAFAUNA XI	900	Unique	1100
+CritUp.ULTRAFAUNA XII	960	Unique	1200
+CritUp.ULTRAFAUNA XIII	1020	Unique	1300
+CritUp.ULTRAFAUNA XIV	1080	Unique	1400
+CritUp.ULTRAFAUNA XV	1140	Unique	1500
+CritUp.ULTRAFAUNA XVI	1200	Prime	1600
+CritUp.ULTRAFAUNA XVII	1260	Prime	1700
+CritUp.ULTRAFAUNA XVIII	1320	Prime	1800
+CritUp.ULTRAFAUNA XIX	1380	Prime	1900
+CritUp.ULTRAFAUNA XX	1500	Intergalactic	2000
+Slayer.THEROID I	300	Common	100
+Slayer.THEROID II	360	Common	100
+Slayer.THEROID III	420	Common	100
+Slayer.THEROID IV	480	Common	100
+Slayer.THEROID V	540	Common	100
+Slayer.THEROID VI	600	Rare	100
+Slayer.THEROID VII	660	Rare	100
+Slayer.THEROID VIII	720	Rare	100
+Slayer.THEROID IX	780	Rare	100
+Slayer.THEROID X	840	Rare	100
+Slayer.THEROID XI	900	Unique	1100
+Slayer.THEROID XII	960	Unique	1200
+Slayer.THEROID XIII	1020	Unique	1300
+Slayer.THEROID XIV	1080	Unique	1400
+Slayer.THEROID XV	1140	Unique	1500
+Slayer.THEROID XVI	1200	Prime	1600
+Slayer.THEROID XVII	1260	Prime	1700
+Slayer.THEROID XVIII	1320	Prime	1800
+Slayer.THEROID XIX	1380	Prime	1900
+Slayer.THEROID XX	1500	Intergalactic	2000
+Slayer.INSECTOID I	300	Common	100
+Slayer.INSECTOID II	360	Common	100
+Slayer.INSECTOID III	420	Common	100
+Slayer.INSECTOID IV	480	Common	100
+Slayer.INSECTOID V	540	Common	100
+Slayer.INSECTOID VI	600	Rare	100
+Slayer.INSECTOID VII	660	Rare	100
+Slayer.INSECTOID VIII	720	Rare	100
+Slayer.INSECTOID IX	780	Rare	100
+Slayer.INSECTOID X	840	Rare	100
+Slayer.INSECTOID XI	900	Unique	1100
+Slayer.INSECTOID XII	960	Unique	1200
+Slayer.INSECTOID XIII	1020	Unique	1300
+Slayer.INSECTOID XIV	1080	Unique	1400
+Slayer.INSECTOID XV	1140	Unique	1500
+Slayer.INSECTOID XVI	1200	Prime	1600
+Slayer.INSECTOID XVII	1260	Prime	1700
+Slayer.INSECTOID XVIII	1320	Prime	1800
+Slayer.INSECTOID XIX	1380	Prime	1900
+Slayer.INSECTOID XX	1500	Intergalactic	2000
+Slayer.PISCINOID I	300	Common	100
+Slayer.PISCINOID II	360	Common	100
+Slayer.PISCINOID III	420	Common	100
+Slayer.PISCINOID IV	480	Common	100
+Slayer.PISCINOID V	540	Common	100
+Slayer.PISCINOID VI	600	Rare	100
+Slayer.PISCINOID VII	660	Rare	100
+Slayer.PISCINOID VIII	720	Rare	100
+Slayer.PISCINOID IX	780	Rare	100
+Slayer.PISCINOID X	840	Rare	100
+Slayer.PISCINOID XI	900	Unique	1100
+Slayer.PISCINOID XII	960	Unique	1200
+Slayer.PISCINOID XIII	1020	Unique	1300
+Slayer.PISCINOID XIV	1080	Unique	1400
+Slayer.PISCINOID XV	1140	Unique	1500
+Slayer.PISCINOID XVI	1200	Prime	1600
+Slayer.PISCINOID XVII	1260	Prime	1700
+Slayer.PISCINOID XVIII	1320	Prime	1800
+Slayer.PISCINOID XIX	1380	Prime	1900
+Slayer.PISCINOID XX	1500	Intergalactic	2000
+Slayer.HUMANOID I	300	Common	100
+Slayer.HUMANOID II	360	Common	100
+Slayer.HUMANOID III	420	Common	100
+Slayer.HUMANOID IV	480	Common	100
+Slayer.HUMANOID V	540	Common	100
+Slayer.HUMANOID VI	600	Rare	100
+Slayer.HUMANOID VII	660	Rare	100
+Slayer.HUMANOID VIII	720	Rare	100
+Slayer.HUMANOID IX	780	Rare	100
+Slayer.HUMANOID X	840	Rare	100
+Slayer.HUMANOID XI	900	Unique	1100
+Slayer.HUMANOID XII	960	Unique	1200
+Slayer.HUMANOID XIII	1020	Unique	1300
+Slayer.HUMANOID XIV	1080	Unique	1400
+Slayer.HUMANOID XV	1140	Unique	1500
+Slayer.HUMANOID XVI	1200	Prime	1600
+Slayer.HUMANOID XVII	1260	Prime	1700
+Slayer.HUMANOID XVIII	1320	Prime	1800
+Slayer.HUMANOID XIX	1380	Prime	1900
+Slayer.HUMANOID XX	1500	Intergalactic	2000
+Slayer.MECHANOID I	300	Common	100
+Slayer.MECHANOID II	360	Common	100
+Slayer.MECHANOID III	420	Common	100
+Slayer.MECHANOID IV	480	Common	100
+Slayer.MECHANOID V	540	Common	100
+Slayer.MECHANOID VI	600	Rare	100
+Slayer.MECHANOID VII	660	Rare	100
+Slayer.MECHANOID VIII	720	Rare	100
+Slayer.MECHANOID IX	780	Rare	100
+Slayer.MECHANOID X	840	Rare	100
+Slayer.MECHANOID XI	900	Unique	1100
+Slayer.MECHANOID XII	960	Unique	1200
+Slayer.MECHANOID XIII	1020	Unique	1300
+Slayer.MECHANOID XIV	1080	Unique	1400
+Slayer.MECHANOID XV	1140	Unique	1500
+Slayer.MECHANOID XVI	1200	Prime	1600
+Slayer.MECHANOID XVII	1260	Prime	1700
+Slayer.MECHANOID XVIII	1320	Prime	1800
+Slayer.MECHANOID XIX	1380	Prime	1900
+Slayer.MECHANOID XX	1500	Intergalactic	2000
+Slayer.CHIMEROID I	300	Common	100
+Slayer.CHIMEROID II	360	Common	100
+Slayer.CHIMEROID III	420	Common	100
+Slayer.CHIMEROID IV	480	Common	100
+Slayer.CHIMEROID V	540	Common	100
+Slayer.CHIMEROID VI	600	Rare	100
+Slayer.CHIMEROID VII	660	Rare	100
+Slayer.CHIMEROID VIII	720	Rare	100
+Slayer.CHIMEROID IX	780	Rare	100
+Slayer.CHIMEROID X	840	Rare	100
+Slayer.CHIMEROID XI	900	Unique	1100
+Slayer.CHIMEROID XII	960	Unique	1200
+Slayer.CHIMEROID XIII	1020	Unique	1300
+Slayer.CHIMEROID XIV	1080	Unique	1400
+Slayer.CHIMEROID XV	1140	Unique	1500
+Slayer.CHIMEROID XVI	1200	Prime	1600
+Slayer.CHIMEROID XVII	1260	Prime	1700
+Slayer.CHIMEROID XVIII	1320	Prime	1800
+Slayer.CHIMEROID XIX	1380	Prime	1900
+Slayer.CHIMEROID XX	1500	Intergalactic	2000
+Slayer.ULTRAFAUNA I	300	Common	100
+Slayer.ULTRAFAUNA II	360	Common	100
+Slayer.ULTRAFAUNA III	420	Common	100
+Slayer.ULTRAFAUNA IV	480	Common	100
+Slayer.ULTRAFAUNA V	540	Common	100
+Slayer.ULTRAFAUNA VI	600	Rare	100
+Slayer.ULTRAFAUNA VII	660	Rare	100
+Slayer.ULTRAFAUNA VIII	720	Rare	100
+Slayer.ULTRAFAUNA IX	780	Rare	100
+Slayer.ULTRAFAUNA X	840	Rare	100
+Slayer.ULTRAFAUNA XI	900	Unique	1100
+Slayer.ULTRAFAUNA XII	960	Unique	1200
+Slayer.ULTRAFAUNA XIII	1020	Unique	1300
+Slayer.ULTRAFAUNA XIV	1080	Unique	1400
+Slayer.ULTRAFAUNA XV	1140	Unique	1500
+Slayer.ULTRAFAUNA XVI	1200	Prime	1600
+Slayer.ULTRAFAUNA XVII	1260	Prime	1700
+Slayer.ULTRAFAUNA XVIII	1320	Prime	1800
+Slayer.ULTRAFAUNA XIX	1380	Prime	1900
+Slayer.ULTRAFAUNA XX	1500	Intergalactic	2000
+AttributeDmg.PHYS I	500	Common	100
+AttributeDmg.PHYS II	600	Common	100
+AttributeDmg.PHYS III	700	Common	100
+AttributeDmg.PHYS IV	800	Common	100
+AttributeDmg.PHYS V	900	Common	100
+AttributeDmg.PHYS VI	1000	Rare	100
+AttributeDmg.PHYS VII	1100	Rare	100
+AttributeDmg.PHYS VIII	1200	Rare	100
+AttributeDmg.PHYS IX	1300	Rare	100
+AttributeDmg.PHYS X	1400	Rare	100
+AttributeDmg.PHYS XI	1500	Unique	1100
+AttributeDmg.PHYS XII	1600	Unique	1200
+AttributeDmg.PHYS XIII	1700	Unique	1300
+AttributeDmg.PHYS XIV	1800	Unique	1400
+AttributeDmg.PHYS XV	1900	Unique	1500
+AttributeDmg.PHYS XVI	2000	Prime	1600
+AttributeDmg.PHYS XVII	2100	Prime	1700
+AttributeDmg.PHYS XVIII	2200	Prime	1800
+AttributeDmg.PHYS XIX	2300	Prime	1900
+AttributeDmg.PHYS XX	2500	Intergalactic	2000
+AttributeDmg.BEAM I	500	Common	100
+AttributeDmg.BEAM II	600	Common	100
+AttributeDmg.BEAM III	700	Common	100
+AttributeDmg.BEAM IV	800	Common	100
+AttributeDmg.BEAM V	900	Common	100
+AttributeDmg.BEAM VI	1000	Rare	100
+AttributeDmg.BEAM VII	1100	Rare	100
+AttributeDmg.BEAM VIII	1200	Rare	100
+AttributeDmg.BEAM IX	1300	Rare	100
+AttributeDmg.BEAM X	1400	Rare	100
+AttributeDmg.BEAM XI	1500	Unique	1100
+AttributeDmg.BEAM XII	1600	Unique	1200
+AttributeDmg.BEAM XIII	1700	Unique	1300
+AttributeDmg.BEAM XIV	1800	Unique	1400
+AttributeDmg.BEAM XV	1900	Unique	1500
+AttributeDmg.BEAM XVI	2000	Prime	1600
+AttributeDmg.BEAM XVII	2100	Prime	1700
+AttributeDmg.BEAM XVIII	2200	Prime	1800
+AttributeDmg.BEAM XIX	2300	Prime	1900
+AttributeDmg.BEAM XX	2500	Intergalactic	2000
+AttributeDmg.ETHER I	500	Common	100
+AttributeDmg.ETHER II	600	Common	100
+AttributeDmg.ETHER III	700	Common	100
+AttributeDmg.ETHER IV	800	Common	100
+AttributeDmg.ETHER V	900	Common	100
+AttributeDmg.ETHER VI	1000	Rare	100
+AttributeDmg.ETHER VII	1100	Rare	100
+AttributeDmg.ETHER VIII	1200	Rare	100
+AttributeDmg.ETHER IX	1300	Rare	100
+AttributeDmg.ETHER X	1400	Rare	100
+AttributeDmg.ETHER XI	1500	Unique	1100
+AttributeDmg.ETHER XII	1600	Unique	1200
+AttributeDmg.ETHER XIII	1700	Unique	1300
+AttributeDmg.ETHER XIV	1800	Unique	1400
+AttributeDmg.ETHER XV	1900	Unique	1500
+AttributeDmg.ETHER XVI	2000	Prime	1600
+AttributeDmg.ETHER XVII	2100	Prime	1700
+AttributeDmg.ETHER XVIII	2200	Prime	1800
+AttributeDmg.ETHER XIX	2300	Prime	1900
+AttributeDmg.ETHER XX	2500	Intergalactic	2000
+AttributeDmg.THERM I	500	Common	100
+AttributeDmg.THERM II	600	Common	100
+AttributeDmg.THERM III	700	Common	100
+AttributeDmg.THERM IV	800	Common	100
+AttributeDmg.THERM V	900	Common	100
+AttributeDmg.THERM VI	1000	Rare	100
+AttributeDmg.THERM VII	1100	Rare	100
+AttributeDmg.THERM VIII	1200	Rare	100
+AttributeDmg.THERM IX	1300	Rare	100
+AttributeDmg.THERM X	1400	Rare	100
+AttributeDmg.THERM XI	1500	Unique	1100
+AttributeDmg.THERM XII	1600	Unique	1200
+AttributeDmg.THERM XIII	1700	Unique	1300
+AttributeDmg.THERM XIV	1800	Unique	1400
+AttributeDmg.THERM XV	1900	Unique	1500
+AttributeDmg.THERM XVI	2000	Prime	1600
+AttributeDmg.THERM XVII	2100	Prime	1700
+AttributeDmg.THERM XVIII	2200	Prime	1800
+AttributeDmg.THERM XIX	2300	Prime	1900
+AttributeDmg.THERM XX	2500	Intergalactic	2000
+AttributeDmg.ELEC I	500	Common	100
+AttributeDmg.ELEC II	600	Common	100
+AttributeDmg.ELEC III	700	Common	100
+AttributeDmg.ELEC IV	800	Common	100
+AttributeDmg.ELEC V	900	Common	100
+AttributeDmg.ELEC VI	1000	Rare	100
+AttributeDmg.ELEC VII	1100	Rare	100
+AttributeDmg.ELEC VIII	1200	Rare	100
+AttributeDmg.ELEC IX	1300	Rare	100
+AttributeDmg.ELEC X	1400	Rare	100
+AttributeDmg.ELEC XI	1500	Unique	1100
+AttributeDmg.ELEC XII	1600	Unique	1200
+AttributeDmg.ELEC XIII	1700	Unique	1300
+AttributeDmg.ELEC XIV	1800	Unique	1400
+AttributeDmg.ELEC XV	1900	Unique	1500
+AttributeDmg.ELEC XVI	2000	Prime	1600
+AttributeDmg.ELEC XVII	2100	Prime	1700
+AttributeDmg.ELEC XVIII	2200	Prime	1800
+AttributeDmg.ELEC XIX	2300	Prime	1900
+AttributeDmg.ELEC XX	2500	Intergalactic	2000
+AttributeDmg.GRAV I	500	Common	100
+AttributeDmg.GRAV II	600	Common	100
+AttributeDmg.GRAV III	700	Common	100
+AttributeDmg.GRAV IV	800	Common	100
+AttributeDmg.GRAV V	900	Common	100
+AttributeDmg.GRAV VI	1000	Rare	100
+AttributeDmg.GRAV VII	1100	Rare	100
+AttributeDmg.GRAV VIII	1200	Rare	100
+AttributeDmg.GRAV IX	1300	Rare	100
+AttributeDmg.GRAV X	1400	Rare	100
+AttributeDmg.GRAV XI	1500	Unique	1100
+AttributeDmg.GRAV XII	1600	Unique	1200
+AttributeDmg.GRAV XIII	1700	Unique	1300
+AttributeDmg.GRAV XIV	1800	Unique	1400
+AttributeDmg.GRAV XV	1900	Unique	1500
+AttributeDmg.GRAV XVI	2000	Prime	1600
+AttributeDmg.GRAV XVII	2100	Prime	1700
+AttributeDmg.GRAV XVIII	2200	Prime	1800
+AttributeDmg.GRAV XIX	2300	Prime	1900
+AttributeDmg.GRAV XX	2500	Intergalactic	2000
+PositionDmg.FRONT I	500	Common	100
+PositionDmg.FRONT II	600	Common	100
+PositionDmg.FRONT III	700	Common	100
+PositionDmg.FRONT IV	800	Common	100
+PositionDmg.FRONT V	900	Common	100
+PositionDmg.FRONT VI	1000	Rare	100
+PositionDmg.FRONT VII	1100	Rare	100
+PositionDmg.FRONT VIII	1200	Rare	100
+PositionDmg.FRONT IX	1300	Rare	100
+PositionDmg.FRONT X	1400	Rare	100
+PositionDmg.FRONT XI	1500	Unique	1100
+PositionDmg.FRONT XII	1600	Unique	1200
+PositionDmg.FRONT XIII	1700	Unique	1300
+PositionDmg.FRONT XIV	1800	Unique	1400
+PositionDmg.FRONT XV	1900	Unique	1500
+PositionDmg.FRONT XVI	2000	Prime	1600
+PositionDmg.FRONT XVII	2100	Prime	1700
+PositionDmg.FRONT XVIII	2200	Prime	1800
+PositionDmg.FRONT XIX	2300	Prime	1900
+PositionDmg.FRONT XX	2500	Intergalactic	2000
+PositionDmg.SIDE I	500	Common	100
+PositionDmg.SIDE II	600	Common	100
+PositionDmg.SIDE III	700	Common	100
+PositionDmg.SIDE IV	800	Common	100
+PositionDmg.SIDE V	900	Common	100
+PositionDmg.SIDE VI	1000	Rare	100
+PositionDmg.SIDE VII	1100	Rare	100
+PositionDmg.SIDE VIII	1200	Rare	100
+PositionDmg.SIDE IX	1300	Rare	100
+PositionDmg.SIDE X	1400	Rare	100
+PositionDmg.SIDE XI	1500	Unique	1100
+PositionDmg.SIDE XII	1600	Unique	1200
+PositionDmg.SIDE XIII	1700	Unique	1300
+PositionDmg.SIDE XIV	1800	Unique	1400
+PositionDmg.SIDE XV	1900	Unique	1500
+PositionDmg.SIDE XVI	2000	Prime	1600
+PositionDmg.SIDE XVII	2100	Prime	1700
+PositionDmg.SIDE XVIII	2200	Prime	1800
+PositionDmg.SIDE XIX	2300	Prime	1900
+PositionDmg.SIDE XX	2500	Intergalactic	2000
+PositionDmg.BACK I	500	Common	100
+PositionDmg.BACK II	600	Common	100
+PositionDmg.BACK III	700	Common	100
+PositionDmg.BACK IV	800	Common	100
+PositionDmg.BACK V	900	Common	100
+PositionDmg.BACK VI	1000	Rare	100
+PositionDmg.BACK VII	1100	Rare	100
+PositionDmg.BACK VIII	1200	Rare	100
+PositionDmg.BACK IX	1300	Rare	100
+PositionDmg.BACK X	1400	Rare	100
+PositionDmg.BACK XI	1500	Unique	1100
+PositionDmg.BACK XII	1600	Unique	1200
+PositionDmg.BACK XIII	1700	Unique	1300
+PositionDmg.BACK XIV	1800	Unique	1400
+PositionDmg.BACK XV	1900	Unique	1500
+PositionDmg.BACK XVI	2000	Prime	1600
+PositionDmg.BACK XVII	2100	Prime	1700
+PositionDmg.BACK XVIII	2200	Prime	1800
+PositionDmg.BACK XIX	2300	Prime	1900
+PositionDmg.BACK XX	2500	Intergalactic	2000
+PositionDmg.ABOVE I	500	Common	100
+PositionDmg.ABOVE II	600	Common	100
+PositionDmg.ABOVE III	700	Common	100
+PositionDmg.ABOVE IV	800	Common	100
+PositionDmg.ABOVE V	900	Common	100
+PositionDmg.ABOVE VI	1000	Rare	100
+PositionDmg.ABOVE VII	1100	Rare	100
+PositionDmg.ABOVE VIII	1200	Rare	100
+PositionDmg.ABOVE IX	1300	Rare	100
+PositionDmg.ABOVE X	1400	Rare	100
+PositionDmg.ABOVE XI	1500	Unique	1100
+PositionDmg.ABOVE XII	1600	Unique	1200
+PositionDmg.ABOVE XIII	1700	Unique	1300
+PositionDmg.ABOVE XIV	1800	Unique	1400
+PositionDmg.ABOVE XV	1900	Unique	1500
+PositionDmg.ABOVE XVI	2000	Prime	1600
+PositionDmg.ABOVE XVII	2100	Prime	1700
+PositionDmg.ABOVE XVIII	2200	Prime	1800
+PositionDmg.ABOVE XIX	2300	Prime	1900
+PositionDmg.ABOVE XX	2500	Intergalactic	2000
+M-Auto.BLACKOUT I	200	Common	100
+M-Auto.BLACKOUT II	240	Common	100
+M-Auto.BLACKOUT III	280	Common	100
+M-Auto.BLACKOUT IV	320	Common	100
+M-Auto.BLACKOUT V	360	Common	100
+M-Auto.BLACKOUT VI	400	Rare	100
+M-Auto.BLACKOUT VII	440	Rare	100
+M-Auto.BLACKOUT VIII	480	Rare	100
+M-Auto.BLACKOUT IX	520	Rare	100
+M-Auto.BLACKOUT X	560	Rare	100
+M-Auto.BLACKOUT XI	600	Unique	1100
+M-Auto.BLACKOUT XII	640	Unique	1200
+M-Auto.BLACKOUT XIII	680	Unique	1300
+M-Auto.BLACKOUT XIV	720	Unique	1400
+M-Auto.BLACKOUT XV	760	Unique	1500
+M-Auto.BLACKOUT XVI	800	Prime	1600
+M-Auto.BLACKOUT XVII	840	Prime	1700
+M-Auto.BLACKOUT XVIII	880	Prime	1800
+M-Auto.BLACKOUT XIX	920	Prime	1900
+M-Auto.BLACKOUT XX	1000	Intergalactic	2000
+M-Auto.FATIGUE I	200	Common	100
+M-Auto.FATIGUE II	240	Common	100
+M-Auto.FATIGUE III	280	Common	100
+M-Auto.FATIGUE IV	320	Common	100
+M-Auto.FATIGUE V	360	Common	100
+M-Auto.FATIGUE VI	400	Rare	100
+M-Auto.FATIGUE VII	440	Rare	100
+M-Auto.FATIGUE VIII	480	Rare	100
+M-Auto.FATIGUE IX	520	Rare	100
+M-Auto.FATIGUE X	560	Rare	100
+M-Auto.FATIGUE XI	600	Unique	1100
+M-Auto.FATIGUE XII	640	Unique	1200
+M-Auto.FATIGUE XIII	680	Unique	1300
+M-Auto.FATIGUE XIV	720	Unique	1400
+M-Auto.FATIGUE XV	760	Unique	1500
+M-Auto.FATIGUE XVI	800	Prime	1600
+M-Auto.FATIGUE XVII	840	Prime	1700
+M-Auto.FATIGUE XVIII	880	Prime	1800
+M-Auto.FATIGUE XIX	920	Prime	1900
+M-Auto.FATIGUE XX	1000	Intergalactic	2000
+M-Auto.PHYS-DOWN I	200	Common	100
+M-Auto.PHYS-DOWN II	240	Common	100
+M-Auto.PHYS-DOWN III	280	Common	100
+M-Auto.PHYS-DOWN IV	320	Common	100
+M-Auto.PHYS-DOWN V	360	Common	100
+M-Auto.PHYS-DOWN VI	400	Rare	100
+M-Auto.PHYS-DOWN VII	440	Rare	100
+M-Auto.PHYS-DOWN VIII	480	Rare	100
+M-Auto.PHYS-DOWN IX	520	Rare	100
+M-Auto.PHYS-DOWN X	560	Rare	100
+M-Auto.PHYS-DOWN XI	600	Unique	1100
+M-Auto.PHYS-DOWN XII	640	Unique	1200
+M-Auto.PHYS-DOWN XIII	680	Unique	1300
+M-Auto.PHYS-DOWN XIV	720	Unique	1400
+M-Auto.PHYS-DOWN XV	760	Unique	1500
+M-Auto.PHYS-DOWN XVI	800	Prime	1600
+M-Auto.PHYS-DOWN XVII	840	Prime	1700
+M-Auto.PHYS-DOWN XVIII	880	Prime	1800
+M-Auto.PHYS-DOWN XIX	920	Prime	1900
+M-Auto.PHYS-DOWN XX	1000	Intergalactic	2000
+M-Auto.BEAM-DOWN I	200	Common	100
+M-Auto.BEAM-DOWN II	240	Common	100
+M-Auto.BEAM-DOWN III	280	Common	100
+M-Auto.BEAM-DOWN IV	320	Common	100
+M-Auto.BEAM-DOWN V	360	Common	100
+M-Auto.BEAM-DOWN VI	400	Rare	100
+M-Auto.BEAM-DOWN VII	440	Rare	100
+M-Auto.BEAM-DOWN VIII	480	Rare	100
+M-Auto.BEAM-DOWN IX	520	Rare	100
+M-Auto.BEAM-DOWN X	560	Rare	100
+M-Auto.BEAM-DOWN XI	600	Unique	1100
+M-Auto.BEAM-DOWN XII	640	Unique	1200
+M-Auto.BEAM-DOWN XIII	680	Unique	1300
+M-Auto.BEAM-DOWN XIV	720	Unique	1400
+M-Auto.BEAM-DOWN XV	760	Unique	1500
+M-Auto.BEAM-DOWN XVI	800	Prime	1600
+M-Auto.BEAM-DOWN XVII	840	Prime	1700
+M-Auto.BEAM-DOWN XVIII	880	Prime	1800
+M-Auto.BEAM-DOWN XIX	920	Prime	1900
+M-Auto.BEAM-DOWN XX	1000	Intergalactic	2000
+M-Auto.ETHER-DOWN I	200	Common	100
+M-Auto.ETHER-DOWN II	240	Common	100
+M-Auto.ETHER-DOWN III	280	Common	100
+M-Auto.ETHER-DOWN IV	320	Common	100
+M-Auto.ETHER-DOWN V	360	Common	100
+M-Auto.ETHER-DOWN VI	400	Rare	100
+M-Auto.ETHER-DOWN VII	440	Rare	100
+M-Auto.ETHER-DOWN VIII	480	Rare	100
+M-Auto.ETHER-DOWN IX	520	Rare	100
+M-Auto.ETHER-DOWN X	560	Rare	100
+M-Auto.ETHER-DOWN XI	600	Unique	1100
+M-Auto.ETHER-DOWN XII	640	Unique	1200
+M-Auto.ETHER-DOWN XIII	680	Unique	1300
+M-Auto.ETHER-DOWN XIV	720	Unique	1400
+M-Auto.ETHER-DOWN XV	760	Unique	1500
+M-Auto.ETHER-DOWN XVI	800	Prime	1600
+M-Auto.ETHER-DOWN XVII	840	Prime	1700
+M-Auto.ETHER-DOWN XVIII	880	Prime	1800
+M-Auto.ETHER-DOWN XIX	920	Prime	1900
+M-Auto.ETHER-DOWN XX	1000	Intergalactic	2000
+M-Auto.THERM-DOWN I	200	Common	100
+M-Auto.THERM-DOWN II	240	Common	100
+M-Auto.THERM-DOWN III	280	Common	100
+M-Auto.THERM-DOWN IV	320	Common	100
+M-Auto.THERM-DOWN V	360	Common	100
+M-Auto.THERM-DOWN VI	400	Rare	100
+M-Auto.THERM-DOWN VII	440	Rare	100
+M-Auto.THERM-DOWN VIII	480	Rare	100
+M-Auto.THERM-DOWN IX	520	Rare	100
+M-Auto.THERM-DOWN X	560	Rare	100
+M-Auto.THERM-DOWN XI	600	Unique	1100
+M-Auto.THERM-DOWN XII	640	Unique	1200
+M-Auto.THERM-DOWN XIII	680	Unique	1300
+M-Auto.THERM-DOWN XIV	720	Unique	1400
+M-Auto.THERM-DOWN XV	760	Unique	1500
+M-Auto.THERM-DOWN XVI	800	Prime	1600
+M-Auto.THERM-DOWN XVII	840	Prime	1700
+M-Auto.THERM-DOWN XVIII	880	Prime	1800
+M-Auto.THERM-DOWN XIX	920	Prime	1900
+M-Auto.THERM-DOWN XX	1000	Intergalactic	2000
+M-Auto.ELEC-DOWN I	200	Common	100
+M-Auto.ELEC-DOWN II	240	Common	100
+M-Auto.ELEC-DOWN III	280	Common	100
+M-Auto.ELEC-DOWN IV	320	Common	100
+M-Auto.ELEC-DOWN V	360	Common	100
+M-Auto.ELEC-DOWN VI	400	Rare	100
+M-Auto.ELEC-DOWN VII	440	Rare	100
+M-Auto.ELEC-DOWN VIII	480	Rare	100
+M-Auto.ELEC-DOWN IX	520	Rare	100
+M-Auto.ELEC-DOWN X	560	Rare	100
+M-Auto.ELEC-DOWN XI	600	Unique	1100
+M-Auto.ELEC-DOWN XII	640	Unique	1200
+M-Auto.ELEC-DOWN XIII	680	Unique	1300
+M-Auto.ELEC-DOWN XIV	720	Unique	1400
+M-Auto.ELEC-DOWN XV	760	Unique	1500
+M-Auto.ELEC-DOWN XVI	800	Prime	1600
+M-Auto.ELEC-DOWN XVII	840	Prime	1700
+M-Auto.ELEC-DOWN XVIII	880	Prime	1800
+M-Auto.ELEC-DOWN XIX	920	Prime	1900
+M-Auto.ELEC-DOWN XX	1000	Intergalactic	2000
+M-Auto.GRAV-DOWN I	200	Common	100
+M-Auto.GRAV-DOWN II	240	Common	100
+M-Auto.GRAV-DOWN III	280	Common	100
+M-Auto.GRAV-DOWN IV	320	Common	100
+M-Auto.GRAV-DOWN V	360	Common	100
+M-Auto.GRAV-DOWN VI	400	Rare	100
+M-Auto.GRAV-DOWN VII	440	Rare	100
+M-Auto.GRAV-DOWN VIII	480	Rare	100
+M-Auto.GRAV-DOWN IX	520	Rare	100
+M-Auto.GRAV-DOWN X	560	Rare	100
+M-Auto.GRAV-DOWN XI	600	Unique	1100
+M-Auto.GRAV-DOWN XII	640	Unique	1200
+M-Auto.GRAV-DOWN XIII	680	Unique	1300
+M-Auto.GRAV-DOWN XIV	720	Unique	1400
+M-Auto.GRAV-DOWN XV	760	Unique	1500
+M-Auto.GRAV-DOWN XVI	800	Prime	1600
+M-Auto.GRAV-DOWN XVII	840	Prime	1700
+M-Auto.GRAV-DOWN XVIII	880	Prime	1800
+M-Auto.GRAV-DOWN XIX	920	Prime	1900
+M-Auto.GRAV-DOWN XX	1000	Intergalactic	2000
+M-Auto.BLAZE I	200	Common	100
+M-Auto.BLAZE II	240	Common	100
+M-Auto.BLAZE III	280	Common	100
+M-Auto.BLAZE IV	320	Common	100
+M-Auto.BLAZE V	360	Common	100
+M-Auto.BLAZE VI	400	Rare	100
+M-Auto.BLAZE VII	440	Rare	100
+M-Auto.BLAZE VIII	480	Rare	100
+M-Auto.BLAZE IX	520	Rare	100
+M-Auto.BLAZE X	560	Rare	100
+M-Auto.BLAZE XI	600	Unique	1100
+M-Auto.BLAZE XII	640	Unique	1200
+M-Auto.BLAZE XIII	680	Unique	1300
+M-Auto.BLAZE XIV	720	Unique	1400
+M-Auto.BLAZE XV	760	Unique	1500
+M-Auto.BLAZE XVI	800	Prime	1600
+M-Auto.BLAZE XVII	840	Prime	1700
+M-Auto.BLAZE XVIII	880	Prime	1800
+M-Auto.BLAZE XIX	920	Prime	1900
+M-Auto.BLAZE XX	1000	Intergalactic	2000
+M-Auto.SHOCK I	200	Common	100
+M-Auto.SHOCK II	240	Common	100
+M-Auto.SHOCK III	280	Common	100
+M-Auto.SHOCK IV	320	Common	100
+M-Auto.SHOCK V	360	Common	100
+M-Auto.SHOCK VI	400	Rare	100
+M-Auto.SHOCK VII	440	Rare	100
+M-Auto.SHOCK VIII	480	Rare	100
+M-Auto.SHOCK IX	520	Rare	100
+M-Auto.SHOCK X	560	Rare	100
+M-Auto.SHOCK XI	600	Unique	1100
+M-Auto.SHOCK XII	640	Unique	1200
+M-Auto.SHOCK XIII	680	Unique	1300
+M-Auto.SHOCK XIV	720	Unique	1400
+M-Auto.SHOCK XV	760	Unique	1500
+M-Auto.SHOCK XVI	800	Prime	1600
+M-Auto.SHOCK XVII	840	Prime	1700
+M-Auto.SHOCK XVIII	880	Prime	1800
+M-Auto.SHOCK XIX	920	Prime	1900
+M-Auto.SHOCK XX	1000	Intergalactic	2000
+M-Auto.HP-RECOV I	500	Common	100
+M-Auto.HP-RECOV II	600	Common	100
+M-Auto.HP-RECOV III	700	Common	100
+M-Auto.HP-RECOV IV	800	Common	100
+M-Auto.HP-RECOV V	900	Common	100
+M-Auto.HP-RECOV VI	1000	Rare	100
+M-Auto.HP-RECOV VII	1100	Rare	100
+M-Auto.HP-RECOV VIII	1200	Rare	100
+M-Auto.HP-RECOV IX	1300	Rare	100
+M-Auto.HP-RECOV X	1400	Rare	100
+M-Auto.HP-RECOV XI	1500	Unique	1100
+M-Auto.HP-RECOV XII	1600	Unique	1200
+M-Auto.HP-RECOV XIII	1700	Unique	1300
+M-Auto.HP-RECOV XIV	1800	Unique	1400
+M-Auto.HP-RECOV XV	1900	Unique	1500
+M-Auto.HP-RECOV XVI	2000	Prime	1600
+M-Auto.HP-RECOV XVII	2100	Prime	1700
+M-Auto.HP-RECOV XVIII	2200	Prime	1800
+M-Auto.HP-RECOV XIX	2300	Prime	1900
+M-Auto.HP-RECOV XX	2500	Intergalactic	2000
+Damage.GP-GAIN I	300	Common	100
+Damage.GP-GAIN II	360	Common	100
+Damage.GP-GAIN III	420	Common	100
+Damage.GP-GAIN IV	480	Common	100
+Damage.GP-GAIN V	540	Common	100
+Damage.GP-GAIN VI	600	Rare	100
+Damage.GP-GAIN VII	660	Rare	100
+Damage.GP-GAIN VIII	720	Rare	100
+Damage.GP-GAIN IX	780	Rare	100
+Damage.GP-GAIN X	840	Rare	100
+Damage.GP-GAIN XI	900	Unique	1100
+Damage.GP-GAIN XII	960	Unique	1200
+Damage.GP-GAIN XIII	1020	Unique	1300
+Damage.GP-GAIN XIV	1080	Unique	1400
+Damage.GP-GAIN XV	1140	Unique	1500
+Damage.GP-GAIN XVI	1200	Prime	1600
+Damage.GP-GAIN XVII	1260	Prime	1700
+Damage.GP-GAIN XVIII	1320	Prime	1800
+Damage.GP-GAIN XIX	1380	Prime	1900
+Damage.GP-GAIN XX	1500	Intergalactic	2000
+Damage.APPEND I	300	Common	100
+Damage.APPEND II	360	Common	100
+Damage.APPEND III	420	Common	100
+Damage.APPEND IV	480	Common	100
+Damage.APPEND V	540	Common	100
+Damage.APPEND VI	600	Rare	100
+Damage.APPEND VII	660	Rare	100
+Damage.APPEND VIII	720	Rare	100
+Damage.APPEND IX	780	Rare	100
+Damage.APPEND X	840	Rare	100
+Damage.APPEND XI	900	Unique	1100
+Damage.APPEND XII	960	Unique	1200
+Damage.APPEND XIII	1020	Unique	1300
+Damage.APPEND XIV	1080	Unique	1400
+Damage.APPEND XV	1140	Unique	1500
+Damage.APPEND XVI	1200	Prime	1600
+Damage.APPEND XVII	1260	Prime	1700
+Damage.APPEND XVIII	1320	Prime	1800
+Damage.APPEND XIX	1380	Prime	1900
+Damage.APPEND XX	1500	Intergalactic	2000
+Jamming I	300	Common	100
+Jamming II	360	Common	100
+Jamming III	420	Common	100
+Jamming IV	480	Common	100
+Jamming V	540	Common	100
+Jamming VI	600	Rare	100
+Jamming VII	660	Rare	100
+Jamming VIII	720	Rare	100
+Jamming IX	780	Rare	100
+Jamming X	840	Rare	100
+Jamming XI	900	Unique	1100
+Jamming XII	960	Unique	1200
+Jamming XIII	1020	Unique	1300
+Jamming XIV	1080	Unique	1400
+Jamming XV	1140	Unique	1500
+Jamming XVI	1200	Prime	1600
+Jamming XVII	1260	Prime	1700
+Jamming XVIII	1320	Prime	1800
+Jamming XIX	1380	Prime	1900
+Jamming XX	1500	Intergalactic	2000
+AppendLost.ATK-UP I	500	Common	100
+AppendLost.ATK-UP II	600	Common	100
+AppendLost.ATK-UP III	700	Common	100
+AppendLost.ATK-UP IV	800	Common	100
+AppendLost.ATK-UP V	900	Common	100
+AppendLost.ATK-UP VI	1000	Rare	100
+AppendLost.ATK-UP VII	1100	Rare	100
+AppendLost.ATK-UP VIII	1200	Rare	100
+AppendLost.ATK-UP IX	1300	Rare	100
+AppendLost.ATK-UP X	1400	Rare	100
+AppendLost.ATK-UP XI	1500	Unique	1100
+AppendLost.ATK-UP XII	1600	Unique	1200
+AppendLost.ATK-UP XIII	1700	Unique	1300
+AppendLost.ATK-UP XIV	1800	Unique	1400
+AppendLost.ATK-UP XV	1900	Unique	1500
+AppendLost.ATK-UP XVI	2000	Prime	1600
+AppendLost.ATK-UP XVII	2100	Prime	1700
+AppendLost.ATK-UP XVIII	2200	Prime	1800
+AppendLost.ATK-UP XIX	2300	Prime	1900
+AppendLost.ATK-UP XX	2500	Intergalactic	2000
+AppendLost.EVA-UP I	500	Common	100
+AppendLost.EVA-UP II	600	Common	100
+AppendLost.EVA-UP III	700	Common	100
+AppendLost.EVA-UP IV	800	Common	100
+AppendLost.EVA-UP V	900	Common	100
+AppendLost.EVA-UP VI	1000	Rare	100
+AppendLost.EVA-UP VII	1100	Rare	100
+AppendLost.EVA-UP VIII	1200	Rare	100
+AppendLost.EVA-UP IX	1300	Rare	100
+AppendLost.EVA-UP X	1400	Rare	100
+AppendLost.EVA-UP XI	1500	Unique	1100
+AppendLost.EVA-UP XII	1600	Unique	1200
+AppendLost.EVA-UP XIII	1700	Unique	1300
+AppendLost.EVA-UP XIV	1800	Unique	1400
+AppendLost.EVA-UP XV	1900	Unique	1500
+AppendLost.EVA-UP XVI	2000	Prime	1600
+AppendLost.EVA-UP XVII	2100	Prime	1700
+AppendLost.EVA-UP XVIII	2200	Prime	1800
+AppendLost.EVA-UP XIX	2300	Prime	1900
+AppendLost.EVA-UP XX	2500	Intergalactic	2000
+AppendLost.GP I	500	Common	100
+AppendLost.GP II	600	Common	100
+AppendLost.GP III	700	Common	100
+AppendLost.GP IV	800	Common	100
+AppendLost.GP V	900	Common	100
+AppendLost.GP VI	1000	Rare	100
+AppendLost.GP VII	1100	Rare	100
+AppendLost.GP VIII	1200	Rare	100
+AppendLost.GP IX	1300	Rare	100
+AppendLost.GP X	1400	Rare	100
+AppendLost.GP XI	1500	Unique	1100
+AppendLost.GP XII	1600	Unique	1200
+AppendLost.GP XIII	1700	Unique	1300
+AppendLost.GP XIV	1800	Unique	1400
+AppendLost.GP XV	1900	Unique	1500
+AppendLost.GP XVI	2000	Prime	1600
+AppendLost.GP XVII	2100	Prime	1700
+AppendLost.GP XVIII	2200	Prime	1800
+AppendLost.GP XIX	2300	Prime	1900
+AppendLost.GP XX	2500	Intergalactic	2000
+Reflect.ADD-PHYS	1000	Unique	\N
+Reflect.ADD-BEAM	1000	Unique	\N
+Reflect.ADD-ETHER	1000	Unique	\N
+Reflect.ADD-THERM	1000	Unique	\N
+Reflect.ADD-ELEC	1000	Unique	\N
+Reflect.ADD-GRAV	1000	Unique	\N
+Reflect.DAMAGE-UP I	500	Common	100
+Reflect.DAMAGE-UP II	600	Common	100
+Reflect.DAMAGE-UP III	700	Common	100
+Reflect.DAMAGE-UP IV	800	Common	100
+Reflect.DAMAGE-UP V	900	Common	100
+Reflect.DAMAGE-UP VI	1000	Rare	100
+Reflect.DAMAGE-UP VII	1100	Rare	100
+Reflect.DAMAGE-UP VIII	1200	Rare	100
+Reflect.DAMAGE-UP IX	1300	Rare	100
+Reflect.DAMAGE-UP X	1400	Rare	100
+Reflect.DAMAGE-UP XI	1500	Unique	1100
+Reflect.DAMAGE-UP XII	1600	Unique	1200
+Reflect.DAMAGE-UP XIII	1700	Unique	1300
+Reflect.DAMAGE-UP XIV	1800	Unique	1400
+Reflect.DAMAGE-UP XV	1900	Unique	1500
+Reflect.DAMAGE-UP XVI	2000	Prime	1600
+Reflect.DAMAGE-UP XVII	2100	Prime	1700
+Reflect.DAMAGE-UP XVIII	2200	Prime	1800
+Reflect.DAMAGE-UP XIX	2300	Prime	1900
+Reflect.DAMAGE-UP XX	2500	Intergalactic	2000
+Reflect.NEG-PHYS I	300	Common	100
+Reflect.NEG-PHYS II	360	Common	100
+Reflect.NEG-PHYS III	420	Common	100
+Reflect.NEG-PHYS IV	480	Common	100
+Reflect.NEG-PHYS V	540	Common	100
+Reflect.NEG-PHYS VI	600	Rare	100
+Reflect.NEG-PHYS VII	660	Rare	100
+Reflect.NEG-PHYS VIII	720	Rare	100
+Reflect.NEG-PHYS IX	780	Rare	100
+Reflect.NEG-PHYS X	840	Rare	100
+Reflect.NEG-PHYS XI	900	Unique	1100
+Reflect.NEG-PHYS XII	960	Unique	1200
+Reflect.NEG-PHYS XIII	1020	Unique	1300
+Reflect.NEG-PHYS XIV	1080	Unique	1400
+Reflect.NEG-PHYS XV	1140	Unique	1500
+Reflect.NEG-PHYS XVI	1200	Prime	1600
+Reflect.NEG-PHYS XVII	1260	Prime	1700
+Reflect.NEG-PHYS XVIII	1320	Prime	1800
+Reflect.NEG-PHYS XIX	1380	Prime	1900
+Reflect.NEG-PHYS XX	1500	Intergalactic	2000
+Reflect.NEG-BEAM I	300	Common	100
+Reflect.NEG-BEAM II	360	Common	100
+Reflect.NEG-BEAM III	420	Common	100
+Reflect.NEG-BEAM IV	480	Common	100
+Reflect.NEG-BEAM V	540	Common	100
+Reflect.NEG-BEAM VI	600	Rare	100
+Reflect.NEG-BEAM VII	660	Rare	100
+Reflect.NEG-BEAM VIII	720	Rare	100
+Reflect.NEG-BEAM IX	780	Rare	100
+Reflect.NEG-BEAM X	840	Rare	100
+Reflect.NEG-BEAM XI	900	Unique	1100
+Reflect.NEG-BEAM XII	960	Unique	1200
+Reflect.NEG-BEAM XIII	1020	Unique	1300
+Reflect.NEG-BEAM XIV	1080	Unique	1400
+Reflect.NEG-BEAM XV	1140	Unique	1500
+Reflect.NEG-BEAM XVI	1200	Prime	1600
+Reflect.NEG-BEAM XVII	1260	Prime	1700
+Reflect.NEG-BEAM XVIII	1320	Prime	1800
+Reflect.NEG-BEAM XIX	1380	Prime	1900
+Reflect.NEG-BEAM XX	1500	Intergalactic	2000
+Reflect.NEG-ETHER I	300	Common	100
+Reflect.NEG-ETHER II	360	Common	100
+Reflect.NEG-ETHER III	420	Common	100
+Reflect.NEG-ETHER IV	480	Common	100
+Reflect.NEG-ETHER V	540	Common	100
+Reflect.NEG-ETHER VI	600	Rare	100
+Reflect.NEG-ETHER VII	660	Rare	100
+Reflect.NEG-ETHER VIII	720	Rare	100
+Reflect.NEG-ETHER IX	780	Rare	100
+Reflect.NEG-ETHER X	840	Rare	100
+Reflect.NEG-ETHER XI	900	Unique	1100
+Reflect.NEG-ETHER XII	960	Unique	1200
+Reflect.NEG-ETHER XIII	1020	Unique	1300
+Reflect.NEG-ETHER XIV	1080	Unique	1400
+Reflect.NEG-ETHER XV	1140	Unique	1500
+Reflect.NEG-ETHER XVI	1200	Prime	1600
+Reflect.NEG-ETHER XVII	1260	Prime	1700
+Reflect.NEG-ETHER XVIII	1320	Prime	1800
+Reflect.NEG-ETHER XIX	1380	Prime	1900
+Reflect.NEG-ETHER XX	1500	Intergalactic	2000
+Reflect.NEG-THERM I	300	Common	100
+Reflect.NEG-THERM II	360	Common	100
+Reflect.NEG-THERM III	420	Common	100
+Reflect.NEG-THERM IV	480	Common	100
+Reflect.NEG-THERM V	540	Common	100
+Reflect.NEG-THERM VI	600	Rare	100
+Reflect.NEG-THERM VII	660	Rare	100
+Reflect.NEG-THERM VIII	720	Rare	100
+Reflect.NEG-THERM IX	780	Rare	100
+Reflect.NEG-THERM X	840	Rare	100
+Reflect.NEG-THERM XI	900	Unique	1100
+Reflect.NEG-THERM XII	960	Unique	1200
+Reflect.NEG-THERM XIII	1020	Unique	1300
+Reflect.NEG-THERM XIV	1080	Unique	1400
+Reflect.NEG-THERM XV	1140	Unique	1500
+Reflect.NEG-THERM XVI	1200	Prime	1600
+Reflect.NEG-THERM XVII	1260	Prime	1700
+Reflect.NEG-THERM XVIII	1320	Prime	1800
+Reflect.NEG-THERM XIX	1380	Prime	1900
+Reflect.NEG-THERM XX	1500	Intergalactic	2000
+Reflect.NEG-ELEC I	300	Common	100
+Reflect.NEG-ELEC II	360	Common	100
+Reflect.NEG-ELEC III	420	Common	100
+Reflect.NEG-ELEC IV	480	Common	100
+Reflect.NEG-ELEC V	540	Common	100
+Reflect.NEG-ELEC VI	600	Rare	100
+Reflect.NEG-ELEC VII	660	Rare	100
+Reflect.NEG-ELEC VIII	720	Rare	100
+Reflect.NEG-ELEC IX	780	Rare	100
+Reflect.NEG-ELEC X	840	Rare	100
+Reflect.NEG-ELEC XI	900	Unique	1100
+Reflect.NEG-ELEC XII	960	Unique	1200
+Reflect.NEG-ELEC XIII	1020	Unique	1300
+Reflect.NEG-ELEC XIV	1080	Unique	1400
+Reflect.NEG-ELEC XV	1140	Unique	1500
+Reflect.NEG-ELEC XVI	1200	Prime	1600
+Reflect.NEG-ELEC XVII	1260	Prime	1700
+Reflect.NEG-ELEC XVIII	1320	Prime	1800
+Reflect.NEG-ELEC XIX	1380	Prime	1900
+Reflect.NEG-ELEC XX	1500	Intergalactic	2000
+Reflect.NEG-GRAV I	300	Common	100
+Reflect.NEG-GRAV II	360	Common	100
+Reflect.NEG-GRAV III	420	Common	100
+Reflect.NEG-GRAV IV	480	Common	100
+Reflect.NEG-GRAV V	540	Common	100
+Reflect.NEG-GRAV VI	600	Rare	100
+Reflect.NEG-GRAV VII	660	Rare	100
+Reflect.NEG-GRAV VIII	720	Rare	100
+Reflect.NEG-GRAV IX	780	Rare	100
+Reflect.NEG-GRAV X	840	Rare	100
+Reflect.NEG-GRAV XI	900	Unique	1100
+Reflect.NEG-GRAV XII	960	Unique	1200
+Reflect.NEG-GRAV XIII	1020	Unique	1300
+Reflect.NEG-GRAV XIV	1080	Unique	1400
+Reflect.NEG-GRAV XV	1140	Unique	1500
+Reflect.NEG-GRAV XVI	1200	Prime	1600
+Reflect.NEG-GRAV XVII	1260	Prime	1700
+Reflect.NEG-GRAV XVIII	1320	Prime	1800
+Reflect.NEG-GRAV XIX	1380	Prime	1900
+Reflect.NEG-GRAV XX	1500	Intergalactic	2000
+Overdrive.FRAME-HP I	500	Common	100
+Overdrive.FRAME-HP II	600	Common	100
+Overdrive.FRAME-HP III	700	Common	100
+Overdrive.FRAME-HP IV	800	Common	100
+Overdrive.FRAME-HP V	900	Common	100
+Overdrive.FRAME-HP VI	1000	Rare	100
+Overdrive.FRAME-HP VII	1100	Rare	100
+Overdrive.FRAME-HP VIII	1200	Rare	100
+Overdrive.FRAME-HP IX	1300	Rare	100
+Overdrive.FRAME-HP X	1400	Rare	100
+Overdrive.FRAME-HP XI	1500	Unique	1100
+Overdrive.FRAME-HP XII	1600	Unique	1200
+Overdrive.FRAME-HP XIII	1700	Unique	1300
+Overdrive.FRAME-HP XIV	1800	Unique	1400
+Overdrive.FRAME-HP XV	1900	Unique	1500
+Overdrive.FRAME-HP XVI	2000	Prime	1600
+Overdrive.FRAME-HP XVII	2100	Prime	1700
+Overdrive.FRAME-HP XVIII	2200	Prime	1800
+Overdrive.FRAME-HP XIX	2300	Prime	1900
+Overdrive.FRAME-HP XX	2500	Intergalactic	2000
+Overdrive.APPEND-HP I	500	Common	100
+Overdrive.APPEND-HP II	600	Common	100
+Overdrive.APPEND-HP III	700	Common	100
+Overdrive.APPEND-HP IV	800	Common	100
+Overdrive.APPEND-HP V	900	Common	100
+Overdrive.APPEND-HP VI	1000	Rare	100
+Overdrive.APPEND-HP VII	1100	Rare	100
+Overdrive.APPEND-HP VIII	1200	Rare	100
+Overdrive.APPEND-HP IX	1300	Rare	100
+Overdrive.APPEND-HP X	1400	Rare	100
+Overdrive.APPEND-HP XI	1500	Unique	1100
+Overdrive.APPEND-HP XII	1600	Unique	1200
+Overdrive.APPEND-HP XIII	1700	Unique	1300
+Overdrive.APPEND-HP XIV	1800	Unique	1400
+Overdrive.APPEND-HP XV	1900	Unique	1500
+Overdrive.APPEND-HP XVI	2000	Prime	1600
+Overdrive.APPEND-HP XVII	2100	Prime	1700
+Overdrive.APPEND-HP XVIII	2200	Prime	1800
+Overdrive.APPEND-HP XIX	2300	Prime	1900
+Overdrive.APPEND-HP XX	2500	Intergalactic	2000
+Overdrive.EXTEND I	500	Common	100
+Overdrive.EXTEND II	600	Common	100
+Overdrive.EXTEND III	700	Common	100
+Overdrive.EXTEND IV	800	Common	100
+Overdrive.EXTEND V	900	Common	100
+Overdrive.EXTEND VI	1000	Rare	100
+Overdrive.EXTEND VII	1100	Rare	100
+Overdrive.EXTEND VIII	1200	Rare	100
+Overdrive.EXTEND IX	1300	Rare	100
+Overdrive.EXTEND X	1400	Rare	100
+Overdrive.EXTEND XI	1500	Unique	1100
+Overdrive.EXTEND XII	1600	Unique	1200
+Overdrive.EXTEND XIII	1700	Unique	1300
+Overdrive.EXTEND XIV	1800	Unique	1400
+Overdrive.EXTEND XV	1900	Unique	1500
+Overdrive.EXTEND XVI	2000	Prime	1600
+Overdrive.EXTEND XVII	2100	Prime	1700
+Overdrive.EXTEND XVIII	2200	Prime	1800
+Overdrive.EXTEND XIX	2300	Prime	1900
+Overdrive.EXTEND XX	2500	Intergalactic	2000
+Arts.GP I	500	Common	100
+Arts.GP II	600	Common	100
+Arts.GP III	700	Common	100
+Arts.GP IV	800	Common	100
+Arts.GP V	900	Common	100
+Arts.GP VI	1000	Rare	100
+Arts.GP VII	1100	Rare	100
+Arts.GP VIII	1200	Rare	100
+Arts.GP IX	1300	Rare	100
+Arts.GP X	1400	Rare	100
+Arts.GP XI	1500	Unique	1100
+Arts.GP XII	1600	Unique	1200
+Arts.GP XIII	1700	Unique	1300
+Arts.GP XIV	1800	Unique	1400
+Arts.GP XV	1900	Unique	1500
+Arts.GP XVI	2000	Prime	1600
+Arts.GP XVII	2100	Prime	1700
+Arts.GP XVIII	2200	Prime	1800
+Arts.GP XIX	2300	Prime	1900
+Arts.GP XX	2500	Intergalactic	2000
+TimeEx.TAUNT I	200	Common	100
+TimeEx.TAUNT II	240	Common	100
+TimeEx.TAUNT III	280	Common	100
+TimeEx.TAUNT IV	320	Common	100
+TimeEx.TAUNT V	360	Common	100
+TimeEx.TAUNT VI	400	Rare	100
+TimeEx.TAUNT VII	440	Rare	100
+TimeEx.TAUNT VIII	480	Rare	100
+TimeEx.TAUNT IX	520	Rare	100
+TimeEx.TAUNT X	560	Rare	100
+TimeEx.TAUNT XI	600	Unique	1100
+TimeEx.TAUNT XII	640	Unique	1200
+TimeEx.TAUNT XIII	680	Unique	1300
+TimeEx.TAUNT XIV	720	Unique	1400
+TimeEx.TAUNT XV	760	Unique	1500
+TimeEx.TAUNT XVI	800	Prime	1600
+TimeEx.TAUNT XVII	840	Prime	1700
+TimeEx.TAUNT XVIII	880	Prime	1800
+TimeEx.TAUNT XIX	920	Prime	1900
+TimeEx.TAUNT XX	1000	Intergalactic	2000
+TimeEx.CONTROL I	200	Common	100
+TimeEx.CONTROL II	240	Common	100
+TimeEx.CONTROL III	280	Common	100
+TimeEx.CONTROL IV	320	Common	100
+TimeEx.CONTROL V	360	Common	100
+TimeEx.CONTROL VI	400	Rare	100
+TimeEx.CONTROL VII	440	Rare	100
+TimeEx.CONTROL VIII	480	Rare	100
+TimeEx.CONTROL IX	520	Rare	100
+TimeEx.CONTROL X	560	Rare	100
+TimeEx.CONTROL XI	600	Unique	1100
+TimeEx.CONTROL XII	640	Unique	1200
+TimeEx.CONTROL XIII	680	Unique	1300
+TimeEx.CONTROL XIV	720	Unique	1400
+TimeEx.CONTROL XV	760	Unique	1500
+TimeEx.CONTROL XVI	800	Prime	1600
+TimeEx.CONTROL XVII	840	Prime	1700
+TimeEx.CONTROL XVIII	880	Prime	1800
+TimeEx.CONTROL XIX	920	Prime	1900
+TimeEx.CONTROL XX	1000	Intergalactic	2000
+TimeEx.SLEEP I	200	Common	100
+TimeEx.SLEEP II	240	Common	100
+TimeEx.SLEEP III	280	Common	100
+TimeEx.SLEEP IV	320	Common	100
+TimeEx.SLEEP V	360	Common	100
+TimeEx.SLEEP VI	400	Rare	100
+TimeEx.SLEEP VII	440	Rare	100
+TimeEx.SLEEP VIII	480	Rare	100
+TimeEx.SLEEP IX	520	Rare	100
+TimeEx.SLEEP X	560	Rare	100
+TimeEx.SLEEP XI	600	Unique	1100
+TimeEx.SLEEP XII	640	Unique	1200
+TimeEx.SLEEP XIII	680	Unique	1300
+TimeEx.SLEEP XIV	720	Unique	1400
+TimeEx.SLEEP XV	760	Unique	1500
+TimeEx.SLEEP XVI	800	Prime	1600
+TimeEx.SLEEP XVII	840	Prime	1700
+TimeEx.SLEEP XVIII	880	Prime	1800
+TimeEx.SLEEP XIX	920	Prime	1900
+TimeEx.SLEEP XX	1000	Intergalactic	2000
+TimeEx.VIRUS I	200	Common	100
+TimeEx.VIRUS II	240	Common	100
+TimeEx.VIRUS III	280	Common	100
+TimeEx.VIRUS IV	320	Common	100
+TimeEx.VIRUS V	360	Common	100
+TimeEx.VIRUS VI	400	Rare	100
+TimeEx.VIRUS VII	440	Rare	100
+TimeEx.VIRUS VIII	480	Rare	100
+TimeEx.VIRUS IX	520	Rare	100
+TimeEx.VIRUS X	560	Rare	100
+TimeEx.VIRUS XI	600	Unique	1100
+TimeEx.VIRUS XII	640	Unique	1200
+TimeEx.VIRUS XIII	680	Unique	1300
+TimeEx.VIRUS XIV	720	Unique	1400
+TimeEx.VIRUS XV	760	Unique	1500
+TimeEx.VIRUS XVI	800	Prime	1600
+TimeEx.VIRUS XVII	840	Prime	1700
+TimeEx.VIRUS XVIII	880	Prime	1800
+TimeEx.VIRUS XIX	920	Prime	1900
+TimeEx.VIRUS XX	1000	Intergalactic	2000
+TimeEx.BLACKOUT I	200	Common	100
+TimeEx.BLACKOUT II	240	Common	100
+TimeEx.BLACKOUT III	280	Common	100
+TimeEx.BLACKOUT IV	320	Common	100
+TimeEx.BLACKOUT V	360	Common	100
+TimeEx.BLACKOUT VI	400	Rare	100
+TimeEx.BLACKOUT VII	440	Rare	100
+TimeEx.BLACKOUT VIII	480	Rare	100
+TimeEx.BLACKOUT IX	520	Rare	100
+TimeEx.BLACKOUT X	560	Rare	100
+TimeEx.BLACKOUT XI	600	Unique	1100
+TimeEx.BLACKOUT XII	640	Unique	1200
+TimeEx.BLACKOUT XIII	680	Unique	1300
+TimeEx.BLACKOUT XIV	720	Unique	1400
+TimeEx.BLACKOUT XV	760	Unique	1500
+TimeEx.BLACKOUT XVI	800	Prime	1600
+TimeEx.BLACKOUT XVII	840	Prime	1700
+TimeEx.BLACKOUT XVIII	880	Prime	1800
+TimeEx.BLACKOUT XIX	920	Prime	1900
+TimeEx.BLACKOUT XX	1000	Intergalactic	2000
+TimeEx.FATIGUE I	200	Common	100
+TimeEx.FATIGUE II	240	Common	100
+TimeEx.FATIGUE III	280	Common	100
+TimeEx.FATIGUE IV	320	Common	100
+TimeEx.FATIGUE V	360	Common	100
+TimeEx.FATIGUE VI	400	Rare	100
+TimeEx.FATIGUE VII	440	Rare	100
+TimeEx.FATIGUE VIII	480	Rare	100
+TimeEx.FATIGUE IX	520	Rare	100
+TimeEx.FATIGUE X	560	Rare	100
+TimeEx.FATIGUE XI	600	Unique	1100
+TimeEx.FATIGUE XII	640	Unique	1200
+TimeEx.FATIGUE XIII	680	Unique	1300
+TimeEx.FATIGUE XIV	720	Unique	1400
+TimeEx.FATIGUE XV	760	Unique	1500
+TimeEx.FATIGUE XVI	800	Prime	1600
+TimeEx.FATIGUE XVII	840	Prime	1700
+TimeEx.FATIGUE XVIII	880	Prime	1800
+TimeEx.FATIGUE XIX	920	Prime	1900
+TimeEx.FATIGUE XX	1000	Intergalactic	2000
+TimeEx.SLOW-ARTS I	200	Common	100
+TimeEx.SLOW-ARTS II	240	Common	100
+TimeEx.SLOW-ARTS III	280	Common	100
+TimeEx.SLOW-ARTS IV	320	Common	100
+TimeEx.SLOW-ARTS V	360	Common	100
+TimeEx.SLOW-ARTS VI	400	Rare	100
+TimeEx.SLOW-ARTS VII	440	Rare	100
+TimeEx.SLOW-ARTS VIII	480	Rare	100
+TimeEx.SLOW-ARTS IX	520	Rare	100
+TimeEx.SLOW-ARTS X	560	Rare	100
+TimeEx.SLOW-ARTS XI	600	Unique	1100
+TimeEx.SLOW-ARTS XII	640	Unique	1200
+TimeEx.SLOW-ARTS XIII	680	Unique	1300
+TimeEx.SLOW-ARTS XIV	720	Unique	1400
+TimeEx.SLOW-ARTS XV	760	Unique	1500
+TimeEx.SLOW-ARTS XVI	800	Prime	1600
+TimeEx.SLOW-ARTS XVII	840	Prime	1700
+TimeEx.SLOW-ARTS XVIII	880	Prime	1800
+TimeEx.SLOW-ARTS XIX	920	Prime	1900
+TimeEx.SLOW-ARTS XX	1000	Intergalactic	2000
+TimeEx.DEBUFF-DOWN I	200	Common	100
+TimeEx.DEBUFF-DOWN II	240	Common	100
+TimeEx.DEBUFF-DOWN III	280	Common	100
+TimeEx.DEBUFF-DOWN IV	320	Common	100
+TimeEx.DEBUFF-DOWN V	360	Common	100
+TimeEx.DEBUFF-DOWN VI	400	Rare	100
+TimeEx.DEBUFF-DOWN VII	440	Rare	100
+TimeEx.DEBUFF-DOWN VIII	480	Rare	100
+TimeEx.DEBUFF-DOWN IX	520	Rare	100
+TimeEx.DEBUFF-DOWN X	560	Rare	100
+TimeEx.DEBUFF-DOWN XI	600	Unique	1100
+TimeEx.DEBUFF-DOWN XII	640	Unique	1200
+TimeEx.DEBUFF-DOWN XIII	680	Unique	1300
+TimeEx.DEBUFF-DOWN XIV	720	Unique	1400
+TimeEx.DEBUFF-DOWN XV	760	Unique	1500
+TimeEx.DEBUFF-DOWN XVI	800	Prime	1600
+TimeEx.DEBUFF-DOWN XVII	840	Prime	1700
+TimeEx.DEBUFF-DOWN XVIII	880	Prime	1800
+TimeEx.DEBUFF-DOWN XIX	920	Prime	1900
+TimeEx.DEBUFF-DOWN XX	1000	Intergalactic	2000
+TimeEx.RECOV-DOWN I	200	Common	100
+TimeEx.RECOV-DOWN II	240	Common	100
+TimeEx.RECOV-DOWN III	280	Common	100
+TimeEx.RECOV-DOWN IV	320	Common	100
+TimeEx.RECOV-DOWN V	360	Common	100
+TimeEx.RECOV-DOWN VI	400	Rare	100
+TimeEx.RECOV-DOWN VII	440	Rare	100
+TimeEx.RECOV-DOWN VIII	480	Rare	100
+TimeEx.RECOV-DOWN IX	520	Rare	100
+TimeEx.RECOV-DOWN X	560	Rare	100
+TimeEx.RECOV-DOWN XI	600	Unique	1100
+TimeEx.RECOV-DOWN XII	640	Unique	1200
+TimeEx.RECOV-DOWN XIII	680	Unique	1300
+TimeEx.RECOV-DOWN XIV	720	Unique	1400
+TimeEx.RECOV-DOWN XV	760	Unique	1500
+TimeEx.RECOV-DOWN XVI	800	Prime	1600
+TimeEx.RECOV-DOWN XVII	840	Prime	1700
+TimeEx.RECOV-DOWN XVIII	880	Prime	1800
+TimeEx.RECOV-DOWN XIX	920	Prime	1900
+TimeEx.RECOV-DOWN XX	1000	Intergalactic	2000
+TimeEx.BLAZE I	200	Common	100
+TimeEx.BLAZE II	240	Common	100
+TimeEx.BLAZE III	280	Common	100
+TimeEx.BLAZE IV	320	Common	100
+TimeEx.BLAZE V	360	Common	100
+TimeEx.BLAZE VI	400	Rare	100
+TimeEx.BLAZE VII	440	Rare	100
+TimeEx.BLAZE VIII	480	Rare	100
+TimeEx.BLAZE IX	520	Rare	100
+TimeEx.BLAZE X	560	Rare	100
+TimeEx.BLAZE XI	600	Unique	1100
+TimeEx.BLAZE XII	640	Unique	1200
+TimeEx.BLAZE XIII	680	Unique	1300
+TimeEx.BLAZE XIV	720	Unique	1400
+TimeEx.BLAZE XV	760	Unique	1500
+TimeEx.BLAZE XVI	800	Prime	1600
+TimeEx.BLAZE XVII	840	Prime	1700
+TimeEx.BLAZE XVIII	880	Prime	1800
+TimeEx.BLAZE XIX	920	Prime	1900
+TimeEx.BLAZE XX	1000	Intergalactic	2000
+TimeEx.SHOCK I	200	Common	100
+TimeEx.SHOCK II	240	Common	100
+TimeEx.SHOCK III	280	Common	100
+TimeEx.SHOCK IV	320	Common	100
+TimeEx.SHOCK V	360	Common	100
+TimeEx.SHOCK VI	400	Rare	100
+TimeEx.SHOCK VII	440	Rare	100
+TimeEx.SHOCK VIII	480	Rare	100
+TimeEx.SHOCK IX	520	Rare	100
+TimeEx.SHOCK X	560	Rare	100
+TimeEx.SHOCK XI	600	Unique	1100
+TimeEx.SHOCK XII	640	Unique	1200
+TimeEx.SHOCK XIII	680	Unique	1300
+TimeEx.SHOCK XIV	720	Unique	1400
+TimeEx.SHOCK XV	760	Unique	1500
+TimeEx.SHOCK XVI	800	Prime	1600
+TimeEx.SHOCK XVII	840	Prime	1700
+TimeEx.SHOCK XVIII	880	Prime	1800
+TimeEx.SHOCK XIX	920	Prime	1900
+TimeEx.SHOCK XX	1000	Intergalactic	2000
+TimeEx.PHYS-DOWN I	200	Common	100
+TimeEx.PHYS-DOWN II	240	Common	100
+TimeEx.PHYS-DOWN III	280	Common	100
+TimeEx.PHYS-DOWN IV	320	Common	100
+TimeEx.PHYS-DOWN V	360	Common	100
+TimeEx.PHYS-DOWN VI	400	Rare	100
+TimeEx.PHYS-DOWN VII	440	Rare	100
+TimeEx.PHYS-DOWN VIII	480	Rare	100
+TimeEx.PHYS-DOWN IX	520	Rare	100
+TimeEx.PHYS-DOWN X	560	Rare	100
+TimeEx.PHYS-DOWN XI	600	Unique	1100
+TimeEx.PHYS-DOWN XII	640	Unique	1200
+TimeEx.PHYS-DOWN XIII	680	Unique	1300
+TimeEx.PHYS-DOWN XIV	720	Unique	1400
+TimeEx.PHYS-DOWN XV	760	Unique	1500
+TimeEx.PHYS-DOWN XVI	800	Prime	1600
+TimeEx.PHYS-DOWN XVII	840	Prime	1700
+TimeEx.PHYS-DOWN XVIII	880	Prime	1800
+TimeEx.PHYS-DOWN XIX	920	Prime	1900
+TimeEx.PHYS-DOWN XX	1000	Intergalactic	2000
+TimeEx.BEAM-DOWN I	200	Common	100
+TimeEx.BEAM-DOWN II	240	Common	100
+TimeEx.BEAM-DOWN III	280	Common	100
+TimeEx.BEAM-DOWN IV	320	Common	100
+TimeEx.BEAM-DOWN V	360	Common	100
+TimeEx.BEAM-DOWN VI	400	Rare	100
+TimeEx.BEAM-DOWN VII	440	Rare	100
+TimeEx.BEAM-DOWN VIII	480	Rare	100
+TimeEx.BEAM-DOWN IX	520	Rare	100
+TimeEx.BEAM-DOWN X	560	Rare	100
+TimeEx.BEAM-DOWN XI	600	Unique	1100
+TimeEx.BEAM-DOWN XII	640	Unique	1200
+TimeEx.BEAM-DOWN XIII	680	Unique	1300
+TimeEx.BEAM-DOWN XIV	720	Unique	1400
+TimeEx.BEAM-DOWN XV	760	Unique	1500
+TimeEx.BEAM-DOWN XVI	800	Prime	1600
+TimeEx.BEAM-DOWN XVII	840	Prime	1700
+TimeEx.BEAM-DOWN XVIII	880	Prime	1800
+TimeEx.BEAM-DOWN XIX	920	Prime	1900
+TimeEx.BEAM-DOWN XX	1000	Intergalactic	2000
+TimeEx.ETHER-DOWN I	200	Common	100
+TimeEx.ETHER-DOWN II	240	Common	100
+TimeEx.ETHER-DOWN III	280	Common	100
+TimeEx.ETHER-DOWN IV	320	Common	100
+TimeEx.ETHER-DOWN V	360	Common	100
+TimeEx.ETHER-DOWN VI	400	Rare	100
+TimeEx.ETHER-DOWN VII	440	Rare	100
+TimeEx.ETHER-DOWN VIII	480	Rare	100
+TimeEx.ETHER-DOWN IX	520	Rare	100
+TimeEx.ETHER-DOWN X	560	Rare	100
+TimeEx.ETHER-DOWN XI	600	Unique	1100
+TimeEx.ETHER-DOWN XII	640	Unique	1200
+TimeEx.ETHER-DOWN XIII	680	Unique	1300
+TimeEx.ETHER-DOWN XIV	720	Unique	1400
+TimeEx.ETHER-DOWN XV	760	Unique	1500
+TimeEx.ETHER-DOWN XVI	800	Prime	1600
+TimeEx.ETHER-DOWN XVII	840	Prime	1700
+TimeEx.ETHER-DOWN XVIII	880	Prime	1800
+TimeEx.ETHER-DOWN XIX	920	Prime	1900
+TimeEx.ETHER-DOWN XX	1000	Intergalactic	2000
+TimeEx.THERM-DOWN I	200	Common	100
+TimeEx.THERM-DOWN II	240	Common	100
+TimeEx.THERM-DOWN III	280	Common	100
+TimeEx.THERM-DOWN IV	320	Common	100
+TimeEx.THERM-DOWN V	360	Common	100
+TimeEx.THERM-DOWN VI	400	Rare	100
+TimeEx.THERM-DOWN VII	440	Rare	100
+TimeEx.THERM-DOWN VIII	480	Rare	100
+TimeEx.THERM-DOWN IX	520	Rare	100
+TimeEx.THERM-DOWN X	560	Rare	100
+TimeEx.THERM-DOWN XI	600	Unique	1100
+TimeEx.THERM-DOWN XII	640	Unique	1200
+TimeEx.THERM-DOWN XIII	680	Unique	1300
+TimeEx.THERM-DOWN XIV	720	Unique	1400
+TimeEx.THERM-DOWN XV	760	Unique	1500
+TimeEx.THERM-DOWN XVI	800	Prime	1600
+TimeEx.THERM-DOWN XVII	840	Prime	1700
+TimeEx.THERM-DOWN XVIII	880	Prime	1800
+TimeEx.THERM-DOWN XIX	920	Prime	1900
+TimeEx.THERM-DOWN XX	1000	Intergalactic	2000
+TimeEx.ELEC-DOWN I	200	Common	100
+TimeEx.ELEC-DOWN II	240	Common	100
+TimeEx.ELEC-DOWN III	280	Common	100
+TimeEx.ELEC-DOWN IV	320	Common	100
+TimeEx.ELEC-DOWN V	360	Common	100
+TimeEx.ELEC-DOWN VI	400	Rare	100
+TimeEx.ELEC-DOWN VII	440	Rare	100
+TimeEx.ELEC-DOWN VIII	480	Rare	100
+TimeEx.ELEC-DOWN IX	520	Rare	100
+TimeEx.ELEC-DOWN X	560	Rare	100
+TimeEx.ELEC-DOWN XI	600	Unique	1100
+TimeEx.ELEC-DOWN XII	640	Unique	1200
+TimeEx.ELEC-DOWN XIII	680	Unique	1300
+TimeEx.ELEC-DOWN XIV	720	Unique	1400
+TimeEx.ELEC-DOWN XV	760	Unique	1500
+TimeEx.ELEC-DOWN XVI	800	Prime	1600
+TimeEx.ELEC-DOWN XVII	840	Prime	1700
+TimeEx.ELEC-DOWN XVIII	880	Prime	1800
+TimeEx.ELEC-DOWN XIX	920	Prime	1900
+TimeEx.ELEC-DOWN XX	1000	Intergalactic	2000
+TimeEx.GRAV-DOWN I	200	Common	100
+TimeEx.GRAV-DOWN II	240	Common	100
+TimeEx.GRAV-DOWN III	280	Common	100
+TimeEx.GRAV-DOWN IV	320	Common	100
+TimeEx.GRAV-DOWN V	360	Common	100
+TimeEx.GRAV-DOWN VI	400	Rare	100
+TimeEx.GRAV-DOWN VII	440	Rare	100
+TimeEx.GRAV-DOWN VIII	480	Rare	100
+TimeEx.GRAV-DOWN IX	520	Rare	100
+TimeEx.GRAV-DOWN X	560	Rare	100
+TimeEx.GRAV-DOWN XI	600	Unique	1100
+TimeEx.GRAV-DOWN XII	640	Unique	1200
+TimeEx.GRAV-DOWN XIII	680	Unique	1300
+TimeEx.GRAV-DOWN XIV	720	Unique	1400
+TimeEx.GRAV-DOWN XV	760	Unique	1500
+TimeEx.GRAV-DOWN XVI	800	Prime	1600
+TimeEx.GRAV-DOWN XVII	840	Prime	1700
+TimeEx.GRAV-DOWN XVIII	880	Prime	1800
+TimeEx.GRAV-DOWN XIX	920	Prime	1900
+TimeEx.GRAV-DOWN XX	1000	Intergalactic	2000
+Draw.OPENING-DMG I	500	Common	100
+Draw.OPENING-DMG II	600	Common	100
+Draw.OPENING-DMG III	700	Common	100
+Draw.OPENING-DMG IV	800	Common	100
+Draw.OPENING-DMG V	900	Common	100
+Draw.OPENING-DMG VI	1000	Rare	100
+Draw.OPENING-DMG VII	1100	Rare	100
+Draw.OPENING-DMG VIII	1200	Rare	100
+Draw.OPENING-DMG IX	1300	Rare	100
+Draw.OPENING-DMG X	1400	Rare	100
+Draw.OPENING-DMG XI	1500	Unique	1100
+Draw.OPENING-DMG XII	1600	Unique	1200
+Draw.OPENING-DMG XIII	1700	Unique	1300
+Draw.OPENING-DMG XIV	1800	Unique	1400
+Draw.OPENING-DMG XV	1900	Unique	1500
+Draw.OPENING-DMG XVI	2000	Prime	1600
+Draw.OPENING-DMG XVII	2100	Prime	1700
+Draw.OPENING-DMG XVIII	2200	Prime	1800
+Draw.OPENING-DMG XIX	2300	Prime	1900
+Draw.OPENING-DMG XX	2500	Intergalactic	2000
+Cloak.SIGHT I	200	Common	100
+Cloak.SIGHT II	240	Common	100
+Cloak.SIGHT III	280	Common	100
+Cloak.SIGHT IV	320	Common	100
+Cloak.SIGHT V	360	Common	100
+Cloak.SIGHT VI	400	Rare	100
+Cloak.SIGHT VII	440	Rare	100
+Cloak.SIGHT VIII	480	Rare	100
+Cloak.SIGHT IX	520	Rare	100
+Cloak.SIGHT X	560	Rare	100
+Cloak.SIGHT XI	600	Unique	1100
+Cloak.SIGHT XII	640	Unique	1200
+Cloak.SIGHT XIII	680	Unique	1300
+Cloak.SIGHT XIV	720	Unique	1400
+Cloak.SIGHT XV	760	Unique	1500
+Cloak.SIGHT XVI	800	Prime	1600
+Cloak.SIGHT XVII	840	Prime	1700
+Cloak.SIGHT XVIII	880	Prime	1800
+Cloak.SIGHT XIX	920	Prime	1900
+Cloak.SIGHT XX	1000	Intergalactic	2000
+Cloak.SOUND I	200	Common	100
+Cloak.SOUND II	240	Common	100
+Cloak.SOUND III	280	Common	100
+Cloak.SOUND IV	320	Common	100
+Cloak.SOUND V	360	Common	100
+Cloak.SOUND VI	400	Rare	100
+Cloak.SOUND VII	440	Rare	100
+Cloak.SOUND VIII	480	Rare	100
+Cloak.SOUND IX	520	Rare	100
+Cloak.SOUND X	560	Rare	100
+Cloak.SOUND XI	600	Unique	1100
+Cloak.SOUND XII	640	Unique	1200
+Cloak.SOUND XIII	680	Unique	1300
+Cloak.SOUND XIV	720	Unique	1400
+Cloak.SOUND XV	760	Unique	1500
+Cloak.SOUND XVI	800	Prime	1600
+Cloak.SOUND XVII	840	Prime	1700
+Cloak.SOUND XVIII	880	Prime	1800
+Cloak.SOUND XIX	920	Prime	1900
+Cloak.SOUND XX	1000	Intergalactic	2000
+Crush.GP I	300	Common	100
+Crush.GP II	360	Common	100
+Crush.GP III	420	Common	100
+Crush.GP IV	480	Common	100
+Crush.GP V	540	Common	100
+Crush.GP VI	600	Rare	100
+Crush.GP VII	660	Rare	100
+Crush.GP VIII	720	Rare	100
+Crush.GP IX	780	Rare	100
+Crush.GP X	840	Rare	100
+Crush.GP XI	900	Unique	1100
+Crush.GP XII	960	Unique	1200
+Crush.GP XIII	1020	Unique	1300
+Crush.GP XIV	1080	Unique	1400
+Crush.GP XV	1140	Unique	1500
+Crush.GP XVI	1200	Prime	1600
+Crush.GP XVII	1260	Prime	1700
+Crush.GP XVIII	1320	Prime	1800
+Crush.GP XIX	1380	Prime	1900
+Crush.GP XX	1500	Intergalactic	2000
+Crush.APPEND I	300	Common	100
+Crush.APPEND II	360	Common	100
+Crush.APPEND III	420	Common	100
+Crush.APPEND IV	480	Common	100
+Crush.APPEND V	540	Common	100
+Crush.APPEND VI	600	Rare	100
+Crush.APPEND VII	660	Rare	100
+Crush.APPEND VIII	720	Rare	100
+Crush.APPEND IX	780	Rare	100
+Crush.APPEND X	840	Rare	100
+Crush.APPEND XI	900	Unique	1100
+Crush.APPEND XII	960	Unique	1200
+Crush.APPEND XIII	1020	Unique	1300
+Crush.APPEND XIV	1080	Unique	1400
+Crush.APPEND XV	1140	Unique	1500
+Crush.APPEND XVI	1200	Prime	1600
+Crush.APPEND XVII	1260	Prime	1700
+Crush.APPEND XVIII	1320	Prime	1800
+Crush.APPEND XIX	1380	Prime	1900
+Crush.APPEND XX	1500	Intergalactic	2000
+Spike.EVA I	300	Common	100
+Spike.EVA II	360	Common	100
+Spike.EVA III	420	Common	100
+Spike.EVA IV	480	Common	100
+Spike.EVA V	540	Common	100
+Spike.EVA VI	600	Rare	100
+Spike.EVA VII	660	Rare	100
+Spike.EVA VIII	720	Rare	100
+Spike.EVA IX	780	Rare	100
+Spike.EVA X	840	Rare	100
+Spike.EVA XI	900	Unique	1100
+Spike.EVA XII	960	Unique	1200
+Spike.EVA XIII	1020	Unique	1300
+Spike.EVA XIV	1080	Unique	1400
+Spike.EVA XV	1140	Unique	1500
+Spike.EVA XVI	1200	Prime	1600
+Spike.EVA XVII	1260	Prime	1700
+Spike.EVA XVIII	1320	Prime	1800
+Spike.EVA XIX	1380	Prime	1900
+Spike.EVA XX	1500	Intergalactic	2000
+Vehicle.APPEND-DEF I	500	Common	100
+Vehicle.APPEND-DEF II	600	Common	100
+Vehicle.APPEND-DEF III	700	Common	100
+Vehicle.APPEND-DEF IV	800	Common	100
+Vehicle.APPEND-DEF V	900	Common	100
+Vehicle.APPEND-DEF VI	1000	Rare	100
+Vehicle.APPEND-DEF VII	1100	Rare	100
+Vehicle.APPEND-DEF VIII	1200	Rare	100
+Vehicle.APPEND-DEF IX	1300	Rare	100
+Vehicle.APPEND-DEF X	1400	Rare	100
+Vehicle.APPEND-DEF XI	1500	Unique	1100
+Vehicle.APPEND-DEF XII	1600	Unique	1200
+Vehicle.APPEND-DEF XIII	1700	Unique	1300
+Vehicle.APPEND-DEF XIV	1800	Unique	1400
+Vehicle.APPEND-DEF XV	1900	Unique	1500
+Vehicle.APPEND-DEF XVI	2000	Prime	1600
+Vehicle.APPEND-DEF XVII	2100	Prime	1700
+Vehicle.APPEND-DEF XVIII	2200	Prime	1800
+Vehicle.APPEND-DEF XIX	2300	Prime	1900
+Vehicle.APPEND-DEF XX	2500	Intergalactic	2000
+Vehicle.FRAME-DEF I	500	Common	100
+Vehicle.FRAME-DEF II	600	Common	100
+Vehicle.FRAME-DEF III	700	Common	100
+Vehicle.FRAME-DEF IV	800	Common	100
+Vehicle.FRAME-DEF V	900	Common	100
+Vehicle.FRAME-DEF VI	1000	Rare	100
+Vehicle.FRAME-DEF VII	1100	Rare	100
+Vehicle.FRAME-DEF VIII	1200	Rare	100
+Vehicle.FRAME-DEF IX	1300	Rare	100
+Vehicle.FRAME-DEF X	1400	Rare	100
+Vehicle.FRAME-DEF XI	1500	Unique	1100
+Vehicle.FRAME-DEF XII	1600	Unique	1200
+Vehicle.FRAME-DEF XIII	1700	Unique	1300
+Vehicle.FRAME-DEF XIV	1800	Unique	1400
+Vehicle.FRAME-DEF XV	1900	Unique	1500
+Vehicle.FRAME-DEF XVI	2000	Prime	1600
+Vehicle.FRAME-DEF XVII	2100	Prime	1700
+Vehicle.FRAME-DEF XVIII	2200	Prime	1800
+Vehicle.FRAME-DEF XIX	2300	Prime	1900
+Vehicle.FRAME-DEF XX	2500	Intergalactic	2000
+Vehicle.DEBUFF-RES I	500	Common	100
+Vehicle.DEBUFF-RES II	600	Common	100
+Vehicle.DEBUFF-RES III	700	Common	100
+Vehicle.DEBUFF-RES IV	800	Common	100
+Vehicle.DEBUFF-RES V	900	Common	100
+Vehicle.DEBUFF-RES VI	1000	Rare	100
+Vehicle.DEBUFF-RES VII	1100	Rare	100
+Vehicle.DEBUFF-RES VIII	1200	Rare	100
+Vehicle.DEBUFF-RES IX	1300	Rare	100
+Vehicle.DEBUFF-RES X	1400	Rare	100
+Vehicle.DEBUFF-RES XI	1500	Unique	1100
+Vehicle.DEBUFF-RES XII	1600	Unique	1200
+Vehicle.DEBUFF-RES XIII	1700	Unique	1300
+Vehicle.DEBUFF-RES XIV	1800	Unique	1400
+Vehicle.DEBUFF-RES XV	1900	Unique	1500
+Vehicle.DEBUFF-RES XVI	2000	Prime	1600
+Vehicle.DEBUFF-RES XVII	2100	Prime	1700
+Vehicle.DEBUFF-RES XVIII	2200	Prime	1800
+Vehicle.DEBUFF-RES XIX	2300	Prime	1900
+Vehicle.DEBUFF-RES XX	2500	Intergalactic	2000
+Night.MR-ACC I	300	Common	100
+Night.MR-ACC II	360	Common	100
+Night.MR-ACC III	420	Common	100
+Night.MR-ACC IV	480	Common	100
+Night.MR-ACC V	540	Common	100
+Night.MR-ACC VI	600	Rare	100
+Night.MR-ACC VII	660	Rare	100
+Night.MR-ACC VIII	720	Rare	100
+Night.MR-ACC IX	780	Rare	100
+Night.MR-ACC X	840	Rare	100
+Night.MR-ACC XI	900	Unique	1100
+Night.MR-ACC XII	960	Unique	1200
+Night.MR-ACC XIII	1020	Unique	1300
+Night.MR-ACC XIV	1080	Unique	1400
+Night.MR-ACC XV	1140	Unique	1500
+Night.MR-ACC XVI	1200	Prime	1600
+Night.MR-ACC XVII	1260	Prime	1700
+Night.MR-ACC XVIII	1320	Prime	1800
+Night.MR-ACC XIX	1380	Prime	1900
+Night.MR-ACC XX	1500	Intergalactic	2000
+Weather.FOG-RES	1000	Unique	100
+Weather.RAIN-RES	1000	Unique	100
+Weather.HEAVY-RAIN-RES	1000	Unique	100
+Weather.HEAT-RES	1000	Unique	100
+Weather.S-STORM-RES	1000	Unique	100
+Weather.T-STORM RES	1000	Unique	100
+Weather.EM-STORM-RES	1000	Unique	100
+Weather.E-MIST-RES	1000	Unique	100
+Weather.RISING-E-MIST-RES	1000	Unique	100
+Weather.BRIMSTONE-RES	1000	Unique	100
+Weather.AURORA-RES	1000	Unique	100
+Weather.C-AURORA-RES	1000	Unique	100
+Weather.SPORE-RES	1000	Unique	100
+Weather.METEOR-RES	1000	Unique	100
+Weather.DAMAGE-RES I	300	Common	100
+Weather.DAMAGE-RES II	360	Common	100
+Weather.DAMAGE-RES III	420	Common	100
+Weather.DAMAGE-RES IV	480	Common	100
+Weather.DAMAGE-RES V	540	Common	100
+Weather.DAMAGE-RES VI	600	Rare	100
+Weather.DAMAGE-RES VII	660	Rare	100
+Weather.DAMAGE-RES VIII	720	Rare	100
+Weather.DAMAGE-RES IX	780	Rare	100
+Weather.DAMAGE-RES X	840	Rare	100
+Weather.DAMAGE-RES XI	900	Unique	1100
+Weather.DAMAGE-RES XII	960	Unique	1200
+Weather.DAMAGE-RES XIII	1020	Unique	1300
+Weather.DAMAGE-RES XIV	1080	Unique	1400
+Weather.DAMAGE-RES XV	1140	Unique	1500
+Weather.DAMAGE-RES XVI	1200	Prime	1600
+Weather.DAMAGE-RES XVII	1260	Prime	1700
+Weather.DAMAGE-RES XVIII	1320	Prime	1800
+Weather.DAMAGE-RES XIX	1380	Prime	1900
+Weather.DAMAGE-RES XX	1500	Intergalactic	2000
+\.
+
+
+--
 -- Data for Name: class_arts; Type: TABLE DATA; Schema: xenox; Owner: poppi
 --
 
@@ -7249,6 +13538,14 @@ ALTER TABLE ONLY xenox.affixes
 
 
 --
+-- Name: augments_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.augments
+    ADD CONSTRAINT augments_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: class_arts_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
 --
 
@@ -7294,6 +13591,14 @@ ALTER TABLE ONLY xenox.classes
 
 ALTER TABLE ONLY xenox.skills
     ADD CONSTRAINT skills_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: augments_name_fkey; Type: FK CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.augments
+    ADD CONSTRAINT augments_name_fkey FOREIGN KEY (name) REFERENCES xenox.affixes(name);
 
 
 --
