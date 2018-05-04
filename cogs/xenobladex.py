@@ -155,7 +155,29 @@ class XenobladeX:
         except Exception as e:
             await ctx.send(e)
 
+    @skill.command(name='search')
+    async def skill_search(self, ctx, *, name: str):
+        """Searches for a skill."""
+
+        query = """
+                SELECT ARRAY(
+                    SELECT name
+                    FROM xenox.skills
+                    WHERE name % $1
+                );
+                """
+
+        skills = [f'{index}: {skill}' for index, skill in enumerate(await ctx.pool.fetchval(query, name), 1)]
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=skills, per_page=15)
+            paginator.embed.colour = 0x738bd7
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
+
     @skill.error
+    @skill_search.error
     async def skill_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing skill name.')
