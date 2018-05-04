@@ -164,10 +164,14 @@ class XenobladeX:
                     SELECT name
                     FROM xenox.skills
                     WHERE name % $1
+                    ORDER BY SIMILARITY(name, $1) DESC
                 );
                 """
 
         skills = [f'{index}: {skill}' for index, skill in enumerate(await ctx.pool.fetchval(query, name), 1)]
+
+        if not skills:
+            return await ctx.send('Skill not found.')
 
         try:
             paginator = utils.EmbedPaginator(ctx, entries=skills, per_page=15)
