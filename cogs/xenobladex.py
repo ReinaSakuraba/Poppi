@@ -131,7 +131,7 @@ class XenobladeX:
 
         embed = discord.Embed(title=name, description=effect)
         embed.set_thumbnail(url='attachment://skill.png')
-        embed.add_field(name='Learned', value=learned, inline=False)
+        embed.add_field(name='Learned', value=learned)
 
         await ctx.send(file=discord.File(f'xenox/skills/{name}.png', 'skill.png'), embed=embed)
 
