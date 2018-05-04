@@ -78,7 +78,7 @@ class XenobladeX:
             'Intergalactic': 0xAB6C02,
         }
 
-        for filename in ['skills', 'arts', 'augments', 'weapons', 'armors']:
+        for filename in ['arts', 'augments', 'weapons', 'armors']:
             with open(f'xenox/json/{filename}.json') as f:
                 setattr(self, filename, json.load(f))
                 self.data[filename[:-1]] = getattr(self, filename)
@@ -134,6 +134,26 @@ class XenobladeX:
         embed.add_field(name='Learned', value=learned)
 
         await ctx.send(file=discord.File(f'xenox/skills/{name}.png', 'skill.png'), embed=embed)
+
+    @skill.command(name='all')
+    async def skill_all(self, ctx):
+        """Lists all skills."""
+
+        query = """
+                SELECT ARRAY(
+                    SELECT name
+                    FROM xenox.skills
+                );
+                """
+
+        skills = [f'{index}: {skill}' for index, skill in enumerate(await ctx.pool.fetchval(query), 1)]
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=skills, per_page=15)
+            paginator.embed.colour = 0x738bd7
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
 
     @skill.error
     async def skill_error(self, ctx, error):
