@@ -858,26 +858,27 @@ Mia	Knife	Raygun	3	20
 COPY xenox.skills (name, effect) FROM stdin;
 Steel Flesh	Boosts maximum HP by [10/15/20/25/30]%.
 Unwavering Courage	Boosts melee accuracy by [12/14/16/18/20]%.
-Flame Trigger	Boosts Blaze Damage by [12/14/16/18/20]%.
+Flame Trigger	Boosts Blaze damage by [12/14/16/18/20]%.
 Mighty Muscle	Boosts melee attack by [10/15/20/25/30]%.
 Combat Presence	Extends Taunt effects by [10/12/14/16/18] seconds.
-Dismantler	Grants a [25/30/35/40/45]% chance of dealing [50/75/100/125/150]% more damage to appendage with Melee Arts.
+Dismantler	Grants a [25/30/35/40/50]% chance of dealing [50/75/100/125/150]% more damage to appendages with Melee Arts.
 CQC Master	Boosts critical chance by [30/35/40/45/50]% when triggering a melee combo.
 Auto Melee Boost	Boosts melee auto-attack damage by [30/35/40/45/50]%.
 Iron Knuckle	Boosts physical damage by [30/35/40/45/50]%.
 Healing Aura	Recovers [12/14/16/18/20]% of your HP when you use an aura.
 Weapon Guard	Boosts physical resistance by [12/14/16/18/20] when wielding a melee weapon.
-Blazing Auto	Grants a [10/12/14/16/18]% chance to inflict Blaze [I/I/II/II/III] when melee auto-attacking.
+Blazing Auto	Grants a [10/12/14/16/18]% chance of inflicting Blaze [I/I/II/II/III] when melee auto-attacking.
 Theroid Slayer	Boosts damage to theroid enemies by [30/35/40/45/50]%.
 Yamato Spirit	Boosts TP by [20/30/40/50/60] when using a Melee Art; double that if you have an aura active.
 Conflagrant Edge	Boosts thermal damage by [10/20/30/40/50]%.
 Aggro Boost	Boosts damage to taunted enemies by [20/40/60/80/100]%.
-Fortified Flesh	Boosts maximum HP by[30/35/40/45/50]%.
+Fortified Flesh	Boosts maximum HP by [30/35/40/45/50]%.
 Grand Procession	Boosts entire party's TP by [300/350/400/450/500] when activating Overdrive.
 Thermal Shield	Boosts thermal resistance by [12/14/16/18/20] when wielding a melee weapon.
+Topple Topper	Reduces enemy Topple resistance by [10/15/20/25/30]%.
 Shield Screen	Reduces damage by [10/15/20/25/30]% when wielding a shield.
 Rising Renewal	Boosts HP recovery by [10/15/20/25/30]% when revived.
-Long Topple	Extends Topple effects by [1/2/3/4/5] second(s)
+Long Topple	Extends Topple effects by [1/2/3/4/5] second(s).
 Trauma Tension	Grants a 15% chance of receiving [50/75/100/125/150] TP when taking damage.
 Dirty Fighter	Boosts Melee Art damage by [20/40/60/80/100]% to enemies inflicted with Topple.
 Stand Strong	Boosts resistance to Stagger, Topple, Knockback, and Launch by [20/40/60/80/100] when wielding a shield.
@@ -892,7 +893,7 @@ Background Noise	Boosts damage by [25/50/75/100/125]% when using Melee Arts from
 Combo Gunner	Boosts damage by [25/50/75/100/125]% when triggering ranged combos.
 Third Eye	Boosts TP by [20/30/40/50/60] when using a Ranged Art; double that if you have an aura active.
 Master Edge	Boosts critical chance by [5/6/7/8/10]% when wielding a melee weapon.
-Aura Burst	Extends Aura effects by [4/5/6/7/8] seconds
+Aura Burst	Extends aura effects by [4/5/6/7/8] seconds.
 Deep Fang	Reduces enemy debuff resistance by [10/15/20/25/30]% when attacking from the side.
 Mortal Enemy	Boosts damage to humanoid enemies by [30/35/40/45/50]%.
 Trigger Happy	Reduces an Art's cooldown by [30/35/40/45/50]% when triggering a ranged combo.
@@ -912,7 +913,7 @@ Knock 'n' Shock	Grants a [10/12/14/16/18]% chance of inflicting Shock [I/I/II/II
 Fleet Feet	Boosts evasion by [10/15/20/25/30]% when wielding a melee weapon.
 Piscinoid Slayer	Boosts damage to piscinoid enemies by [30/35/40/45/50]%.
 Long Shot	Boosts ranged weapon range by [5/10/15/20/25]m.
-Unstoppable	Boosts resistances to Stagger, Topple, Knockback, and Launch by [20/40/60/80/100] when sprinting.
+Unstoppable	Boosts resistance to Stagger, Topple, Knockback, and Launch by [20/40/60/80/100] when sprinting.
 Quick Reload	Reduces cooldown for ranged auto-attacks by [30/35/40/45/50]%.
 Conductive Strike	Boosts electric damage by [200/225/250/275/300]% to enemies inflicted with Shock.
 Electric Flesh	Grants a [10/15/20/25/30]% chance of dealing electric spike damage when taking a hit.
@@ -925,9 +926,9 @@ Healing Touch	Boosts the HP recovery of party members you revive by [30/35/40/45
 High Tension	Boosts maximum TP by [500/750/1000/1250/1500].
 Beauty Sleep	Extends Sleep effects by [10/12/14/16/18] seconds.
 Brain Wall	Boosts resistance to Sleep, Control, and Slow Arts by [20/40/60/80/100] when you have an aura active.
-Gentle Approach	Grants a [50/60/70/80/100]% chance of not waking up a sleeping enemy when auto-attacking.
+Gentle Approach	Grants a [50/60/70/80/100]% chance of not waking a sleeping enemy when auto-attacking.
 King's Decree	Reduces enemy Control resistance by [10/15/20/25/30]% and raises debuff tier by 1.
-Extra Armor	Boosts Barrier's damage absorbtion by [3/6/9/12/15]%.
+Extra Armor	Boosts Barrier's damage absorption rate by [3/6/9/12/15]%.
 Feather Touch	Grants a [80/85/90/95/100]% chance of not waking a sleeping enemy when attacking with an Art.
 Unpleasant Dream	Boosts damage to sleeping enemies by [50/75/100/125/150]%.
 Core Crusher	Negates appendage damage from your Ether attacks, but boosts primary damage by [50/75/100/125/150]%.
@@ -940,7 +941,7 @@ Tactical Analyst	Reduces enemy debuff resistance by [12/15/18/21/24]% when landi
 King's Boon	Grants All Abilities Up [I/II/III/IV/V] to enemies under your Control.
 Secondary Accelerator	Reduces secondary cooldown by [10/20/30/40/50]%.
 Ether Boost	Boosts ether damage by [30/35/40/45/50]%.
-Mechanoid Slayer	Boosts damage to mechanoid enemies by +[30/35/40/45/50]%.
+Mechanoid Slayer	Boosts damage to mechanoid enemies by [30/35/40/45/50]%.
 Knight's Soul	Boosts maximum TP by [500/750/1000/1250/1500].
 Aura Assault	Boosts melee attack and melee accuracy by [10/15/20/25/30]% when you have an aura active.
 Buff Extender	Extends buff effects by [5/6/7/8/10] seconds.
@@ -949,7 +950,6 @@ Gravity Guard	Boosts gravity resistance by [12/14/16/18/20] when wielding a rang
 Fast Forward	Reduces an Art's cooldown by [10/20/30/40/50]% when triggering a melee combo.
 Stellar Entry	Boosts GP by [1000/1250/1500/1750/2000] when boarding your Skell while in Overdrive.
 Synchrony	Boosts Skell melee attack, ranged attack, melee & ranged accuracy, potential, and evasion by [4/6/8/10/12]%.
-Topple Topper	Reduces enemy Topple resistance by [10/15/20/25/30]%.
 \.
 
 
