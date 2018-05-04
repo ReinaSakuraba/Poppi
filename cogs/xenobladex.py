@@ -114,12 +114,12 @@ class XenobladeX:
                 SELECT
                     name,
                     effect,
-                    STRING_AGG(class || ' ' || level, E'\n')
+                    STRING_AGG(class || ' ' || level, E'\n') AS learned
                 FROM xenox.skills
                 JOIN xenox.class_skills
                 ON skills.name = class_skills.skill
                 WHERE LOWER(name)=$1
-                GROUP BY name, effect;
+                GROUP BY name;
                 """
 
         record = await ctx.pool.fetchrow(query, name)
