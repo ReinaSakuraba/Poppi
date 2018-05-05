@@ -227,8 +227,8 @@
     "name": "Blue Jacul Wing",
     "price": 72
   },
-  "blue milsaasi hood": {
-    "name": "Blue Milsaasi Hood",
+  "blue milsaadi hood": {
+    "name": "Blue Milsaadi Hood",
     "price": 48
   },
   "blue progen wing": {
@@ -243,8 +243,8 @@
     "name": "Blue Vigent Rock Scalp",
     "price": 138
   },
-  "bone-in thight meat": {
-    "name": "Bone-In Thight Meat",
+  "bone-in thigh meat": {
+    "name": "Bone-In Thigh Meat",
     "price": 42
   },
   "brilliant murra liquid": {
@@ -631,8 +631,8 @@
     "name": "Gold Ceto Membrane",
     "price": 138
   },
-  "gold monocerus horn": {
-    "name": "Gold Monocerus Horn",
+  "gold monoceros horn": {
+    "name": "Gold Monoceros Horn",
     "price": 72
   },
   "gold sylooth brace": {
@@ -983,12 +983,12 @@
     "name": "Mollusk Mucus",
     "price": 68
   },
-  "monocerus hoof hook": {
-    "name": "Monocerus Hoof Hook",
+  "monoceros hoof hook": {
+    "name": "Monoceros Hoof Hook",
     "price": 90
   },
-  "monocerus wing": {
-    "name": "Monocerus Wing",
+  "monoceros wing": {
+    "name": "Monoceros Wing",
     "price": 72
   },
   "mortifole pollen": {
@@ -1159,8 +1159,8 @@
     "name": "Pristine Claw",
     "price": 36
   },
-  "pristine dorsal fine": {
-    "name": "Pristine Dorsal Fine",
+  "pristine dorsal fin": {
+    "name": "Pristine Dorsal Fin",
     "price": 72
   },
   "pristine insect jaw": {
@@ -1384,7 +1384,7 @@
     "price": 26
   },
   "rough skin": {
-    "name": "Rough skin",
+    "name": "Rough Skin",
     "price": 42
   },
   "rugged skin": {
@@ -1487,8 +1487,8 @@
     "name": "Shrad Eye",
     "price": 54
   },
-  "silver blatta wind": {
-    "name": "Silver Blatta Wind",
+  "silver blatta wing": {
+    "name": "Silver Blatta Wing",
     "price": 24
   },
   "silver cantor tooth": {
@@ -1663,8 +1663,8 @@
     "name": "Sylooth Tonic Water",
     "price": 146
   },
-  "t.p unit": {
-    "name": "T.P Unit",
+  "t.p. unit": {
+    "name": "T.P. Unit",
     "price": 90
   },
   "tasty fish belly": {
@@ -1731,8 +1731,8 @@
     "name": "Tersqual Fire Pouch",
     "price": 114
   },
-  "thallus crescnt hook": {
-    "name": "Thallus Crescnt Hook",
+  "thallus crescent hook": {
+    "name": "Thallus Crescent Hook",
     "price": 72
   },
   "thick cinicula horn": {
@@ -1751,8 +1751,8 @@
     "name": "Thick Millesaur Hide",
     "price": 168
   },
-  "topaz wind": {
-    "name": "Topaz Wind",
+  "topaz wine": {
+    "name": "Topaz Wine",
     "price": 54
   },
   "tough humpsteak": {
