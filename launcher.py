@@ -74,6 +74,26 @@ async def create_db(pool):
                 greeting TEXT,
                 farewell TEXT
             );
+
+            CREATE TABLE starboards (
+                guild_id BIGINT PRIMARY KEY,
+                channel_id BIGINT NOT NULL,
+                threshold SMALLINT DEFAULT 1
+            );
+
+            CREATE TABLE stardboard_entries (
+                message_id BIGINT PRIMARY KEY,
+                bot_message_id BIGINT NOT NULL,
+                channel_id BIGINT NOT NULL,
+                author_id BIGINT NOT NULL,
+                guild_id BIGINT NOT NULL REFERENCES starboards(guild_id)
+            );
+
+            CREATE TABLE starrers (
+                author_id BIGINT,
+                message_id BIGINT REFERENCES starboard_entries(message_id)
+                PRIMARY KEY (author_id, message_id)
+            );
             """
     await pool.execute(query)
 
