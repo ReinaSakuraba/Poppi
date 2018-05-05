@@ -136,46 +136,13 @@ class XenobladeX:
     async def skill_all(self, ctx):
         """Lists all skills."""
 
-        query = """
-                SELECT ARRAY(
-                    SELECT name
-                    FROM xenox.skills
-                );
-                """
-
-        skills = [f'{index}: {skill}' for index, skill in enumerate(await ctx.pool.fetchval(query), 1)]
-
-        try:
-            paginator = utils.EmbedPaginator(ctx, entries=skills, per_page=15)
-            paginator.embed.colour = 0x738bd7
-            await paginator.paginate()
-        except Exception as e:
-            await ctx.send(e)
+        await self.all_entries(ctx, 'skills')
 
     @skill.command(name='search')
     async def skill_search(self, ctx, *, name: str):
         """Searches for a skill."""
 
-        query = """
-                SELECT ARRAY(
-                    SELECT name
-                    FROM xenox.skills
-                    WHERE name % $1
-                    ORDER BY SIMILARITY(name, $1) DESC
-                );
-                """
-
-        skills = [f'{index}: {skill}' for index, skill in enumerate(await ctx.pool.fetchval(query, name), 1)]
-
-        if not skills:
-            return await ctx.send('Skill not found.')
-
-        try:
-            paginator = utils.EmbedPaginator(ctx, entries=skills, per_page=15)
-            paginator.embed.colour = 0x738bd7
-            await paginator.paginate()
-        except Exception as e:
-            await ctx.send(e)
+        await self.search_entries(ctx, 'skills', name)
 
     @skill.error
     @skill_search.error
@@ -312,7 +279,6 @@ class XenobladeX:
 
         if upgrade:
             embed.add_field(name='Upgrade From', value=upgrade)
-
 
         await ctx.send(embed=embed)
 
@@ -525,6 +491,47 @@ class XenobladeX:
             return await ctx.send(f'{type_name} not found.')
 
         await ctx.send(f'{type_name} not found. Did you mean...\n{possibilities}')
+
+    async def search_entries(self, ctx, table_name, name):
+        query = f"""
+                SELECT ARRAY(
+                    SELECT name
+                    FROM xenox.{table_name}
+                    WHERE name % $1
+                    ORDER BY SIMILARITY(name, $1) DESC
+                );
+                """
+
+        results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query, name), 1)]
+
+        if not results:
+            strip = 2 if table_name.endswith('es') else 1
+            type_name = table_name[:-strip].title()
+            return await ctx.send(f'{type_name} not found.')
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
+            paginator.embed.colour = 0x738bd7
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
+
+    async def all_entries(self, ctx, table_name):
+        query = f"""
+                SELECT ARRAY(
+                    SELECT name
+                    FROM xenox.{table_name}
+                );
+                """
+
+        results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query), 1)]
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
+            paginator.embed.colour = 0x738bd7
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
 
 
 def setup(bot):
