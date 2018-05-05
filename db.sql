@@ -40,6 +40,32 @@ CREATE TABLE xenox.affixes (
 ALTER TABLE xenox.affixes OWNER TO poppi;
 
 --
+-- Name: augment_create; Type: TABLE; Schema: xenox; Owner: poppi
+--
+
+CREATE TABLE xenox.augment_create (
+    name text NOT NULL,
+    material text NOT NULL,
+    amount smallint NOT NULL
+);
+
+
+ALTER TABLE xenox.augment_create OWNER TO poppi;
+
+--
+-- Name: augment_upgrade; Type: TABLE; Schema: xenox; Owner: poppi
+--
+
+CREATE TABLE xenox.augment_upgrade (
+    name text NOT NULL,
+    material text NOT NULL,
+    amount smallint NOT NULL
+);
+
+
+ALTER TABLE xenox.augment_upgrade OWNER TO poppi;
+
+--
 -- Name: augments; Type: TABLE; Schema: xenox; Owner: poppi
 --
 
@@ -6408,6 +6434,14201 @@ Weather.DAMAGE-RES XVII	Reduces weather damage by 85% when in your Skell.
 Weather.DAMAGE-RES XVIII	Reduces weather damage by 90% when in your Skell.
 Weather.DAMAGE-RES XIX	Reduces weather damage by 95% when in your Skell.
 Weather.DAMAGE-RES XX	Reduces weather damage by 100% when in your Skell.
+\.
+
+
+--
+-- Data for Name: augment_create; Type: TABLE DATA; Schema: xenox; Owner: poppi
+--
+
+COPY xenox.augment_create (name, material, amount) FROM stdin;
+Max HP Up I	Succulent Meat	1
+Max HP Up I	Arc Sand Ore	1
+Max HP Up V	Succulent Meat	2
+Max HP Up V	Lionbone Bort	1
+Max HP Up X	Succulent Meat	4
+Max HP Up X	Enduron Lead	2
+Max HP Up XV	Succulent Meat	7
+Max HP Up XV	Boiled-Egg Ore	2
+Max HP Up XX	Succulent Meat	10
+Max HP Up XX	Marine Rutile	3
+Max TP Up I	Fleecy Fur	1
+Max TP Up I	Arc Sand Ore	1
+Max TP Up V	Fleecy Fur	2
+Max TP Up V	Lionbone Bort	1
+Max TP Up X	Fleecy Fur	3
+Max TP Up X	Enduron Lead	1
+Max TP Up XV	Fleecy Fur	4
+Max TP Up XV	Boiled-Egg Ore	1
+Max TP Up XX	Fleecy Fur	5
+Max TP Up XX	Marine Rutile	1
+Melee Accuracy Up I	Muscled Suid Bulge	1
+Melee Accuracy Up I	Arc Sand Ore	1
+Melee Accuracy Up V	Muscled Suid Bulge	2
+Melee Accuracy Up V	Lionbone Bort	1
+Melee Accuracy Up X	Muscled Suid Bulge	3
+Melee Accuracy Up X	Enduron Lead	1
+Melee Accuracy Up XV	Muscled Suid Bulge	4
+Melee Accuracy Up XV	Boiled-Egg Ore	1
+Melee Accuracy Up XX	Muscled Suid Bulge	5
+Melee Accuracy Up XX	Marine Rutile	1
+Ranged Accuracy Up I	Appetizing Suid Tail	1
+Ranged Accuracy Up I	Arc Sand Ore	1
+Ranged Accuracy Up V	Appetizing Suid Tail	2
+Ranged Accuracy Up V	Lionbone Bort	1
+Ranged Accuracy Up X	Appetizing Suid Tail	3
+Ranged Accuracy Up X	Enduron Lead	1
+Ranged Accuracy Up XV	Appetizing Suid Tail	4
+Ranged Accuracy Up XV	Boiled-Egg Ore	1
+Ranged Accuracy Up XX	Appetizing Suid Tail	5
+Ranged Accuracy Up XX	Marine Rutile	1
+Evasion Up I	Black Fog Deposits	1
+Evasion Up I	Arc Sand Ore	1
+Evasion Up V	Black Fog Deposits	2
+Evasion Up V	Lionbone Bort	1
+Evasion Up X	Cloudy Eyeball	8
+Evasion Up X	Gerrid Shell	8
+Evasion Up X	Jacul Waterfall Orb	8
+Evasion Up X	Everfreeze Ore	2
+Evasion Up XV	Cloudy Eyeball	16
+Evasion Up XV	Gerrid Shell	16
+Evasion Up XV	Jacul Waterfall Orb	16
+Evasion Up XV	Foucaultium	4
+Evasion Up XX	Cloudy Eyeball	32
+Evasion Up XX	Gerrid Shell	32
+Evasion Up XX	Jacul Waterfall Orb	32
+Evasion Up XX	Bonjelium	8
+Melee Attack Up I	Muscled Suid Bulge	1
+Melee Attack Up I	Arc Sand Ore	1
+Melee Attack Up V	Muscled Suid Bulge	2
+Melee Attack Up V	Lionbone Bort	1
+Melee Attack Up X	Blue Sylooth Brace	8
+Melee Attack Up X	White Sylooth Brace	8
+Melee Attack Up X	Muscled Cantor Bulge	8
+Melee Attack Up X	Everfreeze Ore	2
+Melee Attack Up XV	Blue Sylooth Brace	24
+Melee Attack Up XV	White Sylooth Brace	24
+Melee Attack Up XV	Muscled Cantor Bulge	24
+Melee Attack Up XV	Foucaultium	8
+Melee Attack Up XX	Blue Sylooth Brace	48
+Melee Attack Up XX	White Sylooth Brace	48
+Melee Attack Up XX	Muscled Cantor Bulge	48
+Melee Attack Up XX	Bonjelium	16
+Ranged Attack Up I	Appetizing Suid Tail	1
+Ranged Attack Up I	Arc Sand Ore	1
+Ranged Attack Up V	Appetizing Suid Tail	2
+Ranged Attack Up V	Lionbone Bort	1
+Ranged Attack Up X	O.X. Unit	8
+Ranged Attack Up X	Eternal Arenatect Moss	8
+Ranged Attack Up X	Green Jacul Wing	8
+Ranged Attack Up X	Everfreeze Ore	2
+Ranged Attack Up XV	O.X. Unit	24
+Ranged Attack Up XV	Eternal Arenatect Moss	24
+Ranged Attack Up XV	Green Jacul Wing	24
+Ranged Attack Up XV	Foucaultium	8
+Ranged Attack Up XX	O.X. Unit	48
+Ranged Attack Up XX	Eternal Arenatect Moss	48
+Ranged Attack Up XX	Green Jacul Wing	48
+Ranged Attack Up XX	Bonjelium	16
+Potential Up I	Fleecy Fur	1
+Potential Up I	Arc Sand Ore	1
+Potential Up V	Fleecy Fur	2
+Potential Up V	Lionbone Bort	1
+Potential Up X	Distilled Sap	8
+Potential Up X	Blazing Gas Sac	8
+Potential Up X	Lepyx Moonstone	8
+Potential Up X	Everfreeze Ore	2
+Potential Up XV	Distilled Sap	16
+Potential Up XV	Blazing Gas Sac	16
+Potential Up XV	Lepyx Moonstone	16
+Potential Up XV	Foucaultium	4
+Potential Up XX	Distilled Sap	32
+Potential Up XX	Blazing Gas Sac	32
+Potential Up XX	Lepyx Moonstone	32
+Potential Up XX	Bonjelium	8
+Max HP Boost I	Redwood Aprica Antlers	1
+Max HP Boost I	Raw Meaty Caecus Liver	1
+Max HP Boost I	Succulent Meat	1
+Max HP Boost I	White Cometite	1
+Max HP Boost V	Redwood Aprica Antlers	2
+Max HP Boost V	Raw Meaty Caecus Liver	2
+Max HP Boost V	Succulent Meat	2
+Max HP Boost V	Dawnstone	1
+Max HP Boost X	Redwood Aprica Antlers	6
+Max HP Boost X	Golden Cantor Tooth	6
+Max HP Boost X	Big Balaena Water Bag	6
+Max HP Boost X	Everfreeze Ore	2
+Max HP Boost XV	Redwood Aprica Antlers	12
+Max HP Boost XV	Golden Cantor Tooth	12
+Max HP Boost XV	Big Balaena Water Bag	12
+Max HP Boost XV	Foucaultium	4
+Max HP Boost XX	Redwood Aprica Antlers	24
+Max HP Boost XX	Golden Cantor Tooth	24
+Max HP Boost XX	Big Balaena Water Bag	24
+Max HP Boost XX	Bonjelium	8
+Max TP Boost I	Hard Pom Pom	1
+Max TP Boost I	Black Thallus Antenna	1
+Max TP Boost I	Fleecy Fur	1
+Max TP Boost I	White Cometite	1
+Max TP Boost V	Hard Pom Pom	2
+Max TP Boost V	Black Thallus Antenna	2
+Max TP Boost V	Fleecy Fur	2
+Max TP Boost V	Dawnstone	1
+Max TP Boost X	Hard Pom Pom	4
+Max TP Boost X	Fatty Fish Belly	4
+Max TP Boost X	Scintimure Fat	4
+Max TP Boost X	Everfreeze Ore	2
+Max TP Boost XV	Hard Pom Pom	8
+Max TP Boost XV	Fatty Fish Belly	8
+Max TP Boost XV	Scintimure Fat	8
+Max TP Boost XV	Foucaultium	3
+Max TP Boost XX	Hard Pom Pom	16
+Max TP Boost XX	Fatty Fish Belly	16
+Max TP Boost XX	Scintimure Fat	16
+Max TP Boost XX	Bonjelium	4
+Melee Accuracy Boost I	Refined Horn	1
+Melee Accuracy Boost I	Muscled Suid Bulge	1
+Melee Accuracy Boost I	Aurorite	1
+Melee Accuracy Boost V	Refined Horn	2
+Melee Accuracy Boost V	Muscled Suid Bulge	2
+Melee Accuracy Boost V	Infernium	1
+Melee Accuracy Boost X	Refined Horn	3
+Melee Accuracy Boost X	Black Steel Heavy Armor	3
+Melee Accuracy Boost X	Cimmerian Cinnabar	1
+Melee Accuracy Boost XV	Refined Horn	4
+Melee Accuracy Boost XV	Black Steel Heavy Armor	4
+Melee Accuracy Boost XV	Ouroboros Crystal	1
+Melee Accuracy Boost XX	Refined Horn	5
+Melee Accuracy Boost XX	Black Steel Heavy Armor	5
+Melee Accuracy Boost XX	Parhelion Platinum	1
+Ranged Accuracy Boost I	Scratched Jewel	1
+Ranged Accuracy Boost I	Appetizing Suid Tail	1
+Ranged Accuracy Boost I	Aurorite	1
+Ranged Accuracy Boost V	Scratched Jewel	2
+Ranged Accuracy Boost V	Appetizing Suid Tail	2
+Ranged Accuracy Boost V	Infernium	1
+Ranged Accuracy Boost X	Scratched Jewel	3
+Ranged Accuracy Boost X	Upgraded Spindle Part	3
+Ranged Accuracy Boost X	Cimmerian Cinnabar	1
+Ranged Accuracy Boost XV	Scratched Jewel	4
+Ranged Accuracy Boost XV	Upgraded Spindle Part	4
+Ranged Accuracy Boost XV	Ouroboros Crystal	1
+Ranged Accuracy Boost XX	Scratched Jewel	5
+Ranged Accuracy Boost XX	Upgraded Spindle Part	5
+Ranged Accuracy Boost XX	Parhelion Platinum	1
+Evasion Boost I	Slimy Epithelium	1
+Evasion Boost I	Fal-swo Solar Crest	1
+Evasion Boost I	Black Fog Deposits	1
+Evasion Boost I	White Cometite	1
+Evasion Boost V	Slimy Epithelium	2
+Evasion Boost V	Fal-swo Solar Crest	2
+Evasion Boost V	Black Fog Deposits	2
+Evasion Boost V	Dawnstone	1
+Evasion Boost X	Slimy Epithelium	8
+Evasion Boost X	Brilliant Tersqual Liquid	8
+Evasion Boost X	Blinding Lophid Extract	8
+Evasion Boost X	Everfreeze Ore	2
+Evasion Boost XV	Slimy Epithelium	24
+Evasion Boost XV	Brilliant Tersqual Liquid	24
+Evasion Boost XV	Blinding Lophid Extract	24
+Evasion Boost XV	Foucaultium	8
+Evasion Boost XX	Slimy Epithelium	48
+Evasion Boost XX	Brilliant Tersqual Liquid	48
+Evasion Boost XX	Blinding Lophid Extract	48
+Evasion Boost XX	Bonjelium	16
+Melee Attack Boost I	Pure White Caro Tusk	1
+Melee Attack Boost I	Thick Falsaxum Horn	1
+Melee Attack Boost I	Muscled Suid Bulge	1
+Melee Attack Boost I	White Cometite	1
+Melee Attack Boost V	Pure White Caro Tusk	2
+Melee Attack Boost V	Thick Falsaxum Horn	2
+Melee Attack Boost V	Muscled Suid Bulge	2
+Melee Attack Boost V	Dawnstone	1
+Melee Attack Boost X	Pure White Caro Tusk	8
+Melee Attack Boost X	Standard Blade Module	8
+Melee Attack Boost X	Lone Purple Ictus Stinger	8
+Melee Attack Boost X	Everfreeze Ore	2
+Melee Attack Boost XV	Pure White Caro Tusk	24
+Melee Attack Boost XV	Standard Blade Module	24
+Melee Attack Boost XV	Lone Purple Ictus Stinger	24
+Melee Attack Boost XV	Foucaultium	8
+Melee Attack Boost XX	Pure White Caro Tusk	48
+Melee Attack Boost XX	Standard Blade Module	48
+Melee Attack Boost XX	Lone Purple Ictus Stinger	48
+Melee Attack Boost XX	Bonjelium	16
+Ranged Attack Boost I	Beryl Aetrygon Horn	1
+Ranged Attack Boost I	Pure White Caro Tusk	1
+Ranged Attack Boost I	Appetizing Suid Tail	1
+Ranged Attack Boost I	White Cometite	1
+Ranged Attack Boost V	Beryl Aetrygon Horn	2
+Ranged Attack Boost V	Pure White Caro Tusk	2
+Ranged Attack Boost V	Appetizing Suid Tail	2
+Ranged Attack Boost V	Dawnstone	1
+Ranged Attack Boost X	Beryl Aetrygon Horn	8
+Ranged Attack Boost X	Black Petramand Silk	8
+Ranged Attack Boost X	Lone White Ictus Stinger	8
+Ranged Attack Boost X	Everfreeze Ore	2
+Ranged Attack Boost XV	Beryl Aetrygon Horn	24
+Ranged Attack Boost XV	Black Petramand Silk	24
+Ranged Attack Boost XV	Lone White Ictus Stinger	24
+Ranged Attack Boost XV	Foucaultium	8
+Ranged Attack Boost XX	Beryl Aetrygon Horn	48
+Ranged Attack Boost XX	Black Petramand Silk	48
+Ranged Attack Boost XX	Lone White Ictus Stinger	48
+Ranged Attack Boost XX	Bonjelium	16
+Potential Boost I	Nutritious Microbes	1
+Potential Boost I	White Fungal Egg	1
+Potential Boost I	Fleecy Fur	1
+Potential Boost I	White Cometite	1
+Potential Boost V	Nutritious Microbes	2
+Potential Boost V	White Fungal Egg	2
+Potential Boost V	Fleecy Fur	2
+Potential Boost V	Dawnstone	1
+Potential Boost X	Nutritious Microbes	8
+Potential Boost X	Clear Gerrid Soup	8
+Potential Boost X	Gularthian Everflame	8
+Potential Boost X	Everfreeze Ore	2
+Potential Boost XV	Nutritious Microbes	24
+Potential Boost XV	Clear Gerrid Soup	24
+Potential Boost XV	Gularthian Everflame	24
+Potential Boost XV	Foucaultium	8
+Potential Boost XX	Nutritious Microbes	48
+Potential Boost XX	Clear Gerrid Soup	48
+Potential Boost XX	Gularthian Everflame	48
+Potential Boost XX	Bonjelium	16
+Max HP Drive I	Succulent Meat	1
+Max HP Drive I	Fresh Fish Meat	1
+Max HP Drive I	Aurorite	1
+Max HP Drive V	Succulent Meat	2
+Max HP Drive V	Fresh Fish Meat	2
+Max HP Drive V	Infernium	1
+Max HP Drive X	Succulent Meat	8
+Max HP Drive X	E.M. Unit	8
+Max HP Drive X	Cimmerian Cinnabar	2
+Max HP Drive XV	Succulent Meat	16
+Max HP Drive XV	E.M. Unit	16
+Max HP Drive XV	Ouroboros Crystal	4
+Max HP Drive XX	Succulent Meat	32
+Max HP Drive XX	E.M. Unit	32
+Max HP Drive XX	Parhelion Platinum	8
+Max GP Drive I	Fleecy Fur	1
+Max GP Drive I	Gooey Gunge	1
+Max GP Drive I	Aurorite	1
+Max GP Drive V	Fleecy Fur	2
+Max GP Drive V	Gooey Gunge	2
+Max GP Drive V	Infernium	1
+Max GP Drive X	Fleecy Fur	8
+Max GP Drive X	S.P. Unit	8
+Max GP Drive X	Cimmerian Cinnabar	2
+Max GP Drive XV	Fleecy Fur	16
+Max GP Drive XV	S.P. Unit	16
+Max GP Drive XV	Ouroboros Crystal	4
+Max GP Drive XX	Fleecy Fur	32
+Max GP Drive XX	S.P. Unit	32
+Max GP Drive XX	Parhelion Platinum	8
+Melee Accuracy Drive I	Muscled Suid Bulge	1
+Melee Accuracy Drive I	Combat Boost Meds	1
+Melee Accuracy Drive I	Aurorite	1
+Melee Accuracy Drive V	Muscled Suid Bulge	2
+Melee Accuracy Drive V	Combat Boost Meds	2
+Melee Accuracy Drive V	Infernium	1
+Melee Accuracy Drive X	Muscled Suid Bulge	3
+Melee Accuracy Drive X	T.P. Unit	3
+Melee Accuracy Drive X	Cimmerian Cinnabar	1
+Melee Accuracy Drive XV	Muscled Suid Bulge	4
+Melee Accuracy Drive XV	T.P. Unit	4
+Melee Accuracy Drive XV	Ouroboros Crystal	1
+Melee Accuracy Drive XX	Muscled Suid Bulge	5
+Melee Accuracy Drive XX	T.P. Unit	5
+Melee Accuracy Drive XX	Parhelion Platinum	1
+Ranged Accuracy Drive I	Appetizing Suid Tail	1
+Ranged Accuracy Drive I	Small Scale	1
+Ranged Accuracy Drive I	Aurorite	1
+Ranged Accuracy Drive V	Appetizing Suid Tail	2
+Ranged Accuracy Drive V	Small Scale	2
+Ranged Accuracy Drive V	Infernium	1
+Ranged Accuracy Drive X	Appetizing Suid Tail	3
+Ranged Accuracy Drive X	R.B. Unit	3
+Ranged Accuracy Drive X	Cimmerian Cinnabar	1
+Ranged Accuracy Drive XV	Appetizing Suid Tail	4
+Ranged Accuracy Drive XV	R.B. Unit	4
+Ranged Accuracy Drive XV	Ouroboros Crystal	1
+Ranged Accuracy Drive XX	Appetizing Suid Tail	5
+Ranged Accuracy Drive XX	R.B. Unit	5
+Ranged Accuracy Drive XX	Parhelion Platinum	1
+Evasion Drive I	Black Fog Deposits	1
+Evasion Drive I	Rotten Meat	1
+Evasion Drive I	Aurorite	1
+Evasion Drive V	Black Fog Deposits	2
+Evasion Drive V	Rotten Meat	2
+Evasion Drive V	Infernium	1
+Evasion Drive X	Black Fog Deposits	8
+Evasion Drive X	Mollusk Mucus	8
+Evasion Drive X	Cimmerian Cinnabar	2
+Evasion Drive XV	Black Fog Deposits	24
+Evasion Drive XV	Mollusk Mucus	24
+Evasion Drive XV	Ouroboros Crystal	8
+Evasion Drive XX	Black Fog Deposits	48
+Evasion Drive XX	Mollusk Mucus	48
+Evasion Drive XX	Parhelion Platinum	16
+Melee Attack Drive I	Muscled Suid Bulge	1
+Melee Attack Drive I	Muscled Simius Bulge	1
+Melee Attack Drive I	Aurorite	1
+Melee Attack Drive V	Muscled Suid Bulge	2
+Melee Attack Drive V	Muscled Simius Bulge	2
+Melee Attack Drive V	Infernium	1
+Melee Attack Drive X	Muscled Suid Bulge	8
+Melee Attack Drive X	Pristine Bristle	3
+Melee Attack Drive X	Cimmerian Cinnabar	2
+Melee Attack Drive XV	Muscled Suid Bulge	16
+Melee Attack Drive XV	Pristine Bristle	6
+Melee Attack Drive XV	Ouroboros Crystal	4
+Melee Attack Drive XX	Muscled Suid Bulge	32
+Melee Attack Drive XX	Pristine Bristle	12
+Melee Attack Drive XX	Parhelion Platinum	8
+Ranged Attack Drive I	Appetizing Suid Tail	1
+Ranged Attack Drive I	Dual Boards	1
+Ranged Attack Drive I	Aurorite	1
+Ranged Attack Drive V	Appetizing Suid Tail	2
+Ranged Attack Drive V	Dual Boards	2
+Ranged Attack Drive V	Infernium	1
+Ranged Attack Drive X	Appetizing Suid Tail	8
+Ranged Attack Drive X	Rainbow Carving Shard	3
+Ranged Attack Drive X	Cimmerian Cinnabar	2
+Ranged Attack Drive XV	Appetizing Suid Tail	16
+Ranged Attack Drive XV	Rainbow Carving Shard	6
+Ranged Attack Drive XV	Ouroboros Crystal	4
+Ranged Attack Drive XX	Appetizing Suid Tail	32
+Ranged Attack Drive XX	Rainbow Carving Shard	12
+Ranged Attack Drive XX	Parhelion Platinum	8
+Potential Drive I	Fleecy Fur	1
+Potential Drive I	Orange Tequila	1
+Potential Drive I	Aurorite	1
+Potential Drive V	Fleecy Fur	2
+Potential Drive V	Orange Tequila	2
+Potential Drive V	Infernium	1
+Potential Drive X	Fleecy Fur	6
+Potential Drive X	Pristine Whiskers	3
+Potential Drive X	Cimmerian Cinnabar	2
+Potential Drive XV	Fleecy Fur	12
+Potential Drive XV	Pristine Whiskers	4
+Potential Drive XV	Ouroboros Crystal	4
+Potential Drive XX	Fleecy Fur	24
+Potential Drive XX	Pristine Whiskers	8
+Potential Drive XX	Parhelion Platinum	8
+Bind: Refuel I	Supple Tail	1
+Bind: Refuel I	Fine Transparent Belt	1
+Bind: Refuel I	Aurorite	1
+Bind: Refuel V	Supple Tail	2
+Bind: Refuel V	Fine Transparent Belt	2
+Bind: Refuel V	Infernium	1
+Bind: Refuel X	Supple Tail	3
+Bind: Refuel X	Quality Skin	3
+Bind: Refuel X	Cimmerian Cinnabar	1
+Bind: Refuel XV	Supple Tail	4
+Bind: Refuel XV	Quality Skin	4
+Bind: Refuel XV	Ouroboros Crystal	1
+Bind: Refuel XX	Supple Tail	5
+Bind: Refuel XX	Quality Skin	5
+Bind: Refuel XX	Parhelion Platinum	1
+Fuel Efficiency Up I	Black Puff	1
+Fuel Efficiency Up I	Caro Tail Light	1
+Fuel Efficiency Up I	Standard Coil	1
+Fuel Efficiency Up I	White Cometite	1
+Fuel Efficiency Up V	Black Puff	2
+Fuel Efficiency Up V	Caro Tail Light	2
+Fuel Efficiency Up V	Standard Coil	2
+Fuel Efficiency Up V	Dawnstone	1
+Fuel Efficiency Up X	Black Puff	3
+Fuel Efficiency Up X	Giant Protein	3
+Fuel Efficiency Up X	Filiavent Intestine	3
+Fuel Efficiency Up X	Everfreeze Ore	1
+Fuel Efficiency Up XV	Black Puff	4
+Fuel Efficiency Up XV	Giant Protein	4
+Fuel Efficiency Up XV	Filiavent Intestine	4
+Fuel Efficiency Up XV	Foucaultium	1
+Fuel Efficiency Up XX	Black Puff	5
+Fuel Efficiency Up XX	Giant Protein	5
+Fuel Efficiency Up XX	Filiavent Intestine	5
+Fuel Efficiency Up XX	Bonjelium	1
+Physical Resistance Up I	Cinicula Shell	1
+Physical Resistance Up I	Falsaxum Shell	1
+Physical Resistance Up I	Suid Fillet	1
+Physical Resistance Up I	White Cometite	1
+Physical Resistance Up V	Cinicula Shell	2
+Physical Resistance Up V	Falsaxum Shell	2
+Physical Resistance Up V	Suid Fillet	2
+Physical Resistance Up V	Dawnstone	1
+Physical Resistance Up X	Cinicula Shell	3
+Physical Resistance Up X	Ictus Shell	3
+Physical Resistance Up X	Golden Blatta Wing	3
+Physical Resistance Up X	Everfreeze Ore	1
+Physical Resistance Up XV	Cinicula Shell	4
+Physical Resistance Up XV	Ictus Shell	4
+Physical Resistance Up XV	Golden Blatta Wing	4
+Physical Resistance Up XV	Foucaultium	1
+Physical Resistance Up XX	Cinicula Shell	5
+Physical Resistance Up XX	Ictus Shell	5
+Physical Resistance Up XX	Golden Blatta Wing	5
+Physical Resistance Up XX	Bonjelium	1
+Beam Resistance Up I	Lead Carapace	1
+Beam Resistance Up I	Ocher Stabilizer	1
+Beam Resistance Up I	Adsecula Gold Nugget	1
+Beam Resistance Up I	White Cometite	1
+Beam Resistance Up V	Lead Carapace	2
+Beam Resistance Up V	Ocher Stabilizer	2
+Beam Resistance Up V	Adsecula Gold Nugget	2
+Beam Resistance Up V	Dawnstone	1
+Beam Resistance Up X	Lead Carapace	3
+Beam Resistance Up X	Blue Milsaadi Hood	3
+Beam Resistance Up X	Pink Ceto Membrane	3
+Beam Resistance Up X	Everfreeze Ore	1
+Beam Resistance Up XV	Lead Carapace	4
+Beam Resistance Up XV	Blue Milsaadi Hood	4
+Beam Resistance Up XV	Pink Ceto Membrane	4
+Beam Resistance Up XV	Foucaultium	1
+Beam Resistance Up XX	Lead Carapace	5
+Beam Resistance Up XX	Blue Milsaadi Hood	5
+Beam Resistance Up XX	Pink Ceto Membrane	5
+Beam Resistance Up XX	Bonjelium	1
+Electric Resistance Up I	Squishy Cartilage	1
+Electric Resistance Up I	Stout Purgovent Extract	1
+Electric Resistance Up I	Lepyx Elastic Cell	1
+Electric Resistance Up I	White Cometite	1
+Electric Resistance Up V	Squishy Cartilage	2
+Electric Resistance Up V	Stout Purgovent Extract	2
+Electric Resistance Up V	Lepyx Elastic Cell	2
+Electric Resistance Up V	Dawnstone	1
+Electric Resistance Up X	Squishy Cartilage	3
+Electric Resistance Up X	Purple Scintimure Tentacle	3
+Electric Resistance Up X	Aeviter Membrane	3
+Electric Resistance Up X	Everfreeze Ore	1
+Electric Resistance Up XV	Squishy Cartilage	4
+Electric Resistance Up XV	Purple Scintimure Tentacle	4
+Electric Resistance Up XV	Aeviter Membrane	4
+Electric Resistance Up XV	Foucaultium	1
+Electric Resistance Up XX	Squishy Cartilage	5
+Electric Resistance Up XX	Purple Scintimure Tentacle	5
+Electric Resistance Up XX	Aeviter Membrane	5
+Electric Resistance Up XX	Bonjelium	1
+Thermal Resistance Up I	Shiny Copper Caro Plate	1
+Thermal Resistance Up I	Quo Pod	1
+Thermal Resistance Up I	Potamus Life Lung	1
+Thermal Resistance Up I	White Cometite	1
+Thermal Resistance Up V	Shiny Copper Caro Plate	2
+Thermal Resistance Up V	Quo Pod	2
+Thermal Resistance Up V	Potamus Life Lung	2
+Thermal Resistance Up V	Dawnstone	1
+Thermal Resistance Up X	Shiny Copper Caro Plate	3
+Thermal Resistance Up X	Scorching Giant Cells	3
+Thermal Resistance Up X	Tersqual Fire Pouch	3
+Thermal Resistance Up X	Everfreeze Ore	1
+Thermal Resistance Up XV	Shiny Copper Caro Plate	4
+Thermal Resistance Up XV	Scorching Giant Cells	4
+Thermal Resistance Up XV	Tersqual Fire Pouch	4
+Thermal Resistance Up XV	Foucaultium	1
+Thermal Resistance Up XX	Shiny Copper Caro Plate	5
+Thermal Resistance Up XX	Scorching Giant Cells	5
+Thermal Resistance Up XX	Tersqual Fire Pouch	5
+Thermal Resistance Up XX	Bonjelium	1
+Ether Resistance Up I	Opaque Mirror	1
+Ether Resistance Up I	Upgraded Sensor Part	1
+Ether Resistance Up I	Medicinal Blatta Oil	1
+Ether Resistance Up I	White Cometite	1
+Ether Resistance Up V	Opaque Mirror	2
+Ether Resistance Up V	Upgraded Sensor Part	2
+Ether Resistance Up V	Medicinal Blatta Oil	2
+Ether Resistance Up V	Dawnstone	1
+Ether Resistance Up X	Opaque Mirror	3
+Ether Resistance Up X	Red Milsaadi Hood	3
+Ether Resistance Up X	Gold Ceto Membrane	3
+Ether Resistance Up X	Everfreeze Ore	1
+Ether Resistance Up XV	Opaque Mirror	4
+Ether Resistance Up XV	Red Milsaadi Hood	4
+Ether Resistance Up XV	Gold Ceto Membrane	4
+Ether Resistance Up XV	Foucaultium	1
+Ether Resistance Up XX	Opaque Mirror	5
+Ether Resistance Up XX	Red Milsaadi Hood	5
+Ether Resistance Up XX	Gold Ceto Membrane	5
+Ether Resistance Up XX	Bonjelium	1
+Gravity Resistance Up I	Large Hoof	1
+Gravity Resistance Up I	Genuine Plate	1
+Gravity Resistance Up I	Tricolored Ovis Meat	1
+Gravity Resistance Up I	White Cometite	1
+Gravity Resistance Up V	Large Hoof	2
+Gravity Resistance Up V	Genuine Plate	2
+Gravity Resistance Up V	Tricolored Ovis Meat	2
+Gravity Resistance Up V	Dawnstone	1
+Gravity Resistance Up X	Large Hoof	3
+Gravity Resistance Up X	Oc-serv Southern Crest	3
+Gravity Resistance Up X	Oc-serv Eastern Crest	3
+Gravity Resistance Up X	Everfreeze Ore	1
+Gravity Resistance Up XV	Large Hoof	4
+Gravity Resistance Up XV	Oc-serv Southern Crest	4
+Gravity Resistance Up XV	Oc-serv Eastern Crest	4
+Gravity Resistance Up XV	Foucaultium	1
+Gravity Resistance Up XX	Large Hoof	5
+Gravity Resistance Up XX	Oc-serv Southern Crest	5
+Gravity Resistance Up XX	Oc-serv Eastern Crest	5
+Gravity Resistance Up XX	Bonjelium	1
+Weapon Attack Power Up I	Refined Horn	1
+Weapon Attack Power Up I	Insect Jaw	1
+Weapon Attack Power Up I	Strong Purgovent Extract	1
+Weapon Attack Power Up I	White Cometite	1
+Weapon Attack Power Up V	Refined Horn	2
+Weapon Attack Power Up V	Insect Jaw	2
+Weapon Attack Power Up V	Strong Purgovent Extract	2
+Weapon Attack Power Up V	Dawnstone	1
+Weapon Attack Power Up X	Quality Giant Cells	8
+Weapon Attack Power Up X	Visigel Poison Orb	8
+Weapon Attack Power Up X	Silver Cantor Tooth	8
+Weapon Attack Power Up X	Everfreeze Ore	2
+Weapon Attack Power Up XV	Quality Giant Cells	16
+Weapon Attack Power Up XV	Visigel Poison Orb	16
+Weapon Attack Power Up XV	Silver Cantor Tooth	16
+Weapon Attack Power Up XV	Foucaultium	4
+Weapon Attack Power Up XX	Quality Giant Cells	32
+Weapon Attack Power Up XX	Visigel Poison Orb	32
+Weapon Attack Power Up XX	Silver Cantor Tooth	32
+Weapon Attack Power Up XX	Bonjelium	8
+Stabilizer I	Poisonous Needle	1
+Stabilizer I	Arc Sand Ore	1
+Stabilizer V	Poisonous Needle	2
+Stabilizer V	Lionbone Bort	1
+Stabilizer X	Poisonous Needle	3
+Stabilizer X	Enduron Lead	1
+Stabilizer XV	Poisonous Needle	4
+Stabilizer XV	Boiled-Egg Ore	1
+Stabilizer XX	Poisonous Needle	5
+Stabilizer XX	Marine Rutile	1
+Destabilizer I	Broken Pincer	1
+Destabilizer I	Arc Sand Ore	1
+Destabilizer V	Broken Pincer	2
+Destabilizer V	Lionbone Bort	1
+Destabilizer X	Broken Pincer	3
+Destabilizer X	Enduron Lead	1
+Destabilizer XV	Broken Pincer	4
+Destabilizer XV	Boiled-Egg Ore	1
+Destabilizer XX	Broken Pincer	5
+Destabilizer XX	Marine Rutile	1
+Magazine Capacity Up I	Genuine Crank	1
+Magazine Capacity Up I	Standard Shaft	1
+Magazine Capacity Up I	Fine Black Belt	1
+Magazine Capacity Up I	White Cometite	1
+Magazine Capacity Up V	Genuine Crank	2
+Magazine Capacity Up V	Standard Shaft	2
+Magazine Capacity Up V	Fine Black Belt	2
+Magazine Capacity Up V	Dawnstone	1
+Magazine Capacity Up X	Genuine Crank	4
+Magazine Capacity Up X	White Stabilizer	4
+Magazine Capacity Up X	Sturdy Drakebone	4
+Magazine Capacity Up X	Everfreeze Ore	2
+Magazine Capacity Up XV	Genuine Crank	8
+Magazine Capacity Up XV	White Stabilizer	8
+Magazine Capacity Up XV	Sturdy Drakebone	8
+Magazine Capacity Up XV	Foucaultium	4
+Magazine Capacity Up XX	Genuine Crank	16
+Magazine Capacity Up XX	White Stabilizer	16
+Magazine Capacity Up XX	Sturdy Drakebone	16
+Magazine Capacity Up XX	Bonjelium	8
+Melee: TP Gain Up	Upgraded Coil	12
+Melee: TP Gain Up	Flaming Rock	12
+Melee: TP Gain Up	Crimson Sacrifole Feather	12
+Melee: TP Gain Up	White Cometite	12
+Ranged: TP Gain Up	Genuine Frame	12
+Ranged: TP Gain Up	Black Yggralith Nut	1
+Ranged: TP Gain Up	Virago Alloy Plate	12
+Ranged: TP Gain Up	White Cometite	12
+Cooldown Reducer I	Quality Fuse	1
+Cooldown Reducer I	Golden Simius Mane	1
+Cooldown Reducer I	Upgraded Shaft Part	1
+Cooldown Reducer I	White Cometite	1
+Cooldown Reducer V	Quality Fuse	2
+Cooldown Reducer V	Golden Simius Mane	2
+Cooldown Reducer V	Upgraded Shaft Part	2
+Cooldown Reducer V	Dawnstone	1
+Cooldown Reducer X	Quality Fuse	3
+Cooldown Reducer X	Spathi Glyph	3
+Cooldown Reducer X	White Yggralith Nut	3
+Cooldown Reducer X	Everfreeze Ore	2
+Cooldown Reducer XV	Quality Fuse	6
+Cooldown Reducer XV	Spathi Glyph	4
+Cooldown Reducer XV	White Yggralith Nut	4
+Cooldown Reducer XV	Foucaultium	4
+Cooldown Reducer XX	Quality Fuse	12
+Cooldown Reducer XX	Spathi Glyph	5
+Cooldown Reducer XX	White Yggralith Nut	5
+Cooldown Reducer XX	Bonjelium	16
+Firing Range Up I	Turba Straw	1
+Firing Range Up I	Used Cylinder	1
+Firing Range Up I	Aurorite	1
+Firing Range Up V	Turba Straw	2
+Firing Range Up V	Used Cylinder	2
+Firing Range Up V	Infernium	1
+Firing Range Up X	Turba Straw	3
+Firing Range Up X	Coronid Larynx	3
+Firing Range Up X	Cimmerian Cinnabar	1
+Firing Range Up XV	Turba Straw	4
+Firing Range Up XV	Coronid Larynx	4
+Firing Range Up XV	Ouroboros Crystal	1
+Firing Range Up XX	Turba Straw	5
+Firing Range Up XX	Coronid Larynx	5
+Firing Range Up XX	Parhelion Platinum	1
+Resist Stagger I	Scirpo Silk	1
+Resist Stagger I	Arc Sand Ore	1
+Resist Stagger V	Scirpo Silk	2
+Resist Stagger V	Lionbone Bort	1
+Resist Stagger X	Scirpo Silk	3
+Resist Stagger X	Enduron Lead	1
+Resist Stagger XV	Scirpo Silk	4
+Resist Stagger XV	Boiled-Egg Ore	1
+Resist Stagger XX	Scirpo Silk	5
+Resist Stagger XX	Marine Rutile	1
+Resist Flinch I	Taut Leather	1
+Resist Flinch I	Arc Sand Ore	1
+Resist Flinch V	Taut Leather	2
+Resist Flinch V	Lionbone Bort	1
+Resist Flinch X	Taut Leather	3
+Resist Flinch X	Enduron Lead	1
+Resist Flinch XV	Taut Leather	4
+Resist Flinch XV	Boiled-Egg Ore	1
+Resist Flinch XX	Taut Leather	5
+Resist Flinch XX	Marine Rutile	1
+Resist Topple I	Auravis Croaking Bag	1
+Resist Topple I	Smooth Tail Fin	1
+Resist Topple I	Aurorite	1
+Resist Topple V	Auravis Croaking Bag	2
+Resist Topple V	Smooth Tail Fin	2
+Resist Topple V	Infernium	1
+Resist Topple X	Auravis Croaking Bag	3
+Resist Topple X	Thick Coronid Hide	3
+Resist Topple X	Cimmerian Cinnabar	1
+Resist Topple XV	Auravis Croaking Bag	4
+Resist Topple XV	Thick Coronid Hide	4
+Resist Topple XV	Ouroboros Crystal	1
+Resist Topple XX	Auravis Croaking Bag	5
+Resist Topple XX	Thick Coronid Hide	5
+Resist Topple XX	Parhelion Platinum	1
+Resist Knockback I	Lovely Pom Pom	1
+Resist Knockback I	Arc Sand Ore	1
+Resist Knockback V	Lovely Pom Pom	2
+Resist Knockback V	Lionbone Bort	1
+Resist Knockback X	Lovely Pom Pom	3
+Resist Knockback X	Enduron Lead	1
+Resist Knockback XV	Lovely Pom Pom	4
+Resist Knockback XV	Boiled-Egg Ore	1
+Resist Knockback XX	Lovely Pom Pom	5
+Resist Knockback XX	Marine Rutile	1
+Resist Launch I	Auravis Laughing Bag	1
+Resist Launch I	Caecus Crest	1
+Resist Launch I	Aurorite	1
+Resist Launch V	Auravis Laughing Bag	2
+Resist Launch V	Caecus Crest	2
+Resist Launch V	Infernium	1
+Resist Launch X	Auravis Laughing Bag	3
+Resist Launch X	Red Filiavent Tentacle	3
+Resist Launch X	Cimmerian Cinnabar	1
+Resist Launch XV	Auravis Laughing Bag	4
+Resist Launch XV	Red Filiavent Tentacle	4
+Resist Launch XV	Ouroboros Crystal	1
+Resist Launch XX	Auravis Laughing Bag	5
+Resist Launch XX	Red Filiavent Tentacle	5
+Resist Launch XX	Parhelion Platinum	1
+Resist Stun I	Upgraded Jammer	1
+Resist Stun I	Smelly Fish Meat	1
+Resist Stun I	Aurorite	1
+Resist Stun V	Upgraded Jammer	2
+Resist Stun V	Smelly Fish Meat	2
+Resist Stun V	Infernium	1
+Resist Stun X	Upgraded Jammer	3
+Resist Stun X	Black Filiavent Tentacle	3
+Resist Stun X	Cimmerian Cinnabar	1
+Resist Stun XV	Upgraded Jammer	4
+Resist Stun XV	Black Filiavent Tentacle	4
+Resist Stun XV	Ouroboros Crystal	1
+Resist Stun XX	Upgraded Jammer	5
+Resist Stun XX	Black Filiavent Tentacle	5
+Resist Stun XX	Parhelion Platinum	1
+Resist Sleep I	Musky Nectar	1
+Resist Sleep I	Arc Sand Ore	1
+Resist Sleep V	Musky Nectar	2
+Resist Sleep V	Lionbone Bort	1
+Resist Sleep X	Musky Nectar	3
+Resist Sleep X	Enduron Lead	1
+Resist Sleep XV	Musky Nectar	4
+Resist Sleep XV	Boiled-Egg Ore	1
+Resist Sleep XX	Musky Nectar	5
+Resist Sleep XX	Marine Rutile	1
+Resist Taunt I	Puge Self-Destruct Mechanism	1
+Resist Taunt I	Arc Sand Ore	1
+Resist Taunt V	Puge Self-Destruct Mechanism	2
+Resist Taunt V	Lionbone Bort	1
+Resist Taunt X	Puge Self-Destruct Mechanism	3
+Resist Taunt X	Enduron Lead	1
+Resist Taunt XV	Puge Self-Destruct Mechanism	4
+Resist Taunt XV	Boiled-Egg Ore	1
+Resist Taunt XX	Puge Self-Destruct Mechanism	5
+Resist Taunt XX	Marine Rutile	1
+Resist Control I	Cracked Claw	1
+Resist Control I	Arc Sand Ore	1
+Resist Control V	Cracked Claw	2
+Resist Control V	Lionbone Bort	1
+Resist Control X	Cracked Claw	3
+Resist Control X	Enduron Lead	1
+Resist Control XV	Cracked Claw	4
+Resist Control XV	Boiled-Egg Ore	1
+Resist Control XX	Cracked Claw	5
+Resist Control XX	Marine Rutile	1
+Resist Virus I	Lepyx Sunstone	1
+Resist Virus I	Arc Sand Ore	1
+Resist Virus V	Lepyx Sunstone	2
+Resist Virus V	Lionbone Bort	1
+Resist Virus X	Lepyx Sunstone	3
+Resist Virus X	Enduron Lead	1
+Resist Virus XV	Lepyx Sunstone	4
+Resist Virus XV	Boiled-Egg Ore	1
+Resist Virus XX	Lepyx Sunstone	5
+Resist Virus XX	Marine Rutile	1
+Resist Blackout I	Dull Stone	1
+Resist Blackout I	Arc Sand Ore	1
+Resist Blackout V	Dull Stone	2
+Resist Blackout V	Lionbone Bort	1
+Resist Blackout X	Dull Stone	3
+Resist Blackout X	Enduron Lead	1
+Resist Blackout XV	Dull Stone	4
+Resist Blackout XV	Boiled-Egg Ore	1
+Resist Blackout XX	Dull Stone	5
+Resist Blackout XX	Marine Rutile	1
+Resist Fatigue I	Red Blatta Wing	1
+Resist Fatigue I	Arc Sand Ore	1
+Resist Fatigue V	Red Blatta Wing	2
+Resist Fatigue V	Lionbone Bort	1
+Resist Fatigue X	Red Blatta Wing	3
+Resist Fatigue X	Enduron Lead	1
+Resist Fatigue XV	Red Blatta Wing	4
+Resist Fatigue XV	Boiled-Egg Ore	1
+Resist Fatigue XX	Red Blatta Wing	5
+Resist Fatigue XX	Marine Rutile	1
+Resist Slow Arts I	Pristine Insect Leg	1
+Resist Slow Arts I	Arc Sand Ore	1
+Resist Slow Arts V	Pristine Insect Leg	2
+Resist Slow Arts V	Lionbone Bort	1
+Resist Slow Arts X	Pristine Insect Leg	3
+Resist Slow Arts X	Enduron Lead	1
+Resist Slow Arts XV	Pristine Insect Leg	4
+Resist Slow Arts XV	Boiled-Egg Ore	1
+Resist Slow Arts XX	Pristine Insect Leg	5
+Resist Slow Arts XX	Marine Rutile	1
+Resist Physical Res Down I	Tough Humpsteak	1
+Resist Physical Res Down I	Arc Sand Ore	1
+Resist Physical Res Down V	Tough Humpsteak	2
+Resist Physical Res Down V	Lionbone Bort	1
+Resist Physical Res Down X	Tough Humpsteak	3
+Resist Physical Res Down X	Enduron Lead	1
+Resist Physical Res Down XV	Tough Humpsteak	4
+Resist Physical Res Down XV	Boiled-Egg Ore	1
+Resist Physical Res Down XX	Tough Humpsteak	5
+Resist Physical Res Down XX	Marine Rutile	1
+Resist Beam Res Down I	Duoguill Broth	1
+Resist Beam Res Down I	Arc Sand Ore	1
+Resist Beam Res Down V	Duoguill Broth	2
+Resist Beam Res Down V	Lionbone Bort	1
+Resist Beam Res Down X	Duoguill Broth	3
+Resist Beam Res Down X	Enduron Lead	1
+Resist Beam Res Down XV	Duoguill Broth	4
+Resist Beam Res Down XV	Boiled-Egg Ore	1
+Resist Beam Res Down XX	Duoguill Broth	5
+Resist Beam Res Down XX	Marine Rutile	1
+Resist Thermal Res Down I	Slimy Tongue	1
+Resist Thermal Res Down I	Arc Sand Ore	1
+Resist Thermal Res Down V	Slimy Tongue	2
+Resist Thermal Res Down V	Lionbone Bort	1
+Resist Thermal Res Down X	Slimy Tongue	3
+Resist Thermal Res Down X	Enduron Lead	1
+Resist Thermal Res Down XV	Slimy Tongue	4
+Resist Thermal Res Down XV	Boiled-Egg Ore	1
+Resist Thermal Res Down XX	Slimy Tongue	5
+Resist Thermal Res Down XX	Marine Rutile	1
+Resist Electric Res Down I	Blue Electrical Tentacle	1
+Resist Electric Res Down I	Arc Sand Ore	1
+Resist Electric Res Down V	Blue Electrical Tentacle	2
+Resist Electric Res Down V	Lionbone Bort	1
+Resist Electric Res Down X	Blue Electrical Tentacle	3
+Resist Electric Res Down X	Enduron Lead	1
+Resist Electric Res Down XV	Blue Electrical Tentacle	4
+Resist Electric Res Down XV	Boiled-Egg Ore	1
+Resist Electric Res Down XX	Blue Electrical Tentacle	5
+Resist Electric Res Down XX	Marine Rutile	1
+Resist Ether Res Down I	Papil Straw	1
+Resist Ether Res Down I	Arc Sand Ore	1
+Resist Ether Res Down V	Papil Straw	2
+Resist Ether Res Down V	Lionbone Bort	1
+Resist Ether Res Down X	Papil Straw	3
+Resist Ether Res Down X	Enduron Lead	1
+Resist Ether Res Down XV	Papil Straw	4
+Resist Ether Res Down XV	Boiled-Egg Ore	1
+Resist Ether Res Down XX	Papil Straw	5
+Resist Ether Res Down XX	Marine Rutile	1
+Resist Gravity Res Down I	Lepyx Jaw Meat	1
+Resist Gravity Res Down I	Arc Sand Ore	1
+Resist Gravity Res Down V	Lepyx Jaw Meat	2
+Resist Gravity Res Down V	Lionbone Bort	1
+Resist Gravity Res Down X	Lepyx Jaw Meat	3
+Resist Gravity Res Down X	Enduron Lead	1
+Resist Gravity Res Down XV	Lepyx Jaw Meat	4
+Resist Gravity Res Down XV	Boiled-Egg Ore	1
+Resist Gravity Res Down XX	Lepyx Jaw Meat	5
+Resist Gravity Res Down XX	Marine Rutile	1
+Resist Time Bomb I	Puge Counter	1
+Resist Time Bomb I	Arc Sand Ore	1
+Resist Time Bomb V	Puge Counter	2
+Resist Time Bomb V	Lionbone Bort	1
+Resist Time Bomb X	Puge Counter	3
+Resist Time Bomb X	Enduron Lead	1
+Resist Time Bomb XV	Puge Counter	4
+Resist Time Bomb XV	Boiled-Egg Ore	1
+Resist Time Bomb XX	Puge Counter	5
+Resist Time Bomb XX	Marine Rutile	1
+Resist Debuff Res Down I	Forfex Miso	1
+Resist Debuff Res Down I	Arc Sand Ore	1
+Resist Debuff Res Down V	Forfex Miso	2
+Resist Debuff Res Down V	Lionbone Bort	1
+Resist Debuff Res Down X	Forfex Miso	3
+Resist Debuff Res Down X	Enduron Lead	1
+Resist Debuff Res Down XV	Forfex Miso	4
+Resist Debuff Res Down XV	Boiled-Egg Ore	1
+Resist Debuff Res Down XX	Forfex Miso	5
+Resist Debuff Res Down XX	Marine Rutile	1
+Resist HP Recovery Down I	Succulent Meat	1
+Resist HP Recovery Down I	Arc Sand Ore	1
+Resist HP Recovery Down V	Succulent Meat	2
+Resist HP Recovery Down V	Lionbone Bort	1
+Resist HP Recovery Down X	Succulent Meat	3
+Resist HP Recovery Down X	Enduron Lead	1
+Resist HP Recovery Down XV	Succulent Meat	4
+Resist HP Recovery Down XV	Boiled-Egg Ore	1
+Resist HP Recovery Down XX	Succulent Meat	5
+Resist HP Recovery Down XX	Marine Rutile	1
+Resist Blaze I	Vesper Fry	1
+Resist Blaze I	Arc Sand Ore	1
+Resist Blaze V	Vesper Fry	2
+Resist Blaze V	Lionbone Bort	1
+Resist Blaze X	Vesper Fry	3
+Resist Blaze X	Enduron Lead	1
+Resist Blaze XV	Vesper Fry	4
+Resist Blaze XV	Boiled-Egg Ore	1
+Resist Blaze XX	Vesper Fry	5
+Resist Blaze XX	Marine Rutile	1
+Resist Shock I	Fine Black Belt	1
+Resist Shock I	Arc Sand Ore	1
+Resist Shock V	Fine Black Belt	2
+Resist Shock V	Lionbone Bort	1
+Resist Shock X	Fine Black Belt	3
+Resist Shock X	Enduron Lead	1
+Resist Shock XV	Fine Black Belt	4
+Resist Shock XV	Boiled-Egg Ore	1
+Resist Shock XX	Fine Black Belt	5
+Resist Shock XX	Marine Rutile	1
+Debuff Suppressor I	Standard Jammer	1
+Debuff Suppressor I	Purgovent Jaw Meat	1
+Debuff Suppressor I	Red Blatta Wing	1
+Debuff Suppressor I	White Cometite	1
+Debuff Suppressor V	Standard Jammer	2
+Debuff Suppressor V	Purgovent Jaw Meat	2
+Debuff Suppressor V	Red Blatta Wing	2
+Debuff Suppressor V	Dawnstone	1
+Debuff Suppressor X	Standard Jammer	3
+Debuff Suppressor X	Rugged Skin	3
+Debuff Suppressor X	Quality Core	3
+Debuff Suppressor X	Everfreeze Ore	1
+Debuff Suppressor XV	Standard Jammer	4
+Debuff Suppressor XV	Rugged Skin	4
+Debuff Suppressor XV	Quality Core	4
+Debuff Suppressor XV	Foucaultium	1
+Debuff Suppressor XX	Standard Jammer	5
+Debuff Suppressor XX	Rugged Skin	5
+Debuff Suppressor XX	Quality Core	5
+Debuff Suppressor XX	Bonjelium	1
+Critical Chance Up I	Oc-serv Hand	1
+Critical Chance Up I	Ziggian Long Antennae	1
+Critical Chance Up I	Forfex Miso	1
+Critical Chance Up I	White Cometite	1
+Critical Chance Up V	Oc-serv Hand	2
+Critical Chance Up V	Ziggian Long Antennae	2
+Critical Chance Up V	Forfex Miso	2
+Critical Chance Up V	Dawnstone	1
+Critical Chance Up X	Oc-serv Hand	3
+Critical Chance Up X	Lone Red Ictus Stinger	3
+Critical Chance Up X	Spiked Tail Fin	3
+Critical Chance Up X	Everfreeze Ore	1
+Critical Chance Up XV	Oc-serv Hand	4
+Critical Chance Up XV	Lone Red Ictus Stinger	4
+Critical Chance Up XV	Spiked Tail Fin	4
+Critical Chance Up XV	Foucaultium	1
+Critical Chance Up XX	Oc-serv Hand	5
+Critical Chance Up XX	Lone Red Ictus Stinger	5
+Critical Chance Up XX	Spiked Tail Fin	5
+Critical Chance Up XX	Bonjelium	1
+Theroid Criticals Up I	Fleecy Fur	1
+Theroid Criticals Up I	Arc Sand Ore	1
+Theroid Criticals Up V	Fleecy Fur	2
+Theroid Criticals Up V	Lionbone Bort	1
+Theroid Criticals Up X	Fleecy Fur	3
+Theroid Criticals Up X	Enduron Lead	1
+Theroid Criticals Up XV	Fleecy Fur	4
+Theroid Criticals Up XV	Boiled-Egg Ore	1
+Theroid Criticals Up XX	Fleecy Fur	5
+Theroid Criticals Up XX	Marine Rutile	1
+Insectoid Criticals Up I	Tatty Insect Wing	1
+Insectoid Criticals Up I	Arc Sand Ore	1
+Insectoid Criticals Up V	Tatty Insect Wing	2
+Insectoid Criticals Up V	Lionbone Bort	1
+Insectoid Criticals Up X	Tatty Insect Wing	3
+Insectoid Criticals Up X	Enduron Lead	1
+Insectoid Criticals Up XV	Tatty Insect Wing	4
+Insectoid Criticals Up XV	Boiled-Egg Ore	1
+Insectoid Criticals Up XX	Tatty Insect Wing	5
+Insectoid Criticals Up XX	Marine Rutile	1
+Piscinoid Criticals Up I	Small Dorsal Fin	1
+Piscinoid Criticals Up I	Arc Sand Ore	1
+Piscinoid Criticals Up V	Small Dorsal Fin	2
+Piscinoid Criticals Up V	Lionbone Bort	1
+Piscinoid Criticals Up X	Small Dorsal Fin	3
+Piscinoid Criticals Up X	Enduron Lead	1
+Piscinoid Criticals Up XV	Small Dorsal Fin	4
+Piscinoid Criticals Up XV	Boiled-Egg Ore	1
+Piscinoid Criticals Up XX	Small Dorsal Fin	5
+Piscinoid Criticals Up XX	Marine Rutile	1
+Humanoid Criticals Up I	Broken Buckle	1
+Humanoid Criticals Up I	Arc Sand Ore	1
+Humanoid Criticals Up V	Broken Buckle	2
+Humanoid Criticals Up V	Lionbone Bort	1
+Humanoid Criticals Up X	Broken Buckle	3
+Humanoid Criticals Up X	Enduron Lead	1
+Humanoid Criticals Up XV	Broken Buckle	4
+Humanoid Criticals Up XV	Boiled-Egg Ore	1
+Humanoid Criticals Up XX	Broken Buckle	5
+Humanoid Criticals Up XX	Marine Rutile	1
+Mechanoid Criticals Up I	Standard Crank	1
+Mechanoid Criticals Up I	Arc Sand Ore	1
+Mechanoid Criticals Up V	Standard Crank	2
+Mechanoid Criticals Up V	Lionbone Bort	1
+Mechanoid Criticals Up X	Standard Crank	3
+Mechanoid Criticals Up X	Enduron Lead	1
+Mechanoid Criticals Up XV	Standard Crank	4
+Mechanoid Criticals Up XV	Boiled-Egg Ore	1
+Mechanoid Criticals Up XX	Standard Crank	5
+Mechanoid Criticals Up XX	Marine Rutile	1
+Chimeroid Criticals Up I	Sticky Mucus	1
+Chimeroid Criticals Up I	Bloodied Face	1
+Chimeroid Criticals Up I	Fine White Belt	1
+Chimeroid Criticals Up I	White Cometite	1
+Chimeroid Criticals Up V	Sticky Mucus	2
+Chimeroid Criticals Up V	Bloodied Face	2
+Chimeroid Criticals Up V	Fine White Belt	2
+Chimeroid Criticals Up V	Dawnstone	1
+Chimeroid Criticals Up X	Sticky Mucus	3
+Chimeroid Criticals Up X	Black Colubrim Tail	3
+Chimeroid Criticals Up X	Brown Colubrim Tail	3
+Chimeroid Criticals Up X	Everfreeze Ore	1
+Chimeroid Criticals Up XV	Sticky Mucus	4
+Chimeroid Criticals Up XV	Black Colubrim Tail	4
+Chimeroid Criticals Up XV	Brown Colubrim Tail	4
+Chimeroid Criticals Up XV	Foucaultium	1
+Chimeroid Criticals Up XX	Sticky Mucus	5
+Chimeroid Criticals Up XX	Black Colubrim Tail	5
+Chimeroid Criticals Up XX	Brown Colubrim Tail	5
+Chimeroid Criticals Up XX	Bonjelium	1
+Ultrafauna Criticals Up I	Thick Cinicula Horn	1
+Ultrafauna Criticals Up I	Black Electrical Tentacle	1
+Ultrafauna Criticals Up I	Hot Potamus Juice	1
+Ultrafauna Criticals Up I	White Cometite	1
+Ultrafauna Criticals Up V	Thick Cinicula Horn	2
+Ultrafauna Criticals Up V	Black Electrical Tentacle	2
+Ultrafauna Criticals Up V	Hot Potamus Juice	2
+Ultrafauna Criticals Up V	Dawnstone	1
+Ultrafauna Criticals Up X	Thick Cinicula Horn	3
+Ultrafauna Criticals Up X	Reverse Colubrim Fin	3
+Ultrafauna Criticals Up X	Colubrim Eel Kebab	3
+Ultrafauna Criticals Up X	Everfreeze Ore	1
+Ultrafauna Criticals Up XV	Thick Cinicula Horn	4
+Ultrafauna Criticals Up XV	Reverse Colubrim Fin	4
+Ultrafauna Criticals Up XV	Colubrim Eel Kebab	4
+Ultrafauna Criticals Up XV	Foucaultium	1
+Ultrafauna Criticals Up XX	Thick Cinicula Horn	5
+Ultrafauna Criticals Up XX	Reverse Colubrim Fin	5
+Ultrafauna Criticals Up XX	Colubrim Eel Kebab	5
+Ultrafauna Criticals Up XX	Bonjelium	1
+Extend Critical Power I	Gremlin Stone	1
+Extend Critical Power I	Blue Progen Wing	1
+Extend Critical Power I	Pristine Pincer	1
+Extend Critical Power I	White Cometite	1
+Extend Critical Power V	Gremlin Stone	2
+Extend Critical Power V	Blue Progen Wing	2
+Extend Critical Power V	Pristine Pincer	2
+Extend Critical Power V	Dawnstone	1
+Extend Critical Power X	Gremlin Stone	3
+Extend Critical Power X	Ornate Petramand Claw	3
+Extend Critical Power X	Lophid Jaw Meat	3
+Extend Critical Power X	Everfreeze Ore	1
+Extend Critical Power XV	Gremlin Stone	4
+Extend Critical Power XV	Ornate Petramand Claw	4
+Extend Critical Power XV	Lophid Jaw Meat	4
+Extend Critical Power XV	Foucaultium	1
+Extend Critical Power XX	Gremlin Stone	5
+Extend Critical Power XX	Ornate Petramand Claw	5
+Extend Critical Power XX	Lophid Jaw Meat	5
+Extend Critical Power XX	Bonjelium	1
+Theroid Slayer I	Fleecy Fur	1
+Theroid Slayer I	Arc Sand Ore	1
+Theroid Slayer V	Fleecy Fur	2
+Theroid Slayer V	Lionbone Bort	1
+Theroid Slayer X	Fleecy Fur	3
+Theroid Slayer X	Enduron Lead	1
+Theroid Slayer XV	Fleecy Fur	4
+Theroid Slayer XV	Boiled-Egg Ore	1
+Theroid Slayer XX	Fleecy Fur	5
+Theroid Slayer XX	Marine Rutile	1
+Insectoid Slayer I	Tatty Insect Wing	1
+Insectoid Slayer I	Arc Sand Ore	1
+Insectoid Slayer V	Tatty Insect Wing	2
+Insectoid Slayer V	Lionbone Bort	1
+Insectoid Slayer X	Tatty Insect Wing	3
+Insectoid Slayer X	Enduron Lead	1
+Insectoid Slayer XV	Tatty Insect Wing	4
+Insectoid Slayer XV	Boiled-Egg Ore	1
+Insectoid Slayer XX	Tatty Insect Wing	5
+Insectoid Slayer XX	Marine Rutile	1
+Piscinoid Slayer I	Small Dorsal Fin	1
+Piscinoid Slayer I	Arc Sand Ore	1
+Piscinoid Slayer V	Small Dorsal Fin	2
+Piscinoid Slayer V	Lionbone Bort	1
+Piscinoid Slayer X	Small Dorsal Fin	3
+Piscinoid Slayer X	Enduron Lead	1
+Piscinoid Slayer XV	Small Dorsal Fin	4
+Piscinoid Slayer XV	Boiled-Egg Ore	1
+Piscinoid Slayer XX	Small Dorsal Fin	5
+Piscinoid Slayer XX	Marine Rutile	1
+Humanoid Slayer I	Broken Buckle	1
+Humanoid Slayer I	Arc Sand Ore	1
+Humanoid Slayer V	Broken Buckle	2
+Humanoid Slayer V	Lionbone Bort	1
+Humanoid Slayer X	Broken Buckle	3
+Humanoid Slayer X	Enduron Lead	1
+Humanoid Slayer XV	Broken Buckle	4
+Humanoid Slayer XV	Boiled-Egg Ore	1
+Humanoid Slayer XX	Broken Buckle	5
+Humanoid Slayer XX	Marine Rutile	1
+Mechanoid Slayer I	Standard Crank	1
+Mechanoid Slayer I	Arc Sand Ore	1
+Mechanoid Slayer V	Standard Crank	2
+Mechanoid Slayer V	Lionbone Bort	1
+Mechanoid Slayer X	Standard Crank	3
+Mechanoid Slayer X	Enduron Lead	1
+Mechanoid Slayer XV	Standard Crank	4
+Mechanoid Slayer XV	Boiled-Egg Ore	1
+Mechanoid Slayer XX	Standard Crank	5
+Mechanoid Slayer XX	Marine Rutile	1
+Chimeroid Slayer I	Sticky Mucus	1
+Chimeroid Slayer I	Bloodied Face	1
+Chimeroid Slayer I	Fine White Belt	1
+Chimeroid Slayer I	White Cometite	1
+Chimeroid Slayer V	Sticky Mucus	2
+Chimeroid Slayer V	Bloodied Face	2
+Chimeroid Slayer V	Fine White Belt	2
+Chimeroid Slayer V	Dawnstone	1
+Chimeroid Slayer X	Sticky Mucus	3
+Chimeroid Slayer X	Yellow Millepod Rock	3
+Chimeroid Slayer X	Millepod Ice Rock	3
+Chimeroid Slayer X	Everfreeze Ore	1
+Chimeroid Slayer XV	Sticky Mucus	4
+Chimeroid Slayer XV	Yellow Millepod Rock	4
+Chimeroid Slayer XV	Millepod Ice Rock	4
+Chimeroid Slayer XV	Foucaultium	1
+Chimeroid Slayer XX	Sticky Mucus	5
+Chimeroid Slayer XX	Yellow Millepod Rock	5
+Chimeroid Slayer XX	Millepod Ice Rock	5
+Chimeroid Slayer XX	Bonjelium	1
+Ultrafauna Slayer I	White Forfex Shell	1
+Ultrafauna Slayer I	Black Electrical Tentacle	1
+Ultrafauna Slayer I	Hot Potamus Juice	1
+Ultrafauna Slayer I	White Cometite	1
+Ultrafauna Slayer V	White Forfex Shell	2
+Ultrafauna Slayer V	Black Electrical Tentacle	2
+Ultrafauna Slayer V	Hot Potamus Juice	2
+Ultrafauna Slayer V	Dawnstone	1
+Ultrafauna Slayer X	White Forfex Shell	3
+Ultrafauna Slayer X	Reverse Millepod Fin	3
+Ultrafauna Slayer X	Deva Caladar's Red Ear	3
+Ultrafauna Slayer X	Everfreeze Ore	1
+Ultrafauna Slayer XV	White Forfex Shell	4
+Ultrafauna Slayer XV	Reverse Millepod Fin	4
+Ultrafauna Slayer XV	Deva Caladar's Red Ear	4
+Ultrafauna Slayer XV	Foucaultium	1
+Ultrafauna Slayer XX	White Forfex Shell	5
+Ultrafauna Slayer XX	Reverse Millepod Fin	5
+Ultrafauna Slayer XX	Deva Caladar's Red Ear	5
+Ultrafauna Slayer XX	Bonjelium	1
+Physical Attack Plus I	Sharp Germivore Jaw	1
+Physical Attack Plus I	Giant Falsaxum Jaw	1
+Physical Attack Plus I	Aurorite	1
+Physical Attack Plus V	Sharp Germivore Jaw	2
+Physical Attack Plus V	Giant Falsaxum Jaw	2
+Physical Attack Plus V	Infernium	1
+Physical Attack Plus X	Experia Glyph	3
+Physical Attack Plus X	Reinforced Frame	3
+Physical Attack Plus X	Cimmerian Cinnabar	1
+Physical Attack Plus XV	Experia Glyph	4
+Physical Attack Plus XV	Reinforced Frame	4
+Physical Attack Plus XV	Ouroboros Crystal	1
+Physical Attack Plus XX	Experia Glyph	5
+Physical Attack Plus XX	Reinforced Frame	5
+Physical Attack Plus XX	Parhelion Platinum	1
+Beam Attack Plus I	Quirky Liver	1
+Beam Attack Plus I	Gold Monoceros Horn	1
+Beam Attack Plus I	Aurorite	1
+Beam Attack Plus V	Quirky Liver	2
+Beam Attack Plus V	Gold Monoceros Horn	2
+Beam Attack Plus V	Infernium	1
+Beam Attack Plus X	Esse Glyph	3
+Beam Attack Plus X	Advanced Lens	3
+Beam Attack Plus X	Cimmerian Cinnabar	1
+Beam Attack Plus XV	Esse Glyph	4
+Beam Attack Plus XV	Advanced Lens	4
+Beam Attack Plus XV	Ouroboros Crystal	1
+Beam Attack Plus XX	Esse Glyph	5
+Beam Attack Plus XX	Advanced Lens	5
+Beam Attack Plus XX	Parhelion Platinum	1
+Ether Attack Plus I	Elemental Fragment	1
+Ether Attack Plus I	Golden Progen Wing	1
+Ether Attack Plus I	Aurorite	1
+Ether Attack Plus V	Elemental Fragment	2
+Ether Attack Plus V	Golden Progen Wing	2
+Ether Attack Plus V	Infernium	1
+Ether Attack Plus X	Creare Glyph	3
+Ether Attack Plus X	Purple Cervus Antlers	3
+Ether Attack Plus X	Cimmerian Cinnabar	1
+Ether Attack Plus XV	Creare Glyph	4
+Ether Attack Plus XV	Purple Cervus Antlers	4
+Ether Attack Plus XV	Ouroboros Crystal	1
+Ether Attack Plus XX	Creare Glyph	5
+Ether Attack Plus XX	Purple Cervus Antlers	5
+Ether Attack Plus XX	Parhelion Platinum	1
+Thermal Attack Plus I	Reinforced Plunger	1
+Thermal Attack Plus I	Herculean Beast Hair	1
+Thermal Attack Plus I	Aurorite	1
+Thermal Attack Plus V	Reinforced Plunger	2
+Thermal Attack Plus V	Black Meaty Caecus Liver	2
+Thermal Attack Plus V	Infernium	1
+Thermal Attack Plus X	Experia Glyph	3
+Thermal Attack Plus X	Jacul Horn	3
+Thermal Attack Plus X	Cimmerian Cinnabar	1
+Thermal Attack Plus XV	Experia Glyph	4
+Thermal Attack Plus XV	Jacul Horn	4
+Thermal Attack Plus XV	Ouroboros Crystal	1
+Thermal Attack Plus XX	Experia Glyph	5
+Thermal Attack Plus XX	Jacul Horn	5
+Thermal Attack Plus XX	Parhelion Platinum	1
+Electric Attack Plus I	Quo Pod	1
+Electric Attack Plus I	Black Scintimure Tentacle	1
+Electric Attack Plus I	Aurorite	1
+Electric Attack Plus V	Vivohast Crescent Hook	2
+Electric Attack Plus V	Black Scintimure Tentacle	2
+Electric Attack Plus V	Infernium	1
+Electric Attack Plus X	Scienti Glyph	3
+Electric Attack Plus X	Reinforced Plug	3
+Electric Attack Plus X	Cimmerian Cinnabar	1
+Electric Attack Plus XV	Scienti Glyph	4
+Electric Attack Plus XV	Reinforced Plug	4
+Electric Attack Plus XV	Ouroboros Crystal	1
+Electric Attack Plus XX	Scienti Glyph	5
+Electric Attack Plus XX	Reinforced Plug	5
+Electric Attack Plus XX	Parhelion Platinum	1
+Gravity Attack Plus I	Black Gyrocompass	1
+Gravity Attack Plus I	Visigel Waterfall Orb	1
+Gravity Attack Plus I	Aurorite	1
+Gravity Attack Plus V	Black Gyrocompass	2
+Gravity Attack Plus V	Visigel Waterfall Orb	2
+Gravity Attack Plus V	Infernium	1
+Gravity Attack Plus X	Esse Glyph	3
+Gravity Attack Plus X	Gold Sylooth Brace	3
+Gravity Attack Plus X	Cimmerian Cinnabar	1
+Gravity Attack Plus XV	Esse Glyph	4
+Gravity Attack Plus XV	Gold Sylooth Brace	4
+Gravity Attack Plus XV	Ouroboros Crystal	1
+Gravity Attack Plus XX	Esse Glyph	5
+Gravity Attack Plus XX	Gold Sylooth Brace	5
+Gravity Attack Plus XX	Parhelion Platinum	1
+Front Attack Plus I	Cracked Bill	1
+Front Attack Plus I	Auravis Horn	1
+Front Attack Plus I	Aurorite	1
+Front Attack Plus V	Cracked Bill	2
+Front Attack Plus V	Auravis Horn	2
+Front Attack Plus V	Infernium	1
+Front Attack Plus X	Cracked Bill	3
+Front Attack Plus X	Black Vigent Rock Scalp	3
+Front Attack Plus X	Cimmerian Cinnabar	1
+Front Attack Plus XV	Cracked Bill	4
+Front Attack Plus XV	Black Vigent Rock Scalp	4
+Front Attack Plus XV	Ouroboros Crystal	1
+Front Attack Plus XX	Cracked Bill	5
+Front Attack Plus XX	Black Vigent Rock Scalp	5
+Front Attack Plus XX	Parhelion Platinum	1
+Side Attack Plus I	Pristine Claw	1
+Side Attack Plus I	Green Blatta Wing	1
+Side Attack Plus I	Aurorite	1
+Side Attack Plus V	Pristine Claw	2
+Side Attack Plus V	Green Blatta Wing	2
+Side Attack Plus V	Infernium	1
+Side Attack Plus X	Pristine Claw	3
+Side Attack Plus X	Ingrown Virago Claw	3
+Side Attack Plus X	Cimmerian Cinnabar	1
+Side Attack Plus XV	Pristine Claw	4
+Side Attack Plus XV	Ingrown Virago Claw	4
+Side Attack Plus XV	Ouroboros Crystal	1
+Side Attack Plus XX	Pristine Claw	5
+Side Attack Plus XX	Ingrown Virago Claw	5
+Side Attack Plus XX	Parhelion Platinum	1
+Back Attack Plus I	Jagged Grex Tail	1
+Back Attack Plus I	Ebony Evello Egg	1
+Back Attack Plus I	Aurorite	1
+Back Attack Plus V	Jagged Grex Tail	2
+Back Attack Plus V	Ebony Evello Egg	2
+Back Attack Plus V	Infernium	1
+Back Attack Plus X	Jagged Grex Tail	3
+Back Attack Plus X	Purple Virago Alloy Plate	3
+Back Attack Plus X	Cimmerian Cinnabar	1
+Back Attack Plus XV	Jagged Grex Tail	4
+Back Attack Plus XV	Purple Virago Alloy Plate	4
+Back Attack Plus XV	Ouroboros Crystal	1
+Back Attack Plus XX	Jagged Grex Tail	5
+Back Attack Plus XX	Purple Virago Alloy Plate	5
+Back Attack Plus XX	Parhelion Platinum	1
+Vantage Attack Plus I	Supple Leather	1
+Vantage Attack Plus I	Arc Sand Ore	1
+Vantage Attack Plus V	Supple Leather	2
+Vantage Attack Plus V	Lionbone Bort	1
+Vantage Attack Plus X	Supple Leather	3
+Vantage Attack Plus X	Enduron Lead	1
+Vantage Attack Plus XV	Supple Leather	4
+Vantage Attack Plus XV	Boiled-Egg Ore	1
+Vantage Attack Plus XX	Supple Leather	5
+Vantage Attack Plus XX	Marine Rutile	1
+Melee: Blackout I	Ovis Polishing Stone	1
+Melee: Blackout I	Arc Sand Ore	1
+Melee: Blackout V	Ovis Polishing Stone	2
+Melee: Blackout V	Lionbone Bort	1
+Melee: Blackout X	Ovis Polishing Stone	3
+Melee: Blackout X	Enduron Lead	1
+Melee: Blackout XV	Ovis Polishing Stone	4
+Melee: Blackout XV	Boiled-Egg Ore	1
+Melee: Blackout XX	Ovis Polishing Stone	5
+Melee: Blackout XX	Marine Rutile	1
+Melee: Fatigue I	Muscled Suid Bulge	1
+Melee: Fatigue I	Arc Sand Ore	1
+Melee: Fatigue V	Muscled Suid Bulge	2
+Melee: Fatigue V	Lionbone Bort	1
+Melee: Fatigue X	Muscled Suid Bulge	3
+Melee: Fatigue X	Enduron Lead	1
+Melee: Fatigue XV	Muscled Suid Bulge	4
+Melee: Fatigue XV	Boiled-Egg Ore	1
+Melee: Fatigue XX	Muscled Suid Bulge	5
+Melee: Fatigue XX	Marine Rutile	1
+Melee: Physical Res Down I	Juicy Wild Meat	1
+Melee: Physical Res Down I	Arc Sand Ore	1
+Melee: Physical Res Down V	Juicy Wild Meat	2
+Melee: Physical Res Down V	Lionbone Bort	1
+Melee: Physical Res Down X	Juicy Wild Meat	3
+Melee: Physical Res Down X	Enduron Lead	1
+Melee: Physical Res Down XV	Juicy Wild Meat	4
+Melee: Physical Res Down XV	Boiled-Egg Ore	1
+Melee: Physical Res Down XX	Juicy Wild Meat	5
+Melee: Physical Res Down XX	Marine Rutile	1
+Melee: Beam Res Down I	Adsecula Straw	1
+Melee: Beam Res Down I	Arc Sand Ore	1
+Melee: Beam Res Down V	Adsecula Straw	2
+Melee: Beam Res Down V	Lionbone Bort	1
+Melee: Beam Res Down X	Adsecula Straw	3
+Melee: Beam Res Down X	Enduron Lead	1
+Melee: Beam Res Down XV	Adsecula Straw	4
+Melee: Beam Res Down XV	Boiled-Egg Ore	1
+Melee: Beam Res Down XX	Adsecula Straw	5
+Melee: Beam Res Down XX	Marine Rutile	1
+Melee: Ether Res Down I	Perforated Oar	1
+Melee: Ether Res Down I	Arc Sand Ore	1
+Melee: Ether Res Down V	Perforated Oar	2
+Melee: Ether Res Down V	Lionbone Bort	1
+Melee: Ether Res Down X	Perforated Oar	3
+Melee: Ether Res Down X	Enduron Lead	1
+Melee: Ether Res Down XV	Perforated Oar	4
+Melee: Ether Res Down XV	Boiled-Egg Ore	1
+Melee: Ether Res Down XX	Perforated Oar	5
+Melee: Ether Res Down XX	Marine Rutile	1
+Melee: Thermal Res Down I	Red Forfex Shell	1
+Melee: Thermal Res Down I	Arc Sand Ore	1
+Melee: Thermal Res Down V	Red Forfex Shell	2
+Melee: Thermal Res Down V	Lionbone Bort	1
+Melee: Thermal Res Down X	Red Forfex Shell	3
+Melee: Thermal Res Down X	Enduron Lead	1
+Melee: Thermal Res Down XV	Red Forfex Shell	4
+Melee: Thermal Res Down XV	Boiled-Egg Ore	1
+Melee: Thermal Res Down XX	Red Forfex Shell	5
+Melee: Thermal Res Down XX	Marine Rutile	1
+Melee: Electric Res Down I	Muddy Pelt	1
+Melee: Electric Res Down I	Arc Sand Ore	1
+Melee: Electric Res Down V	Muddy Pelt	2
+Melee: Electric Res Down V	Lionbone Bort	1
+Melee: Electric Res Down X	Muddy Pelt	3
+Melee: Electric Res Down X	Enduron Lead	1
+Melee: Electric Res Down XV	Muddy Pelt	4
+Melee: Electric Res Down XV	Boiled-Egg Ore	1
+Melee: Electric Res Down XX	Muddy Pelt	5
+Melee: Electric Res Down XX	Marine Rutile	1
+Melee: Gravity Res Down I	Black Blatta Wing	1
+Melee: Gravity Res Down I	Arc Sand Ore	1
+Melee: Gravity Res Down V	Black Blatta Wing	2
+Melee: Gravity Res Down V	Lionbone Bort	1
+Melee: Gravity Res Down X	Black Blatta Wing	3
+Melee: Gravity Res Down X	Enduron Lead	1
+Melee: Gravity Res Down XV	Black Blatta Wing	4
+Melee: Gravity Res Down XV	Boiled-Egg Ore	1
+Melee: Gravity Res Down XX	Black Blatta Wing	5
+Melee: Gravity Res Down XX	Marine Rutile	1
+Melee: Blaze I	Scirpo Malic Acid Sac	1
+Melee: Blaze I	Pugilith Lamp	1
+Melee: Blaze I	Aurorite	1
+Melee: Blaze V	Scirpo Malic Acid Sac	2
+Melee: Blaze V	Pugilith Lamp	2
+Melee: Blaze V	Infernium	1
+Melee: Blaze X	Scirpo Malic Acid Sac	3
+Melee: Blaze X	Imperial Sphinx Fang	3
+Melee: Blaze X	Cimmerian Cinnabar	1
+Melee: Blaze XV	Scirpo Malic Acid Sac	4
+Melee: Blaze XV	Imperial Sphinx Fang	4
+Melee: Blaze XV	Ouroboros Crystal	1
+Melee: Blaze XX	Scirpo Malic Acid Sac	5
+Melee: Blaze XX	Imperial Sphinx Fang	5
+Melee: Blaze XX	Parhelion Platinum	1
+Melee: Shock I	Scirpo Cyanide Sac	1
+Melee: Shock I	Electrified Xeno Blood	1
+Melee: Shock I	Aurorite	1
+Melee: Shock V	Scirpo Cyanide Sac	2
+Melee: Shock V	Electrified Xeno Blood	2
+Melee: Shock V	Infernium	1
+Melee: Shock X	Scirpo Cyanide Sac	3
+Melee: Shock X	Electric Tersqual Tear	3
+Melee: Shock X	Cimmerian Cinnabar	1
+Melee: Shock XV	Scirpo Cyanide Sac	4
+Melee: Shock XV	Electric Tersqual Tear	4
+Melee: Shock XV	Ouroboros Crystal	1
+Melee: Shock XX	Scirpo Cyanide Sac	5
+Melee: Shock XX	Electric Tersqual Tear	5
+Melee: Shock XX	Parhelion Platinum	1
+Melee: Recover HP I	Thallus Crescent Hook	1
+Melee: Recover HP I	Green Monoceros Horn	1
+Melee: Recover HP I	Liceor Horn	1
+Melee: Recover HP I	White Cometite	1
+Melee: Recover HP V	Thallus Crescent Hook	2
+Melee: Recover HP V	Green Monoceros Horn	2
+Melee: Recover HP V	Liceor Horn	2
+Melee: Recover HP V	Dawnstone	1
+Melee: Recover HP X	Thallus Crescent Hook	3
+Melee: Recover HP X	Millesaur Dung	3
+Melee: Recover HP X	Coronid Dung	3
+Melee: Recover HP X	Everfreeze Ore	1
+Melee: Recover HP XV	Thallus Crescent Hook	4
+Melee: Recover HP XV	Millesaur Dung	4
+Melee: Recover HP XV	Coronid Dung	4
+Melee: Recover HP XV	Foucaultium	1
+Melee: Recover HP XX	Thallus Crescent Hook	5
+Melee: Recover HP XX	Millesaur Dung	5
+Melee: Recover HP XX	Coronid Dung	5
+Melee: Recover HP XX	Bonjelium	1
+Soft Touch I	Terebra Paw Stamp	1
+Soft Touch I	Arc Sand Ore	1
+Soft Touch V	Terebra Paw Stamp	2
+Soft Touch V	Lionbone Bort	1
+Soft Touch X	Arenatect Shell	8
+Soft Touch X	Blue Jacul Wing	8
+Soft Touch X	Gerrid Navel	8
+Soft Touch X	Everfreeze Ore	2
+Soft Touch XV	Arenatect Shell	16
+Soft Touch XV	Blue Jacul Wing	16
+Soft Touch XV	Gerrid Navel	16
+Soft Touch XV	Foucaultium	4
+Soft Touch XX	Arenatect Shell	32
+Soft Touch XX	Blue Jacul Wing	32
+Soft Touch XX	Gerrid Navel	32
+Soft Touch XX	Bonjelium	8
+HP Rebound I	Honey Oil	1
+HP Rebound I	Large Purgovent Liver	1
+HP Rebound I	Hulking Incisor	1
+HP Rebound I	White Cometite	1
+HP Rebound V	Honey Oil	2
+HP Rebound V	Large Purgovent Liver	2
+HP Rebound V	Hulking Incisor	2
+HP Rebound V	Dawnstone	1
+HP Rebound X	Honey Oil	8
+HP Rebound X	Unafulge Death Toxin	8
+HP Rebound X	Rich Scintimure Meat	8
+HP Rebound X	Everfreeze Ore	2
+HP Rebound XV	Honey Oil	16
+HP Rebound XV	Unafulge Death Toxin	16
+HP Rebound XV	Rich Scintimure Meat	16
+HP Rebound XV	Foucaultium	4
+HP Rebound XX	Honey Oil	32
+HP Rebound XX	Unafulge Death Toxin	32
+HP Rebound XX	Rich Scintimure Meat	32
+HP Rebound XX	Bonjelium	8
+TP Rebound I	Topaz Wine	1
+TP Rebound I	Glowing Retina	1
+TP Rebound I	Terebra Water Grease	1
+TP Rebound I	White Cometite	1
+TP Rebound V	Topaz Wine	2
+TP Rebound V	Glowing Retina	2
+TP Rebound V	Terebra Water Grease	2
+TP Rebound V	Dawnstone	1
+TP Rebound X	Topaz Wine	8
+TP Rebound X	Silver Petramand Silk	8
+TP Rebound X	Big Balaena Sand Bag	8
+TP Rebound X	Everfreeze Ore	2
+TP Rebound XV	Topaz Wine	16
+TP Rebound XV	Silver Petramand Silk	16
+TP Rebound XV	Big Balaena Sand Bag	16
+TP Rebound XV	Foucaultium	4
+TP Rebound XX	Topaz Wine	32
+TP Rebound XX	Silver Petramand Silk	32
+TP Rebound XX	Big Balaena Sand Bag	32
+TP Rebound XX	Bonjelium	8
+Taunt: Barrier I	Small Shell	1
+Taunt: Barrier I	Arc Sand Ore	1
+Taunt: Barrier V	Small Shell	2
+Taunt: Barrier V	Lionbone Bort	1
+Taunt: Barrier X	Small Shell	3
+Taunt: Barrier X	Enduron Lead	1
+Taunt: Barrier XV	Small Shell	4
+Taunt: Barrier XV	Boiled-Egg Ore	1
+Taunt: Barrier XX	Small Shell	5
+Taunt: Barrier XX	Marine Rutile	1
+Taunt: Decoy I	Black Fog Deposits	1
+Taunt: Decoy I	Arc Sand Ore	1
+Taunt: Decoy V	Black Fog Deposits	2
+Taunt: Decoy V	Lionbone Bort	1
+Taunt: Decoy X	Black Fog Deposits	3
+Taunt: Decoy X	Enduron Lead	1
+Taunt: Decoy XV	Black Fog Deposits	4
+Taunt: Decoy XV	Boiled-Egg Ore	1
+Taunt: Decoy XX	Black Fog Deposits	5
+Taunt: Decoy XX	Marine Rutile	1
+Taunt: Supercharge I	Tatty Insect Wing	1
+Taunt: Supercharge I	Arc Sand Ore	1
+Taunt: Supercharge V	Tatty Insect Wing	2
+Taunt: Supercharge V	Lionbone Bort	1
+Taunt: Supercharge X	Tatty Insect Wing	3
+Taunt: Supercharge X	Enduron Lead	1
+Taunt: Supercharge XV	Tatty Insect Wing	4
+Taunt: Supercharge XV	Boiled-Egg Ore	1
+Taunt: Supercharge XX	Tatty Insect Wing	5
+Taunt: Supercharge XX	Marine Rutile	1
+Topple: Barrier I	Small Shell	1
+Topple: Barrier I	Arc Sand Ore	1
+Topple: Barrier V	Small Shell	2
+Topple: Barrier V	Lionbone Bort	1
+Topple: Barrier X	Small Shell	3
+Topple: Barrier X	Enduron Lead	1
+Topple: Barrier XV	Small Shell	4
+Topple: Barrier XV	Boiled-Egg Ore	1
+Topple: Barrier XX	Small Shell	5
+Topple: Barrier XX	Marine Rutile	1
+Topple: Decoy I	Black Fog Deposits	1
+Topple: Decoy I	Arc Sand Ore	1
+Topple: Decoy V	Black Fog Deposits	2
+Topple: Decoy V	Lionbone Bort	1
+Topple: Decoy X	Black Fog Deposits	3
+Topple: Decoy X	Enduron Lead	1
+Topple: Decoy XV	Black Fog Deposits	4
+Topple: Decoy XV	Boiled-Egg Ore	1
+Topple: Decoy XX	Black Fog Deposits	5
+Topple: Decoy XX	Marine Rutile	1
+Stun: Barrier I	Small Shell	1
+Stun: Barrier I	Arc Sand Ore	1
+Stun: Barrier V	Small Shell	2
+Stun: Barrier V	Lionbone Bort	1
+Stun: Barrier X	Small Shell	3
+Stun: Barrier X	Enduron Lead	1
+Stun: Barrier XV	Small Shell	4
+Stun: Barrier XV	Boiled-Egg Ore	1
+Stun: Barrier XX	Small Shell	5
+Stun: Barrier XX	Marine Rutile	1
+Stun: Decoy I	Black Fog Deposits	1
+Stun: Decoy I	Arc Sand Ore	1
+Stun: Decoy V	Black Fog Deposits	2
+Stun: Decoy V	Lionbone Bort	1
+Stun: Decoy X	Black Fog Deposits	3
+Stun: Decoy X	Enduron Lead	1
+Stun: Decoy XV	Black Fog Deposits	4
+Stun: Decoy XV	Boiled-Egg Ore	1
+Stun: Decoy XX	Black Fog Deposits	5
+Stun: Decoy XX	Marine Rutile	1
+Reflect Damage Up I	Green Crystal	1
+Reflect Damage Up I	Diamond Seed	1
+Reflect Damage Up I	Cimmerian Pom Pom	1
+Reflect Damage Up I	White Cometite	1
+Reflect Damage Up V	Odorous Tentacle	2
+Reflect Damage Up V	Iron Lump	2
+Reflect Damage Up V	Pristine Dorsal Fin	2
+Reflect Damage Up V	Dawnstone	1
+Reflect Damage Up X	Yggralith Horn	1
+Reflect Damage Up X	Cloudy Gerrid Soup	3
+Reflect Damage Up X	Sabula Backbone	3
+Reflect Damage Up X	Everfreeze Ore	1
+Reflect Damage Up XV	Yggralith Horn	1
+Reflect Damage Up XV	Cloudy Gerrid Soup	4
+Reflect Damage Up XV	Sabula Backbone	4
+Reflect Damage Up XV	Foucaultium	1
+Reflect Damage Up XX	Yggralith Horn	1
+Reflect Damage Up XX	Cloudy Gerrid Soup	5
+Reflect Damage Up XX	Sabula Backbone	5
+Reflect Damage Up XX	Bonjelium	1
+Nullify Physical Reflect I	Juicy Wild Meat	1
+Nullify Physical Reflect I	Arc Sand Ore	1
+Nullify Physical Reflect V	Juicy Wild Meat	2
+Nullify Physical Reflect V	Lionbone Bort	1
+Nullify Physical Reflect X	Juicy Wild Meat	3
+Nullify Physical Reflect X	Enduron Lead	1
+Nullify Physical Reflect XV	Juicy Wild Meat	4
+Nullify Physical Reflect XV	Boiled-Egg Ore	1
+Nullify Physical Reflect XX	Juicy Wild Meat	5
+Nullify Physical Reflect XX	Marine Rutile	1
+Nullify Beam Reflect I	Adsecula Straw	1
+Nullify Beam Reflect I	Arc Sand Ore	1
+Nullify Beam Reflect V	Adsecula Straw	2
+Nullify Beam Reflect V	Lionbone Bort	1
+Nullify Beam Reflect X	Adsecula Straw	3
+Nullify Beam Reflect X	Enduron Lead	1
+Nullify Beam Reflect XV	Adsecula Straw	4
+Nullify Beam Reflect XV	Boiled-Egg Ore	1
+Nullify Beam Reflect XX	Adsecula Straw	5
+Nullify Beam Reflect XX	Marine Rutile	1
+Nullify Ether Reflect I	Perforated Oar	1
+Nullify Ether Reflect I	Arc Sand Ore	1
+Nullify Ether Reflect V	Perforated Oar	2
+Nullify Ether Reflect V	Lionbone Bort	1
+Nullify Ether Reflect X	Perforated Oar	3
+Nullify Ether Reflect X	Enduron Lead	1
+Nullify Ether Reflect XV	Perforated Oar	4
+Nullify Ether Reflect XV	Boiled-Egg Ore	1
+Nullify Ether Reflect XX	Perforated Oar	5
+Nullify Ether Reflect XX	Marine Rutile	1
+Nullify Thermal Reflect I	Red Forfex Shell	1
+Nullify Thermal Reflect I	Arc Sand Ore	1
+Nullify Thermal Reflect V	Red Forfex Shell	2
+Nullify Thermal Reflect V	Lionbone Bort	1
+Nullify Thermal Reflect X	Red Forfex Shell	3
+Nullify Thermal Reflect X	Enduron Lead	1
+Nullify Thermal Reflect XV	Red Forfex Shell	4
+Nullify Thermal Reflect XV	Boiled-Egg Ore	1
+Nullify Thermal Reflect XX	Red Forfex Shell	5
+Nullify Thermal Reflect XX	Marine Rutile	1
+Nullify Electric Reflect I	Muddy Pelt	1
+Nullify Electric Reflect I	Arc Sand Ore	1
+Nullify Electric Reflect V	Muddy Pelt	2
+Nullify Electric Reflect V	Lionbone Bort	1
+Nullify Electric Reflect X	Muddy Pelt	3
+Nullify Electric Reflect X	Enduron Lead	1
+Nullify Electric Reflect XV	Muddy Pelt	4
+Nullify Electric Reflect XV	Boiled-Egg Ore	1
+Nullify Electric Reflect XX	Muddy Pelt	5
+Nullify Electric Reflect XX	Marine Rutile	1
+Nullify Gravity Reflect I	Black Blatta Wing	1
+Nullify Gravity Reflect I	Arc Sand Ore	1
+Nullify Gravity Reflect V	Black Blatta Wing	2
+Nullify Gravity Reflect V	Lionbone Bort	1
+Nullify Gravity Reflect X	Black Blatta Wing	3
+Nullify Gravity Reflect X	Enduron Lead	1
+Nullify Gravity Reflect XV	Black Blatta Wing	4
+Nullify Gravity Reflect XV	Boiled-Egg Ore	1
+Nullify Gravity Reflect XX	Black Blatta Wing	5
+Nullify Gravity Reflect XX	Marine Rutile	1
+Overdrive: Recover HP I	Black Turba Nectar	1
+Overdrive: Recover HP I	Shimmering Silk	1
+Overdrive: Recover HP I	Scirpo Silk	1
+Overdrive: Recover HP I	White Cometite	1
+Overdrive: Recover HP V	Black Turba Nectar	2
+Overdrive: Recover HP V	Shimmering Silk	2
+Overdrive: Recover HP V	Scirpo Silk	2
+Overdrive: Recover HP V	Dawnstone	1
+Overdrive: Recover HP X	Black Turba Nectar	3
+Overdrive: Recover HP X	Tasty Fish Belly	3
+Overdrive: Recover HP X	Black Sylooth Brace	3
+Overdrive: Recover HP X	Everfreeze Ore	2
+Overdrive: Recover HP XV	Black Turba Nectar	5
+Overdrive: Recover HP XV	Tasty Fish Belly	5
+Overdrive: Recover HP XV	Black Sylooth Brace	5
+Overdrive: Recover HP XV	Foucaultium	4
+Overdrive: Recover HP XX	Black Turba Nectar	8
+Overdrive: Recover HP XX	Tasty Fish Belly	8
+Overdrive: Recover HP XX	Black Sylooth Brace	8
+Overdrive: Recover HP XX	Bonjelium	8
+Overdrive: Gain TP I	Flowering Germivore Scales	1
+Overdrive: Gain TP I	Red Mortifole Feather	1
+Overdrive: Gain TP I	Sharp Ear	1
+Overdrive: Gain TP I	White Cometite	1
+Overdrive: Gain TP V	Flowering Germivore Scales	2
+Overdrive: Gain TP V	Red Mortifole Feather	2
+Overdrive: Gain TP V	Sharp Ear	2
+Overdrive: Gain TP V	Dawnstone	1
+Extend Blaze I	Poisonous Needle	1
+Overdrive: Gain TP X	Flowering Germivore Scales	4
+Overdrive: Gain TP X	Tersqual Eel Kebab	4
+Overdrive: Gain TP X	Alluring Lophid Extract	4
+Overdrive: Gain TP X	Everfreeze Ore	2
+Overdrive: Gain TP XV	Flowering Germivore Scales	6
+Overdrive: Gain TP XV	Tersqual Eel Kebab	6
+Overdrive: Gain TP XV	Alluring Lophid Extract	6
+Overdrive: Gain TP XV	Foucaultium	4
+Overdrive: Gain TP XX	Flowering Germivore Scales	12
+Overdrive: Gain TP XX	Tersqual Eel Kebab	12
+Overdrive: Gain TP XX	Alluring Lophid Extract	12
+Overdrive: Gain TP XX	Bonjelium	8
+Overdrive Count Up I	Elemental Cluster	1
+Overdrive Count Up I	Moving Thallus Tail	1
+Overdrive Count Up I	Puge Counter	1
+Overdrive Count Up I	White Cometite	1
+Overdrive Count Up V	Elemental Cluster	2
+Overdrive Count Up V	Moving Thallus Tail	2
+Overdrive Count Up V	Puge Counter	2
+Overdrive Count Up V	Dawnstone	1
+Overdrive Count Up X	Elemental Cluster	4
+Overdrive Count Up X	Fertilized Jacul Egg	4
+Overdrive Count Up X	Maple Oil	4
+Overdrive Count Up X	Everfreeze Ore	2
+Overdrive Count Up XV	Elemental Cluster	6
+Overdrive Count Up XV	Fertilized Jacul Egg	6
+Overdrive Count Up XV	Maple Oil	6
+Overdrive Count Up XV	Foucaultium	4
+Overdrive Count Up XX	Elemental Cluster	12
+Overdrive Count Up XX	Fertilized Jacul Egg	12
+Overdrive Count Up XX	Maple Oil	12
+Overdrive Count Up XX	Bonjelium	8
+Extend Overdrive I	Unfertilized Auravis Egg	1
+Extend Overdrive I	Silver Progen Wing	1
+Extend Overdrive I	Terebra Paw Stamp	1
+Extend Overdrive I	White Cometite	1
+Extend Overdrive V	Unfertilized Auravis Egg	2
+Extend Overdrive V	Silver Progen Wing	2
+Extend Overdrive V	Terebra Paw Stamp	2
+Extend Overdrive V	Dawnstone	1
+Extend Overdrive X	Unfertilized Auravis Egg	4
+Extend Overdrive X	Red Brandy	4
+Extend Overdrive X	Fine Red Belt	4
+Extend Overdrive X	Everfreeze Ore	4
+Extend Overdrive XV	Unfertilized Auravis Egg	6
+Extend Overdrive XV	Red Brandy	6
+Extend Overdrive XV	Fine Red Belt	6
+Extend Overdrive XV	Foucaultium	6
+Extend Overdrive XX	Unfertilized Auravis Egg	12
+Extend Overdrive XX	Red Brandy	12
+Extend Overdrive XX	Fine Red Belt	12
+Extend Overdrive XX	Bonjelium	12
+Overdrive Blue Bonus	Emerald Whiskey	16
+Overdrive Blue Bonus	Crimson Dilus Eye	16
+Overdrive Blue Bonus	Moving Dilus Tail	16
+Overdrive Blue Bonus	White Cometite	24
+Overdrive Green Bonus	Galdr Head	24
+Overdrive Green Bonus	Amber Dilus Eye	24
+Overdrive Green Bonus	Sylooth Tonic Water	24
+Overdrive Green Bonus	Bonjelium	12
+Extend Aura I	Turba Nectar	1
+Extend Aura I	Meaty Evello Egg	1
+Extend Aura I	Aurorite	1
+Extend Aura V	Turba Nectar	4
+Extend Aura V	Meaty Evello Egg	4
+Extend Aura V	Infernium	2
+Extend Aura X	Turba Nectar	12
+Extend Aura X	Vigent Blood	12
+Extend Aura X	Cimmerian Cinnabar	4
+Extend Aura XV	Turba Nectar	24
+Extend Aura XV	Vigent Blood	24
+Extend Aura XV	Ouroboros Crystal	8
+Extend Aura XX	Turba Nectar	48
+Extend Aura XX	Vigent Blood	48
+Extend Aura XX	Parhelion Platinum	16
+Aura Rapid Cooldown I	Reinforced Jet	1
+Aura Rapid Cooldown I	Terebra Oil Grease	1
+Aura Rapid Cooldown I	Cloudy Gerrid Soup	1
+Aura Rapid Cooldown I	White Cometite	1
+Aura Rapid Cooldown V	Reinforced Jet	2
+Aura Rapid Cooldown V	Terebra Oil Grease	2
+Aura Rapid Cooldown V	Cloudy Gerrid Soup	2
+Aura Rapid Cooldown V	Dawnstone	1
+Aura Rapid Cooldown X	Reinforced Jet	8
+Aura Rapid Cooldown X	Quality Vigent Claw	8
+Aura Rapid Cooldown X	Millesaur Larynx	8
+Aura Rapid Cooldown X	Everfreeze Ore	2
+Aura Rapid Cooldown XV	Reinforced Jet	16
+Aura Rapid Cooldown XV	Quality Vigent Claw	16
+Aura Rapid Cooldown XV	Millesaur Larynx	16
+Aura Rapid Cooldown XV	Foucaultium	4
+Aura Rapid Cooldown XX	Reinforced Jet	32
+Aura Rapid Cooldown XX	Quality Vigent Claw	32
+Aura Rapid Cooldown XX	Millesaur Larynx	32
+Aura Rapid Cooldown XX	Bonjelium	8
+Aura: Refuel I	Energy Tube	1
+Aura: Refuel I	Arc Sand Ore	1
+Aura: Refuel V	Energy Tube	2
+Aura: Refuel V	Lionbone Bort	1
+Aura: Refuel X	Energy Tube	3
+Aura: Refuel X	Enduron Lead	1
+Aura: Refuel XV	Energy Tube	4
+Aura: Refuel XV	Boiled-Egg Ore	1
+Aura: Refuel XX	Energy Tube	5
+Aura: Refuel XX	Marine Rutile	1
+Arts: Gain TP I	White Mortifole Feather	1
+Arts: Gain TP I	Ornate Insidia Claw	1
+Arts: Gain TP I	Blue Fungi	1
+Arts: Gain TP I	White Cometite	1
+Arts: Gain TP V	White Mortifole Feather	2
+Arts: Gain TP V	Ornate Insidia Claw	2
+Arts: Gain TP V	Blue Fungi	2
+Arts: Gain TP V	Dawnstone	1
+Arts: Gain TP X	White Mortifole Feather	8
+Arts: Gain TP X	Aeviter Star Wing	8
+Arts: Gain TP X	Red Vigent Rock Scalp	8
+Arts: Gain TP X	Everfreeze Ore	2
+Extend Blaze I	Arc Sand Ore	1
+Arts: Gain TP XV	White Mortifole Feather	16
+Arts: Gain TP XV	Aeviter Star Wing	16
+Arts: Gain TP XV	Red Vigent Rock Scalp	16
+Arts: Gain TP XV	Foucaultium	4
+Arts: Gain TP XX	White Mortifole Feather	32
+Arts: Gain TP XX	Aeviter Star Wing	32
+Arts: Gain TP XX	Red Vigent Rock Scalp	32
+Arts: Gain TP XX	Bonjelium	8
+Arts: Recover HP I	Melon Oil	1
+Arts: Recover HP I	Silver Blatta Wing	1
+Arts: Recover HP I	Pristine Insect Jaw	1
+Arts: Recover HP I	White Cometite	1
+Arts: Recover HP V	Melon Oil	2
+Arts: Recover HP V	Silver Blatta Wing	2
+Arts: Recover HP V	Pristine Insect Jaw	2
+Arts: Recover HP V	Dawnstone	1
+Arts: Recover HP X	Melon Oil	8
+Arts: Recover HP X	Large Lophid Liver	8
+Arts: Recover HP X	Virago Blood Sweat	8
+Arts: Recover HP X	Everfreeze Ore	2
+Arts: Recover HP XV	Melon Oil	16
+Arts: Recover HP XV	Large Lophid Liver	16
+Arts: Recover HP XV	Virago Blood Sweat	16
+Arts: Recover HP XV	Foucaultium	4
+Arts: Recover HP XX	Melon Oil	32
+Arts: Recover HP XX	Large Lophid Liver	32
+Arts: Recover HP XX	Virago Blood Sweat	32
+Arts: Recover HP XX	Bonjelium	8
+Secondary CD Reducer I	Advanced Jet	1
+Secondary CD Reducer I	Brilliant Murra Liquid	1
+Secondary CD Reducer I	Quality Shaft	1
+Secondary CD Reducer I	White Cometite	1
+Secondary CD Reducer V	Advanced Jet	2
+Secondary CD Reducer V	Brilliant Visigel Liquid	2
+Secondary CD Reducer V	Quality Shaft	2
+Secondary CD Reducer V	Dawnstone	1
+Secondary CD Reducer X	Liceor Sun Bead	3
+Secondary CD Reducer X	Coconut Oil	3
+Secondary CD Reducer X	Yggralith Recovery Horn	3
+Secondary CD Reducer X	Everfreeze Ore	2
+Secondary CD Reducer XV	Liceor Sun Bead	6
+Secondary CD Reducer XV	Coconut Oil	6
+Secondary CD Reducer XV	Yggralith Recovery Horn	6
+Secondary CD Reducer XV	Foucaultium	4
+Secondary CD Reducer XX	Liceor Sun Bead	12
+Secondary CD Reducer XX	Coconut Oil	12
+Secondary CD Reducer XX	Yggralith Recovery Horn	12
+Secondary CD Reducer XX	Bonjelium	16
+Extend Taunt I	Small Insect Leg	1
+Extend Taunt I	Arc Sand Ore	1
+Extend Taunt V	Small Insect Leg	2
+Extend Taunt V	Lionbone Bort	1
+Extend Taunt X	Small Insect Leg	3
+Extend Taunt X	Enduron Lead	1
+Extend Taunt XV	Small Insect Leg	4
+Extend Taunt XV	Boiled-Egg Ore	1
+Extend Taunt XX	Small Insect Leg	5
+Extend Taunt XX	Marine Rutile	1
+Extend Control I	Taut Leather	1
+Extend Control I	Arc Sand Ore	1
+Extend Control V	Taut Leather	2
+Extend Control V	Lionbone Bort	1
+Extend Control X	Taut Leather	3
+Extend Control X	Enduron Lead	1
+Extend Control XV	Taut Leather	4
+Extend Control XV	Boiled-Egg Ore	1
+Extend Control XX	Taut Leather	5
+Extend Control XX	Marine Rutile	1
+Extend Virus I	Small Insect Leg	1
+Extend Virus I	Arc Sand Ore	1
+Extend Virus V	Small Insect Leg	2
+Extend Virus V	Lionbone Bort	1
+Extend Virus X	Small Insect Leg	3
+Extend Virus X	Enduron Lead	1
+Extend Virus XV	Small Insect Leg	4
+Extend Virus XV	Boiled-Egg Ore	1
+Extend Virus XX	Small Insect Leg	5
+Extend Virus XX	Marine Rutile	1
+Extend Blackout I	Ovis Polishing Stone	1
+Extend Blackout I	Arc Sand Ore	1
+Extend Blackout V	Ovis Polishing Stone	2
+Extend Blackout V	Lionbone Bort	1
+Extend Blackout X	Ovis Polishing Stone	3
+Extend Blackout X	Enduron Lead	1
+Extend Blackout XV	Ovis Polishing Stone	4
+Extend Blackout XV	Boiled-Egg Ore	1
+Extend Blackout XX	Ovis Polishing Stone	5
+Extend Blackout XX	Marine Rutile	1
+Extend Fatigue I	Broken Pincer	1
+Extend Fatigue I	Arc Sand Ore	1
+Extend Fatigue V	Broken Pincer	2
+Extend Fatigue V	Lionbone Bort	1
+Extend Fatigue X	Broken Pincer	3
+Extend Fatigue X	Enduron Lead	1
+Extend Fatigue XV	Broken Pincer	4
+Extend Fatigue XV	Boiled-Egg Ore	1
+Extend Fatigue XX	Broken Pincer	5
+Extend Fatigue XX	Marine Rutile	1
+Extend Slow Arts I	Supple Leather	1
+Extend Slow Arts I	Arc Sand Ore	1
+Extend Slow Arts V	Supple Leather	2
+Extend Slow Arts V	Lionbone Bort	1
+Extend Slow Arts X	Supple Leather	3
+Extend Slow Arts X	Enduron Lead	1
+Extend Slow Arts XV	Supple Leather	4
+Extend Slow Arts XV	Boiled-Egg Ore	1
+Extend Slow Arts XX	Supple Leather	5
+Extend Slow Arts XX	Marine Rutile	1
+Extend Debuff Res Down I	Lovely Pom Pom	1
+Extend Debuff Res Down I	Arc Sand Ore	1
+Extend Debuff Res Down V	Lovely Pom Pom	2
+Extend Debuff Res Down V	Lionbone Bort	1
+Extend Debuff Res Down X	Lovely Pom Pom	3
+Extend Debuff Res Down X	Enduron Lead	1
+Extend Debuff Res Down XV	Lovely Pom Pom	4
+Extend Debuff Res Down XV	Boiled-Egg Ore	1
+Extend Debuff Res Down XX	Lovely Pom Pom	5
+Extend Debuff Res Down XX	Marine Rutile	1
+Extend Blaze V	Poisonous Needle	2
+Extend Blaze V	Lionbone Bort	1
+Extend Blaze X	Poisonous Needle	3
+Extend Blaze X	Enduron Lead	1
+Extend Blaze XV	Poisonous Needle	4
+Extend Blaze XV	Boiled-Egg Ore	1
+Extend Blaze XX	Poisonous Needle	5
+Extend Blaze XX	Marine Rutile	1
+Extend Shock I	Vesper Fang	1
+Extend Shock I	Arc Sand Ore	1
+Extend Shock V	Vesper Fang	2
+Extend Shock V	Lionbone Bort	1
+Extend Shock X	Vesper Fang	3
+Extend Shock X	Enduron Lead	1
+Extend Shock XV	Vesper Fang	4
+Extend Shock XV	Boiled-Egg Ore	1
+Extend Shock XX	Vesper Fang	5
+Extend Shock XX	Marine Rutile	1
+Extend Physical Res Down I	Juicy Wild Meat	1
+Extend Physical Res Down I	Arc Sand Ore	1
+Extend Physical Res Down V	Juicy Wild Meat	2
+Extend Physical Res Down V	Lionbone Bort	1
+Extend Physical Res Down X	Juicy Wild Meat	3
+Extend Physical Res Down X	Enduron Lead	1
+Extend Physical Res Down XV	Juicy Wild Meat	4
+Extend Physical Res Down XV	Boiled-Egg Ore	1
+Extend Physical Res Down XX	Juicy Wild Meat	5
+Extend Physical Res Down XX	Marine Rutile	1
+Extend Beam Res Down I	Adsecula Straw	1
+Extend Beam Res Down I	Arc Sand Ore	1
+Extend Beam Res Down V	Adsecula Straw	2
+Extend Beam Res Down V	Lionbone Bort	1
+Extend Beam Res Down X	Adsecula Straw	3
+Extend Beam Res Down X	Enduron Lead	1
+Extend Beam Res Down XV	Adsecula Straw	4
+Extend Beam Res Down XV	Boiled-Egg Ore	1
+Extend Beam Res Down XX	Adsecula Straw	5
+Extend Beam Res Down XX	Marine Rutile	1
+Extend Ether Res Down I	Perforated Oar	1
+Extend Ether Res Down I	Arc Sand Ore	1
+Extend Ether Res Down V	Perforated Oar	2
+Extend Ether Res Down V	Lionbone Bort	1
+Extend Ether Res Down X	Perforated Oar	3
+Extend Ether Res Down X	Enduron Lead	1
+Extend Ether Res Down XV	Perforated Oar	4
+Extend Ether Res Down XV	Boiled-Egg Ore	1
+Extend Ether Res Down XX	Perforated Oar	5
+Extend Ether Res Down XX	Marine Rutile	1
+Extend Thermal Res Down I	Red Forfex Shell	1
+Extend Thermal Res Down I	Arc Sand Ore	1
+Extend Thermal Res Down V	Red Forfex Shell	2
+Extend Thermal Res Down V	Lionbone Bort	1
+Extend Thermal Res Down X	Red Forfex Shell	3
+Extend Thermal Res Down X	Enduron Lead	1
+Extend Thermal Res Down XV	Red Forfex Shell	4
+Extend Thermal Res Down XV	Boiled-Egg Ore	1
+Extend Thermal Res Down XX	Red Forfex Shell	5
+Extend Thermal Res Down XX	Marine Rutile	1
+Extend Electric Res Down I	Muddy Pelt	1
+Extend Electric Res Down I	Arc Sand Ore	1
+Extend Electric Res Down V	Muddy Pelt	2
+Extend Electric Res Down V	Lionbone Bort	1
+Extend Electric Res Down X	Muddy Pelt	3
+Extend Electric Res Down X	Enduron Lead	1
+Extend Electric Res Down XV	Muddy Pelt	4
+Extend Electric Res Down XV	Boiled-Egg Ore	1
+Extend Electric Res Down XX	Muddy Pelt	5
+Extend Electric Res Down XX	Marine Rutile	1
+Extend Gravity Res Down I	Black Blatta Wing	1
+Extend Gravity Res Down I	Arc Sand Ore	1
+Extend Gravity Res Down V	Black Blatta Wing	2
+Extend Gravity Res Down V	Lionbone Bort	1
+Extend Gravity Res Down X	Black Blatta Wing	3
+Extend Gravity Res Down X	Enduron Lead	1
+Extend Gravity Res Down XV	Black Blatta Wing	4
+Extend Gravity Res Down XV	Boiled-Egg Ore	1
+Extend Gravity Res Down XX	Black Blatta Wing	5
+Extend Gravity Res Down XX	Marine Rutile	1
+Opening Art: Damage Up I	Red Thallus Antenna	1
+Opening Art: Damage Up I	Monoceros Wing	1
+Opening Art: Damage Up I	Reinforced Thruster	1
+Opening Art: Damage Up I	White Cometite	1
+Opening Art: Damage Up V	Red Thallus Antenna	2
+Opening Art: Damage Up V	Monoceros Wing	2
+Opening Art: Damage Up V	Reinforced Thruster	2
+Opening Art: Damage Up V	Dawnstone	1
+Opening Art: Damage Up X	Red Thallus Antenna	3
+Opening Art: Damage Up X	Parasitic Capsule	3
+Opening Art: Damage Up X	Large Saw Tooth	3
+Opening Art: Damage Up X	Everfreeze Ore	1
+Opening Art: Damage Up XV	Red Thallus Antenna	4
+Opening Art: Damage Up XV	Parasitic Capsule	4
+Opening Art: Damage Up XV	Large Saw Tooth	4
+Opening Art: Damage Up XV	Foucaultium	1
+Opening Art: Damage Up XX	Red Thallus Antenna	5
+Opening Art: Damage Up XX	Parasitic Capsule	5
+Opening Art: Damage Up XX	Large Saw Tooth	5
+Opening Art: Damage Up XX	Bonjelium	1
+Melee Draw Surge I	Red Simius Mane	1
+Melee Draw Surge I	Green Simius Mane	1
+Melee Draw Surge I	Aurorite	1
+Melee Draw Surge V	Red Simius Mane	2
+Melee Draw Surge V	Green Simius Mane	2
+Melee Draw Surge V	Infernium	1
+Melee Draw Surge X	Red Simius Mane	3
+Melee Draw Surge X	Black Stabilizer	3
+Melee Draw Surge X	Cimmerian Cinnabar	1
+Melee Draw Surge XV	Red Simius Mane	4
+Melee Draw Surge XV	Black Stabilizer	4
+Melee Draw Surge XV	Ouroboros Crystal	1
+Melee Draw Surge XX	Red Simius Mane	5
+Melee Draw Surge XX	Black Stabilizer	5
+Melee Draw Surge XX	Parhelion Platinum	1
+Ranged Draw Surge I	Tectinsula Shell	1
+Ranged Draw Surge I	Mephite Ear Hair	1
+Ranged Draw Surge I	Aurorite	1
+Ranged Draw Surge V	Tectinsula Shell	2
+Ranged Draw Surge V	Mephite Ear Hair	2
+Ranged Draw Surge V	Infernium	1
+Ranged Draw Surge X	Tectinsula Shell	3
+Ranged Draw Surge X	Genuine Chamber	3
+Ranged Draw Surge X	Cimmerian Cinnabar	1
+Ranged Draw Surge XV	Tectinsula Shell	4
+Ranged Draw Surge XV	Genuine Chamber	4
+Ranged Draw Surge XV	Ouroboros Crystal	1
+Ranged Draw Surge XX	Tectinsula Shell	5
+Ranged Draw Surge XX	Genuine Chamber	5
+Ranged Draw Surge XX	Parhelion Platinum	1
+Art Draw Surge I	Chipped Talon	1
+Art Draw Surge I	Broken Antenna	1
+Art Draw Surge I	Aurorite	1
+Art Draw Surge V	Chipped Talon	2
+Art Draw Surge V	Broken Antenna	2
+Art Draw Surge V	Infernium	1
+Art Draw Surge X	Chipped Talon	3
+Art Draw Surge X	Broken Antenna	3
+Art Draw Surge X	Cimmerian Cinnabar	1
+Art Draw Surge XV	Chipped Talon	5
+Art Draw Surge XV	Turquoise Metal	1
+Art Draw Surge XV	Ouroboros Crystal	1
+Art Draw Surge XX	Chipped Talon	8
+Art Draw Surge XX	Turquoise Metal	2
+Art Draw Surge XX	Parhelion Platinum	1
+Danger Surge I	Opaque Membrane	1
+Danger Surge I	Filthy Wing	1
+Danger Surge I	Aurorite	1
+Danger Surge V	Opaque Membrane	2
+Danger Surge V	Filthy Wing	2
+Danger Surge V	Infernium	1
+Danger Surge X	Opaque Membrane	3
+Danger Surge X	Ceto Roe	3
+Danger Surge X	Cimmerian Cinnabar	1
+Danger Surge XV	Opaque Membrane	4
+Danger Surge XV	Ceto Roe	4
+Danger Surge XV	Ouroboros Crystal	1
+Danger Surge XX	Opaque Membrane	5
+Danger Surge XX	Ceto Roe	5
+Danger Surge XX	Parhelion Platinum	1
+High Danger Surge I	Saltat Horn	1
+High Danger Surge I	Mephite Stinkbag	1
+High Danger Surge I	Aurorite	1
+High Danger Surge V	Saltat Horn	2
+High Danger Surge V	Mephite Stinkbag	2
+High Danger Surge V	Infernium	1
+High Danger Surge X	Saltat Horn	3
+High Danger Surge X	Sparkling Purple Gem	3
+High Danger Surge X	Cimmerian Cinnabar	1
+High Danger Surge XV	Saltat Horn	4
+High Danger Surge XV	Sparkling Purple Gem	4
+High Danger Surge XV	Ouroboros Crystal	1
+High Danger Surge XX	Saltat Horn	5
+High Danger Surge XX	Sparkling Purple Gem	5
+High Danger Surge XX	Parhelion Platinum	1
+Incapacitation Surge I	Steel Unafulge Cell	1
+Incapacitation Surge I	Aprica Back Moss	1
+Incapacitation Surge I	Aurorite	1
+Incapacitation Surge V	Steel Unafulge Cell	2
+Incapacitation Surge V	Aprica Back Moss	2
+Incapacitation Surge V	Infernium	1
+Incapacitation Surge X	Steel Unafulge Cell	3
+Incapacitation Surge X	Sparkling Red Gem	3
+Incapacitation Surge X	Cimmerian Cinnabar	1
+Incapacitation Surge XV	Steel Unafulge Cell	4
+Incapacitation Surge XV	Sparkling Red Gem	4
+Incapacitation Surge XV	Ouroboros Crystal	1
+Incapacitation Surge XX	Steel Unafulge Cell	5
+Incapacitation Surge XX	Sparkling Red Gem	5
+Incapacitation Surge XX	Parhelion Platinum	1
+Critical Surge I	Unafulge Numbing Toxin	1
+Critical Surge I	Tectinsula Back Moss	1
+Critical Surge I	Aurorite	1
+Critical Surge V	Unafulge Numbing Toxin	2
+Critical Surge V	Tectinsula Back Moss	2
+Critical Surge V	Infernium	1
+Critical Surge X	Unafulge Numbing Toxin	3
+Critical Surge X	White Yggralith Scale	3
+Critical Surge X	Cimmerian Cinnabar	1
+Critical Surge XV	Unafulge Numbing Toxin	4
+Critical Surge XV	White Yggralith Scale	4
+Critical Surge XV	Ouroboros Crystal	1
+Critical Surge XX	Unafulge Numbing Toxin	5
+Critical Surge XX	White Yggralith Scale	5
+Critical Surge XX	Parhelion Platinum	1
+Crush Surge I	Robust Evello Horn	1
+Crush Surge I	Insidia Mohawk	1
+Crush Surge I	Aurorite	1
+Crush Surge V	Robust Evello Horn	2
+Crush Surge V	Insidia Mohawk	2
+Crush Surge V	Infernium	1
+Crush Surge X	Robust Evello Horn	3
+Crush Surge X	Developed Balaena Fat	3
+Crush Surge X	Cimmerian Cinnabar	1
+Crush Surge XV	Robust Evello Horn	4
+Crush Surge XV	Developed Balaena Fat	4
+Crush Surge XV	Ouroboros Crystal	1
+Crush Surge XX	Robust Evello Horn	5
+Crush Surge XX	Developed Balaena Fat	5
+Crush Surge XX	Parhelion Platinum	1
+Underdog Surge I	Sticky Scirpo Silk	1
+Underdog Surge I	Stripped Plating	1
+Underdog Surge I	Aurorite	1
+Underdog Surge V	Sticky Scirpo Silk	2
+Underdog Surge V	Stripped Plating	2
+Underdog Surge V	Infernium	1
+Underdog Surge X	Sticky Scirpo Silk	3
+Underdog Surge X	Black Yggralith Scale	3
+Underdog Surge X	Cimmerian Cinnabar	1
+Underdog Surge XV	Sticky Scirpo Silk	4
+Underdog Surge XV	Black Yggralith Scale	4
+Underdog Surge XV	Ouroboros Crystal	1
+Underdog Surge XX	Sticky Scirpo Silk	5
+Underdog Surge XX	Black Yggralith Scale	5
+Underdog Surge XX	Parhelion Platinum	1
+Artful Execution Surge I	Bone-In Thigh Meat	1
+Artful Execution Surge I	Evergreen Aprica Antlers	1
+Artful Execution Surge I	Aurorite	1
+Artful Execution Surge V	Bone-In Thigh Meat	2
+Artful Execution Surge V	Evergreen Aprica Antlers	2
+Artful Execution Surge V	Infernium	1
+Artful Execution Surge X	Bone-In Thigh Meat	3
+Artful Execution Surge X	Sparkling Blue Gem	3
+Artful Execution Surge X	Cimmerian Cinnabar	1
+Artful Execution Surge XV	Bone-In Thigh Meat	4
+Artful Execution Surge XV	Sparkling Blue Gem	4
+Artful Execution Surge XV	Ouroboros Crystal	1
+Artful Execution Surge XX	Bone-In Thigh Meat	5
+Artful Execution Surge XX	Sparkling Blue Gem	5
+Artful Execution Surge XX	Parhelion Platinum	1
+Aura Surge I	Mortifole Pollen	1
+Aura Surge I	Simius Snack Stash	1
+Aura Surge I	Aurorite	1
+Aura Surge V	Mortifole Pollen	2
+Aura Surge V	Simius Snack Stash	2
+Aura Surge V	Infernium	1
+Aura Surge X	Mortifole Pollen	3
+Aura Surge X	Simius Snack Stash	3
+Aura Surge X	Cimmerian Cinnabar	1
+Aura Surge XV	Mortifole Pollen	5
+Aura Surge XV	Amethyst Metal	1
+Aura Surge XV	Ouroboros Crystal	1
+Aura Surge XX	Mortifole Pollen	8
+Aura Surge XX	Amethyst Metal	2
+Aura Surge XX	Parhelion Platinum	1
+Overdrive Surge I	Luminescent Antenna	1
+Overdrive Surge I	Fine Aprica Wood	1
+Overdrive Surge I	Aurorite	1
+Overdrive Surge V	Luminescent Antenna	2
+Overdrive Surge V	Fine Aprica Wood	2
+Overdrive Surge V	Infernium	1
+Overdrive Surge X	Luminescent Antenna	3
+Overdrive Surge X	Fine Aprica Wood	3
+Overdrive Surge X	Cimmerian Cinnabar	1
+Overdrive Surge XV	Luminescent Antenna	5
+Overdrive Surge XV	Orichalcum Metal	1
+Overdrive Surge XV	Ouroboros Crystal	1
+Overdrive Surge XX	Luminescent Antenna	8
+Overdrive Surge XX	Orichalcum Metal	2
+Overdrive Surge XX	Parhelion Platinum	1
+Reinvigorate I	Reinforced Thruster	1
+Reinvigorate I	Arc Sand Ore	1
+Reinvigorate V	Reinforced Thruster	2
+Reinvigorate V	Lionbone Bort	1
+Reinvigorate X	Reinforced Thruster	3
+Reinvigorate X	Enduron Lead	1
+Reinvigorate XV	Reinforced Thruster	4
+Reinvigorate XV	Boiled-Egg Ore	1
+Reinvigorate XX	Reinforced Thruster	5
+Reinvigorate XX	Marine Rutile	1
+EXP Boost I	Golden Jewel	1
+EXP Boost I	Shiny Mortifole Seed	1
+EXP Boost I	Aurorite	1
+EXP Boost V	Golden Jewel	2
+EXP Boost V	Shiny Mortifole Seed	2
+EXP Boost V	Infernium	1
+EXP Boost X	Golden Jewel	3
+EXP Boost X	Giant Jade Pearl	3
+EXP Boost X	Cimmerian Cinnabar	1
+EXP Boost XV	Golden Jewel	4
+EXP Boost XV	Giant Jade Pearl	4
+EXP Boost XV	Ouroboros Crystal	1
+EXP Boost XX	Golden Jewel	5
+EXP Boost XX	Giant Jade Pearl	5
+EXP Boost XX	Parhelion Platinum	1
+Visual Cloaking I	White Mirrorglass	1
+Visual Cloaking I	Glossy Saltat Fan	1
+Visual Cloaking I	Aurorite	1
+Visual Cloaking V	White Mirrorglass	2
+Visual Cloaking V	Glossy Saltat Fan	2
+Visual Cloaking V	Infernium	1
+Visual Cloaking X	White Mirrorglass	3
+Visual Cloaking X	Luminescent Tail	3
+Visual Cloaking X	Cimmerian Cinnabar	1
+Visual Cloaking XV	White Mirrorglass	4
+Visual Cloaking XV	Luminescent Tail	4
+Visual Cloaking XV	Ouroboros Crystal	1
+Visual Cloaking XX	White Mirrorglass	5
+Visual Cloaking XX	Luminescent Tail	5
+Visual Cloaking XX	Parhelion Platinum	1
+Aural Cloaking I	Lightweight Pelt	1
+Aural Cloaking I	Evolved Insidia Claw	1
+Aural Cloaking I	Aurorite	1
+Aural Cloaking V	Lightweight Pelt	2
+Aural Cloaking V	Evolved Insidia Claw	2
+Aural Cloaking V	Infernium	1
+Aural Cloaking X	Lightweight Pelt	3
+Aural Cloaking X	Gray Shell	3
+Aural Cloaking X	Cimmerian Cinnabar	1
+Aural Cloaking XV	Lightweight Pelt	4
+Aural Cloaking XV	Gray Shell	4
+Aural Cloaking XV	Ouroboros Crystal	1
+Aural Cloaking XX	Lightweight Pelt	5
+Aural Cloaking XX	Gray Shell	5
+Aural Cloaking XX	Parhelion Platinum	1
+Appendage Crusher	Emerald Horn	1
+Appendage Crusher	Shed Germivore Scales	1
+Appendage Crusher	Mortifole Pollen	1
+Appendage Crusher	White Cometite	1
+Crush: Gain TP I	Pristine Insect Jaw	1
+Crush: Gain TP I	Oc-serv Western Crest	1
+Crush: Gain TP I	Vesper Fry	1
+Crush: Gain TP I	White Cometite	1
+Crush: Gain TP V	Pristine Insect Jaw	2
+Crush: Gain TP V	Oc-serv Western Crest	2
+Crush: Gain TP V	Vesper Fry	2
+Crush: Gain TP V	Dawnstone	1
+Crush: Gain TP X	Pristine Insect Jaw	3
+Crush: Gain TP X	Golden Petramand Silk	3
+Crush: Gain TP X	Red Scintimure Tentacle	3
+Crush: Gain TP X	Everfreeze Ore	1
+Crush: Gain TP XV	Pristine Insect Jaw	4
+Crush: Gain TP XV	Golden Petramand Silk	4
+Crush: Gain TP XV	Red Scintimure Tentacle	4
+Crush: Gain TP XV	Foucaultium	1
+Crush: Gain TP XX	Pristine Insect Jaw	5
+Crush: Gain TP XX	Golden Petramand Silk	5
+Crush: Gain TP XX	Red Scintimure Tentacle	5
+Crush: Gain TP XX	Bonjelium	1
+Ranged Appendage Damage I	Sapphire Horn	1
+Ranged Appendage Damage I	Monoceros Hoof Hook	1
+Ranged Appendage Damage I	Cracked Claw	1
+Ranged Appendage Damage I	White Cometite	1
+Ranged Appendage Damage V	Sapphire Horn	2
+Ranged Appendage Damage V	Monoceros Hoof Hook	2
+Ranged Appendage Damage V	Cracked Claw	2
+Ranged Appendage Damage V	Dawnstone	1
+Ranged Appendage Damage X	Sapphire Horn	3
+Ranged Appendage Damage X	Malevolent Petramand Silk	3
+Ranged Appendage Damage X	Brown Monoceros Horn	3
+Ranged Appendage Damage X	Everfreeze Ore	1
+Ranged Appendage Damage XV	Sapphire Horn	4
+Ranged Appendage Damage XV	Malevolent Petramand Silk	4
+Ranged Appendage Damage XV	Brown Monoceros Horn	4
+Ranged Appendage Damage XV	Foucaultium	1
+Ranged Appendage Damage XX	Sapphire Horn	5
+Ranged Appendage Damage XX	Malevolent Petramand Silk	5
+Ranged Appendage Damage XX	Brown Monoceros Horn	5
+Ranged Appendage Damage XX	Bonjelium	1
+Terrain Damage Reducer I	Fluffy Tuft	1
+Terrain Damage Reducer I	Arc Sand Ore	1
+Terrain Damage Reducer V	Fluffy Tuft	2
+Terrain Damage Reducer V	Lionbone Bort	1
+Terrain Damage Reducer X	Fluffy Tuft	3
+Terrain Damage Reducer X	Enduron Lead	1
+Terrain Damage Reducer XV	Fluffy Tuft	4
+Terrain Damage Reducer XV	Boiled-Egg Ore	1
+Terrain Damage Reducer XX	Fluffy Tuft	5
+Terrain Damage Reducer XX	Marine Rutile	1
+Antispike I	Adsecula Oil Drop	1
+Antispike I	Ebony Evello Egg	1
+Antispike I	Vesper Hair Clip	1
+Antispike I	White Cometite	1
+Antispike V	Adsecula Oil Drop	2
+Antispike V	Ebony Evello Egg	2
+Antispike V	Vesper Hair Clip	2
+Antispike V	Dawnstone	1
+Antispike X	Adsecula Oil Drop	3
+Antispike X	Lava Crystal	3
+Antispike X	Gularthian Flint	3
+Antispike X	Everfreeze Ore	1
+Antispike XV	Adsecula Oil Drop	4
+Antispike XV	Lava Crystal	4
+Antispike XV	Gularthian Flint	4
+Antispike XV	Foucaultium	1
+Antispike XX	Adsecula Oil Drop	5
+Antispike XX	Lava Crystal	5
+Antispike XX	Gularthian Flint	5
+Antispike XX	Bonjelium	1
+Resistance Reducer I	Grex Wisdom Tooth	1
+Resistance Reducer I	Green Puff	1
+Resistance Reducer I	Aurorite	1
+Resistance Reducer V	Grex Wisdom Tooth	2
+Resistance Reducer V	Green Puff	2
+Resistance Reducer V	Infernium	1
+Resistance Reducer X	Grex Wisdom Tooth	8
+Resistance Reducer X	Thick Millesaur Hide	8
+Resistance Reducer X	Cimmerian Cinnabar	2
+Resistance Reducer XV	Grex Wisdom Tooth	16
+Resistance Reducer XV	Thick Millesaur Hide	16
+Resistance Reducer XV	Ouroboros Crystal	4
+Resistance Reducer XX	Grex Wisdom Tooth	32
+Resistance Reducer XX	Thick Millesaur Hide	32
+Resistance Reducer XX	Parhelion Platinum	8
+Treasure Sensor I	Demonic Jewel	1
+Treasure Sensor I	Sky Jewel	1
+Treasure Sensor I	Dull Stone	1
+Treasure Sensor I	White Cometite	1
+Treasure Sensor V	Demonic Jewel	2
+Treasure Sensor V	Sky Jewel	2
+Treasure Sensor V	Dull Stone	2
+Treasure Sensor V	Dawnstone	1
+Treasure Sensor X	Demonic Jewel	8
+Treasure Sensor X	Shrad Eye	8
+Treasure Sensor X	Decrepit Wing	8
+Treasure Sensor X	Everfreeze Ore	2
+Treasure Sensor XV	Demonic Jewel	16
+Treasure Sensor XV	Shrad Eye	16
+Treasure Sensor XV	Decrepit Wing	16
+Treasure Sensor XV	Foucaultium	4
+Treasure Sensor XX	Demonic Jewel	32
+Treasure Sensor XX	Shrad Eye	32
+Treasure Sensor XX	Decrepit Wing	32
+Treasure Sensor XX	Bonjelium	8
+Untouchable Dash I	Terebra Water Grease	1
+Untouchable Dash I	Arc Sand Ore	1
+Untouchable Dash V	Terebra Water Grease	2
+Untouchable Dash V	Lionbone Bort	1
+Untouchable Dash X	Terebra Water Grease	3
+Untouchable Dash X	Enduron Lead	1
+Untouchable Dash XV	Terebra Water Grease	4
+Untouchable Dash XV	Boiled-Egg Ore	1
+Untouchable Dash XX	Terebra Water Grease	5
+Untouchable Dash XX	Marine Rutile	1
+Night Vision I	Ovis Polishing Stone	1
+Night Vision I	Arc Sand Ore	1
+Night Vision V	Ovis Polishing Stone	2
+Night Vision V	Lionbone Bort	1
+Night Vision X	Ovis Polishing Stone	3
+Night Vision X	Enduron Lead	1
+Night Vision XV	Ovis Polishing Stone	4
+Night Vision XV	Boiled-Egg Ore	1
+Night Vision XX	Ovis Polishing Stone	5
+Night Vision XX	Marine Rutile	1
+Focused Evasion I	Green Mortifole Feather	1
+Focused Evasion I	Oc-serv Northern Crest	1
+Focused Evasion I	Pristine Insect Leg	1
+Focused Evasion I	White Cometite	1
+Focused Evasion V	Green Mortifole Feather	2
+Focused Evasion V	Oc-serv Northern Crest	2
+Focused Evasion V	Pristine Insect Leg	2
+Focused Evasion V	Dawnstone	1
+Focused Evasion X	Green Mortifole Feather	4
+Focused Evasion X	Dirty Cloth	4
+Focused Evasion X	Giant Cavity	4
+Focused Evasion X	Everfreeze Ore	2
+Focused Evasion XV	Green Mortifole Feather	18
+Focused Evasion XV	Dirty Cloth	18
+Focused Evasion XV	Giant Cavity	18
+Focused Evasion XV	Foucaultium	6
+Focused Evasion XX	Green Mortifole Feather	36
+Focused Evasion XX	Dirty Cloth	36
+Focused Evasion XX	Giant Cavity	36
+Focused Evasion XX	Bonjelium	12
+Fog Screen	Vibrant Plume	1
+Fog Screen	Arc Sand Ore	1
+Rain Screen	Fine Duoguill Fishmeal	1
+Rain Screen	Arc Sand Ore	1
+Heavy Rain Screen	Medicinal Blatta Oil	1
+Heavy Rain Screen	Arc Sand Ore	1
+Heat Wave Screen	Worn Muscle Fiber	1
+Heat Wave Screen	Arc Sand Ore	1
+Sandstorm Screen	Alluring Papil Scales	1
+Sandstorm Screen	Arc Sand Ore	1
+Thunderstorm Screen	Transparent Membrane	1
+Thunderstorm Screen	Arc Sand Ore	1
+EM Storm Screen	Slender Horn	1
+EM Storm Screen	Arc Sand Ore	1
+Energy Mist Screen	Dried Seaweed Lichen	1
+Energy Mist Screen	Arc Sand Ore	1
+Rising Energy Mist Screen	Rough Skin	1
+Rising Energy Mist Screen	Arc Sand Ore	1
+Brimstone Rain Screen	Hard Backbone	1
+Brimstone Rain Screen	Arc Sand Ore	1
+Aurora Screen	Stiff Hair	1
+Aurora Screen	Arc Sand Ore	1
+Crimson Aurora Screen	Shiny Mortifole Seed	1
+Crimson Aurora Screen	Arc Sand Ore	1
+Spore Screen	Viscous Humour	1
+Spore Screen	Arc Sand Ore	1
+Meteor Shower Screen	Marbled Suid Fillet	1
+Meteor Shower Screen	Arc Sand Ore	1
+Weather Master I	Blue Forfex Shell	1
+Weather Master I	Auravis Courtship Feather	1
+Weather Master I	Aurorite	1
+Weather Master V	Blue Forfex Shell	2
+Weather Master V	Auravis Courtship Feather	2
+Weather Master V	Infernium	1
+Weather Master X	Blue Forfex Shell	3
+Weather Master X	Blue Vigent Rock Scalp	3
+Weather Master X	Cimmerian Cinnabar	1
+Weather Master XV	Blue Forfex Shell	4
+Weather Master XV	Blue Vigent Rock Scalp	4
+Weather Master XV	Ouroboros Crystal	1
+Weather Master XX	Blue Forfex Shell	5
+Weather Master XX	Blue Vigent Rock Scalp	5
+Weather Master XX	Parhelion Platinum	1
+SpecUp.HP-MAX I	Succulent Meat	1
+SpecUp.HP-MAX I	Arc Sand Ore	1
+SpecUp.HP-MAX V	Succulent Meat	2
+SpecUp.HP-MAX V	Lionbone Bort	1
+SpecUp.HP-MAX X	Succulent Meat	3
+SpecUp.HP-MAX X	Enduron Lead	1
+SpecUp.HP-MAX XV	Succulent Meat	4
+SpecUp.HP-MAX XV	Boiled-Egg Ore	1
+SpecUp.HP-MAX XX	Succulent Meat	5
+SpecUp.HP-MAX XX	Marine Rutile	1
+SpecUp.M-ACC I	Muscled Suid Bulge	1
+SpecUp.M-ACC I	Arc Sand Ore	1
+SpecUp.M-ACC V	Muscled Suid Bulge	2
+SpecUp.M-ACC V	Lionbone Bort	1
+SpecUp.M-ACC X	Muscled Suid Bulge	3
+SpecUp.M-ACC X	Enduron Lead	1
+SpecUp.M-ACC XV	Muscled Suid Bulge	4
+SpecUp.M-ACC XV	Boiled-Egg Ore	1
+SpecUp.M-ACC XX	Muscled Suid Bulge	5
+SpecUp.M-ACC XX	Marine Rutile	1
+SpecUp.R-ACC I	Appetizing Suid Tail	1
+SpecUp.R-ACC I	Arc Sand Ore	1
+SpecUp.R-ACC V	Appetizing Suid Tail	2
+SpecUp.R-ACC V	Lionbone Bort	1
+SpecUp.R-ACC X	Appetizing Suid Tail	3
+SpecUp.R-ACC X	Enduron Lead	1
+SpecUp.R-ACC XV	Appetizing Suid Tail	4
+SpecUp.R-ACC XV	Boiled-Egg Ore	1
+SpecUp.R-ACC XX	Appetizing Suid Tail	5
+SpecUp.R-ACC XX	Marine Rutile	1
+SpecUp.EVA I	Black Fog Deposits	1
+SpecUp.EVA I	Arc Sand Ore	1
+SpecUp.EVA V	Black Fog Deposits	2
+SpecUp.EVA V	Lionbone Bort	1
+SpecUp.EVA X	Cloudy Eyeball	8
+SpecUp.EVA X	Gerrid Shell	8
+SpecUp.EVA X	Jacul Waterfall Orb	8
+SpecUp.EVA X	Everfreeze Ore	2
+SpecUp.EVA XV	Cloudy Eyeball	16
+SpecUp.EVA XV	Gerrid Shell	16
+SpecUp.EVA XV	Jacul Waterfall Orb	16
+SpecUp.EVA XV	Foucaultium	4
+SpecUp.EVA XX	Cloudy Eyeball	32
+SpecUp.EVA XX	Gerrid Shell	32
+SpecUp.EVA XX	Jacul Waterfall Orb	32
+SpecUp.EVA XX	Bonjelium	8
+SpecUp.M-ATK I	Muscled Suid Bulge	1
+SpecUp.M-ATK I	Arc Sand Ore	1
+SpecUp.M-ATK V	Muscled Suid Bulge	2
+SpecUp.M-ATK V	Lionbone Bort	1
+SpecUp.M-ATK X	Blue Sylooth Brace	8
+SpecUp.M-ATK X	White Sylooth Brace	8
+SpecUp.M-ATK X	Muscled Cantor Bulge	8
+SpecUp.M-ATK X	Everfreeze Ore	2
+SpecUp.M-ATK XV	Blue Sylooth Brace	16
+SpecUp.M-ATK XV	White Sylooth Brace	16
+SpecUp.M-ATK XV	Muscled Cantor Bulge	16
+SpecUp.M-ATK XV	Foucaultium	4
+SpecUp.M-ATK XX	Blue Sylooth Brace	32
+SpecUp.M-ATK XX	White Sylooth Brace	32
+SpecUp.M-ATK XX	Muscled Cantor Bulge	32
+SpecUp.M-ATK XX	Bonjelium	8
+SpecUp.R-ATK I	Appetizing Suid Tail	1
+SpecUp.R-ATK I	Arc Sand Ore	1
+SpecUp.R-ATK V	Appetizing Suid Tail	2
+SpecUp.R-ATK V	Lionbone Bort	1
+SpecUp.R-ATK X	O.X. Unit	8
+SpecUp.R-ATK X	Eternal Arenatect Moss	8
+SpecUp.R-ATK X	Green Jacul Wing	8
+SpecUp.R-ATK X	Everfreeze Ore	2
+SpecUp.R-ATK XV	O.X. Unit	16
+SpecUp.R-ATK XV	Eternal Arenatect Moss	16
+SpecUp.R-ATK XV	Green Jacul Wing	16
+SpecUp.R-ATK XV	Foucaultium	4
+SpecUp.R-ATK XX	O.X. Unit	32
+SpecUp.R-ATK XX	Eternal Arenatect Moss	32
+SpecUp.R-ATK XX	Green Jacul Wing	32
+SpecUp.R-ATK XX	Bonjelium	8
+SpecUp.PTL I	Fleecy Fur	1
+SpecUp.PTL I	Arc Sand Ore	1
+SpecUp.PTL V	Fleecy Fur	2
+SpecUp.PTL V	Lionbone Bort	1
+SpecUp.PTL X	Distilled Sap	8
+SpecUp.PTL X	Blazing Gas Sac	8
+SpecUp.PTL X	Lepyx Moonstone	8
+SpecUp.PTL X	Everfreeze Ore	2
+SpecUp.PTL XV	Distilled Sap	16
+SpecUp.PTL XV	Blazing Gas Sac	16
+SpecUp.PTL XV	Lepyx Moonstone	16
+SpecUp.PTL XV	Foucaultium	4
+SpecUp.PTL XX	Distilled Sap	32
+SpecUp.PTL XX	Blazing Gas Sac	32
+SpecUp.PTL XX	Lepyx Moonstone	32
+SpecUp.PTL XX	Bonjelium	8
+SpecUp.APP-HP I	White Meaty Caecus Liver	1
+SpecUp.APP-HP I	Arc Sand Ore	1
+SpecUp.APP-HP V	White Meaty Caecus Liver	2
+SpecUp.APP-HP V	Lionbone Bort	1
+SpecUp.APP-HP X	White Meaty Caecus Liver	3
+SpecUp.APP-HP X	Enduron Lead	1
+SpecUp.APP-HP XV	White Meaty Caecus Liver	4
+SpecUp.APP-HP XV	Boiled-Egg Ore	1
+SpecUp.APP-HP XX	White Meaty Caecus Liver	5
+SpecUp.APP-HP XX	Marine Rutile	1
+Boost.HP-MAX I	Redwood Aprica Antlers	1
+Boost.HP-MAX I	Raw Meaty Caecus Liver	1
+Boost.HP-MAX I	Succulent Meat	1
+Boost.HP-MAX I	White Cometite	1
+Boost.HP-MAX V	Redwood Aprica Antlers	2
+Boost.HP-MAX V	Raw Meaty Caecus Liver	2
+Boost.HP-MAX V	Succulent Meat	2
+Boost.HP-MAX V	Dawnstone	1
+Boost.HP-MAX X	Redwood Aprica Antlers	8
+Boost.HP-MAX X	Golden Cantor Tooth	8
+Boost.HP-MAX X	Big Balaena Water Bag	8
+Boost.HP-MAX X	Everfreeze Ore	2
+Boost.HP-MAX XV	Redwood Aprica Antlers	16
+Boost.HP-MAX XV	Golden Cantor Tooth	16
+Boost.HP-MAX XV	Big Balaena Water Bag	16
+Boost.HP-MAX XV	Foucaultium	4
+Boost.HP-MAX XX	Redwood Aprica Antlers	32
+Boost.HP-MAX XX	Golden Cantor Tooth	32
+Boost.HP-MAX XX	Big Balaena Water Bag	32
+Boost.HP-MAX XX	Bonjelium	8
+Boost.M-ACC I	Refined Horn	1
+Boost.M-ACC I	Muscled Suid Bulge	1
+Boost.M-ACC I	Aurorite	1
+Boost.M-ACC V	Refined Horn	2
+Boost.M-ACC V	Muscled Suid Bulge	2
+Boost.M-ACC V	Infernium	1
+Boost.M-ACC X	Refined Horn	8
+Boost.M-ACC X	Black Steel Heavy Armor	8
+Boost.M-ACC X	Cimmerian Cinnabar	2
+Boost.M-ACC XV	Refined Horn	16
+Boost.M-ACC XV	Black Steel Heavy Armor	16
+Boost.M-ACC XV	Ouroboros Crystal	4
+Boost.M-ACC XX	Refined Horn	32
+Boost.M-ACC XX	Black Steel Heavy Armor	32
+Boost.M-ACC XX	Parhelion Platinum	8
+Boost.R-ACC I	Scratched Jewel	1
+Boost.R-ACC I	Appetizing Suid Tail	1
+Boost.R-ACC I	Aurorite	1
+Boost.R-ACC V	Scratched Jewel	2
+Boost.R-ACC V	Appetizing Suid Tail	2
+Boost.R-ACC V	Infernium	1
+Boost.R-ACC X	Scratched Jewel	8
+Boost.R-ACC X	Upgraded Spindle Part	8
+Boost.R-ACC X	Cimmerian Cinnabar	2
+Boost.R-ACC XV	Scratched Jewel	16
+Boost.R-ACC XV	Upgraded Spindle Part	16
+Boost.R-ACC XV	Ouroboros Crystal	4
+Boost.R-ACC XX	Scratched Jewel	32
+Boost.R-ACC XX	Upgraded Spindle Part	32
+Boost.R-ACC XX	Parhelion Platinum	8
+Boost.EVA I	Slimy Epithelium	1
+Boost.EVA I	Fal-swo Solar Crest	1
+Boost.EVA I	Black Fog Deposits	1
+Boost.EVA I	White Cometite	1
+Boost.EVA V	Slimy Epithelium	2
+Boost.EVA V	Fal-swo Solar Crest	2
+Boost.EVA V	Black Fog Deposits	2
+Boost.EVA V	Dawnstone	1
+Boost.EVA X	Slimy Epithelium	8
+Boost.EVA X	Brilliant Tersqual Liquid	8
+Boost.EVA X	Blinding Lophid Extract	8
+Boost.EVA X	Everfreeze Ore	2
+Boost.EVA XV	Slimy Epithelium	24
+Boost.EVA XV	Brilliant Tersqual Liquid	24
+Boost.EVA XV	Blinding Lophid Extract	24
+Boost.EVA XV	Foucaultium	8
+Boost.EVA XX	Slimy Epithelium	48
+Boost.EVA XX	Brilliant Tersqual Liquid	48
+Boost.EVA XX	Blinding Lophid Extract	48
+Boost.EVA XX	Bonjelium	16
+Boost.M-ATK I	Pure White Caro Tusk	1
+Boost.M-ATK I	Thick Falsaxum Horn	1
+Boost.M-ATK I	Muscled Suid Bulge	1
+Boost.M-ATK I	White Cometite	1
+Boost.M-ATK V	Pure White Caro Tusk	2
+Boost.M-ATK V	Thick Falsaxum Horn	2
+Boost.M-ATK V	Muscled Suid Bulge	2
+Boost.M-ATK V	Dawnstone	1
+Boost.M-ATK X	Pure White Caro Tusk	8
+Boost.M-ATK X	Standard Blade Module	8
+Boost.M-ATK X	Lone Purple Ictus Stinger	8
+Boost.M-ATK X	Everfreeze Ore	2
+Boost.M-ATK XV	Pure White Caro Tusk	24
+Boost.M-ATK XV	Standard Blade Module	24
+Boost.M-ATK XV	Lone Purple Ictus Stinger	24
+Boost.M-ATK XV	Foucaultium	8
+Boost.M-ATK XX	Pure White Caro Tusk	48
+Boost.M-ATK XX	Standard Blade Module	48
+Boost.M-ATK XX	Lone Purple Ictus Stinger	48
+Boost.M-ATK XX	Bonjelium	16
+Boost.R-ATK I	Beryl Aetrygon Horn	1
+Boost.R-ATK I	Pure White Caro Tusk	1
+Boost.R-ATK I	Appetizing Suid Tail	1
+Boost.R-ATK I	White Cometite	1
+Boost.R-ATK V	Beryl Aetrygon Horn	2
+Boost.R-ATK V	Pure White Caro Tusk	2
+Boost.R-ATK V	Appetizing Suid Tail	2
+Boost.R-ATK V	Dawnstone	1
+Boost.R-ATK X	Beryl Aetrygon Horn	8
+Boost.R-ATK X	Black Petramand Silk	8
+Boost.R-ATK X	Lone White Ictus Stinger	8
+Boost.R-ATK X	Everfreeze Ore	2
+Boost.R-ATK XV	Beryl Aetrygon Horn	24
+Boost.R-ATK XV	Black Petramand Silk	24
+Boost.R-ATK XV	Lone White Ictus Stinger	24
+Boost.R-ATK XV	Foucaultium	8
+Boost.R-ATK XX	Beryl Aetrygon Horn	48
+Boost.R-ATK XX	Black Petramand Silk	48
+Boost.R-ATK XX	Lone White Ictus Stinger	48
+Boost.R-ATK XX	Bonjelium	16
+Boost.PTL I	Nutritious Microbes	1
+Boost.PTL I	White Fungal Egg	1
+Boost.PTL I	Fleecy Fur	1
+Boost.PTL I	White Cometite	1
+Boost.PTL V	Nutritious Microbes	2
+Boost.PTL V	White Fungal Egg	2
+Boost.PTL V	Fleecy Fur	2
+Boost.PTL V	Dawnstone	1
+Boost.PTL X	Nutritious Microbes	4
+Boost.PTL X	Clear Gerrid Soup	4
+Boost.PTL X	Gularthian Everflame	4
+Boost.PTL X	Everfreeze Ore	2
+Boost.PTL XV	Nutritious Microbes	18
+Boost.PTL XV	Clear Gerrid Soup	18
+Boost.PTL XV	Gularthian Everflame	18
+Boost.PTL XV	Foucaultium	8
+Boost.PTL XX	Nutritious Microbes	36
+Boost.PTL XX	Clear Gerrid Soup	36
+Boost.PTL XX	Gularthian Everflame	36
+Boost.PTL XX	Bonjelium	16
+SpecUp.PHYS-RES I	Cinicula Shell	1
+SpecUp.PHYS-RES I	Falsaxum Shell	1
+SpecUp.PHYS-RES I	Suid Fillet	1
+SpecUp.PHYS-RES I	White Cometite	1
+SpecUp.PHYS-RES V	Cinicula Shell	2
+SpecUp.PHYS-RES V	Falsaxum Shell	2
+SpecUp.PHYS-RES V	Suid Fillet	2
+SpecUp.PHYS-RES V	Dawnstone	1
+SpecUp.PHYS-RES X	Cinicula Shell	3
+SpecUp.PHYS-RES X	Ictus Shell	3
+SpecUp.PHYS-RES X	Golden Blatta Wing	3
+SpecUp.PHYS-RES X	Everfreeze Ore	1
+SpecUp.PHYS-RES XV	Cinicula Shell	4
+SpecUp.PHYS-RES XV	Ictus Shell	4
+SpecUp.PHYS-RES XV	Golden Blatta Wing	4
+SpecUp.PHYS-RES XV	Foucaultium	1
+SpecUp.PHYS-RES XX	Cinicula Shell	5
+SpecUp.PHYS-RES XX	Ictus Shell	5
+SpecUp.PHYS-RES XX	Golden Blatta Wing	5
+SpecUp.PHYS-RES XX	Bonjelium	1
+SpecUp.BEAM-RES I	Lead Carapace	1
+SpecUp.BEAM-RES I	Ocher Stabilizer	1
+SpecUp.BEAM-RES I	Adsecula Gold Nugget	1
+SpecUp.BEAM-RES I	White Cometite	1
+SpecUp.BEAM-RES V	Lead Carapace	2
+SpecUp.BEAM-RES V	Ocher Stabilizer	2
+SpecUp.BEAM-RES V	Adsecula Gold Nugget	2
+SpecUp.BEAM-RES V	Dawnstone	1
+SpecUp.BEAM-RES X	Lead Carapace	3
+SpecUp.BEAM-RES X	Blue Milsaadi Hood	3
+SpecUp.BEAM-RES X	Pink Ceto Membrane	3
+SpecUp.BEAM-RES X	Everfreeze Ore	1
+SpecUp.BEAM-RES XV	Lead Carapace	4
+SpecUp.BEAM-RES XV	Blue Milsaadi Hood	4
+SpecUp.BEAM-RES XV	Pink Ceto Membrane	4
+SpecUp.BEAM-RES XV	Foucaultium	1
+SpecUp.BEAM-RES XX	Lead Carapace	5
+SpecUp.BEAM-RES XX	Blue Milsaadi Hood	5
+SpecUp.BEAM-RES XX	Pink Ceto Membrane	5
+SpecUp.BEAM-RES XX	Bonjelium	1
+SpecUp.ELEC-RES I	Squishy Cartilage	1
+SpecUp.ELEC-RES I	Stout Purgovent Extract	1
+SpecUp.ELEC-RES I	Lepyx Elastic Cell	1
+SpecUp.ELEC-RES I	White Cometite	1
+SpecUp.ELEC-RES V	Squishy Cartilage	2
+SpecUp.ELEC-RES V	Stout Purgovent Extract	2
+SpecUp.ELEC-RES V	Lepyx Elastic Cell	2
+SpecUp.ELEC-RES V	Dawnstone	1
+SpecUp.ELEC-RES X	Squishy Cartilage	3
+SpecUp.ELEC-RES X	Purple Scintimure Tentacle	3
+SpecUp.ELEC-RES X	Aeviter Membrane	3
+SpecUp.ELEC-RES X	Everfreeze Ore	1
+SpecUp.ELEC-RES XV	Squishy Cartilage	4
+SpecUp.ELEC-RES XV	Purple Scintimure Tentacle	4
+SpecUp.ELEC-RES XV	Aeviter Membrane	4
+SpecUp.ELEC-RES XV	Foucaultium	1
+SpecUp.ELEC-RES XX	Squishy Cartilage	5
+SpecUp.ELEC-RES XX	Purple Scintimure Tentacle	5
+SpecUp.ELEC-RES XX	Aeviter Membrane	5
+SpecUp.ELEC-RES XX	Bonjelium	1
+SpecUp.THERM-RES I	Shiny Copper Caro Plate	1
+SpecUp.THERM-RES I	Quo Pod	1
+SpecUp.THERM-RES I	Potamus Life Lung	1
+SpecUp.THERM-RES I	White Cometite	1
+SpecUp.THERM-RES V	Shiny Copper Caro Plate	2
+SpecUp.THERM-RES V	Quo Pod	2
+SpecUp.THERM-RES V	Potamus Life Lung	2
+SpecUp.THERM-RES V	Dawnstone	1
+SpecUp.THERM-RES X	Shiny Copper Caro Plate	3
+SpecUp.THERM-RES X	Scorching Giant Cells	3
+SpecUp.THERM-RES X	Tersqual Fire Pouch	3
+SpecUp.THERM-RES X	Everfreeze Ore	1
+SpecUp.THERM-RES XV	Shiny Copper Caro Plate	4
+SpecUp.THERM-RES XV	Scorching Giant Cells	4
+SpecUp.THERM-RES XV	Tersqual Fire Pouch	4
+SpecUp.THERM-RES XV	Foucaultium	1
+SpecUp.THERM-RES XX	Shiny Copper Caro Plate	5
+SpecUp.THERM-RES XX	Scorching Giant Cells	5
+SpecUp.THERM-RES XX	Tersqual Fire Pouch	5
+SpecUp.THERM-RES XX	Bonjelium	1
+SpecUp.ETHER-RES I	Opaque Mirror	1
+SpecUp.ETHER-RES I	Upgraded Sensor Part	1
+SpecUp.ETHER-RES I	Medicinal Blatta Oil	1
+SpecUp.ETHER-RES I	White Cometite	1
+SpecUp.ETHER-RES V	Opaque Mirror	2
+SpecUp.ETHER-RES V	Upgraded Sensor Part	2
+SpecUp.ETHER-RES V	Medicinal Blatta Oil	2
+SpecUp.ETHER-RES V	Dawnstone	1
+SpecUp.ETHER-RES X	Opaque Mirror	3
+SpecUp.ETHER-RES X	Red Milsaadi Hood	3
+SpecUp.ETHER-RES X	Gold Ceto Membrane	3
+SpecUp.ETHER-RES X	Everfreeze Ore	1
+SpecUp.ETHER-RES XV	Opaque Mirror	4
+SpecUp.ETHER-RES XV	Red Milsaadi Hood	4
+SpecUp.ETHER-RES XV	Gold Ceto Membrane	4
+SpecUp.ETHER-RES XV	Foucaultium	1
+SpecUp.ETHER-RES XX	Opaque Mirror	5
+SpecUp.ETHER-RES XX	Red Milsaadi Hood	5
+SpecUp.ETHER-RES XX	Gold Ceto Membrane	5
+SpecUp.ETHER-RES XX	Bonjelium	1
+SpecUp.GRAV-RES I	Large Hoof	1
+SpecUp.GRAV-RES I	Genuine Plate	1
+SpecUp.GRAV-RES I	Tricolored Ovis Meat	1
+SpecUp.GRAV-RES I	White Cometite	1
+SpecUp.GRAV-RES V	Large Hoof	2
+SpecUp.GRAV-RES V	Genuine Plate	2
+SpecUp.GRAV-RES V	Tricolored Ovis Meat	2
+SpecUp.GRAV-RES V	Dawnstone	1
+SpecUp.GRAV-RES X	Large Hoof	3
+SpecUp.GRAV-RES X	Oc-serv Southern Crest	3
+SpecUp.GRAV-RES X	Oc-serv Eastern Crest	3
+SpecUp.GRAV-RES X	Everfreeze Ore	1
+SpecUp.GRAV-RES XV	Large Hoof	4
+SpecUp.GRAV-RES XV	Oc-serv Southern Crest	4
+SpecUp.GRAV-RES XV	Oc-serv Eastern Crest	4
+SpecUp.GRAV-RES XV	Foucaultium	1
+SpecUp.GRAV-RES XX	Large Hoof	5
+SpecUp.GRAV-RES XX	Oc-serv Southern Crest	5
+SpecUp.GRAV-RES XX	Oc-serv Eastern Crest	5
+SpecUp.GRAV-RES XX	Bonjelium	1
+SpecUp.FUEL-MAX I	Shiny Black Caro Plate	1
+SpecUp.FUEL-MAX I	Arc Sand Ore	1
+SpecUp.FUEL-MAX V	Shiny Black Caro Plate	2
+SpecUp.FUEL-MAX V	Lionbone Bort	1
+SpecUp.FUEL-MAX X	Shiny Black Caro Plate	3
+SpecUp.FUEL-MAX X	Enduron Lead	1
+SpecUp.FUEL-MAX XV	Shiny Black Caro Plate	4
+SpecUp.FUEL-MAX XV	Boiled-Egg Ore	1
+SpecUp.FUEL-MAX XX	Shiny Black Caro Plate	5
+SpecUp.FUEL-MAX XX	Marine Rutile	1
+SpecUp.FUEL-COST I	Amber Cervus Antlers	1
+SpecUp.FUEL-COST I	Arc Sand Ore	1
+SpecUp.FUEL-COST V	Amber Cervus Antlers	2
+SpecUp.FUEL-COST V	Lionbone Bort	1
+SpecUp.FUEL-COST X	Amber Cervus Antlers	3
+SpecUp.FUEL-COST X	Enduron Lead	1
+SpecUp.FUEL-COST XV	Amber Cervus Antlers	4
+SpecUp.FUEL-COST XV	Boiled-Egg Ore	1
+SpecUp.FUEL-COST XX	Amber Cervus Antlers	5
+SpecUp.FUEL-COST XX	Marine Rutile	1
+SpecUp.FUEL-PARK I	Amber Aetrygon Horn	1
+SpecUp.FUEL-PARK I	Arc Sand Ore	1
+SpecUp.FUEL-PARK V	Amber Aetrygon Horn	2
+SpecUp.FUEL-PARK V	Lionbone Bort	1
+SpecUp.FUEL-PARK X	Amber Aetrygon Horn	3
+SpecUp.FUEL-PARK X	Enduron Lead	1
+SpecUp.FUEL-PARK XV	Amber Aetrygon Horn	4
+SpecUp.FUEL-PARK XV	Boiled-Egg Ore	1
+SpecUp.FUEL-PARK XX	Amber Aetrygon Horn	5
+SpecUp.FUEL-PARK XX	Marine Rutile	1
+SpecUp.FUEL-BIND I	Golden Gyrocompass	1
+SpecUp.FUEL-BIND I	Arc Sand Ore	1
+SpecUp.FUEL-BIND V	Golden Gyrocompass	2
+SpecUp.FUEL-BIND V	Lionbone Bort	1
+SpecUp.FUEL-BIND X	Golden Gyrocompass	3
+SpecUp.FUEL-BIND X	Enduron Lead	1
+SpecUp.FUEL-BIND XV	Golden Gyrocompass	4
+SpecUp.FUEL-BIND XV	Boiled-Egg Ore	1
+SpecUp.FUEL-BIND XX	Golden Gyrocompass	5
+SpecUp.FUEL-BIND XX	Marine Rutile	1
+SpecUp.FUEL-OD I	Scirpo Sulfuric Acid Sac	1
+SpecUp.FUEL-OD I	Arc Sand Ore	1
+SpecUp.FUEL-OD V	Scirpo Sulfuric Acid Sac	2
+SpecUp.FUEL-OD V	Lionbone Bort	1
+SpecUp.FUEL-OD X	Scirpo Sulfuric Acid Sac	3
+SpecUp.FUEL-OD X	Enduron Lead	1
+SpecUp.FUEL-OD XV	Scirpo Sulfuric Acid Sac	4
+SpecUp.FUEL-OD XV	Boiled-Egg Ore	1
+SpecUp.FUEL-OD XX	Scirpo Sulfuric Acid Sac	5
+SpecUp.FUEL-OD XX	Marine Rutile	1
+Custom.WP-ATK I	Refined Horn	1
+Custom.WP-ATK I	Insect Jaw	1
+Custom.WP-ATK I	Strong Purgovent Extract	1
+Custom.WP-ATK I	White Cometite	1
+Custom.WP-ATK V	Refined Horn	2
+Custom.WP-ATK V	Insect Jaw	2
+Custom.WP-ATK V	Strong Purgovent Extract	2
+Custom.WP-ATK V	Dawnstone	1
+Custom.WP-ATK X	Quality Giant Cells	4
+Custom.WP-ATK X	Visigel Poison Orb	4
+Custom.WP-ATK X	Silver Cantor Tooth	4
+Custom.WP-ATK X	Everfreeze Ore	2
+Custom.WP-ATK XV	Quality Giant Cells	8
+Custom.WP-ATK XV	Visigel Poison Orb	8
+Custom.WP-ATK XV	Silver Cantor Tooth	8
+Custom.WP-ATK XV	Foucaultium	4
+Custom.WP-ATK XX	Quality Giant Cells	16
+Custom.WP-ATK XX	Visigel Poison Orb	16
+Custom.WP-ATK XX	Silver Cantor Tooth	16
+Custom.WP-ATK XX	Bonjelium	8
+Custom.WP-STABLE I	Poisonous Needle	1
+Custom.WP-STABLE I	Arc Sand Ore	1
+Custom.WP-STABLE V	Poisonous Needle	2
+Custom.WP-STABLE V	Lionbone Bort	1
+Custom.WP-STABLE X	Poisonous Needle	3
+Custom.WP-STABLE X	Enduron Lead	1
+Custom.WP-STABLE XV	Poisonous Needle	4
+Custom.WP-STABLE XV	Boiled-Egg Ore	1
+Custom.WP-STABLE XX	Poisonous Needle	5
+Custom.WP-STABLE XX	Marine Rutile	1
+Custom.WP-DESTABLE I	Broken Pincer	1
+Custom.WP-DESTABLE I	Arc Sand Ore	1
+Custom.WP-DESTABLE V	Broken Pincer	2
+Custom.WP-DESTABLE V	Lionbone Bort	1
+Custom.WP-DESTABLE X	Broken Pincer	3
+Custom.WP-DESTABLE X	Enduron Lead	1
+Custom.WP-DESTABLE XV	Broken Pincer	4
+Custom.WP-DESTABLE XV	Boiled-Egg Ore	1
+Custom.WP-DESTABLE XX	Broken Pincer	5
+Custom.WP-DESTABLE XX	Marine Rutile	1
+Custom.WP-M-GP	Upgraded Coil	1
+Custom.WP-M-GP	Flaming Rock	1
+Custom.WP-M-GP	Crimson Sacrifole Feather	1
+Custom.WP-M-GP	White Cometite	1
+Custom.WP-R-GP	Genuine Frame	1
+Custom.WP-R-GP	Black Yggralith Nut	1
+Custom.WP-R-GP	Virago Alloy Plate	1
+Custom.WP-R-GP	White Cometite	1
+Custom.WP-SPEED I	Quality Fuse	1
+Custom.WP-SPEED I	Golden Simius Mane	1
+Custom.WP-SPEED I	Upgraded Shaft Part	1
+Custom.WP-SPEED I	White Cometite	1
+Custom.WP-SPEED V	Quality Fuse	2
+Custom.WP-SPEED V	Golden Simius Mane	2
+Custom.WP-SPEED V	Upgraded Shaft Part	2
+Custom.WP-SPEED V	Dawnstone	1
+Custom.WP-SPEED X	Quality Fuse	3
+Custom.WP-SPEED X	Spathi Glyph	3
+Custom.WP-SPEED X	White Yggralith Nut	3
+Custom.WP-SPEED X	Everfreeze Ore	2
+Custom.WP-SPEED XV	Quality Fuse	6
+Custom.WP-SPEED XV	Spathi Glyph	6
+Custom.WP-SPEED XV	White Yggralith Nut	6
+Custom.WP-SPEED XV	Foucaultium	4
+Custom.WP-SPEED XX	Quality Fuse	12
+Custom.WP-SPEED XX	Spathi Glyph	12
+Custom.WP-SPEED XX	White Yggralith Nut	12
+Custom.WP-SPEED XX	Bonjelium	16
+Custom.WP-R-RANGE I	Turba Straw	1
+Custom.WP-R-RANGE I	Used Cylinder	1
+Custom.WP-R-RANGE I	Aurorite	1
+Custom.WP-R-RANGE V	Turba Straw	2
+Custom.WP-R-RANGE V	Used Cylinder	2
+Custom.WP-R-RANGE V	Infernium	1
+Custom.WP-R-RANGE X	Turba Straw	3
+Custom.WP-R-RANGE X	Coronid Larynx	3
+Custom.WP-R-RANGE X	Cimmerian Cinnabar	1
+Custom.WP-R-RANGE XV	Turba Straw	4
+Custom.WP-R-RANGE XV	Coronid Larynx	4
+Custom.WP-R-RANGE XV	Ouroboros Crystal	1
+Custom.WP-R-RANGE XX	Turba Straw	5
+Custom.WP-R-RANGE XX	Coronid Larynx	5
+Custom.WP-R-RANGE XX	Parhelion Platinum	1
+Custom.WP-FUEL I	Hi-Spec Sensor Module	1
+Custom.WP-FUEL I	Arc Sand Ore	1
+Custom.WP-FUEL V	Hi-Spec Sensor Module	2
+Custom.WP-FUEL V	Lionbone Bort	1
+Custom.WP-FUEL X	Hi-Spec Sensor Module	8
+Custom.WP-FUEL X	Enduron Lead	2
+Custom.WP-FUEL XV	Hi-Spec Sensor Module	16
+Custom.WP-FUEL XV	Boiled-Egg Ore	4
+Custom.WP-FUEL XX	Hi-Spec Sensor Module	32
+Custom.WP-FUEL XX	Marine Rutile	8
+Resist.STAGGER I	Scirpo Silk	1
+Resist.STAGGER I	Arc Sand Ore	1
+Resist.STAGGER V	Scirpo Silk	2
+Resist.STAGGER V	Lionbone Bort	1
+Resist.STAGGER X	Scirpo Silk	3
+Resist.STAGGER X	Enduron Lead	1
+Resist.STAGGER XV	Scirpo Silk	4
+Resist.STAGGER XV	Boiled-Egg Ore	1
+Resist.STAGGER XX	Scirpo Silk	5
+Resist.STAGGER XX	Marine Rutile	1
+Resist.FLINCH I	Taut Leather	1
+Resist.FLINCH I	Arc Sand Ore	1
+Resist.FLINCH V	Taut Leather	2
+Resist.FLINCH V	Lionbone Bort	1
+Resist.FLINCH X	Taut Leather	3
+Resist.FLINCH X	Enduron Lead	1
+Resist.FLINCH XV	Taut Leather	4
+Resist.FLINCH XV	Boiled-Egg Ore	1
+Resist.FLINCH XX	Taut Leather	5
+Resist.FLINCH XX	Marine Rutile	1
+Resist.TOPPLE I	Auravis Croaking Bag	1
+Resist.TOPPLE I	Smooth Tail Fin	1
+Resist.TOPPLE I	Aurorite	1
+Resist.TOPPLE V	Auravis Croaking Bag	2
+Resist.TOPPLE V	Smooth Tail Fin	2
+Resist.TOPPLE V	Infernium	1
+Resist.TOPPLE X	Auravis Croaking Bag	3
+Resist.TOPPLE X	Thick Coronid Hide	3
+Resist.TOPPLE X	Cimmerian Cinnabar	1
+Resist.TOPPLE XV	Auravis Croaking Bag	4
+Resist.TOPPLE XV	Thick Coronid Hide	4
+Resist.TOPPLE XV	Ouroboros Crystal	1
+Resist.TOPPLE XX	Auravis Croaking Bag	5
+Resist.TOPPLE XX	Thick Coronid Hide	5
+Resist.TOPPLE XX	Parhelion Platinum	1
+Resist.KNOCKBACK I	Lovely Pom Pom	1
+Resist.KNOCKBACK I	Arc Sand Ore	1
+Resist.KNOCKBACK V	Lovely Pom Pom	2
+Resist.KNOCKBACK V	Lionbone Bort	1
+Resist.KNOCKBACK X	Lovely Pom Pom	3
+Resist.KNOCKBACK X	Enduron Lead	1
+Resist.KNOCKBACK XV	Lovely Pom Pom	4
+Resist.KNOCKBACK XV	Boiled-Egg Ore	1
+Resist.KNOCKBACK XX	Lovely Pom Pom	5
+Resist.KNOCKBACK XX	Marine Rutile	1
+Resist.LAUNCH I	Auravis Laughing Bag	1
+Resist.LAUNCH I	Caecus Crest	1
+Resist.LAUNCH I	Aurorite	1
+Resist.LAUNCH V	Auravis Laughing Bag	2
+Resist.LAUNCH V	Caecus Crest	2
+Resist.LAUNCH V	Infernium	1
+Resist.LAUNCH X	Auravis Laughing Bag	3
+Resist.LAUNCH X	Red Filiavent Tentacle	3
+Resist.LAUNCH X	Cimmerian Cinnabar	1
+Resist.LAUNCH XV	Auravis Laughing Bag	4
+Resist.LAUNCH XV	Red Filiavent Tentacle	4
+Resist.LAUNCH XV	Ouroboros Crystal	1
+Resist.LAUNCH XX	Auravis Laughing Bag	5
+Resist.LAUNCH XX	Red Filiavent Tentacle	5
+Resist.LAUNCH XX	Parhelion Platinum	1
+Resist.STUN I	Upgraded Jammer	1
+Resist.STUN I	Smelly Fish Meat	1
+Resist.STUN I	Aurorite	1
+Resist.STUN V	Upgraded Jammer	2
+Resist.STUN V	Smelly Fish Meat	2
+Resist.STUN V	Infernium	1
+Resist.STUN X	Upgraded Jammer	3
+Resist.STUN X	Black Filiavent Tentacle	3
+Resist.STUN X	Cimmerian Cinnabar	1
+Resist.STUN XV	Upgraded Jammer	4
+Resist.STUN XV	Black Filiavent Tentacle	4
+Resist.STUN XV	Ouroboros Crystal	1
+Resist.STUN XX	Upgraded Jammer	5
+Resist.STUN XX	Black Filiavent Tentacle	5
+Resist.STUN XX	Parhelion Platinum	1
+Resist.SLEEP I	Musky Nectar	1
+Resist.SLEEP I	Arc Sand Ore	1
+Resist.SLEEP V	Musky Nectar	2
+Resist.SLEEP V	Lionbone Bort	1
+Resist.SLEEP X	Musky Nectar	3
+Resist.SLEEP X	Enduron Lead	1
+Resist.SLEEP XV	Musky Nectar	4
+Resist.SLEEP XV	Boiled-Egg Ore	1
+Resist.SLEEP XX	Musky Nectar	5
+Resist.SLEEP XX	Marine Rutile	1
+Resist.TAUNT I	Puge Self-Destruct Mechanism	1
+Resist.TAUNT I	Arc Sand Ore	1
+Resist.TAUNT V	Puge Self-Destruct Mechanism	2
+Resist.TAUNT V	Lionbone Bort	1
+Resist.TAUNT X	Puge Self-Destruct Mechanism	3
+Resist.TAUNT X	Enduron Lead	1
+Resist.TAUNT XV	Puge Self-Destruct Mechanism	4
+Resist.TAUNT XV	Boiled-Egg Ore	1
+Resist.TAUNT XX	Puge Self-Destruct Mechanism	5
+Resist.TAUNT XX	Marine Rutile	1
+Resist.CONTROL I	Cracked Claw	1
+Resist.CONTROL I	Arc Sand Ore	1
+Resist.CONTROL V	Cracked Claw	2
+Resist.CONTROL V	Lionbone Bort	1
+Resist.CONTROL X	Cracked Claw	3
+Resist.CONTROL X	Enduron Lead	1
+Resist.CONTROL XV	Cracked Claw	4
+Resist.CONTROL XV	Boiled-Egg Ore	1
+Resist.CONTROL XX	Cracked Claw	5
+Resist.CONTROL XX	Marine Rutile	1
+Resist.VIRUS I	Lepyx Sunstone	1
+Resist.VIRUS I	Arc Sand Ore	1
+Resist.VIRUS V	Lepyx Sunstone	2
+Resist.VIRUS V	Lionbone Bort	1
+Resist.VIRUS X	Lepyx Sunstone	3
+Resist.VIRUS X	Enduron Lead	1
+Resist.VIRUS XV	Lepyx Sunstone	4
+Resist.VIRUS XV	Boiled-Egg Ore	1
+Resist.VIRUS XX	Lepyx Sunstone	5
+Resist.VIRUS XX	Marine Rutile	1
+Resist.BLACKOUT I	Dull Stone	1
+Resist.BLACKOUT I	Arc Sand Ore	1
+Resist.BLACKOUT V	Dull Stone	2
+Resist.BLACKOUT V	Lionbone Bort	1
+Resist.BLACKOUT X	Dull Stone	3
+Resist.BLACKOUT X	Enduron Lead	1
+Resist.BLACKOUT XV	Dull Stone	4
+Resist.BLACKOUT XV	Boiled-Egg Ore	1
+Resist.BLACKOUT XX	Dull Stone	5
+Resist.BLACKOUT XX	Marine Rutile	1
+Resist.FATIGUE I	Red Blatta Wing	1
+Resist.FATIGUE I	Arc Sand Ore	1
+Resist.FATIGUE V	Red Blatta Wing	2
+Resist.FATIGUE V	Lionbone Bort	1
+Resist.FATIGUE X	Red Blatta Wing	3
+Resist.FATIGUE X	Enduron Lead	1
+Resist.FATIGUE XV	Red Blatta Wing	4
+Resist.FATIGUE XV	Boiled-Egg Ore	1
+Resist.FATIGUE XX	Red Blatta Wing	5
+Resist.FATIGUE XX	Marine Rutile	1
+Resist.SLOW-ARTS I	Pristine Insect Leg	1
+Resist.SLOW-ARTS I	Arc Sand Ore	1
+Resist.SLOW-ARTS V	Pristine Insect Leg	2
+Resist.SLOW-ARTS V	Lionbone Bort	1
+Resist.SLOW-ARTS X	Pristine Insect Leg	3
+Resist.SLOW-ARTS X	Enduron Lead	1
+Resist.SLOW-ARTS XV	Pristine Insect Leg	4
+Resist.SLOW-ARTS XV	Boiled-Egg Ore	1
+Resist.SLOW-ARTS XX	Pristine Insect Leg	5
+Resist.SLOW-ARTS XX	Marine Rutile	1
+Resist.PHYS-DOWN I	Tough Humpsteak	1
+Resist.PHYS-DOWN I	Arc Sand Ore	1
+Resist.PHYS-DOWN V	Tough Humpsteak	2
+Resist.PHYS-DOWN V	Lionbone Bort	1
+Resist.PHYS-DOWN X	Tough Humpsteak	3
+Resist.PHYS-DOWN X	Enduron Lead	1
+Resist.PHYS-DOWN XV	Tough Humpsteak	4
+Resist.PHYS-DOWN XV	Boiled-Egg Ore	1
+Resist.PHYS-DOWN XX	Tough Humpsteak	5
+Resist.PHYS-DOWN XX	Marine Rutile	1
+Resist.BEAM-DOWN I	Duoguill Broth	1
+Resist.BEAM-DOWN I	Arc Sand Ore	1
+Resist.BEAM-DOWN V	Duoguill Broth	2
+Resist.BEAM-DOWN V	Lionbone Bort	1
+Resist.BEAM-DOWN X	Duoguill Broth	3
+Resist.BEAM-DOWN X	Enduron Lead	1
+Resist.BEAM-DOWN XV	Duoguill Broth	4
+Resist.BEAM-DOWN XV	Boiled-Egg Ore	1
+Resist.BEAM-DOWN XX	Duoguill Broth	5
+Resist.BEAM-DOWN XX	Marine Rutile	1
+Resist.THERM-DOWN I	Slimy Tongue	1
+Resist.THERM-DOWN I	Arc Sand Ore	1
+Resist.THERM-DOWN V	Slimy Tongue	2
+Resist.THERM-DOWN V	Lionbone Bort	1
+Resist.THERM-DOWN X	Slimy Tongue	3
+Resist.THERM-DOWN X	Enduron Lead	1
+Resist.THERM-DOWN XV	Slimy Tongue	4
+Resist.THERM-DOWN XV	Boiled-Egg Ore	1
+Resist.THERM-DOWN XX	Slimy Tongue	5
+Resist.THERM-DOWN XX	Marine Rutile	1
+Resist.ELEC-DOWN I	Blue Electrical Tentacle	1
+Resist.ELEC-DOWN I	Arc Sand Ore	1
+Resist.ELEC-DOWN V	Blue Electrical Tentacle	2
+Resist.ELEC-DOWN V	Lionbone Bort	1
+Resist.ELEC-DOWN X	Blue Electrical Tentacle	3
+Resist.ELEC-DOWN X	Enduron Lead	1
+Resist.ELEC-DOWN XV	Blue Electrical Tentacle	4
+Resist.ELEC-DOWN XV	Boiled-Egg Ore	1
+Resist.ELEC-DOWN XX	Blue Electrical Tentacle	5
+Resist.ELEC-DOWN XX	Marine Rutile	1
+Resist.ETHER-DOWN I	Papil Straw	1
+Resist.ETHER-DOWN I	Arc Sand Ore	1
+Resist.ETHER-DOWN V	Papil Straw	2
+Resist.ETHER-DOWN V	Lionbone Bort	1
+Resist.ETHER-DOWN X	Papil Straw	3
+Resist.ETHER-DOWN X	Enduron Lead	1
+Resist.ETHER-DOWN XV	Papil Straw	4
+Resist.ETHER-DOWN XV	Boiled-Egg Ore	1
+Resist.ETHER-DOWN XX	Papil Straw	5
+Resist.ETHER-DOWN XX	Marine Rutile	1
+Resist.GRAV-DOWN I	Lepyx Jaw Meat	1
+Resist.GRAV-DOWN I	Arc Sand Ore	1
+Resist.GRAV-DOWN V	Lepyx Jaw Meat	2
+Resist.GRAV-DOWN V	Lionbone Bort	1
+Resist.GRAV-DOWN X	Lepyx Jaw Meat	3
+Resist.GRAV-DOWN X	Enduron Lead	1
+Resist.GRAV-DOWN XV	Lepyx Jaw Meat	4
+Resist.GRAV-DOWN XV	Boiled-Egg Ore	1
+Resist.GRAV-DOWN XX	Lepyx Jaw Meat	5
+Resist.GRAV-DOWN XX	Marine Rutile	1
+Resist.TIME-BOMB I	Puge Counter	1
+Resist.TIME-BOMB I	Arc Sand Ore	1
+Resist.TIME-BOMB V	Puge Counter	2
+Resist.TIME-BOMB V	Lionbone Bort	1
+Resist.TIME-BOMB X	Puge Counter	3
+Resist.TIME-BOMB X	Enduron Lead	1
+Resist.TIME-BOMB XV	Puge Counter	4
+Resist.TIME-BOMB XV	Boiled-Egg Ore	1
+Resist.TIME-BOMB XX	Puge Counter	5
+Resist.TIME-BOMB XX	Marine Rutile	1
+Resist.DEBUFF-DOWN I	Forfex Miso	1
+Resist.DEBUFF-DOWN I	Arc Sand Ore	1
+Resist.DEBUFF-DOWN V	Forfex Miso	2
+Resist.DEBUFF-DOWN V	Lionbone Bort	1
+Resist.DEBUFF-DOWN X	Forfex Miso	3
+Resist.DEBUFF-DOWN X	Enduron Lead	1
+Resist.DEBUFF-DOWN XV	Forfex Miso	4
+Resist.DEBUFF-DOWN XV	Boiled-Egg Ore	1
+Resist.DEBUFF-DOWN XX	Forfex Miso	5
+Resist.DEBUFF-DOWN XX	Marine Rutile	1
+Resist.BLAZE I	Vesper Fry	1
+Resist.BLAZE I	Arc Sand Ore	1
+Resist.BLAZE V	Vesper Fry	2
+Resist.BLAZE V	Lionbone Bort	1
+Resist.BLAZE X	Vesper Fry	3
+Resist.BLAZE X	Enduron Lead	1
+Resist.BLAZE XV	Vesper Fry	4
+Resist.BLAZE XV	Boiled-Egg Ore	1
+Resist.BLAZE XX	Vesper Fry	5
+Resist.BLAZE XX	Marine Rutile	1
+Resist.SHOCK I	Fine Black Belt	1
+Resist.SHOCK I	Arc Sand Ore	1
+Resist.SHOCK V	Fine Black Belt	2
+Resist.SHOCK V	Lionbone Bort	1
+Resist.SHOCK X	Fine Black Belt	3
+Resist.SHOCK X	Enduron Lead	1
+Resist.SHOCK XV	Fine Black Belt	4
+Resist.SHOCK XV	Boiled-Egg Ore	1
+Resist.SHOCK XX	Fine Black Belt	5
+Resist.SHOCK XX	Marine Rutile	1
+CutTime.DEBUFF I	Sharp Vivohast Jaw	1
+CutTime.DEBUFF I	Arc Sand Ore	1
+CutTime.DEBUFF V	Sharp Vivohast Jaw	2
+CutTime.DEBUFF V	Lionbone Bort	1
+CutTime.DEBUFF X	Sharp Vivohast Jaw	3
+CutTime.DEBUFF X	Enduron Lead	1
+CutTime.DEBUFF XV	Sharp Vivohast Jaw	4
+CutTime.DEBUFF XV	Boiled-Egg Ore	1
+CutTime.DEBUFF XX	Sharp Vivohast Jaw	5
+CutTime.DEBUFF XX	Marine Rutile	1
+CriticalUp I	Oc-serv Hand	1
+CriticalUp I	Ziggian Long Antennae	1
+CriticalUp I	Forfex Miso	1
+CriticalUp I	White Cometite	1
+CriticalUp V	Oc-serv Hand	2
+CriticalUp V	Ziggian Long Antennae	2
+CriticalUp V	Forfex Miso	2
+CriticalUp V	Dawnstone	1
+CriticalUp X	Oc-serv Hand	3
+CriticalUp X	Lone Red Ictus Stinger	3
+CriticalUp X	Spiked Tail Fin	3
+CriticalUp X	Everfreeze Ore	1
+CriticalUp XV	Oc-serv Hand	4
+CriticalUp XV	Lone Red Ictus Stinger	4
+CriticalUp XV	Spiked Tail Fin	4
+CriticalUp XV	Foucaultium	1
+CriticalUp XX	Oc-serv Hand	5
+CriticalUp XX	Lone Red Ictus Stinger	5
+CriticalUp XX	Spiked Tail Fin	5
+CriticalUp XX	Bonjelium	1
+CritUp.THEROID I	Fleecy Fur	1
+CritUp.THEROID I	Arc Sand Ore	1
+CritUp.THEROID V	Fleecy Fur	2
+CritUp.THEROID V	Lionbone Bort	1
+CritUp.THEROID X	Fleecy Fur	3
+CritUp.THEROID X	Enduron Lead	1
+CritUp.THEROID XV	Fleecy Fur	4
+CritUp.THEROID XV	Boiled-Egg Ore	1
+CritUp.THEROID XX	Fleecy Fur	5
+CritUp.THEROID XX	Marine Rutile	1
+CritUp.INSECTOID I	Tatty Insect Wing	1
+CritUp.INSECTOID I	Arc Sand Ore	1
+CritUp.INSECTOID V	Tatty Insect Wing	2
+CritUp.INSECTOID V	Lionbone Bort	1
+CritUp.INSECTOID X	Tatty Insect Wing	3
+CritUp.INSECTOID X	Enduron Lead	1
+CritUp.INSECTOID XV	Tatty Insect Wing	4
+CritUp.INSECTOID XV	Boiled-Egg Ore	1
+CritUp.INSECTOID XX	Tatty Insect Wing	5
+CritUp.INSECTOID XX	Marine Rutile	1
+CritUp.PISCINOID I	Small Dorsal Fin	1
+CritUp.PISCINOID I	Arc Sand Ore	1
+CritUp.PISCINOID V	Small Dorsal Fin	2
+CritUp.PISCINOID V	Lionbone Bort	1
+CritUp.PISCINOID X	Small Dorsal Fin	3
+CritUp.PISCINOID X	Enduron Lead	1
+CritUp.PISCINOID XV	Small Dorsal Fin	4
+CritUp.PISCINOID XV	Boiled-Egg Ore	1
+CritUp.PISCINOID XX	Small Dorsal Fin	5
+CritUp.PISCINOID XX	Marine Rutile	1
+CritUp.HUMANOID I	Broken Buckle	1
+CritUp.HUMANOID I	Arc Sand Ore	1
+CritUp.HUMANOID V	Broken Buckle	2
+CritUp.HUMANOID V	Lionbone Bort	1
+CritUp.HUMANOID X	Broken Buckle	3
+CritUp.HUMANOID X	Enduron Lead	1
+CritUp.HUMANOID XV	Broken Buckle	4
+CritUp.HUMANOID XV	Boiled-Egg Ore	1
+CritUp.HUMANOID XX	Broken Buckle	5
+CritUp.HUMANOID XX	Marine Rutile	1
+CritUp.MECHANOID I	Standard Crank	1
+CritUp.MECHANOID I	Arc Sand Ore	1
+CritUp.MECHANOID V	Standard Crank	2
+CritUp.MECHANOID V	Lionbone Bort	1
+CritUp.MECHANOID X	Standard Crank	3
+CritUp.MECHANOID X	Enduron Lead	1
+CritUp.MECHANOID XV	Standard Crank	4
+CritUp.MECHANOID XV	Boiled-Egg Ore	1
+CritUp.MECHANOID XX	Standard Crank	5
+CritUp.MECHANOID XX	Marine Rutile	1
+CritUp.CHIMEROID I	Sticky Mucus	1
+CritUp.CHIMEROID I	Bloodied Face	1
+CritUp.CHIMEROID I	Fine White Belt	1
+CritUp.CHIMEROID I	White Cometite	1
+CritUp.CHIMEROID V	Sticky Mucus	2
+CritUp.CHIMEROID V	Bloodied Face	2
+CritUp.CHIMEROID V	Fine White Belt	2
+CritUp.CHIMEROID V	Dawnstone	1
+CritUp.CHIMEROID X	Sticky Mucus	3
+CritUp.CHIMEROID X	Black Colubrim Tail	3
+CritUp.CHIMEROID X	Brown Colubrim Tail	3
+CritUp.CHIMEROID X	Everfreeze Ore	1
+CritUp.CHIMEROID XV	Sticky Mucus	4
+CritUp.CHIMEROID XV	Black Colubrim Tail	4
+CritUp.CHIMEROID XV	Brown Colubrim Tail	4
+CritUp.CHIMEROID XV	Foucaultium	1
+CritUp.CHIMEROID XX	Sticky Mucus	5
+CritUp.CHIMEROID XX	Black Colubrim Tail	5
+CritUp.CHIMEROID XX	Brown Colubrim Tail	5
+CritUp.CHIMEROID XX	Bonjelium	1
+CritUp.ULTRAFAUNA I	Thick Cinicula Horn	1
+CritUp.ULTRAFAUNA I	Black Electrical Tentacle	1
+CritUp.ULTRAFAUNA I	Hot Potamus Juice	1
+CritUp.ULTRAFAUNA I	White Cometite	1
+CritUp.ULTRAFAUNA V	Thick Cinicula Horn	2
+CritUp.ULTRAFAUNA V	Black Electrical Tentacle	2
+CritUp.ULTRAFAUNA V	Hot Potamus Juice	2
+CritUp.ULTRAFAUNA V	Dawnstone	1
+CritUp.ULTRAFAUNA X	Thick Cinicula Horn	3
+CritUp.ULTRAFAUNA X	Reverse Colubrim Fin	3
+CritUp.ULTRAFAUNA X	Colubrim Eel Kebab	3
+CritUp.ULTRAFAUNA X	Everfreeze Ore	1
+CritUp.ULTRAFAUNA XV	Thick Cinicula Horn	4
+CritUp.ULTRAFAUNA XV	Reverse Colubrim Fin	4
+CritUp.ULTRAFAUNA XV	Colubrim Eel Kebab	4
+CritUp.ULTRAFAUNA XV	Foucaultium	1
+CritUp.ULTRAFAUNA XX	Thick Cinicula Horn	5
+CritUp.ULTRAFAUNA XX	Reverse Colubrim Fin	5
+CritUp.ULTRAFAUNA XX	Colubrim Eel Kebab	5
+CritUp.ULTRAFAUNA XX	Bonjelium	1
+Slayer.THEROID I	Fleecy Fur	1
+Slayer.THEROID I	Arc Sand Ore	1
+Slayer.THEROID V	Fleecy Fur	2
+Slayer.THEROID V	Lionbone Bort	1
+Slayer.THEROID X	Fleecy Fur	4
+Slayer.THEROID X	Enduron Lead	2
+Slayer.THEROID XV	Fleecy Fur	6
+Slayer.THEROID XV	Boiled-Egg Ore	3
+Slayer.THEROID XX	Fleecy Fur	12
+Slayer.THEROID XX	Marine Rutile	4
+Slayer.INSECTOID I	Tatty Insect Wing	1
+Slayer.INSECTOID I	Arc Sand Ore	1
+Slayer.INSECTOID V	Tatty Insect Wing	2
+Slayer.INSECTOID V	Lionbone Bort	1
+Slayer.INSECTOID X	Tatty Insect Wing	4
+Slayer.INSECTOID X	Enduron Lead	2
+Slayer.INSECTOID XV	Tatty Insect Wing	6
+Slayer.INSECTOID XV	Boiled-Egg Ore	3
+Slayer.INSECTOID XX	Tatty Insect Wing	12
+Slayer.INSECTOID XX	Marine Rutile	4
+Slayer.PISCINOID I	Small Dorsal Fin	1
+Slayer.PISCINOID I	Arc Sand Ore	1
+Slayer.PISCINOID V	Small Dorsal Fin	2
+Slayer.PISCINOID V	Lionbone Bort	1
+Slayer.PISCINOID X	Small Dorsal Fin	4
+Slayer.PISCINOID X	Enduron Lead	2
+Slayer.PISCINOID XV	Small Dorsal Fin	6
+Slayer.PISCINOID XV	Boiled-Egg Ore	3
+Slayer.PISCINOID XX	Small Dorsal Fin	12
+Slayer.PISCINOID XX	Marine Rutile	4
+Slayer.HUMANOID I	Broken Buckle	1
+Slayer.HUMANOID I	Arc Sand Ore	1
+Slayer.HUMANOID V	Broken Buckle	2
+Slayer.HUMANOID V	Lionbone Bort	1
+Slayer.HUMANOID X	Broken Buckle	4
+Slayer.HUMANOID X	Enduron Lead	2
+Slayer.HUMANOID XV	Broken Buckle	6
+Slayer.HUMANOID XV	Boiled-Egg Ore	3
+Slayer.HUMANOID XX	Broken Buckle	12
+Slayer.HUMANOID XX	Marine Rutile	4
+Slayer.MECHANOID I	Standard Crank	1
+Slayer.MECHANOID I	Arc Sand Ore	1
+Slayer.MECHANOID V	Standard Crank	2
+Slayer.MECHANOID V	Lionbone Bort	1
+Slayer.MECHANOID X	Standard Crank	4
+Slayer.MECHANOID X	Enduron Lead	2
+Slayer.MECHANOID XV	Standard Crank	6
+Slayer.MECHANOID XV	Boiled-Egg Ore	3
+Slayer.MECHANOID XX	Standard Crank	12
+Slayer.MECHANOID XX	Marine Rutile	4
+Slayer.CHIMEROID I	Sticky Mucus	1
+Slayer.CHIMEROID I	Bloodied Face	1
+Slayer.CHIMEROID I	Fine White Belt	1
+Slayer.CHIMEROID I	White Cometite	1
+Slayer.CHIMEROID V	Sticky Mucus	2
+Slayer.CHIMEROID V	Bloodied Face	2
+Slayer.CHIMEROID V	Fine White Belt	2
+Slayer.CHIMEROID V	Dawnstone	1
+Slayer.CHIMEROID X	Sticky Mucus	3
+Slayer.CHIMEROID X	Yellow Millepod Rock	3
+Slayer.CHIMEROID X	Millepod Ice Rock	3
+Slayer.CHIMEROID X	Everfreeze Ore	1
+Slayer.CHIMEROID XV	Sticky Mucus	4
+Slayer.CHIMEROID XV	Yellow Millepod Rock	4
+Slayer.CHIMEROID XV	Millepod Ice Rock	4
+Slayer.CHIMEROID XV	Foucaultium	1
+Slayer.CHIMEROID XX	Sticky Mucus	5
+Slayer.CHIMEROID XX	Yellow Millepod Rock	5
+Slayer.CHIMEROID XX	Millepod Ice Rock	5
+Slayer.CHIMEROID XX	Bonjelium	1
+Slayer.ULTRAFAUNA I	White Forfex Shell	1
+Slayer.ULTRAFAUNA I	Black Electrical Tentacle	1
+Slayer.ULTRAFAUNA I	Hot Potamus Juice	1
+Slayer.ULTRAFAUNA I	White Cometite	1
+Slayer.ULTRAFAUNA V	White Forfex Shell	2
+Slayer.ULTRAFAUNA V	Black Electrical Tentacle	2
+Slayer.ULTRAFAUNA V	Hot Potamus Juice	2
+Slayer.ULTRAFAUNA V	Dawnstone	1
+Slayer.ULTRAFAUNA X	White Forfex Shell	3
+Slayer.ULTRAFAUNA X	Reverse Millepod Fin	3
+Slayer.ULTRAFAUNA X	Deva Caladar's Red Ear	3
+Slayer.ULTRAFAUNA X	Everfreeze Ore	1
+Slayer.ULTRAFAUNA XV	White Forfex Shell	4
+Slayer.ULTRAFAUNA XV	Reverse Millepod Fin	4
+Slayer.ULTRAFAUNA XV	Deva Caladar's Red Ear	4
+Slayer.ULTRAFAUNA XV	Foucaultium	1
+Slayer.ULTRAFAUNA XX	White Forfex Shell	5
+Slayer.ULTRAFAUNA XX	Reverse Millepod Fin	5
+Slayer.ULTRAFAUNA XX	Deva Caladar's Red Ear	5
+Slayer.ULTRAFAUNA XX	Bonjelium	1
+AttributeDmg.PHYS I	Sharp Germivore Jaw	1
+AttributeDmg.PHYS I	Giant Falsaxum Jaw	1
+AttributeDmg.PHYS I	Aurorite	1
+AttributeDmg.PHYS V	Sharp Germivore Jaw	2
+AttributeDmg.PHYS V	Giant Falsaxum Jaw	2
+AttributeDmg.PHYS V	Infernium	1
+AttributeDmg.PHYS X	Experia Glyph	4
+AttributeDmg.PHYS X	Reinforced Frame	4
+AttributeDmg.PHYS X	Cimmerian Cinnabar	2
+AttributeDmg.PHYS XV	Experia Glyph	12
+AttributeDmg.PHYS XV	Reinforced Frame	12
+AttributeDmg.PHYS XV	Ouroboros Crystal	4
+AttributeDmg.PHYS XX	Experia Glyph	24
+AttributeDmg.PHYS XX	Reinforced Frame	24
+AttributeDmg.PHYS XX	Parhelion Platinum	8
+AttributeDmg.BEAM I	Quirky Liver	1
+AttributeDmg.BEAM I	Gold Monoceros Horn	1
+AttributeDmg.BEAM I	Aurorite	1
+AttributeDmg.BEAM V	Quirky Liver	2
+AttributeDmg.BEAM V	Gold Monoceros Horn	2
+AttributeDmg.BEAM V	Infernium	1
+AttributeDmg.BEAM X	Esse Glyph	4
+AttributeDmg.BEAM X	Advanced Lens	4
+AttributeDmg.BEAM X	Cimmerian Cinnabar	2
+AttributeDmg.BEAM XV	Esse Glyph	12
+AttributeDmg.BEAM XV	Advanced Lens	12
+AttributeDmg.BEAM XV	Ouroboros Crystal	4
+AttributeDmg.BEAM XX	Esse Glyph	24
+AttributeDmg.BEAM XX	Advanced Lens	24
+AttributeDmg.BEAM XX	Parhelion Platinum	8
+AttributeDmg.ETHER I	Elemental Fragment	1
+AttributeDmg.ETHER I	Golden Progen Wing	1
+AttributeDmg.ETHER I	Aurorite	1
+AttributeDmg.ETHER V	Elemental Fragment	2
+AttributeDmg.ETHER V	Golden Progen Wing	2
+AttributeDmg.ETHER V	Infernium	1
+AttributeDmg.ETHER X	Creare Glyph	4
+AttributeDmg.ETHER X	Purple Cervus Antlers	4
+AttributeDmg.ETHER X	Cimmerian Cinnabar	2
+AttributeDmg.ETHER XV	Creare Glyph	12
+AttributeDmg.ETHER XV	Purple Cervus Antlers	12
+AttributeDmg.ETHER XV	Ouroboros Crystal	4
+AttributeDmg.ETHER XX	Creare Glyph	24
+AttributeDmg.ETHER XX	Purple Cervus Antlers	24
+AttributeDmg.ETHER XX	Parhelion Platinum	8
+AttributeDmg.THERM I	Reinforced Plunger	1
+AttributeDmg.THERM I	Herculean Beast Hair	1
+AttributeDmg.THERM I	Aurorite	1
+AttributeDmg.THERM V	Reinforced Plunger	2
+AttributeDmg.THERM V	Black Meaty Caecus Liver	2
+AttributeDmg.THERM V	Infernium	1
+AttributeDmg.THERM X	Experia Glyph	4
+AttributeDmg.THERM X	Jacul Horn	4
+AttributeDmg.THERM X	Cimmerian Cinnabar	2
+AttributeDmg.THERM XV	Experia Glyph	12
+AttributeDmg.THERM XV	Jacul Horn	12
+AttributeDmg.THERM XV	Ouroboros Crystal	4
+AttributeDmg.THERM XX	Experia Glyph	24
+AttributeDmg.THERM XX	Jacul Horn	24
+AttributeDmg.THERM XX	Parhelion Platinum	8
+AttributeDmg.ELEC I	Quo Pod	1
+AttributeDmg.ELEC I	Black Scintimure Tentacle	1
+AttributeDmg.ELEC I	Aurorite	1
+AttributeDmg.ELEC V	Vivohast Crescent Hook	2
+AttributeDmg.ELEC V	Black Scintimure Tentacle	2
+AttributeDmg.ELEC V	Infernium	1
+AttributeDmg.ELEC X	Scienti Glyph	4
+AttributeDmg.ELEC X	Reinforced Plug	4
+AttributeDmg.ELEC X	Cimmerian Cinnabar	2
+AttributeDmg.ELEC XV	Scienti Glyph	12
+AttributeDmg.ELEC XV	Reinforced Plug	12
+AttributeDmg.ELEC XV	Ouroboros Crystal	4
+AttributeDmg.ELEC XX	Scienti Glyph	24
+AttributeDmg.ELEC XX	Reinforced Plug	24
+AttributeDmg.ELEC XX	Parhelion Platinum	8
+AttributeDmg.GRAV I	Black Gyrocompass	1
+AttributeDmg.GRAV I	Visigel Waterfall Orb	1
+AttributeDmg.GRAV I	Aurorite	1
+AttributeDmg.GRAV V	Black Gyrocompass	2
+AttributeDmg.GRAV V	Visigel Waterfall Orb	2
+AttributeDmg.GRAV V	Infernium	1
+AttributeDmg.GRAV X	Esse Glyph	4
+AttributeDmg.GRAV X	Gold Sylooth Brace	4
+AttributeDmg.GRAV X	Cimmerian Cinnabar	2
+AttributeDmg.GRAV XV	Esse Glyph	12
+AttributeDmg.GRAV XV	Gold Sylooth Brace	12
+AttributeDmg.GRAV XV	Ouroboros Crystal	4
+AttributeDmg.GRAV XX	Esse Glyph	24
+AttributeDmg.GRAV XX	Gold Sylooth Brace	24
+AttributeDmg.GRAV XX	Parhelion Platinum	8
+PositionDmg.FRONT I	Cracked Bill	1
+PositionDmg.FRONT I	Auravis Horn	1
+PositionDmg.FRONT I	Aurorite	1
+PositionDmg.FRONT V	Cracked Bill	2
+PositionDmg.FRONT V	Auravis Horn	2
+PositionDmg.FRONT V	Infernium	1
+PositionDmg.FRONT X	Cracked Bill	4
+PositionDmg.FRONT X	Black Vigent Rock Scalp	4
+PositionDmg.FRONT X	Cimmerian Cinnabar	2
+PositionDmg.FRONT XV	Cracked Bill	12
+PositionDmg.FRONT XV	Black Vigent Rock Scalp	12
+PositionDmg.FRONT XV	Ouroboros Crystal	4
+PositionDmg.FRONT XX	Cracked Bill	24
+PositionDmg.FRONT XX	Black Vigent Rock Scalp	24
+PositionDmg.FRONT XX	Parhelion Platinum	8
+PositionDmg.SIDE I	Pristine Claw	1
+PositionDmg.SIDE I	Green Blatta Wing	1
+PositionDmg.SIDE I	Aurorite	1
+PositionDmg.SIDE V	Pristine Claw	2
+PositionDmg.SIDE V	Green Blatta Wing	2
+PositionDmg.SIDE V	Infernium	1
+PositionDmg.SIDE X	Pristine Claw	4
+PositionDmg.SIDE X	Ingrown Virago Claw	4
+PositionDmg.SIDE X	Cimmerian Cinnabar	2
+PositionDmg.SIDE XV	Pristine Claw	12
+PositionDmg.SIDE XV	Ingrown Virago Claw	12
+PositionDmg.SIDE XV	Ouroboros Crystal	4
+PositionDmg.SIDE XX	Pristine Claw	24
+PositionDmg.SIDE XX	Ingrown Virago Claw	24
+PositionDmg.SIDE XX	Parhelion Platinum	8
+PositionDmg.BACK I	Jagged Grex Tail	1
+PositionDmg.BACK I	Ebony Evello Egg	1
+PositionDmg.BACK I	Aurorite	1
+PositionDmg.BACK V	Jagged Grex Tail	2
+PositionDmg.BACK V	Ebony Evello Egg	2
+PositionDmg.BACK V	Infernium	1
+PositionDmg.BACK X	Jagged Grex Tail	4
+PositionDmg.BACK X	Purple Virago Alloy Plate	4
+PositionDmg.BACK X	Cimmerian Cinnabar	2
+PositionDmg.BACK XV	Jagged Grex Tail	12
+PositionDmg.BACK XV	Purple Virago Alloy Plate	12
+PositionDmg.BACK XV	Ouroboros Crystal	4
+PositionDmg.BACK XX	Jagged Grex Tail	24
+PositionDmg.BACK XX	Purple Virago Alloy Plate	24
+PositionDmg.BACK XX	Parhelion Platinum	8
+PositionDmg.ABOVE I	Supple Leather	1
+PositionDmg.ABOVE I	Arc Sand Ore	1
+PositionDmg.ABOVE V	Supple Leather	2
+PositionDmg.ABOVE V	Lionbone Bort	1
+PositionDmg.ABOVE X	Supple Leather	4
+PositionDmg.ABOVE X	Enduron Lead	2
+PositionDmg.ABOVE XV	Supple Leather	12
+PositionDmg.ABOVE XV	Boiled-Egg Ore	4
+PositionDmg.ABOVE XX	Supple Leather	24
+PositionDmg.ABOVE XX	Marine Rutile	8
+M-Auto.BLACKOUT I	Ovis Polishing Stone	1
+M-Auto.BLACKOUT I	Arc Sand Ore	1
+M-Auto.BLACKOUT V	Ovis Polishing Stone	2
+M-Auto.BLACKOUT V	Lionbone Bort	1
+M-Auto.BLACKOUT X	Ovis Polishing Stone	3
+M-Auto.BLACKOUT X	Enduron Lead	1
+M-Auto.BLACKOUT XV	Ovis Polishing Stone	4
+M-Auto.BLACKOUT XV	Boiled-Egg Ore	1
+M-Auto.BLACKOUT XX	Ovis Polishing Stone	5
+M-Auto.BLACKOUT XX	Marine Rutile	1
+M-Auto.FATIGUE I	Muscled Suid Bulge	1
+M-Auto.FATIGUE I	Arc Sand Ore	1
+M-Auto.FATIGUE V	Muscled Suid Bulge	2
+M-Auto.FATIGUE V	Lionbone Bort	1
+M-Auto.FATIGUE X	Muscled Suid Bulge	3
+M-Auto.FATIGUE X	Enduron Lead	1
+M-Auto.FATIGUE XV	Muscled Suid Bulge	4
+M-Auto.FATIGUE XV	Boiled-Egg Ore	1
+M-Auto.FATIGUE XX	Muscled Suid Bulge	5
+M-Auto.FATIGUE XX	Marine Rutile	1
+M-Auto.PHYS-DOWN I	Juicy Wild Meat	1
+M-Auto.PHYS-DOWN I	Arc Sand Ore	1
+M-Auto.PHYS-DOWN V	Juicy Wild Meat	2
+M-Auto.PHYS-DOWN V	Lionbone Bort	1
+M-Auto.PHYS-DOWN X	Juicy Wild Meat	3
+M-Auto.PHYS-DOWN X	Enduron Lead	1
+M-Auto.PHYS-DOWN XV	Juicy Wild Meat	4
+M-Auto.PHYS-DOWN XV	Boiled-Egg Ore	1
+M-Auto.PHYS-DOWN XX	Juicy Wild Meat	5
+M-Auto.PHYS-DOWN XX	Marine Rutile	1
+M-Auto.BEAM-DOWN I	Adsecula Straw	1
+M-Auto.BEAM-DOWN I	Arc Sand Ore	1
+M-Auto.BEAM-DOWN V	Adsecula Straw	2
+M-Auto.BEAM-DOWN V	Lionbone Bort	1
+M-Auto.BEAM-DOWN X	Adsecula Straw	3
+M-Auto.BEAM-DOWN X	Enduron Lead	1
+M-Auto.BEAM-DOWN XV	Adsecula Straw	4
+M-Auto.BEAM-DOWN XV	Boiled-Egg Ore	1
+M-Auto.BEAM-DOWN XX	Adsecula Straw	5
+M-Auto.BEAM-DOWN XX	Marine Rutile	1
+M-Auto.ETHER-DOWN I	Perforated Oar	1
+M-Auto.ETHER-DOWN I	Arc Sand Ore	1
+M-Auto.ETHER-DOWN V	Perforated Oar	2
+M-Auto.ETHER-DOWN V	Lionbone Bort	1
+M-Auto.ETHER-DOWN X	Perforated Oar	3
+M-Auto.ETHER-DOWN X	Enduron Lead	1
+M-Auto.ETHER-DOWN XV	Perforated Oar	4
+M-Auto.ETHER-DOWN XV	Boiled-Egg Ore	1
+M-Auto.ETHER-DOWN XX	Perforated Oar	5
+M-Auto.ETHER-DOWN XX	Marine Rutile	1
+M-Auto.THERM-DOWN I	Red Forfex Shell	1
+M-Auto.THERM-DOWN I	Arc Sand Ore	1
+M-Auto.THERM-DOWN V	Red Forfex Shell	2
+M-Auto.THERM-DOWN V	Lionbone Bort	1
+M-Auto.THERM-DOWN X	Red Forfex Shell	3
+M-Auto.THERM-DOWN X	Enduron Lead	1
+M-Auto.THERM-DOWN XV	Red Forfex Shell	4
+M-Auto.THERM-DOWN XV	Boiled-Egg Ore	1
+M-Auto.THERM-DOWN XX	Red Forfex Shell	5
+M-Auto.THERM-DOWN XX	Marine Rutile	1
+M-Auto.ELEC-DOWN I	Muddy Pelt	1
+M-Auto.ELEC-DOWN I	Arc Sand Ore	1
+M-Auto.ELEC-DOWN V	Muddy Pelt	2
+M-Auto.ELEC-DOWN V	Lionbone Bort	1
+M-Auto.ELEC-DOWN X	Muddy Pelt	3
+M-Auto.ELEC-DOWN X	Enduron Lead	1
+M-Auto.ELEC-DOWN XV	Muddy Pelt	4
+M-Auto.ELEC-DOWN XV	Boiled-Egg Ore	1
+M-Auto.ELEC-DOWN XX	Muddy Pelt	5
+M-Auto.ELEC-DOWN XX	Marine Rutile	1
+M-Auto.GRAV-DOWN I	Black Blatta Wing	1
+M-Auto.GRAV-DOWN I	Arc Sand Ore	1
+M-Auto.GRAV-DOWN V	Black Blatta Wing	2
+M-Auto.GRAV-DOWN V	Lionbone Bort	1
+M-Auto.GRAV-DOWN X	Black Blatta Wing	3
+M-Auto.GRAV-DOWN X	Enduron Lead	1
+M-Auto.GRAV-DOWN XV	Black Blatta Wing	4
+M-Auto.GRAV-DOWN XV	Boiled-Egg Ore	1
+M-Auto.GRAV-DOWN XX	Black Blatta Wing	5
+M-Auto.GRAV-DOWN XX	Marine Rutile	1
+M-Auto.BLAZE I	Scirpo Malic Acid Sac	1
+M-Auto.BLAZE I	Pugilith Lamp	1
+M-Auto.BLAZE I	Aurorite	1
+M-Auto.BLAZE V	Scirpo Malic Acid Sac	2
+M-Auto.BLAZE V	Pugilith Lamp	2
+M-Auto.BLAZE V	Infernium	1
+M-Auto.BLAZE X	Scirpo Malic Acid Sac	3
+M-Auto.BLAZE X	Imperial Sphinx Fang	3
+M-Auto.BLAZE X	Cimmerian Cinnabar	1
+M-Auto.BLAZE XV	Scirpo Malic Acid Sac	4
+M-Auto.BLAZE XV	Imperial Sphinx Fang	4
+M-Auto.BLAZE XV	Ouroboros Crystal	1
+M-Auto.BLAZE XX	Scirpo Malic Acid Sac	5
+M-Auto.BLAZE XX	Imperial Sphinx Fang	5
+M-Auto.BLAZE XX	Parhelion Platinum	1
+M-Auto.SHOCK I	Scirpo Cyanide Sac	1
+M-Auto.SHOCK I	Electrified Xeno Blood	1
+M-Auto.SHOCK I	Aurorite	1
+M-Auto.SHOCK V	Scirpo Cyanide Sac	2
+M-Auto.SHOCK V	Electrified Xeno Blood	2
+M-Auto.SHOCK V	Infernium	1
+M-Auto.SHOCK X	Scirpo Cyanide Sac	3
+M-Auto.SHOCK X	Electric Tersqual Tear	3
+M-Auto.SHOCK X	Cimmerian Cinnabar	1
+M-Auto.SHOCK XV	Scirpo Cyanide Sac	4
+M-Auto.SHOCK XV	Electric Tersqual Tear	4
+M-Auto.SHOCK XV	Ouroboros Crystal	1
+M-Auto.SHOCK XX	Scirpo Cyanide Sac	5
+M-Auto.SHOCK XX	Electric Tersqual Tear	5
+M-Auto.SHOCK XX	Parhelion Platinum	1
+M-Auto.HP-RECOV I	Thallus Crescent Hook	1
+M-Auto.HP-RECOV I	Green Monoceros Horn	1
+M-Auto.HP-RECOV I	Liceor Horn	1
+M-Auto.HP-RECOV I	White Cometite	1
+M-Auto.HP-RECOV V	Thallus Crescent Hook	2
+M-Auto.HP-RECOV V	Green Monoceros Horn	2
+M-Auto.HP-RECOV V	Liceor Horn	2
+M-Auto.HP-RECOV V	Dawnstone	1
+M-Auto.HP-RECOV X	Thallus Crescent Hook	3
+M-Auto.HP-RECOV X	Millesaur Dung	3
+M-Auto.HP-RECOV X	Coronid Dung	3
+M-Auto.HP-RECOV X	Everfreeze Ore	1
+M-Auto.HP-RECOV XV	Thallus Crescent Hook	4
+M-Auto.HP-RECOV XV	Millesaur Dung	4
+M-Auto.HP-RECOV XV	Coronid Dung	4
+M-Auto.HP-RECOV XV	Foucaultium	1
+M-Auto.HP-RECOV XX	Thallus Crescent Hook	5
+M-Auto.HP-RECOV XX	Millesaur Dung	5
+M-Auto.HP-RECOV XX	Coronid Dung	5
+M-Auto.HP-RECOV XX	Bonjelium	1
+Damage.GP-GAIN I	Topaz Wine	1
+Damage.GP-GAIN I	Glowing Retina	1
+Damage.GP-GAIN I	Terebra Water Grease	1
+Damage.GP-GAIN I	White Cometite	1
+Damage.GP-GAIN V	Topaz Wine	2
+Damage.GP-GAIN V	Glowing Retina	2
+Damage.GP-GAIN V	Terebra Water Grease	2
+Damage.GP-GAIN V	Dawnstone	1
+Damage.GP-GAIN X	Topaz Wine	4
+Damage.GP-GAIN X	Silver Petramand Silk	4
+Damage.GP-GAIN X	Big Balaena Sand Bag	4
+Damage.GP-GAIN X	Everfreeze Ore	2
+Damage.GP-GAIN XV	Topaz Wine	8
+Damage.GP-GAIN XV	Silver Petramand Silk	8
+Damage.GP-GAIN XV	Big Balaena Sand Bag	8
+Damage.GP-GAIN XV	Foucaultium	4
+Damage.GP-GAIN XX	Topaz Wine	16
+Damage.GP-GAIN XX	Silver Petramand Silk	16
+Damage.GP-GAIN XX	Big Balaena Sand Bag	16
+Damage.GP-GAIN XX	Bonjelium	8
+Damage.APPEND I	Shiny Silver Caro Plate	1
+Damage.APPEND I	Arc Sand Ore	1
+Damage.APPEND V	Shiny Silver Caro Plate	2
+Damage.APPEND V	Lionbone Bort	1
+Damage.APPEND X	Shiny Silver Caro Plate	3
+Damage.APPEND X	Enduron Lead	1
+Damage.APPEND XV	Shiny Silver Caro Plate	4
+Damage.APPEND XV	Boiled-Egg Ore	1
+Damage.APPEND XX	Shiny Silver Caro Plate	5
+Damage.APPEND XX	Marine Rutile	1
+Jamming I	Silver Sacrifole Feather	1
+Jamming I	Arc Sand Ore	1
+Jamming V	Silver Sacrifole Feather	2
+Jamming V	Lionbone Bort	1
+Jamming X	Silver Sacrifole Feather	3
+Jamming X	Enduron Lead	1
+Jamming XV	Silver Sacrifole Feather	4
+Jamming XV	Boiled-Egg Ore	1
+Jamming XX	Silver Sacrifole Feather	5
+Jamming XX	Marine Rutile	1
+AppendLost.ATK-UP I	Golden Puff	1
+AppendLost.ATK-UP I	Arc Sand Ore	1
+AppendLost.ATK-UP V	Golden Puff	2
+AppendLost.ATK-UP V	Lionbone Bort	1
+AppendLost.ATK-UP X	Golden Puff	3
+AppendLost.ATK-UP X	Enduron Lead	1
+AppendLost.ATK-UP XV	Golden Puff	4
+AppendLost.ATK-UP XV	Boiled-Egg Ore	1
+AppendLost.ATK-UP XX	Golden Puff	5
+AppendLost.ATK-UP XX	Marine Rutile	1
+AppendLost.EVA-UP I	Longevity Bough	1
+AppendLost.EVA-UP I	Arc Sand Ore	1
+AppendLost.EVA-UP V	Longevity Bough	2
+AppendLost.EVA-UP V	Lionbone Bort	1
+AppendLost.EVA-UP X	Longevity Bough	3
+AppendLost.EVA-UP X	Enduron Lead	1
+AppendLost.EVA-UP XV	Longevity Bough	4
+AppendLost.EVA-UP XV	Boiled-Egg Ore	1
+AppendLost.EVA-UP XX	Longevity Bough	5
+AppendLost.EVA-UP XX	Marine Rutile	1
+AppendLost.GP I	Lucky Cervus Sapling	1
+AppendLost.GP I	Arc Sand Ore	1
+AppendLost.GP V	Lucky Cervus Sapling	2
+AppendLost.GP V	Lionbone Bort	1
+AppendLost.GP X	Lucky Cervus Sapling	3
+AppendLost.GP X	Enduron Lead	1
+AppendLost.GP XV	Lucky Cervus Sapling	4
+AppendLost.GP XV	Boiled-Egg Ore	1
+AppendLost.GP XX	Lucky Cervus Sapling	5
+AppendLost.GP XX	Marine Rutile	1
+Reflect.DAMAGE-UP I	Green Crystal	1
+Reflect.DAMAGE-UP I	Diamond Seed	1
+Reflect.DAMAGE-UP I	Cimmerian Pom Pom	1
+Reflect.DAMAGE-UP I	White Cometite	1
+Reflect.DAMAGE-UP V	Odorous Tentacle	2
+Reflect.DAMAGE-UP V	Iron Lump	2
+Reflect.DAMAGE-UP V	Pristine Dorsal Fin	2
+Reflect.DAMAGE-UP V	Dawnstone	1
+Reflect.DAMAGE-UP X	Yggralith Horn	1
+Reflect.DAMAGE-UP X	Cloudy Gerrid Soup	3
+Reflect.DAMAGE-UP X	Sabula Backbone	3
+Reflect.DAMAGE-UP X	Everfreeze Ore	1
+Reflect.DAMAGE-UP XV	Yggralith Horn	1
+Reflect.DAMAGE-UP XV	Cloudy Gerrid Soup	4
+Reflect.DAMAGE-UP XV	Sabula Backbone	4
+Reflect.DAMAGE-UP XV	Foucaultium	1
+Reflect.DAMAGE-UP XX	Yggralith Horn	1
+Reflect.DAMAGE-UP XX	Cloudy Gerrid Soup	5
+Reflect.DAMAGE-UP XX	Sabula Backbone	5
+Reflect.DAMAGE-UP XX	Bonjelium	1
+Reflect.NEG-PHYS I	Juicy Wild Meat	1
+Reflect.NEG-PHYS I	Arc Sand Ore	1
+Reflect.NEG-PHYS V	Juicy Wild Meat	2
+Reflect.NEG-PHYS V	Lionbone Bort	1
+Reflect.NEG-PHYS X	Juicy Wild Meat	3
+Reflect.NEG-PHYS X	Enduron Lead	1
+Reflect.NEG-PHYS XV	Juicy Wild Meat	4
+Reflect.NEG-PHYS XV	Boiled-Egg Ore	1
+Reflect.NEG-PHYS XX	Juicy Wild Meat	5
+Reflect.NEG-PHYS XX	Marine Rutile	1
+Reflect.NEG-BEAM I	Adsecula Straw	1
+Reflect.NEG-BEAM I	Arc Sand Ore	1
+Reflect.NEG-BEAM V	Adsecula Straw	2
+Reflect.NEG-BEAM V	Lionbone Bort	1
+Reflect.NEG-BEAM X	Adsecula Straw	3
+Reflect.NEG-BEAM X	Enduron Lead	1
+Reflect.NEG-BEAM XV	Adsecula Straw	4
+Reflect.NEG-BEAM XV	Boiled-Egg Ore	1
+Reflect.NEG-BEAM XX	Adsecula Straw	5
+Reflect.NEG-BEAM XX	Marine Rutile	1
+Reflect.NEG-ETHER I	Perforated Oar	1
+Reflect.NEG-ETHER I	Arc Sand Ore	1
+Reflect.NEG-ETHER V	Perforated Oar	2
+Reflect.NEG-ETHER V	Lionbone Bort	1
+Reflect.NEG-ETHER X	Perforated Oar	3
+Reflect.NEG-ETHER X	Enduron Lead	1
+Reflect.NEG-ETHER XV	Perforated Oar	4
+Reflect.NEG-ETHER XV	Boiled-Egg Ore	1
+Reflect.NEG-ETHER XX	Perforated Oar	5
+Reflect.NEG-ETHER XX	Marine Rutile	1
+Reflect.NEG-THERM I	Red Forfex Shell	1
+Reflect.NEG-THERM I	Arc Sand Ore	1
+Reflect.NEG-THERM V	Red Forfex Shell	2
+Reflect.NEG-THERM V	Lionbone Bort	1
+Reflect.NEG-THERM X	Red Forfex Shell	3
+Reflect.NEG-THERM X	Enduron Lead	1
+Reflect.NEG-THERM XV	Red Forfex Shell	4
+Reflect.NEG-THERM XV	Boiled-Egg Ore	1
+Reflect.NEG-THERM XX	Red Forfex Shell	5
+Reflect.NEG-THERM XX	Marine Rutile	1
+Reflect.NEG-ELEC I	Muddy Pelt	1
+Reflect.NEG-ELEC I	Arc Sand Ore	1
+Reflect.NEG-ELEC V	Muddy Pelt	2
+Reflect.NEG-ELEC V	Lionbone Bort	1
+Reflect.NEG-ELEC X	Muddy Pelt	3
+Reflect.NEG-ELEC X	Enduron Lead	1
+Reflect.NEG-ELEC XV	Muddy Pelt	4
+Reflect.NEG-ELEC XV	Boiled-Egg Ore	1
+Reflect.NEG-ELEC XX	Muddy Pelt	5
+Reflect.NEG-ELEC XX	Marine Rutile	1
+Reflect.NEG-GRAV I	Black Blatta Wing	1
+Reflect.NEG-GRAV I	Arc Sand Ore	1
+Reflect.NEG-GRAV V	Black Blatta Wing	2
+Reflect.NEG-GRAV V	Lionbone Bort	1
+Reflect.NEG-GRAV X	Black Blatta Wing	3
+Reflect.NEG-GRAV X	Enduron Lead	1
+Reflect.NEG-GRAV XV	Black Blatta Wing	4
+Reflect.NEG-GRAV XV	Boiled-Egg Ore	1
+Reflect.NEG-GRAV XX	Black Blatta Wing	5
+Reflect.NEG-GRAV XX	Marine Rutile	1
+Overdrive.FRAME-HP I	Black Turba Nectar	1
+Overdrive.FRAME-HP I	Shimmering Silk	1
+Overdrive.FRAME-HP I	Scirpo Silk	1
+Overdrive.FRAME-HP I	White Cometite	1
+Overdrive.FRAME-HP V	Black Turba Nectar	2
+Overdrive.FRAME-HP V	Shimmering Silk	2
+Overdrive.FRAME-HP V	Scirpo Silk	2
+Overdrive.FRAME-HP V	Dawnstone	1
+Overdrive.FRAME-HP X	Black Turba Nectar	8
+Overdrive.FRAME-HP X	Tasty Fish Belly	8
+Overdrive.FRAME-HP X	Black Sylooth Brace	8
+Overdrive.FRAME-HP X	Everfreeze Ore	2
+Overdrive.FRAME-HP XV	Black Turba Nectar	16
+Overdrive.FRAME-HP XV	Tasty Fish Belly	16
+Overdrive.FRAME-HP XV	Black Sylooth Brace	16
+Overdrive.FRAME-HP XV	Foucaultium	4
+Overdrive.FRAME-HP XX	Black Turba Nectar	32
+Overdrive.FRAME-HP XX	Tasty Fish Belly	32
+Overdrive.FRAME-HP XX	Black Sylooth Brace	32
+Overdrive.FRAME-HP XX	Bonjelium	8
+Overdrive.APPEND-HP I	Azure Sacrifole Feather	1
+Overdrive.APPEND-HP I	Arc Sand Ore	1
+Overdrive.APPEND-HP V	Azure Sacrifole Feather	2
+Overdrive.APPEND-HP V	Lionbone Bort	1
+Overdrive.APPEND-HP X	Azure Sacrifole Feather	8
+Overdrive.APPEND-HP X	Enduron Lead	2
+Overdrive.APPEND-HP XV	Azure Sacrifole Feather	16
+Overdrive.APPEND-HP XV	Boiled-Egg Ore	4
+Overdrive.APPEND-HP XX	Azure Sacrifole Feather	32
+Overdrive.APPEND-HP XX	Marine Rutile	8
+Overdrive.EXTEND I	Elemental Cluster	1
+Overdrive.EXTEND I	Moving Thallus Tail	1
+Overdrive.EXTEND I	Puge Counter	1
+Overdrive.EXTEND I	White Cometite	1
+Overdrive.EXTEND V	Elemental Cluster	2
+Overdrive.EXTEND V	Moving Thallus Tail	2
+Overdrive.EXTEND V	Puge Counter	2
+Overdrive.EXTEND V	Dawnstone	1
+Overdrive.EXTEND X	Elemental Cluster	8
+Overdrive.EXTEND X	Fertilized Jacul Egg	8
+Overdrive.EXTEND X	Maple Oil	4
+Overdrive.EXTEND X	Everfreeze Ore	2
+Overdrive.EXTEND XV	Elemental Cluster	16
+Overdrive.EXTEND XV	Fertilized Jacul Egg	16
+Overdrive.EXTEND XV	Maple Oil	12
+Overdrive.EXTEND XV	Foucaultium	4
+Overdrive.EXTEND XX	Elemental Cluster	32
+Overdrive.EXTEND XX	Fertilized Jacul Egg	32
+Overdrive.EXTEND XX	Maple Oil	24
+Overdrive.EXTEND XX	Bonjelium	8
+Arts.GP I	White Mortifole Feather	1
+Arts.GP I	Ornate Insidia Claw	1
+Arts.GP I	Blue Fungi	1
+Arts.GP I	White Cometite	1
+Arts.GP V	White Mortifole Feather	2
+Arts.GP V	Ornate Insidia Claw	2
+Arts.GP V	Blue Fungi	2
+Arts.GP V	Dawnstone	1
+Arts.GP X	White Mortifole Feather	8
+Arts.GP X	Aeviter Star Wing	8
+Arts.GP X	Red Vigent Rock Scalp	8
+Arts.GP X	Everfreeze Ore	2
+Arts.GP XV	White Mortifole Feather	16
+Arts.GP XV	Aeviter Star Wing	16
+Arts.GP XV	Red Vigent Rock Scalp	16
+Arts.GP XV	Foucaultium	4
+Arts.GP XX	White Mortifole Feather	32
+Arts.GP XX	Aeviter Star Wing	32
+Arts.GP XX	Red Vigent Rock Scalp	32
+Arts.GP XX	Bonjelium	8
+TimeEx.TAUNT I	Small Insect Leg	1
+TimeEx.TAUNT I	Arc Sand Ore	1
+TimeEx.TAUNT V	Small Insect Leg	2
+TimeEx.TAUNT V	Lionbone Bort	1
+TimeEx.TAUNT X	Small Insect Leg	3
+TimeEx.TAUNT X	Enduron Lead	1
+TimeEx.TAUNT XV	Small Insect Leg	4
+TimeEx.TAUNT XV	Boiled-Egg Ore	1
+TimeEx.TAUNT XX	Small Insect Leg	5
+TimeEx.TAUNT XX	Marine Rutile	1
+TimeEx.CONTROL I	Taut Leather	1
+TimeEx.CONTROL I	Arc Sand Ore	1
+TimeEx.CONTROL V	Taut Leather	2
+TimeEx.CONTROL V	Lionbone Bort	1
+TimeEx.CONTROL X	Taut Leather	3
+TimeEx.CONTROL X	Enduron Lead	1
+TimeEx.CONTROL XV	Taut Leather	4
+TimeEx.CONTROL XV	Boiled-Egg Ore	1
+TimeEx.CONTROL XX	Taut Leather	5
+TimeEx.CONTROL XX	Marine Rutile	1
+TimeEx.SLEEP I	Moving Vivohast Tail	1
+TimeEx.SLEEP I	Arc Sand Ore	1
+TimeEx.SLEEP V	Moving Vivohast Tail	2
+TimeEx.SLEEP V	Lionbone Bort	1
+TimeEx.SLEEP X	Moving Vivohast Tail	3
+TimeEx.SLEEP X	Enduron Lead	1
+TimeEx.SLEEP XV	Moving Vivohast Tail	4
+TimeEx.SLEEP XV	Boiled-Egg Ore	1
+TimeEx.SLEEP XX	Moving Vivohast Tail	5
+TimeEx.SLEEP XX	Marine Rutile	1
+TimeEx.VIRUS I	Small Insect Leg	1
+TimeEx.VIRUS I	Arc Sand Ore	1
+TimeEx.VIRUS V	Small Insect Leg	2
+TimeEx.VIRUS V	Lionbone Bort	1
+TimeEx.VIRUS X	Small Insect Leg	3
+TimeEx.VIRUS X	Enduron Lead	1
+TimeEx.VIRUS XV	Small Insect Leg	4
+TimeEx.VIRUS XV	Boiled-Egg Ore	1
+TimeEx.VIRUS XX	Small Insect Leg	5
+TimeEx.VIRUS XX	Marine Rutile	1
+TimeEx.BLACKOUT I	Ovis Polishing Stone	1
+TimeEx.BLACKOUT I	Arc Sand Ore	1
+TimeEx.BLACKOUT V	Ovis Polishing Stone	2
+TimeEx.BLACKOUT V	Lionbone Bort	1
+TimeEx.BLACKOUT X	Ovis Polishing Stone	3
+TimeEx.BLACKOUT X	Enduron Lead	1
+TimeEx.BLACKOUT XV	Ovis Polishing Stone	4
+TimeEx.BLACKOUT XV	Boiled-Egg Ore	1
+TimeEx.BLACKOUT XX	Ovis Polishing Stone	5
+TimeEx.BLACKOUT XX	Marine Rutile	1
+TimeEx.FATIGUE I	Broken Pincer	1
+TimeEx.FATIGUE I	Arc Sand Ore	1
+TimeEx.FATIGUE V	Broken Pincer	2
+TimeEx.FATIGUE V	Lionbone Bort	1
+TimeEx.FATIGUE X	Broken Pincer	3
+TimeEx.FATIGUE X	Enduron Lead	1
+TimeEx.FATIGUE XV	Broken Pincer	4
+TimeEx.FATIGUE XV	Boiled-Egg Ore	1
+TimeEx.FATIGUE XX	Broken Pincer	5
+TimeEx.FATIGUE XX	Marine Rutile	1
+TimeEx.SLOW-ARTS I	Supple Leather	1
+TimeEx.SLOW-ARTS I	Arc Sand Ore	1
+TimeEx.SLOW-ARTS V	Supple Leather	2
+TimeEx.SLOW-ARTS V	Lionbone Bort	1
+TimeEx.SLOW-ARTS X	Supple Leather	3
+TimeEx.SLOW-ARTS X	Enduron Lead	1
+TimeEx.SLOW-ARTS XV	Supple Leather	4
+TimeEx.SLOW-ARTS XV	Boiled-Egg Ore	1
+TimeEx.SLOW-ARTS XX	Supple Leather	5
+TimeEx.SLOW-ARTS XX	Marine Rutile	1
+TimeEx.DEBUFF-DOWN I	Lovely Pom Pom	1
+TimeEx.DEBUFF-DOWN I	Arc Sand Ore	1
+TimeEx.DEBUFF-DOWN V	Lovely Pom Pom	2
+TimeEx.DEBUFF-DOWN V	Lionbone Bort	1
+TimeEx.DEBUFF-DOWN X	Lovely Pom Pom	3
+TimeEx.DEBUFF-DOWN X	Enduron Lead	1
+TimeEx.DEBUFF-DOWN XV	Lovely Pom Pom	4
+TimeEx.DEBUFF-DOWN XV	Boiled-Egg Ore	1
+TimeEx.DEBUFF-DOWN XX	Lovely Pom Pom	5
+TimeEx.DEBUFF-DOWN XX	Marine Rutile	1
+TimeEx.RECOV-DOWN I	Murky Potamus Water	1
+TimeEx.RECOV-DOWN I	Arc Sand Ore	1
+TimeEx.RECOV-DOWN V	Murky Potamus Water	2
+TimeEx.RECOV-DOWN V	Lionbone Bort	1
+TimeEx.RECOV-DOWN X	Murky Potamus Water	3
+TimeEx.RECOV-DOWN X	Enduron Lead	1
+TimeEx.RECOV-DOWN XV	Murky Potamus Water	4
+TimeEx.RECOV-DOWN XV	Boiled-Egg Ore	1
+TimeEx.RECOV-DOWN XX	Murky Potamus Water	5
+TimeEx.RECOV-DOWN XX	Marine Rutile	1
+TimeEx.BLAZE I	Poisonous Needle	1
+TimeEx.BLAZE I	Arc Sand Ore	1
+TimeEx.BLAZE V	Poisonous Needle	4
+TimeEx.BLAZE V	Lionbone Bort	1
+TimeEx.BLAZE X	Poisonous Needle	12
+TimeEx.BLAZE X	Levitath Sun Bead	1
+TimeEx.BLAZE X	Enduron Lead	2
+TimeEx.BLAZE XV	Poisonous Needle	24
+TimeEx.BLAZE XV	Levitath Sun Bead	2
+TimeEx.BLAZE XV	Boiled-Egg Ore	4
+TimeEx.BLAZE XX	Poisonous Needle	36
+TimeEx.BLAZE XX	Levitath Sun Bead	4
+TimeEx.BLAZE XX	Marine Rutile	8
+TimeEx.SHOCK I	Vesper Fang	1
+TimeEx.SHOCK I	Arc Sand Ore	1
+TimeEx.SHOCK V	Vesper Fang	4
+TimeEx.SHOCK V	Lionbone Bort	1
+TimeEx.SHOCK X	Vesper Fang	12
+TimeEx.SHOCK X	Electric Tersqual Tear	1
+TimeEx.SHOCK X	Enduron Lead	2
+TimeEx.SHOCK XV	Vesper Fang	24
+TimeEx.SHOCK XV	Electric Tersqual Tear	2
+TimeEx.SHOCK XV	Boiled-Egg Ore	4
+TimeEx.SHOCK XX	Vesper Fang	48
+TimeEx.SHOCK XX	Electric Tersqual Tear	4
+TimeEx.SHOCK XX	Marine Rutile	8
+TimeEx.PHYS-DOWN I	Juicy Wild Meat	1
+TimeEx.PHYS-DOWN I	Arc Sand Ore	1
+TimeEx.PHYS-DOWN V	Juicy Wild Meat	2
+TimeEx.PHYS-DOWN V	Lionbone Bort	1
+TimeEx.PHYS-DOWN X	Juicy Wild Meat	3
+TimeEx.PHYS-DOWN X	Enduron Lead	1
+TimeEx.PHYS-DOWN XV	Juicy Wild Meat	4
+TimeEx.PHYS-DOWN XV	Boiled-Egg Ore	1
+TimeEx.PHYS-DOWN XX	Juicy Wild Meat	5
+TimeEx.PHYS-DOWN XX	Marine Rutile	1
+TimeEx.BEAM-DOWN I	Adsecula Straw	1
+TimeEx.BEAM-DOWN I	Arc Sand Ore	1
+TimeEx.BEAM-DOWN V	Adsecula Straw	2
+TimeEx.BEAM-DOWN V	Lionbone Bort	1
+TimeEx.BEAM-DOWN X	Adsecula Straw	3
+TimeEx.BEAM-DOWN X	Enduron Lead	1
+TimeEx.BEAM-DOWN XV	Adsecula Straw	4
+TimeEx.BEAM-DOWN XV	Boiled-Egg Ore	1
+TimeEx.BEAM-DOWN XX	Adsecula Straw	5
+TimeEx.BEAM-DOWN XX	Marine Rutile	1
+TimeEx.ETHER-DOWN I	Perforated Oar	1
+TimeEx.ETHER-DOWN I	Arc Sand Ore	1
+TimeEx.ETHER-DOWN V	Perforated Oar	2
+TimeEx.ETHER-DOWN V	Lionbone Bort	1
+TimeEx.ETHER-DOWN X	Perforated Oar	3
+TimeEx.ETHER-DOWN X	Enduron Lead	1
+TimeEx.ETHER-DOWN XV	Perforated Oar	4
+TimeEx.ETHER-DOWN XV	Boiled-Egg Ore	1
+TimeEx.ETHER-DOWN XX	Perforated Oar	5
+TimeEx.ETHER-DOWN XX	Marine Rutile	1
+TimeEx.THERM-DOWN I	Red Forfex Shell	1
+TimeEx.THERM-DOWN I	Arc Sand Ore	1
+TimeEx.THERM-DOWN V	Red Forfex Shell	2
+TimeEx.THERM-DOWN V	Lionbone Bort	1
+TimeEx.THERM-DOWN X	Red Forfex Shell	3
+TimeEx.THERM-DOWN X	Enduron Lead	1
+TimeEx.THERM-DOWN XV	Red Forfex Shell	4
+TimeEx.THERM-DOWN XV	Boiled-Egg Ore	1
+TimeEx.THERM-DOWN XX	Red Forfex Shell	5
+TimeEx.THERM-DOWN XX	Marine Rutile	1
+TimeEx.ELEC-DOWN I	Muddy Pelt	1
+TimeEx.ELEC-DOWN I	Arc Sand Ore	1
+TimeEx.ELEC-DOWN V	Muddy Pelt	2
+TimeEx.ELEC-DOWN V	Lionbone Bort	1
+TimeEx.ELEC-DOWN X	Muddy Pelt	3
+TimeEx.ELEC-DOWN X	Enduron Lead	1
+TimeEx.ELEC-DOWN XV	Muddy Pelt	4
+TimeEx.ELEC-DOWN XV	Boiled-Egg Ore	1
+TimeEx.ELEC-DOWN XX	Muddy Pelt	5
+TimeEx.ELEC-DOWN XX	Marine Rutile	1
+TimeEx.GRAV-DOWN I	Black Blatta Wing	1
+TimeEx.GRAV-DOWN I	Arc Sand Ore	1
+TimeEx.GRAV-DOWN V	Black Blatta Wing	2
+TimeEx.GRAV-DOWN V	Lionbone Bort	1
+TimeEx.GRAV-DOWN X	Black Blatta Wing	3
+TimeEx.GRAV-DOWN X	Enduron Lead	1
+TimeEx.GRAV-DOWN XV	Black Blatta Wing	4
+TimeEx.GRAV-DOWN XV	Boiled-Egg Ore	1
+TimeEx.GRAV-DOWN XX	Black Blatta Wing	5
+TimeEx.GRAV-DOWN XX	Marine Rutile	1
+Draw.OPENING-DMG I	Red Thallus Antenna	1
+Draw.OPENING-DMG I	Monoceros Wing	1
+Draw.OPENING-DMG I	Reinforced Thruster	1
+Draw.OPENING-DMG I	White Cometite	1
+Draw.OPENING-DMG V	Red Thallus Antenna	2
+Draw.OPENING-DMG V	Monoceros Wing	2
+Draw.OPENING-DMG V	Reinforced Thruster	2
+Draw.OPENING-DMG V	Dawnstone	1
+Draw.OPENING-DMG X	Red Thallus Antenna	8
+Draw.OPENING-DMG X	Parasitic Capsule	8
+Draw.OPENING-DMG X	Large Saw Tooth	8
+Draw.OPENING-DMG X	Everfreeze Ore	2
+Draw.OPENING-DMG XV	Red Thallus Antenna	16
+Draw.OPENING-DMG XV	Parasitic Capsule	16
+Draw.OPENING-DMG XV	Large Saw Tooth	16
+Draw.OPENING-DMG XV	Foucaultium	4
+Draw.OPENING-DMG XX	Red Thallus Antenna	32
+Draw.OPENING-DMG XX	Parasitic Capsule	32
+Draw.OPENING-DMG XX	Large Saw Tooth	32
+Draw.OPENING-DMG XX	Bonjelium	8
+Cloak.SIGHT I	White Mirrorglass	1
+Cloak.SIGHT I	Glossy Saltat Fan	1
+Cloak.SIGHT I	Aurorite	1
+Cloak.SIGHT V	White Mirrorglass	2
+Cloak.SIGHT V	Glossy Saltat Fan	2
+Cloak.SIGHT V	Infernium	1
+Cloak.SIGHT X	White Mirrorglass	3
+Cloak.SIGHT X	Luminescent Tail	3
+Cloak.SIGHT X	Cimmerian Cinnabar	1
+Cloak.SIGHT XV	White Mirrorglass	4
+Cloak.SIGHT XV	Luminescent Tail	4
+Cloak.SIGHT XV	Ouroboros Crystal	1
+Cloak.SIGHT XX	White Mirrorglass	5
+Cloak.SIGHT XX	Luminescent Tail	5
+Cloak.SIGHT XX	Parhelion Platinum	1
+Cloak.SOUND I	Lightweight Pelt	1
+Cloak.SOUND I	Evolved Insidia Claw	1
+Cloak.SOUND I	Aurorite	1
+Cloak.SOUND V	Lightweight Pelt	2
+Cloak.SOUND V	Evolved Insidia Claw	2
+Cloak.SOUND V	Infernium	1
+Cloak.SOUND X	Lightweight Pelt	3
+Cloak.SOUND X	Gray Shell	3
+Cloak.SOUND X	Cimmerian Cinnabar	1
+Cloak.SOUND XV	Lightweight Pelt	4
+Cloak.SOUND XV	Gray Shell	4
+Cloak.SOUND XV	Ouroboros Crystal	1
+Cloak.SOUND XX	Lightweight Pelt	5
+Cloak.SOUND XX	Gray Shell	5
+Cloak.SOUND XX	Parhelion Platinum	1
+Crush.GP I	Pristine Insect Jaw	1
+Crush.GP I	Oc-serv Western Crest	1
+Crush.GP I	Vesper Fry	1
+Crush.GP I	White Cometite	1
+Crush.GP V	Pristine Insect Jaw	2
+Crush.GP V	Oc-serv Western Crest	2
+Crush.GP V	Vesper Fry	2
+Crush.GP V	Dawnstone	1
+Crush.GP X	Pristine Insect Jaw	3
+Crush.GP X	Golden Petramand Silk	3
+Crush.GP X	Red Scintimure Tentacle	3
+Crush.GP X	Everfreeze Ore	1
+Crush.GP XV	Pristine Insect Jaw	4
+Crush.GP XV	Golden Petramand Silk	4
+Crush.GP XV	Red Scintimure Tentacle	4
+Crush.GP XV	Foucaultium	1
+Crush.GP XX	Pristine Insect Jaw	5
+Crush.GP XX	Golden Petramand Silk	5
+Crush.GP XX	Red Scintimure Tentacle	5
+Crush.GP XX	Bonjelium	1
+Crush.APPEND I	Sapphire Horn	1
+Crush.APPEND I	Monoceros Hoof Hook	1
+Crush.APPEND I	Cracked Claw	1
+Crush.APPEND I	White Cometite	1
+Crush.APPEND V	Sapphire Horn	2
+Crush.APPEND V	Monoceros Hoof Hook	2
+Crush.APPEND V	Cracked Claw	2
+Crush.APPEND V	Dawnstone	1
+Crush.APPEND X	Sapphire Horn	3
+Crush.APPEND X	Malevolent Petramand Silk	3
+Crush.APPEND X	Brown Monoceros Horn	3
+Crush.APPEND X	Everfreeze Ore	1
+Crush.APPEND XV	Sapphire Horn	4
+Crush.APPEND XV	Malevolent Petramand Silk	4
+Crush.APPEND XV	Brown Monoceros Horn	4
+Crush.APPEND XV	Foucaultium	1
+Crush.APPEND XX	Sapphire Horn	5
+Crush.APPEND XX	Malevolent Petramand Silk	5
+Crush.APPEND XX	Brown Monoceros Horn	5
+Crush.APPEND XX	Bonjelium	1
+Spike.EVA I	Adsecula Oil Drop	1
+Spike.EVA I	Ebony Evello Egg	1
+Spike.EVA I	Vesper Hair Clip	1
+Spike.EVA I	White Cometite	1
+Spike.EVA V	Adsecula Oil Drop	2
+Spike.EVA V	Ebony Evello Egg	2
+Spike.EVA V	Vesper Hair Clip	2
+Spike.EVA V	Dawnstone	1
+Spike.EVA X	Adsecula Oil Drop	3
+Spike.EVA X	Lava Crystal	3
+Spike.EVA X	Gularthian Flint	3
+Spike.EVA X	Everfreeze Ore	1
+Spike.EVA XV	Adsecula Oil Drop	4
+Spike.EVA XV	Lava Crystal	4
+Spike.EVA XV	Gularthian Flint	4
+Spike.EVA XV	Foucaultium	1
+Spike.EVA XX	Adsecula Oil Drop	5
+Spike.EVA XX	Lava Crystal	5
+Spike.EVA XX	Gularthian Flint	5
+Spike.EVA XX	Bonjelium	1
+Vehicle.APPEND-DEF I	Multicolor Murra Wing	1
+Vehicle.APPEND-DEF I	Arc Sand Ore	1
+Vehicle.APPEND-DEF V	Multicolor Murra Wing	2
+Vehicle.APPEND-DEF V	Lionbone Bort	1
+Vehicle.APPEND-DEF X	Multicolor Murra Wing	3
+Vehicle.APPEND-DEF X	Enduron Lead	1
+Vehicle.APPEND-DEF XV	Multicolor Murra Wing	4
+Vehicle.APPEND-DEF XV	Boiled-Egg Ore	1
+Vehicle.APPEND-DEF XX	Multicolor Murra Wing	5
+Vehicle.APPEND-DEF XX	Marine Rutile	1
+Vehicle.FRAME-DEF I	Giant Blue Pearl	1
+Vehicle.FRAME-DEF I	Arc Sand Ore	1
+Vehicle.FRAME-DEF V	Giant Blue Pearl	2
+Vehicle.FRAME-DEF V	Lionbone Bort	1
+Vehicle.FRAME-DEF X	Giant Blue Pearl	3
+Vehicle.FRAME-DEF X	Enduron Lead	1
+Vehicle.FRAME-DEF XV	Giant Blue Pearl	4
+Vehicle.FRAME-DEF XV	Boiled-Egg Ore	1
+Vehicle.FRAME-DEF XX	Giant Blue Pearl	5
+Vehicle.FRAME-DEF XX	Marine Rutile	1
+Vehicle.DEBUFF-RES I	Flowering Papil Scales	1
+Vehicle.DEBUFF-RES I	Arc Sand Ore	1
+Vehicle.DEBUFF-RES V	Flowering Papil Scales	2
+Vehicle.DEBUFF-RES V	Lionbone Bort	1
+Vehicle.DEBUFF-RES X	Flowering Papil Scales	3
+Vehicle.DEBUFF-RES X	Enduron Lead	1
+Vehicle.DEBUFF-RES XV	Flowering Papil Scales	4
+Vehicle.DEBUFF-RES XV	Boiled-Egg Ore	1
+Vehicle.DEBUFF-RES XX	Flowering Papil Scales	5
+Vehicle.DEBUFF-RES XX	Marine Rutile	1
+Night.MR-ACC I	White Scintimure Tentacle	1
+Night.MR-ACC I	Arc Sand Ore	1
+Night.MR-ACC V	White Scintimure Tentacle	2
+Night.MR-ACC V	Lionbone Bort	1
+Night.MR-ACC X	White Scintimure Tentacle	3
+Night.MR-ACC X	Enduron Lead	1
+Night.MR-ACC XV	White Scintimure Tentacle	4
+Night.MR-ACC XV	Boiled-Egg Ore	1
+Night.MR-ACC XX	White Scintimure Tentacle	5
+Night.MR-ACC XX	Marine Rutile	1
+Weather.FOG-RES	Vibrant Plume	1
+Weather.FOG-RES	Arc Sand Ore	1
+Weather.RAIN-RES	Fine Duoguill Fishmeal	1
+Weather.RAIN-RES	Arc Sand Ore	1
+Weather.HEAVY-RAIN-RES	Medicinal Blatta Oil	1
+Weather.HEAVY-RAIN-RES	Arc Sand Ore	1
+Weather.HEAT-RES	Worn Muscle Fiber	1
+Weather.HEAT-RES	Arc Sand Ore	1
+Weather.S-STORM-RES	Alluring Papil Scales	1
+Weather.S-STORM-RES	Arc Sand Ore	1
+Weather.T-STORM RES	Transparent Membrane	1
+Weather.T-STORM RES	Arc Sand Ore	1
+Weather.EM-STORM-RES	Slender Horn	1
+Weather.EM-STORM-RES	Arc Sand Ore	1
+Weather.E-MIST-RES	Dried Seaweed Lichen	1
+Weather.E-MIST-RES	Arc Sand Ore	1
+Weather.RISING-E-MIST-RES	Rough Skin	1
+Weather.RISING-E-MIST-RES	Arc Sand Ore	1
+Weather.BRIMSTONE-RES	Hard Backbone	1
+Weather.BRIMSTONE-RES	Arc Sand Ore	1
+Weather.AURORA-RES	Stiff Hair	1
+Weather.AURORA-RES	Arc Sand Ore	1
+Weather.C-AURORA-RES	Shiny Mortifole Seed	1
+Weather.C-AURORA-RES	Arc Sand Ore	1
+Weather.SPORE-RES	Viscous Humour	1
+Weather.SPORE-RES	Arc Sand Ore	1
+Weather.METEOR-RES	Marbled Suid Fillet	1
+Weather.METEOR-RES	Arc Sand Ore	1
+Weather.DAMAGE-RES I	Blue Forfex Shell	1
+Weather.DAMAGE-RES I	Auravis Courtship Feather	1
+Weather.DAMAGE-RES I	Aurorite	1
+Weather.DAMAGE-RES V	Blue Forfex Shell	2
+Weather.DAMAGE-RES V	Auravis Courtship Feather	2
+Weather.DAMAGE-RES V	Infernium	1
+Weather.DAMAGE-RES X	Blue Forfex Shell	3
+Weather.DAMAGE-RES X	Blue Vigent Rock Scalp	3
+Weather.DAMAGE-RES X	Cimmerian Cinnabar	1
+Weather.DAMAGE-RES XV	Blue Forfex Shell	4
+Weather.DAMAGE-RES XV	Blue Vigent Rock Scalp	4
+Weather.DAMAGE-RES XV	Ouroboros Crystal	1
+Weather.DAMAGE-RES XX	Blue Forfex Shell	5
+Weather.DAMAGE-RES XX	Blue Vigent Rock Scalp	5
+Weather.DAMAGE-RES XX	Parhelion Platinum	1
+\.
+
+
+--
+-- Data for Name: augment_upgrade; Type: TABLE DATA; Schema: xenox; Owner: poppi
+--
+
+COPY xenox.augment_upgrade (name, material, amount) FROM stdin;
+Max HP Up I	Succulent Meat	1
+Max HP Up II	Succulent Meat	1
+Max HP Up III	Succulent Meat	1
+Max HP Up IV	Succulent Meat	2
+Max HP Up V	Succulent Meat	2
+Max HP Up VI	Succulent Meat	2
+Max HP Up VII	Succulent Meat	2
+Max HP Up VIII	Succulent Meat	2
+Max HP Up IX	Succulent Meat	3
+Max HP Up X	Succulent Meat	3
+Max HP Up XI	Succulent Meat	3
+Max HP Up XII	Succulent Meat	3
+Max HP Up XIII	Succulent Meat	3
+Max HP Up XIV	Succulent Meat	4
+Max HP Up XV	Succulent Meat	4
+Max HP Up XVI	Succulent Meat	4
+Max HP Up XVII	Succulent Meat	4
+Max HP Up XVIII	Succulent Meat	4
+Max HP Up XIX	Succulent Meat	5
+Max TP Up I	Fleecy Fur	1
+Max TP Up II	Fleecy Fur	1
+Max TP Up III	Fleecy Fur	1
+Max TP Up IV	Fleecy Fur	2
+Max TP Up V	Fleecy Fur	2
+Max TP Up VI	Fleecy Fur	2
+Max TP Up VII	Fleecy Fur	2
+Max TP Up VIII	Fleecy Fur	2
+Max TP Up IX	Fleecy Fur	3
+Max TP Up X	Fleecy Fur	3
+Max TP Up XI	Fleecy Fur	3
+Max TP Up XII	Fleecy Fur	3
+Max TP Up XIII	Fleecy Fur	3
+Max TP Up XIV	Fleecy Fur	4
+Max TP Up XV	Fleecy Fur	4
+Max TP Up XVI	Fleecy Fur	4
+Max TP Up XVII	Fleecy Fur	4
+Max TP Up XVIII	Fleecy Fur	4
+Max TP Up XIX	Fleecy Fur	5
+Melee Accuracy Up I	Muscled Suid Bulge	1
+Melee Accuracy Up II	Muscled Suid Bulge	1
+Melee Accuracy Up III	Muscled Suid Bulge	1
+Melee Accuracy Up IV	Muscled Suid Bulge	2
+Melee Accuracy Up V	Muscled Suid Bulge	2
+Melee Accuracy Up VI	Muscled Suid Bulge	2
+Melee Accuracy Up VII	Muscled Suid Bulge	2
+Melee Accuracy Up VIII	Muscled Suid Bulge	2
+Melee Accuracy Up IX	Muscled Suid Bulge	3
+Melee Accuracy Up X	Muscled Suid Bulge	3
+Melee Accuracy Up XI	Muscled Suid Bulge	3
+Melee Accuracy Up XII	Muscled Suid Bulge	3
+Melee Accuracy Up XIII	Muscled Suid Bulge	3
+Melee Accuracy Up XIV	Muscled Suid Bulge	4
+Melee Accuracy Up XV	Muscled Suid Bulge	4
+Melee Accuracy Up XVI	Muscled Suid Bulge	4
+Melee Accuracy Up XVII	Muscled Suid Bulge	4
+Melee Accuracy Up XVIII	Muscled Suid Bulge	4
+Melee Accuracy Up XIX	Muscled Suid Bulge	5
+Ranged Accuracy Up I	Appetizing Suid Tail	1
+Ranged Accuracy Up II	Appetizing Suid Tail	1
+Ranged Accuracy Up III	Appetizing Suid Tail	1
+Ranged Accuracy Up IV	Appetizing Suid Tail	2
+Ranged Accuracy Up V	Appetizing Suid Tail	2
+Ranged Accuracy Up VI	Appetizing Suid Tail	2
+Ranged Accuracy Up VII	Appetizing Suid Tail	2
+Ranged Accuracy Up VIII	Appetizing Suid Tail	2
+Ranged Accuracy Up IX	Appetizing Suid Tail	3
+Ranged Accuracy Up X	Appetizing Suid Tail	3
+Ranged Accuracy Up XI	Appetizing Suid Tail	3
+Ranged Accuracy Up XII	Appetizing Suid Tail	3
+Ranged Accuracy Up XIII	Appetizing Suid Tail	3
+Ranged Accuracy Up XIV	Appetizing Suid Tail	4
+Ranged Accuracy Up XV	Appetizing Suid Tail	4
+Ranged Accuracy Up XVI	Appetizing Suid Tail	4
+Ranged Accuracy Up XVII	Appetizing Suid Tail	4
+Ranged Accuracy Up XVIII	Appetizing Suid Tail	4
+Ranged Accuracy Up XIX	Appetizing Suid Tail	5
+Evasion Up I	Black Fog Deposits	1
+Evasion Up II	Black Fog Deposits	1
+Evasion Up III	Black Fog Deposits	1
+Evasion Up IV	Black Fog Deposits	2
+Evasion Up V	Black Fog Deposits	2
+Evasion Up VI	Black Fog Deposits	2
+Evasion Up VII	Black Fog Deposits	2
+Evasion Up VIII	Black Fog Deposits	2
+Evasion Up IX	Black Fog Deposits	3
+Evasion Up X	Cloudy Eyeball	3
+Evasion Up X	Gerrid Shell	3
+Evasion Up X	Jacul Waterfall Orb	3
+Evasion Up XI	Cloudy Eyeball	3
+Evasion Up XI	Gerrid Shell	3
+Evasion Up XI	Jacul Waterfall Orb	3
+Evasion Up XII	Cloudy Eyeball	3
+Evasion Up XII	Gerrid Shell	3
+Evasion Up XII	Jacul Waterfall Orb	3
+Evasion Up XIII	Cloudy Eyeball	3
+Evasion Up XIII	Gerrid Shell	3
+Evasion Up XIII	Jacul Waterfall Orb	3
+Evasion Up XIV	Cloudy Eyeball	4
+Evasion Up XIV	Gerrid Shell	4
+Evasion Up XIV	Jacul Waterfall Orb	4
+Evasion Up XV	Cloudy Eyeball	4
+Evasion Up XV	Gerrid Shell	4
+Evasion Up XV	Jacul Waterfall Orb	4
+Evasion Up XVI	Cloudy Eyeball	4
+Evasion Up XVI	Gerrid Shell	4
+Evasion Up XVI	Jacul Waterfall Orb	4
+Evasion Up XVII	Cloudy Eyeball	4
+Evasion Up XVII	Gerrid Shell	4
+Evasion Up XVII	Jacul Waterfall Orb	4
+Evasion Up XVIII	Cloudy Eyeball	4
+Evasion Up XVIII	Gerrid Shell	4
+Evasion Up XVIII	Jacul Waterfall Orb	4
+Evasion Up XIX	Cloudy Eyeball	5
+Evasion Up XIX	Gerrid Shell	5
+Evasion Up XIX	Jacul Waterfall Orb	5
+Melee Attack Up I	Muscled Suid Bulge	1
+Melee Attack Up II	Muscled Suid Bulge	1
+Melee Attack Up III	Muscled Suid Bulge	1
+Melee Attack Up IV	Muscled Suid Bulge	2
+Melee Attack Up V	Muscled Suid Bulge	2
+Melee Attack Up VI	Muscled Suid Bulge	2
+Melee Attack Up VII	Muscled Suid Bulge	2
+Melee Attack Up VIII	Muscled Suid Bulge	2
+Melee Attack Up IX	Muscled Suid Bulge	3
+Melee Attack Up X	Blue Sylooth Brace	3
+Melee Attack Up X	White Sylooth Brace	3
+Melee Attack Up X	Muscled Cantor Bulge	3
+Melee Attack Up XI	Blue Sylooth Brace	3
+Melee Attack Up XI	White Sylooth Brace	3
+Melee Attack Up XI	Muscled Cantor Bulge	3
+Melee Attack Up XII	Blue Sylooth Brace	3
+Melee Attack Up XII	White Sylooth Brace	3
+Melee Attack Up XII	Muscled Cantor Bulge	3
+Melee Attack Up XIII	Blue Sylooth Brace	3
+Melee Attack Up XIII	White Sylooth Brace	3
+Melee Attack Up XIII	Muscled Cantor Bulge	3
+Melee Attack Up XIV	Blue Sylooth Brace	4
+Melee Attack Up XIV	White Sylooth Brace	4
+Melee Attack Up XIV	Muscled Cantor Bulge	4
+Melee Attack Up XV	Blue Sylooth Brace	4
+Melee Attack Up XV	White Sylooth Brace	4
+Melee Attack Up XV	Muscled Cantor Bulge	4
+Melee Attack Up XVI	Blue Sylooth Brace	4
+Melee Attack Up XVI	White Sylooth Brace	4
+Melee Attack Up XVI	Muscled Cantor Bulge	4
+Melee Attack Up XVII	Blue Sylooth Brace	4
+Melee Attack Up XVII	White Sylooth Brace	4
+Melee Attack Up XVII	Muscled Cantor Bulge	4
+Melee Attack Up XVIII	Blue Sylooth Brace	4
+Melee Attack Up XVIII	White Sylooth Brace	4
+Melee Attack Up XVIII	Muscled Cantor Bulge	4
+Melee Attack Up XIX	Blue Sylooth Brace	5
+Melee Attack Up XIX	White Sylooth Brace	5
+Melee Attack Up XIX	Muscled Cantor Bulge	5
+Ranged Attack Up I	Appetizing Suid Tail	1
+Ranged Attack Up II	Appetizing Suid Tail	1
+Ranged Attack Up III	Appetizing Suid Tail	1
+Ranged Attack Up IV	Appetizing Suid Tail	2
+Ranged Attack Up V	Appetizing Suid Tail	2
+Ranged Attack Up VI	Appetizing Suid Tail	2
+Ranged Attack Up VII	Appetizing Suid Tail	2
+Ranged Attack Up VIII	Appetizing Suid Tail	2
+Ranged Attack Up IX	Appetizing Suid Tail	3
+Ranged Attack Up X	O.X. Unit	3
+Ranged Attack Up X	Eternal Arenatect Moss	3
+Ranged Attack Up X	Green Jacul Wing	3
+Ranged Attack Up XI	O.X. Unit	3
+Ranged Attack Up XI	Eternal Arenatect Moss	3
+Ranged Attack Up XI	Green Jacul Wing	3
+Ranged Attack Up XII	O.X. Unit	3
+Ranged Attack Up XII	Eternal Arenatect Moss	3
+Ranged Attack Up XII	Green Jacul Wing	3
+Ranged Attack Up XIII	O.X. Unit	3
+Ranged Attack Up XIII	Eternal Arenatect Moss	3
+Ranged Attack Up XIII	Green Jacul Wing	3
+Ranged Attack Up XIV	O.X. Unit	4
+Ranged Attack Up XIV	Eternal Arenatect Moss	4
+Ranged Attack Up XIV	Green Jacul Wing	4
+Ranged Attack Up XV	O.X. Unit	4
+Ranged Attack Up XV	Eternal Arenatect Moss	4
+Ranged Attack Up XV	Green Jacul Wing	4
+Ranged Attack Up XVI	O.X. Unit	4
+Ranged Attack Up XVI	Eternal Arenatect Moss	4
+Ranged Attack Up XVI	Green Jacul Wing	4
+Ranged Attack Up XVII	O.X. Unit	4
+Ranged Attack Up XVII	Eternal Arenatect Moss	4
+Ranged Attack Up XVII	Green Jacul Wing	4
+Ranged Attack Up XVIII	O.X. Unit	4
+Ranged Attack Up XVIII	Eternal Arenatect Moss	4
+Ranged Attack Up XVIII	Green Jacul Wing	4
+Ranged Attack Up XIX	O.X. Unit	5
+Ranged Attack Up XIX	Eternal Arenatect Moss	5
+Ranged Attack Up XIX	Green Jacul Wing	5
+Potential Up I	Fleecy Fur	1
+Potential Up II	Fleecy Fur	1
+Potential Up III	Fleecy Fur	1
+Potential Up IV	Fleecy Fur	2
+Potential Up V	Fleecy Fur	2
+Potential Up VI	Fleecy Fur	2
+Potential Up VII	Fleecy Fur	2
+Potential Up VIII	Fleecy Fur	2
+Potential Up IX	Fleecy Fur	3
+Potential Up X	Distilled Sap	3
+Potential Up X	Blazing Gas Sac	3
+Potential Up X	Lepyx Moonstone	3
+Potential Up XI	Distilled Sap	3
+Potential Up XI	Blazing Gas Sac	3
+Potential Up XI	Lepyx Moonstone	3
+Potential Up XII	Distilled Sap	3
+Potential Up XII	Blazing Gas Sac	3
+Potential Up XII	Lepyx Moonstone	3
+Potential Up XIII	Distilled Sap	3
+Potential Up XIII	Blazing Gas Sac	3
+Potential Up XIII	Lepyx Moonstone	3
+Potential Up XIV	Distilled Sap	4
+Potential Up XIV	Blazing Gas Sac	4
+Potential Up XIV	Lepyx Moonstone	4
+Potential Up XV	Distilled Sap	4
+Potential Up XV	Blazing Gas Sac	4
+Potential Up XV	Lepyx Moonstone	4
+Potential Up XVI	Distilled Sap	4
+Potential Up XVI	Blazing Gas Sac	4
+Potential Up XVI	Lepyx Moonstone	4
+Potential Up XVII	Distilled Sap	4
+Potential Up XVII	Blazing Gas Sac	4
+Potential Up XVII	Lepyx Moonstone	4
+Potential Up XVIII	Distilled Sap	4
+Potential Up XVIII	Blazing Gas Sac	4
+Potential Up XVIII	Lepyx Moonstone	4
+Potential Up XIX	Distilled Sap	5
+Potential Up XIX	Blazing Gas Sac	5
+Potential Up XIX	Lepyx Moonstone	5
+Max HP Boost I	Redwood Aprica Antlers	1
+Max HP Boost I	Raw Meaty Caecus Liver	1
+Max HP Boost I	Succulent Meat	1
+Max HP Boost II	Redwood Aprica Antlers	1
+Melee Accuracy Boost V	Refined Horn	2
+Max HP Boost II	Raw Meaty Caecus Liver	1
+Max HP Boost II	Succulent Meat	1
+Max HP Boost III	Redwood Aprica Antlers	1
+Max HP Boost III	Raw Meaty Caecus Liver	1
+Max HP Boost III	Succulent Meat	1
+Max HP Boost IV	Redwood Aprica Antlers	2
+Max HP Boost IV	Raw Meaty Caecus Liver	2
+Max HP Boost IV	Succulent Meat	2
+Max HP Boost V	Redwood Aprica Antlers	2
+Max HP Boost V	Raw Meaty Caecus Liver	2
+Max HP Boost V	Succulent Meat	2
+Max HP Boost VI	Redwood Aprica Antlers	2
+Max HP Boost VI	Raw Meaty Caecus Liver	2
+Max HP Boost VI	Succulent Meat	2
+Max HP Boost VII	Redwood Aprica Antlers	2
+Max HP Boost VII	Raw Meaty Caecus Liver	2
+Max HP Boost VII	Succulent Meat	2
+Max HP Boost VIII	Redwood Aprica Antlers	2
+Max HP Boost VIII	Raw Meaty Caecus Liver	2
+Max HP Boost VIII	Succulent Meat	2
+Max HP Boost IX	Redwood Aprica Antlers	3
+Max HP Boost IX	Raw Meaty Caecus Liver	3
+Max HP Boost IX	Succulent Meat	3
+Max HP Boost X	Redwood Aprica Antlers	3
+Max HP Boost X	Golden Cantor Tooth	3
+Max HP Boost X	Big Balaena Water Bag	3
+Max HP Boost XI	Redwood Aprica Antlers	3
+Max HP Boost XI	Golden Cantor Tooth	3
+Max HP Boost XI	Big Balaena Water Bag	3
+Max HP Boost XII	Redwood Aprica Antlers	3
+Max HP Boost XII	Golden Cantor Tooth	3
+Max HP Boost XII	Big Balaena Water Bag	3
+Max HP Boost XIII	Redwood Aprica Antlers	3
+Max HP Boost XIII	Golden Cantor Tooth	3
+Max HP Boost XIII	Big Balaena Water Bag	3
+Max HP Boost XIV	Redwood Aprica Antlers	4
+Max HP Boost XIV	Golden Cantor Tooth	4
+Max HP Boost XIV	Big Balaena Water Bag	4
+Max HP Boost XV	Redwood Aprica Antlers	4
+Max HP Boost XV	Golden Cantor Tooth	4
+Max HP Boost XV	Big Balaena Water Bag	4
+Max HP Boost XVI	Redwood Aprica Antlers	4
+Max HP Boost XVI	Golden Cantor Tooth	4
+Max HP Boost XVI	Big Balaena Water Bag	4
+Max HP Boost XVII	Redwood Aprica Antlers	4
+Max HP Boost XVII	Golden Cantor Tooth	4
+Max HP Boost XVII	Big Balaena Water Bag	4
+Max HP Boost XVIII	Redwood Aprica Antlers	4
+Max HP Boost XVIII	Golden Cantor Tooth	4
+Max HP Boost XVIII	Big Balaena Water Bag	4
+Max HP Boost XIX	Redwood Aprica Antlers	5
+Max HP Boost XIX	Golden Cantor Tooth	5
+Max HP Boost XIX	Big Balaena Water Bag	5
+Max TP Boost I	Hard Pom Pom	1
+Max TP Boost I	Black Thallus Antenna	1
+Max TP Boost I	Fleecy Fur	1
+Max TP Boost II	Hard Pom Pom	1
+Max TP Boost II	Black Thallus Antenna	1
+Max TP Boost II	Fleecy Fur	1
+Max TP Boost III	Hard Pom Pom	1
+Max TP Boost III	Black Thallus Antenna	1
+Max TP Boost III	Fleecy Fur	1
+Max TP Boost IV	Hard Pom Pom	2
+Max TP Boost IV	Black Thallus Antenna	2
+Max TP Boost IV	Fleecy Fur	2
+Max TP Boost V	Hard Pom Pom	2
+Max TP Boost V	Black Thallus Antenna	2
+Max TP Boost V	Fleecy Fur	2
+Max TP Boost VI	Hard Pom Pom	2
+Max TP Boost VI	Black Thallus Antenna	2
+Max TP Boost VI	Fleecy Fur	2
+Max TP Boost VII	Hard Pom Pom	2
+Max TP Boost VII	Black Thallus Antenna	2
+Max TP Boost VII	Fleecy Fur	2
+Max TP Boost VIII	Hard Pom Pom	2
+Max TP Boost VIII	Black Thallus Antenna	2
+Max TP Boost VIII	Fleecy Fur	2
+Max TP Boost IX	Hard Pom Pom	3
+Max TP Boost IX	Black Thallus Antenna	3
+Max TP Boost IX	Fleecy Fur	3
+Max TP Boost X	Hard Pom Pom	3
+Max TP Boost X	Fatty Fish Belly	3
+Max TP Boost X	Scintimure Fat	3
+Max TP Boost XI	Hard Pom Pom	3
+Max TP Boost XI	Fatty Fish Belly	3
+Max TP Boost XI	Scintimure Fat	3
+Max TP Boost XII	Hard Pom Pom	3
+Max TP Boost XII	Fatty Fish Belly	3
+Max TP Boost XII	Scintimure Fat	3
+Max TP Boost XIII	Hard Pom Pom	3
+Max TP Boost XIII	Fatty Fish Belly	3
+Max TP Boost XIII	Scintimure Fat	3
+Max TP Boost XIV	Hard Pom Pom	4
+Max TP Boost XIV	Fatty Fish Belly	4
+Max TP Boost XIV	Scintimure Fat	4
+Max TP Boost XV	Hard Pom Pom	4
+Max TP Boost XV	Fatty Fish Belly	4
+Max TP Boost XV	Scintimure Fat	4
+Max TP Boost XVI	Hard Pom Pom	4
+Max TP Boost XVI	Fatty Fish Belly	4
+Max TP Boost XVI	Scintimure Fat	4
+Max TP Boost XVII	Hard Pom Pom	4
+Max TP Boost XVII	Fatty Fish Belly	4
+Max TP Boost XVII	Scintimure Fat	4
+Max TP Boost XVIII	Hard Pom Pom	4
+Max TP Boost XVIII	Fatty Fish Belly	4
+Max TP Boost XVIII	Scintimure Fat	4
+Max TP Boost XIX	Hard Pom Pom	5
+Max TP Boost XIX	Fatty Fish Belly	5
+Max TP Boost XIX	Scintimure Fat	5
+Melee Accuracy Boost I	Refined Horn	1
+Melee Accuracy Boost I	Muscled Suid Bulge	1
+Melee Accuracy Boost II	Refined Horn	1
+Melee Accuracy Boost II	Muscled Suid Bulge	1
+Melee Accuracy Boost III	Refined Horn	1
+Melee Accuracy Boost III	Muscled Suid Bulge	1
+Melee Accuracy Boost IV	Refined Horn	2
+Melee Accuracy Boost IV	Muscled Suid Bulge	2
+Melee Accuracy Boost V	Muscled Suid Bulge	2
+Melee Accuracy Boost VI	Refined Horn	2
+Melee Accuracy Boost VI	Muscled Suid Bulge	2
+Melee Accuracy Boost VII	Refined Horn	2
+Melee Accuracy Boost VII	Muscled Suid Bulge	2
+Melee Accuracy Boost VIII	Refined Horn	2
+Melee Accuracy Boost VIII	Muscled Suid Bulge	2
+Melee Accuracy Boost IX	Refined Horn	3
+Melee Accuracy Boost IX	Muscled Suid Bulge	3
+Melee Accuracy Boost X	Refined Horn	3
+Melee Accuracy Boost X	Black Steel Heavy Armor	3
+Melee Accuracy Boost XI	Refined Horn	3
+Melee Accuracy Boost XI	Black Steel Heavy Armor	3
+Melee Accuracy Boost XII	Refined Horn	3
+Melee Accuracy Boost XII	Black Steel Heavy Armor	3
+Melee Accuracy Boost XIII	Refined Horn	3
+Melee Accuracy Boost XIII	Black Steel Heavy Armor	3
+Melee Accuracy Boost XIV	Refined Horn	4
+Melee Accuracy Boost XIV	Black Steel Heavy Armor	4
+Melee Accuracy Boost XV	Refined Horn	4
+Melee Accuracy Boost XV	Black Steel Heavy Armor	4
+Melee Accuracy Boost XVI	Refined Horn	4
+Melee Accuracy Boost XVI	Black Steel Heavy Armor	4
+Melee Accuracy Boost XVII	Refined Horn	4
+Melee Accuracy Boost XVII	Black Steel Heavy Armor	4
+Melee Accuracy Boost XVIII	Refined Horn	4
+Melee Accuracy Boost XVIII	Black Steel Heavy Armor	4
+Melee Accuracy Boost XIX	Refined Horn	5
+Melee Accuracy Boost XIX	Black Steel Heavy Armor	5
+Ranged Accuracy Boost I	Scratched Jewel	1
+Ranged Accuracy Boost I	Appetizing Suid Tail	1
+Ranged Accuracy Boost II	Scratched Jewel	1
+Ranged Accuracy Boost II	Appetizing Suid Tail	1
+Ranged Accuracy Boost III	Scratched Jewel	1
+Ranged Accuracy Boost III	Appetizing Suid Tail	1
+Ranged Accuracy Boost IV	Scratched Jewel	2
+Ranged Accuracy Boost IV	Appetizing Suid Tail	2
+Ranged Accuracy Boost V	Scratched Jewel	2
+Ranged Accuracy Boost V	Appetizing Suid Tail	2
+Ranged Accuracy Boost VI	Scratched Jewel	2
+Ranged Accuracy Boost VI	Appetizing Suid Tail	2
+Ranged Accuracy Boost VII	Scratched Jewel	2
+Ranged Accuracy Boost VII	Appetizing Suid Tail	2
+Ranged Accuracy Boost VIII	Scratched Jewel	2
+Ranged Accuracy Boost VIII	Appetizing Suid Tail	2
+Ranged Accuracy Boost IX	Scratched Jewel	3
+Ranged Accuracy Boost IX	Appetizing Suid Tail	3
+Ranged Accuracy Boost X	Scratched Jewel	3
+Ranged Accuracy Boost X	Upgraded Spindle Part	3
+Ranged Accuracy Boost XI	Scratched Jewel	3
+Ranged Accuracy Boost XI	Upgraded Spindle Part	3
+Ranged Accuracy Boost XII	Scratched Jewel	3
+Ranged Accuracy Boost XII	Upgraded Spindle Part	3
+Ranged Accuracy Boost XIII	Scratched Jewel	3
+Ranged Accuracy Boost XIII	Upgraded Spindle Part	3
+Ranged Accuracy Boost XIV	Scratched Jewel	4
+Ranged Accuracy Boost XIV	Upgraded Spindle Part	4
+Ranged Accuracy Boost XV	Scratched Jewel	4
+Ranged Accuracy Boost XV	Upgraded Spindle Part	4
+Ranged Accuracy Boost XVI	Scratched Jewel	4
+Ranged Accuracy Boost XVI	Upgraded Spindle Part	4
+Ranged Accuracy Boost XVII	Scratched Jewel	4
+Ranged Accuracy Boost XVII	Upgraded Spindle Part	4
+Ranged Accuracy Boost XVIII	Scratched Jewel	4
+Ranged Accuracy Boost XVIII	Upgraded Spindle Part	4
+Ranged Accuracy Boost XIX	Scratched Jewel	5
+Ranged Accuracy Boost XIX	Upgraded Spindle Part	5
+Evasion Boost I	Slimy Epithelium	1
+Evasion Boost I	Fal-swo Solar Crest	1
+Evasion Boost I	Black Fog Deposits	1
+Evasion Boost II	Slimy Epithelium	1
+Evasion Boost II	Fal-swo Solar Crest	1
+Evasion Boost II	Black Fog Deposits	1
+Evasion Boost III	Slimy Epithelium	1
+Evasion Boost III	Fal-swo Solar Crest	1
+Evasion Boost III	Black Fog Deposits	1
+Evasion Boost IV	Slimy Epithelium	2
+Evasion Boost IV	Fal-swo Solar Crest	2
+Evasion Boost IV	Black Fog Deposits	2
+Evasion Boost V	Slimy Epithelium	2
+Evasion Boost V	Fal-swo Solar Crest	2
+Evasion Boost V	Black Fog Deposits	2
+Evasion Boost VI	Slimy Epithelium	2
+Evasion Boost VI	Fal-swo Solar Crest	2
+Evasion Boost VI	Black Fog Deposits	2
+Evasion Boost VII	Slimy Epithelium	2
+Evasion Boost VII	Fal-swo Solar Crest	2
+Evasion Boost VII	Black Fog Deposits	2
+Evasion Boost VIII	Slimy Epithelium	2
+Evasion Boost VIII	Fal-swo Solar Crest	2
+Evasion Boost VIII	Black Fog Deposits	2
+Evasion Boost IX	Slimy Epithelium	3
+Evasion Boost IX	Fal-swo Solar Crest	3
+Evasion Boost IX	Black Fog Deposits	3
+Evasion Boost X	Slimy Epithelium	3
+Evasion Boost X	Brilliant Tersqual Liquid	3
+Evasion Boost X	Blinding Lophid Extract	3
+Evasion Boost XI	Slimy Epithelium	3
+Evasion Boost XI	Brilliant Tersqual Liquid	3
+Evasion Boost XI	Blinding Lophid Extract	3
+Evasion Boost XII	Slimy Epithelium	3
+Evasion Boost XII	Brilliant Tersqual Liquid	3
+Evasion Boost XII	Blinding Lophid Extract	3
+Evasion Boost XIII	Slimy Epithelium	3
+Evasion Boost XIII	Brilliant Tersqual Liquid	3
+Evasion Boost XIII	Blinding Lophid Extract	3
+Evasion Boost XIV	Slimy Epithelium	4
+Evasion Boost XIV	Brilliant Tersqual Liquid	4
+Evasion Boost XIV	Blinding Lophid Extract	4
+Evasion Boost XV	Slimy Epithelium	4
+Evasion Boost XV	Brilliant Tersqual Liquid	4
+Evasion Boost XV	Blinding Lophid Extract	4
+Evasion Boost XVI	Slimy Epithelium	4
+Evasion Boost XVI	Brilliant Tersqual Liquid	4
+Evasion Boost XVI	Blinding Lophid Extract	4
+Evasion Boost XVII	Slimy Epithelium	4
+Evasion Boost XVII	Brilliant Tersqual Liquid	4
+Evasion Boost XVII	Blinding Lophid Extract	4
+Evasion Boost XVIII	Slimy Epithelium	4
+Evasion Boost XVIII	Brilliant Tersqual Liquid	4
+Evasion Boost XVIII	Blinding Lophid Extract	4
+Evasion Boost XIX	Slimy Epithelium	5
+Evasion Boost XIX	Brilliant Tersqual Liquid	5
+Evasion Boost XIX	Blinding Lophid Extract	5
+Melee Attack Boost I	Pure White Caro Tusk	1
+Melee Attack Boost I	Thick Falsaxum Horn	1
+Melee Attack Boost I	Muscled Suid Bulge	1
+Melee Attack Boost II	Pure White Caro Tusk	1
+Melee Attack Boost II	Thick Falsaxum Horn	1
+Melee Attack Boost II	Muscled Suid Bulge	1
+Melee Attack Boost III	Pure White Caro Tusk	1
+Melee Attack Boost III	Thick Falsaxum Horn	1
+Melee Attack Boost III	Muscled Suid Bulge	1
+Melee Attack Boost IV	Pure White Caro Tusk	2
+Melee Attack Boost IV	Thick Falsaxum Horn	2
+Melee Attack Boost IV	Muscled Suid Bulge	2
+Melee Attack Boost V	Pure White Caro Tusk	2
+Melee Attack Boost V	Thick Falsaxum Horn	2
+Melee Attack Boost V	Muscled Suid Bulge	2
+Melee Attack Boost VI	Pure White Caro Tusk	2
+Melee Attack Boost VI	Thick Falsaxum Horn	2
+Melee Attack Boost VI	Muscled Suid Bulge	2
+Melee Attack Boost VII	Pure White Caro Tusk	2
+Melee Attack Boost VII	Thick Falsaxum Horn	2
+Melee Attack Boost VII	Muscled Suid Bulge	2
+Melee Attack Boost VIII	Pure White Caro Tusk	2
+Melee Attack Boost VIII	Thick Falsaxum Horn	2
+Melee Attack Boost VIII	Muscled Suid Bulge	2
+Melee Attack Boost IX	Pure White Caro Tusk	3
+Melee Attack Boost IX	Thick Falsaxum Horn	3
+Melee Attack Boost IX	Muscled Suid Bulge	3
+Melee Attack Boost X	Pure White Caro Tusk	3
+Melee Attack Boost X	Standard Blade Module	3
+Melee Attack Boost X	Lone Purple Ictus Stinger	3
+Melee Attack Boost XI	Pure White Caro Tusk	3
+Melee Attack Boost XI	Standard Blade Module	3
+Melee Attack Boost XI	Lone Purple Ictus Stinger	3
+Melee Attack Boost XII	Pure White Caro Tusk	3
+Melee Attack Boost XII	Standard Blade Module	3
+Melee Attack Boost XII	Lone Purple Ictus Stinger	3
+Melee Attack Boost XIII	Pure White Caro Tusk	3
+Melee Attack Boost XIII	Standard Blade Module	3
+Melee Attack Boost XIII	Lone Purple Ictus Stinger	3
+Melee Attack Boost XIV	Pure White Caro Tusk	4
+Melee Attack Boost XIV	Standard Blade Module	4
+Melee Attack Boost XIV	Lone Purple Ictus Stinger	4
+Melee Attack Boost XV	Pure White Caro Tusk	4
+Melee Attack Boost XV	Standard Blade Module	4
+Melee Attack Boost XV	Lone Purple Ictus Stinger	4
+Melee Attack Boost XVI	Pure White Caro Tusk	4
+Melee Attack Boost XVI	Standard Blade Module	4
+Melee Attack Boost XVI	Lone Purple Ictus Stinger	4
+Melee Attack Boost XVII	Pure White Caro Tusk	4
+Melee Attack Boost XVII	Standard Blade Module	4
+Melee Attack Boost XVII	Lone Purple Ictus Stinger	4
+Melee Attack Boost XVIII	Pure White Caro Tusk	4
+Melee Attack Boost XVIII	Standard Blade Module	4
+Melee Attack Boost XVIII	Lone Purple Ictus Stinger	4
+Melee Attack Boost XIX	Pure White Caro Tusk	5
+Melee Attack Boost XIX	Standard Blade Module	5
+Melee Attack Boost XIX	Lone Purple Ictus Stinger	5
+Ranged Attack Boost I	Beryl Aetrygon Horn	1
+Ranged Attack Boost I	Pure White Caro Tusk	1
+Ranged Attack Boost I	Appetizing Suid Tail	1
+Ranged Attack Boost II	Beryl Aetrygon Horn	1
+Ranged Attack Boost II	Pure White Caro Tusk	1
+Ranged Attack Boost II	Appetizing Suid Tail	1
+Ranged Attack Boost III	Beryl Aetrygon Horn	1
+Ranged Attack Boost III	Pure White Caro Tusk	1
+Ranged Attack Boost III	Appetizing Suid Tail	1
+Ranged Attack Boost IV	Beryl Aetrygon Horn	2
+Ranged Attack Boost IV	Pure White Caro Tusk	2
+Ranged Attack Boost IV	Appetizing Suid Tail	2
+Ranged Attack Boost V	Beryl Aetrygon Horn	2
+Ranged Attack Boost V	Pure White Caro Tusk	2
+Ranged Attack Boost V	Appetizing Suid Tail	2
+Ranged Attack Boost VI	Beryl Aetrygon Horn	2
+Ranged Attack Boost VI	Pure White Caro Tusk	2
+Ranged Attack Boost VI	Appetizing Suid Tail	2
+Ranged Attack Boost VII	Beryl Aetrygon Horn	2
+Ranged Attack Boost VII	Pure White Caro Tusk	2
+Ranged Attack Boost VII	Appetizing Suid Tail	2
+Ranged Attack Boost VIII	Beryl Aetrygon Horn	2
+Ranged Attack Boost VIII	Pure White Caro Tusk	2
+Ranged Attack Boost VIII	Appetizing Suid Tail	2
+Ranged Attack Boost IX	Beryl Aetrygon Horn	3
+Ranged Attack Boost IX	Pure White Caro Tusk	3
+Ranged Attack Boost IX	Appetizing Suid Tail	3
+Ranged Attack Boost X	Beryl Aetrygon Horn	3
+Ranged Attack Boost X	Black Petramand Silk	3
+Ranged Attack Boost X	Lone White Ictus Stinger	3
+Ranged Attack Boost XI	Beryl Aetrygon Horn	3
+Ranged Attack Boost XI	Black Petramand Silk	3
+Ranged Attack Boost XI	Lone White Ictus Stinger	3
+Ranged Attack Boost XII	Beryl Aetrygon Horn	3
+Ranged Attack Boost XII	Black Petramand Silk	3
+Ranged Attack Boost XII	Lone White Ictus Stinger	3
+Ranged Attack Boost XIII	Beryl Aetrygon Horn	3
+Ranged Attack Boost XIII	Black Petramand Silk	3
+Ranged Attack Boost XIII	Lone White Ictus Stinger	3
+Ranged Attack Boost XIV	Beryl Aetrygon Horn	4
+Ranged Attack Boost XIV	Black Petramand Silk	4
+Ranged Attack Boost XIV	Lone White Ictus Stinger	4
+Ranged Attack Boost XV	Beryl Aetrygon Horn	4
+Ranged Attack Boost XV	Black Petramand Silk	4
+Ranged Attack Boost XV	Lone White Ictus Stinger	4
+Ranged Attack Boost XVI	Beryl Aetrygon Horn	4
+Ranged Attack Boost XVI	Black Petramand Silk	4
+Ranged Attack Boost XVI	Lone White Ictus Stinger	4
+Ranged Attack Boost XVII	Beryl Aetrygon Horn	4
+Ranged Attack Boost XVII	Black Petramand Silk	4
+Ranged Attack Boost XVII	Lone White Ictus Stinger	4
+Ranged Attack Boost XVIII	Beryl Aetrygon Horn	4
+Ranged Attack Boost XVIII	Black Petramand Silk	4
+Ranged Attack Boost XVIII	Lone White Ictus Stinger	4
+Ranged Attack Boost XIX	Beryl Aetrygon Horn	5
+Ranged Attack Boost XIX	Black Petramand Silk	5
+Ranged Attack Boost XIX	Lone White Ictus Stinger	5
+Potential Boost I	Nutritious Microbes	1
+Potential Boost I	White Fungal Egg	1
+Potential Boost I	Fleecy Fur	1
+Potential Boost II	Nutritious Microbes	1
+Potential Boost II	White Fungal Egg	1
+Potential Boost II	Fleecy Fur	1
+Potential Boost III	Nutritious Microbes	1
+Potential Boost III	White Fungal Egg	1
+Potential Boost III	Fleecy Fur	1
+Potential Boost IV	Nutritious Microbes	2
+Potential Boost IV	White Fungal Egg	2
+Potential Boost IV	Fleecy Fur	2
+Potential Boost V	Nutritious Microbes	2
+Potential Boost V	White Fungal Egg	2
+Potential Boost V	Fleecy Fur	2
+Potential Boost VI	Nutritious Microbes	2
+Potential Boost VI	White Fungal Egg	2
+Potential Boost VI	Fleecy Fur	2
+Potential Boost VII	Nutritious Microbes	2
+Potential Boost VII	White Fungal Egg	2
+Potential Boost VII	Fleecy Fur	2
+Potential Boost VIII	Nutritious Microbes	2
+Potential Boost VIII	White Fungal Egg	2
+Potential Boost VIII	Fleecy Fur	2
+Potential Boost IX	Nutritious Microbes	3
+Potential Boost IX	White Fungal Egg	3
+Potential Boost IX	Fleecy Fur	3
+Potential Boost X	Nutritious Microbes	3
+Potential Boost X	Clear Gerrid Soup	3
+Potential Boost X	Gularthian Everflame	3
+Potential Boost XI	Nutritious Microbes	3
+Potential Boost XI	Clear Gerrid Soup	3
+Potential Boost XI	Gularthian Everflame	3
+Potential Boost XII	Nutritious Microbes	3
+Potential Boost XII	Clear Gerrid Soup	3
+Potential Boost XII	Gularthian Everflame	3
+Potential Boost XIII	Nutritious Microbes	3
+Potential Boost XIII	Clear Gerrid Soup	3
+Potential Boost XIII	Gularthian Everflame	3
+Potential Boost XIV	Nutritious Microbes	4
+Potential Boost XIV	Clear Gerrid Soup	4
+Potential Boost XIV	Gularthian Everflame	4
+Potential Boost XV	Nutritious Microbes	4
+Potential Boost XV	Clear Gerrid Soup	4
+Potential Boost XV	Gularthian Everflame	4
+Potential Boost XVI	Nutritious Microbes	4
+Potential Boost XVI	Clear Gerrid Soup	4
+Potential Boost XVI	Gularthian Everflame	4
+Potential Boost XVII	Nutritious Microbes	4
+Potential Boost XVII	Clear Gerrid Soup	4
+Potential Boost XVII	Gularthian Everflame	4
+Potential Boost XVIII	Nutritious Microbes	4
+Potential Boost XVIII	Clear Gerrid Soup	4
+Potential Boost XVIII	Gularthian Everflame	4
+Potential Boost XIX	Nutritious Microbes	5
+Potential Boost XIX	Clear Gerrid Soup	5
+Potential Boost XIX	Gularthian Everflame	5
+Max HP Drive I	Succulent Meat	1
+Max HP Drive I	Fresh Fish Meat	1
+Max HP Drive II	Succulent Meat	1
+Max HP Drive II	Fresh Fish Meat	1
+Max HP Drive III	Succulent Meat	1
+Max HP Drive III	Fresh Fish Meat	1
+Max HP Drive IV	Succulent Meat	2
+Max HP Drive IV	Fresh Fish Meat	2
+Max HP Drive V	Succulent Meat	2
+Max HP Drive V	Fresh Fish Meat	2
+Max HP Drive VI	Succulent Meat	2
+Max HP Drive VI	Fresh Fish Meat	2
+Max HP Drive VII	Succulent Meat	2
+Max HP Drive VII	Fresh Fish Meat	2
+Max HP Drive VIII	Succulent Meat	2
+Max HP Drive VIII	Fresh Fish Meat	2
+Max HP Drive IX	Succulent Meat	3
+Max HP Drive IX	Fresh Fish Meat	3
+Max HP Drive X	Succulent Meat	3
+Max HP Drive X	E.M. Unit	3
+Max HP Drive XI	Succulent Meat	3
+Max HP Drive XI	E.M. Unit	3
+Max HP Drive XII	Succulent Meat	3
+Max HP Drive XII	E.M. Unit	3
+Max HP Drive XIII	Succulent Meat	3
+Max HP Drive XIII	E.M. Unit	3
+Max HP Drive XIV	Succulent Meat	4
+Max HP Drive XIV	E.M. Unit	4
+Max HP Drive XV	Succulent Meat	4
+Max HP Drive XV	E.M. Unit	4
+Max HP Drive XVI	Succulent Meat	4
+Max HP Drive XVI	E.M. Unit	4
+Max HP Drive XVII	Succulent Meat	4
+Max HP Drive XVII	E.M. Unit	4
+Max HP Drive XVIII	Succulent Meat	4
+Max HP Drive XVIII	E.M. Unit	4
+Max HP Drive XIX	Succulent Meat	5
+Max HP Drive XIX	E.M. Unit	5
+Max GP Drive I	Fleecy Fur	1
+Max GP Drive I	Gooey Gunge	1
+Max GP Drive II	Fleecy Fur	1
+Max GP Drive II	Gooey Gunge	1
+Max GP Drive III	Fleecy Fur	1
+Max GP Drive III	Gooey Gunge	1
+Max GP Drive IV	Fleecy Fur	2
+Max GP Drive IV	Gooey Gunge	2
+Max GP Drive V	Fleecy Fur	2
+Max GP Drive V	Gooey Gunge	2
+Max GP Drive VI	Fleecy Fur	2
+Max GP Drive VI	Gooey Gunge	2
+Max GP Drive VII	Fleecy Fur	2
+Max GP Drive VII	Gooey Gunge	2
+Max GP Drive VIII	Fleecy Fur	2
+Max GP Drive VIII	Gooey Gunge	2
+Max GP Drive IX	Fleecy Fur	3
+Max GP Drive IX	Gooey Gunge	3
+Max GP Drive X	Fleecy Fur	3
+Max GP Drive X	S.P. Unit	3
+Max GP Drive XI	Fleecy Fur	3
+Max GP Drive XI	S.P. Unit	3
+Max GP Drive XII	Fleecy Fur	3
+Max GP Drive XII	S.P. Unit	3
+Max GP Drive XIII	Fleecy Fur	3
+Max GP Drive XIII	S.P. Unit	3
+Max GP Drive XIV	Fleecy Fur	4
+Max GP Drive XIV	S.P. Unit	4
+Max GP Drive XV	Fleecy Fur	4
+Max GP Drive XV	S.P. Unit	4
+Max GP Drive XVI	Fleecy Fur	4
+Max GP Drive XVI	S.P. Unit	4
+Max GP Drive XVII	Fleecy Fur	4
+Max GP Drive XVII	S.P. Unit	4
+Max GP Drive XVIII	Fleecy Fur	4
+Max GP Drive XVIII	S.P. Unit	4
+Max GP Drive XIX	Fleecy Fur	5
+Max GP Drive XIX	S.P. Unit	5
+Melee Accuracy Drive I	Muscled Suid Bulge	1
+Melee Accuracy Drive I	Combat Boost Meds	1
+Melee Accuracy Drive II	Muscled Suid Bulge	1
+Melee Accuracy Drive II	Combat Boost Meds	1
+Melee Accuracy Drive III	Muscled Suid Bulge	1
+Melee Accuracy Drive III	Combat Boost Meds	1
+Melee Accuracy Drive IV	Muscled Suid Bulge	2
+Melee Accuracy Drive IV	Combat Boost Meds	2
+Melee Accuracy Drive V	Muscled Suid Bulge	2
+Melee Accuracy Drive V	Combat Boost Meds	2
+Melee Accuracy Drive VI	Muscled Suid Bulge	2
+Melee Accuracy Drive VI	Combat Boost Meds	2
+Melee Accuracy Drive VII	Muscled Suid Bulge	2
+Melee Accuracy Drive VII	Combat Boost Meds	2
+Melee Accuracy Drive VIII	Muscled Suid Bulge	2
+Melee Accuracy Drive VIII	Combat Boost Meds	2
+Melee Accuracy Drive IX	Muscled Suid Bulge	3
+Melee Accuracy Drive IX	Combat Boost Meds	3
+Melee Accuracy Drive X	Muscled Suid Bulge	3
+Melee Accuracy Drive X	T.P. Unit	3
+Melee Accuracy Drive XI	Muscled Suid Bulge	3
+Melee Accuracy Drive XI	T.P. Unit	3
+Melee Accuracy Drive XII	Muscled Suid Bulge	3
+Melee Accuracy Drive XII	T.P. Unit	3
+Melee Accuracy Drive XIII	Muscled Suid Bulge	3
+Melee Accuracy Drive XIII	T.P. Unit	3
+Melee Accuracy Drive XIV	Muscled Suid Bulge	4
+Melee Accuracy Drive XIV	T.P. Unit	4
+Melee Accuracy Drive XV	Muscled Suid Bulge	4
+Melee Accuracy Drive XV	T.P. Unit	4
+Melee Accuracy Drive XVI	Muscled Suid Bulge	4
+Melee Accuracy Drive XVI	T.P. Unit	4
+Melee Accuracy Drive XVII	Muscled Suid Bulge	4
+Melee Accuracy Drive XVII	T.P. Unit	4
+Melee Accuracy Drive XVIII	Muscled Suid Bulge	4
+Melee Accuracy Drive XVIII	T.P. Unit	4
+Melee Accuracy Drive XIX	Muscled Suid Bulge	5
+Melee Accuracy Drive XIX	T.P. Unit	5
+Ranged Accuracy Drive I	Appetizing Suid Tail	1
+Ranged Accuracy Drive I	Small Scale	1
+Ranged Accuracy Drive II	Appetizing Suid Tail	1
+Ranged Accuracy Drive II	Small Scale	1
+Ranged Accuracy Drive III	Appetizing Suid Tail	1
+Ranged Accuracy Drive III	Small Scale	1
+Ranged Accuracy Drive IV	Appetizing Suid Tail	2
+Ranged Accuracy Drive IV	Small Scale	2
+Ranged Accuracy Drive V	Appetizing Suid Tail	2
+Ranged Accuracy Drive V	Small Scale	2
+Ranged Accuracy Drive VI	Appetizing Suid Tail	2
+Ranged Accuracy Drive VI	Small Scale	2
+Ranged Accuracy Drive VII	Appetizing Suid Tail	2
+Ranged Accuracy Drive VII	Small Scale	2
+Ranged Accuracy Drive VIII	Appetizing Suid Tail	2
+Ranged Accuracy Drive VIII	Small Scale	2
+Ranged Accuracy Drive IX	Appetizing Suid Tail	3
+Ranged Accuracy Drive IX	Small Scale	3
+Ranged Accuracy Drive X	Appetizing Suid Tail	3
+Ranged Accuracy Drive X	R.B. Unit	3
+Ranged Accuracy Drive XI	Appetizing Suid Tail	3
+Ranged Accuracy Drive XI	R.B. Unit	3
+Ranged Accuracy Drive XII	Appetizing Suid Tail	3
+Ranged Accuracy Drive XII	R.B. Unit	3
+Ranged Accuracy Drive XIII	Appetizing Suid Tail	3
+Ranged Accuracy Drive XIII	R.B. Unit	3
+Ranged Accuracy Drive XIV	Appetizing Suid Tail	4
+Ranged Accuracy Drive XIV	R.B. Unit	4
+Ranged Accuracy Drive XV	Appetizing Suid Tail	4
+Ranged Accuracy Drive XV	R.B. Unit	4
+Ranged Accuracy Drive XVI	Appetizing Suid Tail	4
+Ranged Accuracy Drive XVI	R.B. Unit	4
+Ranged Accuracy Drive XVII	Appetizing Suid Tail	4
+Ranged Accuracy Drive XVII	R.B. Unit	4
+Ranged Accuracy Drive XVIII	Appetizing Suid Tail	4
+Ranged Accuracy Drive XVIII	R.B. Unit	4
+Ranged Accuracy Drive XIX	Appetizing Suid Tail	5
+Ranged Accuracy Drive XIX	R.B. Unit	5
+Evasion Drive I	Black Fog Deposits	1
+Evasion Drive I	Rotten Meat	1
+Evasion Drive II	Black Fog Deposits	1
+Evasion Drive II	Rotten Meat	1
+Evasion Drive III	Black Fog Deposits	1
+Evasion Drive III	Rotten Meat	1
+Evasion Drive IV	Black Fog Deposits	2
+Evasion Drive IV	Rotten Meat	2
+Evasion Drive V	Black Fog Deposits	2
+Evasion Drive V	Rotten Meat	2
+Evasion Drive VI	Black Fog Deposits	2
+Evasion Drive VI	Rotten Meat	2
+Evasion Drive VII	Black Fog Deposits	2
+Evasion Drive VII	Rotten Meat	2
+Evasion Drive VIII	Black Fog Deposits	2
+Evasion Drive VIII	Rotten Meat	2
+Evasion Drive IX	Black Fog Deposits	3
+Evasion Drive IX	Rotten Meat	3
+Evasion Drive X	Black Fog Deposits	3
+Evasion Drive X	Mollusk Mucus	3
+Evasion Drive XI	Black Fog Deposits	3
+Evasion Drive XI	Mollusk Mucus	3
+Evasion Drive XII	Black Fog Deposits	3
+Evasion Drive XII	Mollusk Mucus	3
+Evasion Drive XIII	Black Fog Deposits	3
+Evasion Drive XIII	Mollusk Mucus	3
+Evasion Drive XIV	Black Fog Deposits	4
+Evasion Drive XIV	Mollusk Mucus	4
+Evasion Drive XV	Black Fog Deposits	4
+Evasion Drive XV	Mollusk Mucus	4
+Evasion Drive XVI	Black Fog Deposits	4
+Evasion Drive XVI	Mollusk Mucus	4
+Evasion Drive XVII	Black Fog Deposits	4
+Evasion Drive XVII	Mollusk Mucus	4
+Evasion Drive XVIII	Black Fog Deposits	4
+Evasion Drive XVIII	Mollusk Mucus	4
+Evasion Drive XIX	Black Fog Deposits	5
+Evasion Drive XIX	Mollusk Mucus	5
+Melee Attack Drive I	Muscled Suid Bulge	1
+Melee Attack Drive I	Muscled Simius Bulge	1
+Melee Attack Drive II	Muscled Suid Bulge	1
+Melee Attack Drive II	Muscled Simius Bulge	1
+Melee Attack Drive III	Muscled Suid Bulge	1
+Melee Attack Drive III	Muscled Simius Bulge	1
+Melee Attack Drive IV	Muscled Suid Bulge	2
+Melee Attack Drive IV	Muscled Simius Bulge	2
+Melee Attack Drive V	Muscled Suid Bulge	2
+Melee Attack Drive V	Muscled Simius Bulge	2
+Melee Attack Drive VI	Muscled Suid Bulge	2
+Melee Attack Drive VI	Muscled Simius Bulge	2
+Melee Attack Drive VII	Muscled Suid Bulge	2
+Melee Attack Drive VII	Muscled Simius Bulge	2
+Melee Attack Drive VIII	Muscled Suid Bulge	2
+Melee Attack Drive VIII	Muscled Simius Bulge	2
+Melee Attack Drive IX	Muscled Suid Bulge	3
+Melee Attack Drive IX	Muscled Simius Bulge	3
+Melee Attack Drive X	Muscled Suid Bulge	3
+Melee Attack Drive X	Pristine Bristle	3
+Melee Attack Drive XI	Muscled Suid Bulge	3
+Melee Attack Drive XI	Pristine Bristle	3
+Melee Attack Drive XII	Muscled Suid Bulge	3
+Melee Attack Drive XII	Pristine Bristle	3
+Melee Attack Drive XIII	Muscled Suid Bulge	3
+Melee Attack Drive XIII	Pristine Bristle	3
+Melee Attack Drive XIV	Muscled Suid Bulge	4
+Melee Attack Drive XIV	Pristine Bristle	4
+Melee Attack Drive XV	Muscled Suid Bulge	4
+Melee Attack Drive XV	Pristine Bristle	4
+Melee Attack Drive XVI	Muscled Suid Bulge	4
+Melee Attack Drive XVI	Pristine Bristle	4
+Melee Attack Drive XVII	Muscled Suid Bulge	4
+Melee Attack Drive XVII	Pristine Bristle	4
+Melee Attack Drive XVIII	Muscled Suid Bulge	4
+Melee Attack Drive XVIII	Pristine Bristle	4
+Melee Attack Drive XIX	Muscled Suid Bulge	5
+Melee Attack Drive XIX	Pristine Bristle	5
+Ranged Attack Drive I	Appetizing Suid Tail	1
+Ranged Attack Drive I	Dual Boards	1
+Ranged Attack Drive II	Appetizing Suid Tail	1
+Ranged Attack Drive II	Dual Boards	1
+Ranged Attack Drive III	Appetizing Suid Tail	1
+Ranged Attack Drive III	Dual Boards	1
+Ranged Attack Drive IV	Appetizing Suid Tail	2
+Ranged Attack Drive IV	Dual Boards	2
+Ranged Attack Drive V	Appetizing Suid Tail	2
+Ranged Attack Drive V	Dual Boards	2
+Ranged Attack Drive VI	Appetizing Suid Tail	2
+Ranged Attack Drive VI	Dual Boards	2
+Ranged Attack Drive VII	Appetizing Suid Tail	2
+Ranged Attack Drive VII	Dual Boards	2
+Ranged Attack Drive VIII	Appetizing Suid Tail	2
+Ranged Attack Drive VIII	Dual Boards	2
+Ranged Attack Drive IX	Appetizing Suid Tail	3
+Ranged Attack Drive IX	Dual Boards	3
+Ranged Attack Drive X	Appetizing Suid Tail	3
+Ranged Attack Drive X	Rainbow Carving Shard	3
+Ranged Attack Drive XI	Appetizing Suid Tail	3
+Ranged Attack Drive XI	Rainbow Carving Shard	3
+Ranged Attack Drive XII	Appetizing Suid Tail	3
+Ranged Attack Drive XII	Rainbow Carving Shard	3
+Ranged Attack Drive XIII	Appetizing Suid Tail	3
+Ranged Attack Drive XIII	Rainbow Carving Shard	3
+Ranged Attack Drive XIV	Appetizing Suid Tail	4
+Ranged Attack Drive XIV	Rainbow Carving Shard	4
+Ranged Attack Drive XV	Appetizing Suid Tail	4
+Ranged Attack Drive XV	Rainbow Carving Shard	4
+Ranged Attack Drive XVI	Appetizing Suid Tail	4
+Ranged Attack Drive XVI	Rainbow Carving Shard	4
+Ranged Attack Drive XVII	Appetizing Suid Tail	4
+Ranged Attack Drive XVII	Rainbow Carving Shard	4
+Ranged Attack Drive XVIII	Appetizing Suid Tail	4
+Ranged Attack Drive XVIII	Rainbow Carving Shard	4
+Gravity Resistance Up IX	Large Hoof	3
+Ranged Attack Drive XIX	Appetizing Suid Tail	5
+Ranged Attack Drive XIX	Rainbow Carving Shard	5
+Potential Drive I	Fleecy Fur	1
+Potential Drive I	Orange Tequila	1
+Potential Drive II	Fleecy Fur	1
+Potential Drive II	Orange Tequila	1
+Potential Drive III	Fleecy Fur	1
+Potential Drive III	Orange Tequila	1
+Potential Drive IV	Fleecy Fur	2
+Potential Drive IV	Orange Tequila	2
+Potential Drive V	Fleecy Fur	2
+Potential Drive V	Orange Tequila	2
+Potential Drive VI	Fleecy Fur	2
+Potential Drive VI	Orange Tequila	2
+Potential Drive VII	Fleecy Fur	2
+Potential Drive VII	Orange Tequila	2
+Potential Drive VIII	Fleecy Fur	2
+Potential Drive VIII	Orange Tequila	2
+Potential Drive IX	Fleecy Fur	3
+Potential Drive IX	Orange Tequila	3
+Potential Drive X	Fleecy Fur	3
+Potential Drive X	Pristine Whiskers	3
+Potential Drive XI	Fleecy Fur	3
+Potential Drive XI	Pristine Whiskers	3
+Potential Drive XII	Fleecy Fur	3
+Potential Drive XII	Pristine Whiskers	3
+Potential Drive XIII	Fleecy Fur	3
+Potential Drive XIII	Pristine Whiskers	3
+Potential Drive XIV	Fleecy Fur	4
+Potential Drive XIV	Pristine Whiskers	4
+Potential Drive XV	Fleecy Fur	4
+Potential Drive XV	Pristine Whiskers	4
+Potential Drive XVI	Fleecy Fur	4
+Potential Drive XVI	Pristine Whiskers	4
+Potential Drive XVII	Fleecy Fur	4
+Potential Drive XVII	Pristine Whiskers	4
+Potential Drive XVIII	Fleecy Fur	4
+Potential Drive XVIII	Pristine Whiskers	4
+Potential Drive XIX	Fleecy Fur	5
+Potential Drive XIX	Pristine Whiskers	5
+Bind: Refuel I	Supple Tail	1
+Bind: Refuel I	Fine Transparent Belt	1
+Bind: Refuel II	Supple Tail	1
+Bind: Refuel II	Fine Transparent Belt	1
+Bind: Refuel III	Supple Tail	1
+Bind: Refuel III	Fine Transparent Belt	1
+Bind: Refuel IV	Supple Tail	2
+Bind: Refuel IV	Fine Transparent Belt	2
+Bind: Refuel V	Supple Tail	2
+Bind: Refuel V	Fine Transparent Belt	2
+Bind: Refuel VI	Supple Tail	2
+Bind: Refuel VI	Fine Transparent Belt	2
+Bind: Refuel VII	Supple Tail	2
+Bind: Refuel VII	Fine Transparent Belt	2
+Bind: Refuel VIII	Supple Tail	2
+Bind: Refuel VIII	Fine Transparent Belt	2
+Bind: Refuel IX	Supple Tail	3
+Bind: Refuel IX	Fine Transparent Belt	3
+Bind: Refuel X	Supple Tail	3
+Bind: Refuel X	Quality Skin	3
+Bind: Refuel XI	Supple Tail	3
+Bind: Refuel XI	Quality Skin	3
+Bind: Refuel XII	Supple Tail	3
+Bind: Refuel XII	Quality Skin	3
+Bind: Refuel XIII	Supple Tail	3
+Bind: Refuel XIII	Quality Skin	3
+Bind: Refuel XIV	Supple Tail	4
+Bind: Refuel XIV	Quality Skin	4
+Bind: Refuel XV	Supple Tail	4
+Bind: Refuel XV	Quality Skin	4
+Bind: Refuel XVI	Supple Tail	4
+Bind: Refuel XVI	Quality Skin	4
+Bind: Refuel XVII	Supple Tail	4
+Bind: Refuel XVII	Quality Skin	4
+Bind: Refuel XVIII	Supple Tail	4
+Bind: Refuel XVIII	Quality Skin	4
+Bind: Refuel XIX	Supple Tail	5
+Bind: Refuel XIX	Quality Skin	5
+Fuel Efficiency Up I	Black Puff	1
+Fuel Efficiency Up I	Caro Tail Light	1
+Fuel Efficiency Up I	Standard Coil	1
+Fuel Efficiency Up II	Black Puff	1
+Fuel Efficiency Up II	Caro Tail Light	1
+Fuel Efficiency Up II	Standard Coil	1
+Fuel Efficiency Up III	Black Puff	1
+Fuel Efficiency Up III	Caro Tail Light	1
+Fuel Efficiency Up III	Standard Coil	1
+Fuel Efficiency Up IV	Black Puff	2
+Fuel Efficiency Up IV	Caro Tail Light	2
+Fuel Efficiency Up IV	Standard Coil	2
+Fuel Efficiency Up V	Black Puff	2
+Fuel Efficiency Up V	Caro Tail Light	2
+Fuel Efficiency Up V	Standard Coil	2
+Fuel Efficiency Up VI	Black Puff	2
+Fuel Efficiency Up VI	Caro Tail Light	2
+Fuel Efficiency Up VI	Standard Coil	2
+Fuel Efficiency Up VII	Black Puff	2
+Fuel Efficiency Up VII	Caro Tail Light	2
+Fuel Efficiency Up VII	Standard Coil	2
+Fuel Efficiency Up VIII	Black Puff	2
+Fuel Efficiency Up VIII	Caro Tail Light	2
+Fuel Efficiency Up VIII	Standard Coil	2
+Fuel Efficiency Up IX	Black Puff	3
+Fuel Efficiency Up IX	Caro Tail Light	3
+Fuel Efficiency Up IX	Standard Coil	3
+Fuel Efficiency Up X	Black Puff	3
+Fuel Efficiency Up X	Giant Protein	3
+Fuel Efficiency Up X	Filiavent Intestine	3
+Fuel Efficiency Up XI	Black Puff	3
+Fuel Efficiency Up XI	Giant Protein	3
+Fuel Efficiency Up XI	Filiavent Intestine	3
+Fuel Efficiency Up XII	Black Puff	3
+Fuel Efficiency Up XII	Giant Protein	3
+Fuel Efficiency Up XII	Filiavent Intestine	3
+Fuel Efficiency Up XIII	Black Puff	3
+Fuel Efficiency Up XIII	Giant Protein	3
+Fuel Efficiency Up XIII	Filiavent Intestine	3
+Fuel Efficiency Up XIV	Black Puff	4
+Fuel Efficiency Up XIV	Giant Protein	4
+Fuel Efficiency Up XIV	Filiavent Intestine	4
+Fuel Efficiency Up XV	Black Puff	4
+Fuel Efficiency Up XV	Giant Protein	4
+Fuel Efficiency Up XV	Filiavent Intestine	4
+Fuel Efficiency Up XVI	Black Puff	4
+Fuel Efficiency Up XVI	Giant Protein	4
+Fuel Efficiency Up XVI	Filiavent Intestine	4
+Fuel Efficiency Up XVII	Black Puff	4
+Fuel Efficiency Up XVII	Giant Protein	4
+Fuel Efficiency Up XVII	Filiavent Intestine	4
+Fuel Efficiency Up XVIII	Black Puff	4
+Fuel Efficiency Up XVIII	Giant Protein	4
+Fuel Efficiency Up XVIII	Filiavent Intestine	4
+Fuel Efficiency Up XIX	Black Puff	5
+Fuel Efficiency Up XIX	Giant Protein	5
+Fuel Efficiency Up XIX	Filiavent Intestine	5
+Physical Resistance Up I	Cinicula Shell	1
+Physical Resistance Up I	Falsaxum Shell	1
+Physical Resistance Up I	Suid Fillet	1
+Physical Resistance Up II	Cinicula Shell	1
+Physical Resistance Up II	Falsaxum Shell	1
+Physical Resistance Up II	Suid Fillet	1
+Physical Resistance Up III	Cinicula Shell	1
+Physical Resistance Up III	Falsaxum Shell	1
+Physical Resistance Up III	Suid Fillet	1
+Physical Resistance Up IV	Cinicula Shell	2
+Physical Resistance Up IV	Falsaxum Shell	2
+Physical Resistance Up IV	Suid Fillet	2
+Physical Resistance Up V	Cinicula Shell	2
+Physical Resistance Up V	Falsaxum Shell	2
+Physical Resistance Up V	Suid Fillet	2
+Physical Resistance Up VI	Cinicula Shell	2
+Physical Resistance Up VI	Falsaxum Shell	2
+Physical Resistance Up VI	Suid Fillet	2
+Physical Resistance Up VII	Cinicula Shell	2
+Physical Resistance Up VII	Falsaxum Shell	2
+Physical Resistance Up VII	Suid Fillet	2
+Physical Resistance Up VIII	Cinicula Shell	2
+Physical Resistance Up VIII	Falsaxum Shell	2
+Physical Resistance Up VIII	Suid Fillet	2
+Physical Resistance Up IX	Cinicula Shell	3
+Physical Resistance Up IX	Falsaxum Shell	3
+Physical Resistance Up IX	Suid Fillet	3
+Physical Resistance Up X	Cinicula Shell	3
+Physical Resistance Up X	Ictus Shell	3
+Physical Resistance Up X	Golden Blatta Wing	3
+Physical Resistance Up XI	Cinicula Shell	3
+Physical Resistance Up XI	Ictus Shell	3
+Physical Resistance Up XI	Golden Blatta Wing	3
+Physical Resistance Up XII	Cinicula Shell	3
+Physical Resistance Up XII	Ictus Shell	3
+Physical Resistance Up XII	Golden Blatta Wing	3
+Physical Resistance Up XIII	Cinicula Shell	3
+Physical Resistance Up XIII	Ictus Shell	3
+Physical Resistance Up XIII	Golden Blatta Wing	3
+Physical Resistance Up XIV	Cinicula Shell	4
+Physical Resistance Up XIV	Ictus Shell	4
+Physical Resistance Up XIV	Golden Blatta Wing	4
+Physical Resistance Up XV	Cinicula Shell	4
+Physical Resistance Up XV	Ictus Shell	4
+Physical Resistance Up XV	Golden Blatta Wing	4
+Physical Resistance Up XVI	Cinicula Shell	4
+Physical Resistance Up XVI	Ictus Shell	4
+Physical Resistance Up XVI	Golden Blatta Wing	4
+Physical Resistance Up XVII	Cinicula Shell	4
+Physical Resistance Up XVII	Ictus Shell	4
+Physical Resistance Up XVII	Golden Blatta Wing	4
+Physical Resistance Up XVIII	Cinicula Shell	4
+Physical Resistance Up XVIII	Ictus Shell	4
+Physical Resistance Up XVIII	Golden Blatta Wing	4
+Physical Resistance Up XIX	Cinicula Shell	5
+Physical Resistance Up XIX	Ictus Shell	5
+Physical Resistance Up XIX	Golden Blatta Wing	5
+Beam Resistance Up I	Lead Carapace	1
+Beam Resistance Up I	Ocher Stabilizer	1
+Beam Resistance Up I	Adsecula Gold Nugget	1
+Beam Resistance Up II	Lead Carapace	1
+Beam Resistance Up II	Ocher Stabilizer	1
+Beam Resistance Up II	Adsecula Gold Nugget	1
+Beam Resistance Up III	Lead Carapace	1
+Beam Resistance Up III	Ocher Stabilizer	1
+Beam Resistance Up III	Adsecula Gold Nugget	1
+Beam Resistance Up IV	Lead Carapace	2
+Beam Resistance Up IV	Ocher Stabilizer	2
+Beam Resistance Up IV	Adsecula Gold Nugget	2
+Beam Resistance Up V	Lead Carapace	2
+Beam Resistance Up V	Ocher Stabilizer	2
+Beam Resistance Up V	Adsecula Gold Nugget	2
+Beam Resistance Up VI	Lead Carapace	2
+Beam Resistance Up VI	Ocher Stabilizer	2
+Beam Resistance Up VI	Adsecula Gold Nugget	2
+Beam Resistance Up VII	Lead Carapace	2
+Beam Resistance Up VII	Ocher Stabilizer	2
+Beam Resistance Up VII	Adsecula Gold Nugget	2
+Beam Resistance Up VIII	Lead Carapace	2
+Beam Resistance Up VIII	Ocher Stabilizer	2
+Beam Resistance Up VIII	Adsecula Gold Nugget	2
+Beam Resistance Up IX	Lead Carapace	3
+Beam Resistance Up IX	Ocher Stabilizer	3
+Beam Resistance Up IX	Adsecula Gold Nugget	3
+Beam Resistance Up X	Lead Carapace	3
+Beam Resistance Up X	Blue Milsaadi Hood	3
+Beam Resistance Up X	Pink Ceto Membrane	3
+Beam Resistance Up XI	Lead Carapace	3
+Beam Resistance Up XI	Blue Milsaadi Hood	3
+Beam Resistance Up XI	Pink Ceto Membrane	3
+Beam Resistance Up XII	Lead Carapace	3
+Beam Resistance Up XII	Blue Milsaadi Hood	3
+Beam Resistance Up XII	Pink Ceto Membrane	3
+Beam Resistance Up XIII	Lead Carapace	3
+Beam Resistance Up XIII	Blue Milsaadi Hood	3
+Beam Resistance Up XIII	Pink Ceto Membrane	3
+Beam Resistance Up XIV	Lead Carapace	4
+Beam Resistance Up XIV	Blue Milsaadi Hood	4
+Beam Resistance Up XIV	Pink Ceto Membrane	4
+Beam Resistance Up XV	Lead Carapace	4
+Beam Resistance Up XV	Blue Milsaadi Hood	4
+Beam Resistance Up XV	Pink Ceto Membrane	4
+Beam Resistance Up XVI	Lead Carapace	4
+Beam Resistance Up XVI	Blue Milsaadi Hood	4
+Beam Resistance Up XVI	Pink Ceto Membrane	4
+Beam Resistance Up XVII	Lead Carapace	4
+Beam Resistance Up XVII	Blue Milsaadi Hood	4
+Beam Resistance Up XVII	Pink Ceto Membrane	4
+Beam Resistance Up XVIII	Lead Carapace	4
+Beam Resistance Up XVIII	Blue Milsaadi Hood	4
+Beam Resistance Up XVIII	Pink Ceto Membrane	4
+Beam Resistance Up XIX	Lead Carapace	5
+Beam Resistance Up XIX	Blue Milsaadi Hood	5
+Beam Resistance Up XIX	Pink Ceto Membrane	5
+Electric Resistance Up I	Squishy Cartilage	1
+Electric Resistance Up I	Stout Purgovent Extract	1
+Electric Resistance Up I	Lepyx Elastic Cell	1
+Electric Resistance Up II	Squishy Cartilage	1
+Electric Resistance Up II	Stout Purgovent Extract	1
+Electric Resistance Up II	Lepyx Elastic Cell	1
+Electric Resistance Up III	Squishy Cartilage	1
+Electric Resistance Up III	Stout Purgovent Extract	1
+Electric Resistance Up III	Lepyx Elastic Cell	1
+Electric Resistance Up IV	Squishy Cartilage	2
+Electric Resistance Up IV	Stout Purgovent Extract	2
+Electric Resistance Up IV	Lepyx Elastic Cell	2
+Electric Resistance Up V	Squishy Cartilage	2
+Electric Resistance Up V	Stout Purgovent Extract	2
+Electric Resistance Up V	Lepyx Elastic Cell	2
+Electric Resistance Up VI	Squishy Cartilage	2
+Electric Resistance Up VI	Stout Purgovent Extract	2
+Electric Resistance Up VI	Lepyx Elastic Cell	2
+Electric Resistance Up VII	Squishy Cartilage	2
+Electric Resistance Up VII	Stout Purgovent Extract	2
+Electric Resistance Up VII	Lepyx Elastic Cell	2
+Electric Resistance Up VIII	Squishy Cartilage	2
+Electric Resistance Up VIII	Stout Purgovent Extract	2
+Electric Resistance Up VIII	Lepyx Elastic Cell	2
+Electric Resistance Up IX	Squishy Cartilage	3
+Electric Resistance Up IX	Stout Purgovent Extract	3
+Electric Resistance Up IX	Lepyx Elastic Cell	3
+Electric Resistance Up X	Squishy Cartilage	3
+Electric Resistance Up X	Purple Scintimure Tentacle	3
+Electric Resistance Up X	Aeviter Membrane	3
+Electric Resistance Up XI	Squishy Cartilage	3
+Electric Resistance Up XI	Purple Scintimure Tentacle	3
+Electric Resistance Up XI	Aeviter Membrane	3
+Electric Resistance Up XII	Squishy Cartilage	3
+Electric Resistance Up XII	Purple Scintimure Tentacle	3
+Electric Resistance Up XII	Aeviter Membrane	3
+Electric Resistance Up XIII	Squishy Cartilage	3
+Electric Resistance Up XIII	Purple Scintimure Tentacle	3
+Electric Resistance Up XIII	Aeviter Membrane	3
+Electric Resistance Up XIV	Squishy Cartilage	4
+Electric Resistance Up XIV	Purple Scintimure Tentacle	4
+Electric Resistance Up XIV	Aeviter Membrane	4
+Electric Resistance Up XV	Squishy Cartilage	4
+Electric Resistance Up XV	Purple Scintimure Tentacle	4
+Electric Resistance Up XV	Aeviter Membrane	4
+Electric Resistance Up XVI	Squishy Cartilage	4
+Electric Resistance Up XVI	Purple Scintimure Tentacle	4
+Electric Resistance Up XVI	Aeviter Membrane	4
+Electric Resistance Up XVII	Squishy Cartilage	4
+Electric Resistance Up XVII	Purple Scintimure Tentacle	4
+Electric Resistance Up XVII	Aeviter Membrane	4
+Electric Resistance Up XVIII	Squishy Cartilage	4
+Electric Resistance Up XVIII	Purple Scintimure Tentacle	4
+Electric Resistance Up XVIII	Aeviter Membrane	4
+Electric Resistance Up XIX	Squishy Cartilage	5
+Electric Resistance Up XIX	Purple Scintimure Tentacle	5
+Electric Resistance Up XIX	Aeviter Membrane	5
+Thermal Resistance Up I	Shiny Copper Caro Plate	1
+Thermal Resistance Up I	Quo Pod	1
+Thermal Resistance Up I	Potamus Life Lung	1
+Thermal Resistance Up II	Shiny Copper Caro Plate	1
+Thermal Resistance Up II	Quo Pod	1
+Thermal Resistance Up II	Potamus Life Lung	1
+Thermal Resistance Up III	Shiny Copper Caro Plate	1
+Thermal Resistance Up III	Quo Pod	1
+Thermal Resistance Up III	Potamus Life Lung	1
+Thermal Resistance Up IV	Shiny Copper Caro Plate	2
+Thermal Resistance Up IV	Quo Pod	2
+Thermal Resistance Up IV	Potamus Life Lung	2
+Thermal Resistance Up V	Shiny Copper Caro Plate	2
+Thermal Resistance Up V	Quo Pod	2
+Thermal Resistance Up V	Potamus Life Lung	2
+Thermal Resistance Up VI	Shiny Copper Caro Plate	2
+Thermal Resistance Up VI	Quo Pod	2
+Thermal Resistance Up VI	Potamus Life Lung	2
+Thermal Resistance Up VII	Shiny Copper Caro Plate	2
+Thermal Resistance Up VII	Quo Pod	2
+Thermal Resistance Up VII	Potamus Life Lung	2
+Thermal Resistance Up VIII	Shiny Copper Caro Plate	2
+Thermal Resistance Up VIII	Quo Pod	2
+Thermal Resistance Up VIII	Potamus Life Lung	2
+Thermal Resistance Up IX	Shiny Copper Caro Plate	3
+Thermal Resistance Up IX	Quo Pod	3
+Thermal Resistance Up IX	Potamus Life Lung	3
+Thermal Resistance Up X	Shiny Copper Caro Plate	3
+Thermal Resistance Up X	Scorching Giant Cells	3
+Thermal Resistance Up X	Tersqual Fire Pouch	3
+Thermal Resistance Up XI	Shiny Copper Caro Plate	3
+Thermal Resistance Up XI	Scorching Giant Cells	3
+Thermal Resistance Up XI	Tersqual Fire Pouch	3
+Thermal Resistance Up XII	Shiny Copper Caro Plate	3
+Thermal Resistance Up XII	Scorching Giant Cells	3
+Thermal Resistance Up XII	Tersqual Fire Pouch	3
+Thermal Resistance Up XIII	Shiny Copper Caro Plate	3
+Thermal Resistance Up XIII	Scorching Giant Cells	3
+Thermal Resistance Up XIII	Tersqual Fire Pouch	3
+Thermal Resistance Up XIV	Shiny Copper Caro Plate	4
+Thermal Resistance Up XIV	Scorching Giant Cells	4
+Thermal Resistance Up XIV	Tersqual Fire Pouch	4
+Thermal Resistance Up XV	Shiny Copper Caro Plate	4
+Thermal Resistance Up XV	Scorching Giant Cells	4
+Thermal Resistance Up XV	Tersqual Fire Pouch	4
+Thermal Resistance Up XVI	Shiny Copper Caro Plate	4
+Thermal Resistance Up XVI	Scorching Giant Cells	4
+Thermal Resistance Up XVI	Tersqual Fire Pouch	4
+Thermal Resistance Up XVII	Shiny Copper Caro Plate	4
+Thermal Resistance Up XVII	Scorching Giant Cells	4
+Thermal Resistance Up XVII	Tersqual Fire Pouch	4
+Thermal Resistance Up XVIII	Shiny Copper Caro Plate	4
+Thermal Resistance Up XVIII	Scorching Giant Cells	4
+Thermal Resistance Up XVIII	Tersqual Fire Pouch	4
+Thermal Resistance Up XIX	Shiny Copper Caro Plate	5
+Thermal Resistance Up XIX	Scorching Giant Cells	5
+Thermal Resistance Up XIX	Tersqual Fire Pouch	5
+Ether Resistance Up I	Opaque Mirror	1
+Ether Resistance Up I	Upgraded Sensor Part	1
+Ether Resistance Up I	Medicinal Blatta Oil	1
+Ether Resistance Up II	Opaque Mirror	1
+Ether Resistance Up II	Upgraded Sensor Part	1
+Ether Resistance Up II	Medicinal Blatta Oil	1
+Ether Resistance Up III	Opaque Mirror	1
+Ether Resistance Up III	Upgraded Sensor Part	1
+Ether Resistance Up III	Medicinal Blatta Oil	1
+Ether Resistance Up IV	Opaque Mirror	2
+Ether Resistance Up IV	Upgraded Sensor Part	2
+Ether Resistance Up IV	Medicinal Blatta Oil	2
+Ether Resistance Up V	Opaque Mirror	2
+Ether Resistance Up V	Upgraded Sensor Part	2
+Ether Resistance Up V	Medicinal Blatta Oil	2
+Ether Resistance Up VI	Opaque Mirror	2
+Ether Resistance Up VI	Upgraded Sensor Part	2
+Ether Resistance Up VI	Medicinal Blatta Oil	2
+Ether Resistance Up VII	Opaque Mirror	2
+Ether Resistance Up VII	Upgraded Sensor Part	2
+Ether Resistance Up VII	Medicinal Blatta Oil	2
+Ether Resistance Up VIII	Opaque Mirror	2
+Ether Resistance Up VIII	Upgraded Sensor Part	2
+Ether Resistance Up VIII	Medicinal Blatta Oil	2
+Ether Resistance Up IX	Opaque Mirror	3
+Ether Resistance Up IX	Upgraded Sensor Part	3
+Ether Resistance Up IX	Medicinal Blatta Oil	3
+Ether Resistance Up X	Opaque Mirror	3
+Ether Resistance Up X	Red Milsaadi Hood	3
+Ether Resistance Up X	Gold Ceto Membrane	3
+Ether Resistance Up XI	Opaque Mirror	3
+Ether Resistance Up XI	Red Milsaadi Hood	3
+Ether Resistance Up XI	Gold Ceto Membrane	3
+Ether Resistance Up XII	Opaque Mirror	3
+Ether Resistance Up XII	Red Milsaadi Hood	3
+Ether Resistance Up XII	Gold Ceto Membrane	3
+Ether Resistance Up XIII	Opaque Mirror	3
+Ether Resistance Up XIII	Red Milsaadi Hood	3
+Ether Resistance Up XIII	Gold Ceto Membrane	3
+Ether Resistance Up XIV	Opaque Mirror	4
+Ether Resistance Up XIV	Red Milsaadi Hood	4
+Ether Resistance Up XIV	Gold Ceto Membrane	4
+Ether Resistance Up XV	Opaque Mirror	4
+Ether Resistance Up XV	Red Milsaadi Hood	4
+Ether Resistance Up XV	Gold Ceto Membrane	4
+Ether Resistance Up XVI	Opaque Mirror	4
+Ether Resistance Up XVI	Red Milsaadi Hood	4
+Ether Resistance Up XVI	Gold Ceto Membrane	4
+Ether Resistance Up XVII	Opaque Mirror	4
+Ether Resistance Up XVII	Red Milsaadi Hood	4
+Ether Resistance Up XVII	Gold Ceto Membrane	4
+Ether Resistance Up XVIII	Opaque Mirror	4
+Ether Resistance Up XVIII	Red Milsaadi Hood	4
+Ether Resistance Up XVIII	Gold Ceto Membrane	4
+Ether Resistance Up XIX	Opaque Mirror	5
+Ether Resistance Up XIX	Red Milsaadi Hood	5
+Ether Resistance Up XIX	Gold Ceto Membrane	5
+Gravity Resistance Up I	Large Hoof	1
+Gravity Resistance Up I	Genuine Plate	1
+Gravity Resistance Up I	Tricolored Ovis Meat	1
+Gravity Resistance Up II	Large Hoof	1
+Gravity Resistance Up II	Genuine Plate	1
+Gravity Resistance Up II	Tricolored Ovis Meat	1
+Gravity Resistance Up III	Large Hoof	1
+Gravity Resistance Up III	Genuine Plate	1
+Gravity Resistance Up III	Tricolored Ovis Meat	1
+Gravity Resistance Up IV	Large Hoof	2
+Gravity Resistance Up IV	Genuine Plate	2
+Gravity Resistance Up IV	Tricolored Ovis Meat	2
+Gravity Resistance Up V	Large Hoof	2
+Gravity Resistance Up V	Genuine Plate	2
+Gravity Resistance Up V	Tricolored Ovis Meat	2
+Gravity Resistance Up VI	Large Hoof	2
+Gravity Resistance Up VI	Genuine Plate	2
+Gravity Resistance Up VI	Tricolored Ovis Meat	2
+Gravity Resistance Up VII	Large Hoof	2
+Gravity Resistance Up VII	Genuine Plate	2
+Gravity Resistance Up VII	Tricolored Ovis Meat	2
+Gravity Resistance Up VIII	Large Hoof	2
+Gravity Resistance Up VIII	Genuine Plate	2
+Gravity Resistance Up VIII	Tricolored Ovis Meat	2
+Gravity Resistance Up IX	Genuine Plate	3
+Gravity Resistance Up IX	Tricolored Ovis Meat	3
+Gravity Resistance Up X	Large Hoof	3
+Gravity Resistance Up X	Oc-serv Southern Crest	3
+Gravity Resistance Up X	Oc-serv Eastern Crest	3
+Gravity Resistance Up XI	Large Hoof	3
+Gravity Resistance Up XI	Oc-serv Southern Crest	3
+Gravity Resistance Up XI	Oc-serv Eastern Crest	3
+Gravity Resistance Up XII	Large Hoof	3
+Gravity Resistance Up XII	Oc-serv Southern Crest	3
+Gravity Resistance Up XII	Oc-serv Eastern Crest	3
+Gravity Resistance Up XIII	Large Hoof	3
+Gravity Resistance Up XIII	Oc-serv Southern Crest	3
+Gravity Resistance Up XIII	Oc-serv Eastern Crest	3
+Gravity Resistance Up XIV	Large Hoof	4
+Gravity Resistance Up XIV	Oc-serv Southern Crest	4
+Gravity Resistance Up XIV	Oc-serv Eastern Crest	4
+Gravity Resistance Up XV	Large Hoof	4
+Gravity Resistance Up XV	Oc-serv Southern Crest	4
+Gravity Resistance Up XV	Oc-serv Eastern Crest	4
+Gravity Resistance Up XVI	Large Hoof	4
+Gravity Resistance Up XVI	Oc-serv Southern Crest	4
+Gravity Resistance Up XVI	Oc-serv Eastern Crest	4
+Gravity Resistance Up XVII	Large Hoof	4
+Gravity Resistance Up XVII	Oc-serv Southern Crest	4
+Gravity Resistance Up XVII	Oc-serv Eastern Crest	4
+Gravity Resistance Up XVIII	Large Hoof	4
+Gravity Resistance Up XVIII	Oc-serv Southern Crest	4
+Gravity Resistance Up XVIII	Oc-serv Eastern Crest	4
+Gravity Resistance Up XIX	Large Hoof	5
+Gravity Resistance Up XIX	Oc-serv Southern Crest	5
+Gravity Resistance Up XIX	Oc-serv Eastern Crest	5
+Weapon Attack Power Up I	Refined Horn	1
+Weapon Attack Power Up I	Insect Jaw	1
+Weapon Attack Power Up I	Strong Purgovent Extract	1
+Weapon Attack Power Up II	Refined Horn	1
+Weapon Attack Power Up II	Insect Jaw	1
+Weapon Attack Power Up II	Strong Purgovent Extract	1
+Weapon Attack Power Up III	Refined Horn	1
+Weapon Attack Power Up III	Insect Jaw	1
+Weapon Attack Power Up III	Strong Purgovent Extract	1
+Weapon Attack Power Up IV	Refined Horn	2
+Weapon Attack Power Up IV	Insect Jaw	2
+Weapon Attack Power Up IV	Strong Purgovent Extract	2
+Weapon Attack Power Up V	Refined Horn	2
+Weapon Attack Power Up V	Insect Jaw	2
+Weapon Attack Power Up V	Strong Purgovent Extract	2
+Weapon Attack Power Up VI	Refined Horn	2
+Weapon Attack Power Up VI	Insect Jaw	2
+Weapon Attack Power Up VI	Strong Purgovent Extract	2
+Weapon Attack Power Up VII	Refined Horn	2
+Weapon Attack Power Up VII	Insect Jaw	2
+Weapon Attack Power Up VII	Strong Purgovent Extract	2
+Weapon Attack Power Up VIII	Refined Horn	2
+Weapon Attack Power Up VIII	Insect Jaw	2
+Weapon Attack Power Up VIII	Strong Purgovent Extract	2
+Weapon Attack Power Up IX	Refined Horn	3
+Weapon Attack Power Up IX	Insect Jaw	3
+Weapon Attack Power Up IX	Strong Purgovent Extract	3
+Weapon Attack Power Up X	Quality Giant Cells	3
+Weapon Attack Power Up X	Visigel Poison Orb	3
+Weapon Attack Power Up X	Silver Cantor Tooth	3
+Weapon Attack Power Up XI	Quality Giant Cells	3
+Weapon Attack Power Up XI	Visigel Poison Orb	3
+Weapon Attack Power Up XI	Silver Cantor Tooth	3
+Weapon Attack Power Up XII	Quality Giant Cells	3
+Weapon Attack Power Up XII	Visigel Poison Orb	3
+Weapon Attack Power Up XII	Silver Cantor Tooth	3
+Weapon Attack Power Up XIII	Quality Giant Cells	3
+Weapon Attack Power Up XIII	Visigel Poison Orb	3
+Weapon Attack Power Up XIII	Silver Cantor Tooth	3
+Weapon Attack Power Up XIV	Quality Giant Cells	4
+Weapon Attack Power Up XIV	Visigel Poison Orb	4
+Weapon Attack Power Up XIV	Silver Cantor Tooth	4
+Weapon Attack Power Up XV	Quality Giant Cells	4
+Weapon Attack Power Up XV	Visigel Poison Orb	4
+Weapon Attack Power Up XV	Silver Cantor Tooth	4
+Weapon Attack Power Up XVI	Quality Giant Cells	4
+Weapon Attack Power Up XVI	Visigel Poison Orb	4
+Weapon Attack Power Up XVI	Silver Cantor Tooth	4
+Weapon Attack Power Up XVII	Quality Giant Cells	4
+Weapon Attack Power Up XVII	Visigel Poison Orb	4
+Weapon Attack Power Up XVII	Silver Cantor Tooth	4
+Weapon Attack Power Up XVIII	Quality Giant Cells	4
+Weapon Attack Power Up XVIII	Visigel Poison Orb	4
+Weapon Attack Power Up XVIII	Silver Cantor Tooth	4
+Weapon Attack Power Up XIX	Quality Giant Cells	5
+Weapon Attack Power Up XIX	Visigel Poison Orb	5
+Weapon Attack Power Up XIX	Silver Cantor Tooth	5
+Stabilizer I	Poisonous Needle	1
+Stabilizer II	Poisonous Needle	1
+Stabilizer III	Poisonous Needle	1
+Stabilizer IV	Poisonous Needle	2
+Stabilizer V	Poisonous Needle	2
+Stabilizer VI	Poisonous Needle	2
+Stabilizer VII	Poisonous Needle	2
+Stabilizer VIII	Poisonous Needle	2
+Stabilizer IX	Poisonous Needle	3
+Stabilizer X	Poisonous Needle	3
+Stabilizer XI	Poisonous Needle	3
+Stabilizer XII	Poisonous Needle	3
+Stabilizer XIII	Poisonous Needle	3
+Stabilizer XIV	Poisonous Needle	4
+Stabilizer XV	Poisonous Needle	4
+Stabilizer XVI	Poisonous Needle	4
+Stabilizer XVII	Poisonous Needle	4
+Stabilizer XVIII	Poisonous Needle	4
+Stabilizer XIX	Poisonous Needle	5
+Destabilizer I	Broken Pincer	1
+Destabilizer II	Broken Pincer	1
+Destabilizer III	Broken Pincer	1
+Destabilizer IV	Broken Pincer	2
+Destabilizer V	Broken Pincer	2
+Destabilizer VI	Broken Pincer	2
+Destabilizer VII	Broken Pincer	2
+Destabilizer VIII	Broken Pincer	2
+Destabilizer IX	Broken Pincer	3
+Destabilizer X	Broken Pincer	3
+Destabilizer XI	Broken Pincer	3
+Destabilizer XII	Broken Pincer	3
+Destabilizer XIII	Broken Pincer	3
+Destabilizer XIV	Broken Pincer	4
+Destabilizer XV	Broken Pincer	4
+Destabilizer XVI	Broken Pincer	4
+Destabilizer XVII	Broken Pincer	4
+Destabilizer XVIII	Broken Pincer	4
+Destabilizer XIX	Broken Pincer	5
+Magazine Capacity Up I	Genuine Crank	1
+Magazine Capacity Up I	Standard Shaft	1
+Magazine Capacity Up I	Fine Black Belt	1
+Magazine Capacity Up II	Genuine Crank	1
+Magazine Capacity Up II	Standard Shaft	1
+Magazine Capacity Up II	Fine Black Belt	1
+Magazine Capacity Up III	Genuine Crank	1
+Magazine Capacity Up III	Standard Shaft	1
+Magazine Capacity Up III	Fine Black Belt	1
+Magazine Capacity Up IV	Genuine Crank	2
+Magazine Capacity Up IV	Standard Shaft	2
+Magazine Capacity Up IV	Fine Black Belt	2
+Magazine Capacity Up V	Genuine Crank	2
+Magazine Capacity Up V	Standard Shaft	2
+Magazine Capacity Up V	Fine Black Belt	2
+Magazine Capacity Up VI	Genuine Crank	2
+Magazine Capacity Up VI	Standard Shaft	2
+Magazine Capacity Up VI	Fine Black Belt	2
+Magazine Capacity Up VII	Genuine Crank	2
+Magazine Capacity Up VII	Standard Shaft	2
+Magazine Capacity Up VII	Fine Black Belt	2
+Magazine Capacity Up VIII	Genuine Crank	2
+Magazine Capacity Up VIII	Standard Shaft	2
+Magazine Capacity Up VIII	Fine Black Belt	2
+Magazine Capacity Up IX	Genuine Crank	3
+Magazine Capacity Up IX	Standard Shaft	3
+Magazine Capacity Up IX	Fine Black Belt	3
+Magazine Capacity Up X	Genuine Crank	3
+Magazine Capacity Up X	White Stabilizer	3
+Magazine Capacity Up X	Sturdy Drakebone	3
+Magazine Capacity Up XI	Genuine Crank	3
+Magazine Capacity Up XI	White Stabilizer	3
+Magazine Capacity Up XI	Sturdy Drakebone	3
+Magazine Capacity Up XII	Genuine Crank	3
+Magazine Capacity Up XII	White Stabilizer	3
+Magazine Capacity Up XII	Sturdy Drakebone	3
+Magazine Capacity Up XIII	Genuine Crank	3
+Magazine Capacity Up XIII	White Stabilizer	3
+Magazine Capacity Up XIII	Sturdy Drakebone	3
+Magazine Capacity Up XIV	Genuine Crank	4
+Magazine Capacity Up XIV	White Stabilizer	4
+Magazine Capacity Up XIV	Sturdy Drakebone	4
+Magazine Capacity Up XV	Genuine Crank	4
+Magazine Capacity Up XV	White Stabilizer	4
+Magazine Capacity Up XV	Sturdy Drakebone	4
+Magazine Capacity Up XVI	Genuine Crank	4
+Magazine Capacity Up XVI	White Stabilizer	4
+Magazine Capacity Up XVI	Sturdy Drakebone	4
+Magazine Capacity Up XVII	Genuine Crank	4
+Magazine Capacity Up XVII	White Stabilizer	4
+Magazine Capacity Up XVII	Sturdy Drakebone	4
+Magazine Capacity Up XVIII	Genuine Crank	4
+Magazine Capacity Up XVIII	White Stabilizer	4
+Magazine Capacity Up XVIII	Sturdy Drakebone	4
+Magazine Capacity Up XIX	Genuine Crank	5
+Magazine Capacity Up XIX	White Stabilizer	5
+Magazine Capacity Up XIX	Sturdy Drakebone	5
+Cooldown Reducer I	Quality Fuse	1
+Cooldown Reducer I	Golden Simius Mane	1
+Cooldown Reducer I	Upgraded Shaft Part	1
+Cooldown Reducer II	Quality Fuse	1
+Cooldown Reducer II	Golden Simius Mane	1
+Cooldown Reducer II	Upgraded Shaft Part	1
+Cooldown Reducer III	Quality Fuse	1
+Cooldown Reducer III	Golden Simius Mane	1
+Cooldown Reducer III	Upgraded Shaft Part	1
+Cooldown Reducer IV	Quality Fuse	2
+Cooldown Reducer IV	Golden Simius Mane	2
+Cooldown Reducer IV	Upgraded Shaft Part	2
+Cooldown Reducer V	Quality Fuse	2
+Cooldown Reducer V	Golden Simius Mane	2
+Cooldown Reducer V	Upgraded Shaft Part	2
+Cooldown Reducer VI	Quality Fuse	2
+Cooldown Reducer VI	Golden Simius Mane	2
+Cooldown Reducer VI	Upgraded Shaft Part	2
+Cooldown Reducer VII	Quality Fuse	2
+Cooldown Reducer VII	Golden Simius Mane	2
+Cooldown Reducer VII	Upgraded Shaft Part	2
+Cooldown Reducer VIII	Quality Fuse	2
+Cooldown Reducer VIII	Golden Simius Mane	2
+Cooldown Reducer VIII	Upgraded Shaft Part	2
+Cooldown Reducer IX	Quality Fuse	3
+Cooldown Reducer IX	Golden Simius Mane	3
+Cooldown Reducer IX	Upgraded Shaft Part	3
+Cooldown Reducer X	Quality Fuse	3
+Cooldown Reducer X	Spathi Glyph	3
+Cooldown Reducer X	White Yggralith Nut	3
+Cooldown Reducer XI	Quality Fuse	3
+Cooldown Reducer XI	Spathi Glyph	3
+Cooldown Reducer XI	White Yggralith Nut	3
+Cooldown Reducer XII	Quality Fuse	3
+Cooldown Reducer XII	Spathi Glyph	3
+Cooldown Reducer XII	White Yggralith Nut	3
+Cooldown Reducer XIII	Quality Fuse	3
+Cooldown Reducer XIII	Spathi Glyph	3
+Cooldown Reducer XIII	White Yggralith Nut	3
+Cooldown Reducer XIV	Quality Fuse	4
+Cooldown Reducer XIV	Spathi Glyph	4
+Cooldown Reducer XIV	White Yggralith Nut	4
+Cooldown Reducer XV	Quality Fuse	4
+Cooldown Reducer XV	Spathi Glyph	4
+Cooldown Reducer XV	White Yggralith Nut	4
+Cooldown Reducer XVI	Quality Fuse	4
+Cooldown Reducer XVI	Spathi Glyph	4
+Cooldown Reducer XVI	White Yggralith Nut	4
+Cooldown Reducer XVII	Quality Fuse	4
+Cooldown Reducer XVII	Spathi Glyph	4
+Cooldown Reducer XVII	White Yggralith Nut	4
+Cooldown Reducer XVIII	Quality Fuse	4
+Cooldown Reducer XVIII	Spathi Glyph	4
+Cooldown Reducer XVIII	White Yggralith Nut	4
+Cooldown Reducer XIX	Quality Fuse	5
+Cooldown Reducer XIX	Spathi Glyph	5
+Cooldown Reducer XIX	White Yggralith Nut	5
+Firing Range Up I	Turba Straw	1
+Firing Range Up I	Used Cylinder	1
+Firing Range Up II	Turba Straw	1
+Firing Range Up II	Used Cylinder	1
+Firing Range Up III	Turba Straw	1
+Firing Range Up III	Used Cylinder	1
+Firing Range Up IV	Turba Straw	2
+Firing Range Up IV	Used Cylinder	2
+Firing Range Up V	Turba Straw	2
+Firing Range Up V	Used Cylinder	2
+Firing Range Up VI	Turba Straw	2
+Firing Range Up VI	Used Cylinder	2
+Firing Range Up VII	Turba Straw	2
+Firing Range Up VII	Used Cylinder	2
+Firing Range Up VIII	Turba Straw	2
+Firing Range Up VIII	Used Cylinder	2
+Firing Range Up IX	Turba Straw	3
+Firing Range Up IX	Used Cylinder	3
+Firing Range Up X	Turba Straw	3
+Firing Range Up X	Coronid Larynx	3
+Firing Range Up XI	Turba Straw	3
+Firing Range Up XI	Coronid Larynx	3
+Firing Range Up XII	Turba Straw	3
+Firing Range Up XII	Coronid Larynx	3
+Firing Range Up XIII	Turba Straw	3
+Firing Range Up XIII	Coronid Larynx	3
+Firing Range Up XIV	Turba Straw	4
+Firing Range Up XIV	Coronid Larynx	4
+Firing Range Up XV	Turba Straw	4
+Firing Range Up XV	Coronid Larynx	4
+Firing Range Up XVI	Turba Straw	4
+Firing Range Up XVI	Coronid Larynx	4
+Firing Range Up XVII	Turba Straw	4
+Firing Range Up XVII	Coronid Larynx	4
+Firing Range Up XVIII	Turba Straw	4
+Firing Range Up XVIII	Coronid Larynx	4
+Firing Range Up XIX	Turba Straw	5
+Firing Range Up XIX	Coronid Larynx	5
+Resist Stagger I	Scirpo Silk	1
+Resist Stagger II	Scirpo Silk	1
+Resist Stagger III	Scirpo Silk	1
+Resist Stagger IV	Scirpo Silk	2
+Resist Stagger V	Scirpo Silk	2
+Resist Stagger VI	Scirpo Silk	2
+Resist Stagger VII	Scirpo Silk	2
+Resist Stagger VIII	Scirpo Silk	2
+Resist Stagger IX	Scirpo Silk	3
+Resist Stagger X	Scirpo Silk	3
+Resist Stagger XI	Scirpo Silk	3
+Resist Stagger XII	Scirpo Silk	3
+Resist Stagger XIII	Scirpo Silk	3
+Resist Stagger XIV	Scirpo Silk	4
+Resist Stagger XV	Scirpo Silk	4
+Resist Stagger XVI	Scirpo Silk	4
+Resist Stagger XVII	Scirpo Silk	4
+Resist Stagger XVIII	Scirpo Silk	4
+Resist Stagger XIX	Scirpo Silk	5
+Resist Flinch I	Taut Leather	1
+Resist Flinch II	Taut Leather	1
+Resist Flinch III	Taut Leather	1
+Resist Flinch IV	Taut Leather	2
+Resist Flinch V	Taut Leather	2
+Resist Flinch VI	Taut Leather	2
+Resist Flinch VII	Taut Leather	2
+Resist Flinch VIII	Taut Leather	2
+Resist Flinch IX	Taut Leather	3
+Resist Flinch X	Taut Leather	3
+Resist Flinch XI	Taut Leather	3
+Resist Flinch XII	Taut Leather	3
+Resist Flinch XIII	Taut Leather	3
+Resist Flinch XIV	Taut Leather	4
+Resist Flinch XV	Taut Leather	4
+Resist Flinch XVI	Taut Leather	4
+Resist Flinch XVII	Taut Leather	4
+Resist Flinch XVIII	Taut Leather	4
+Resist Flinch XIX	Taut Leather	5
+Resist Topple I	Auravis Croaking Bag	1
+Resist Topple I	Smooth Tail Fin	1
+Resist Topple II	Auravis Croaking Bag	1
+Resist Topple II	Smooth Tail Fin	1
+Resist Topple III	Auravis Croaking Bag	1
+Resist Topple III	Smooth Tail Fin	1
+Resist Topple IV	Auravis Croaking Bag	2
+Resist Topple IV	Smooth Tail Fin	2
+Resist Topple V	Auravis Croaking Bag	2
+Resist Topple V	Smooth Tail Fin	2
+Resist Topple VI	Auravis Croaking Bag	2
+Resist Topple VI	Smooth Tail Fin	2
+Resist Topple VII	Auravis Croaking Bag	2
+Resist Topple VII	Smooth Tail Fin	2
+Resist Topple VIII	Auravis Croaking Bag	2
+Resist Topple VIII	Smooth Tail Fin	2
+Resist Topple IX	Auravis Croaking Bag	3
+Resist Topple IX	Smooth Tail Fin	3
+Resist Topple X	Auravis Croaking Bag	3
+Resist Topple X	Thick Coronid Hide	3
+Resist Topple XI	Auravis Croaking Bag	3
+Resist Topple XI	Thick Coronid Hide	3
+Resist Topple XII	Auravis Croaking Bag	3
+Resist Topple XII	Thick Coronid Hide	3
+Resist Topple XIII	Auravis Croaking Bag	3
+Resist Topple XIII	Thick Coronid Hide	3
+Resist Topple XIV	Auravis Croaking Bag	4
+Resist Topple XIV	Thick Coronid Hide	4
+Resist Topple XV	Auravis Croaking Bag	4
+Resist Topple XV	Thick Coronid Hide	4
+Resist Topple XVI	Auravis Croaking Bag	4
+Resist Topple XVI	Thick Coronid Hide	4
+Resist Topple XVII	Auravis Croaking Bag	4
+Resist Topple XVII	Thick Coronid Hide	4
+Resist Topple XVIII	Auravis Croaking Bag	4
+Resist Topple XVIII	Thick Coronid Hide	4
+Resist Topple XIX	Auravis Croaking Bag	5
+Resist Topple XIX	Thick Coronid Hide	5
+Resist Knockback I	Lovely Pom Pom	1
+Resist Knockback II	Lovely Pom Pom	1
+Resist Knockback III	Lovely Pom Pom	1
+Resist Knockback IV	Lovely Pom Pom	2
+Resist Knockback V	Lovely Pom Pom	2
+Resist Knockback VI	Lovely Pom Pom	2
+Resist Knockback VII	Lovely Pom Pom	2
+Resist Knockback VIII	Lovely Pom Pom	2
+Resist Knockback IX	Lovely Pom Pom	3
+Resist Knockback X	Lovely Pom Pom	3
+Resist Knockback XI	Lovely Pom Pom	3
+Resist Knockback XII	Lovely Pom Pom	3
+Resist Knockback XIII	Lovely Pom Pom	3
+Resist Knockback XIV	Lovely Pom Pom	4
+Resist Knockback XV	Lovely Pom Pom	4
+Resist Knockback XVI	Lovely Pom Pom	4
+Resist Knockback XVII	Lovely Pom Pom	4
+Resist Knockback XVIII	Lovely Pom Pom	4
+Resist Knockback XIX	Lovely Pom Pom	5
+Resist Launch I	Auravis Laughing Bag	1
+Resist Launch I	Caecus Crest	1
+Resist Launch II	Auravis Laughing Bag	1
+Resist Launch II	Caecus Crest	1
+Resist Launch III	Auravis Laughing Bag	1
+Resist Launch III	Caecus Crest	1
+Resist Launch IV	Auravis Laughing Bag	2
+Resist Launch IV	Caecus Crest	2
+Resist Launch V	Auravis Laughing Bag	2
+Resist Launch V	Caecus Crest	2
+Resist Launch VI	Auravis Laughing Bag	2
+Resist Launch VI	Caecus Crest	2
+Resist Launch VII	Auravis Laughing Bag	2
+Resist Launch VII	Caecus Crest	2
+Resist Launch VIII	Auravis Laughing Bag	2
+Resist Launch VIII	Caecus Crest	2
+Resist Launch IX	Auravis Laughing Bag	3
+Resist Launch IX	Caecus Crest	3
+Resist Launch X	Auravis Laughing Bag	3
+Resist Launch X	Red Filiavent Tentacle	3
+Resist Launch XI	Auravis Laughing Bag	3
+Resist Launch XI	Red Filiavent Tentacle	3
+Resist Launch XII	Auravis Laughing Bag	3
+Resist Launch XII	Red Filiavent Tentacle	3
+Resist Launch XIII	Auravis Laughing Bag	3
+Resist Launch XIII	Red Filiavent Tentacle	3
+Resist Launch XIV	Auravis Laughing Bag	4
+Resist Launch XIV	Red Filiavent Tentacle	4
+Resist Launch XV	Auravis Laughing Bag	4
+Resist Launch XV	Red Filiavent Tentacle	4
+Resist Launch XVI	Auravis Laughing Bag	4
+Resist Launch XVI	Red Filiavent Tentacle	4
+Resist Launch XVII	Auravis Laughing Bag	4
+Resist Launch XVII	Red Filiavent Tentacle	4
+Resist Launch XVIII	Auravis Laughing Bag	4
+Resist Launch XVIII	Red Filiavent Tentacle	4
+Resist Launch XIX	Auravis Laughing Bag	5
+Resist Launch XIX	Red Filiavent Tentacle	5
+Resist Stun I	Upgraded Jammer	1
+Resist Stun I	Smelly Fish Meat	1
+Resist Stun II	Upgraded Jammer	1
+Resist Stun II	Smelly Fish Meat	1
+Resist Stun III	Upgraded Jammer	1
+Resist Stun III	Smelly Fish Meat	1
+Resist Stun IV	Upgraded Jammer	2
+Resist Stun IV	Smelly Fish Meat	2
+Resist Stun V	Upgraded Jammer	2
+Resist Stun V	Smelly Fish Meat	2
+Resist Stun VI	Upgraded Jammer	2
+Resist Stun VI	Smelly Fish Meat	2
+Resist Stun VII	Upgraded Jammer	2
+Resist Stun VII	Smelly Fish Meat	2
+Resist Stun VIII	Upgraded Jammer	2
+Resist Stun VIII	Smelly Fish Meat	2
+Resist Stun IX	Upgraded Jammer	3
+Resist Stun IX	Smelly Fish Meat	3
+Resist Stun X	Upgraded Jammer	3
+Resist Stun X	Black Filiavent Tentacle	3
+Resist Stun XI	Upgraded Jammer	3
+Resist Stun XI	Black Filiavent Tentacle	3
+Resist Stun XII	Upgraded Jammer	3
+Resist Stun XII	Black Filiavent Tentacle	3
+Resist Stun XIII	Upgraded Jammer	3
+Resist Stun XIII	Black Filiavent Tentacle	3
+Resist Stun XIV	Upgraded Jammer	4
+Resist Stun XIV	Black Filiavent Tentacle	4
+Resist Stun XV	Upgraded Jammer	4
+Resist Stun XV	Black Filiavent Tentacle	4
+Resist Stun XVI	Upgraded Jammer	4
+Resist Stun XVI	Black Filiavent Tentacle	4
+Resist Stun XVII	Upgraded Jammer	4
+Resist Stun XVII	Black Filiavent Tentacle	4
+Resist Stun XVIII	Upgraded Jammer	4
+Resist Stun XVIII	Black Filiavent Tentacle	4
+Resist Stun XIX	Upgraded Jammer	5
+Resist Stun XIX	Black Filiavent Tentacle	5
+Resist Sleep I	Musky Nectar	1
+Resist Sleep II	Musky Nectar	1
+Resist Sleep III	Musky Nectar	1
+Resist Sleep IV	Musky Nectar	2
+Resist Sleep V	Musky Nectar	2
+Resist Sleep VI	Musky Nectar	2
+Resist Sleep VII	Musky Nectar	2
+Resist Sleep VIII	Musky Nectar	2
+Resist Sleep IX	Musky Nectar	3
+Resist Sleep X	Musky Nectar	3
+Resist Sleep XI	Musky Nectar	3
+Resist Sleep XII	Musky Nectar	3
+Resist Sleep XIII	Musky Nectar	3
+Resist Sleep XIV	Musky Nectar	4
+Resist Sleep XV	Musky Nectar	4
+Resist Sleep XVI	Musky Nectar	4
+Resist Sleep XVII	Musky Nectar	4
+Resist Sleep XVIII	Musky Nectar	4
+Resist Sleep XIX	Musky Nectar	5
+Resist Taunt I	Puge Self-Destruct Mechanism	1
+Resist Taunt II	Puge Self-Destruct Mechanism	1
+Resist Taunt III	Puge Self-Destruct Mechanism	1
+Resist Taunt IV	Puge Self-Destruct Mechanism	2
+Resist Taunt V	Puge Self-Destruct Mechanism	2
+Resist Taunt VI	Puge Self-Destruct Mechanism	2
+Resist Taunt VII	Puge Self-Destruct Mechanism	2
+Resist Taunt VIII	Puge Self-Destruct Mechanism	2
+Resist Taunt IX	Puge Self-Destruct Mechanism	3
+Resist Taunt X	Puge Self-Destruct Mechanism	3
+Resist Taunt XI	Puge Self-Destruct Mechanism	3
+Resist Taunt XII	Puge Self-Destruct Mechanism	3
+Resist Taunt XIII	Puge Self-Destruct Mechanism	3
+Resist Taunt XIV	Puge Self-Destruct Mechanism	4
+Resist Taunt XV	Puge Self-Destruct Mechanism	4
+Resist Taunt XVI	Puge Self-Destruct Mechanism	4
+Resist Taunt XVII	Puge Self-Destruct Mechanism	4
+Resist Taunt XVIII	Puge Self-Destruct Mechanism	4
+Resist Taunt XIX	Puge Self-Destruct Mechanism	5
+Resist Control I	Cracked Claw	1
+Resist Control II	Cracked Claw	1
+Resist Control III	Cracked Claw	1
+Resist Control IV	Cracked Claw	2
+Resist Control V	Cracked Claw	2
+Resist Control VI	Cracked Claw	2
+Resist Control VII	Cracked Claw	2
+Resist Control VIII	Cracked Claw	2
+Resist Control IX	Cracked Claw	3
+Resist Control X	Cracked Claw	3
+Resist Control XI	Cracked Claw	3
+Resist Control XII	Cracked Claw	3
+Resist Control XIII	Cracked Claw	3
+Resist Control XIV	Cracked Claw	4
+Resist Control XV	Cracked Claw	4
+Resist Control XVI	Cracked Claw	4
+Resist Control XVII	Cracked Claw	4
+Resist Control XVIII	Cracked Claw	4
+Resist Control XIX	Cracked Claw	5
+Resist Virus I	Lepyx Sunstone	1
+Resist Virus II	Lepyx Sunstone	1
+Resist Virus III	Lepyx Sunstone	1
+Resist Virus IV	Lepyx Sunstone	2
+Resist Virus V	Lepyx Sunstone	2
+Resist Virus VI	Lepyx Sunstone	2
+Resist Virus VII	Lepyx Sunstone	2
+Resist Virus VIII	Lepyx Sunstone	2
+Resist Virus IX	Lepyx Sunstone	3
+Resist Virus X	Lepyx Sunstone	3
+Resist Virus XI	Lepyx Sunstone	3
+Resist Virus XII	Lepyx Sunstone	3
+Resist Virus XIII	Lepyx Sunstone	3
+Resist Virus XIV	Lepyx Sunstone	4
+Resist Virus XV	Lepyx Sunstone	4
+Resist Virus XVI	Lepyx Sunstone	4
+Resist Virus XVII	Lepyx Sunstone	4
+Resist Virus XVIII	Lepyx Sunstone	4
+Resist Virus XIX	Lepyx Sunstone	5
+Resist Blackout I	Dull Stone	1
+Resist Blackout II	Dull Stone	1
+Resist Blackout III	Dull Stone	1
+Resist Blackout IV	Dull Stone	2
+Resist Blackout V	Dull Stone	2
+Resist Blackout VI	Dull Stone	2
+Resist Blackout VII	Dull Stone	2
+Resist Blackout VIII	Dull Stone	2
+Resist Blackout IX	Dull Stone	3
+Resist Blackout X	Dull Stone	3
+Resist Blackout XI	Dull Stone	3
+Resist Blackout XII	Dull Stone	3
+Resist Blackout XIII	Dull Stone	3
+Resist Blackout XIV	Dull Stone	4
+Resist Blackout XV	Dull Stone	4
+Resist Blackout XVI	Dull Stone	4
+Resist Blackout XVII	Dull Stone	4
+Resist Blackout XVIII	Dull Stone	4
+Resist Blackout XIX	Dull Stone	5
+Resist Fatigue I	Red Blatta Wing	1
+Resist Fatigue II	Red Blatta Wing	1
+Resist Fatigue III	Red Blatta Wing	1
+Resist Fatigue IV	Red Blatta Wing	2
+Resist Fatigue V	Red Blatta Wing	2
+Resist Fatigue VI	Red Blatta Wing	2
+Resist Fatigue VII	Red Blatta Wing	2
+Resist Fatigue VIII	Red Blatta Wing	2
+Resist Fatigue IX	Red Blatta Wing	3
+Resist Fatigue X	Red Blatta Wing	3
+Resist Fatigue XI	Red Blatta Wing	3
+Resist Fatigue XII	Red Blatta Wing	3
+Resist Fatigue XIII	Red Blatta Wing	3
+Resist Fatigue XIV	Red Blatta Wing	4
+Resist Fatigue XV	Red Blatta Wing	4
+Resist Fatigue XVI	Red Blatta Wing	4
+Resist Fatigue XVII	Red Blatta Wing	4
+Resist Fatigue XVIII	Red Blatta Wing	4
+Resist Fatigue XIX	Red Blatta Wing	5
+Resist Slow Arts I	Pristine Insect Leg	1
+Resist Slow Arts II	Pristine Insect Leg	1
+Resist Slow Arts III	Pristine Insect Leg	1
+Resist Slow Arts IV	Pristine Insect Leg	2
+Resist Slow Arts V	Pristine Insect Leg	2
+Resist Slow Arts VI	Pristine Insect Leg	2
+Resist Slow Arts VII	Pristine Insect Leg	2
+Resist Slow Arts VIII	Pristine Insect Leg	2
+Resist Slow Arts IX	Pristine Insect Leg	3
+Resist Slow Arts X	Pristine Insect Leg	3
+Resist Slow Arts XI	Pristine Insect Leg	3
+Resist Slow Arts XII	Pristine Insect Leg	3
+Resist Slow Arts XIII	Pristine Insect Leg	3
+Resist Slow Arts XIV	Pristine Insect Leg	4
+Resist Slow Arts XV	Pristine Insect Leg	4
+Resist Slow Arts XVI	Pristine Insect Leg	4
+Resist Slow Arts XVII	Pristine Insect Leg	4
+Resist Slow Arts XVIII	Pristine Insect Leg	4
+Resist Slow Arts XIX	Pristine Insect Leg	5
+Resist Physical Res Down I	Tough Humpsteak	1
+Resist Physical Res Down II	Tough Humpsteak	1
+Resist Physical Res Down III	Tough Humpsteak	1
+Resist Physical Res Down IV	Tough Humpsteak	2
+Resist Physical Res Down V	Tough Humpsteak	2
+Resist Physical Res Down VI	Tough Humpsteak	2
+Resist Physical Res Down VII	Tough Humpsteak	2
+Resist Physical Res Down VIII	Tough Humpsteak	2
+Resist Physical Res Down IX	Tough Humpsteak	3
+Resist Physical Res Down X	Tough Humpsteak	3
+Resist Physical Res Down XI	Tough Humpsteak	3
+Resist Physical Res Down XII	Tough Humpsteak	3
+Resist Physical Res Down XIII	Tough Humpsteak	3
+Resist Physical Res Down XIV	Tough Humpsteak	4
+Resist Physical Res Down XV	Tough Humpsteak	4
+Resist Physical Res Down XVI	Tough Humpsteak	4
+Resist Physical Res Down XVII	Tough Humpsteak	4
+Resist Physical Res Down XVIII	Tough Humpsteak	4
+Resist Physical Res Down XIX	Tough Humpsteak	5
+Resist Beam Res Down I	Duoguill Broth	1
+Resist Beam Res Down II	Duoguill Broth	1
+Resist Beam Res Down III	Duoguill Broth	1
+Resist Beam Res Down IV	Duoguill Broth	2
+Resist Beam Res Down V	Duoguill Broth	2
+Resist Beam Res Down VI	Duoguill Broth	2
+Resist Beam Res Down VII	Duoguill Broth	2
+Resist Beam Res Down VIII	Duoguill Broth	2
+Resist Beam Res Down IX	Duoguill Broth	3
+Resist Beam Res Down X	Duoguill Broth	3
+Resist Beam Res Down XI	Duoguill Broth	3
+Resist Beam Res Down XII	Duoguill Broth	3
+Resist Beam Res Down XIII	Duoguill Broth	3
+Resist Beam Res Down XIV	Duoguill Broth	4
+Resist Beam Res Down XV	Duoguill Broth	4
+Resist Beam Res Down XVI	Duoguill Broth	4
+Resist Beam Res Down XVII	Duoguill Broth	4
+Resist Beam Res Down XVIII	Duoguill Broth	4
+Resist Beam Res Down XIX	Duoguill Broth	5
+Resist Thermal Res Down I	Slimy Tongue	1
+Resist Thermal Res Down II	Slimy Tongue	1
+Resist Thermal Res Down III	Slimy Tongue	1
+Resist Thermal Res Down IV	Slimy Tongue	2
+Resist Thermal Res Down V	Slimy Tongue	2
+Resist Thermal Res Down VI	Slimy Tongue	2
+Resist Thermal Res Down VII	Slimy Tongue	2
+Resist Thermal Res Down VIII	Slimy Tongue	2
+Resist Thermal Res Down IX	Slimy Tongue	3
+Resist Thermal Res Down X	Slimy Tongue	3
+Resist Thermal Res Down XI	Slimy Tongue	3
+Resist Thermal Res Down XII	Slimy Tongue	3
+Resist Thermal Res Down XIII	Slimy Tongue	3
+Resist Thermal Res Down XIV	Slimy Tongue	4
+Resist Thermal Res Down XV	Slimy Tongue	4
+Resist Thermal Res Down XVI	Slimy Tongue	4
+Resist Thermal Res Down XVII	Slimy Tongue	4
+Resist Thermal Res Down XVIII	Slimy Tongue	4
+Resist Thermal Res Down XIX	Slimy Tongue	5
+Resist Electric Res Down I	Blue Electrical Tentacle	1
+Resist Electric Res Down II	Blue Electrical Tentacle	1
+Resist Electric Res Down III	Blue Electrical Tentacle	1
+Resist Electric Res Down IV	Blue Electrical Tentacle	2
+Resist Electric Res Down V	Blue Electrical Tentacle	2
+Resist Electric Res Down VI	Blue Electrical Tentacle	2
+Resist Electric Res Down VII	Blue Electrical Tentacle	2
+Resist Electric Res Down VIII	Blue Electrical Tentacle	2
+Resist Electric Res Down IX	Blue Electrical Tentacle	3
+Resist Electric Res Down X	Blue Electrical Tentacle	3
+Resist Electric Res Down XI	Blue Electrical Tentacle	3
+Resist Electric Res Down XII	Blue Electrical Tentacle	3
+Resist Electric Res Down XIII	Blue Electrical Tentacle	3
+Resist Electric Res Down XIV	Blue Electrical Tentacle	4
+Resist Electric Res Down XV	Blue Electrical Tentacle	4
+Resist Electric Res Down XVI	Blue Electrical Tentacle	4
+Resist Electric Res Down XVII	Blue Electrical Tentacle	4
+Resist Electric Res Down XVIII	Blue Electrical Tentacle	4
+Resist Electric Res Down XIX	Blue Electrical Tentacle	5
+Resist Ether Res Down I	Papil Straw	1
+Resist Ether Res Down II	Papil Straw	1
+Resist Ether Res Down III	Papil Straw	1
+Resist Ether Res Down IV	Papil Straw	2
+Resist Ether Res Down V	Papil Straw	2
+Resist Ether Res Down VI	Papil Straw	2
+Resist Ether Res Down VII	Papil Straw	2
+Resist Ether Res Down VIII	Papil Straw	2
+Resist Ether Res Down IX	Papil Straw	3
+Resist Ether Res Down X	Papil Straw	3
+Resist Ether Res Down XI	Papil Straw	3
+Resist Ether Res Down XII	Papil Straw	3
+Resist Ether Res Down XIII	Papil Straw	3
+Resist Ether Res Down XIV	Papil Straw	4
+Resist Ether Res Down XV	Papil Straw	4
+Resist Ether Res Down XVI	Papil Straw	4
+Resist Ether Res Down XVII	Papil Straw	4
+Resist Ether Res Down XVIII	Papil Straw	4
+Resist Ether Res Down XIX	Papil Straw	5
+Resist Gravity Res Down I	Lepyx Jaw Meat	1
+Resist Gravity Res Down II	Lepyx Jaw Meat	1
+Resist Gravity Res Down III	Lepyx Jaw Meat	1
+Resist Gravity Res Down IV	Lepyx Jaw Meat	2
+Resist Gravity Res Down V	Lepyx Jaw Meat	2
+Resist Gravity Res Down VI	Lepyx Jaw Meat	2
+Resist Gravity Res Down VII	Lepyx Jaw Meat	2
+Resist Gravity Res Down VIII	Lepyx Jaw Meat	2
+Resist Gravity Res Down IX	Lepyx Jaw Meat	3
+Resist Gravity Res Down X	Lepyx Jaw Meat	3
+Resist Gravity Res Down XI	Lepyx Jaw Meat	3
+Resist Gravity Res Down XII	Lepyx Jaw Meat	3
+Resist Gravity Res Down XIII	Lepyx Jaw Meat	3
+Resist Gravity Res Down XIV	Lepyx Jaw Meat	4
+Resist Gravity Res Down XV	Lepyx Jaw Meat	4
+Resist Gravity Res Down XVI	Lepyx Jaw Meat	4
+Resist Gravity Res Down XVII	Lepyx Jaw Meat	4
+Resist Gravity Res Down XVIII	Lepyx Jaw Meat	4
+Resist Gravity Res Down XIX	Lepyx Jaw Meat	5
+Resist Time Bomb I	Puge Counter	1
+Resist Time Bomb II	Puge Counter	1
+Resist Time Bomb III	Puge Counter	1
+Resist Time Bomb IV	Puge Counter	2
+Resist Time Bomb V	Puge Counter	2
+Resist Time Bomb VI	Puge Counter	2
+Resist Time Bomb VII	Puge Counter	2
+Resist Time Bomb VIII	Puge Counter	2
+Resist Time Bomb IX	Puge Counter	3
+Resist Time Bomb X	Puge Counter	3
+Resist Time Bomb XI	Puge Counter	3
+Resist Time Bomb XII	Puge Counter	3
+Resist Time Bomb XIII	Puge Counter	3
+Resist Time Bomb XIV	Puge Counter	4
+Resist Time Bomb XV	Puge Counter	4
+Resist Time Bomb XVI	Puge Counter	4
+Resist Time Bomb XVII	Puge Counter	4
+Resist Time Bomb XVIII	Puge Counter	4
+Resist Time Bomb XIX	Puge Counter	5
+Resist Debuff Res Down I	Forfex Miso	1
+Resist Debuff Res Down II	Forfex Miso	1
+Resist Debuff Res Down III	Forfex Miso	1
+Resist Debuff Res Down IV	Forfex Miso	2
+Resist Debuff Res Down V	Forfex Miso	2
+Resist Debuff Res Down VI	Forfex Miso	2
+Resist Debuff Res Down VII	Forfex Miso	2
+Resist Debuff Res Down VIII	Forfex Miso	2
+Resist Debuff Res Down IX	Forfex Miso	3
+Resist Debuff Res Down X	Forfex Miso	3
+Resist Debuff Res Down XI	Forfex Miso	3
+Resist Debuff Res Down XII	Forfex Miso	3
+Resist Debuff Res Down XIII	Forfex Miso	3
+Resist Debuff Res Down XIV	Forfex Miso	4
+Resist Debuff Res Down XV	Forfex Miso	4
+Resist Debuff Res Down XVI	Forfex Miso	4
+Resist Debuff Res Down XVII	Forfex Miso	4
+Resist Debuff Res Down XVIII	Forfex Miso	4
+Resist Debuff Res Down XIX	Forfex Miso	5
+Resist HP Recovery Down I	Succulent Meat	1
+Resist HP Recovery Down II	Succulent Meat	1
+Resist HP Recovery Down III	Succulent Meat	1
+Resist HP Recovery Down IV	Succulent Meat	2
+Resist HP Recovery Down V	Succulent Meat	2
+Resist HP Recovery Down VI	Succulent Meat	2
+Resist HP Recovery Down VII	Succulent Meat	2
+Resist HP Recovery Down VIII	Succulent Meat	2
+Resist HP Recovery Down IX	Succulent Meat	3
+Resist HP Recovery Down X	Succulent Meat	3
+Resist HP Recovery Down XI	Succulent Meat	3
+Resist HP Recovery Down XII	Succulent Meat	3
+Resist HP Recovery Down XIII	Succulent Meat	3
+Resist HP Recovery Down XIV	Succulent Meat	4
+Resist HP Recovery Down XV	Succulent Meat	4
+Resist HP Recovery Down XVI	Succulent Meat	4
+Resist HP Recovery Down XVII	Succulent Meat	4
+Resist HP Recovery Down XVIII	Succulent Meat	4
+Resist HP Recovery Down XIX	Succulent Meat	5
+Resist Blaze I	Vesper Fry	1
+Resist Blaze II	Vesper Fry	1
+Resist Blaze III	Vesper Fry	1
+Resist Blaze IV	Vesper Fry	2
+Resist Blaze V	Vesper Fry	2
+Resist Blaze VI	Vesper Fry	2
+Resist Blaze VII	Vesper Fry	2
+Resist Blaze VIII	Vesper Fry	2
+Resist Blaze IX	Vesper Fry	3
+Resist Blaze X	Vesper Fry	3
+Resist Blaze XI	Vesper Fry	3
+Resist Blaze XII	Vesper Fry	3
+Resist Blaze XIII	Vesper Fry	3
+Resist Blaze XIV	Vesper Fry	4
+Resist Blaze XV	Vesper Fry	4
+Resist Blaze XVI	Vesper Fry	4
+Resist Blaze XVII	Vesper Fry	4
+Resist Blaze XVIII	Vesper Fry	4
+Resist Blaze XIX	Vesper Fry	5
+Resist Shock I	Fine Black Belt	1
+Resist Shock II	Fine Black Belt	1
+Resist Shock III	Fine Black Belt	1
+Resist Shock IV	Fine Black Belt	2
+Resist Shock V	Fine Black Belt	2
+Resist Shock VI	Fine Black Belt	2
+Resist Shock VII	Fine Black Belt	2
+Resist Shock VIII	Fine Black Belt	2
+Resist Shock IX	Fine Black Belt	3
+Resist Shock X	Fine Black Belt	3
+Resist Shock XI	Fine Black Belt	3
+Resist Shock XII	Fine Black Belt	3
+Resist Shock XIII	Fine Black Belt	3
+Resist Shock XIV	Fine Black Belt	4
+Resist Shock XV	Fine Black Belt	4
+Resist Shock XVI	Fine Black Belt	4
+Resist Shock XVII	Fine Black Belt	4
+Resist Shock XVIII	Fine Black Belt	4
+Resist Shock XIX	Fine Black Belt	5
+Debuff Suppressor I	Standard Jammer	1
+Debuff Suppressor I	Purgovent Jaw Meat	1
+Debuff Suppressor I	Red Blatta Wing	1
+Debuff Suppressor II	Standard Jammer	1
+Debuff Suppressor II	Purgovent Jaw Meat	1
+Debuff Suppressor II	Red Blatta Wing	1
+Debuff Suppressor III	Standard Jammer	1
+Debuff Suppressor III	Purgovent Jaw Meat	1
+Debuff Suppressor III	Red Blatta Wing	1
+Debuff Suppressor IV	Standard Jammer	2
+Debuff Suppressor IV	Purgovent Jaw Meat	2
+Debuff Suppressor IV	Red Blatta Wing	2
+Debuff Suppressor V	Standard Jammer	2
+Debuff Suppressor V	Purgovent Jaw Meat	2
+Debuff Suppressor V	Red Blatta Wing	2
+Debuff Suppressor VI	Standard Jammer	2
+Debuff Suppressor VI	Purgovent Jaw Meat	2
+Debuff Suppressor VI	Red Blatta Wing	2
+Debuff Suppressor VII	Standard Jammer	2
+Debuff Suppressor VII	Purgovent Jaw Meat	2
+Debuff Suppressor VII	Red Blatta Wing	2
+Debuff Suppressor VIII	Standard Jammer	2
+Debuff Suppressor VIII	Purgovent Jaw Meat	2
+Debuff Suppressor VIII	Red Blatta Wing	2
+Debuff Suppressor IX	Standard Jammer	3
+Debuff Suppressor IX	Purgovent Jaw Meat	3
+Debuff Suppressor IX	Red Blatta Wing	3
+Debuff Suppressor X	Standard Jammer	3
+Debuff Suppressor X	Rugged Skin	3
+Debuff Suppressor X	Quality Core	3
+Debuff Suppressor XI	Standard Jammer	3
+Debuff Suppressor XI	Rugged Skin	3
+Debuff Suppressor XI	Quality Core	3
+Debuff Suppressor XII	Standard Jammer	3
+Debuff Suppressor XII	Rugged Skin	3
+Debuff Suppressor XII	Quality Core	3
+Debuff Suppressor XIII	Standard Jammer	3
+Debuff Suppressor XIII	Rugged Skin	3
+Debuff Suppressor XIII	Quality Core	3
+Debuff Suppressor XIV	Standard Jammer	4
+Debuff Suppressor XIV	Rugged Skin	4
+Debuff Suppressor XIV	Quality Core	4
+Debuff Suppressor XV	Standard Jammer	4
+Debuff Suppressor XV	Rugged Skin	4
+Debuff Suppressor XV	Quality Core	4
+Debuff Suppressor XVI	Standard Jammer	4
+Debuff Suppressor XVI	Rugged Skin	4
+Debuff Suppressor XVI	Quality Core	4
+Debuff Suppressor XVII	Standard Jammer	4
+Debuff Suppressor XVII	Rugged Skin	4
+Debuff Suppressor XVII	Quality Core	4
+Debuff Suppressor XVIII	Standard Jammer	4
+Debuff Suppressor XVIII	Rugged Skin	4
+Debuff Suppressor XVIII	Quality Core	4
+Debuff Suppressor XIX	Standard Jammer	5
+Debuff Suppressor XIX	Rugged Skin	5
+Debuff Suppressor XIX	Quality Core	5
+Critical Chance Up I	Oc-serv Hand	1
+Critical Chance Up I	Ziggian Long Antennae	1
+Critical Chance Up I	Forfex Miso	1
+Critical Chance Up II	Oc-serv Hand	1
+Critical Chance Up II	Ziggian Long Antennae	1
+Critical Chance Up II	Forfex Miso	1
+Critical Chance Up III	Oc-serv Hand	1
+Critical Chance Up III	Ziggian Long Antennae	1
+Critical Chance Up III	Forfex Miso	1
+Critical Chance Up IV	Oc-serv Hand	2
+Critical Chance Up IV	Ziggian Long Antennae	2
+Critical Chance Up IV	Forfex Miso	2
+Critical Chance Up V	Oc-serv Hand	2
+Critical Chance Up V	Ziggian Long Antennae	2
+Critical Chance Up V	Forfex Miso	2
+Critical Chance Up VI	Oc-serv Hand	2
+Critical Chance Up VI	Ziggian Long Antennae	2
+Critical Chance Up VI	Forfex Miso	2
+Critical Chance Up VII	Oc-serv Hand	2
+Critical Chance Up VII	Ziggian Long Antennae	2
+Critical Chance Up VII	Forfex Miso	2
+Critical Chance Up VIII	Oc-serv Hand	2
+Critical Chance Up VIII	Ziggian Long Antennae	2
+Critical Chance Up VIII	Forfex Miso	2
+Critical Chance Up IX	Oc-serv Hand	3
+Critical Chance Up IX	Ziggian Long Antennae	3
+Critical Chance Up IX	Forfex Miso	3
+Critical Chance Up X	Oc-serv Hand	3
+Critical Chance Up X	Lone Red Ictus Stinger	3
+Critical Chance Up X	Spiked Tail Fin	3
+Critical Chance Up XI	Oc-serv Hand	3
+Critical Chance Up XI	Lone Red Ictus Stinger	3
+Critical Chance Up XI	Spiked Tail Fin	3
+Critical Chance Up XII	Oc-serv Hand	3
+Critical Chance Up XII	Lone Red Ictus Stinger	3
+Critical Chance Up XII	Spiked Tail Fin	3
+Critical Chance Up XIII	Oc-serv Hand	3
+Critical Chance Up XIII	Lone Red Ictus Stinger	3
+Critical Chance Up XIII	Spiked Tail Fin	3
+Critical Chance Up XIV	Oc-serv Hand	4
+Critical Chance Up XIV	Lone Red Ictus Stinger	4
+Critical Chance Up XIV	Spiked Tail Fin	4
+Critical Chance Up XV	Oc-serv Hand	4
+Critical Chance Up XV	Lone Red Ictus Stinger	4
+Critical Chance Up XV	Spiked Tail Fin	4
+Critical Chance Up XVI	Oc-serv Hand	4
+Critical Chance Up XVI	Lone Red Ictus Stinger	4
+Critical Chance Up XVI	Spiked Tail Fin	4
+Critical Chance Up XVII	Oc-serv Hand	4
+Critical Chance Up XVII	Lone Red Ictus Stinger	4
+Critical Chance Up XVII	Spiked Tail Fin	4
+Critical Chance Up XVIII	Oc-serv Hand	4
+Critical Chance Up XVIII	Lone Red Ictus Stinger	4
+Critical Chance Up XVIII	Spiked Tail Fin	4
+Critical Chance Up XIX	Oc-serv Hand	5
+Critical Chance Up XIX	Lone Red Ictus Stinger	5
+Critical Chance Up XIX	Spiked Tail Fin	5
+Theroid Criticals Up I	Fleecy Fur	1
+Theroid Criticals Up II	Fleecy Fur	1
+Theroid Criticals Up III	Fleecy Fur	1
+Theroid Criticals Up IV	Fleecy Fur	2
+Theroid Criticals Up V	Fleecy Fur	2
+Theroid Criticals Up VI	Fleecy Fur	2
+Theroid Criticals Up VII	Fleecy Fur	2
+Theroid Criticals Up VIII	Fleecy Fur	2
+Theroid Criticals Up IX	Fleecy Fur	3
+Theroid Criticals Up X	Fleecy Fur	3
+Theroid Criticals Up XI	Fleecy Fur	3
+Theroid Criticals Up XII	Fleecy Fur	3
+Theroid Criticals Up XIII	Fleecy Fur	3
+Theroid Criticals Up XIV	Fleecy Fur	4
+Theroid Criticals Up XV	Fleecy Fur	4
+Theroid Criticals Up XVI	Fleecy Fur	4
+Theroid Criticals Up XVII	Fleecy Fur	4
+Theroid Criticals Up XVIII	Fleecy Fur	4
+Theroid Criticals Up XIX	Fleecy Fur	5
+Insectoid Criticals Up I	Tatty Insect Wing	1
+Insectoid Criticals Up II	Tatty Insect Wing	1
+Insectoid Criticals Up III	Tatty Insect Wing	1
+Insectoid Criticals Up IV	Tatty Insect Wing	2
+Insectoid Criticals Up V	Tatty Insect Wing	2
+Insectoid Criticals Up VI	Tatty Insect Wing	2
+Insectoid Criticals Up VII	Tatty Insect Wing	2
+Insectoid Criticals Up VIII	Tatty Insect Wing	2
+Insectoid Criticals Up IX	Tatty Insect Wing	3
+Insectoid Criticals Up X	Tatty Insect Wing	3
+Insectoid Criticals Up XI	Tatty Insect Wing	3
+Insectoid Criticals Up XII	Tatty Insect Wing	3
+Insectoid Criticals Up XIII	Tatty Insect Wing	3
+Insectoid Criticals Up XIV	Tatty Insect Wing	4
+Insectoid Criticals Up XV	Tatty Insect Wing	4
+Insectoid Criticals Up XVI	Tatty Insect Wing	4
+Insectoid Criticals Up XVII	Tatty Insect Wing	4
+Insectoid Criticals Up XVIII	Tatty Insect Wing	4
+Insectoid Criticals Up XIX	Tatty Insect Wing	5
+Piscinoid Criticals Up I	Small Dorsal Fin	1
+Piscinoid Criticals Up II	Small Dorsal Fin	1
+Piscinoid Criticals Up III	Small Dorsal Fin	1
+Piscinoid Criticals Up IV	Small Dorsal Fin	2
+Piscinoid Criticals Up V	Small Dorsal Fin	2
+Piscinoid Criticals Up VI	Small Dorsal Fin	2
+Piscinoid Criticals Up VII	Small Dorsal Fin	2
+Piscinoid Criticals Up VIII	Small Dorsal Fin	2
+Piscinoid Criticals Up IX	Small Dorsal Fin	3
+Piscinoid Criticals Up X	Small Dorsal Fin	3
+Piscinoid Criticals Up XI	Small Dorsal Fin	3
+Piscinoid Criticals Up XII	Small Dorsal Fin	3
+Piscinoid Criticals Up XIII	Small Dorsal Fin	3
+Piscinoid Criticals Up XIV	Small Dorsal Fin	4
+Piscinoid Criticals Up XV	Small Dorsal Fin	4
+Piscinoid Criticals Up XVI	Small Dorsal Fin	4
+Piscinoid Criticals Up XVII	Small Dorsal Fin	4
+Piscinoid Criticals Up XVIII	Small Dorsal Fin	4
+Piscinoid Criticals Up XIX	Small Dorsal Fin	5
+Humanoid Criticals Up I	Broken Buckle	1
+Humanoid Criticals Up II	Broken Buckle	1
+Humanoid Criticals Up III	Broken Buckle	1
+Humanoid Criticals Up IV	Broken Buckle	2
+Humanoid Criticals Up V	Broken Buckle	2
+Humanoid Criticals Up VI	Broken Buckle	2
+Humanoid Criticals Up VII	Broken Buckle	2
+Humanoid Criticals Up VIII	Broken Buckle	2
+Humanoid Criticals Up IX	Broken Buckle	3
+Humanoid Criticals Up X	Broken Buckle	3
+Humanoid Criticals Up XI	Broken Buckle	3
+Humanoid Criticals Up XII	Broken Buckle	3
+Humanoid Criticals Up XIII	Broken Buckle	3
+Humanoid Criticals Up XIV	Broken Buckle	4
+Humanoid Criticals Up XV	Broken Buckle	4
+Humanoid Criticals Up XVI	Broken Buckle	4
+Humanoid Criticals Up XVII	Broken Buckle	4
+Humanoid Criticals Up XVIII	Broken Buckle	4
+Humanoid Criticals Up XIX	Broken Buckle	5
+Mechanoid Criticals Up I	Standard Crank	1
+Mechanoid Criticals Up II	Standard Crank	1
+Mechanoid Criticals Up III	Standard Crank	1
+Mechanoid Criticals Up IV	Standard Crank	2
+Mechanoid Criticals Up V	Standard Crank	2
+Mechanoid Criticals Up VI	Standard Crank	2
+Mechanoid Criticals Up VII	Standard Crank	2
+Mechanoid Criticals Up VIII	Standard Crank	2
+Mechanoid Criticals Up IX	Standard Crank	3
+Mechanoid Criticals Up X	Standard Crank	3
+Mechanoid Criticals Up XI	Standard Crank	3
+Mechanoid Criticals Up XII	Standard Crank	3
+Mechanoid Criticals Up XIII	Standard Crank	3
+Mechanoid Criticals Up XIV	Standard Crank	4
+Mechanoid Criticals Up XV	Standard Crank	4
+Mechanoid Criticals Up XVI	Standard Crank	4
+Mechanoid Criticals Up XVII	Standard Crank	4
+Mechanoid Criticals Up XVIII	Standard Crank	4
+Mechanoid Criticals Up XIX	Standard Crank	5
+Chimeroid Criticals Up I	Sticky Mucus	1
+Chimeroid Criticals Up I	Bloodied Face	1
+Chimeroid Criticals Up I	Fine White Belt	1
+Chimeroid Criticals Up II	Sticky Mucus	1
+Chimeroid Criticals Up II	Bloodied Face	1
+Chimeroid Criticals Up II	Fine White Belt	1
+Chimeroid Criticals Up III	Sticky Mucus	1
+Chimeroid Criticals Up III	Bloodied Face	1
+Chimeroid Criticals Up III	Fine White Belt	1
+Chimeroid Criticals Up IV	Sticky Mucus	2
+Chimeroid Criticals Up IV	Bloodied Face	2
+Chimeroid Criticals Up IV	Fine White Belt	2
+Chimeroid Criticals Up V	Sticky Mucus	2
+Chimeroid Criticals Up V	Bloodied Face	2
+Chimeroid Criticals Up V	Fine White Belt	2
+Chimeroid Criticals Up VI	Sticky Mucus	2
+Chimeroid Criticals Up VI	Bloodied Face	2
+Chimeroid Criticals Up VI	Fine White Belt	2
+Chimeroid Criticals Up VII	Sticky Mucus	2
+Chimeroid Criticals Up VII	Bloodied Face	2
+Chimeroid Criticals Up VII	Fine White Belt	2
+Chimeroid Criticals Up VIII	Sticky Mucus	2
+Chimeroid Criticals Up VIII	Bloodied Face	2
+Chimeroid Criticals Up VIII	Fine White Belt	2
+Chimeroid Criticals Up IX	Sticky Mucus	3
+Chimeroid Criticals Up IX	Bloodied Face	3
+Chimeroid Criticals Up IX	Fine White Belt	3
+Chimeroid Criticals Up X	Sticky Mucus	3
+Chimeroid Criticals Up X	Black Colubrim Tail	3
+Chimeroid Criticals Up X	Brown Colubrim Tail	3
+Chimeroid Criticals Up XI	Sticky Mucus	3
+Chimeroid Criticals Up XI	Black Colubrim Tail	3
+Chimeroid Criticals Up XI	Brown Colubrim Tail	3
+Chimeroid Criticals Up XII	Sticky Mucus	3
+Chimeroid Criticals Up XII	Black Colubrim Tail	3
+Chimeroid Criticals Up XII	Brown Colubrim Tail	3
+Chimeroid Criticals Up XIII	Sticky Mucus	3
+Chimeroid Criticals Up XIII	Black Colubrim Tail	3
+Chimeroid Criticals Up XIII	Brown Colubrim Tail	3
+Chimeroid Criticals Up XIV	Sticky Mucus	4
+Chimeroid Criticals Up XIV	Black Colubrim Tail	4
+Chimeroid Criticals Up XIV	Brown Colubrim Tail	4
+Chimeroid Criticals Up XV	Sticky Mucus	4
+Chimeroid Criticals Up XV	Black Colubrim Tail	4
+Chimeroid Criticals Up XV	Brown Colubrim Tail	4
+Chimeroid Criticals Up XVI	Sticky Mucus	4
+Chimeroid Criticals Up XVI	Black Colubrim Tail	4
+Chimeroid Criticals Up XVI	Brown Colubrim Tail	4
+Chimeroid Criticals Up XVII	Sticky Mucus	4
+Chimeroid Criticals Up XVII	Black Colubrim Tail	4
+Chimeroid Criticals Up XVII	Brown Colubrim Tail	4
+Chimeroid Criticals Up XVIII	Sticky Mucus	4
+Chimeroid Criticals Up XVIII	Black Colubrim Tail	4
+Chimeroid Criticals Up XVIII	Brown Colubrim Tail	4
+Chimeroid Criticals Up XIX	Sticky Mucus	5
+Chimeroid Criticals Up XIX	Black Colubrim Tail	5
+Chimeroid Criticals Up XIX	Brown Colubrim Tail	5
+Ultrafauna Criticals Up I	Thick Cinicula Horn	1
+Ultrafauna Criticals Up I	Black Electrical Tentacle	1
+Ultrafauna Criticals Up I	Hot Potamus Juice	1
+Ultrafauna Criticals Up II	Thick Cinicula Horn	1
+Ultrafauna Criticals Up II	Black Electrical Tentacle	1
+Ultrafauna Criticals Up II	Hot Potamus Juice	1
+Ultrafauna Criticals Up III	Thick Cinicula Horn	1
+Ultrafauna Criticals Up III	Black Electrical Tentacle	1
+Ultrafauna Criticals Up III	Hot Potamus Juice	1
+Ultrafauna Criticals Up IV	Thick Cinicula Horn	2
+Ultrafauna Criticals Up IV	Black Electrical Tentacle	2
+Ultrafauna Criticals Up IV	Hot Potamus Juice	2
+Ultrafauna Criticals Up V	Thick Cinicula Horn	2
+Ultrafauna Criticals Up V	Black Electrical Tentacle	2
+Ultrafauna Criticals Up V	Hot Potamus Juice	2
+Ultrafauna Criticals Up VI	Thick Cinicula Horn	2
+Ultrafauna Criticals Up VI	Black Electrical Tentacle	2
+Ultrafauna Criticals Up VI	Hot Potamus Juice	2
+Ultrafauna Criticals Up VII	Thick Cinicula Horn	2
+Ultrafauna Criticals Up VII	Black Electrical Tentacle	2
+Ultrafauna Criticals Up VII	Hot Potamus Juice	2
+Ultrafauna Criticals Up VIII	Thick Cinicula Horn	2
+Ultrafauna Criticals Up VIII	Black Electrical Tentacle	2
+Ultrafauna Criticals Up VIII	Hot Potamus Juice	2
+Ultrafauna Criticals Up IX	Thick Cinicula Horn	3
+Ultrafauna Criticals Up IX	Black Electrical Tentacle	3
+Ultrafauna Criticals Up IX	Hot Potamus Juice	3
+Ultrafauna Criticals Up X	Thick Cinicula Horn	3
+Ultrafauna Criticals Up X	Reverse Colubrim Fin	3
+Ultrafauna Criticals Up X	Colubrim Eel Kebab	3
+Ultrafauna Criticals Up XI	Thick Cinicula Horn	3
+Ultrafauna Criticals Up XI	Reverse Colubrim Fin	3
+Ultrafauna Criticals Up XI	Colubrim Eel Kebab	3
+Ultrafauna Criticals Up XII	Thick Cinicula Horn	3
+Ultrafauna Criticals Up XII	Reverse Colubrim Fin	3
+Ultrafauna Criticals Up XII	Colubrim Eel Kebab	3
+Ultrafauna Criticals Up XIII	Thick Cinicula Horn	3
+Ultrafauna Criticals Up XIII	Reverse Colubrim Fin	3
+Ultrafauna Criticals Up XIII	Colubrim Eel Kebab	3
+Ultrafauna Criticals Up XIV	Thick Cinicula Horn	4
+Ultrafauna Criticals Up XIV	Reverse Colubrim Fin	4
+Ultrafauna Criticals Up XIV	Colubrim Eel Kebab	4
+Ultrafauna Criticals Up XV	Thick Cinicula Horn	4
+Ultrafauna Criticals Up XV	Reverse Colubrim Fin	4
+Ultrafauna Criticals Up XV	Colubrim Eel Kebab	4
+Ultrafauna Criticals Up XVI	Thick Cinicula Horn	4
+Ultrafauna Criticals Up XVI	Reverse Colubrim Fin	4
+Ultrafauna Criticals Up XVI	Colubrim Eel Kebab	4
+Ultrafauna Criticals Up XVII	Thick Cinicula Horn	4
+Ultrafauna Criticals Up XVII	Reverse Colubrim Fin	4
+Ultrafauna Criticals Up XVII	Colubrim Eel Kebab	4
+Ultrafauna Criticals Up XVIII	Thick Cinicula Horn	4
+Ultrafauna Criticals Up XVIII	Reverse Colubrim Fin	4
+Ultrafauna Criticals Up XVIII	Colubrim Eel Kebab	4
+Ultrafauna Criticals Up XIX	Thick Cinicula Horn	5
+Ultrafauna Criticals Up XIX	Reverse Colubrim Fin	5
+Ultrafauna Criticals Up XIX	Colubrim Eel Kebab	5
+Extend Critical Power I	Gremlin Stone	1
+Extend Critical Power I	Blue Progen Wing	1
+Extend Critical Power I	Pristine Pincer	1
+Extend Critical Power II	Gremlin Stone	1
+Extend Critical Power II	Blue Progen Wing	1
+Extend Critical Power II	Pristine Pincer	1
+Extend Critical Power III	Gremlin Stone	1
+Extend Critical Power III	Blue Progen Wing	1
+Extend Critical Power III	Pristine Pincer	1
+Extend Critical Power IV	Gremlin Stone	2
+Extend Critical Power IV	Blue Progen Wing	2
+Extend Critical Power IV	Pristine Pincer	2
+Extend Critical Power V	Gremlin Stone	2
+Extend Critical Power V	Blue Progen Wing	2
+Extend Critical Power V	Pristine Pincer	2
+Extend Critical Power VI	Gremlin Stone	2
+Extend Critical Power VI	Blue Progen Wing	2
+Extend Critical Power VI	Pristine Pincer	2
+Extend Critical Power VII	Gremlin Stone	2
+Extend Critical Power VII	Blue Progen Wing	2
+Extend Critical Power VII	Pristine Pincer	2
+Extend Critical Power VIII	Gremlin Stone	2
+Extend Critical Power VIII	Blue Progen Wing	2
+Extend Critical Power VIII	Pristine Pincer	2
+Extend Critical Power IX	Gremlin Stone	3
+Extend Critical Power IX	Blue Progen Wing	3
+Extend Critical Power IX	Pristine Pincer	3
+Extend Critical Power X	Gremlin Stone	3
+Extend Critical Power X	Ornate Petramand Claw	3
+Extend Critical Power X	Lophid Jaw Meat	3
+Extend Critical Power XI	Gremlin Stone	3
+Extend Critical Power XI	Ornate Petramand Claw	3
+Extend Critical Power XI	Lophid Jaw Meat	3
+Extend Critical Power XII	Gremlin Stone	3
+Extend Critical Power XII	Ornate Petramand Claw	3
+Extend Critical Power XII	Lophid Jaw Meat	3
+Extend Critical Power XIII	Gremlin Stone	3
+Extend Critical Power XIII	Ornate Petramand Claw	3
+Extend Critical Power XIII	Lophid Jaw Meat	3
+Extend Critical Power XIV	Gremlin Stone	4
+Extend Critical Power XIV	Ornate Petramand Claw	4
+Extend Critical Power XIV	Lophid Jaw Meat	4
+Extend Critical Power XV	Gremlin Stone	4
+Extend Critical Power XV	Ornate Petramand Claw	4
+Extend Critical Power XV	Lophid Jaw Meat	4
+Extend Critical Power XVI	Gremlin Stone	4
+Extend Critical Power XVI	Ornate Petramand Claw	4
+Extend Critical Power XVI	Lophid Jaw Meat	4
+Extend Critical Power XVII	Gremlin Stone	4
+Extend Critical Power XVII	Ornate Petramand Claw	4
+Extend Critical Power XVII	Lophid Jaw Meat	4
+Extend Critical Power XVIII	Gremlin Stone	4
+Extend Critical Power XVIII	Ornate Petramand Claw	4
+Extend Critical Power XVIII	Lophid Jaw Meat	4
+Extend Critical Power XIX	Gremlin Stone	5
+Extend Critical Power XIX	Ornate Petramand Claw	5
+Extend Critical Power XIX	Lophid Jaw Meat	5
+Theroid Slayer I	Fleecy Fur	1
+Theroid Slayer II	Fleecy Fur	1
+Theroid Slayer III	Fleecy Fur	1
+Theroid Slayer IV	Fleecy Fur	2
+Theroid Slayer V	Fleecy Fur	2
+Theroid Slayer VI	Fleecy Fur	2
+Theroid Slayer VII	Fleecy Fur	2
+Theroid Slayer VIII	Fleecy Fur	2
+Theroid Slayer IX	Fleecy Fur	3
+Theroid Slayer X	Fleecy Fur	3
+Theroid Slayer XI	Fleecy Fur	3
+Theroid Slayer XII	Fleecy Fur	3
+Theroid Slayer XIII	Fleecy Fur	3
+Theroid Slayer XIV	Fleecy Fur	4
+Theroid Slayer XV	Fleecy Fur	4
+Theroid Slayer XVI	Fleecy Fur	4
+Theroid Slayer XVII	Fleecy Fur	4
+Theroid Slayer XVIII	Fleecy Fur	4
+Theroid Slayer XIX	Fleecy Fur	5
+Insectoid Slayer I	Tatty Insect Wing	1
+Insectoid Slayer II	Tatty Insect Wing	1
+Insectoid Slayer III	Tatty Insect Wing	1
+Insectoid Slayer IV	Tatty Insect Wing	2
+Insectoid Slayer V	Tatty Insect Wing	2
+Insectoid Slayer VI	Tatty Insect Wing	2
+Insectoid Slayer VII	Tatty Insect Wing	2
+Insectoid Slayer VIII	Tatty Insect Wing	2
+Insectoid Slayer IX	Tatty Insect Wing	3
+Insectoid Slayer X	Tatty Insect Wing	3
+Insectoid Slayer XI	Tatty Insect Wing	3
+Insectoid Slayer XII	Tatty Insect Wing	3
+Insectoid Slayer XIII	Tatty Insect Wing	3
+Insectoid Slayer XIV	Tatty Insect Wing	4
+Insectoid Slayer XV	Tatty Insect Wing	4
+Insectoid Slayer XVI	Tatty Insect Wing	4
+Insectoid Slayer XVII	Tatty Insect Wing	4
+Insectoid Slayer XVIII	Tatty Insect Wing	4
+Insectoid Slayer XIX	Tatty Insect Wing	5
+Piscinoid Slayer I	Small Dorsal Fin	1
+Piscinoid Slayer II	Small Dorsal Fin	1
+Piscinoid Slayer III	Small Dorsal Fin	1
+Piscinoid Slayer IV	Small Dorsal Fin	2
+Piscinoid Slayer V	Small Dorsal Fin	2
+Piscinoid Slayer VI	Small Dorsal Fin	2
+Piscinoid Slayer VII	Small Dorsal Fin	2
+Piscinoid Slayer VIII	Small Dorsal Fin	2
+Piscinoid Slayer IX	Small Dorsal Fin	3
+Piscinoid Slayer X	Small Dorsal Fin	3
+Piscinoid Slayer XI	Small Dorsal Fin	3
+Piscinoid Slayer XII	Small Dorsal Fin	3
+Piscinoid Slayer XIII	Small Dorsal Fin	3
+Piscinoid Slayer XIV	Small Dorsal Fin	4
+Piscinoid Slayer XV	Small Dorsal Fin	4
+Piscinoid Slayer XVI	Small Dorsal Fin	4
+Piscinoid Slayer XVII	Small Dorsal Fin	4
+Piscinoid Slayer XVIII	Small Dorsal Fin	4
+Piscinoid Slayer XIX	Small Dorsal Fin	5
+Humanoid Slayer I	Broken Buckle	1
+Humanoid Slayer II	Broken Buckle	1
+Humanoid Slayer III	Broken Buckle	1
+Humanoid Slayer IV	Broken Buckle	2
+Humanoid Slayer V	Broken Buckle	2
+Humanoid Slayer VI	Broken Buckle	2
+Humanoid Slayer VII	Broken Buckle	2
+Humanoid Slayer VIII	Broken Buckle	2
+Humanoid Slayer IX	Broken Buckle	3
+Humanoid Slayer X	Broken Buckle	3
+Humanoid Slayer XI	Broken Buckle	3
+Humanoid Slayer XII	Broken Buckle	3
+Humanoid Slayer XIII	Broken Buckle	3
+Humanoid Slayer XIV	Broken Buckle	4
+Humanoid Slayer XV	Broken Buckle	4
+Humanoid Slayer XVI	Broken Buckle	4
+Humanoid Slayer XVII	Broken Buckle	4
+Humanoid Slayer XVIII	Broken Buckle	4
+Humanoid Slayer XIX	Broken Buckle	5
+Mechanoid Slayer I	Standard Crank	1
+Mechanoid Slayer II	Standard Crank	1
+Mechanoid Slayer III	Standard Crank	1
+Mechanoid Slayer IV	Standard Crank	2
+Mechanoid Slayer V	Standard Crank	2
+Mechanoid Slayer VI	Standard Crank	2
+Mechanoid Slayer VII	Standard Crank	2
+Mechanoid Slayer VIII	Standard Crank	2
+Mechanoid Slayer IX	Standard Crank	3
+Mechanoid Slayer X	Standard Crank	3
+Mechanoid Slayer XI	Standard Crank	3
+Mechanoid Slayer XII	Standard Crank	3
+Mechanoid Slayer XIII	Standard Crank	3
+Mechanoid Slayer XIV	Standard Crank	4
+Mechanoid Slayer XV	Standard Crank	4
+Mechanoid Slayer XVI	Standard Crank	4
+Mechanoid Slayer XVII	Standard Crank	4
+Mechanoid Slayer XVIII	Standard Crank	4
+Mechanoid Slayer XIX	Standard Crank	5
+Chimeroid Slayer I	Sticky Mucus	1
+Chimeroid Slayer I	Bloodied Face	1
+Chimeroid Slayer I	Fine White Belt	1
+Chimeroid Slayer II	Sticky Mucus	1
+Chimeroid Slayer II	Bloodied Face	1
+Chimeroid Slayer II	Fine White Belt	1
+Chimeroid Slayer III	Sticky Mucus	1
+Chimeroid Slayer III	Bloodied Face	1
+Chimeroid Slayer III	Fine White Belt	1
+Chimeroid Slayer IV	Sticky Mucus	2
+Chimeroid Slayer IV	Bloodied Face	2
+Chimeroid Slayer IV	Fine White Belt	2
+Chimeroid Slayer V	Sticky Mucus	2
+Chimeroid Slayer V	Bloodied Face	2
+Chimeroid Slayer V	Fine White Belt	2
+Chimeroid Slayer VI	Sticky Mucus	2
+Chimeroid Slayer VI	Bloodied Face	2
+Chimeroid Slayer VI	Fine White Belt	2
+Chimeroid Slayer VII	Sticky Mucus	2
+Chimeroid Slayer VII	Bloodied Face	2
+Chimeroid Slayer VII	Fine White Belt	2
+Chimeroid Slayer VIII	Sticky Mucus	2
+Chimeroid Slayer VIII	Bloodied Face	2
+Chimeroid Slayer VIII	Fine White Belt	2
+Chimeroid Slayer IX	Sticky Mucus	3
+Chimeroid Slayer IX	Bloodied Face	3
+Chimeroid Slayer IX	Fine White Belt	3
+Chimeroid Slayer X	Sticky Mucus	3
+Chimeroid Slayer X	Yellow Millepod Rock	3
+Chimeroid Slayer X	Millepod Ice Rock	3
+Chimeroid Slayer XI	Sticky Mucus	3
+Chimeroid Slayer XI	Yellow Millepod Rock	3
+Chimeroid Slayer XI	Millepod Ice Rock	3
+Chimeroid Slayer XII	Sticky Mucus	3
+Chimeroid Slayer XII	Yellow Millepod Rock	3
+Chimeroid Slayer XII	Millepod Ice Rock	3
+Chimeroid Slayer XIII	Sticky Mucus	3
+Chimeroid Slayer XIII	Yellow Millepod Rock	3
+Chimeroid Slayer XIII	Millepod Ice Rock	3
+Chimeroid Slayer XIV	Sticky Mucus	4
+Chimeroid Slayer XIV	Yellow Millepod Rock	4
+Chimeroid Slayer XIV	Millepod Ice Rock	4
+Chimeroid Slayer XV	Sticky Mucus	4
+Chimeroid Slayer XV	Yellow Millepod Rock	4
+Chimeroid Slayer XV	Millepod Ice Rock	4
+Chimeroid Slayer XVI	Sticky Mucus	4
+Chimeroid Slayer XVI	Yellow Millepod Rock	4
+Chimeroid Slayer XVI	Millepod Ice Rock	4
+Chimeroid Slayer XVII	Sticky Mucus	4
+Chimeroid Slayer XVII	Yellow Millepod Rock	4
+Chimeroid Slayer XVII	Millepod Ice Rock	4
+Chimeroid Slayer XVIII	Sticky Mucus	4
+Chimeroid Slayer XVIII	Yellow Millepod Rock	4
+Chimeroid Slayer XVIII	Millepod Ice Rock	4
+Chimeroid Slayer XIX	Sticky Mucus	5
+Chimeroid Slayer XIX	Yellow Millepod Rock	5
+Chimeroid Slayer XIX	Millepod Ice Rock	5
+Ultrafauna Slayer I	White Forfex Shell	1
+Ultrafauna Slayer I	Black Electrical Tentacle	1
+Ultrafauna Slayer I	Hot Potamus Juice	1
+Ultrafauna Slayer II	White Forfex Shell	1
+Ultrafauna Slayer II	Black Electrical Tentacle	1
+Ultrafauna Slayer II	Hot Potamus Juice	1
+Ultrafauna Slayer III	White Forfex Shell	1
+Ultrafauna Slayer III	Black Electrical Tentacle	1
+Ultrafauna Slayer III	Hot Potamus Juice	1
+Ultrafauna Slayer IV	White Forfex Shell	2
+Ultrafauna Slayer IV	Black Electrical Tentacle	2
+Ultrafauna Slayer IV	Hot Potamus Juice	2
+Ultrafauna Slayer V	White Forfex Shell	2
+Ultrafauna Slayer V	Black Electrical Tentacle	2
+Ultrafauna Slayer V	Hot Potamus Juice	2
+Ultrafauna Slayer VI	White Forfex Shell	2
+Ultrafauna Slayer VI	Black Electrical Tentacle	2
+Ultrafauna Slayer VI	Hot Potamus Juice	2
+Ultrafauna Slayer VII	White Forfex Shell	2
+Ultrafauna Slayer VII	Black Electrical Tentacle	2
+Ultrafauna Slayer VII	Hot Potamus Juice	2
+Ultrafauna Slayer VIII	White Forfex Shell	2
+Ultrafauna Slayer VIII	Black Electrical Tentacle	2
+Ultrafauna Slayer VIII	Hot Potamus Juice	2
+Ultrafauna Slayer IX	White Forfex Shell	3
+Ultrafauna Slayer IX	Black Electrical Tentacle	3
+Ultrafauna Slayer IX	Hot Potamus Juice	3
+Ultrafauna Slayer X	White Forfex Shell	3
+Ultrafauna Slayer X	Reverse Millepod Fin	3
+Ultrafauna Slayer X	Deva Caladar's Red Ear	3
+Ultrafauna Slayer XI	White Forfex Shell	3
+Ultrafauna Slayer XI	Reverse Millepod Fin	3
+Ultrafauna Slayer XI	Deva Caladar's Red Ear	3
+Ultrafauna Slayer XII	White Forfex Shell	3
+Ultrafauna Slayer XII	Reverse Millepod Fin	3
+Ultrafauna Slayer XII	Deva Caladar's Red Ear	3
+Ultrafauna Slayer XIII	White Forfex Shell	3
+Ultrafauna Slayer XIII	Reverse Millepod Fin	3
+Ultrafauna Slayer XIII	Deva Caladar's Red Ear	3
+Ultrafauna Slayer XIV	White Forfex Shell	4
+Ultrafauna Slayer XIV	Reverse Millepod Fin	4
+Ultrafauna Slayer XIV	Deva Caladar's Red Ear	4
+Ultrafauna Slayer XV	White Forfex Shell	4
+Ultrafauna Slayer XV	Reverse Millepod Fin	4
+Ultrafauna Slayer XV	Deva Caladar's Red Ear	4
+Ultrafauna Slayer XVI	White Forfex Shell	4
+Ultrafauna Slayer XVI	Reverse Millepod Fin	4
+Ultrafauna Slayer XVI	Deva Caladar's Red Ear	4
+Ultrafauna Slayer XVII	White Forfex Shell	4
+Ultrafauna Slayer XVII	Reverse Millepod Fin	4
+Ultrafauna Slayer XVII	Deva Caladar's Red Ear	4
+Ultrafauna Slayer XVIII	White Forfex Shell	4
+Ultrafauna Slayer XVIII	Reverse Millepod Fin	4
+Ultrafauna Slayer XVIII	Deva Caladar's Red Ear	4
+Ultrafauna Slayer XIX	White Forfex Shell	5
+Ultrafauna Slayer XIX	Reverse Millepod Fin	5
+Ultrafauna Slayer XIX	Deva Caladar's Red Ear	5
+Physical Attack Plus I	Sharp Germivore Jaw	1
+Physical Attack Plus I	Giant Falsaxum Jaw	1
+Physical Attack Plus II	Sharp Germivore Jaw	1
+Physical Attack Plus II	Giant Falsaxum Jaw	1
+Physical Attack Plus III	Sharp Germivore Jaw	1
+Physical Attack Plus III	Giant Falsaxum Jaw	1
+Physical Attack Plus IV	Sharp Germivore Jaw	2
+Physical Attack Plus IV	Giant Falsaxum Jaw	2
+Physical Attack Plus V	Sharp Germivore Jaw	2
+Physical Attack Plus V	Giant Falsaxum Jaw	2
+Physical Attack Plus VI	Sharp Germivore Jaw	2
+Physical Attack Plus VI	Giant Falsaxum Jaw	2
+Physical Attack Plus VII	Sharp Germivore Jaw	2
+Physical Attack Plus VII	Giant Falsaxum Jaw	2
+Physical Attack Plus VIII	Sharp Germivore Jaw	2
+Physical Attack Plus VIII	Giant Falsaxum Jaw	2
+Physical Attack Plus IX	Sharp Germivore Jaw	3
+Physical Attack Plus IX	Giant Falsaxum Jaw	3
+Physical Attack Plus X	Experia Glyph	3
+Physical Attack Plus X	Reinforced Frame	3
+Physical Attack Plus XI	Experia Glyph	3
+Physical Attack Plus XI	Reinforced Frame	3
+Physical Attack Plus XII	Experia Glyph	3
+Physical Attack Plus XII	Reinforced Frame	3
+Physical Attack Plus XIII	Experia Glyph	3
+Physical Attack Plus XIII	Reinforced Frame	3
+Physical Attack Plus XIV	Experia Glyph	4
+Physical Attack Plus XIV	Reinforced Frame	4
+Physical Attack Plus XV	Experia Glyph	4
+Physical Attack Plus XV	Reinforced Frame	4
+Physical Attack Plus XVI	Experia Glyph	4
+Physical Attack Plus XVI	Reinforced Frame	4
+Physical Attack Plus XVII	Experia Glyph	4
+Physical Attack Plus XVII	Reinforced Frame	4
+Physical Attack Plus XVIII	Experia Glyph	4
+Physical Attack Plus XVIII	Reinforced Frame	4
+Physical Attack Plus XIX	Experia Glyph	5
+Physical Attack Plus XIX	Reinforced Frame	5
+Beam Attack Plus I	Quirky Liver	1
+Beam Attack Plus I	Gold Monoceros Horn	1
+Beam Attack Plus II	Quirky Liver	1
+Beam Attack Plus II	Gold Monoceros Horn	1
+Beam Attack Plus III	Quirky Liver	1
+Beam Attack Plus III	Gold Monoceros Horn	1
+Beam Attack Plus IV	Quirky Liver	2
+Beam Attack Plus IV	Gold Monoceros Horn	2
+Beam Attack Plus V	Quirky Liver	2
+Beam Attack Plus V	Gold Monoceros Horn	2
+Beam Attack Plus VI	Quirky Liver	2
+Beam Attack Plus VI	Gold Monoceros Horn	2
+Beam Attack Plus VII	Quirky Liver	2
+Beam Attack Plus VII	Gold Monoceros Horn	2
+Beam Attack Plus VIII	Quirky Liver	2
+Beam Attack Plus VIII	Gold Monoceros Horn	2
+Beam Attack Plus IX	Quirky Liver	3
+Beam Attack Plus IX	Gold Monoceros Horn	3
+Beam Attack Plus X	Esse Glyph	3
+Beam Attack Plus X	Advanced Lens	3
+Beam Attack Plus XI	Esse Glyph	3
+Beam Attack Plus XI	Advanced Lens	3
+Beam Attack Plus XII	Esse Glyph	3
+Beam Attack Plus XII	Advanced Lens	3
+Beam Attack Plus XIII	Esse Glyph	3
+Beam Attack Plus XIII	Advanced Lens	3
+Beam Attack Plus XIV	Esse Glyph	4
+Beam Attack Plus XIV	Advanced Lens	4
+Beam Attack Plus XV	Esse Glyph	4
+Beam Attack Plus XV	Advanced Lens	4
+Beam Attack Plus XVI	Esse Glyph	4
+Beam Attack Plus XVI	Advanced Lens	4
+Beam Attack Plus XVII	Esse Glyph	4
+Beam Attack Plus XVII	Advanced Lens	4
+Beam Attack Plus XVIII	Esse Glyph	4
+Beam Attack Plus XVIII	Advanced Lens	4
+Beam Attack Plus XIX	Esse Glyph	5
+Beam Attack Plus XIX	Advanced Lens	5
+Ether Attack Plus I	Elemental Fragment	1
+Ether Attack Plus I	Golden Progen Wing	1
+Ether Attack Plus II	Elemental Fragment	1
+Ether Attack Plus II	Golden Progen Wing	1
+Ether Attack Plus III	Elemental Fragment	1
+Ether Attack Plus III	Golden Progen Wing	1
+Ether Attack Plus IV	Elemental Fragment	2
+Ether Attack Plus IV	Golden Progen Wing	2
+Ether Attack Plus V	Elemental Fragment	2
+Ether Attack Plus V	Golden Progen Wing	2
+Ether Attack Plus VI	Elemental Fragment	2
+Ether Attack Plus VI	Golden Progen Wing	2
+Ether Attack Plus VII	Elemental Fragment	2
+Ether Attack Plus VII	Golden Progen Wing	2
+Ether Attack Plus VIII	Elemental Fragment	2
+Ether Attack Plus VIII	Golden Progen Wing	2
+Ether Attack Plus IX	Elemental Fragment	3
+Ether Attack Plus IX	Golden Progen Wing	3
+Ether Attack Plus X	Creare Glyph	3
+Ether Attack Plus X	Purple Cervus Antlers	3
+Ether Attack Plus XI	Creare Glyph	3
+Ether Attack Plus XI	Purple Cervus Antlers	3
+Ether Attack Plus XII	Creare Glyph	3
+Ether Attack Plus XII	Purple Cervus Antlers	3
+Ether Attack Plus XIII	Creare Glyph	3
+Ether Attack Plus XIII	Purple Cervus Antlers	3
+Ether Attack Plus XIV	Creare Glyph	4
+Ether Attack Plus XIV	Purple Cervus Antlers	4
+Ether Attack Plus XV	Creare Glyph	4
+Ether Attack Plus XV	Purple Cervus Antlers	4
+Ether Attack Plus XVI	Creare Glyph	4
+Ether Attack Plus XVI	Purple Cervus Antlers	4
+Ether Attack Plus XVII	Creare Glyph	4
+Ether Attack Plus XVII	Purple Cervus Antlers	4
+Ether Attack Plus XVIII	Creare Glyph	4
+Ether Attack Plus XVIII	Purple Cervus Antlers	4
+Ether Attack Plus XIX	Creare Glyph	5
+Ether Attack Plus XIX	Purple Cervus Antlers	5
+Thermal Attack Plus I	Reinforced Plunger	1
+Thermal Attack Plus I	Herculean Beast Hair	1
+Thermal Attack Plus II	Reinforced Plunger	1
+Thermal Attack Plus II	Herculean Beast Hair	1
+Thermal Attack Plus III	Reinforced Plunger	1
+Thermal Attack Plus III	Herculean Beast Hair	1
+Thermal Attack Plus IV	Reinforced Plunger	2
+Thermal Attack Plus IV	Herculean Beast Hair	2
+Thermal Attack Plus V	Reinforced Plunger	2
+Thermal Attack Plus V	Black Meaty Caecus Liver	2
+Thermal Attack Plus VI	Reinforced Plunger	2
+Thermal Attack Plus VI	Black Meaty Caecus Liver	2
+Thermal Attack Plus VII	Reinforced Plunger	2
+Thermal Attack Plus VII	Black Meaty Caecus Liver	2
+Thermal Attack Plus VIII	Reinforced Plunger	2
+Thermal Attack Plus VIII	Black Meaty Caecus Liver	2
+Thermal Attack Plus IX	Reinforced Plunger	3
+Thermal Attack Plus IX	Black Meaty Caecus Liver	3
+Thermal Attack Plus X	Experia Glyph	3
+Thermal Attack Plus X	Jacul Horn	3
+Thermal Attack Plus XI	Experia Glyph	3
+Thermal Attack Plus XI	Jacul Horn	3
+Thermal Attack Plus XII	Experia Glyph	3
+Thermal Attack Plus XII	Jacul Horn	3
+Thermal Attack Plus XIII	Experia Glyph	3
+Thermal Attack Plus XIII	Jacul Horn	3
+Thermal Attack Plus XIV	Experia Glyph	4
+Thermal Attack Plus XIV	Jacul Horn	4
+Thermal Attack Plus XV	Experia Glyph	4
+Thermal Attack Plus XV	Jacul Horn	4
+Thermal Attack Plus XVI	Experia Glyph	4
+Thermal Attack Plus XVI	Jacul Horn	4
+Thermal Attack Plus XVII	Experia Glyph	4
+Thermal Attack Plus XVII	Jacul Horn	4
+Thermal Attack Plus XVIII	Experia Glyph	4
+Thermal Attack Plus XVIII	Jacul Horn	4
+Thermal Attack Plus XIX	Experia Glyph	5
+Thermal Attack Plus XIX	Jacul Horn	5
+Electric Attack Plus I	Quo Pod	1
+Electric Attack Plus I	Black Scintimure Tentacle	1
+Electric Attack Plus II	Quo Pod	1
+Electric Attack Plus II	Black Scintimure Tentacle	1
+Electric Attack Plus III	Quo Pod	1
+Electric Attack Plus III	Black Scintimure Tentacle	1
+Electric Attack Plus IV	Quo Pod	2
+Electric Attack Plus IV	Black Scintimure Tentacle	2
+Electric Attack Plus V	Vivohast Crescent Hook	2
+Electric Attack Plus V	Black Scintimure Tentacle	2
+Electric Attack Plus VI	Vivohast Crescent Hook	2
+Electric Attack Plus VI	Black Scintimure Tentacle	2
+Electric Attack Plus VII	Vivohast Crescent Hook	2
+Electric Attack Plus VII	Black Scintimure Tentacle	2
+Electric Attack Plus VIII	Vivohast Crescent Hook	2
+Electric Attack Plus VIII	Black Scintimure Tentacle	2
+Electric Attack Plus IX	Vivohast Crescent Hook	3
+Electric Attack Plus IX	Black Scintimure Tentacle	3
+Electric Attack Plus X	Scienti Glyph	3
+Electric Attack Plus X	Reinforced Plug	3
+Electric Attack Plus XI	Scienti Glyph	3
+Electric Attack Plus XI	Reinforced Plug	3
+Electric Attack Plus XII	Scienti Glyph	3
+Electric Attack Plus XII	Reinforced Plug	3
+Electric Attack Plus XIII	Scienti Glyph	3
+Electric Attack Plus XIII	Reinforced Plug	3
+Electric Attack Plus XIV	Scienti Glyph	4
+Electric Attack Plus XIV	Reinforced Plug	4
+Electric Attack Plus XV	Scienti Glyph	4
+Electric Attack Plus XV	Reinforced Plug	4
+Electric Attack Plus XVI	Scienti Glyph	4
+Electric Attack Plus XVI	Reinforced Plug	4
+Electric Attack Plus XVII	Scienti Glyph	4
+Electric Attack Plus XVII	Reinforced Plug	4
+Electric Attack Plus XVIII	Scienti Glyph	4
+Electric Attack Plus XVIII	Reinforced Plug	4
+Electric Attack Plus XIX	Scienti Glyph	5
+Electric Attack Plus XIX	Reinforced Plug	5
+Gravity Attack Plus I	Black Gyrocompass	1
+Gravity Attack Plus I	Visigel Waterfall Orb	1
+Gravity Attack Plus II	Black Gyrocompass	1
+Gravity Attack Plus II	Visigel Waterfall Orb	1
+Gravity Attack Plus III	Black Gyrocompass	1
+Gravity Attack Plus III	Visigel Waterfall Orb	1
+Gravity Attack Plus IV	Black Gyrocompass	2
+Gravity Attack Plus IV	Visigel Waterfall Orb	2
+Gravity Attack Plus V	Black Gyrocompass	2
+Gravity Attack Plus V	Visigel Waterfall Orb	2
+Gravity Attack Plus VI	Black Gyrocompass	2
+Gravity Attack Plus VI	Visigel Waterfall Orb	2
+Gravity Attack Plus VII	Black Gyrocompass	2
+Gravity Attack Plus VII	Visigel Waterfall Orb	2
+Gravity Attack Plus VIII	Black Gyrocompass	2
+Gravity Attack Plus VIII	Visigel Waterfall Orb	2
+Gravity Attack Plus IX	Black Gyrocompass	3
+Gravity Attack Plus IX	Visigel Waterfall Orb	3
+Gravity Attack Plus X	Esse Glyph	3
+Gravity Attack Plus X	Gold Sylooth Brace	3
+Gravity Attack Plus XI	Esse Glyph	3
+Gravity Attack Plus XI	Gold Sylooth Brace	3
+Gravity Attack Plus XII	Esse Glyph	3
+Gravity Attack Plus XII	Gold Sylooth Brace	3
+Gravity Attack Plus XIII	Esse Glyph	3
+Gravity Attack Plus XIII	Gold Sylooth Brace	3
+Gravity Attack Plus XIV	Esse Glyph	4
+Gravity Attack Plus XIV	Gold Sylooth Brace	4
+Gravity Attack Plus XV	Esse Glyph	4
+Gravity Attack Plus XV	Gold Sylooth Brace	4
+Gravity Attack Plus XVI	Esse Glyph	4
+Gravity Attack Plus XVI	Gold Sylooth Brace	4
+Gravity Attack Plus XVII	Esse Glyph	4
+Gravity Attack Plus XVII	Gold Sylooth Brace	4
+Gravity Attack Plus XVIII	Esse Glyph	4
+Gravity Attack Plus XVIII	Gold Sylooth Brace	4
+Gravity Attack Plus XIX	Esse Glyph	5
+Gravity Attack Plus XIX	Gold Sylooth Brace	5
+Front Attack Plus I	Cracked Bill	1
+Front Attack Plus I	Auravis Horn	1
+Front Attack Plus II	Cracked Bill	1
+Front Attack Plus II	Auravis Horn	1
+Front Attack Plus III	Cracked Bill	1
+Front Attack Plus III	Auravis Horn	1
+Front Attack Plus IV	Cracked Bill	2
+Front Attack Plus IV	Auravis Horn	2
+Front Attack Plus V	Cracked Bill	2
+Front Attack Plus V	Auravis Horn	2
+Front Attack Plus VI	Cracked Bill	2
+Front Attack Plus VI	Auravis Horn	2
+Front Attack Plus VII	Cracked Bill	2
+Front Attack Plus VII	Auravis Horn	2
+Front Attack Plus VIII	Cracked Bill	2
+Front Attack Plus VIII	Auravis Horn	2
+Front Attack Plus IX	Cracked Bill	3
+Front Attack Plus IX	Auravis Horn	3
+Front Attack Plus X	Cracked Bill	3
+Front Attack Plus X	Black Vigent Rock Scalp	3
+Front Attack Plus XI	Cracked Bill	3
+Front Attack Plus XI	Black Vigent Rock Scalp	3
+Front Attack Plus XII	Cracked Bill	3
+Front Attack Plus XII	Black Vigent Rock Scalp	3
+Front Attack Plus XIII	Cracked Bill	3
+Front Attack Plus XIII	Black Vigent Rock Scalp	3
+Front Attack Plus XIV	Cracked Bill	4
+Front Attack Plus XIV	Black Vigent Rock Scalp	4
+Front Attack Plus XV	Cracked Bill	4
+Front Attack Plus XV	Black Vigent Rock Scalp	4
+Front Attack Plus XVI	Cracked Bill	4
+Front Attack Plus XVI	Black Vigent Rock Scalp	4
+Front Attack Plus XVII	Cracked Bill	4
+Front Attack Plus XVII	Black Vigent Rock Scalp	4
+Front Attack Plus XVIII	Cracked Bill	4
+Front Attack Plus XVIII	Black Vigent Rock Scalp	4
+Front Attack Plus XIX	Cracked Bill	5
+Front Attack Plus XIX	Black Vigent Rock Scalp	5
+Side Attack Plus I	Pristine Claw	1
+Side Attack Plus I	Green Blatta Wing	1
+Side Attack Plus II	Pristine Claw	1
+Side Attack Plus II	Green Blatta Wing	1
+Side Attack Plus III	Pristine Claw	1
+Side Attack Plus III	Green Blatta Wing	1
+Side Attack Plus IV	Pristine Claw	2
+Side Attack Plus IV	Green Blatta Wing	2
+Side Attack Plus V	Pristine Claw	2
+Side Attack Plus V	Green Blatta Wing	2
+Side Attack Plus VI	Pristine Claw	2
+Side Attack Plus VI	Green Blatta Wing	2
+Side Attack Plus VII	Pristine Claw	2
+Side Attack Plus VII	Green Blatta Wing	2
+Side Attack Plus VIII	Pristine Claw	2
+Side Attack Plus VIII	Green Blatta Wing	2
+Side Attack Plus IX	Pristine Claw	3
+Side Attack Plus IX	Green Blatta Wing	3
+Side Attack Plus X	Pristine Claw	3
+Side Attack Plus X	Ingrown Virago Claw	3
+Side Attack Plus XI	Pristine Claw	3
+Side Attack Plus XI	Ingrown Virago Claw	3
+Side Attack Plus XII	Pristine Claw	3
+Side Attack Plus XII	Ingrown Virago Claw	3
+Side Attack Plus XIII	Pristine Claw	3
+Side Attack Plus XIII	Ingrown Virago Claw	3
+Side Attack Plus XIV	Pristine Claw	4
+Side Attack Plus XIV	Ingrown Virago Claw	4
+Side Attack Plus XV	Pristine Claw	4
+Side Attack Plus XV	Ingrown Virago Claw	4
+Side Attack Plus XVI	Pristine Claw	4
+Side Attack Plus XVI	Ingrown Virago Claw	4
+Side Attack Plus XVII	Pristine Claw	4
+Side Attack Plus XVII	Ingrown Virago Claw	4
+Side Attack Plus XVIII	Pristine Claw	4
+Side Attack Plus XVIII	Ingrown Virago Claw	4
+Side Attack Plus XIX	Pristine Claw	5
+Side Attack Plus XIX	Ingrown Virago Claw	5
+Back Attack Plus I	Jagged Grex Tail	1
+Back Attack Plus I	Ebony Evello Egg	1
+Back Attack Plus II	Jagged Grex Tail	1
+Back Attack Plus II	Ebony Evello Egg	1
+Back Attack Plus III	Jagged Grex Tail	1
+Back Attack Plus III	Ebony Evello Egg	1
+Back Attack Plus IV	Jagged Grex Tail	2
+Back Attack Plus IV	Ebony Evello Egg	2
+Back Attack Plus V	Jagged Grex Tail	2
+Back Attack Plus V	Ebony Evello Egg	2
+Back Attack Plus VI	Jagged Grex Tail	2
+Back Attack Plus VI	Ebony Evello Egg	2
+Back Attack Plus VII	Jagged Grex Tail	2
+Back Attack Plus VII	Ebony Evello Egg	2
+Back Attack Plus VIII	Jagged Grex Tail	2
+Back Attack Plus VIII	Ebony Evello Egg	2
+Back Attack Plus IX	Jagged Grex Tail	3
+Back Attack Plus IX	Ebony Evello Egg	3
+Back Attack Plus X	Jagged Grex Tail	3
+Back Attack Plus X	Purple Virago Alloy Plate	3
+Back Attack Plus XI	Jagged Grex Tail	3
+Back Attack Plus XI	Purple Virago Alloy Plate	3
+Back Attack Plus XII	Jagged Grex Tail	3
+Back Attack Plus XII	Purple Virago Alloy Plate	3
+Back Attack Plus XIII	Jagged Grex Tail	3
+Back Attack Plus XIII	Purple Virago Alloy Plate	3
+Back Attack Plus XIV	Jagged Grex Tail	4
+Back Attack Plus XIV	Purple Virago Alloy Plate	4
+Back Attack Plus XV	Jagged Grex Tail	4
+Back Attack Plus XV	Purple Virago Alloy Plate	4
+Back Attack Plus XVI	Jagged Grex Tail	4
+Back Attack Plus XVI	Purple Virago Alloy Plate	4
+Back Attack Plus XVII	Jagged Grex Tail	4
+Back Attack Plus XVII	Purple Virago Alloy Plate	4
+Back Attack Plus XVIII	Jagged Grex Tail	4
+Back Attack Plus XVIII	Purple Virago Alloy Plate	4
+Back Attack Plus XIX	Jagged Grex Tail	5
+Back Attack Plus XIX	Purple Virago Alloy Plate	5
+Vantage Attack Plus I	Supple Leather	1
+Vantage Attack Plus II	Supple Leather	1
+Vantage Attack Plus III	Supple Leather	1
+Vantage Attack Plus IV	Supple Leather	2
+Vantage Attack Plus V	Supple Leather	2
+Vantage Attack Plus VI	Supple Leather	2
+Vantage Attack Plus VII	Supple Leather	2
+Vantage Attack Plus VIII	Supple Leather	2
+Vantage Attack Plus IX	Supple Leather	3
+Vantage Attack Plus X	Supple Leather	3
+Vantage Attack Plus XI	Supple Leather	3
+Vantage Attack Plus XII	Supple Leather	3
+Vantage Attack Plus XIII	Supple Leather	3
+Vantage Attack Plus XIV	Supple Leather	4
+Vantage Attack Plus XV	Supple Leather	4
+Vantage Attack Plus XVI	Supple Leather	4
+Vantage Attack Plus XVII	Supple Leather	4
+Vantage Attack Plus XVIII	Supple Leather	4
+Vantage Attack Plus XIX	Supple Leather	5
+Melee: Blackout I	Ovis Polishing Stone	1
+Melee: Blackout II	Ovis Polishing Stone	1
+Melee: Blackout III	Ovis Polishing Stone	1
+Melee: Blackout IV	Ovis Polishing Stone	2
+Melee: Blackout V	Ovis Polishing Stone	2
+Melee: Blackout VI	Ovis Polishing Stone	2
+Melee: Blackout VII	Ovis Polishing Stone	2
+Melee: Blackout VIII	Ovis Polishing Stone	2
+Melee: Blackout IX	Ovis Polishing Stone	3
+Melee: Blackout X	Ovis Polishing Stone	3
+Melee: Blackout XI	Ovis Polishing Stone	3
+Melee: Blackout XII	Ovis Polishing Stone	3
+Melee: Blackout XIII	Ovis Polishing Stone	3
+Melee: Blackout XIV	Ovis Polishing Stone	4
+Melee: Blackout XV	Ovis Polishing Stone	4
+Melee: Blackout XVI	Ovis Polishing Stone	4
+Melee: Blackout XVII	Ovis Polishing Stone	4
+Melee: Blackout XVIII	Ovis Polishing Stone	4
+Melee: Blackout XIX	Ovis Polishing Stone	5
+Melee: Fatigue I	Muscled Suid Bulge	1
+Melee: Fatigue II	Muscled Suid Bulge	1
+Melee: Fatigue III	Muscled Suid Bulge	1
+Melee: Fatigue IV	Muscled Suid Bulge	2
+Melee: Fatigue V	Muscled Suid Bulge	2
+Melee: Fatigue VI	Muscled Suid Bulge	2
+Melee: Fatigue VII	Muscled Suid Bulge	2
+Melee: Fatigue VIII	Muscled Suid Bulge	2
+Melee: Fatigue IX	Muscled Suid Bulge	3
+Melee: Fatigue X	Muscled Suid Bulge	3
+Melee: Fatigue XI	Muscled Suid Bulge	3
+Melee: Fatigue XII	Muscled Suid Bulge	3
+Melee: Fatigue XIII	Muscled Suid Bulge	3
+Melee: Fatigue XIV	Muscled Suid Bulge	4
+Melee: Fatigue XV	Muscled Suid Bulge	4
+Melee: Fatigue XVI	Muscled Suid Bulge	4
+Melee: Fatigue XVII	Muscled Suid Bulge	4
+Melee: Fatigue XVIII	Muscled Suid Bulge	4
+Melee: Fatigue XIX	Muscled Suid Bulge	5
+Melee: Physical Res Down I	Juicy Wild Meat	1
+Melee: Physical Res Down II	Juicy Wild Meat	1
+Melee: Physical Res Down III	Juicy Wild Meat	1
+Melee: Physical Res Down IV	Juicy Wild Meat	2
+Melee: Physical Res Down V	Juicy Wild Meat	2
+Melee: Physical Res Down VI	Juicy Wild Meat	2
+Melee: Physical Res Down VII	Juicy Wild Meat	2
+Melee: Physical Res Down VIII	Juicy Wild Meat	2
+Melee: Physical Res Down IX	Juicy Wild Meat	3
+Melee: Physical Res Down X	Juicy Wild Meat	3
+Melee: Physical Res Down XI	Juicy Wild Meat	3
+Melee: Physical Res Down XII	Juicy Wild Meat	3
+Melee: Blaze IV	Scirpo Malic Acid Sac	2
+Melee: Physical Res Down XIII	Juicy Wild Meat	3
+Melee: Physical Res Down XIV	Juicy Wild Meat	4
+Melee: Physical Res Down XV	Juicy Wild Meat	4
+Melee: Physical Res Down XVI	Juicy Wild Meat	4
+Melee: Physical Res Down XVII	Juicy Wild Meat	4
+Melee: Physical Res Down XVIII	Juicy Wild Meat	4
+Melee: Physical Res Down XIX	Juicy Wild Meat	5
+Melee: Beam Res Down I	Adsecula Straw	1
+Melee: Beam Res Down II	Adsecula Straw	1
+Melee: Beam Res Down III	Adsecula Straw	1
+Melee: Beam Res Down IV	Adsecula Straw	2
+Melee: Beam Res Down V	Adsecula Straw	2
+Melee: Beam Res Down VI	Adsecula Straw	2
+Melee: Beam Res Down VII	Adsecula Straw	2
+Melee: Beam Res Down VIII	Adsecula Straw	2
+Melee: Beam Res Down IX	Adsecula Straw	3
+Melee: Beam Res Down X	Adsecula Straw	3
+Melee: Beam Res Down XI	Adsecula Straw	3
+Melee: Beam Res Down XII	Adsecula Straw	3
+Melee: Beam Res Down XIII	Adsecula Straw	3
+Melee: Beam Res Down XIV	Adsecula Straw	4
+Melee: Beam Res Down XV	Adsecula Straw	4
+Melee: Beam Res Down XVI	Adsecula Straw	4
+Melee: Beam Res Down XVII	Adsecula Straw	4
+Melee: Beam Res Down XVIII	Adsecula Straw	4
+Melee: Beam Res Down XIX	Adsecula Straw	5
+Melee: Ether Res Down I	Perforated Oar	1
+Melee: Ether Res Down II	Perforated Oar	1
+Melee: Ether Res Down III	Perforated Oar	1
+Melee: Ether Res Down IV	Perforated Oar	2
+Melee: Ether Res Down V	Perforated Oar	2
+Melee: Ether Res Down VI	Perforated Oar	2
+Melee: Ether Res Down VII	Perforated Oar	2
+Melee: Ether Res Down VIII	Perforated Oar	2
+Melee: Ether Res Down IX	Perforated Oar	3
+Melee: Ether Res Down X	Perforated Oar	3
+Melee: Ether Res Down XI	Perforated Oar	3
+Melee: Ether Res Down XII	Perforated Oar	3
+Melee: Ether Res Down XIII	Perforated Oar	3
+Melee: Ether Res Down XIV	Perforated Oar	4
+Melee: Ether Res Down XV	Perforated Oar	4
+Melee: Ether Res Down XVI	Perforated Oar	4
+Melee: Ether Res Down XVII	Perforated Oar	4
+Melee: Ether Res Down XVIII	Perforated Oar	4
+Melee: Ether Res Down XIX	Perforated Oar	5
+Melee: Thermal Res Down I	Red Forfex Shell	1
+Melee: Thermal Res Down II	Red Forfex Shell	1
+Melee: Thermal Res Down III	Red Forfex Shell	1
+Melee: Thermal Res Down IV	Red Forfex Shell	2
+Melee: Thermal Res Down V	Red Forfex Shell	2
+Melee: Thermal Res Down VI	Red Forfex Shell	2
+Melee: Thermal Res Down VII	Red Forfex Shell	2
+Melee: Thermal Res Down VIII	Red Forfex Shell	2
+Melee: Thermal Res Down IX	Red Forfex Shell	3
+Melee: Thermal Res Down X	Red Forfex Shell	3
+Melee: Thermal Res Down XI	Red Forfex Shell	3
+Melee: Thermal Res Down XII	Red Forfex Shell	3
+Melee: Thermal Res Down XIII	Red Forfex Shell	3
+Melee: Thermal Res Down XIV	Red Forfex Shell	4
+Melee: Thermal Res Down XV	Red Forfex Shell	4
+Melee: Thermal Res Down XVI	Red Forfex Shell	4
+Melee: Thermal Res Down XVII	Red Forfex Shell	4
+Melee: Thermal Res Down XVIII	Red Forfex Shell	4
+Melee: Thermal Res Down XIX	Red Forfex Shell	5
+Melee: Electric Res Down I	Muddy Pelt	1
+Melee: Electric Res Down II	Muddy Pelt	1
+Melee: Electric Res Down III	Muddy Pelt	1
+Melee: Electric Res Down IV	Muddy Pelt	2
+Melee: Electric Res Down V	Muddy Pelt	2
+Melee: Electric Res Down VI	Muddy Pelt	2
+Melee: Electric Res Down VII	Muddy Pelt	2
+Melee: Electric Res Down VIII	Muddy Pelt	2
+Melee: Electric Res Down IX	Muddy Pelt	3
+Melee: Electric Res Down X	Muddy Pelt	3
+Melee: Electric Res Down XI	Muddy Pelt	3
+Melee: Electric Res Down XII	Muddy Pelt	3
+Melee: Electric Res Down XIII	Muddy Pelt	3
+Melee: Electric Res Down XIV	Muddy Pelt	4
+Melee: Electric Res Down XV	Muddy Pelt	4
+Melee: Electric Res Down XVI	Muddy Pelt	4
+Melee: Electric Res Down XVII	Muddy Pelt	4
+Melee: Electric Res Down XVIII	Muddy Pelt	4
+Melee: Electric Res Down XIX	Muddy Pelt	5
+Melee: Gravity Res Down I	Black Blatta Wing	1
+Melee: Gravity Res Down II	Black Blatta Wing	1
+Melee: Gravity Res Down III	Black Blatta Wing	1
+Melee: Gravity Res Down IV	Black Blatta Wing	2
+Melee: Gravity Res Down V	Black Blatta Wing	2
+Melee: Gravity Res Down VI	Black Blatta Wing	2
+Melee: Gravity Res Down VII	Black Blatta Wing	2
+Melee: Gravity Res Down VIII	Black Blatta Wing	2
+Melee: Gravity Res Down IX	Black Blatta Wing	3
+Melee: Gravity Res Down X	Black Blatta Wing	3
+Melee: Gravity Res Down XI	Black Blatta Wing	3
+Melee: Gravity Res Down XII	Black Blatta Wing	3
+Melee: Gravity Res Down XIII	Black Blatta Wing	3
+Melee: Gravity Res Down XIV	Black Blatta Wing	4
+Melee: Gravity Res Down XV	Black Blatta Wing	4
+Melee: Gravity Res Down XVI	Black Blatta Wing	4
+Melee: Gravity Res Down XVII	Black Blatta Wing	4
+Melee: Gravity Res Down XVIII	Black Blatta Wing	4
+Melee: Gravity Res Down XIX	Black Blatta Wing	5
+Melee: Blaze I	Scirpo Malic Acid Sac	1
+Melee: Blaze I	Pugilith Lamp	1
+Melee: Blaze II	Scirpo Malic Acid Sac	1
+Melee: Blaze II	Pugilith Lamp	1
+Melee: Blaze III	Scirpo Malic Acid Sac	1
+Melee: Blaze III	Pugilith Lamp	1
+Melee: Blaze IV	Pugilith Lamp	2
+Melee: Blaze V	Scirpo Malic Acid Sac	2
+Melee: Blaze V	Pugilith Lamp	2
+Melee: Blaze VI	Scirpo Malic Acid Sac	2
+Melee: Blaze VI	Pugilith Lamp	2
+Melee: Blaze VII	Scirpo Malic Acid Sac	2
+Melee: Blaze VII	Pugilith Lamp	2
+Melee: Blaze VIII	Scirpo Malic Acid Sac	2
+Melee: Blaze VIII	Pugilith Lamp	2
+Melee: Blaze IX	Scirpo Malic Acid Sac	3
+Melee: Blaze IX	Pugilith Lamp	3
+Melee: Blaze X	Scirpo Malic Acid Sac	3
+Melee: Blaze X	Imperial Sphinx Fang	3
+Melee: Blaze XI	Scirpo Malic Acid Sac	3
+Melee: Blaze XI	Imperial Sphinx Fang	3
+Melee: Blaze XII	Scirpo Malic Acid Sac	3
+Melee: Blaze XII	Imperial Sphinx Fang	3
+Melee: Blaze XIII	Scirpo Malic Acid Sac	3
+Melee: Blaze XIII	Imperial Sphinx Fang	3
+Melee: Blaze XIV	Scirpo Malic Acid Sac	4
+Melee: Blaze XIV	Imperial Sphinx Fang	4
+Melee: Blaze XV	Scirpo Malic Acid Sac	4
+Melee: Blaze XV	Imperial Sphinx Fang	4
+Melee: Blaze XVI	Scirpo Malic Acid Sac	4
+Melee: Blaze XVI	Imperial Sphinx Fang	4
+Melee: Blaze XVII	Scirpo Malic Acid Sac	4
+Melee: Blaze XVII	Imperial Sphinx Fang	4
+Melee: Blaze XVIII	Scirpo Malic Acid Sac	4
+Melee: Blaze XVIII	Imperial Sphinx Fang	4
+Melee: Blaze XIX	Scirpo Malic Acid Sac	5
+Melee: Blaze XIX	Imperial Sphinx Fang	5
+Melee: Shock I	Scirpo Cyanide Sac	1
+Melee: Shock I	Electrified Xeno Blood	1
+Melee: Shock II	Scirpo Cyanide Sac	1
+Melee: Shock II	Electrified Xeno Blood	1
+Melee: Shock III	Scirpo Cyanide Sac	1
+Melee: Shock III	Electrified Xeno Blood	1
+Melee: Shock IV	Scirpo Cyanide Sac	2
+Melee: Shock IV	Electrified Xeno Blood	2
+Melee: Shock V	Scirpo Cyanide Sac	2
+Melee: Shock V	Electrified Xeno Blood	2
+Melee: Shock VI	Scirpo Cyanide Sac	2
+Melee: Shock VI	Electrified Xeno Blood	2
+Melee: Shock VII	Scirpo Cyanide Sac	2
+Melee: Shock VII	Electrified Xeno Blood	2
+Melee: Shock VIII	Scirpo Cyanide Sac	2
+Melee: Shock VIII	Electrified Xeno Blood	2
+Melee: Shock IX	Scirpo Cyanide Sac	3
+Melee: Shock IX	Electrified Xeno Blood	3
+Melee: Shock X	Scirpo Cyanide Sac	3
+Melee: Shock X	Electric Tersqual Tear	3
+Melee: Shock XI	Scirpo Cyanide Sac	3
+Melee: Shock XI	Electric Tersqual Tear	3
+Melee: Shock XII	Scirpo Cyanide Sac	3
+Melee: Shock XII	Electric Tersqual Tear	3
+Melee: Shock XIII	Scirpo Cyanide Sac	3
+Melee: Shock XIII	Electric Tersqual Tear	3
+Melee: Shock XIV	Scirpo Cyanide Sac	4
+Melee: Shock XIV	Electric Tersqual Tear	4
+Melee: Shock XV	Scirpo Cyanide Sac	4
+Melee: Shock XV	Electric Tersqual Tear	4
+Melee: Shock XVI	Scirpo Cyanide Sac	4
+Melee: Shock XVI	Electric Tersqual Tear	4
+Melee: Shock XVII	Scirpo Cyanide Sac	4
+Melee: Shock XVII	Electric Tersqual Tear	4
+Melee: Shock XVIII	Scirpo Cyanide Sac	4
+Melee: Shock XVIII	Electric Tersqual Tear	4
+Melee: Shock XIX	Scirpo Cyanide Sac	5
+Melee: Shock XIX	Electric Tersqual Tear	5
+Melee: Recover HP I	Thallus Crescent Hook	1
+Melee: Recover HP I	Green Monoceros Horn	1
+Melee: Recover HP I	Liceor Horn	1
+Melee: Recover HP II	Thallus Crescent Hook	1
+Melee: Recover HP II	Green Monoceros Horn	1
+Melee: Recover HP II	Liceor Horn	1
+Melee: Recover HP III	Thallus Crescent Hook	1
+Melee: Recover HP III	Green Monoceros Horn	1
+Melee: Recover HP III	Liceor Horn	1
+Melee: Recover HP IV	Thallus Crescent Hook	2
+Melee: Recover HP IV	Green Monoceros Horn	2
+Melee: Recover HP IV	Liceor Horn	2
+Melee: Recover HP V	Thallus Crescent Hook	2
+Melee: Recover HP V	Green Monoceros Horn	2
+Melee: Recover HP V	Liceor Horn	2
+Melee: Recover HP VI	Thallus Crescent Hook	2
+Melee: Recover HP VI	Green Monoceros Horn	2
+Melee: Recover HP VI	Liceor Horn	2
+Melee: Recover HP VII	Thallus Crescent Hook	2
+Melee: Recover HP VII	Green Monoceros Horn	2
+Melee: Recover HP VII	Liceor Horn	2
+Melee: Recover HP VIII	Thallus Crescent Hook	2
+Melee: Recover HP VIII	Green Monoceros Horn	2
+Melee: Recover HP VIII	Liceor Horn	2
+Melee: Recover HP IX	Thallus Crescent Hook	3
+Melee: Recover HP IX	Green Monoceros Horn	3
+Melee: Recover HP IX	Liceor Horn	3
+Melee: Recover HP X	Thallus Crescent Hook	3
+Melee: Recover HP X	Millesaur Dung	3
+Melee: Recover HP X	Coronid Dung	3
+Melee: Recover HP XI	Thallus Crescent Hook	3
+Melee: Recover HP XI	Millesaur Dung	3
+Melee: Recover HP XI	Coronid Dung	3
+Melee: Recover HP XII	Thallus Crescent Hook	3
+Melee: Recover HP XII	Millesaur Dung	3
+Melee: Recover HP XII	Coronid Dung	3
+Melee: Recover HP XIII	Thallus Crescent Hook	3
+Melee: Recover HP XIII	Millesaur Dung	3
+Melee: Recover HP XIII	Coronid Dung	3
+Melee: Recover HP XIV	Thallus Crescent Hook	4
+Melee: Recover HP XIV	Millesaur Dung	4
+Melee: Recover HP XIV	Coronid Dung	4
+Melee: Recover HP XV	Thallus Crescent Hook	4
+Melee: Recover HP XV	Millesaur Dung	4
+Melee: Recover HP XV	Coronid Dung	4
+Melee: Recover HP XVI	Thallus Crescent Hook	4
+Melee: Recover HP XVI	Millesaur Dung	4
+Melee: Recover HP XVI	Coronid Dung	4
+Melee: Recover HP XVII	Thallus Crescent Hook	4
+Melee: Recover HP XVII	Millesaur Dung	4
+Melee: Recover HP XVII	Coronid Dung	4
+Melee: Recover HP XVIII	Thallus Crescent Hook	4
+Melee: Recover HP XVIII	Millesaur Dung	4
+Melee: Recover HP XVIII	Coronid Dung	4
+Melee: Recover HP XIX	Thallus Crescent Hook	5
+Melee: Recover HP XIX	Millesaur Dung	5
+Melee: Recover HP XIX	Coronid Dung	5
+Soft Touch I	Terebra Paw Stamp	1
+Soft Touch II	Terebra Paw Stamp	1
+Soft Touch III	Terebra Paw Stamp	1
+Soft Touch IV	Terebra Paw Stamp	2
+Soft Touch V	Terebra Paw Stamp	2
+Soft Touch VI	Terebra Paw Stamp	2
+Soft Touch VII	Terebra Paw Stamp	2
+Soft Touch VIII	Terebra Paw Stamp	2
+Soft Touch IX	Terebra Paw Stamp	3
+Soft Touch X	Arenatect Shell	3
+Soft Touch X	Blue Jacul Wing	3
+Soft Touch X	Gerrid Navel	3
+Soft Touch XI	Arenatect Shell	3
+Soft Touch XI	Blue Jacul Wing	3
+Soft Touch XI	Gerrid Navel	3
+Soft Touch XII	Arenatect Shell	3
+Soft Touch XII	Blue Jacul Wing	3
+Soft Touch XII	Gerrid Navel	3
+Soft Touch XIII	Arenatect Shell	3
+Soft Touch XIII	Blue Jacul Wing	3
+Soft Touch XIII	Gerrid Navel	3
+Soft Touch XIV	Arenatect Shell	4
+Soft Touch XIV	Blue Jacul Wing	4
+Soft Touch XIV	Gerrid Navel	4
+Soft Touch XV	Arenatect Shell	4
+Soft Touch XV	Blue Jacul Wing	4
+Soft Touch XV	Gerrid Navel	4
+Soft Touch XVI	Arenatect Shell	4
+Soft Touch XVI	Blue Jacul Wing	4
+Soft Touch XVI	Gerrid Navel	4
+Soft Touch XVII	Arenatect Shell	4
+Soft Touch XVII	Blue Jacul Wing	4
+Soft Touch XVII	Gerrid Navel	4
+Soft Touch XVIII	Arenatect Shell	4
+Soft Touch XVIII	Blue Jacul Wing	4
+Soft Touch XVIII	Gerrid Navel	4
+Soft Touch XIX	Arenatect Shell	5
+Soft Touch XIX	Blue Jacul Wing	5
+Soft Touch XIX	Gerrid Navel	5
+HP Rebound I	Honey Oil	1
+HP Rebound I	Large Purgovent Liver	1
+HP Rebound I	Hulking Incisor	1
+HP Rebound II	Honey Oil	1
+HP Rebound II	Large Purgovent Liver	1
+HP Rebound II	Hulking Incisor	1
+HP Rebound III	Honey Oil	1
+HP Rebound III	Large Purgovent Liver	1
+HP Rebound III	Hulking Incisor	1
+HP Rebound IV	Honey Oil	2
+HP Rebound IV	Large Purgovent Liver	2
+HP Rebound IV	Hulking Incisor	2
+HP Rebound V	Honey Oil	2
+HP Rebound V	Large Purgovent Liver	2
+HP Rebound V	Hulking Incisor	2
+HP Rebound VI	Honey Oil	2
+HP Rebound VI	Large Purgovent Liver	2
+HP Rebound VI	Hulking Incisor	2
+HP Rebound VII	Honey Oil	2
+HP Rebound VII	Large Purgovent Liver	2
+HP Rebound VII	Hulking Incisor	2
+HP Rebound VIII	Honey Oil	2
+HP Rebound VIII	Large Purgovent Liver	2
+HP Rebound VIII	Hulking Incisor	2
+HP Rebound IX	Honey Oil	3
+HP Rebound IX	Large Purgovent Liver	3
+HP Rebound IX	Hulking Incisor	3
+HP Rebound X	Honey Oil	3
+HP Rebound X	Unafulge Death Toxin	3
+HP Rebound X	Rich Scintimure Meat	3
+HP Rebound XI	Honey Oil	3
+HP Rebound XI	Unafulge Death Toxin	3
+HP Rebound XI	Rich Scintimure Meat	3
+HP Rebound XII	Honey Oil	3
+HP Rebound XII	Unafulge Death Toxin	3
+HP Rebound XII	Rich Scintimure Meat	3
+HP Rebound XIII	Honey Oil	3
+HP Rebound XIII	Unafulge Death Toxin	3
+HP Rebound XIII	Rich Scintimure Meat	3
+HP Rebound XIV	Honey Oil	4
+HP Rebound XIV	Unafulge Death Toxin	4
+HP Rebound XIV	Rich Scintimure Meat	4
+HP Rebound XV	Honey Oil	4
+HP Rebound XV	Unafulge Death Toxin	4
+HP Rebound XV	Rich Scintimure Meat	4
+HP Rebound XVI	Honey Oil	4
+HP Rebound XVI	Unafulge Death Toxin	4
+HP Rebound XVI	Rich Scintimure Meat	4
+HP Rebound XVII	Honey Oil	4
+HP Rebound XVII	Unafulge Death Toxin	4
+HP Rebound XVII	Rich Scintimure Meat	4
+HP Rebound XVIII	Honey Oil	4
+HP Rebound XVIII	Unafulge Death Toxin	4
+HP Rebound XVIII	Rich Scintimure Meat	4
+HP Rebound XIX	Honey Oil	5
+HP Rebound XIX	Unafulge Death Toxin	5
+HP Rebound XIX	Rich Scintimure Meat	5
+TP Rebound I	Topaz Wine	1
+TP Rebound I	Glowing Retina	1
+TP Rebound I	Terebra Water Grease	1
+TP Rebound II	Topaz Wine	1
+TP Rebound II	Glowing Retina	1
+TP Rebound II	Terebra Water Grease	1
+TP Rebound III	Topaz Wine	1
+TP Rebound III	Glowing Retina	1
+TP Rebound III	Terebra Water Grease	1
+TP Rebound IV	Topaz Wine	2
+TP Rebound IV	Glowing Retina	2
+TP Rebound IV	Terebra Water Grease	2
+TP Rebound V	Topaz Wine	2
+TP Rebound V	Glowing Retina	2
+TP Rebound V	Terebra Water Grease	2
+TP Rebound VI	Topaz Wine	2
+TP Rebound VI	Glowing Retina	2
+TP Rebound VI	Terebra Water Grease	2
+TP Rebound VII	Topaz Wine	2
+TP Rebound VII	Glowing Retina	2
+TP Rebound VII	Terebra Water Grease	2
+TP Rebound VIII	Topaz Wine	2
+TP Rebound VIII	Glowing Retina	2
+TP Rebound VIII	Terebra Water Grease	2
+TP Rebound IX	Topaz Wine	3
+TP Rebound IX	Glowing Retina	3
+TP Rebound IX	Terebra Water Grease	3
+TP Rebound X	Topaz Wine	3
+TP Rebound X	Silver Petramand Silk	3
+TP Rebound X	Big Balaena Sand Bag	3
+TP Rebound XI	Topaz Wine	3
+TP Rebound XI	Silver Petramand Silk	3
+TP Rebound XI	Big Balaena Sand Bag	3
+TP Rebound XII	Topaz Wine	3
+TP Rebound XII	Silver Petramand Silk	3
+TP Rebound XII	Big Balaena Sand Bag	3
+TP Rebound XIII	Topaz Wine	3
+TP Rebound XIII	Silver Petramand Silk	3
+TP Rebound XIII	Big Balaena Sand Bag	3
+TP Rebound XIV	Topaz Wine	4
+TP Rebound XIV	Silver Petramand Silk	4
+TP Rebound XIV	Big Balaena Sand Bag	4
+TP Rebound XV	Topaz Wine	4
+TP Rebound XV	Silver Petramand Silk	4
+TP Rebound XV	Big Balaena Sand Bag	4
+TP Rebound XVI	Topaz Wine	4
+TP Rebound XVI	Silver Petramand Silk	4
+TP Rebound XVI	Big Balaena Sand Bag	4
+TP Rebound XVII	Topaz Wine	4
+TP Rebound XVII	Silver Petramand Silk	4
+TP Rebound XVII	Big Balaena Sand Bag	4
+TP Rebound XVIII	Topaz Wine	4
+TP Rebound XVIII	Silver Petramand Silk	4
+TP Rebound XVIII	Big Balaena Sand Bag	4
+TP Rebound XIX	Topaz Wine	5
+TP Rebound XIX	Silver Petramand Silk	5
+TP Rebound XIX	Big Balaena Sand Bag	5
+Taunt: Barrier I	Small Shell	1
+Taunt: Barrier II	Small Shell	1
+Taunt: Barrier III	Small Shell	1
+Taunt: Barrier IV	Small Shell	2
+Taunt: Barrier V	Small Shell	2
+Taunt: Barrier VI	Small Shell	2
+Taunt: Barrier VII	Small Shell	2
+Taunt: Barrier VIII	Small Shell	2
+Taunt: Barrier IX	Small Shell	3
+Taunt: Barrier X	Small Shell	3
+Taunt: Barrier XI	Small Shell	3
+Taunt: Barrier XII	Small Shell	3
+Taunt: Barrier XIII	Small Shell	3
+Taunt: Barrier XIV	Small Shell	4
+Taunt: Barrier XV	Small Shell	4
+Taunt: Barrier XVI	Small Shell	4
+Taunt: Barrier XVII	Small Shell	4
+Taunt: Barrier XVIII	Small Shell	4
+Taunt: Barrier XIX	Small Shell	5
+Taunt: Decoy I	Black Fog Deposits	1
+Taunt: Decoy II	Black Fog Deposits	1
+Taunt: Decoy III	Black Fog Deposits	1
+Taunt: Decoy IV	Black Fog Deposits	2
+Taunt: Decoy V	Black Fog Deposits	2
+Taunt: Decoy VI	Black Fog Deposits	2
+Taunt: Decoy VII	Black Fog Deposits	2
+Taunt: Decoy VIII	Black Fog Deposits	2
+Taunt: Decoy IX	Black Fog Deposits	3
+Taunt: Decoy X	Black Fog Deposits	3
+Taunt: Decoy XI	Black Fog Deposits	3
+Taunt: Decoy XII	Black Fog Deposits	3
+Taunt: Decoy XIII	Black Fog Deposits	3
+Taunt: Decoy XIV	Black Fog Deposits	4
+Taunt: Decoy XV	Black Fog Deposits	4
+Taunt: Decoy XVI	Black Fog Deposits	4
+Taunt: Decoy XVII	Black Fog Deposits	4
+Taunt: Decoy XVIII	Black Fog Deposits	4
+Taunt: Decoy XIX	Black Fog Deposits	5
+Taunt: Supercharge I	Tatty Insect Wing	1
+Taunt: Supercharge II	Tatty Insect Wing	1
+Taunt: Supercharge III	Tatty Insect Wing	1
+Taunt: Supercharge IV	Tatty Insect Wing	2
+Taunt: Supercharge V	Tatty Insect Wing	2
+Taunt: Supercharge VI	Tatty Insect Wing	2
+Taunt: Supercharge VII	Tatty Insect Wing	2
+Taunt: Supercharge VIII	Tatty Insect Wing	2
+Taunt: Supercharge IX	Tatty Insect Wing	3
+Taunt: Supercharge X	Tatty Insect Wing	3
+Taunt: Supercharge XI	Tatty Insect Wing	3
+Taunt: Supercharge XII	Tatty Insect Wing	3
+Taunt: Supercharge XIII	Tatty Insect Wing	3
+Taunt: Supercharge XIV	Tatty Insect Wing	4
+Taunt: Supercharge XV	Tatty Insect Wing	4
+Taunt: Supercharge XVI	Tatty Insect Wing	4
+Taunt: Supercharge XVII	Tatty Insect Wing	4
+Taunt: Supercharge XVIII	Tatty Insect Wing	4
+Taunt: Supercharge XIX	Tatty Insect Wing	5
+Topple: Barrier I	Small Shell	1
+Topple: Barrier II	Small Shell	1
+Topple: Barrier III	Small Shell	1
+Topple: Barrier IV	Small Shell	2
+Topple: Barrier V	Small Shell	2
+Topple: Barrier VI	Small Shell	2
+Topple: Barrier VII	Small Shell	2
+Topple: Barrier VIII	Small Shell	2
+Topple: Barrier IX	Small Shell	3
+Topple: Barrier X	Small Shell	3
+Topple: Barrier XI	Small Shell	3
+Topple: Barrier XII	Small Shell	3
+Topple: Barrier XIII	Small Shell	3
+Topple: Barrier XIV	Small Shell	4
+Topple: Barrier XV	Small Shell	4
+Topple: Barrier XVI	Small Shell	4
+Topple: Barrier XVII	Small Shell	4
+Topple: Barrier XVIII	Small Shell	4
+Topple: Barrier XIX	Small Shell	5
+Topple: Decoy I	Black Fog Deposits	1
+Topple: Decoy II	Black Fog Deposits	1
+Topple: Decoy III	Black Fog Deposits	1
+Topple: Decoy IV	Black Fog Deposits	2
+Topple: Decoy V	Black Fog Deposits	2
+Topple: Decoy VI	Black Fog Deposits	2
+Topple: Decoy VII	Black Fog Deposits	2
+Topple: Decoy VIII	Black Fog Deposits	2
+Topple: Decoy IX	Black Fog Deposits	3
+Topple: Decoy X	Black Fog Deposits	3
+Topple: Decoy XI	Black Fog Deposits	3
+Topple: Decoy XII	Black Fog Deposits	3
+Topple: Decoy XIII	Black Fog Deposits	3
+Topple: Decoy XIV	Black Fog Deposits	4
+Topple: Decoy XV	Black Fog Deposits	4
+Topple: Decoy XVI	Black Fog Deposits	4
+Topple: Decoy XVII	Black Fog Deposits	4
+Topple: Decoy XVIII	Black Fog Deposits	4
+Topple: Decoy XIX	Black Fog Deposits	5
+Stun: Barrier I	Small Shell	1
+Stun: Barrier II	Small Shell	1
+Stun: Barrier III	Small Shell	1
+Stun: Barrier IV	Small Shell	2
+Stun: Barrier V	Small Shell	2
+Stun: Barrier VI	Small Shell	2
+Stun: Barrier VII	Small Shell	2
+Stun: Barrier VIII	Small Shell	2
+Stun: Barrier IX	Small Shell	3
+Stun: Barrier X	Small Shell	3
+Stun: Barrier XI	Small Shell	3
+Stun: Barrier XII	Small Shell	3
+Stun: Barrier XIII	Small Shell	3
+Stun: Barrier XIV	Small Shell	4
+Stun: Barrier XV	Small Shell	4
+Stun: Barrier XVI	Small Shell	4
+Stun: Barrier XVII	Small Shell	4
+Stun: Barrier XVIII	Small Shell	4
+Stun: Barrier XIX	Small Shell	5
+Stun: Decoy I	Black Fog Deposits	1
+Stun: Decoy II	Black Fog Deposits	1
+Stun: Decoy III	Black Fog Deposits	1
+Stun: Decoy IV	Black Fog Deposits	2
+Stun: Decoy V	Black Fog Deposits	2
+Stun: Decoy VI	Black Fog Deposits	2
+Stun: Decoy VII	Black Fog Deposits	2
+Stun: Decoy VIII	Black Fog Deposits	2
+Stun: Decoy IX	Black Fog Deposits	3
+Stun: Decoy X	Black Fog Deposits	3
+Stun: Decoy XI	Black Fog Deposits	3
+Stun: Decoy XII	Black Fog Deposits	3
+Stun: Decoy XIII	Black Fog Deposits	3
+Stun: Decoy XIV	Black Fog Deposits	4
+Stun: Decoy XV	Black Fog Deposits	4
+Stun: Decoy XVI	Black Fog Deposits	4
+Stun: Decoy XVII	Black Fog Deposits	4
+Stun: Decoy XVIII	Black Fog Deposits	4
+Stun: Decoy XIX	Black Fog Deposits	5
+Reflect Damage Up I	Green Crystal	1
+Reflect Damage Up I	Diamond Seed	1
+Reflect Damage Up I	Cimmerian Pom Pom	1
+Reflect Damage Up II	Green Crystal	1
+Reflect Damage Up II	Diamond Seed	1
+Reflect Damage Up II	Cimmerian Pom Pom	1
+Reflect Damage Up III	Green Crystal	1
+Reflect Damage Up III	Diamond Seed	1
+Reflect Damage Up III	Cimmerian Pom Pom	1
+Reflect Damage Up IV	Green Crystal	2
+Reflect Damage Up IV	Diamond Seed	2
+Reflect Damage Up IV	Cimmerian Pom Pom	2
+Reflect Damage Up V	Odorous Tentacle	2
+Reflect Damage Up V	Iron Lump	2
+Reflect Damage Up V	Pristine Dorsal Fin	2
+Reflect Damage Up VI	Odorous Tentacle	2
+Reflect Damage Up VI	Iron Lump	2
+Reflect Damage Up VI	Pristine Dorsal Fin	2
+Reflect Damage Up VII	Odorous Tentacle	2
+Reflect Damage Up VII	Iron Lump	2
+Reflect Damage Up VII	Pristine Dorsal Fin	2
+Reflect Damage Up VIII	Odorous Tentacle	2
+Reflect Damage Up VIII	Iron Lump	2
+Reflect Damage Up VIII	Pristine Dorsal Fin	2
+Reflect Damage Up IX	Odorous Tentacle	3
+Reflect Damage Up IX	Iron Lump	3
+Reflect Damage Up IX	Pristine Dorsal Fin	3
+Reflect Damage Up X	Yggralith Horn	3
+Reflect Damage Up X	Cloudy Gerrid Soup	3
+Reflect Damage Up X	Sabula Backbone	3
+Reflect Damage Up XI	Yggralith Horn	3
+Reflect Damage Up XI	Cloudy Gerrid Soup	3
+Reflect Damage Up XI	Sabula Backbone	3
+Reflect Damage Up XII	Yggralith Horn	3
+Reflect Damage Up XII	Cloudy Gerrid Soup	3
+Reflect Damage Up XII	Sabula Backbone	3
+Reflect Damage Up XIII	Yggralith Horn	3
+Reflect Damage Up XIII	Cloudy Gerrid Soup	3
+Reflect Damage Up XIII	Sabula Backbone	3
+Reflect Damage Up XIV	Yggralith Horn	4
+Reflect Damage Up XIV	Cloudy Gerrid Soup	4
+Reflect Damage Up XIV	Sabula Backbone	4
+Reflect Damage Up XV	Yggralith Horn	4
+Reflect Damage Up XV	Cloudy Gerrid Soup	4
+Reflect Damage Up XV	Sabula Backbone	4
+Reflect Damage Up XVI	Yggralith Horn	4
+Reflect Damage Up XVI	Cloudy Gerrid Soup	4
+Reflect Damage Up XVI	Sabula Backbone	4
+Reflect Damage Up XVII	Yggralith Horn	4
+Reflect Damage Up XVII	Cloudy Gerrid Soup	4
+Reflect Damage Up XVII	Sabula Backbone	4
+Reflect Damage Up XVIII	Yggralith Horn	4
+Reflect Damage Up XVIII	Cloudy Gerrid Soup	4
+Reflect Damage Up XVIII	Sabula Backbone	4
+Reflect Damage Up XIX	Yggralith Horn	5
+Reflect Damage Up XIX	Cloudy Gerrid Soup	5
+Reflect Damage Up XIX	Sabula Backbone	5
+Nullify Physical Reflect I	Juicy Wild Meat	1
+Nullify Physical Reflect II	Juicy Wild Meat	1
+Nullify Physical Reflect III	Juicy Wild Meat	1
+Nullify Physical Reflect IV	Juicy Wild Meat	2
+Nullify Physical Reflect V	Juicy Wild Meat	2
+Nullify Physical Reflect VI	Juicy Wild Meat	2
+Nullify Physical Reflect VII	Juicy Wild Meat	2
+Nullify Physical Reflect VIII	Juicy Wild Meat	2
+Nullify Physical Reflect IX	Juicy Wild Meat	3
+Nullify Physical Reflect X	Juicy Wild Meat	3
+Nullify Physical Reflect XI	Juicy Wild Meat	3
+Nullify Physical Reflect XII	Juicy Wild Meat	3
+Nullify Physical Reflect XIII	Juicy Wild Meat	3
+Nullify Physical Reflect XIV	Juicy Wild Meat	4
+Nullify Physical Reflect XV	Juicy Wild Meat	4
+Nullify Physical Reflect XVI	Juicy Wild Meat	4
+Nullify Physical Reflect XVII	Juicy Wild Meat	4
+Nullify Physical Reflect XVIII	Juicy Wild Meat	4
+Nullify Physical Reflect XIX	Juicy Wild Meat	5
+Nullify Beam Reflect I	Adsecula Straw	1
+Nullify Beam Reflect II	Adsecula Straw	1
+Nullify Beam Reflect III	Adsecula Straw	1
+Nullify Beam Reflect IV	Adsecula Straw	2
+Nullify Beam Reflect V	Adsecula Straw	2
+Nullify Beam Reflect VI	Adsecula Straw	2
+Nullify Beam Reflect VII	Adsecula Straw	2
+Nullify Beam Reflect VIII	Adsecula Straw	2
+Nullify Beam Reflect IX	Adsecula Straw	3
+Nullify Beam Reflect X	Adsecula Straw	3
+Nullify Beam Reflect XI	Adsecula Straw	3
+Nullify Beam Reflect XII	Adsecula Straw	3
+Nullify Beam Reflect XIII	Adsecula Straw	3
+Nullify Beam Reflect XIV	Adsecula Straw	4
+Nullify Beam Reflect XV	Adsecula Straw	4
+Nullify Beam Reflect XVI	Adsecula Straw	4
+Nullify Beam Reflect XVII	Adsecula Straw	4
+Nullify Beam Reflect XVIII	Adsecula Straw	4
+Nullify Beam Reflect XIX	Adsecula Straw	5
+Nullify Ether Reflect I	Perforated Oar	1
+Nullify Ether Reflect II	Perforated Oar	1
+Nullify Ether Reflect III	Perforated Oar	1
+Nullify Ether Reflect IV	Perforated Oar	2
+Nullify Ether Reflect V	Perforated Oar	2
+Nullify Ether Reflect VI	Perforated Oar	2
+Nullify Ether Reflect VII	Perforated Oar	2
+Nullify Ether Reflect VIII	Perforated Oar	2
+Nullify Ether Reflect IX	Perforated Oar	3
+Nullify Ether Reflect X	Perforated Oar	3
+Nullify Ether Reflect XI	Perforated Oar	3
+Nullify Ether Reflect XII	Perforated Oar	3
+Nullify Ether Reflect XIII	Perforated Oar	3
+Nullify Ether Reflect XIV	Perforated Oar	4
+Nullify Ether Reflect XV	Perforated Oar	4
+Nullify Ether Reflect XVI	Perforated Oar	4
+Nullify Ether Reflect XVII	Perforated Oar	4
+Nullify Ether Reflect XVIII	Perforated Oar	4
+Nullify Ether Reflect XIX	Perforated Oar	5
+Nullify Thermal Reflect I	Red Forfex Shell	1
+Nullify Thermal Reflect II	Red Forfex Shell	1
+Nullify Thermal Reflect III	Red Forfex Shell	1
+Nullify Thermal Reflect IV	Red Forfex Shell	2
+Nullify Thermal Reflect V	Red Forfex Shell	2
+Nullify Thermal Reflect VI	Red Forfex Shell	2
+Nullify Thermal Reflect VII	Red Forfex Shell	2
+Nullify Thermal Reflect VIII	Red Forfex Shell	2
+Nullify Thermal Reflect IX	Red Forfex Shell	3
+Nullify Thermal Reflect X	Red Forfex Shell	3
+Nullify Thermal Reflect XI	Red Forfex Shell	3
+Nullify Thermal Reflect XII	Red Forfex Shell	3
+Nullify Thermal Reflect XIII	Red Forfex Shell	3
+Nullify Thermal Reflect XIV	Red Forfex Shell	4
+Nullify Thermal Reflect XV	Red Forfex Shell	4
+Nullify Thermal Reflect XVI	Red Forfex Shell	4
+Nullify Thermal Reflect XVII	Red Forfex Shell	4
+Nullify Thermal Reflect XVIII	Red Forfex Shell	4
+Nullify Thermal Reflect XIX	Red Forfex Shell	5
+Nullify Electric Reflect I	Muddy Pelt	1
+Nullify Electric Reflect II	Muddy Pelt	1
+Nullify Electric Reflect III	Muddy Pelt	1
+Nullify Electric Reflect IV	Muddy Pelt	2
+Nullify Electric Reflect V	Muddy Pelt	2
+Nullify Electric Reflect VI	Muddy Pelt	2
+Nullify Electric Reflect VII	Muddy Pelt	2
+Nullify Electric Reflect VIII	Muddy Pelt	2
+Nullify Electric Reflect IX	Muddy Pelt	3
+Nullify Electric Reflect X	Muddy Pelt	3
+Nullify Electric Reflect XI	Muddy Pelt	3
+Nullify Electric Reflect XII	Muddy Pelt	3
+Nullify Electric Reflect XIII	Muddy Pelt	3
+Nullify Electric Reflect XIV	Muddy Pelt	4
+Nullify Electric Reflect XV	Muddy Pelt	4
+Nullify Electric Reflect XVI	Muddy Pelt	4
+Nullify Electric Reflect XVII	Muddy Pelt	4
+Nullify Electric Reflect XVIII	Muddy Pelt	4
+Nullify Electric Reflect XIX	Muddy Pelt	5
+Nullify Gravity Reflect I	Black Blatta Wing	1
+Nullify Gravity Reflect II	Black Blatta Wing	1
+Nullify Gravity Reflect III	Black Blatta Wing	1
+Nullify Gravity Reflect IV	Black Blatta Wing	2
+Nullify Gravity Reflect V	Black Blatta Wing	2
+Nullify Gravity Reflect VI	Black Blatta Wing	2
+Nullify Gravity Reflect VII	Black Blatta Wing	2
+Nullify Gravity Reflect VIII	Black Blatta Wing	2
+Nullify Gravity Reflect IX	Black Blatta Wing	3
+Nullify Gravity Reflect X	Black Blatta Wing	3
+Nullify Gravity Reflect XI	Black Blatta Wing	3
+Nullify Gravity Reflect XII	Black Blatta Wing	3
+Nullify Gravity Reflect XIII	Black Blatta Wing	3
+Nullify Gravity Reflect XIV	Black Blatta Wing	4
+Nullify Gravity Reflect XV	Black Blatta Wing	4
+Nullify Gravity Reflect XVI	Black Blatta Wing	4
+Nullify Gravity Reflect XVII	Black Blatta Wing	4
+Nullify Gravity Reflect XVIII	Black Blatta Wing	4
+Nullify Gravity Reflect XIX	Black Blatta Wing	5
+Overdrive: Recover HP I	Black Turba Nectar	1
+Overdrive: Recover HP I	Shimmering Silk	1
+Overdrive: Recover HP I	Scirpo Silk	1
+Overdrive: Recover HP II	Black Turba Nectar	1
+Overdrive: Recover HP II	Shimmering Silk	1
+Overdrive: Recover HP II	Scirpo Silk	1
+Overdrive: Recover HP III	Black Turba Nectar	1
+Overdrive: Recover HP III	Shimmering Silk	1
+Overdrive: Recover HP III	Scirpo Silk	1
+Overdrive: Recover HP IV	Black Turba Nectar	2
+Overdrive: Recover HP IV	Shimmering Silk	2
+Overdrive: Recover HP IV	Scirpo Silk	2
+Overdrive: Recover HP V	Black Turba Nectar	2
+Overdrive: Recover HP V	Shimmering Silk	2
+Overdrive: Recover HP V	Scirpo Silk	2
+Overdrive: Recover HP VI	Black Turba Nectar	2
+Overdrive: Recover HP VI	Shimmering Silk	2
+Overdrive: Recover HP VI	Scirpo Silk	2
+Overdrive: Recover HP VII	Black Turba Nectar	2
+Overdrive: Recover HP VII	Shimmering Silk	2
+Overdrive: Recover HP VII	Scirpo Silk	2
+Overdrive: Recover HP VIII	Black Turba Nectar	2
+Overdrive: Recover HP VIII	Shimmering Silk	2
+Overdrive: Recover HP VIII	Scirpo Silk	2
+Overdrive: Recover HP IX	Black Turba Nectar	3
+Overdrive: Recover HP IX	Shimmering Silk	3
+Overdrive: Recover HP IX	Scirpo Silk	3
+Overdrive: Recover HP X	Black Turba Nectar	3
+Overdrive: Recover HP X	Tasty Fish Belly	3
+Overdrive: Recover HP X	Black Sylooth Brace	3
+Overdrive: Recover HP XI	Black Turba Nectar	3
+Overdrive: Recover HP XI	Tasty Fish Belly	3
+Overdrive: Recover HP XI	Black Sylooth Brace	3
+Overdrive: Recover HP XII	Black Turba Nectar	3
+Overdrive: Recover HP XII	Tasty Fish Belly	3
+Overdrive: Recover HP XII	Black Sylooth Brace	3
+Overdrive: Recover HP XIII	Black Turba Nectar	3
+Overdrive: Recover HP XIII	Tasty Fish Belly	3
+Overdrive: Recover HP XIII	Black Sylooth Brace	3
+Overdrive: Recover HP XIV	Black Turba Nectar	4
+Overdrive: Recover HP XIV	Tasty Fish Belly	4
+Overdrive: Recover HP XIV	Black Sylooth Brace	4
+Overdrive: Recover HP XV	Black Turba Nectar	4
+Overdrive: Recover HP XV	Tasty Fish Belly	4
+Overdrive: Recover HP XV	Black Sylooth Brace	4
+Overdrive: Recover HP XVI	Black Turba Nectar	4
+Overdrive: Recover HP XVI	Tasty Fish Belly	4
+Overdrive: Recover HP XVI	Black Sylooth Brace	4
+Overdrive: Recover HP XVII	Black Turba Nectar	4
+Overdrive: Recover HP XVII	Tasty Fish Belly	4
+Overdrive: Recover HP XVII	Black Sylooth Brace	4
+Overdrive: Recover HP XVIII	Black Turba Nectar	4
+Overdrive: Recover HP XVIII	Tasty Fish Belly	4
+Overdrive: Recover HP XVIII	Black Sylooth Brace	4
+Overdrive: Recover HP XIX	Black Turba Nectar	5
+Overdrive: Recover HP XIX	Tasty Fish Belly	5
+Overdrive: Recover HP XIX	Black Sylooth Brace	5
+Overdrive: Gain TP I	Flowering Germivore Scales	1
+Overdrive: Gain TP I	Red Mortifole Feather	1
+Overdrive: Gain TP I	Sharp Ear	1
+Overdrive: Gain TP II	Flowering Germivore Scales	1
+Overdrive: Gain TP II	Red Mortifole Feather	1
+Overdrive: Gain TP II	Sharp Ear	1
+Overdrive: Gain TP III	Flowering Germivore Scales	1
+Overdrive: Gain TP III	Red Mortifole Feather	1
+Overdrive: Gain TP III	Sharp Ear	1
+Overdrive: Gain TP IV	Flowering Germivore Scales	2
+Overdrive: Gain TP IV	Red Mortifole Feather	2
+Overdrive: Gain TP IV	Sharp Ear	2
+Overdrive: Gain TP V	Flowering Germivore Scales	2
+Overdrive: Gain TP V	Red Mortifole Feather	2
+Overdrive: Gain TP V	Sharp Ear	2
+Overdrive: Gain TP VI	Flowering Germivore Scales	2
+Overdrive: Gain TP VI	Red Mortifole Feather	2
+Overdrive: Gain TP VI	Sharp Ear	2
+Overdrive: Gain TP VII	Flowering Germivore Scales	2
+Overdrive: Gain TP VII	Red Mortifole Feather	2
+Overdrive: Gain TP VII	Sharp Ear	2
+Overdrive: Gain TP VIII	Flowering Germivore Scales	2
+Overdrive: Gain TP VIII	Red Mortifole Feather	2
+Overdrive: Gain TP VIII	Sharp Ear	2
+Overdrive: Gain TP IX	Flowering Germivore Scales	3
+Overdrive: Gain TP IX	Red Mortifole Feather	3
+Overdrive: Gain TP IX	Sharp Ear	3
+Overdrive: Gain TP X	Flowering Germivore Scales	3
+Overdrive: Gain TP X	Tersqual Eel Kebab	3
+Overdrive: Gain TP X	Alluring Lophid Extract	3
+Overdrive: Gain TP XI	Flowering Germivore Scales	3
+Overdrive: Gain TP XI	Tersqual Eel Kebab	3
+Overdrive: Gain TP XI	Alluring Lophid Extract	3
+Overdrive: Gain TP XII	Flowering Germivore Scales	3
+Overdrive: Gain TP XII	Tersqual Eel Kebab	3
+Overdrive: Gain TP XII	Alluring Lophid Extract	3
+Overdrive: Gain TP XIII	Flowering Germivore Scales	3
+Overdrive: Gain TP XIII	Tersqual Eel Kebab	3
+Overdrive: Gain TP XIII	Alluring Lophid Extract	3
+Overdrive: Gain TP XIV	Flowering Germivore Scales	4
+Overdrive: Gain TP XIV	Tersqual Eel Kebab	4
+Overdrive: Gain TP XIV	Alluring Lophid Extract	4
+Overdrive: Gain TP XV	Flowering Germivore Scales	4
+Overdrive: Gain TP XV	Tersqual Eel Kebab	4
+Overdrive: Gain TP XV	Alluring Lophid Extract	4
+Overdrive: Gain TP XVI	Flowering Germivore Scales	4
+Overdrive: Gain TP XVI	Tersqual Eel Kebab	4
+Overdrive: Gain TP XVI	Alluring Lophid Extract	4
+Overdrive: Gain TP XVII	Flowering Germivore Scales	4
+Overdrive: Gain TP XVII	Tersqual Eel Kebab	4
+Overdrive: Gain TP XVII	Alluring Lophid Extract	4
+Overdrive: Gain TP XVIII	Flowering Germivore Scales	4
+Overdrive: Gain TP XVIII	Tersqual Eel Kebab	4
+Overdrive: Gain TP XVIII	Alluring Lophid Extract	4
+Overdrive: Gain TP XIX	Flowering Germivore Scales	5
+Overdrive: Gain TP XIX	Tersqual Eel Kebab	5
+Overdrive: Gain TP XIX	Alluring Lophid Extract	5
+Overdrive Count Up I	Elemental Cluster	1
+Overdrive Count Up I	Moving Thallus Tail	1
+Overdrive Count Up I	Puge Counter	1
+Overdrive Count Up II	Elemental Cluster	1
+Overdrive Count Up II	Moving Thallus Tail	1
+Overdrive Count Up II	Puge Counter	1
+Overdrive Count Up III	Elemental Cluster	1
+Overdrive Count Up III	Moving Thallus Tail	1
+Overdrive Count Up III	Puge Counter	1
+Overdrive Count Up IV	Elemental Cluster	2
+Overdrive Count Up IV	Moving Thallus Tail	2
+Overdrive Count Up IV	Puge Counter	2
+Overdrive Count Up V	Elemental Cluster	2
+Overdrive Count Up V	Moving Thallus Tail	2
+Overdrive Count Up V	Puge Counter	2
+Overdrive Count Up VI	Elemental Cluster	2
+Overdrive Count Up VI	Moving Thallus Tail	2
+Overdrive Count Up VI	Puge Counter	2
+Overdrive Count Up VII	Elemental Cluster	2
+Overdrive Count Up VII	Moving Thallus Tail	2
+Overdrive Count Up VII	Puge Counter	2
+Overdrive Count Up VIII	Elemental Cluster	2
+Overdrive Count Up VIII	Moving Thallus Tail	2
+Overdrive Count Up VIII	Puge Counter	2
+Overdrive Count Up IX	Elemental Cluster	3
+Overdrive Count Up IX	Moving Thallus Tail	3
+Overdrive Count Up IX	Puge Counter	3
+Overdrive Count Up X	Elemental Cluster	3
+Overdrive Count Up X	Fertilized Jacul Egg	3
+Overdrive Count Up X	Maple Oil	3
+Overdrive Count Up XI	Elemental Cluster	3
+Overdrive Count Up XI	Fertilized Jacul Egg	3
+Overdrive Count Up XI	Maple Oil	3
+Overdrive Count Up XII	Elemental Cluster	3
+Overdrive Count Up XII	Fertilized Jacul Egg	3
+Overdrive Count Up XII	Maple Oil	3
+Overdrive Count Up XIII	Elemental Cluster	3
+Overdrive Count Up XIII	Fertilized Jacul Egg	3
+Overdrive Count Up XIII	Maple Oil	3
+Overdrive Count Up XIV	Elemental Cluster	4
+Overdrive Count Up XIV	Fertilized Jacul Egg	4
+Overdrive Count Up XIV	Maple Oil	4
+Overdrive Count Up XV	Elemental Cluster	4
+Overdrive Count Up XV	Fertilized Jacul Egg	4
+Overdrive Count Up XV	Maple Oil	4
+Overdrive Count Up XVI	Elemental Cluster	4
+Overdrive Count Up XVI	Fertilized Jacul Egg	4
+Overdrive Count Up XVI	Maple Oil	4
+Overdrive Count Up XVII	Elemental Cluster	4
+Overdrive Count Up XVII	Fertilized Jacul Egg	4
+Overdrive Count Up XVII	Maple Oil	4
+Overdrive Count Up XVIII	Elemental Cluster	4
+Overdrive Count Up XVIII	Fertilized Jacul Egg	4
+Overdrive Count Up XVIII	Maple Oil	4
+Overdrive Count Up XIX	Elemental Cluster	5
+Overdrive Count Up XIX	Fertilized Jacul Egg	5
+Overdrive Count Up XIX	Maple Oil	5
+Extend Overdrive I	Unfertilized Auravis Egg	1
+Extend Overdrive I	Silver Progen Wing	1
+Extend Overdrive I	Terebra Paw Stamp	1
+Extend Overdrive II	Unfertilized Auravis Egg	1
+Extend Overdrive II	Silver Progen Wing	1
+Extend Overdrive II	Terebra Paw Stamp	1
+Extend Overdrive III	Unfertilized Auravis Egg	1
+Extend Overdrive III	Silver Progen Wing	1
+Extend Overdrive III	Terebra Paw Stamp	1
+Extend Overdrive IV	Unfertilized Auravis Egg	2
+Extend Overdrive IV	Silver Progen Wing	2
+Extend Overdrive IV	Terebra Paw Stamp	2
+Extend Overdrive V	Unfertilized Auravis Egg	2
+Extend Overdrive V	Silver Progen Wing	2
+Extend Overdrive V	Terebra Paw Stamp	2
+Extend Overdrive VI	Unfertilized Auravis Egg	2
+Extend Overdrive VI	Silver Progen Wing	2
+Extend Overdrive VI	Terebra Paw Stamp	2
+Extend Overdrive VII	Unfertilized Auravis Egg	2
+Extend Overdrive VII	Silver Progen Wing	2
+Extend Overdrive VII	Terebra Paw Stamp	2
+Extend Overdrive VIII	Unfertilized Auravis Egg	2
+Extend Overdrive VIII	Silver Progen Wing	2
+Extend Overdrive VIII	Terebra Paw Stamp	2
+Extend Overdrive IX	Unfertilized Auravis Egg	3
+Extend Overdrive IX	Silver Progen Wing	3
+Extend Overdrive IX	Terebra Paw Stamp	3
+Extend Overdrive X	Unfertilized Auravis Egg	3
+Extend Overdrive X	Red Brandy	3
+Extend Overdrive X	Fine Red Belt	3
+Extend Overdrive XI	Unfertilized Auravis Egg	3
+Extend Overdrive XI	Red Brandy	3
+Extend Overdrive XI	Fine Red Belt	3
+Extend Overdrive XII	Unfertilized Auravis Egg	3
+Extend Overdrive XII	Red Brandy	3
+Extend Overdrive XII	Fine Red Belt	3
+Extend Overdrive XIII	Unfertilized Auravis Egg	3
+Extend Overdrive XIII	Red Brandy	3
+Extend Overdrive XIII	Fine Red Belt	3
+Extend Overdrive XIV	Unfertilized Auravis Egg	4
+Extend Overdrive XIV	Red Brandy	4
+Extend Overdrive XIV	Fine Red Belt	4
+Extend Overdrive XV	Unfertilized Auravis Egg	4
+Extend Overdrive XV	Red Brandy	4
+Extend Overdrive XV	Fine Red Belt	4
+Extend Overdrive XVI	Unfertilized Auravis Egg	4
+Extend Overdrive XVI	Red Brandy	4
+Extend Overdrive XVI	Fine Red Belt	4
+Extend Overdrive XVII	Unfertilized Auravis Egg	4
+Extend Overdrive XVII	Red Brandy	4
+Extend Overdrive XVII	Fine Red Belt	4
+Extend Overdrive XVIII	Unfertilized Auravis Egg	4
+Extend Overdrive XVIII	Red Brandy	4
+Extend Overdrive XVIII	Fine Red Belt	4
+Extend Overdrive XIX	Unfertilized Auravis Egg	5
+Extend Overdrive XIX	Red Brandy	5
+Extend Overdrive XIX	Fine Red Belt	5
+Extend Aura I	Turba Nectar	1
+Extend Aura I	Meaty Evello Egg	1
+Extend Aura II	Turba Nectar	1
+Extend Aura II	Meaty Evello Egg	1
+Extend Aura III	Turba Nectar	1
+Extend Aura III	Meaty Evello Egg	1
+Extend Aura IV	Turba Nectar	2
+Extend Aura IV	Meaty Evello Egg	2
+Extend Aura V	Turba Nectar	2
+Extend Aura V	Meaty Evello Egg	2
+Extend Aura VI	Turba Nectar	2
+Extend Aura VI	Meaty Evello Egg	2
+Extend Aura VII	Turba Nectar	2
+Extend Aura VII	Meaty Evello Egg	2
+Extend Aura VIII	Turba Nectar	2
+Extend Aura VIII	Meaty Evello Egg	2
+Extend Aura IX	Turba Nectar	3
+Extend Aura IX	Meaty Evello Egg	3
+Extend Aura X	Turba Nectar	3
+Extend Aura X	Vigent Blood	3
+Extend Aura XI	Turba Nectar	3
+Extend Aura XI	Vigent Blood	3
+Extend Aura XII	Turba Nectar	3
+Extend Aura XII	Vigent Blood	3
+Extend Aura XIII	Turba Nectar	3
+Extend Aura XIII	Vigent Blood	3
+Extend Aura XIV	Turba Nectar	4
+Extend Aura XIV	Vigent Blood	4
+Extend Aura XV	Turba Nectar	4
+Extend Aura XV	Vigent Blood	4
+Extend Aura XVI	Turba Nectar	4
+Extend Aura XVI	Vigent Blood	4
+Extend Aura XVII	Turba Nectar	4
+Extend Aura XVII	Vigent Blood	4
+Extend Aura XVIII	Turba Nectar	4
+Extend Aura XVIII	Vigent Blood	4
+Extend Aura XIX	Turba Nectar	5
+Extend Aura XIX	Vigent Blood	5
+Aura Rapid Cooldown I	Reinforced Jet	1
+Aura Rapid Cooldown I	Terebra Oil Grease	1
+Aura Rapid Cooldown I	Cloudy Gerrid Soup	1
+Aura Rapid Cooldown II	Reinforced Jet	1
+Aura Rapid Cooldown II	Terebra Oil Grease	1
+Aura Rapid Cooldown II	Cloudy Gerrid Soup	1
+Aura Rapid Cooldown III	Reinforced Jet	1
+Aura Rapid Cooldown III	Terebra Oil Grease	1
+Aura Rapid Cooldown III	Cloudy Gerrid Soup	1
+Aura Rapid Cooldown IV	Reinforced Jet	2
+Aura Rapid Cooldown IV	Terebra Oil Grease	2
+Aura Rapid Cooldown IV	Cloudy Gerrid Soup	2
+Aura Rapid Cooldown V	Reinforced Jet	2
+Aura Rapid Cooldown V	Terebra Oil Grease	2
+Aura Rapid Cooldown V	Cloudy Gerrid Soup	2
+Aura Rapid Cooldown VI	Reinforced Jet	2
+Aura Rapid Cooldown VI	Terebra Oil Grease	2
+Aura Rapid Cooldown VI	Cloudy Gerrid Soup	2
+Aura Rapid Cooldown VII	Reinforced Jet	2
+Aura Rapid Cooldown VII	Terebra Oil Grease	2
+Aura Rapid Cooldown VII	Cloudy Gerrid Soup	2
+Aura Rapid Cooldown VIII	Reinforced Jet	2
+Aura Rapid Cooldown VIII	Terebra Oil Grease	2
+Aura Rapid Cooldown VIII	Cloudy Gerrid Soup	2
+Aura Rapid Cooldown IX	Reinforced Jet	3
+Aura Rapid Cooldown IX	Terebra Oil Grease	3
+Aura Rapid Cooldown IX	Cloudy Gerrid Soup	3
+Aura Rapid Cooldown X	Reinforced Jet	3
+Aura Rapid Cooldown X	Quality Vigent Claw	3
+Aura Rapid Cooldown X	Millesaur Larynx	3
+Aura Rapid Cooldown XI	Reinforced Jet	3
+Aura Rapid Cooldown XI	Quality Vigent Claw	3
+Aura Rapid Cooldown XI	Millesaur Larynx	3
+Aura Rapid Cooldown XII	Reinforced Jet	3
+Aura Rapid Cooldown XII	Quality Vigent Claw	3
+Aura Rapid Cooldown XII	Millesaur Larynx	3
+Aura Rapid Cooldown XIII	Reinforced Jet	3
+Aura Rapid Cooldown XIII	Quality Vigent Claw	3
+Aura Rapid Cooldown XIII	Millesaur Larynx	3
+Aura Rapid Cooldown XIV	Reinforced Jet	4
+Aura Rapid Cooldown XIV	Quality Vigent Claw	4
+Aura Rapid Cooldown XIV	Millesaur Larynx	4
+Aura Rapid Cooldown XV	Reinforced Jet	4
+Aura Rapid Cooldown XV	Quality Vigent Claw	4
+Aura Rapid Cooldown XV	Millesaur Larynx	4
+Aura Rapid Cooldown XVI	Reinforced Jet	4
+Aura Rapid Cooldown XVI	Quality Vigent Claw	4
+Aura Rapid Cooldown XVI	Millesaur Larynx	4
+Aura Rapid Cooldown XVII	Reinforced Jet	4
+Aura Rapid Cooldown XVII	Quality Vigent Claw	4
+Aura Rapid Cooldown XVII	Millesaur Larynx	4
+Aura Rapid Cooldown XVIII	Reinforced Jet	4
+Aura Rapid Cooldown XVIII	Quality Vigent Claw	4
+Aura Rapid Cooldown XVIII	Millesaur Larynx	4
+Aura Rapid Cooldown XIX	Reinforced Jet	5
+Aura Rapid Cooldown XIX	Quality Vigent Claw	5
+Aura Rapid Cooldown XIX	Millesaur Larynx	5
+Aura: Refuel I	Energy Tube	1
+Aura: Refuel II	Energy Tube	1
+Aura: Refuel III	Energy Tube	1
+Aura: Refuel IV	Energy Tube	2
+Aura: Refuel V	Energy Tube	2
+Aura: Refuel VI	Energy Tube	2
+Aura: Refuel VII	Energy Tube	2
+Aura: Refuel VIII	Energy Tube	2
+Aura: Refuel IX	Energy Tube	3
+Aura: Refuel X	Energy Tube	3
+Aura: Refuel XI	Energy Tube	3
+Aura: Refuel XII	Energy Tube	3
+Aura: Refuel XIII	Energy Tube	3
+Aura: Refuel XIV	Energy Tube	4
+Aura: Refuel XV	Energy Tube	4
+Aura: Refuel XVI	Energy Tube	4
+Aura: Refuel XVII	Energy Tube	4
+Aura: Refuel XVIII	Energy Tube	4
+Aura: Refuel XIX	Energy Tube	5
+Arts: Gain TP I	White Mortifole Feather	1
+Arts: Gain TP I	Ornate Insidia Claw	1
+Arts: Gain TP I	Blue Fungi	1
+Arts: Gain TP II	White Mortifole Feather	1
+Arts: Gain TP II	Ornate Insidia Claw	1
+Arts: Gain TP II	Blue Fungi	1
+Arts: Gain TP III	White Mortifole Feather	1
+Arts: Gain TP III	Ornate Insidia Claw	1
+Arts: Gain TP III	Blue Fungi	1
+Arts: Gain TP IV	White Mortifole Feather	2
+Arts: Gain TP IV	Ornate Insidia Claw	2
+Arts: Gain TP IV	Blue Fungi	2
+Arts: Gain TP V	White Mortifole Feather	2
+Arts: Gain TP V	Ornate Insidia Claw	2
+Arts: Gain TP V	Blue Fungi	2
+Arts: Gain TP VI	White Mortifole Feather	2
+Arts: Gain TP VI	Ornate Insidia Claw	2
+Arts: Gain TP VI	Blue Fungi	2
+Arts: Gain TP VII	White Mortifole Feather	2
+Arts: Gain TP VII	Ornate Insidia Claw	2
+Arts: Gain TP VII	Blue Fungi	2
+Arts: Gain TP VIII	White Mortifole Feather	2
+Arts: Gain TP VIII	Ornate Insidia Claw	2
+Arts: Gain TP VIII	Blue Fungi	2
+Arts: Gain TP IX	White Mortifole Feather	3
+Arts: Gain TP IX	Ornate Insidia Claw	3
+Arts: Gain TP IX	Blue Fungi	3
+Arts: Gain TP X	White Mortifole Feather	3
+Arts: Gain TP X	Aeviter Star Wing	3
+Arts: Gain TP X	Red Vigent Rock Scalp	3
+Arts: Gain TP XI	White Mortifole Feather	3
+Arts: Gain TP XI	Aeviter Star Wing	3
+Arts: Gain TP XI	Red Vigent Rock Scalp	3
+Arts: Gain TP XII	White Mortifole Feather	3
+Arts: Gain TP XII	Aeviter Star Wing	3
+Arts: Gain TP XII	Red Vigent Rock Scalp	3
+Arts: Gain TP XIII	White Mortifole Feather	3
+Arts: Gain TP XIII	Aeviter Star Wing	3
+Arts: Gain TP XIII	Red Vigent Rock Scalp	3
+Arts: Gain TP XIV	White Mortifole Feather	4
+Arts: Gain TP XIV	Aeviter Star Wing	4
+Arts: Gain TP XIV	Red Vigent Rock Scalp	4
+Arts: Gain TP XV	White Mortifole Feather	4
+Arts: Gain TP XV	Aeviter Star Wing	4
+Arts: Gain TP XV	Red Vigent Rock Scalp	4
+Arts: Gain TP XVI	White Mortifole Feather	4
+Arts: Gain TP XVI	Aeviter Star Wing	4
+Arts: Gain TP XVI	Red Vigent Rock Scalp	4
+Arts: Gain TP XVII	White Mortifole Feather	4
+Arts: Gain TP XVII	Aeviter Star Wing	4
+Arts: Gain TP XVII	Red Vigent Rock Scalp	4
+Arts: Gain TP XVIII	White Mortifole Feather	4
+Arts: Gain TP XVIII	Aeviter Star Wing	4
+Arts: Gain TP XVIII	Red Vigent Rock Scalp	4
+Arts: Gain TP XIX	White Mortifole Feather	5
+Arts: Gain TP XIX	Aeviter Star Wing	5
+Arts: Gain TP XIX	Red Vigent Rock Scalp	5
+Arts: Recover HP I	Melon Oil	1
+Arts: Recover HP I	Silver Blatta Wing	1
+Arts: Recover HP I	Pristine Insect Jaw	1
+Arts: Recover HP II	Melon Oil	1
+Arts: Recover HP II	Silver Blatta Wing	1
+Arts: Recover HP II	Pristine Insect Jaw	1
+Arts: Recover HP III	Melon Oil	1
+Arts: Recover HP III	Silver Blatta Wing	1
+Arts: Recover HP III	Pristine Insect Jaw	1
+Arts: Recover HP IV	Melon Oil	2
+Arts: Recover HP IV	Silver Blatta Wing	2
+Arts: Recover HP IV	Pristine Insect Jaw	2
+Arts: Recover HP V	Melon Oil	2
+Arts: Recover HP V	Silver Blatta Wing	2
+Arts: Recover HP V	Pristine Insect Jaw	2
+Arts: Recover HP VI	Melon Oil	2
+Arts: Recover HP VI	Silver Blatta Wing	2
+Arts: Recover HP VI	Pristine Insect Jaw	2
+Arts: Recover HP VII	Melon Oil	2
+Arts: Recover HP VII	Silver Blatta Wing	2
+Arts: Recover HP VII	Pristine Insect Jaw	2
+Arts: Recover HP VIII	Melon Oil	2
+Arts: Recover HP VIII	Silver Blatta Wing	2
+Arts: Recover HP VIII	Pristine Insect Jaw	2
+Arts: Recover HP IX	Melon Oil	3
+Arts: Recover HP IX	Silver Blatta Wing	3
+Arts: Recover HP IX	Pristine Insect Jaw	3
+Arts: Recover HP X	Melon Oil	3
+Arts: Recover HP X	Large Lophid Liver	3
+Arts: Recover HP X	Virago Blood Sweat	3
+Arts: Recover HP XI	Melon Oil	3
+Arts: Recover HP XI	Large Lophid Liver	3
+Arts: Recover HP XI	Virago Blood Sweat	3
+Arts: Recover HP XII	Melon Oil	3
+Arts: Recover HP XII	Large Lophid Liver	3
+Arts: Recover HP XII	Virago Blood Sweat	3
+Arts: Recover HP XIII	Melon Oil	3
+Arts: Recover HP XIII	Large Lophid Liver	3
+Arts: Recover HP XIII	Virago Blood Sweat	3
+Arts: Recover HP XIV	Melon Oil	4
+Arts: Recover HP XIV	Large Lophid Liver	4
+Arts: Recover HP XIV	Virago Blood Sweat	4
+Arts: Recover HP XV	Melon Oil	4
+Arts: Recover HP XV	Large Lophid Liver	4
+Arts: Recover HP XV	Virago Blood Sweat	4
+Arts: Recover HP XVI	Melon Oil	4
+Arts: Recover HP XVI	Large Lophid Liver	4
+Arts: Recover HP XVI	Virago Blood Sweat	4
+Arts: Recover HP XVII	Melon Oil	4
+Arts: Recover HP XVII	Large Lophid Liver	4
+Arts: Recover HP XVII	Virago Blood Sweat	4
+Arts: Recover HP XVIII	Melon Oil	4
+Arts: Recover HP XVIII	Large Lophid Liver	4
+Arts: Recover HP XVIII	Virago Blood Sweat	4
+Arts: Recover HP XIX	Melon Oil	5
+Arts: Recover HP XIX	Large Lophid Liver	5
+Arts: Recover HP XIX	Virago Blood Sweat	5
+Secondary CD Reducer I	Advanced Jet	1
+Secondary CD Reducer I	Brilliant Murra Liquid	1
+Secondary CD Reducer I	Quality Shaft	1
+Secondary CD Reducer II	Advanced Jet	1
+Secondary CD Reducer II	Brilliant Murra Liquid	1
+Secondary CD Reducer II	Quality Shaft	1
+Secondary CD Reducer III	Advanced Jet	1
+Secondary CD Reducer III	Brilliant Murra Liquid	1
+Secondary CD Reducer III	Quality Shaft	1
+Secondary CD Reducer IV	Advanced Jet	2
+Secondary CD Reducer IV	Brilliant Murra Liquid	2
+Secondary CD Reducer IV	Quality Shaft	2
+Secondary CD Reducer V	Advanced Jet	2
+Secondary CD Reducer V	Brilliant Visigel Liquid	2
+Secondary CD Reducer V	Quality Shaft	2
+Secondary CD Reducer VI	Advanced Jet	2
+Secondary CD Reducer VI	Brilliant Visigel Liquid	2
+Secondary CD Reducer VI	Quality Shaft	2
+Secondary CD Reducer VII	Advanced Jet	2
+Secondary CD Reducer VII	Brilliant Visigel Liquid	2
+Secondary CD Reducer VII	Quality Shaft	2
+Secondary CD Reducer VIII	Advanced Jet	2
+Secondary CD Reducer VIII	Brilliant Visigel Liquid	2
+Secondary CD Reducer VIII	Quality Shaft	2
+Secondary CD Reducer IX	Advanced Jet	3
+Secondary CD Reducer IX	Brilliant Visigel Liquid	3
+Secondary CD Reducer IX	Quality Shaft	3
+Secondary CD Reducer X	Liceor Sun Bead	3
+Secondary CD Reducer X	Coconut Oil	3
+Secondary CD Reducer X	Yggralith Recovery Horn	3
+Secondary CD Reducer XI	Liceor Sun Bead	3
+Secondary CD Reducer XI	Coconut Oil	3
+Secondary CD Reducer XI	Yggralith Recovery Horn	3
+Secondary CD Reducer XII	Liceor Sun Bead	3
+Secondary CD Reducer XII	Coconut Oil	3
+Secondary CD Reducer XII	Yggralith Recovery Horn	3
+Secondary CD Reducer XIII	Liceor Sun Bead	3
+Secondary CD Reducer XIII	Coconut Oil	3
+Secondary CD Reducer XIII	Yggralith Recovery Horn	3
+Secondary CD Reducer XIV	Liceor Sun Bead	4
+Secondary CD Reducer XIV	Coconut Oil	4
+Secondary CD Reducer XIV	Yggralith Recovery Horn	4
+Secondary CD Reducer XV	Liceor Sun Bead	4
+Secondary CD Reducer XV	Coconut Oil	4
+Secondary CD Reducer XV	Yggralith Recovery Horn	4
+Secondary CD Reducer XVI	Liceor Sun Bead	4
+Secondary CD Reducer XVI	Coconut Oil	4
+Secondary CD Reducer XVI	Yggralith Recovery Horn	4
+Secondary CD Reducer XVII	Liceor Sun Bead	4
+Secondary CD Reducer XVII	Coconut Oil	4
+Secondary CD Reducer XVII	Yggralith Recovery Horn	4
+Secondary CD Reducer XVIII	Liceor Sun Bead	4
+Secondary CD Reducer XVIII	Coconut Oil	4
+Secondary CD Reducer XVIII	Yggralith Recovery Horn	4
+Secondary CD Reducer XIX	Liceor Sun Bead	5
+Secondary CD Reducer XIX	Coconut Oil	5
+Secondary CD Reducer XIX	Yggralith Recovery Horn	5
+Extend Taunt I	Small Insect Leg	1
+Extend Taunt II	Small Insect Leg	1
+Extend Taunt III	Small Insect Leg	1
+Extend Taunt IV	Small Insect Leg	2
+Extend Taunt V	Small Insect Leg	2
+Extend Taunt VI	Small Insect Leg	2
+Extend Taunt VII	Small Insect Leg	2
+Extend Taunt VIII	Small Insect Leg	2
+Extend Taunt IX	Small Insect Leg	3
+Extend Taunt X	Small Insect Leg	3
+Extend Taunt XI	Small Insect Leg	3
+Extend Taunt XII	Small Insect Leg	3
+Extend Taunt XIII	Small Insect Leg	3
+Extend Taunt XIV	Small Insect Leg	4
+Extend Taunt XV	Small Insect Leg	4
+Extend Taunt XVI	Small Insect Leg	4
+Extend Taunt XVII	Small Insect Leg	4
+Extend Taunt XVIII	Small Insect Leg	4
+Extend Taunt XIX	Small Insect Leg	5
+Extend Control I	Taut Leather	1
+Extend Control II	Taut Leather	1
+Extend Control III	Taut Leather	1
+Extend Control IV	Taut Leather	2
+Extend Control V	Taut Leather	2
+Extend Control VI	Taut Leather	2
+Extend Control VII	Taut Leather	2
+Extend Control VIII	Taut Leather	2
+Extend Control IX	Taut Leather	3
+Extend Control X	Taut Leather	3
+Extend Control XI	Taut Leather	3
+Extend Control XII	Taut Leather	3
+Extend Control XIII	Taut Leather	3
+Extend Control XIV	Taut Leather	4
+Extend Control XV	Taut Leather	4
+Extend Control XVI	Taut Leather	4
+Extend Control XVII	Taut Leather	4
+Extend Control XVIII	Taut Leather	4
+Extend Control XIX	Taut Leather	5
+Extend Virus I	Small Insect Leg	1
+Extend Virus II	Small Insect Leg	1
+Extend Virus III	Small Insect Leg	1
+Extend Virus IV	Small Insect Leg	2
+Extend Virus V	Small Insect Leg	2
+Extend Virus VI	Small Insect Leg	2
+Extend Virus VII	Small Insect Leg	2
+Extend Virus VIII	Small Insect Leg	2
+Extend Virus IX	Small Insect Leg	3
+Extend Virus X	Small Insect Leg	3
+Extend Virus XI	Small Insect Leg	3
+Extend Virus XII	Small Insect Leg	3
+Extend Virus XIII	Small Insect Leg	3
+Extend Virus XIV	Small Insect Leg	4
+Extend Virus XV	Small Insect Leg	4
+Extend Virus XVI	Small Insect Leg	4
+Extend Virus XVII	Small Insect Leg	4
+Extend Virus XVIII	Small Insect Leg	4
+Extend Virus XIX	Small Insect Leg	5
+Extend Blackout I	Ovis Polishing Stone	1
+Extend Blackout II	Ovis Polishing Stone	1
+Extend Blackout III	Ovis Polishing Stone	1
+Extend Blackout IV	Ovis Polishing Stone	2
+Extend Blackout V	Ovis Polishing Stone	2
+Extend Blackout VI	Ovis Polishing Stone	2
+Extend Blackout VII	Ovis Polishing Stone	2
+Extend Blackout VIII	Ovis Polishing Stone	2
+Extend Blackout IX	Ovis Polishing Stone	3
+Extend Blackout X	Ovis Polishing Stone	3
+Extend Blackout XI	Ovis Polishing Stone	3
+Extend Blackout XII	Ovis Polishing Stone	3
+Extend Blackout XIII	Ovis Polishing Stone	3
+Extend Blackout XIV	Ovis Polishing Stone	4
+Extend Blackout XV	Ovis Polishing Stone	4
+Extend Blackout XVI	Ovis Polishing Stone	4
+Extend Blackout XVII	Ovis Polishing Stone	4
+Extend Blackout XVIII	Ovis Polishing Stone	4
+Extend Blackout XIX	Ovis Polishing Stone	5
+Extend Fatigue I	Broken Pincer	1
+Extend Fatigue II	Broken Pincer	1
+Extend Fatigue III	Broken Pincer	1
+Extend Fatigue IV	Broken Pincer	2
+Extend Fatigue V	Broken Pincer	2
+Extend Fatigue VI	Broken Pincer	2
+Extend Fatigue VII	Broken Pincer	2
+Extend Fatigue VIII	Broken Pincer	2
+Extend Fatigue IX	Broken Pincer	3
+Extend Fatigue X	Broken Pincer	3
+Extend Fatigue XI	Broken Pincer	3
+Extend Fatigue XII	Broken Pincer	3
+Extend Fatigue XIII	Broken Pincer	3
+Extend Fatigue XIV	Broken Pincer	4
+Extend Fatigue XV	Broken Pincer	4
+Extend Fatigue XVI	Broken Pincer	4
+Extend Fatigue XVII	Broken Pincer	4
+Extend Fatigue XVIII	Broken Pincer	4
+Extend Fatigue XIX	Broken Pincer	5
+Extend Slow Arts I	Supple Leather	1
+Extend Slow Arts II	Supple Leather	1
+Extend Slow Arts III	Supple Leather	1
+Extend Slow Arts IV	Supple Leather	2
+Extend Slow Arts V	Supple Leather	2
+Extend Slow Arts VI	Supple Leather	2
+Extend Slow Arts VII	Supple Leather	2
+Extend Slow Arts VIII	Supple Leather	2
+Extend Slow Arts IX	Supple Leather	3
+Extend Slow Arts X	Supple Leather	3
+Extend Slow Arts XI	Supple Leather	3
+Extend Slow Arts XII	Supple Leather	3
+Extend Slow Arts XIII	Supple Leather	3
+Extend Slow Arts XIV	Supple Leather	4
+Extend Slow Arts XV	Supple Leather	4
+Extend Slow Arts XVI	Supple Leather	4
+Extend Slow Arts XVII	Supple Leather	4
+Extend Slow Arts XVIII	Supple Leather	4
+Extend Slow Arts XIX	Supple Leather	5
+Extend Debuff Res Down I	Lovely Pom Pom	1
+Extend Debuff Res Down II	Lovely Pom Pom	1
+Extend Debuff Res Down III	Lovely Pom Pom	1
+Extend Debuff Res Down IV	Lovely Pom Pom	2
+Extend Debuff Res Down V	Lovely Pom Pom	2
+Extend Debuff Res Down VI	Lovely Pom Pom	2
+Extend Debuff Res Down VII	Lovely Pom Pom	2
+Extend Debuff Res Down VIII	Lovely Pom Pom	2
+Extend Debuff Res Down IX	Lovely Pom Pom	3
+Extend Debuff Res Down X	Lovely Pom Pom	3
+Extend Debuff Res Down XI	Lovely Pom Pom	3
+Extend Debuff Res Down XII	Lovely Pom Pom	3
+Extend Debuff Res Down XIII	Lovely Pom Pom	3
+Extend Debuff Res Down XIV	Lovely Pom Pom	4
+Extend Debuff Res Down XV	Lovely Pom Pom	4
+Extend Debuff Res Down XVI	Lovely Pom Pom	4
+Extend Debuff Res Down XVII	Lovely Pom Pom	4
+Extend Debuff Res Down XVIII	Lovely Pom Pom	4
+Extend Debuff Res Down XIX	Lovely Pom Pom	5
+Extend Blaze I	Poisonous Needle	1
+Extend Blaze II	Poisonous Needle	1
+Extend Blaze III	Poisonous Needle	1
+Extend Blaze IV	Poisonous Needle	2
+Extend Blaze V	Poisonous Needle	2
+Extend Blaze VI	Poisonous Needle	2
+Extend Blaze VII	Poisonous Needle	2
+Extend Blaze VIII	Poisonous Needle	2
+Extend Blaze IX	Poisonous Needle	3
+Extend Blaze X	Poisonous Needle	3
+Extend Blaze XI	Poisonous Needle	3
+Extend Blaze XII	Poisonous Needle	3
+Extend Blaze XIII	Poisonous Needle	3
+Extend Blaze XIV	Poisonous Needle	4
+Extend Blaze XV	Poisonous Needle	4
+Extend Blaze XVI	Poisonous Needle	4
+Extend Blaze XVII	Poisonous Needle	4
+Extend Blaze XVIII	Poisonous Needle	4
+Extend Blaze XIX	Poisonous Needle	5
+Extend Shock I	Vesper Fang	1
+Extend Shock II	Vesper Fang	1
+Extend Shock III	Vesper Fang	1
+Extend Shock IV	Vesper Fang	2
+Extend Shock V	Vesper Fang	2
+Extend Shock VI	Vesper Fang	2
+Extend Shock VII	Vesper Fang	2
+Extend Shock VIII	Vesper Fang	2
+Extend Shock IX	Vesper Fang	3
+Extend Shock X	Vesper Fang	3
+Extend Shock XI	Vesper Fang	3
+Extend Shock XII	Vesper Fang	3
+Extend Shock XIII	Vesper Fang	3
+Extend Shock XIV	Vesper Fang	4
+Extend Shock XV	Vesper Fang	4
+Extend Shock XVI	Vesper Fang	4
+Extend Shock XVII	Vesper Fang	4
+Extend Shock XVIII	Vesper Fang	4
+Extend Shock XIX	Vesper Fang	5
+Extend Physical Res Down I	Juicy Wild Meat	1
+Extend Physical Res Down II	Juicy Wild Meat	1
+Extend Physical Res Down III	Juicy Wild Meat	1
+Extend Physical Res Down IV	Juicy Wild Meat	2
+Extend Physical Res Down V	Juicy Wild Meat	2
+Extend Physical Res Down VI	Juicy Wild Meat	2
+Extend Physical Res Down VII	Juicy Wild Meat	2
+Extend Physical Res Down VIII	Juicy Wild Meat	2
+Extend Physical Res Down IX	Juicy Wild Meat	3
+Extend Physical Res Down X	Juicy Wild Meat	3
+Extend Physical Res Down XI	Juicy Wild Meat	3
+Extend Physical Res Down XII	Juicy Wild Meat	3
+Extend Physical Res Down XIII	Juicy Wild Meat	3
+Extend Physical Res Down XIV	Juicy Wild Meat	4
+Extend Physical Res Down XV	Juicy Wild Meat	4
+Extend Physical Res Down XVI	Juicy Wild Meat	4
+Extend Physical Res Down XVII	Juicy Wild Meat	4
+Extend Physical Res Down XVIII	Juicy Wild Meat	4
+Extend Physical Res Down XIX	Juicy Wild Meat	5
+Extend Beam Res Down I	Adsecula Straw	1
+Extend Beam Res Down II	Adsecula Straw	1
+Extend Beam Res Down III	Adsecula Straw	1
+Extend Beam Res Down IV	Adsecula Straw	2
+Extend Beam Res Down V	Adsecula Straw	2
+Extend Beam Res Down VI	Adsecula Straw	2
+Extend Beam Res Down VII	Adsecula Straw	2
+Extend Beam Res Down VIII	Adsecula Straw	2
+Extend Beam Res Down IX	Adsecula Straw	3
+Extend Beam Res Down X	Adsecula Straw	3
+Extend Beam Res Down XI	Adsecula Straw	3
+Extend Beam Res Down XII	Adsecula Straw	3
+Extend Beam Res Down XIII	Adsecula Straw	3
+Extend Beam Res Down XIV	Adsecula Straw	4
+Extend Beam Res Down XV	Adsecula Straw	4
+Extend Beam Res Down XVI	Adsecula Straw	4
+Extend Beam Res Down XVII	Adsecula Straw	4
+Extend Beam Res Down XVIII	Adsecula Straw	4
+Extend Beam Res Down XIX	Adsecula Straw	5
+Extend Ether Res Down I	Perforated Oar	1
+Extend Ether Res Down II	Perforated Oar	1
+Extend Ether Res Down III	Perforated Oar	1
+Extend Ether Res Down IV	Perforated Oar	2
+Extend Ether Res Down V	Perforated Oar	2
+Extend Ether Res Down VI	Perforated Oar	2
+Extend Ether Res Down VII	Perforated Oar	2
+Extend Ether Res Down VIII	Perforated Oar	2
+Extend Ether Res Down IX	Perforated Oar	3
+Extend Ether Res Down X	Perforated Oar	3
+Extend Ether Res Down XI	Perforated Oar	3
+Extend Ether Res Down XII	Perforated Oar	3
+Extend Ether Res Down XIII	Perforated Oar	3
+Extend Ether Res Down XIV	Perforated Oar	4
+Extend Ether Res Down XV	Perforated Oar	4
+Extend Ether Res Down XVI	Perforated Oar	4
+Extend Ether Res Down XVII	Perforated Oar	4
+Extend Ether Res Down XVIII	Perforated Oar	4
+Extend Ether Res Down XIX	Perforated Oar	5
+Extend Thermal Res Down I	Red Forfex Shell	1
+Extend Thermal Res Down II	Red Forfex Shell	1
+Extend Thermal Res Down III	Red Forfex Shell	1
+Extend Thermal Res Down IV	Red Forfex Shell	2
+Extend Thermal Res Down V	Red Forfex Shell	2
+Extend Thermal Res Down VI	Red Forfex Shell	2
+Extend Thermal Res Down VII	Red Forfex Shell	2
+Extend Thermal Res Down VIII	Red Forfex Shell	2
+Extend Thermal Res Down IX	Red Forfex Shell	3
+Extend Thermal Res Down X	Red Forfex Shell	3
+Extend Thermal Res Down XI	Red Forfex Shell	3
+Extend Thermal Res Down XII	Red Forfex Shell	3
+Extend Thermal Res Down XIII	Red Forfex Shell	3
+Extend Thermal Res Down XIV	Red Forfex Shell	4
+Extend Thermal Res Down XV	Red Forfex Shell	4
+Extend Thermal Res Down XVI	Red Forfex Shell	4
+Extend Thermal Res Down XVII	Red Forfex Shell	4
+Extend Thermal Res Down XVIII	Red Forfex Shell	4
+Extend Thermal Res Down XIX	Red Forfex Shell	5
+Extend Electric Res Down I	Muddy Pelt	1
+Extend Electric Res Down II	Muddy Pelt	1
+Extend Electric Res Down III	Muddy Pelt	1
+Extend Electric Res Down IV	Muddy Pelt	2
+Extend Electric Res Down V	Muddy Pelt	2
+Extend Electric Res Down VI	Muddy Pelt	2
+Extend Electric Res Down VII	Muddy Pelt	2
+Extend Electric Res Down VIII	Muddy Pelt	2
+Extend Electric Res Down IX	Muddy Pelt	3
+Extend Electric Res Down X	Muddy Pelt	3
+Extend Electric Res Down XI	Muddy Pelt	3
+Extend Electric Res Down XII	Muddy Pelt	3
+Extend Electric Res Down XIII	Muddy Pelt	3
+Extend Electric Res Down XIV	Muddy Pelt	4
+Extend Electric Res Down XV	Muddy Pelt	4
+Extend Electric Res Down XVI	Muddy Pelt	4
+Extend Electric Res Down XVII	Muddy Pelt	4
+Extend Electric Res Down XVIII	Muddy Pelt	4
+Extend Electric Res Down XIX	Muddy Pelt	5
+Extend Gravity Res Down I	Black Blatta Wing	1
+Extend Gravity Res Down II	Black Blatta Wing	1
+Extend Gravity Res Down III	Black Blatta Wing	1
+Extend Gravity Res Down IV	Black Blatta Wing	2
+Extend Gravity Res Down V	Black Blatta Wing	2
+Extend Gravity Res Down VI	Black Blatta Wing	2
+Extend Gravity Res Down VII	Black Blatta Wing	2
+Extend Gravity Res Down VIII	Black Blatta Wing	2
+Extend Gravity Res Down IX	Black Blatta Wing	3
+Extend Gravity Res Down X	Black Blatta Wing	3
+Extend Gravity Res Down XI	Black Blatta Wing	3
+Extend Gravity Res Down XII	Black Blatta Wing	3
+Extend Gravity Res Down XIII	Black Blatta Wing	3
+Extend Gravity Res Down XIV	Black Blatta Wing	4
+Extend Gravity Res Down XV	Black Blatta Wing	4
+Extend Gravity Res Down XVI	Black Blatta Wing	4
+Extend Gravity Res Down XVII	Black Blatta Wing	4
+Extend Gravity Res Down XVIII	Black Blatta Wing	4
+Extend Gravity Res Down XIX	Black Blatta Wing	5
+Opening Art: Damage Up I	Red Thallus Antenna	1
+Opening Art: Damage Up I	Monoceros Wing	1
+Opening Art: Damage Up I	Reinforced Thruster	1
+Opening Art: Damage Up II	Red Thallus Antenna	1
+Opening Art: Damage Up II	Monoceros Wing	1
+Opening Art: Damage Up II	Reinforced Thruster	1
+Opening Art: Damage Up III	Red Thallus Antenna	1
+Opening Art: Damage Up III	Monoceros Wing	1
+Opening Art: Damage Up III	Reinforced Thruster	1
+Opening Art: Damage Up IV	Red Thallus Antenna	2
+Opening Art: Damage Up IV	Monoceros Wing	2
+Opening Art: Damage Up IV	Reinforced Thruster	2
+Opening Art: Damage Up V	Red Thallus Antenna	2
+Opening Art: Damage Up V	Monoceros Wing	2
+Opening Art: Damage Up V	Reinforced Thruster	2
+Opening Art: Damage Up VI	Red Thallus Antenna	2
+Opening Art: Damage Up VI	Monoceros Wing	2
+Opening Art: Damage Up VI	Reinforced Thruster	2
+Opening Art: Damage Up VII	Red Thallus Antenna	2
+Opening Art: Damage Up VII	Monoceros Wing	2
+Opening Art: Damage Up VII	Reinforced Thruster	2
+Opening Art: Damage Up VIII	Red Thallus Antenna	2
+Opening Art: Damage Up VIII	Monoceros Wing	2
+Opening Art: Damage Up VIII	Reinforced Thruster	2
+Opening Art: Damage Up IX	Red Thallus Antenna	3
+Opening Art: Damage Up IX	Monoceros Wing	3
+Opening Art: Damage Up IX	Reinforced Thruster	3
+Opening Art: Damage Up X	Red Thallus Antenna	3
+Opening Art: Damage Up X	Parasitic Capsule	3
+Opening Art: Damage Up X	Large Saw Tooth	3
+Opening Art: Damage Up XI	Red Thallus Antenna	3
+Opening Art: Damage Up XI	Parasitic Capsule	3
+Opening Art: Damage Up XI	Large Saw Tooth	3
+Opening Art: Damage Up XII	Red Thallus Antenna	3
+Opening Art: Damage Up XII	Parasitic Capsule	3
+Opening Art: Damage Up XII	Large Saw Tooth	3
+Opening Art: Damage Up XIII	Red Thallus Antenna	3
+Opening Art: Damage Up XIII	Parasitic Capsule	3
+Opening Art: Damage Up XIII	Large Saw Tooth	3
+Opening Art: Damage Up XIV	Red Thallus Antenna	4
+Opening Art: Damage Up XIV	Parasitic Capsule	4
+Opening Art: Damage Up XIV	Large Saw Tooth	4
+Opening Art: Damage Up XV	Red Thallus Antenna	4
+Opening Art: Damage Up XV	Parasitic Capsule	4
+Opening Art: Damage Up XV	Large Saw Tooth	4
+Opening Art: Damage Up XVI	Red Thallus Antenna	4
+Opening Art: Damage Up XVI	Parasitic Capsule	4
+Opening Art: Damage Up XVI	Large Saw Tooth	4
+Opening Art: Damage Up XVII	Red Thallus Antenna	4
+Opening Art: Damage Up XVII	Parasitic Capsule	4
+Opening Art: Damage Up XVII	Large Saw Tooth	4
+Opening Art: Damage Up XVIII	Red Thallus Antenna	4
+Opening Art: Damage Up XVIII	Parasitic Capsule	4
+Opening Art: Damage Up XVIII	Large Saw Tooth	4
+Opening Art: Damage Up XIX	Red Thallus Antenna	5
+Opening Art: Damage Up XIX	Parasitic Capsule	5
+Opening Art: Damage Up XIX	Large Saw Tooth	5
+Melee Draw Surge I	Red Simius Mane	1
+Melee Draw Surge I	Green Simius Mane	1
+Melee Draw Surge II	Red Simius Mane	1
+Melee Draw Surge II	Green Simius Mane	1
+Melee Draw Surge III	Red Simius Mane	1
+Melee Draw Surge III	Green Simius Mane	1
+Melee Draw Surge IV	Red Simius Mane	2
+Melee Draw Surge IV	Green Simius Mane	2
+Melee Draw Surge V	Red Simius Mane	2
+Melee Draw Surge V	Green Simius Mane	2
+Melee Draw Surge VI	Red Simius Mane	2
+Melee Draw Surge VI	Green Simius Mane	2
+Melee Draw Surge VII	Red Simius Mane	2
+Melee Draw Surge VII	Green Simius Mane	2
+Melee Draw Surge VIII	Red Simius Mane	2
+Melee Draw Surge VIII	Green Simius Mane	2
+Melee Draw Surge IX	Red Simius Mane	3
+Melee Draw Surge IX	Green Simius Mane	3
+Melee Draw Surge X	Red Simius Mane	3
+Melee Draw Surge X	Black Stabilizer	3
+Melee Draw Surge XI	Red Simius Mane	3
+Melee Draw Surge XI	Black Stabilizer	3
+Melee Draw Surge XII	Red Simius Mane	3
+Melee Draw Surge XII	Black Stabilizer	3
+Melee Draw Surge XIII	Red Simius Mane	3
+Melee Draw Surge XIII	Black Stabilizer	3
+Melee Draw Surge XIV	Red Simius Mane	4
+Melee Draw Surge XIV	Black Stabilizer	4
+Melee Draw Surge XV	Red Simius Mane	4
+Melee Draw Surge XV	Black Stabilizer	4
+Melee Draw Surge XVI	Red Simius Mane	4
+Melee Draw Surge XVI	Black Stabilizer	4
+Melee Draw Surge XVII	Red Simius Mane	4
+Melee Draw Surge XVII	Black Stabilizer	4
+Melee Draw Surge XVIII	Red Simius Mane	4
+Melee Draw Surge XVIII	Black Stabilizer	4
+Melee Draw Surge XIX	Red Simius Mane	5
+Melee Draw Surge XIX	Black Stabilizer	5
+Ranged Draw Surge I	Tectinsula Shell	1
+Ranged Draw Surge I	Mephite Ear Hair	1
+Ranged Draw Surge II	Tectinsula Shell	1
+Ranged Draw Surge II	Mephite Ear Hair	1
+Ranged Draw Surge III	Tectinsula Shell	1
+Ranged Draw Surge III	Mephite Ear Hair	1
+Ranged Draw Surge IV	Tectinsula Shell	2
+Ranged Draw Surge IV	Mephite Ear Hair	2
+Ranged Draw Surge V	Tectinsula Shell	2
+Ranged Draw Surge V	Mephite Ear Hair	2
+Ranged Draw Surge VI	Tectinsula Shell	2
+Ranged Draw Surge VI	Mephite Ear Hair	2
+Ranged Draw Surge VII	Tectinsula Shell	2
+Ranged Draw Surge VII	Mephite Ear Hair	2
+Ranged Draw Surge VIII	Tectinsula Shell	2
+Ranged Draw Surge VIII	Mephite Ear Hair	2
+Ranged Draw Surge IX	Tectinsula Shell	3
+Ranged Draw Surge IX	Mephite Ear Hair	3
+Ranged Draw Surge X	Tectinsula Shell	3
+Ranged Draw Surge X	Genuine Chamber	3
+Ranged Draw Surge XI	Tectinsula Shell	3
+Ranged Draw Surge XI	Genuine Chamber	3
+Ranged Draw Surge XII	Tectinsula Shell	3
+Ranged Draw Surge XII	Genuine Chamber	3
+Ranged Draw Surge XIII	Tectinsula Shell	3
+Ranged Draw Surge XIII	Genuine Chamber	3
+Ranged Draw Surge XIV	Tectinsula Shell	4
+Ranged Draw Surge XIV	Genuine Chamber	4
+Ranged Draw Surge XV	Tectinsula Shell	4
+Ranged Draw Surge XV	Genuine Chamber	4
+Ranged Draw Surge XVI	Tectinsula Shell	4
+Ranged Draw Surge XVI	Genuine Chamber	4
+Ranged Draw Surge XVII	Tectinsula Shell	4
+Ranged Draw Surge XVII	Genuine Chamber	4
+Ranged Draw Surge XVIII	Tectinsula Shell	4
+Ranged Draw Surge XVIII	Genuine Chamber	4
+Ranged Draw Surge XIX	Tectinsula Shell	5
+Ranged Draw Surge XIX	Genuine Chamber	5
+Art Draw Surge I	Chipped Talon	1
+Art Draw Surge I	Broken Antenna	1
+Art Draw Surge II	Chipped Talon	1
+Art Draw Surge II	Broken Antenna	1
+Art Draw Surge III	Chipped Talon	1
+Art Draw Surge III	Broken Antenna	1
+Art Draw Surge IV	Chipped Talon	2
+Art Draw Surge IV	Broken Antenna	2
+Art Draw Surge V	Chipped Talon	2
+Art Draw Surge V	Broken Antenna	2
+Art Draw Surge VI	Chipped Talon	2
+Art Draw Surge VI	Broken Antenna	2
+Art Draw Surge VII	Chipped Talon	2
+Art Draw Surge VII	Broken Antenna	2
+Art Draw Surge VIII	Chipped Talon	2
+Art Draw Surge VIII	Broken Antenna	2
+Art Draw Surge IX	Chipped Talon	3
+Art Draw Surge IX	Broken Antenna	3
+Art Draw Surge X	Chipped Talon	3
+Art Draw Surge X	Turquoise Metal	3
+Art Draw Surge XI	Chipped Talon	3
+Art Draw Surge XI	Turquoise Metal	3
+Art Draw Surge XII	Chipped Talon	3
+Art Draw Surge XII	Turquoise Metal	3
+Art Draw Surge XIII	Chipped Talon	3
+Art Draw Surge XIII	Turquoise Metal	3
+Art Draw Surge XIV	Chipped Talon	4
+Art Draw Surge XIV	Turquoise Metal	4
+Art Draw Surge XV	Chipped Talon	4
+Art Draw Surge XV	Turquoise Metal	4
+Art Draw Surge XVI	Chipped Talon	4
+Art Draw Surge XVI	Turquoise Metal	4
+Art Draw Surge XVII	Chipped Talon	4
+Art Draw Surge XVII	Turquoise Metal	4
+Art Draw Surge XVIII	Chipped Talon	4
+Art Draw Surge XVIII	Turquoise Metal	4
+Art Draw Surge XIX	Chipped Talon	5
+Art Draw Surge XIX	Turquoise Metal	5
+Danger Surge I	Opaque Membrane	1
+Danger Surge I	Filthy Wing	1
+Danger Surge II	Opaque Membrane	1
+Danger Surge II	Filthy Wing	1
+Danger Surge III	Opaque Membrane	1
+Danger Surge III	Filthy Wing	1
+Danger Surge IV	Opaque Membrane	2
+Danger Surge IV	Filthy Wing	2
+Danger Surge V	Opaque Membrane	2
+Danger Surge V	Filthy Wing	2
+Danger Surge VI	Opaque Membrane	2
+Danger Surge VI	Filthy Wing	2
+Danger Surge VII	Opaque Membrane	2
+Danger Surge VII	Filthy Wing	2
+Danger Surge VIII	Opaque Membrane	2
+Danger Surge VIII	Filthy Wing	2
+Danger Surge IX	Opaque Membrane	3
+Danger Surge IX	Filthy Wing	3
+Danger Surge X	Opaque Membrane	3
+Danger Surge X	Ceto Roe	3
+Danger Surge XI	Opaque Membrane	3
+Danger Surge XI	Ceto Roe	3
+Danger Surge XII	Opaque Membrane	3
+Danger Surge XII	Ceto Roe	3
+Danger Surge XIII	Opaque Membrane	3
+Danger Surge XIII	Ceto Roe	3
+Danger Surge XIV	Opaque Membrane	4
+Danger Surge XIV	Ceto Roe	4
+Danger Surge XV	Opaque Membrane	4
+Danger Surge XV	Ceto Roe	4
+Danger Surge XVI	Opaque Membrane	4
+Danger Surge XVI	Ceto Roe	4
+Danger Surge XVII	Opaque Membrane	4
+Danger Surge XVII	Ceto Roe	4
+Danger Surge XVIII	Opaque Membrane	4
+Danger Surge XVIII	Ceto Roe	4
+Danger Surge XIX	Opaque Membrane	5
+Danger Surge XIX	Ceto Roe	5
+High Danger Surge I	Saltat Horn	1
+High Danger Surge I	Mephite Stinkbag	1
+High Danger Surge II	Saltat Horn	1
+High Danger Surge II	Mephite Stinkbag	1
+High Danger Surge III	Saltat Horn	1
+High Danger Surge III	Mephite Stinkbag	1
+High Danger Surge IV	Saltat Horn	2
+High Danger Surge IV	Mephite Stinkbag	2
+High Danger Surge V	Saltat Horn	2
+High Danger Surge V	Mephite Stinkbag	2
+High Danger Surge VI	Saltat Horn	2
+High Danger Surge VI	Mephite Stinkbag	2
+High Danger Surge VII	Saltat Horn	2
+High Danger Surge VII	Mephite Stinkbag	2
+High Danger Surge VIII	Saltat Horn	2
+High Danger Surge VIII	Mephite Stinkbag	2
+High Danger Surge IX	Saltat Horn	3
+High Danger Surge IX	Mephite Stinkbag	3
+High Danger Surge X	Saltat Horn	3
+High Danger Surge X	Sparkling Purple Gem	3
+High Danger Surge XI	Saltat Horn	3
+High Danger Surge XI	Sparkling Purple Gem	3
+High Danger Surge XII	Saltat Horn	3
+High Danger Surge XII	Sparkling Purple Gem	3
+High Danger Surge XIII	Saltat Horn	3
+High Danger Surge XIII	Sparkling Purple Gem	3
+High Danger Surge XIV	Saltat Horn	4
+High Danger Surge XIV	Sparkling Purple Gem	4
+High Danger Surge XV	Saltat Horn	4
+High Danger Surge XV	Sparkling Purple Gem	4
+High Danger Surge XVI	Saltat Horn	4
+High Danger Surge XVI	Sparkling Purple Gem	4
+High Danger Surge XVII	Saltat Horn	4
+High Danger Surge XVII	Sparkling Purple Gem	4
+High Danger Surge XVIII	Saltat Horn	4
+High Danger Surge XVIII	Sparkling Purple Gem	4
+High Danger Surge XIX	Saltat Horn	5
+High Danger Surge XIX	Sparkling Purple Gem	5
+Incapacitation Surge I	Steel Unafulge Cell	1
+Incapacitation Surge I	Aprica Back Moss	1
+Incapacitation Surge II	Steel Unafulge Cell	1
+Incapacitation Surge II	Aprica Back Moss	1
+Incapacitation Surge III	Steel Unafulge Cell	1
+Incapacitation Surge III	Aprica Back Moss	1
+Incapacitation Surge IV	Steel Unafulge Cell	2
+Incapacitation Surge IV	Aprica Back Moss	2
+Incapacitation Surge V	Steel Unafulge Cell	2
+Incapacitation Surge V	Aprica Back Moss	2
+Incapacitation Surge VI	Steel Unafulge Cell	2
+Incapacitation Surge VI	Aprica Back Moss	2
+Incapacitation Surge VII	Steel Unafulge Cell	2
+Incapacitation Surge VII	Aprica Back Moss	2
+Incapacitation Surge VIII	Steel Unafulge Cell	2
+Incapacitation Surge VIII	Aprica Back Moss	2
+Incapacitation Surge IX	Steel Unafulge Cell	3
+Incapacitation Surge IX	Aprica Back Moss	3
+Incapacitation Surge X	Steel Unafulge Cell	3
+Incapacitation Surge X	Sparkling Red Gem	3
+Incapacitation Surge XI	Steel Unafulge Cell	3
+Incapacitation Surge XI	Sparkling Red Gem	3
+Incapacitation Surge XII	Steel Unafulge Cell	3
+Incapacitation Surge XII	Sparkling Red Gem	3
+Incapacitation Surge XIII	Steel Unafulge Cell	3
+Incapacitation Surge XIII	Sparkling Red Gem	3
+Incapacitation Surge XIV	Steel Unafulge Cell	4
+Incapacitation Surge XIV	Sparkling Red Gem	4
+Incapacitation Surge XV	Steel Unafulge Cell	4
+Incapacitation Surge XV	Sparkling Red Gem	4
+Incapacitation Surge XVI	Steel Unafulge Cell	4
+Incapacitation Surge XVI	Sparkling Red Gem	4
+Incapacitation Surge XVII	Steel Unafulge Cell	4
+Incapacitation Surge XVII	Sparkling Red Gem	4
+Incapacitation Surge XVIII	Steel Unafulge Cell	4
+Incapacitation Surge XVIII	Sparkling Red Gem	4
+Incapacitation Surge XIX	Steel Unafulge Cell	5
+Incapacitation Surge XIX	Sparkling Red Gem	5
+Critical Surge I	Unafulge Numbing Toxin	1
+Critical Surge I	Tectinsula Back Moss	1
+Critical Surge II	Unafulge Numbing Toxin	1
+Critical Surge II	Tectinsula Back Moss	1
+Critical Surge III	Unafulge Numbing Toxin	1
+Critical Surge III	Tectinsula Back Moss	1
+Critical Surge IV	Unafulge Numbing Toxin	2
+Critical Surge IV	Tectinsula Back Moss	2
+Critical Surge V	Unafulge Numbing Toxin	2
+Critical Surge V	Tectinsula Back Moss	2
+Critical Surge VI	Unafulge Numbing Toxin	2
+Critical Surge VI	Tectinsula Back Moss	2
+Critical Surge VII	Unafulge Numbing Toxin	2
+Critical Surge VII	Tectinsula Back Moss	2
+Critical Surge VIII	Unafulge Numbing Toxin	2
+Critical Surge VIII	Tectinsula Back Moss	2
+Critical Surge IX	Unafulge Numbing Toxin	3
+Critical Surge IX	Tectinsula Back Moss	3
+Critical Surge X	Unafulge Numbing Toxin	3
+Critical Surge X	White Yggralith Scale	3
+Critical Surge XI	Unafulge Numbing Toxin	3
+Critical Surge XI	White Yggralith Scale	3
+Critical Surge XII	Unafulge Numbing Toxin	3
+Critical Surge XII	White Yggralith Scale	3
+Critical Surge XIII	Unafulge Numbing Toxin	3
+Critical Surge XIII	White Yggralith Scale	3
+Critical Surge XIV	Unafulge Numbing Toxin	4
+Critical Surge XIV	White Yggralith Scale	4
+Critical Surge XV	Unafulge Numbing Toxin	4
+Critical Surge XV	White Yggralith Scale	4
+Critical Surge XVI	Unafulge Numbing Toxin	4
+Critical Surge XVI	White Yggralith Scale	4
+Critical Surge XVII	Unafulge Numbing Toxin	4
+Critical Surge XVII	White Yggralith Scale	4
+Critical Surge XVIII	Unafulge Numbing Toxin	4
+Critical Surge XVIII	White Yggralith Scale	4
+Critical Surge XIX	Unafulge Numbing Toxin	5
+Critical Surge XIX	White Yggralith Scale	5
+Crush Surge I	Robust Evello Horn	1
+Crush Surge I	Insidia Mohawk	1
+Crush Surge II	Robust Evello Horn	1
+Crush Surge II	Insidia Mohawk	1
+Crush Surge III	Robust Evello Horn	1
+Crush Surge III	Insidia Mohawk	1
+Crush Surge IV	Robust Evello Horn	2
+Crush Surge IV	Insidia Mohawk	2
+Crush Surge V	Robust Evello Horn	2
+Crush Surge V	Insidia Mohawk	2
+Crush Surge VI	Robust Evello Horn	2
+Crush Surge VI	Insidia Mohawk	2
+Crush Surge VII	Robust Evello Horn	2
+Crush Surge VII	Insidia Mohawk	2
+Crush Surge VIII	Robust Evello Horn	2
+Crush Surge VIII	Insidia Mohawk	2
+Crush Surge IX	Robust Evello Horn	3
+Crush Surge IX	Insidia Mohawk	3
+Crush Surge X	Robust Evello Horn	3
+Crush Surge X	Developed Balaena Fat	3
+Crush Surge XI	Robust Evello Horn	3
+Crush Surge XI	Developed Balaena Fat	3
+Crush Surge XII	Robust Evello Horn	3
+Crush Surge XII	Developed Balaena Fat	3
+Crush Surge XIII	Robust Evello Horn	3
+Crush Surge XIII	Developed Balaena Fat	3
+Crush Surge XIV	Robust Evello Horn	4
+Crush Surge XIV	Developed Balaena Fat	4
+Crush Surge XV	Robust Evello Horn	4
+Crush Surge XV	Developed Balaena Fat	4
+Crush Surge XVI	Robust Evello Horn	4
+Crush Surge XVI	Developed Balaena Fat	4
+Crush Surge XVII	Robust Evello Horn	4
+Crush Surge XVII	Developed Balaena Fat	4
+Crush Surge XVIII	Robust Evello Horn	4
+Crush Surge XVIII	Developed Balaena Fat	4
+Crush Surge XIX	Robust Evello Horn	5
+Crush Surge XIX	Developed Balaena Fat	5
+Underdog Surge I	Sticky Scirpo Silk	1
+Underdog Surge I	Stripped Plating	1
+Underdog Surge II	Sticky Scirpo Silk	1
+Underdog Surge II	Stripped Plating	1
+Underdog Surge III	Sticky Scirpo Silk	1
+Underdog Surge III	Stripped Plating	1
+Underdog Surge IV	Sticky Scirpo Silk	2
+Underdog Surge IV	Stripped Plating	2
+Underdog Surge V	Sticky Scirpo Silk	2
+Underdog Surge V	Stripped Plating	2
+Underdog Surge VI	Sticky Scirpo Silk	2
+Underdog Surge VI	Stripped Plating	2
+Underdog Surge VII	Sticky Scirpo Silk	2
+Underdog Surge VII	Stripped Plating	2
+Underdog Surge VIII	Sticky Scirpo Silk	2
+Underdog Surge VIII	Stripped Plating	2
+Underdog Surge IX	Sticky Scirpo Silk	3
+Underdog Surge IX	Stripped Plating	3
+Underdog Surge X	Sticky Scirpo Silk	3
+Underdog Surge X	Black Yggralith Scale	3
+Underdog Surge XI	Sticky Scirpo Silk	3
+Underdog Surge XI	Black Yggralith Scale	3
+Underdog Surge XII	Sticky Scirpo Silk	3
+Underdog Surge XII	Black Yggralith Scale	3
+Underdog Surge XIII	Sticky Scirpo Silk	3
+Underdog Surge XIII	Black Yggralith Scale	3
+Underdog Surge XIV	Sticky Scirpo Silk	4
+Underdog Surge XIV	Black Yggralith Scale	4
+Underdog Surge XV	Sticky Scirpo Silk	4
+Underdog Surge XV	Black Yggralith Scale	4
+Underdog Surge XVI	Sticky Scirpo Silk	4
+Underdog Surge XVI	Black Yggralith Scale	4
+Underdog Surge XVII	Sticky Scirpo Silk	4
+Underdog Surge XVII	Black Yggralith Scale	4
+Underdog Surge XVIII	Sticky Scirpo Silk	4
+Underdog Surge XVIII	Black Yggralith Scale	4
+Underdog Surge XIX	Sticky Scirpo Silk	5
+Underdog Surge XIX	Black Yggralith Scale	5
+Artful Execution Surge I	Bone-In Thigh Meat	1
+Artful Execution Surge I	Evergreen Aprica Antlers	1
+Artful Execution Surge II	Bone-In Thigh Meat	1
+Artful Execution Surge II	Evergreen Aprica Antlers	1
+Artful Execution Surge III	Bone-In Thigh Meat	1
+Artful Execution Surge III	Evergreen Aprica Antlers	1
+Artful Execution Surge IV	Bone-In Thigh Meat	2
+Artful Execution Surge IV	Evergreen Aprica Antlers	2
+Artful Execution Surge V	Bone-In Thigh Meat	2
+Artful Execution Surge V	Evergreen Aprica Antlers	2
+Artful Execution Surge VI	Bone-In Thigh Meat	2
+Artful Execution Surge VI	Evergreen Aprica Antlers	2
+Artful Execution Surge VII	Bone-In Thigh Meat	2
+Artful Execution Surge VII	Evergreen Aprica Antlers	2
+Artful Execution Surge VIII	Bone-In Thigh Meat	2
+Artful Execution Surge VIII	Evergreen Aprica Antlers	2
+Artful Execution Surge IX	Bone-In Thigh Meat	3
+Artful Execution Surge IX	Evergreen Aprica Antlers	3
+Artful Execution Surge X	Bone-In Thigh Meat	3
+Artful Execution Surge X	Sparkling Blue Gem	3
+Artful Execution Surge XI	Bone-In Thigh Meat	3
+Artful Execution Surge XI	Sparkling Blue Gem	3
+Artful Execution Surge XII	Bone-In Thigh Meat	3
+Artful Execution Surge XII	Sparkling Blue Gem	3
+Artful Execution Surge XIII	Bone-In Thigh Meat	3
+Artful Execution Surge XIII	Sparkling Blue Gem	3
+Artful Execution Surge XIV	Bone-In Thigh Meat	4
+Artful Execution Surge XIV	Sparkling Blue Gem	4
+Artful Execution Surge XV	Bone-In Thigh Meat	4
+Artful Execution Surge XV	Sparkling Blue Gem	4
+Artful Execution Surge XVI	Bone-In Thigh Meat	4
+Artful Execution Surge XVI	Sparkling Blue Gem	4
+Artful Execution Surge XVII	Bone-In Thigh Meat	4
+Artful Execution Surge XVII	Sparkling Blue Gem	4
+Artful Execution Surge XVIII	Bone-In Thigh Meat	4
+Artful Execution Surge XVIII	Sparkling Blue Gem	4
+Artful Execution Surge XIX	Bone-In Thigh Meat	5
+Artful Execution Surge XIX	Sparkling Blue Gem	5
+Aura Surge I	Mortifole Pollen	1
+Aura Surge I	Simius Snack Stash	1
+Aura Surge II	Mortifole Pollen	1
+Aura Surge II	Simius Snack Stash	1
+Aura Surge III	Mortifole Pollen	1
+Aura Surge III	Simius Snack Stash	1
+Aura Surge IV	Mortifole Pollen	2
+Aura Surge IV	Simius Snack Stash	2
+Aura Surge V	Mortifole Pollen	2
+Aura Surge V	Simius Snack Stash	2
+Aura Surge VI	Mortifole Pollen	2
+Aura Surge VI	Simius Snack Stash	2
+Aura Surge VII	Mortifole Pollen	2
+Aura Surge VII	Simius Snack Stash	2
+Aura Surge VIII	Mortifole Pollen	2
+Aura Surge VIII	Simius Snack Stash	2
+Aura Surge IX	Mortifole Pollen	3
+Aura Surge IX	Simius Snack Stash	3
+Aura Surge X	Mortifole Pollen	3
+Aura Surge X	Amethyst Metal	3
+Aura Surge XI	Mortifole Pollen	3
+Aura Surge XI	Amethyst Metal	3
+Aura Surge XII	Mortifole Pollen	3
+Aura Surge XII	Amethyst Metal	3
+Aura Surge XIII	Mortifole Pollen	3
+Aura Surge XIII	Amethyst Metal	3
+Aura Surge XIV	Mortifole Pollen	4
+Aura Surge XIV	Amethyst Metal	4
+Aura Surge XV	Mortifole Pollen	4
+Aura Surge XV	Amethyst Metal	4
+Aura Surge XVI	Mortifole Pollen	4
+Aura Surge XVI	Amethyst Metal	4
+Aura Surge XVII	Mortifole Pollen	4
+Aura Surge XVII	Amethyst Metal	4
+Aura Surge XVIII	Mortifole Pollen	4
+Aura Surge XVIII	Amethyst Metal	4
+Aura Surge XIX	Mortifole Pollen	5
+Aura Surge XIX	Amethyst Metal	5
+Overdrive Surge I	Luminescent Antenna	1
+Overdrive Surge I	Fine Aprica Wood	1
+Overdrive Surge II	Luminescent Antenna	1
+Overdrive Surge II	Fine Aprica Wood	1
+Overdrive Surge III	Luminescent Antenna	1
+Overdrive Surge III	Fine Aprica Wood	1
+Overdrive Surge IV	Luminescent Antenna	2
+Overdrive Surge IV	Fine Aprica Wood	2
+Overdrive Surge V	Luminescent Antenna	2
+Overdrive Surge V	Fine Aprica Wood	2
+Overdrive Surge VI	Luminescent Antenna	2
+Overdrive Surge VI	Fine Aprica Wood	2
+Overdrive Surge VII	Luminescent Antenna	2
+Overdrive Surge VII	Fine Aprica Wood	2
+Overdrive Surge VIII	Luminescent Antenna	2
+Overdrive Surge VIII	Fine Aprica Wood	2
+Overdrive Surge IX	Luminescent Antenna	3
+Overdrive Surge IX	Fine Aprica Wood	3
+Overdrive Surge X	Luminescent Antenna	3
+Overdrive Surge X	Orichalcum Metal	3
+Overdrive Surge XI	Luminescent Antenna	3
+Overdrive Surge XI	Orichalcum Metal	3
+Overdrive Surge XII	Luminescent Antenna	3
+Overdrive Surge XII	Orichalcum Metal	3
+Overdrive Surge XIII	Luminescent Antenna	3
+Overdrive Surge XIII	Orichalcum Metal	3
+Overdrive Surge XIV	Luminescent Antenna	4
+Overdrive Surge XIV	Orichalcum Metal	4
+Overdrive Surge XV	Luminescent Antenna	4
+Overdrive Surge XV	Orichalcum Metal	4
+Overdrive Surge XVI	Luminescent Antenna	4
+Overdrive Surge XVI	Orichalcum Metal	4
+Overdrive Surge XVII	Luminescent Antenna	4
+Overdrive Surge XVII	Orichalcum Metal	4
+Overdrive Surge XVIII	Luminescent Antenna	4
+Overdrive Surge XVIII	Orichalcum Metal	4
+Overdrive Surge XIX	Luminescent Antenna	5
+Overdrive Surge XIX	Orichalcum Metal	5
+Reinvigorate I	Reinforced Thruster	1
+Reinvigorate II	Reinforced Thruster	1
+Reinvigorate III	Reinforced Thruster	1
+Reinvigorate IV	Reinforced Thruster	2
+Reinvigorate V	Reinforced Thruster	2
+Reinvigorate VI	Reinforced Thruster	2
+Reinvigorate VII	Reinforced Thruster	2
+Reinvigorate VIII	Reinforced Thruster	2
+Reinvigorate IX	Reinforced Thruster	3
+Reinvigorate X	Reinforced Thruster	3
+Reinvigorate XI	Reinforced Thruster	3
+Reinvigorate XII	Reinforced Thruster	3
+Reinvigorate XIII	Reinforced Thruster	3
+Reinvigorate XIV	Reinforced Thruster	4
+Reinvigorate XV	Reinforced Thruster	4
+Reinvigorate XVI	Reinforced Thruster	4
+Reinvigorate XVII	Reinforced Thruster	4
+Reinvigorate XVIII	Reinforced Thruster	4
+Reinvigorate XIX	Reinforced Thruster	5
+EXP Boost I	Golden Jewel	1
+EXP Boost I	Shiny Mortifole Seed	1
+EXP Boost II	Golden Jewel	1
+EXP Boost II	Shiny Mortifole Seed	1
+EXP Boost III	Golden Jewel	1
+EXP Boost III	Shiny Mortifole Seed	1
+EXP Boost IV	Golden Jewel	2
+EXP Boost IV	Shiny Mortifole Seed	2
+EXP Boost V	Golden Jewel	2
+EXP Boost V	Shiny Mortifole Seed	2
+EXP Boost VI	Golden Jewel	2
+EXP Boost VI	Shiny Mortifole Seed	2
+EXP Boost VII	Golden Jewel	2
+EXP Boost VII	Shiny Mortifole Seed	2
+EXP Boost VIII	Golden Jewel	2
+EXP Boost VIII	Shiny Mortifole Seed	2
+EXP Boost IX	Golden Jewel	3
+EXP Boost IX	Shiny Mortifole Seed	3
+EXP Boost X	Golden Jewel	3
+EXP Boost X	Giant Jade Pearl	3
+EXP Boost XI	Golden Jewel	3
+EXP Boost XI	Giant Jade Pearl	3
+EXP Boost XII	Golden Jewel	3
+EXP Boost XII	Giant Jade Pearl	3
+EXP Boost XIII	Golden Jewel	3
+EXP Boost XIII	Giant Jade Pearl	3
+EXP Boost XIV	Golden Jewel	4
+EXP Boost XIV	Giant Jade Pearl	4
+EXP Boost XV	Golden Jewel	4
+EXP Boost XV	Giant Jade Pearl	4
+EXP Boost XVI	Golden Jewel	4
+EXP Boost XVI	Giant Jade Pearl	4
+EXP Boost XVII	Golden Jewel	4
+EXP Boost XVII	Giant Jade Pearl	4
+EXP Boost XVIII	Golden Jewel	4
+EXP Boost XVIII	Giant Jade Pearl	4
+EXP Boost XIX	Golden Jewel	5
+EXP Boost XIX	Giant Jade Pearl	5
+Visual Cloaking I	White Mirrorglass	1
+Visual Cloaking I	Glossy Saltat Fan	1
+Visual Cloaking II	White Mirrorglass	1
+Visual Cloaking II	Glossy Saltat Fan	1
+Visual Cloaking III	White Mirrorglass	1
+Visual Cloaking III	Glossy Saltat Fan	1
+Visual Cloaking IV	White Mirrorglass	2
+Visual Cloaking IV	Glossy Saltat Fan	2
+Visual Cloaking V	White Mirrorglass	2
+Visual Cloaking V	Glossy Saltat Fan	2
+Visual Cloaking VI	White Mirrorglass	2
+Visual Cloaking VI	Glossy Saltat Fan	2
+Visual Cloaking VII	White Mirrorglass	2
+Visual Cloaking VII	Glossy Saltat Fan	2
+Visual Cloaking VIII	White Mirrorglass	2
+Visual Cloaking VIII	Glossy Saltat Fan	2
+Visual Cloaking IX	White Mirrorglass	3
+Visual Cloaking IX	Glossy Saltat Fan	3
+Visual Cloaking X	White Mirrorglass	3
+Visual Cloaking X	Luminescent Tail	3
+Visual Cloaking XI	White Mirrorglass	3
+Visual Cloaking XI	Luminescent Tail	3
+Visual Cloaking XII	White Mirrorglass	3
+Visual Cloaking XII	Luminescent Tail	3
+Visual Cloaking XIII	White Mirrorglass	3
+Visual Cloaking XIII	Luminescent Tail	3
+Visual Cloaking XIV	White Mirrorglass	4
+Visual Cloaking XIV	Luminescent Tail	4
+Visual Cloaking XV	White Mirrorglass	4
+Visual Cloaking XV	Luminescent Tail	4
+Visual Cloaking XVI	White Mirrorglass	4
+Visual Cloaking XVI	Luminescent Tail	4
+Visual Cloaking XVII	White Mirrorglass	4
+Visual Cloaking XVII	Luminescent Tail	4
+Visual Cloaking XVIII	White Mirrorglass	4
+Visual Cloaking XVIII	Luminescent Tail	4
+Visual Cloaking XIX	White Mirrorglass	5
+Visual Cloaking XIX	Luminescent Tail	5
+Aural Cloaking I	Lightweight Pelt	1
+Aural Cloaking I	Evolved Insidia Claw	1
+Aural Cloaking II	Lightweight Pelt	1
+Aural Cloaking II	Evolved Insidia Claw	1
+Aural Cloaking III	Lightweight Pelt	1
+Aural Cloaking III	Evolved Insidia Claw	1
+Aural Cloaking IV	Lightweight Pelt	2
+Aural Cloaking IV	Evolved Insidia Claw	2
+Aural Cloaking V	Lightweight Pelt	2
+Aural Cloaking V	Evolved Insidia Claw	2
+Aural Cloaking VI	Lightweight Pelt	2
+Aural Cloaking VI	Evolved Insidia Claw	2
+Aural Cloaking VII	Lightweight Pelt	2
+Aural Cloaking VII	Evolved Insidia Claw	2
+Aural Cloaking VIII	Lightweight Pelt	2
+Aural Cloaking VIII	Evolved Insidia Claw	2
+Aural Cloaking IX	Lightweight Pelt	3
+Aural Cloaking IX	Evolved Insidia Claw	3
+Aural Cloaking X	Lightweight Pelt	3
+Aural Cloaking X	Gray Shell	3
+Aural Cloaking XI	Lightweight Pelt	3
+Aural Cloaking XI	Gray Shell	3
+Aural Cloaking XII	Lightweight Pelt	3
+Aural Cloaking XII	Gray Shell	3
+Aural Cloaking XIII	Lightweight Pelt	3
+Aural Cloaking XIII	Gray Shell	3
+Aural Cloaking XIV	Lightweight Pelt	4
+Aural Cloaking XIV	Gray Shell	4
+Aural Cloaking XV	Lightweight Pelt	4
+Aural Cloaking XV	Gray Shell	4
+Aural Cloaking XVI	Lightweight Pelt	4
+Aural Cloaking XVI	Gray Shell	4
+Aural Cloaking XVII	Lightweight Pelt	4
+Aural Cloaking XVII	Gray Shell	4
+Aural Cloaking XVIII	Lightweight Pelt	4
+Aural Cloaking XVIII	Gray Shell	4
+Aural Cloaking XIX	Lightweight Pelt	5
+Aural Cloaking XIX	Gray Shell	5
+Crush: Gain TP I	Pristine Insect Jaw	1
+Crush: Gain TP I	Oc-serv Western Crest	1
+Crush: Gain TP I	Vesper Fry	1
+Crush: Gain TP II	Pristine Insect Jaw	1
+Crush: Gain TP II	Oc-serv Western Crest	1
+Crush: Gain TP II	Vesper Fry	1
+Crush: Gain TP III	Pristine Insect Jaw	1
+Crush: Gain TP III	Oc-serv Western Crest	1
+Crush: Gain TP III	Vesper Fry	1
+Crush: Gain TP IV	Pristine Insect Jaw	2
+Crush: Gain TP IV	Oc-serv Western Crest	2
+Crush: Gain TP IV	Vesper Fry	2
+Crush: Gain TP V	Pristine Insect Jaw	2
+Crush: Gain TP V	Oc-serv Western Crest	2
+Crush: Gain TP V	Vesper Fry	2
+Crush: Gain TP VI	Pristine Insect Jaw	2
+Crush: Gain TP VI	Oc-serv Western Crest	2
+Crush: Gain TP VI	Vesper Fry	2
+Crush: Gain TP VII	Pristine Insect Jaw	2
+Crush: Gain TP VII	Oc-serv Western Crest	2
+Crush: Gain TP VII	Vesper Fry	2
+Crush: Gain TP VIII	Pristine Insect Jaw	2
+Crush: Gain TP VIII	Oc-serv Western Crest	2
+Crush: Gain TP VIII	Vesper Fry	2
+Crush: Gain TP IX	Pristine Insect Jaw	3
+Crush: Gain TP IX	Oc-serv Western Crest	3
+Crush: Gain TP IX	Vesper Fry	3
+Crush: Gain TP X	Pristine Insect Jaw	3
+Crush: Gain TP X	Golden Petramand Silk	3
+Crush: Gain TP X	Red Scintimure Tentacle	3
+Crush: Gain TP XI	Pristine Insect Jaw	3
+Crush: Gain TP XI	Golden Petramand Silk	3
+Crush: Gain TP XI	Red Scintimure Tentacle	3
+Crush: Gain TP XII	Pristine Insect Jaw	3
+Crush: Gain TP XII	Golden Petramand Silk	3
+Crush: Gain TP XII	Red Scintimure Tentacle	3
+Crush: Gain TP XIII	Pristine Insect Jaw	3
+Crush: Gain TP XIII	Golden Petramand Silk	3
+Crush: Gain TP XIII	Red Scintimure Tentacle	3
+Crush: Gain TP XIV	Pristine Insect Jaw	4
+Crush: Gain TP XIV	Golden Petramand Silk	4
+Crush: Gain TP XIV	Red Scintimure Tentacle	4
+Crush: Gain TP XV	Pristine Insect Jaw	4
+Crush: Gain TP XV	Golden Petramand Silk	4
+Crush: Gain TP XV	Red Scintimure Tentacle	4
+Crush: Gain TP XVI	Pristine Insect Jaw	4
+Crush: Gain TP XVI	Golden Petramand Silk	4
+Crush: Gain TP XVI	Red Scintimure Tentacle	4
+Crush: Gain TP XVII	Pristine Insect Jaw	4
+Crush: Gain TP XVII	Golden Petramand Silk	4
+Crush: Gain TP XVII	Red Scintimure Tentacle	4
+Crush: Gain TP XVIII	Pristine Insect Jaw	4
+Crush: Gain TP XVIII	Golden Petramand Silk	4
+Crush: Gain TP XVIII	Red Scintimure Tentacle	4
+Crush: Gain TP XIX	Pristine Insect Jaw	5
+Crush: Gain TP XIX	Golden Petramand Silk	5
+Crush: Gain TP XIX	Red Scintimure Tentacle	5
+Ranged Appendage Damage I	Sapphire Horn	1
+Ranged Appendage Damage I	Monoceros Hoof Hook	1
+Ranged Appendage Damage I	Cracked Claw	1
+Ranged Appendage Damage II	Sapphire Horn	1
+Ranged Appendage Damage II	Monoceros Hoof Hook	1
+Ranged Appendage Damage II	Cracked Claw	1
+Ranged Appendage Damage III	Sapphire Horn	1
+Ranged Appendage Damage III	Monoceros Hoof Hook	1
+Ranged Appendage Damage III	Cracked Claw	1
+Ranged Appendage Damage IV	Sapphire Horn	2
+Ranged Appendage Damage IV	Monoceros Hoof Hook	2
+Ranged Appendage Damage IV	Cracked Claw	2
+Ranged Appendage Damage V	Sapphire Horn	2
+Ranged Appendage Damage V	Monoceros Hoof Hook	2
+Ranged Appendage Damage V	Cracked Claw	2
+Ranged Appendage Damage VI	Sapphire Horn	2
+Ranged Appendage Damage VI	Monoceros Hoof Hook	2
+Ranged Appendage Damage VI	Cracked Claw	2
+Ranged Appendage Damage VII	Sapphire Horn	2
+Ranged Appendage Damage VII	Monoceros Hoof Hook	2
+Ranged Appendage Damage VII	Cracked Claw	2
+Ranged Appendage Damage VIII	Sapphire Horn	2
+Ranged Appendage Damage VIII	Monoceros Hoof Hook	2
+Ranged Appendage Damage VIII	Cracked Claw	2
+Ranged Appendage Damage IX	Sapphire Horn	3
+Ranged Appendage Damage IX	Monoceros Hoof Hook	3
+Ranged Appendage Damage IX	Cracked Claw	3
+Ranged Appendage Damage X	Sapphire Horn	3
+Ranged Appendage Damage X	Malevolent Petramand Silk	3
+Ranged Appendage Damage X	Brown Monoceros Horn	3
+Ranged Appendage Damage XI	Sapphire Horn	3
+Ranged Appendage Damage XI	Malevolent Petramand Silk	3
+Ranged Appendage Damage XI	Brown Monoceros Horn	3
+Ranged Appendage Damage XII	Sapphire Horn	3
+Ranged Appendage Damage XII	Malevolent Petramand Silk	3
+Ranged Appendage Damage XII	Brown Monoceros Horn	3
+Ranged Appendage Damage XIII	Sapphire Horn	3
+Ranged Appendage Damage XIII	Malevolent Petramand Silk	3
+Ranged Appendage Damage XIII	Brown Monoceros Horn	3
+Ranged Appendage Damage XIV	Sapphire Horn	4
+Ranged Appendage Damage XIV	Malevolent Petramand Silk	4
+Ranged Appendage Damage XIV	Brown Monoceros Horn	4
+Ranged Appendage Damage XV	Sapphire Horn	4
+Ranged Appendage Damage XV	Malevolent Petramand Silk	4
+Ranged Appendage Damage XV	Brown Monoceros Horn	4
+Ranged Appendage Damage XVI	Sapphire Horn	4
+Ranged Appendage Damage XVI	Malevolent Petramand Silk	4
+Ranged Appendage Damage XVI	Brown Monoceros Horn	4
+Ranged Appendage Damage XVII	Sapphire Horn	4
+Ranged Appendage Damage XVII	Malevolent Petramand Silk	4
+Ranged Appendage Damage XVII	Brown Monoceros Horn	4
+Ranged Appendage Damage XVIII	Sapphire Horn	4
+Ranged Appendage Damage XVIII	Malevolent Petramand Silk	4
+Ranged Appendage Damage XVIII	Brown Monoceros Horn	4
+Ranged Appendage Damage XIX	Sapphire Horn	5
+Ranged Appendage Damage XIX	Malevolent Petramand Silk	5
+Ranged Appendage Damage XIX	Brown Monoceros Horn	5
+Terrain Damage Reducer I	Fluffy Tuft	1
+Terrain Damage Reducer II	Fluffy Tuft	1
+Terrain Damage Reducer III	Fluffy Tuft	1
+Terrain Damage Reducer IV	Fluffy Tuft	2
+Terrain Damage Reducer V	Fluffy Tuft	2
+Terrain Damage Reducer VI	Fluffy Tuft	2
+Terrain Damage Reducer VII	Fluffy Tuft	2
+Terrain Damage Reducer VIII	Fluffy Tuft	2
+Terrain Damage Reducer IX	Fluffy Tuft	3
+Terrain Damage Reducer X	Fluffy Tuft	3
+Terrain Damage Reducer XI	Fluffy Tuft	3
+Terrain Damage Reducer XII	Fluffy Tuft	3
+Terrain Damage Reducer XIII	Fluffy Tuft	3
+Terrain Damage Reducer XIV	Fluffy Tuft	4
+Terrain Damage Reducer XV	Fluffy Tuft	4
+Terrain Damage Reducer XVI	Fluffy Tuft	4
+Terrain Damage Reducer XVII	Fluffy Tuft	4
+Terrain Damage Reducer XVIII	Fluffy Tuft	4
+Terrain Damage Reducer XIX	Fluffy Tuft	5
+Antispike I	Adsecula Oil Drop	1
+Antispike I	Ebony Evello Egg	1
+Antispike I	Vesper Hair Clip	1
+Antispike II	Adsecula Oil Drop	1
+Antispike II	Ebony Evello Egg	1
+Antispike II	Vesper Hair Clip	1
+Antispike III	Adsecula Oil Drop	1
+Antispike III	Ebony Evello Egg	1
+Antispike III	Vesper Hair Clip	1
+Antispike IV	Adsecula Oil Drop	2
+Antispike IV	Ebony Evello Egg	2
+Antispike IV	Vesper Hair Clip	2
+Antispike V	Adsecula Oil Drop	2
+Antispike V	Ebony Evello Egg	2
+Antispike V	Vesper Hair Clip	2
+Antispike VI	Adsecula Oil Drop	2
+Antispike VI	Ebony Evello Egg	2
+Antispike VI	Vesper Hair Clip	2
+Antispike VII	Adsecula Oil Drop	2
+Antispike VII	Ebony Evello Egg	2
+Antispike VII	Vesper Hair Clip	2
+Antispike VIII	Adsecula Oil Drop	2
+Antispike VIII	Ebony Evello Egg	2
+Antispike VIII	Vesper Hair Clip	2
+Antispike IX	Adsecula Oil Drop	3
+Antispike IX	Ebony Evello Egg	3
+Antispike IX	Vesper Hair Clip	3
+Antispike X	Adsecula Oil Drop	3
+Antispike X	Lava Crystal	3
+Antispike X	Gularthian Flint	3
+Antispike XI	Adsecula Oil Drop	3
+Antispike XI	Lava Crystal	3
+Antispike XI	Gularthian Flint	3
+Antispike XII	Adsecula Oil Drop	3
+Antispike XII	Lava Crystal	3
+Antispike XII	Gularthian Flint	3
+Antispike XIII	Adsecula Oil Drop	3
+Antispike XIII	Lava Crystal	3
+Antispike XIII	Gularthian Flint	3
+Antispike XIV	Adsecula Oil Drop	4
+Antispike XIV	Lava Crystal	4
+Antispike XIV	Gularthian Flint	4
+Antispike XV	Adsecula Oil Drop	4
+Antispike XV	Lava Crystal	4
+Antispike XV	Gularthian Flint	4
+Antispike XVI	Adsecula Oil Drop	4
+Antispike XVI	Lava Crystal	4
+Antispike XVI	Gularthian Flint	4
+Antispike XVII	Adsecula Oil Drop	4
+Antispike XVII	Lava Crystal	4
+Antispike XVII	Gularthian Flint	4
+Antispike XVIII	Adsecula Oil Drop	4
+Antispike XVIII	Lava Crystal	4
+Antispike XVIII	Gularthian Flint	4
+Antispike XIX	Adsecula Oil Drop	5
+Antispike XIX	Lava Crystal	5
+Antispike XIX	Gularthian Flint	5
+Resistance Reducer I	Grex Wisdom Tooth	1
+Resistance Reducer I	Green Puff	1
+Resistance Reducer II	Grex Wisdom Tooth	1
+Resistance Reducer II	Green Puff	1
+Resistance Reducer III	Grex Wisdom Tooth	1
+Resistance Reducer III	Green Puff	1
+Resistance Reducer IV	Grex Wisdom Tooth	2
+Resistance Reducer IV	Green Puff	2
+Resistance Reducer V	Grex Wisdom Tooth	2
+Resistance Reducer V	Green Puff	2
+Resistance Reducer VI	Grex Wisdom Tooth	2
+Resistance Reducer VI	Green Puff	2
+Resistance Reducer VII	Grex Wisdom Tooth	2
+Resistance Reducer VII	Green Puff	2
+Resistance Reducer VIII	Grex Wisdom Tooth	2
+Resistance Reducer VIII	Green Puff	2
+Resistance Reducer IX	Grex Wisdom Tooth	3
+Resistance Reducer IX	Green Puff	3
+Resistance Reducer X	Grex Wisdom Tooth	3
+Resistance Reducer X	Thick Millesaur Hide	3
+Resistance Reducer XI	Grex Wisdom Tooth	3
+Resistance Reducer XI	Thick Millesaur Hide	3
+Resistance Reducer XII	Grex Wisdom Tooth	3
+Resistance Reducer XII	Thick Millesaur Hide	3
+Resistance Reducer XIII	Grex Wisdom Tooth	3
+Resistance Reducer XIII	Thick Millesaur Hide	3
+Resistance Reducer XIV	Grex Wisdom Tooth	4
+Resistance Reducer XIV	Thick Millesaur Hide	4
+Resistance Reducer XV	Grex Wisdom Tooth	4
+Resistance Reducer XV	Thick Millesaur Hide	4
+Resistance Reducer XVI	Grex Wisdom Tooth	4
+Resistance Reducer XVI	Thick Millesaur Hide	4
+Resistance Reducer XVII	Grex Wisdom Tooth	4
+Resistance Reducer XVII	Thick Millesaur Hide	4
+Resistance Reducer XVIII	Grex Wisdom Tooth	4
+Resistance Reducer XVIII	Thick Millesaur Hide	4
+Resistance Reducer XIX	Grex Wisdom Tooth	5
+Resistance Reducer XIX	Thick Millesaur Hide	5
+Treasure Sensor I	Demonic Jewel	1
+Treasure Sensor I	Sky Jewel	1
+Treasure Sensor I	Dull Stone	1
+Treasure Sensor II	Demonic Jewel	1
+Treasure Sensor II	Sky Jewel	1
+Treasure Sensor II	Dull Stone	1
+Treasure Sensor III	Demonic Jewel	1
+Treasure Sensor III	Sky Jewel	1
+Treasure Sensor III	Dull Stone	1
+Treasure Sensor IV	Demonic Jewel	2
+Treasure Sensor IV	Sky Jewel	2
+Treasure Sensor IV	Dull Stone	2
+Treasure Sensor V	Demonic Jewel	2
+Treasure Sensor V	Sky Jewel	2
+Treasure Sensor V	Dull Stone	2
+Treasure Sensor VI	Demonic Jewel	2
+Treasure Sensor VI	Sky Jewel	2
+Treasure Sensor VI	Dull Stone	2
+Treasure Sensor VII	Demonic Jewel	2
+Treasure Sensor VII	Sky Jewel	2
+Treasure Sensor VII	Dull Stone	2
+Treasure Sensor VIII	Demonic Jewel	2
+Treasure Sensor VIII	Sky Jewel	2
+Treasure Sensor VIII	Dull Stone	2
+Treasure Sensor IX	Demonic Jewel	3
+Treasure Sensor IX	Sky Jewel	3
+Treasure Sensor IX	Dull Stone	3
+Treasure Sensor X	Demonic Jewel	3
+Treasure Sensor X	Shrad Eye	3
+Treasure Sensor X	Decrepit Wing	3
+Treasure Sensor XI	Demonic Jewel	3
+Treasure Sensor XI	Shrad Eye	3
+Treasure Sensor XI	Decrepit Wing	3
+Treasure Sensor XII	Demonic Jewel	3
+Treasure Sensor XII	Shrad Eye	3
+Treasure Sensor XII	Decrepit Wing	3
+Treasure Sensor XIII	Demonic Jewel	3
+Treasure Sensor XIII	Shrad Eye	3
+Treasure Sensor XIII	Decrepit Wing	3
+Treasure Sensor XIV	Demonic Jewel	4
+Treasure Sensor XIV	Shrad Eye	4
+Treasure Sensor XIV	Decrepit Wing	4
+Treasure Sensor XV	Demonic Jewel	4
+Treasure Sensor XV	Shrad Eye	4
+Treasure Sensor XV	Decrepit Wing	4
+Treasure Sensor XVI	Demonic Jewel	4
+Treasure Sensor XVI	Shrad Eye	4
+Treasure Sensor XVI	Decrepit Wing	4
+Treasure Sensor XVII	Demonic Jewel	4
+Treasure Sensor XVII	Shrad Eye	4
+Treasure Sensor XVII	Decrepit Wing	4
+Treasure Sensor XVIII	Demonic Jewel	4
+Treasure Sensor XVIII	Shrad Eye	4
+Treasure Sensor XVIII	Decrepit Wing	4
+Treasure Sensor XIX	Demonic Jewel	5
+Treasure Sensor XIX	Shrad Eye	5
+Treasure Sensor XIX	Decrepit Wing	5
+Untouchable Dash I	Terebra Water Grease	1
+Untouchable Dash II	Terebra Water Grease	1
+Untouchable Dash III	Terebra Water Grease	1
+Untouchable Dash IV	Terebra Water Grease	2
+Untouchable Dash V	Terebra Water Grease	2
+Untouchable Dash VI	Terebra Water Grease	2
+Untouchable Dash VII	Terebra Water Grease	2
+Untouchable Dash VIII	Terebra Water Grease	2
+Untouchable Dash IX	Terebra Water Grease	3
+Untouchable Dash X	Terebra Water Grease	3
+Untouchable Dash XI	Terebra Water Grease	3
+Untouchable Dash XII	Terebra Water Grease	3
+Untouchable Dash XIII	Terebra Water Grease	3
+Untouchable Dash XIV	Terebra Water Grease	4
+Untouchable Dash XV	Terebra Water Grease	4
+Untouchable Dash XVI	Terebra Water Grease	4
+Untouchable Dash XVII	Terebra Water Grease	4
+Untouchable Dash XVIII	Terebra Water Grease	4
+Untouchable Dash XIX	Terebra Water Grease	5
+Night Vision I	Ovis Polishing Stone	1
+Night Vision II	Ovis Polishing Stone	1
+Night Vision III	Ovis Polishing Stone	1
+Night Vision IV	Ovis Polishing Stone	2
+Night Vision V	Ovis Polishing Stone	2
+Night Vision VI	Ovis Polishing Stone	2
+Night Vision VII	Ovis Polishing Stone	2
+Night Vision VIII	Ovis Polishing Stone	2
+Night Vision IX	Ovis Polishing Stone	3
+Night Vision X	Ovis Polishing Stone	3
+Night Vision XI	Ovis Polishing Stone	3
+Night Vision XII	Ovis Polishing Stone	3
+Night Vision XIII	Ovis Polishing Stone	3
+Night Vision XIV	Ovis Polishing Stone	4
+Night Vision XV	Ovis Polishing Stone	4
+Night Vision XVI	Ovis Polishing Stone	4
+Night Vision XVII	Ovis Polishing Stone	4
+Night Vision XVIII	Ovis Polishing Stone	4
+Night Vision XIX	Ovis Polishing Stone	5
+Focused Evasion I	Green Mortifole Feather	1
+Focused Evasion I	Oc-serv Northern Crest	1
+Focused Evasion I	Pristine Insect Leg	1
+Focused Evasion II	Green Mortifole Feather	1
+Focused Evasion II	Oc-serv Northern Crest	1
+Focused Evasion II	Pristine Insect Leg	1
+Focused Evasion III	Green Mortifole Feather	1
+Focused Evasion III	Oc-serv Northern Crest	1
+Focused Evasion III	Pristine Insect Leg	1
+Focused Evasion IV	Green Mortifole Feather	2
+Focused Evasion IV	Oc-serv Northern Crest	2
+Focused Evasion IV	Pristine Insect Leg	2
+Focused Evasion V	Green Mortifole Feather	2
+Focused Evasion V	Oc-serv Northern Crest	2
+Focused Evasion V	Pristine Insect Leg	2
+Focused Evasion VI	Green Mortifole Feather	2
+Focused Evasion VI	Oc-serv Northern Crest	2
+Focused Evasion VI	Pristine Insect Leg	2
+Focused Evasion VII	Green Mortifole Feather	2
+Focused Evasion VII	Oc-serv Northern Crest	2
+Focused Evasion VII	Pristine Insect Leg	2
+Focused Evasion VIII	Green Mortifole Feather	2
+Focused Evasion VIII	Oc-serv Northern Crest	2
+Focused Evasion VIII	Pristine Insect Leg	2
+Focused Evasion IX	Green Mortifole Feather	3
+Focused Evasion IX	Oc-serv Northern Crest	3
+Focused Evasion IX	Pristine Insect Leg	3
+Focused Evasion X	Green Mortifole Feather	3
+Focused Evasion X	Dirty Cloth	3
+Focused Evasion X	Giant Cavity	3
+Focused Evasion XI	Green Mortifole Feather	3
+Focused Evasion XI	Dirty Cloth	3
+Focused Evasion XI	Giant Cavity	3
+Focused Evasion XII	Green Mortifole Feather	3
+Focused Evasion XII	Dirty Cloth	3
+Focused Evasion XII	Giant Cavity	3
+Focused Evasion XIII	Green Mortifole Feather	3
+Focused Evasion XIII	Dirty Cloth	3
+Focused Evasion XIII	Giant Cavity	3
+Focused Evasion XIV	Green Mortifole Feather	4
+Focused Evasion XIV	Dirty Cloth	4
+Focused Evasion XIV	Giant Cavity	4
+Focused Evasion XV	Green Mortifole Feather	4
+Focused Evasion XV	Dirty Cloth	4
+Focused Evasion XV	Giant Cavity	4
+Focused Evasion XVI	Green Mortifole Feather	4
+Focused Evasion XVI	Dirty Cloth	4
+Focused Evasion XVI	Giant Cavity	4
+Focused Evasion XVII	Green Mortifole Feather	4
+Focused Evasion XVII	Dirty Cloth	4
+Focused Evasion XVII	Giant Cavity	4
+Focused Evasion XVIII	Green Mortifole Feather	4
+Focused Evasion XVIII	Dirty Cloth	4
+Focused Evasion XVIII	Giant Cavity	4
+Focused Evasion XIX	Green Mortifole Feather	5
+Focused Evasion XIX	Dirty Cloth	5
+Focused Evasion XIX	Giant Cavity	5
+Weather Master I	Blue Forfex Shell	1
+Weather Master I	Auravis Courtship Feather	1
+Weather Master II	Blue Forfex Shell	1
+Weather Master II	Auravis Courtship Feather	1
+Weather Master III	Blue Forfex Shell	1
+Weather Master III	Auravis Courtship Feather	1
+Weather Master IV	Blue Forfex Shell	2
+Weather Master IV	Auravis Courtship Feather	2
+Weather Master V	Blue Forfex Shell	2
+Weather Master V	Auravis Courtship Feather	2
+Weather Master VI	Blue Forfex Shell	2
+Weather Master VI	Auravis Courtship Feather	2
+Weather Master VII	Blue Forfex Shell	2
+Weather Master VII	Auravis Courtship Feather	2
+Weather Master VIII	Blue Forfex Shell	2
+Weather Master VIII	Auravis Courtship Feather	2
+Weather Master IX	Blue Forfex Shell	3
+Weather Master IX	Auravis Courtship Feather	3
+Weather Master X	Blue Forfex Shell	3
+Weather Master X	Blue Vigent Rock Scalp	3
+Weather Master XI	Blue Forfex Shell	3
+Weather Master XI	Blue Vigent Rock Scalp	3
+Weather Master XII	Blue Forfex Shell	3
+Weather Master XII	Blue Vigent Rock Scalp	3
+Weather Master XIII	Blue Forfex Shell	3
+Weather Master XIII	Blue Vigent Rock Scalp	3
+Weather Master XIV	Blue Forfex Shell	4
+Weather Master XIV	Blue Vigent Rock Scalp	4
+Weather Master XV	Blue Forfex Shell	4
+Weather Master XV	Blue Vigent Rock Scalp	4
+Weather Master XVI	Blue Forfex Shell	4
+Weather Master XVI	Blue Vigent Rock Scalp	4
+Weather Master XVII	Blue Forfex Shell	4
+Weather Master XVII	Blue Vigent Rock Scalp	4
+Weather Master XVIII	Blue Forfex Shell	4
+Weather Master XVIII	Blue Vigent Rock Scalp	4
+Weather Master XIX	Blue Forfex Shell	5
+Weather Master XIX	Blue Vigent Rock Scalp	5
+SpecUp.HP-MAX I	Succulent Meat	1
+SpecUp.HP-MAX II	Succulent Meat	1
+SpecUp.HP-MAX III	Succulent Meat	1
+SpecUp.HP-MAX IV	Succulent Meat	2
+SpecUp.HP-MAX V	Succulent Meat	2
+SpecUp.HP-MAX VI	Succulent Meat	2
+SpecUp.HP-MAX VII	Succulent Meat	2
+SpecUp.HP-MAX VIII	Succulent Meat	2
+SpecUp.HP-MAX IX	Succulent Meat	3
+SpecUp.HP-MAX X	Succulent Meat	3
+SpecUp.HP-MAX XI	Succulent Meat	3
+SpecUp.HP-MAX XII	Succulent Meat	3
+SpecUp.HP-MAX XIII	Succulent Meat	3
+SpecUp.HP-MAX XIV	Succulent Meat	4
+SpecUp.HP-MAX XV	Succulent Meat	4
+SpecUp.HP-MAX XVI	Succulent Meat	4
+SpecUp.HP-MAX XVII	Succulent Meat	4
+SpecUp.HP-MAX XVIII	Succulent Meat	4
+SpecUp.HP-MAX XIX	Succulent Meat	5
+SpecUp.GP-MAX I	Fleecy Fur	1
+SpecUp.GP-MAX II	Fleecy Fur	1
+SpecUp.GP-MAX III	Fleecy Fur	1
+SpecUp.GP-MAX IV	Fleecy Fur	1
+SpecUp.GP-MAX V	Fleecy Fur	1
+SpecUp.GP-MAX VI	Fleecy Fur	1
+SpecUp.GP-MAX VII	Fleecy Fur	1
+SpecUp.GP-MAX VIII	Fleecy Fur	1
+SpecUp.GP-MAX IX	Fleecy Fur	1
+SpecUp.GP-MAX X	Fleecy Fur	1
+SpecUp.GP-MAX XI	Fleecy Fur	1
+SpecUp.GP-MAX XII	Fleecy Fur	1
+SpecUp.GP-MAX XIII	Fleecy Fur	1
+SpecUp.GP-MAX XIV	Fleecy Fur	1
+SpecUp.GP-MAX XV	Fleecy Fur	1
+SpecUp.GP-MAX XVI	Fleecy Fur	1
+SpecUp.GP-MAX XVII	Fleecy Fur	1
+SpecUp.GP-MAX XVIII	Fleecy Fur	1
+SpecUp.GP-MAX XIX	Fleecy Fur	1
+SpecUp.M-ACC I	Muscled Suid Bulge	1
+SpecUp.M-ACC II	Muscled Suid Bulge	1
+SpecUp.M-ACC III	Muscled Suid Bulge	1
+SpecUp.M-ACC IV	Muscled Suid Bulge	2
+SpecUp.M-ACC V	Muscled Suid Bulge	2
+SpecUp.M-ACC VI	Muscled Suid Bulge	2
+SpecUp.M-ACC VII	Muscled Suid Bulge	2
+SpecUp.M-ACC VIII	Muscled Suid Bulge	2
+SpecUp.M-ACC IX	Muscled Suid Bulge	3
+SpecUp.M-ACC X	Muscled Suid Bulge	3
+SpecUp.M-ACC XI	Muscled Suid Bulge	3
+SpecUp.M-ACC XII	Muscled Suid Bulge	3
+SpecUp.M-ACC XIII	Muscled Suid Bulge	3
+SpecUp.M-ACC XIV	Muscled Suid Bulge	4
+SpecUp.M-ACC XV	Muscled Suid Bulge	4
+SpecUp.M-ACC XVI	Muscled Suid Bulge	4
+SpecUp.M-ACC XVII	Muscled Suid Bulge	4
+SpecUp.M-ACC XVIII	Muscled Suid Bulge	4
+SpecUp.M-ACC XIX	Muscled Suid Bulge	5
+SpecUp.R-ACC I	Appetizing Suid Tail	1
+SpecUp.R-ACC II	Appetizing Suid Tail	1
+SpecUp.R-ACC III	Appetizing Suid Tail	1
+SpecUp.R-ACC IV	Appetizing Suid Tail	2
+SpecUp.R-ACC V	Appetizing Suid Tail	2
+SpecUp.R-ACC VI	Appetizing Suid Tail	2
+SpecUp.R-ACC VII	Appetizing Suid Tail	2
+SpecUp.R-ACC VIII	Appetizing Suid Tail	2
+SpecUp.R-ACC IX	Appetizing Suid Tail	3
+SpecUp.R-ACC X	Appetizing Suid Tail	3
+SpecUp.R-ACC XI	Appetizing Suid Tail	3
+SpecUp.R-ACC XII	Appetizing Suid Tail	3
+SpecUp.R-ACC XIII	Appetizing Suid Tail	3
+SpecUp.R-ACC XIV	Appetizing Suid Tail	4
+SpecUp.R-ACC XV	Appetizing Suid Tail	4
+SpecUp.R-ACC XVI	Appetizing Suid Tail	4
+SpecUp.R-ACC XVII	Appetizing Suid Tail	4
+SpecUp.R-ACC XVIII	Appetizing Suid Tail	4
+SpecUp.R-ACC XIX	Appetizing Suid Tail	5
+SpecUp.EVA I	Black Fog Deposits	1
+SpecUp.EVA II	Black Fog Deposits	1
+SpecUp.EVA III	Black Fog Deposits	1
+SpecUp.EVA IV	Black Fog Deposits	2
+SpecUp.EVA V	Black Fog Deposits	2
+SpecUp.EVA VI	Black Fog Deposits	2
+SpecUp.EVA VII	Black Fog Deposits	2
+SpecUp.EVA VIII	Black Fog Deposits	2
+SpecUp.EVA IX	Black Fog Deposits	3
+SpecUp.EVA X	Cloudy Eyeball	3
+SpecUp.EVA X	Gerrid Shell	3
+SpecUp.EVA X	Jacul Waterfall Orb	3
+SpecUp.EVA XI	Cloudy Eyeball	3
+SpecUp.EVA XI	Gerrid Shell	3
+SpecUp.EVA XI	Jacul Waterfall Orb	3
+SpecUp.EVA XII	Cloudy Eyeball	3
+SpecUp.EVA XII	Gerrid Shell	3
+SpecUp.EVA XII	Jacul Waterfall Orb	3
+SpecUp.EVA XIII	Cloudy Eyeball	3
+SpecUp.EVA XIII	Gerrid Shell	3
+SpecUp.EVA XIII	Jacul Waterfall Orb	3
+SpecUp.EVA XIV	Cloudy Eyeball	4
+SpecUp.EVA XIV	Gerrid Shell	4
+SpecUp.EVA XIV	Jacul Waterfall Orb	4
+SpecUp.EVA XV	Cloudy Eyeball	4
+SpecUp.EVA XV	Gerrid Shell	4
+SpecUp.EVA XV	Jacul Waterfall Orb	4
+SpecUp.EVA XVI	Cloudy Eyeball	4
+SpecUp.EVA XVI	Gerrid Shell	4
+SpecUp.EVA XVI	Jacul Waterfall Orb	4
+SpecUp.EVA XVII	Cloudy Eyeball	4
+SpecUp.EVA XVII	Gerrid Shell	4
+SpecUp.EVA XVII	Jacul Waterfall Orb	4
+SpecUp.EVA XVIII	Cloudy Eyeball	4
+SpecUp.EVA XVIII	Gerrid Shell	4
+SpecUp.EVA XVIII	Jacul Waterfall Orb	4
+SpecUp.EVA XIX	Cloudy Eyeball	5
+SpecUp.EVA XIX	Gerrid Shell	5
+SpecUp.EVA XIX	Jacul Waterfall Orb	5
+SpecUp.M-ATK I	Muscled Suid Bulge	1
+SpecUp.M-ATK II	Muscled Suid Bulge	1
+SpecUp.M-ATK III	Muscled Suid Bulge	1
+SpecUp.M-ATK IV	Muscled Suid Bulge	2
+SpecUp.M-ATK V	Muscled Suid Bulge	2
+SpecUp.M-ATK VI	Muscled Suid Bulge	2
+SpecUp.M-ATK VII	Muscled Suid Bulge	2
+SpecUp.M-ATK VIII	Muscled Suid Bulge	2
+SpecUp.M-ATK IX	Muscled Suid Bulge	3
+SpecUp.M-ATK X	Blue Sylooth Brace	3
+SpecUp.M-ATK X	White Sylooth Brace	3
+SpecUp.M-ATK X	Muscled Cantor Bulge	3
+SpecUp.M-ATK XI	Blue Sylooth Brace	3
+SpecUp.M-ATK XI	White Sylooth Brace	3
+SpecUp.M-ATK XI	Muscled Cantor Bulge	3
+SpecUp.M-ATK XII	Blue Sylooth Brace	3
+SpecUp.M-ATK XII	White Sylooth Brace	3
+SpecUp.M-ATK XII	Muscled Cantor Bulge	3
+SpecUp.M-ATK XIII	Blue Sylooth Brace	3
+SpecUp.M-ATK XIII	White Sylooth Brace	3
+SpecUp.M-ATK XIII	Muscled Cantor Bulge	3
+SpecUp.M-ATK XIV	Blue Sylooth Brace	4
+SpecUp.M-ATK XIV	White Sylooth Brace	4
+SpecUp.M-ATK XIV	Muscled Cantor Bulge	4
+SpecUp.M-ATK XV	Blue Sylooth Brace	4
+SpecUp.M-ATK XV	White Sylooth Brace	4
+SpecUp.M-ATK XV	Muscled Cantor Bulge	4
+SpecUp.M-ATK XVI	Blue Sylooth Brace	4
+SpecUp.M-ATK XVI	White Sylooth Brace	4
+SpecUp.M-ATK XVI	Muscled Cantor Bulge	4
+SpecUp.M-ATK XVII	Blue Sylooth Brace	4
+SpecUp.M-ATK XVII	White Sylooth Brace	4
+SpecUp.M-ATK XVII	Muscled Cantor Bulge	4
+SpecUp.M-ATK XVIII	Blue Sylooth Brace	4
+SpecUp.M-ATK XVIII	White Sylooth Brace	4
+SpecUp.M-ATK XVIII	Muscled Cantor Bulge	4
+SpecUp.M-ATK XIX	Blue Sylooth Brace	5
+SpecUp.M-ATK XIX	White Sylooth Brace	5
+SpecUp.M-ATK XIX	Muscled Cantor Bulge	5
+SpecUp.R-ATK I	Appetizing Suid Tail	1
+SpecUp.R-ATK II	Appetizing Suid Tail	1
+SpecUp.R-ATK III	Appetizing Suid Tail	1
+SpecUp.R-ATK IV	Appetizing Suid Tail	2
+SpecUp.R-ATK V	Appetizing Suid Tail	2
+SpecUp.R-ATK VI	Appetizing Suid Tail	2
+SpecUp.R-ATK VII	Appetizing Suid Tail	2
+SpecUp.R-ATK VIII	Appetizing Suid Tail	2
+SpecUp.R-ATK IX	Appetizing Suid Tail	3
+SpecUp.R-ATK X	O.X. Unit	3
+SpecUp.R-ATK X	Eternal Arenatect Moss	3
+SpecUp.R-ATK X	Green Jacul Wing	3
+SpecUp.R-ATK XI	O.X. Unit	3
+SpecUp.R-ATK XI	Eternal Arenatect Moss	3
+SpecUp.R-ATK XI	Green Jacul Wing	3
+SpecUp.R-ATK XII	O.X. Unit	3
+SpecUp.R-ATK XII	Eternal Arenatect Moss	3
+SpecUp.R-ATK XII	Green Jacul Wing	3
+SpecUp.R-ATK XIII	O.X. Unit	3
+SpecUp.R-ATK XIII	Eternal Arenatect Moss	3
+SpecUp.R-ATK XIII	Green Jacul Wing	3
+SpecUp.R-ATK XIV	O.X. Unit	4
+SpecUp.R-ATK XIV	Eternal Arenatect Moss	4
+SpecUp.R-ATK XIV	Green Jacul Wing	4
+SpecUp.R-ATK XV	O.X. Unit	4
+SpecUp.R-ATK XV	Eternal Arenatect Moss	4
+SpecUp.R-ATK XV	Green Jacul Wing	4
+SpecUp.R-ATK XVI	O.X. Unit	4
+SpecUp.R-ATK XVI	Eternal Arenatect Moss	4
+SpecUp.R-ATK XVI	Green Jacul Wing	4
+SpecUp.R-ATK XVII	O.X. Unit	4
+SpecUp.R-ATK XVII	Eternal Arenatect Moss	4
+SpecUp.R-ATK XVII	Green Jacul Wing	4
+SpecUp.R-ATK XVIII	O.X. Unit	4
+SpecUp.R-ATK XVIII	Eternal Arenatect Moss	4
+SpecUp.R-ATK XVIII	Green Jacul Wing	4
+SpecUp.R-ATK XIX	O.X. Unit	5
+SpecUp.R-ATK XIX	Eternal Arenatect Moss	5
+SpecUp.R-ATK XIX	Green Jacul Wing	5
+SpecUp.PTL I	Fleecy Fur	1
+SpecUp.PTL II	Fleecy Fur	1
+SpecUp.PTL III	Fleecy Fur	1
+SpecUp.PTL IV	Fleecy Fur	2
+SpecUp.PTL V	Fleecy Fur	2
+SpecUp.PTL VI	Fleecy Fur	2
+SpecUp.PTL VII	Fleecy Fur	2
+SpecUp.PTL VIII	Fleecy Fur	2
+SpecUp.PTL IX	Fleecy Fur	3
+SpecUp.PTL X	Distilled Sap	3
+SpecUp.PTL X	Blazing Gas Sac	3
+SpecUp.PTL X	Lepyx Moonstone	3
+SpecUp.PTL XI	Distilled Sap	3
+SpecUp.PTL XI	Blazing Gas Sac	3
+SpecUp.PTL XI	Lepyx Moonstone	3
+SpecUp.PTL XII	Distilled Sap	3
+SpecUp.PTL XII	Blazing Gas Sac	3
+SpecUp.PTL XII	Lepyx Moonstone	3
+SpecUp.PTL XIII	Distilled Sap	3
+SpecUp.PTL XIII	Blazing Gas Sac	3
+SpecUp.PTL XIII	Lepyx Moonstone	3
+SpecUp.PTL XIV	Distilled Sap	4
+SpecUp.PTL XIV	Blazing Gas Sac	4
+SpecUp.PTL XIV	Lepyx Moonstone	4
+SpecUp.PTL XV	Distilled Sap	4
+SpecUp.PTL XV	Blazing Gas Sac	4
+SpecUp.PTL XV	Lepyx Moonstone	4
+SpecUp.PTL XVI	Distilled Sap	4
+SpecUp.PTL XVI	Blazing Gas Sac	4
+SpecUp.PTL XVI	Lepyx Moonstone	4
+SpecUp.PTL XVII	Distilled Sap	4
+SpecUp.PTL XVII	Blazing Gas Sac	4
+SpecUp.PTL XVII	Lepyx Moonstone	4
+SpecUp.PTL XVIII	Distilled Sap	4
+SpecUp.PTL XVIII	Blazing Gas Sac	4
+SpecUp.PTL XVIII	Lepyx Moonstone	4
+SpecUp.PTL XIX	Distilled Sap	5
+SpecUp.PTL XIX	Blazing Gas Sac	5
+SpecUp.PTL XIX	Lepyx Moonstone	5
+SpecUp.APP-HP I	White Meaty Caecus Liver	1
+SpecUp.APP-HP II	White Meaty Caecus Liver	1
+SpecUp.APP-HP III	White Meaty Caecus Liver	1
+SpecUp.APP-HP IV	White Meaty Caecus Liver	2
+SpecUp.APP-HP V	White Meaty Caecus Liver	2
+SpecUp.APP-HP VI	White Meaty Caecus Liver	2
+SpecUp.APP-HP VII	White Meaty Caecus Liver	2
+SpecUp.APP-HP VIII	White Meaty Caecus Liver	2
+SpecUp.APP-HP IX	White Meaty Caecus Liver	3
+SpecUp.APP-HP X	White Meaty Caecus Liver	3
+SpecUp.APP-HP XI	White Meaty Caecus Liver	3
+SpecUp.APP-HP XII	White Meaty Caecus Liver	3
+SpecUp.APP-HP XIII	White Meaty Caecus Liver	3
+SpecUp.APP-HP XIV	White Meaty Caecus Liver	4
+SpecUp.APP-HP XV	White Meaty Caecus Liver	4
+SpecUp.APP-HP XVI	White Meaty Caecus Liver	4
+SpecUp.APP-HP XVII	White Meaty Caecus Liver	4
+SpecUp.APP-HP XVIII	White Meaty Caecus Liver	4
+SpecUp.APP-HP XIX	White Meaty Caecus Liver	5
+Boost.HP-MAX I	Redwood Aprica Antlers	1
+Boost.HP-MAX I	Raw Meaty Caecus Liver	1
+Boost.HP-MAX I	Succulent Meat	1
+Boost.HP-MAX II	Redwood Aprica Antlers	1
+Boost.HP-MAX II	Raw Meaty Caecus Liver	1
+Boost.HP-MAX II	Succulent Meat	1
+Boost.HP-MAX III	Redwood Aprica Antlers	1
+Boost.HP-MAX III	Raw Meaty Caecus Liver	1
+Boost.HP-MAX III	Succulent Meat	1
+Boost.HP-MAX IV	Redwood Aprica Antlers	2
+Boost.HP-MAX IV	Raw Meaty Caecus Liver	2
+Boost.HP-MAX IV	Succulent Meat	2
+Boost.HP-MAX V	Redwood Aprica Antlers	2
+Boost.HP-MAX V	Raw Meaty Caecus Liver	2
+Boost.HP-MAX V	Succulent Meat	2
+Boost.HP-MAX VI	Redwood Aprica Antlers	2
+Boost.HP-MAX VI	Raw Meaty Caecus Liver	2
+Boost.HP-MAX VI	Succulent Meat	2
+Boost.HP-MAX VII	Redwood Aprica Antlers	2
+Boost.HP-MAX VII	Raw Meaty Caecus Liver	2
+Boost.HP-MAX VII	Succulent Meat	2
+Boost.HP-MAX VIII	Redwood Aprica Antlers	2
+Boost.HP-MAX VIII	Raw Meaty Caecus Liver	2
+Boost.HP-MAX VIII	Succulent Meat	2
+Boost.HP-MAX IX	Redwood Aprica Antlers	3
+Boost.HP-MAX IX	Raw Meaty Caecus Liver	3
+Boost.HP-MAX IX	Succulent Meat	3
+Boost.HP-MAX X	Redwood Aprica Antlers	3
+Boost.HP-MAX X	Golden Cantor Tooth	3
+Boost.HP-MAX X	Big Balaena Water Bag	3
+Boost.HP-MAX XI	Redwood Aprica Antlers	3
+Boost.HP-MAX XI	Golden Cantor Tooth	3
+Boost.HP-MAX XI	Big Balaena Water Bag	3
+Boost.HP-MAX XII	Redwood Aprica Antlers	3
+Boost.HP-MAX XII	Golden Cantor Tooth	3
+Boost.HP-MAX XII	Big Balaena Water Bag	3
+Boost.HP-MAX XIII	Redwood Aprica Antlers	3
+Boost.HP-MAX XIII	Golden Cantor Tooth	3
+Boost.HP-MAX XIII	Big Balaena Water Bag	3
+Boost.HP-MAX XIV	Redwood Aprica Antlers	4
+Boost.HP-MAX XIV	Golden Cantor Tooth	4
+Boost.HP-MAX XIV	Big Balaena Water Bag	4
+Boost.HP-MAX XV	Redwood Aprica Antlers	4
+Boost.HP-MAX XV	Golden Cantor Tooth	4
+Boost.HP-MAX XV	Big Balaena Water Bag	4
+Boost.HP-MAX XVI	Redwood Aprica Antlers	4
+Boost.HP-MAX XVI	Golden Cantor Tooth	4
+Boost.HP-MAX XVI	Big Balaena Water Bag	4
+Boost.HP-MAX XVII	Redwood Aprica Antlers	4
+Boost.HP-MAX XVII	Golden Cantor Tooth	4
+Boost.HP-MAX XVII	Big Balaena Water Bag	4
+Boost.HP-MAX XVIII	Redwood Aprica Antlers	4
+Boost.HP-MAX XVIII	Golden Cantor Tooth	4
+Boost.HP-MAX XVIII	Big Balaena Water Bag	4
+Boost.HP-MAX XIX	Redwood Aprica Antlers	5
+Boost.HP-MAX XIX	Golden Cantor Tooth	5
+Boost.HP-MAX XIX	Big Balaena Water Bag	5
+Boost.GP-MAX I	Hard Pom Pom	1
+Boost.GP-MAX I	Black Thallus Antenna	1
+Boost.GP-MAX I	Fleecy Fur	1
+Boost.GP-MAX II	Hard Pom Pom	1
+Boost.GP-MAX II	Black Thallus Antenna	1
+Boost.GP-MAX II	Fleecy Fur	1
+Boost.GP-MAX III	Hard Pom Pom	1
+Boost.GP-MAX III	Black Thallus Antenna	1
+Boost.GP-MAX III	Fleecy Fur	1
+Boost.GP-MAX IV	Hard Pom Pom	1
+Boost.GP-MAX IV	Black Thallus Antenna	1
+Boost.GP-MAX IV	Fleecy Fur	1
+Boost.GP-MAX V	Hard Pom Pom	1
+Boost.GP-MAX V	Black Thallus Antenna	1
+Boost.GP-MAX V	Fleecy Fur	1
+Boost.GP-MAX VI	Hard Pom Pom	1
+Boost.GP-MAX VI	Black Thallus Antenna	1
+Boost.GP-MAX VI	Fleecy Fur	1
+Boost.GP-MAX VII	Hard Pom Pom	1
+Boost.GP-MAX VII	Black Thallus Antenna	1
+Boost.GP-MAX VII	Fleecy Fur	1
+Boost.GP-MAX VIII	Hard Pom Pom	1
+Boost.GP-MAX VIII	Black Thallus Antenna	1
+Boost.GP-MAX VIII	Fleecy Fur	1
+Boost.GP-MAX IX	Hard Pom Pom	1
+Boost.GP-MAX IX	Black Thallus Antenna	1
+Boost.GP-MAX IX	Fleecy Fur	1
+Boost.GP-MAX X	Hard Pom Pom	1
+Boost.GP-MAX X	Black Thallus Antenna	1
+Boost.GP-MAX X	Fleecy Fur	1
+Boost.GP-MAX XI	Hard Pom Pom	1
+Boost.GP-MAX XI	Black Thallus Antenna	1
+Boost.GP-MAX XI	Fleecy Fur	1
+Boost.GP-MAX XII	Hard Pom Pom	1
+Boost.GP-MAX XII	Black Thallus Antenna	1
+Boost.GP-MAX XII	Fleecy Fur	1
+Boost.GP-MAX XIII	Hard Pom Pom	1
+Boost.GP-MAX XIII	Black Thallus Antenna	1
+Boost.GP-MAX XIII	Fleecy Fur	1
+Boost.GP-MAX XIV	Hard Pom Pom	1
+Boost.GP-MAX XIV	Black Thallus Antenna	1
+Boost.GP-MAX XIV	Fleecy Fur	1
+Boost.GP-MAX XV	Hard Pom Pom	1
+Boost.GP-MAX XV	Black Thallus Antenna	1
+Boost.GP-MAX XV	Fleecy Fur	1
+Boost.GP-MAX XVI	Hard Pom Pom	1
+Boost.GP-MAX XVI	Black Thallus Antenna	1
+Boost.GP-MAX XVI	Fleecy Fur	1
+Boost.GP-MAX XVII	Hard Pom Pom	1
+Boost.GP-MAX XVII	Black Thallus Antenna	1
+Boost.GP-MAX XVII	Fleecy Fur	1
+Boost.GP-MAX XVIII	Hard Pom Pom	1
+Boost.GP-MAX XVIII	Black Thallus Antenna	1
+Boost.GP-MAX XVIII	Fleecy Fur	1
+Boost.GP-MAX XIX	Hard Pom Pom	1
+Boost.GP-MAX XIX	Black Thallus Antenna	1
+Boost.GP-MAX XIX	Fleecy Fur	1
+Boost.M-ACC I	Refined Horn	1
+Boost.M-ACC I	Muscled Suid Bulge	1
+Boost.M-ACC II	Refined Horn	1
+Boost.M-ACC II	Muscled Suid Bulge	1
+Boost.M-ACC III	Refined Horn	1
+Boost.M-ACC III	Muscled Suid Bulge	1
+Boost.M-ACC IV	Refined Horn	2
+Boost.M-ACC IV	Muscled Suid Bulge	2
+Boost.M-ACC V	Refined Horn	2
+Boost.M-ACC V	Muscled Suid Bulge	2
+Boost.M-ACC VI	Refined Horn	2
+Boost.M-ACC VI	Muscled Suid Bulge	2
+Boost.M-ACC VII	Refined Horn	2
+Boost.M-ACC VII	Muscled Suid Bulge	2
+Boost.M-ACC VIII	Refined Horn	2
+Boost.M-ACC VIII	Muscled Suid Bulge	2
+Boost.M-ACC IX	Refined Horn	3
+Boost.M-ACC IX	Muscled Suid Bulge	3
+Boost.M-ACC X	Refined Horn	3
+Boost.M-ACC X	Black Steel Heavy Armor	3
+Boost.M-ACC XI	Refined Horn	3
+Boost.M-ACC XI	Black Steel Heavy Armor	3
+Boost.M-ACC XII	Refined Horn	3
+Boost.M-ACC XII	Black Steel Heavy Armor	3
+Boost.M-ACC XIII	Refined Horn	3
+Boost.M-ACC XIII	Black Steel Heavy Armor	3
+Boost.M-ACC XIV	Refined Horn	4
+Boost.M-ACC XIV	Black Steel Heavy Armor	4
+Boost.M-ACC XV	Refined Horn	4
+Boost.M-ACC XV	Black Steel Heavy Armor	4
+Boost.M-ACC XVI	Refined Horn	4
+Boost.M-ACC XVI	Black Steel Heavy Armor	4
+Boost.M-ACC XVII	Refined Horn	4
+Boost.M-ACC XVII	Black Steel Heavy Armor	4
+Boost.M-ACC XVIII	Refined Horn	4
+Boost.M-ACC XVIII	Black Steel Heavy Armor	4
+Boost.M-ACC XIX	Refined Horn	5
+Boost.M-ACC XIX	Black Steel Heavy Armor	5
+Boost.R-ACC I	Scratched Jewel	1
+Boost.R-ACC I	Appetizing Suid Tail	1
+Boost.R-ACC II	Scratched Jewel	1
+Boost.R-ACC II	Appetizing Suid Tail	1
+Boost.R-ACC III	Scratched Jewel	1
+Boost.R-ACC III	Appetizing Suid Tail	1
+Boost.R-ACC IV	Scratched Jewel	2
+Boost.R-ACC IV	Appetizing Suid Tail	2
+Boost.R-ACC V	Scratched Jewel	2
+Boost.R-ACC V	Appetizing Suid Tail	2
+Boost.R-ACC VI	Scratched Jewel	2
+Boost.R-ACC VI	Appetizing Suid Tail	2
+Boost.R-ACC VII	Scratched Jewel	2
+Boost.R-ACC VII	Appetizing Suid Tail	2
+Boost.R-ACC VIII	Scratched Jewel	2
+Boost.R-ACC VIII	Appetizing Suid Tail	2
+Boost.R-ACC IX	Scratched Jewel	3
+Boost.R-ACC IX	Appetizing Suid Tail	3
+Boost.R-ACC X	Scratched Jewel	3
+Boost.R-ACC X	Upgraded Spindle Part	3
+Boost.R-ACC XI	Scratched Jewel	3
+Boost.R-ACC XI	Upgraded Spindle Part	3
+Boost.R-ACC XII	Scratched Jewel	3
+Boost.R-ACC XII	Upgraded Spindle Part	3
+Boost.R-ACC XIII	Scratched Jewel	3
+Boost.R-ACC XIII	Upgraded Spindle Part	3
+Boost.R-ACC XIV	Scratched Jewel	4
+Boost.R-ACC XIV	Upgraded Spindle Part	4
+Boost.R-ACC XV	Scratched Jewel	4
+Boost.R-ACC XV	Upgraded Spindle Part	4
+Boost.R-ACC XVI	Scratched Jewel	4
+Boost.R-ACC XVI	Upgraded Spindle Part	4
+Boost.R-ACC XVII	Scratched Jewel	4
+Boost.R-ACC XVII	Upgraded Spindle Part	4
+Boost.R-ACC XVIII	Scratched Jewel	4
+Boost.R-ACC XVIII	Upgraded Spindle Part	4
+Boost.R-ACC XIX	Scratched Jewel	5
+Boost.R-ACC XIX	Upgraded Spindle Part	5
+Boost.EVA I	Slimy Epithelium	1
+Boost.EVA I	Fal-swo Solar Crest	1
+Boost.EVA I	Black Fog Deposits	1
+Boost.EVA II	Slimy Epithelium	1
+Boost.EVA II	Fal-swo Solar Crest	1
+Boost.EVA II	Black Fog Deposits	1
+Boost.EVA III	Slimy Epithelium	1
+Boost.EVA III	Fal-swo Solar Crest	1
+Boost.EVA III	Black Fog Deposits	1
+Boost.EVA IV	Slimy Epithelium	2
+Boost.EVA IV	Fal-swo Solar Crest	2
+Boost.EVA IV	Black Fog Deposits	2
+Boost.EVA V	Slimy Epithelium	2
+Boost.EVA V	Fal-swo Solar Crest	2
+Boost.EVA V	Black Fog Deposits	2
+Boost.EVA VI	Slimy Epithelium	2
+Boost.EVA VI	Fal-swo Solar Crest	2
+Boost.EVA VI	Black Fog Deposits	2
+Boost.EVA VII	Slimy Epithelium	2
+Boost.EVA VII	Fal-swo Solar Crest	2
+Boost.EVA VII	Black Fog Deposits	2
+Boost.EVA VIII	Slimy Epithelium	2
+Boost.EVA VIII	Fal-swo Solar Crest	2
+Boost.EVA VIII	Black Fog Deposits	2
+Boost.EVA IX	Slimy Epithelium	3
+Boost.EVA IX	Fal-swo Solar Crest	3
+Boost.EVA IX	Black Fog Deposits	3
+Boost.EVA X	Slimy Epithelium	3
+Boost.EVA X	Brilliant Tersqual Liquid	3
+Boost.EVA X	Blinding Lophid Extract	3
+Boost.EVA XI	Slimy Epithelium	3
+Boost.EVA XI	Brilliant Tersqual Liquid	3
+Boost.EVA XI	Blinding Lophid Extract	3
+Boost.EVA XII	Slimy Epithelium	3
+Boost.EVA XII	Brilliant Tersqual Liquid	3
+Boost.EVA XII	Blinding Lophid Extract	3
+Boost.EVA XIII	Slimy Epithelium	3
+Boost.EVA XIII	Brilliant Tersqual Liquid	3
+Boost.EVA XIII	Blinding Lophid Extract	3
+Boost.EVA XIV	Slimy Epithelium	4
+Boost.EVA XIV	Brilliant Tersqual Liquid	4
+Boost.EVA XIV	Blinding Lophid Extract	4
+Boost.EVA XV	Slimy Epithelium	4
+Boost.EVA XV	Brilliant Tersqual Liquid	4
+Boost.EVA XV	Blinding Lophid Extract	4
+Boost.EVA XVI	Slimy Epithelium	4
+Boost.EVA XVI	Brilliant Tersqual Liquid	4
+Boost.EVA XVI	Blinding Lophid Extract	4
+Boost.EVA XVII	Slimy Epithelium	4
+Boost.EVA XVII	Brilliant Tersqual Liquid	4
+Boost.EVA XVII	Blinding Lophid Extract	4
+Boost.EVA XVIII	Slimy Epithelium	4
+Boost.EVA XVIII	Brilliant Tersqual Liquid	4
+Boost.EVA XVIII	Blinding Lophid Extract	4
+Boost.EVA XIX	Slimy Epithelium	5
+Boost.EVA XIX	Brilliant Tersqual Liquid	5
+Boost.EVA XIX	Blinding Lophid Extract	5
+Boost.M-ATK I	Pure White Caro Tusk	1
+Boost.M-ATK I	Thick Falsaxum Horn	1
+Boost.M-ATK I	Muscled Suid Bulge	1
+Boost.M-ATK II	Pure White Caro Tusk	1
+Boost.M-ATK II	Thick Falsaxum Horn	1
+Boost.M-ATK II	Muscled Suid Bulge	1
+Boost.M-ATK III	Pure White Caro Tusk	1
+Boost.M-ATK III	Thick Falsaxum Horn	1
+Boost.M-ATK III	Muscled Suid Bulge	1
+Boost.M-ATK IV	Pure White Caro Tusk	2
+Boost.M-ATK IV	Thick Falsaxum Horn	2
+Boost.M-ATK IV	Muscled Suid Bulge	2
+Boost.M-ATK V	Pure White Caro Tusk	2
+Boost.M-ATK V	Thick Falsaxum Horn	2
+Boost.M-ATK V	Muscled Suid Bulge	2
+Boost.M-ATK VI	Pure White Caro Tusk	2
+Boost.M-ATK VI	Thick Falsaxum Horn	2
+Boost.M-ATK VI	Muscled Suid Bulge	2
+Boost.M-ATK VII	Pure White Caro Tusk	2
+Boost.M-ATK VII	Thick Falsaxum Horn	2
+Boost.M-ATK VII	Muscled Suid Bulge	2
+Boost.M-ATK VIII	Pure White Caro Tusk	2
+Boost.M-ATK VIII	Thick Falsaxum Horn	2
+Boost.M-ATK VIII	Muscled Suid Bulge	2
+Boost.M-ATK IX	Pure White Caro Tusk	3
+Boost.M-ATK IX	Thick Falsaxum Horn	3
+Boost.M-ATK IX	Muscled Suid Bulge	3
+Boost.M-ATK X	Pure White Caro Tusk	3
+Boost.M-ATK X	Standard Blade Module	3
+Boost.M-ATK X	Lone Purple Ictus Stinger	3
+Boost.M-ATK XI	Pure White Caro Tusk	3
+Boost.M-ATK XI	Standard Blade Module	3
+Boost.M-ATK XI	Lone Purple Ictus Stinger	3
+Boost.M-ATK XII	Pure White Caro Tusk	3
+Boost.M-ATK XII	Standard Blade Module	3
+Boost.M-ATK XII	Lone Purple Ictus Stinger	3
+Boost.M-ATK XIII	Pure White Caro Tusk	3
+Boost.M-ATK XIII	Standard Blade Module	3
+Boost.M-ATK XIII	Lone Purple Ictus Stinger	3
+Boost.M-ATK XIV	Pure White Caro Tusk	4
+Boost.M-ATK XIV	Standard Blade Module	4
+Boost.M-ATK XIV	Lone Purple Ictus Stinger	4
+Boost.M-ATK XV	Pure White Caro Tusk	4
+Boost.M-ATK XV	Standard Blade Module	4
+Boost.M-ATK XV	Lone Purple Ictus Stinger	4
+Boost.M-ATK XVI	Pure White Caro Tusk	4
+Boost.M-ATK XVI	Standard Blade Module	4
+Boost.M-ATK XVI	Lone Purple Ictus Stinger	4
+Boost.M-ATK XVII	Pure White Caro Tusk	4
+Boost.M-ATK XVII	Standard Blade Module	4
+Boost.M-ATK XVII	Lone Purple Ictus Stinger	4
+Boost.M-ATK XVIII	Pure White Caro Tusk	4
+Boost.M-ATK XVIII	Standard Blade Module	4
+Boost.M-ATK XVIII	Lone Purple Ictus Stinger	4
+Boost.M-ATK XIX	Pure White Caro Tusk	5
+Boost.M-ATK XIX	Standard Blade Module	5
+Boost.M-ATK XIX	Lone Purple Ictus Stinger	5
+Boost.R-ATK I	Beryl Aetrygon Horn	1
+Boost.R-ATK I	Pure White Caro Tusk	1
+Boost.R-ATK I	Appetizing Suid Tail	1
+Boost.R-ATK II	Beryl Aetrygon Horn	1
+Boost.R-ATK II	Pure White Caro Tusk	1
+Boost.R-ATK II	Appetizing Suid Tail	1
+Boost.R-ATK III	Beryl Aetrygon Horn	1
+Boost.R-ATK III	Pure White Caro Tusk	1
+Boost.R-ATK III	Appetizing Suid Tail	1
+Boost.R-ATK IV	Beryl Aetrygon Horn	2
+Boost.R-ATK IV	Pure White Caro Tusk	2
+Boost.R-ATK IV	Appetizing Suid Tail	2
+Boost.R-ATK V	Beryl Aetrygon Horn	2
+Boost.R-ATK V	Pure White Caro Tusk	2
+Boost.R-ATK V	Appetizing Suid Tail	2
+Boost.R-ATK VI	Beryl Aetrygon Horn	2
+Boost.R-ATK VI	Pure White Caro Tusk	2
+Boost.R-ATK VI	Appetizing Suid Tail	2
+Boost.R-ATK VII	Beryl Aetrygon Horn	2
+Boost.R-ATK VII	Pure White Caro Tusk	2
+Boost.R-ATK VII	Appetizing Suid Tail	2
+Boost.R-ATK VIII	Beryl Aetrygon Horn	2
+Boost.R-ATK VIII	Pure White Caro Tusk	2
+Boost.R-ATK VIII	Appetizing Suid Tail	2
+Boost.R-ATK IX	Beryl Aetrygon Horn	3
+Boost.R-ATK IX	Pure White Caro Tusk	3
+Boost.R-ATK IX	Appetizing Suid Tail	3
+Boost.R-ATK X	Beryl Aetrygon Horn	3
+Boost.R-ATK X	Black Petramand Silk	3
+Boost.R-ATK X	Lone White Ictus Stinger	3
+Boost.R-ATK XI	Beryl Aetrygon Horn	3
+Boost.R-ATK XI	Black Petramand Silk	3
+Boost.R-ATK XI	Lone White Ictus Stinger	3
+Boost.R-ATK XII	Beryl Aetrygon Horn	3
+Boost.R-ATK XII	Black Petramand Silk	3
+Boost.R-ATK XII	Lone White Ictus Stinger	3
+Boost.R-ATK XIII	Beryl Aetrygon Horn	3
+Boost.R-ATK XIII	Black Petramand Silk	3
+Boost.R-ATK XIII	Lone White Ictus Stinger	3
+Boost.R-ATK XIV	Beryl Aetrygon Horn	4
+Boost.R-ATK XIV	Black Petramand Silk	4
+Boost.R-ATK XIV	Lone White Ictus Stinger	4
+Boost.R-ATK XV	Beryl Aetrygon Horn	4
+Boost.R-ATK XV	Black Petramand Silk	4
+Boost.R-ATK XV	Lone White Ictus Stinger	4
+Boost.R-ATK XVI	Beryl Aetrygon Horn	4
+Boost.R-ATK XVI	Black Petramand Silk	4
+Boost.R-ATK XVI	Lone White Ictus Stinger	4
+Boost.R-ATK XVII	Beryl Aetrygon Horn	4
+Boost.R-ATK XVII	Black Petramand Silk	4
+Boost.R-ATK XVII	Lone White Ictus Stinger	4
+Boost.R-ATK XVIII	Beryl Aetrygon Horn	4
+Boost.R-ATK XVIII	Black Petramand Silk	4
+Boost.R-ATK XVIII	Lone White Ictus Stinger	4
+Boost.R-ATK XIX	Beryl Aetrygon Horn	5
+Boost.R-ATK XIX	Black Petramand Silk	5
+Boost.R-ATK XIX	Lone White Ictus Stinger	5
+Boost.PTL I	Nutritious Microbes	1
+Boost.PTL I	White Fungal Egg	1
+Boost.PTL I	Fleecy Fur	1
+Boost.PTL II	Nutritious Microbes	1
+Boost.PTL II	White Fungal Egg	1
+Boost.PTL II	Fleecy Fur	1
+Boost.PTL III	Nutritious Microbes	1
+Boost.PTL III	White Fungal Egg	1
+Boost.PTL III	Fleecy Fur	1
+Boost.PTL IV	Nutritious Microbes	2
+Boost.PTL IV	White Fungal Egg	2
+Boost.PTL IV	Fleecy Fur	2
+Boost.PTL V	Nutritious Microbes	2
+Boost.PTL V	White Fungal Egg	2
+Boost.PTL V	Fleecy Fur	2
+Boost.PTL VI	Nutritious Microbes	2
+Boost.PTL VI	White Fungal Egg	2
+Boost.PTL VI	Fleecy Fur	2
+Boost.PTL VII	Nutritious Microbes	2
+Boost.PTL VII	White Fungal Egg	2
+Boost.PTL VII	Fleecy Fur	2
+Boost.PTL VIII	Nutritious Microbes	2
+Boost.PTL VIII	White Fungal Egg	2
+Boost.PTL VIII	Fleecy Fur	2
+Boost.PTL IX	Nutritious Microbes	3
+Boost.PTL IX	White Fungal Egg	3
+Boost.PTL IX	Fleecy Fur	3
+Boost.PTL X	Nutritious Microbes	3
+Boost.PTL X	Clear Gerrid Soup	3
+Boost.PTL X	Gularthian Everflame	3
+Boost.PTL XI	Nutritious Microbes	3
+Boost.PTL XI	Clear Gerrid Soup	3
+Boost.PTL XI	Gularthian Everflame	3
+Boost.PTL XII	Nutritious Microbes	3
+Boost.PTL XII	Clear Gerrid Soup	3
+Boost.PTL XII	Gularthian Everflame	3
+Boost.PTL XIII	Nutritious Microbes	3
+Boost.PTL XIII	Clear Gerrid Soup	3
+Boost.PTL XIII	Gularthian Everflame	3
+Boost.PTL XIV	Nutritious Microbes	4
+Boost.PTL XIV	Clear Gerrid Soup	4
+Boost.PTL XIV	Gularthian Everflame	4
+Boost.PTL XV	Nutritious Microbes	4
+Boost.PTL XV	Clear Gerrid Soup	4
+Boost.PTL XV	Gularthian Everflame	4
+Boost.PTL XVI	Nutritious Microbes	4
+Boost.PTL XVI	Clear Gerrid Soup	4
+Boost.PTL XVI	Gularthian Everflame	4
+Boost.PTL XVII	Nutritious Microbes	4
+Boost.PTL XVII	Clear Gerrid Soup	4
+Boost.PTL XVII	Gularthian Everflame	4
+Boost.PTL XVIII	Nutritious Microbes	4
+Boost.PTL XVIII	Clear Gerrid Soup	4
+Boost.PTL XVIII	Gularthian Everflame	4
+Boost.PTL XIX	Nutritious Microbes	5
+Boost.PTL XIX	Clear Gerrid Soup	5
+Boost.PTL XIX	Gularthian Everflame	5
+SpecUp.PHYS-RES I	Cinicula Shell	1
+SpecUp.PHYS-RES I	Falsaxum Shell	1
+SpecUp.PHYS-RES I	Suid Fillet	1
+SpecUp.PHYS-RES II	Cinicula Shell	1
+SpecUp.PHYS-RES II	Falsaxum Shell	1
+SpecUp.PHYS-RES II	Suid Fillet	1
+SpecUp.PHYS-RES III	Cinicula Shell	1
+SpecUp.PHYS-RES III	Falsaxum Shell	1
+SpecUp.PHYS-RES III	Suid Fillet	1
+SpecUp.PHYS-RES IV	Cinicula Shell	2
+SpecUp.PHYS-RES IV	Falsaxum Shell	2
+SpecUp.PHYS-RES IV	Suid Fillet	2
+SpecUp.PHYS-RES V	Cinicula Shell	2
+SpecUp.PHYS-RES V	Falsaxum Shell	2
+SpecUp.PHYS-RES V	Suid Fillet	2
+SpecUp.PHYS-RES VI	Cinicula Shell	2
+SpecUp.PHYS-RES VI	Falsaxum Shell	2
+SpecUp.PHYS-RES VI	Suid Fillet	2
+SpecUp.PHYS-RES VII	Cinicula Shell	2
+SpecUp.PHYS-RES VII	Falsaxum Shell	2
+SpecUp.PHYS-RES VII	Suid Fillet	2
+SpecUp.PHYS-RES VIII	Cinicula Shell	2
+SpecUp.PHYS-RES VIII	Falsaxum Shell	2
+SpecUp.PHYS-RES VIII	Suid Fillet	2
+SpecUp.PHYS-RES IX	Cinicula Shell	3
+SpecUp.PHYS-RES IX	Falsaxum Shell	3
+SpecUp.PHYS-RES IX	Suid Fillet	3
+SpecUp.PHYS-RES X	Cinicula Shell	3
+SpecUp.PHYS-RES X	Ictus Shell	3
+SpecUp.PHYS-RES X	Golden Blatta Wing	3
+SpecUp.PHYS-RES XI	Cinicula Shell	3
+SpecUp.PHYS-RES XI	Ictus Shell	3
+SpecUp.PHYS-RES XI	Golden Blatta Wing	3
+SpecUp.PHYS-RES XII	Cinicula Shell	3
+SpecUp.PHYS-RES XII	Ictus Shell	3
+SpecUp.PHYS-RES XII	Golden Blatta Wing	3
+SpecUp.PHYS-RES XIII	Cinicula Shell	3
+SpecUp.PHYS-RES XIII	Ictus Shell	3
+SpecUp.PHYS-RES XIII	Golden Blatta Wing	3
+SpecUp.PHYS-RES XIV	Cinicula Shell	4
+SpecUp.PHYS-RES XIV	Ictus Shell	4
+SpecUp.PHYS-RES XIV	Golden Blatta Wing	4
+SpecUp.PHYS-RES XV	Cinicula Shell	4
+SpecUp.PHYS-RES XV	Ictus Shell	4
+SpecUp.PHYS-RES XV	Golden Blatta Wing	4
+SpecUp.PHYS-RES XVI	Cinicula Shell	4
+SpecUp.PHYS-RES XVI	Ictus Shell	4
+SpecUp.PHYS-RES XVI	Golden Blatta Wing	4
+SpecUp.PHYS-RES XVII	Cinicula Shell	4
+SpecUp.PHYS-RES XVII	Ictus Shell	4
+SpecUp.PHYS-RES XVII	Golden Blatta Wing	4
+SpecUp.PHYS-RES XVIII	Cinicula Shell	4
+SpecUp.PHYS-RES XVIII	Ictus Shell	4
+SpecUp.PHYS-RES XVIII	Golden Blatta Wing	4
+SpecUp.PHYS-RES XIX	Cinicula Shell	5
+SpecUp.PHYS-RES XIX	Ictus Shell	5
+SpecUp.PHYS-RES XIX	Golden Blatta Wing	5
+SpecUp.BEAM-RES I	Lead Carapace	1
+SpecUp.BEAM-RES I	Ocher Stabilizer	1
+SpecUp.BEAM-RES I	Adsecula Gold Nugget	1
+SpecUp.BEAM-RES II	Lead Carapace	1
+SpecUp.BEAM-RES II	Ocher Stabilizer	1
+SpecUp.BEAM-RES II	Adsecula Gold Nugget	1
+SpecUp.BEAM-RES III	Lead Carapace	1
+SpecUp.BEAM-RES III	Ocher Stabilizer	1
+SpecUp.BEAM-RES III	Adsecula Gold Nugget	1
+SpecUp.BEAM-RES IV	Lead Carapace	2
+SpecUp.BEAM-RES IV	Ocher Stabilizer	2
+SpecUp.BEAM-RES IV	Adsecula Gold Nugget	2
+SpecUp.BEAM-RES V	Lead Carapace	2
+SpecUp.BEAM-RES V	Ocher Stabilizer	2
+SpecUp.BEAM-RES V	Adsecula Gold Nugget	2
+SpecUp.BEAM-RES VI	Lead Carapace	2
+SpecUp.BEAM-RES VI	Ocher Stabilizer	2
+SpecUp.BEAM-RES VI	Adsecula Gold Nugget	2
+SpecUp.BEAM-RES VII	Lead Carapace	2
+SpecUp.BEAM-RES VII	Ocher Stabilizer	2
+SpecUp.BEAM-RES VII	Adsecula Gold Nugget	2
+SpecUp.BEAM-RES VIII	Lead Carapace	2
+SpecUp.BEAM-RES VIII	Ocher Stabilizer	2
+SpecUp.BEAM-RES VIII	Adsecula Gold Nugget	2
+SpecUp.BEAM-RES IX	Lead Carapace	3
+SpecUp.BEAM-RES IX	Ocher Stabilizer	3
+SpecUp.BEAM-RES IX	Adsecula Gold Nugget	3
+SpecUp.BEAM-RES X	Lead Carapace	3
+SpecUp.BEAM-RES X	Blue Milsaadi Hood	3
+SpecUp.BEAM-RES X	Pink Ceto Membrane	3
+SpecUp.BEAM-RES XI	Lead Carapace	3
+SpecUp.BEAM-RES XI	Blue Milsaadi Hood	3
+SpecUp.BEAM-RES XI	Pink Ceto Membrane	3
+SpecUp.BEAM-RES XII	Lead Carapace	3
+SpecUp.BEAM-RES XII	Blue Milsaadi Hood	3
+SpecUp.BEAM-RES XII	Pink Ceto Membrane	3
+SpecUp.BEAM-RES XIII	Lead Carapace	3
+SpecUp.BEAM-RES XIII	Blue Milsaadi Hood	3
+SpecUp.BEAM-RES XIII	Pink Ceto Membrane	3
+SpecUp.BEAM-RES XIV	Lead Carapace	4
+SpecUp.BEAM-RES XIV	Blue Milsaadi Hood	4
+SpecUp.BEAM-RES XIV	Pink Ceto Membrane	4
+SpecUp.BEAM-RES XV	Lead Carapace	4
+SpecUp.BEAM-RES XV	Blue Milsaadi Hood	4
+SpecUp.BEAM-RES XV	Pink Ceto Membrane	4
+SpecUp.BEAM-RES XVI	Lead Carapace	4
+SpecUp.BEAM-RES XVI	Blue Milsaadi Hood	4
+SpecUp.BEAM-RES XVI	Pink Ceto Membrane	4
+SpecUp.BEAM-RES XVII	Lead Carapace	4
+SpecUp.BEAM-RES XVII	Blue Milsaadi Hood	4
+SpecUp.BEAM-RES XVII	Pink Ceto Membrane	4
+SpecUp.BEAM-RES XVIII	Lead Carapace	4
+SpecUp.BEAM-RES XVIII	Blue Milsaadi Hood	4
+SpecUp.BEAM-RES XVIII	Pink Ceto Membrane	4
+SpecUp.BEAM-RES XIX	Lead Carapace	5
+SpecUp.BEAM-RES XIX	Blue Milsaadi Hood	5
+SpecUp.BEAM-RES XIX	Pink Ceto Membrane	5
+SpecUp.ELEC-RES I	Squishy Cartilage	1
+SpecUp.ELEC-RES I	Stout Purgovent Extract	1
+SpecUp.ELEC-RES I	Lepyx Elastic Cell	1
+SpecUp.ELEC-RES II	Squishy Cartilage	1
+SpecUp.ELEC-RES II	Stout Purgovent Extract	1
+SpecUp.ELEC-RES II	Lepyx Elastic Cell	1
+SpecUp.ELEC-RES III	Squishy Cartilage	1
+SpecUp.ELEC-RES III	Stout Purgovent Extract	1
+SpecUp.ELEC-RES III	Lepyx Elastic Cell	1
+SpecUp.ELEC-RES IV	Squishy Cartilage	2
+SpecUp.ELEC-RES IV	Stout Purgovent Extract	2
+SpecUp.ELEC-RES IV	Lepyx Elastic Cell	2
+SpecUp.ELEC-RES V	Squishy Cartilage	2
+SpecUp.ELEC-RES V	Stout Purgovent Extract	2
+SpecUp.ELEC-RES V	Lepyx Elastic Cell	2
+SpecUp.ELEC-RES VI	Squishy Cartilage	2
+SpecUp.ELEC-RES VI	Stout Purgovent Extract	2
+SpecUp.ELEC-RES VI	Lepyx Elastic Cell	2
+SpecUp.ELEC-RES VII	Squishy Cartilage	2
+SpecUp.ELEC-RES VII	Stout Purgovent Extract	2
+SpecUp.ELEC-RES VII	Lepyx Elastic Cell	2
+SpecUp.ELEC-RES VIII	Squishy Cartilage	2
+SpecUp.ELEC-RES VIII	Stout Purgovent Extract	2
+SpecUp.ELEC-RES VIII	Lepyx Elastic Cell	2
+SpecUp.ELEC-RES IX	Squishy Cartilage	3
+SpecUp.ELEC-RES IX	Stout Purgovent Extract	3
+SpecUp.ELEC-RES IX	Lepyx Elastic Cell	3
+SpecUp.ELEC-RES X	Squishy Cartilage	3
+SpecUp.ELEC-RES X	Purple Scintimure Tentacle	3
+SpecUp.ELEC-RES X	Aeviter Membrane	3
+SpecUp.ELEC-RES XI	Squishy Cartilage	3
+SpecUp.ELEC-RES XI	Purple Scintimure Tentacle	3
+SpecUp.ELEC-RES XI	Aeviter Membrane	3
+SpecUp.ELEC-RES XII	Squishy Cartilage	3
+SpecUp.ELEC-RES XII	Purple Scintimure Tentacle	3
+SpecUp.ELEC-RES XII	Aeviter Membrane	3
+SpecUp.ELEC-RES XIII	Squishy Cartilage	3
+SpecUp.ELEC-RES XIII	Purple Scintimure Tentacle	3
+SpecUp.ELEC-RES XIII	Aeviter Membrane	3
+SpecUp.ELEC-RES XIV	Squishy Cartilage	4
+SpecUp.ELEC-RES XIV	Purple Scintimure Tentacle	4
+SpecUp.ELEC-RES XIV	Aeviter Membrane	4
+SpecUp.ELEC-RES XV	Squishy Cartilage	4
+SpecUp.ELEC-RES XV	Purple Scintimure Tentacle	4
+SpecUp.ELEC-RES XV	Aeviter Membrane	4
+SpecUp.ELEC-RES XVI	Squishy Cartilage	4
+SpecUp.ELEC-RES XVI	Purple Scintimure Tentacle	4
+SpecUp.ELEC-RES XVI	Aeviter Membrane	4
+SpecUp.ELEC-RES XVII	Squishy Cartilage	4
+SpecUp.ELEC-RES XVII	Purple Scintimure Tentacle	4
+SpecUp.ELEC-RES XVII	Aeviter Membrane	4
+SpecUp.ELEC-RES XVIII	Squishy Cartilage	4
+SpecUp.ELEC-RES XVIII	Purple Scintimure Tentacle	4
+SpecUp.ELEC-RES XVIII	Aeviter Membrane	4
+SpecUp.ELEC-RES XIX	Squishy Cartilage	5
+SpecUp.ELEC-RES XIX	Purple Scintimure Tentacle	5
+SpecUp.ELEC-RES XIX	Aeviter Membrane	5
+SpecUp.THERM-RES I	Shiny Copper Caro Plate	1
+SpecUp.THERM-RES I	Quo Pod	1
+SpecUp.THERM-RES I	Potamus Life Lung	1
+SpecUp.THERM-RES II	Shiny Copper Caro Plate	1
+SpecUp.THERM-RES II	Quo Pod	1
+SpecUp.THERM-RES II	Potamus Life Lung	1
+SpecUp.THERM-RES III	Shiny Copper Caro Plate	1
+SpecUp.THERM-RES III	Quo Pod	1
+SpecUp.THERM-RES III	Potamus Life Lung	1
+SpecUp.THERM-RES IV	Shiny Copper Caro Plate	2
+SpecUp.THERM-RES IV	Quo Pod	2
+SpecUp.THERM-RES IV	Potamus Life Lung	2
+SpecUp.THERM-RES V	Shiny Copper Caro Plate	2
+SpecUp.THERM-RES V	Quo Pod	2
+SpecUp.THERM-RES V	Potamus Life Lung	2
+SpecUp.THERM-RES VI	Shiny Copper Caro Plate	2
+SpecUp.THERM-RES VI	Quo Pod	2
+SpecUp.THERM-RES VI	Potamus Life Lung	2
+SpecUp.THERM-RES VII	Shiny Copper Caro Plate	2
+SpecUp.THERM-RES VII	Quo Pod	2
+SpecUp.THERM-RES VII	Potamus Life Lung	2
+SpecUp.THERM-RES VIII	Shiny Copper Caro Plate	2
+SpecUp.THERM-RES VIII	Quo Pod	2
+SpecUp.THERM-RES VIII	Potamus Life Lung	2
+SpecUp.THERM-RES IX	Shiny Copper Caro Plate	3
+SpecUp.THERM-RES IX	Quo Pod	3
+SpecUp.THERM-RES IX	Potamus Life Lung	3
+SpecUp.THERM-RES X	Shiny Copper Caro Plate	3
+SpecUp.THERM-RES X	Scorching Giant Cells	3
+SpecUp.THERM-RES X	Tersqual Fire Pouch	3
+SpecUp.THERM-RES XI	Shiny Copper Caro Plate	3
+SpecUp.THERM-RES XI	Scorching Giant Cells	3
+SpecUp.THERM-RES XI	Tersqual Fire Pouch	3
+SpecUp.THERM-RES XII	Shiny Copper Caro Plate	3
+SpecUp.THERM-RES XII	Scorching Giant Cells	3
+SpecUp.THERM-RES XII	Tersqual Fire Pouch	3
+SpecUp.THERM-RES XIII	Shiny Copper Caro Plate	3
+SpecUp.THERM-RES XIII	Scorching Giant Cells	3
+SpecUp.THERM-RES XIII	Tersqual Fire Pouch	3
+SpecUp.THERM-RES XIV	Shiny Copper Caro Plate	4
+SpecUp.THERM-RES XIV	Scorching Giant Cells	4
+SpecUp.THERM-RES XIV	Tersqual Fire Pouch	4
+SpecUp.THERM-RES XV	Shiny Copper Caro Plate	4
+SpecUp.THERM-RES XV	Scorching Giant Cells	4
+SpecUp.THERM-RES XV	Tersqual Fire Pouch	4
+SpecUp.THERM-RES XVI	Shiny Copper Caro Plate	4
+SpecUp.THERM-RES XVI	Scorching Giant Cells	4
+SpecUp.THERM-RES XVI	Tersqual Fire Pouch	4
+SpecUp.THERM-RES XVII	Shiny Copper Caro Plate	4
+SpecUp.THERM-RES XVII	Scorching Giant Cells	4
+SpecUp.THERM-RES XVII	Tersqual Fire Pouch	4
+SpecUp.THERM-RES XVIII	Shiny Copper Caro Plate	4
+SpecUp.THERM-RES XVIII	Scorching Giant Cells	4
+SpecUp.THERM-RES XVIII	Tersqual Fire Pouch	4
+SpecUp.THERM-RES XIX	Shiny Copper Caro Plate	5
+SpecUp.THERM-RES XIX	Scorching Giant Cells	5
+SpecUp.THERM-RES XIX	Tersqual Fire Pouch	5
+SpecUp.ETHER-RES I	Opaque Mirror	1
+SpecUp.ETHER-RES I	Upgraded Sensor Part	1
+SpecUp.ETHER-RES I	Medicinal Blatta Oil	1
+SpecUp.ETHER-RES II	Opaque Mirror	1
+SpecUp.ETHER-RES II	Upgraded Sensor Part	1
+SpecUp.ETHER-RES II	Medicinal Blatta Oil	1
+SpecUp.ETHER-RES III	Opaque Mirror	1
+SpecUp.ETHER-RES III	Upgraded Sensor Part	1
+SpecUp.ETHER-RES III	Medicinal Blatta Oil	1
+SpecUp.ETHER-RES IV	Opaque Mirror	2
+SpecUp.ETHER-RES IV	Upgraded Sensor Part	2
+SpecUp.ETHER-RES IV	Medicinal Blatta Oil	2
+SpecUp.ETHER-RES V	Opaque Mirror	2
+SpecUp.ETHER-RES V	Upgraded Sensor Part	2
+SpecUp.ETHER-RES V	Medicinal Blatta Oil	2
+SpecUp.ETHER-RES VI	Opaque Mirror	2
+SpecUp.ETHER-RES VI	Upgraded Sensor Part	2
+SpecUp.ETHER-RES VI	Medicinal Blatta Oil	2
+SpecUp.ETHER-RES VII	Opaque Mirror	2
+SpecUp.ETHER-RES VII	Upgraded Sensor Part	2
+SpecUp.ETHER-RES VII	Medicinal Blatta Oil	2
+SpecUp.ETHER-RES VIII	Opaque Mirror	2
+SpecUp.ETHER-RES VIII	Upgraded Sensor Part	2
+SpecUp.ETHER-RES VIII	Medicinal Blatta Oil	2
+SpecUp.ETHER-RES IX	Opaque Mirror	3
+SpecUp.ETHER-RES IX	Upgraded Sensor Part	3
+SpecUp.ETHER-RES IX	Medicinal Blatta Oil	3
+SpecUp.ETHER-RES X	Opaque Mirror	3
+SpecUp.ETHER-RES X	Red Milsaadi Hood	3
+SpecUp.ETHER-RES X	Gold Ceto Membrane	3
+SpecUp.ETHER-RES XI	Opaque Mirror	3
+SpecUp.ETHER-RES XI	Red Milsaadi Hood	3
+SpecUp.ETHER-RES XI	Gold Ceto Membrane	3
+SpecUp.ETHER-RES XII	Opaque Mirror	3
+SpecUp.ETHER-RES XII	Red Milsaadi Hood	3
+SpecUp.ETHER-RES XII	Gold Ceto Membrane	3
+SpecUp.ETHER-RES XIII	Opaque Mirror	3
+SpecUp.ETHER-RES XIII	Red Milsaadi Hood	3
+SpecUp.ETHER-RES XIII	Gold Ceto Membrane	3
+SpecUp.ETHER-RES XIV	Opaque Mirror	4
+SpecUp.ETHER-RES XIV	Red Milsaadi Hood	4
+SpecUp.ETHER-RES XIV	Gold Ceto Membrane	4
+SpecUp.ETHER-RES XV	Opaque Mirror	4
+SpecUp.ETHER-RES XV	Red Milsaadi Hood	4
+SpecUp.ETHER-RES XV	Gold Ceto Membrane	4
+SpecUp.ETHER-RES XVI	Opaque Mirror	4
+SpecUp.ETHER-RES XVI	Red Milsaadi Hood	4
+SpecUp.ETHER-RES XVI	Gold Ceto Membrane	4
+SpecUp.ETHER-RES XVII	Opaque Mirror	4
+SpecUp.ETHER-RES XVII	Red Milsaadi Hood	4
+SpecUp.ETHER-RES XVII	Gold Ceto Membrane	4
+SpecUp.ETHER-RES XVIII	Opaque Mirror	4
+SpecUp.ETHER-RES XVIII	Red Milsaadi Hood	4
+SpecUp.ETHER-RES XVIII	Gold Ceto Membrane	4
+SpecUp.ETHER-RES XIX	Opaque Mirror	5
+SpecUp.ETHER-RES XIX	Red Milsaadi Hood	5
+SpecUp.ETHER-RES XIX	Gold Ceto Membrane	5
+SpecUp.GRAV-RES I	Large Hoof	1
+SpecUp.GRAV-RES I	Genuine Plate	1
+SpecUp.GRAV-RES I	Tricolored Ovis Meat	1
+SpecUp.GRAV-RES II	Large Hoof	1
+SpecUp.GRAV-RES II	Genuine Plate	1
+SpecUp.GRAV-RES II	Tricolored Ovis Meat	1
+SpecUp.GRAV-RES III	Large Hoof	1
+SpecUp.GRAV-RES III	Genuine Plate	1
+SpecUp.GRAV-RES III	Tricolored Ovis Meat	1
+SpecUp.GRAV-RES IV	Large Hoof	2
+SpecUp.GRAV-RES IV	Genuine Plate	2
+SpecUp.GRAV-RES IV	Tricolored Ovis Meat	2
+SpecUp.GRAV-RES V	Large Hoof	2
+SpecUp.GRAV-RES V	Genuine Plate	2
+SpecUp.GRAV-RES V	Tricolored Ovis Meat	2
+SpecUp.GRAV-RES VI	Large Hoof	2
+SpecUp.GRAV-RES VI	Genuine Plate	2
+SpecUp.GRAV-RES VI	Tricolored Ovis Meat	2
+SpecUp.GRAV-RES VII	Large Hoof	2
+SpecUp.GRAV-RES VII	Genuine Plate	2
+SpecUp.GRAV-RES VII	Tricolored Ovis Meat	2
+SpecUp.GRAV-RES VIII	Large Hoof	2
+SpecUp.GRAV-RES VIII	Genuine Plate	2
+SpecUp.GRAV-RES VIII	Tricolored Ovis Meat	2
+SpecUp.GRAV-RES IX	Large Hoof	3
+SpecUp.GRAV-RES IX	Genuine Plate	3
+SpecUp.GRAV-RES IX	Tricolored Ovis Meat	3
+SpecUp.GRAV-RES X	Large Hoof	3
+SpecUp.GRAV-RES X	Oc-serv Southern Crest	3
+SpecUp.GRAV-RES X	Oc-serv Eastern Crest	3
+SpecUp.GRAV-RES XI	Large Hoof	3
+SpecUp.GRAV-RES XI	Oc-serv Southern Crest	3
+SpecUp.GRAV-RES XI	Oc-serv Eastern Crest	3
+SpecUp.GRAV-RES XII	Large Hoof	3
+SpecUp.GRAV-RES XII	Oc-serv Southern Crest	3
+SpecUp.GRAV-RES XII	Oc-serv Eastern Crest	3
+SpecUp.GRAV-RES XIII	Large Hoof	3
+SpecUp.GRAV-RES XIII	Oc-serv Southern Crest	3
+SpecUp.GRAV-RES XIII	Oc-serv Eastern Crest	3
+SpecUp.GRAV-RES XIV	Large Hoof	4
+SpecUp.GRAV-RES XIV	Oc-serv Southern Crest	4
+SpecUp.GRAV-RES XIV	Oc-serv Eastern Crest	4
+SpecUp.GRAV-RES XV	Large Hoof	4
+SpecUp.GRAV-RES XV	Oc-serv Southern Crest	4
+SpecUp.GRAV-RES XV	Oc-serv Eastern Crest	4
+SpecUp.GRAV-RES XVI	Large Hoof	4
+SpecUp.GRAV-RES XVI	Oc-serv Southern Crest	4
+SpecUp.GRAV-RES XVI	Oc-serv Eastern Crest	4
+SpecUp.GRAV-RES XVII	Large Hoof	4
+SpecUp.GRAV-RES XVII	Oc-serv Southern Crest	4
+SpecUp.GRAV-RES XVII	Oc-serv Eastern Crest	4
+SpecUp.GRAV-RES XVIII	Large Hoof	4
+SpecUp.GRAV-RES XVIII	Oc-serv Southern Crest	4
+SpecUp.GRAV-RES XVIII	Oc-serv Eastern Crest	4
+SpecUp.GRAV-RES XIX	Large Hoof	5
+SpecUp.GRAV-RES XIX	Oc-serv Southern Crest	5
+SpecUp.GRAV-RES XIX	Oc-serv Eastern Crest	5
+SpecUp.FUEL-MAX I	Shiny Black Caro Plate	1
+SpecUp.FUEL-MAX II	Shiny Black Caro Plate	1
+SpecUp.FUEL-MAX III	Shiny Black Caro Plate	1
+SpecUp.FUEL-MAX IV	Shiny Black Caro Plate	2
+SpecUp.FUEL-MAX V	Shiny Black Caro Plate	2
+SpecUp.FUEL-MAX VI	Shiny Black Caro Plate	2
+SpecUp.FUEL-MAX VII	Shiny Black Caro Plate	2
+SpecUp.FUEL-MAX VIII	Shiny Black Caro Plate	2
+SpecUp.FUEL-MAX IX	Shiny Black Caro Plate	3
+SpecUp.FUEL-MAX X	Shiny Black Caro Plate	3
+SpecUp.FUEL-MAX XI	Shiny Black Caro Plate	3
+SpecUp.FUEL-MAX XII	Shiny Black Caro Plate	3
+SpecUp.FUEL-MAX XIII	Shiny Black Caro Plate	3
+SpecUp.FUEL-MAX XIV	Shiny Black Caro Plate	4
+SpecUp.FUEL-MAX XV	Shiny Black Caro Plate	4
+SpecUp.FUEL-MAX XVI	Shiny Black Caro Plate	4
+SpecUp.FUEL-MAX XVII	Shiny Black Caro Plate	4
+SpecUp.FUEL-MAX XVIII	Shiny Black Caro Plate	4
+SpecUp.FUEL-MAX XIX	Shiny Black Caro Plate	5
+SpecUp.FUEL-COST I	Amber Cervus Antlers	1
+SpecUp.FUEL-COST II	Amber Cervus Antlers	1
+SpecUp.FUEL-COST III	Amber Cervus Antlers	1
+SpecUp.FUEL-COST IV	Amber Cervus Antlers	2
+SpecUp.FUEL-COST V	Amber Cervus Antlers	2
+SpecUp.FUEL-COST VI	Amber Cervus Antlers	2
+SpecUp.FUEL-COST VII	Amber Cervus Antlers	2
+SpecUp.FUEL-COST VIII	Amber Cervus Antlers	2
+SpecUp.FUEL-COST IX	Amber Cervus Antlers	3
+SpecUp.FUEL-COST X	Amber Cervus Antlers	3
+SpecUp.FUEL-COST XI	Amber Cervus Antlers	3
+SpecUp.FUEL-COST XII	Amber Cervus Antlers	3
+SpecUp.FUEL-COST XIII	Amber Cervus Antlers	3
+SpecUp.FUEL-COST XIV	Amber Cervus Antlers	4
+SpecUp.FUEL-COST XV	Amber Cervus Antlers	4
+SpecUp.FUEL-COST XVI	Amber Cervus Antlers	4
+SpecUp.FUEL-COST XVII	Amber Cervus Antlers	4
+SpecUp.FUEL-COST XVIII	Amber Cervus Antlers	4
+SpecUp.FUEL-COST XIX	Amber Cervus Antlers	5
+SpecUp.FUEL-PARK I	Amber Aetrygon Horn	1
+SpecUp.FUEL-PARK II	Amber Aetrygon Horn	1
+SpecUp.FUEL-PARK III	Amber Aetrygon Horn	1
+SpecUp.FUEL-PARK IV	Amber Aetrygon Horn	2
+SpecUp.FUEL-PARK V	Amber Aetrygon Horn	2
+SpecUp.FUEL-PARK VI	Amber Aetrygon Horn	2
+SpecUp.FUEL-PARK VII	Amber Aetrygon Horn	2
+SpecUp.FUEL-PARK VIII	Amber Aetrygon Horn	2
+SpecUp.FUEL-PARK IX	Amber Aetrygon Horn	3
+SpecUp.FUEL-PARK X	Amber Aetrygon Horn	3
+SpecUp.FUEL-PARK XI	Amber Aetrygon Horn	3
+SpecUp.FUEL-PARK XII	Amber Aetrygon Horn	3
+SpecUp.FUEL-PARK XIII	Amber Aetrygon Horn	3
+SpecUp.FUEL-PARK XIV	Amber Aetrygon Horn	4
+SpecUp.FUEL-PARK XV	Amber Aetrygon Horn	4
+SpecUp.FUEL-PARK XVI	Amber Aetrygon Horn	4
+SpecUp.FUEL-PARK XVII	Amber Aetrygon Horn	4
+SpecUp.FUEL-PARK XVIII	Amber Aetrygon Horn	4
+SpecUp.FUEL-PARK XIX	Amber Aetrygon Horn	5
+SpecUp.FUEL-BIND I	Golden Gyrocompass	1
+SpecUp.FUEL-BIND II	Golden Gyrocompass	1
+SpecUp.FUEL-BIND III	Golden Gyrocompass	1
+SpecUp.FUEL-BIND IV	Golden Gyrocompass	2
+SpecUp.FUEL-BIND V	Golden Gyrocompass	2
+SpecUp.FUEL-BIND VI	Golden Gyrocompass	2
+SpecUp.FUEL-BIND VII	Golden Gyrocompass	2
+SpecUp.FUEL-BIND VIII	Golden Gyrocompass	2
+SpecUp.FUEL-BIND IX	Golden Gyrocompass	3
+SpecUp.FUEL-BIND X	Golden Gyrocompass	3
+SpecUp.FUEL-BIND XI	Golden Gyrocompass	3
+SpecUp.FUEL-BIND XII	Golden Gyrocompass	3
+SpecUp.FUEL-BIND XIII	Golden Gyrocompass	3
+SpecUp.FUEL-BIND XIV	Golden Gyrocompass	4
+SpecUp.FUEL-BIND XV	Golden Gyrocompass	4
+SpecUp.FUEL-BIND XVI	Golden Gyrocompass	4
+SpecUp.FUEL-BIND XVII	Golden Gyrocompass	4
+SpecUp.FUEL-BIND XVIII	Golden Gyrocompass	4
+SpecUp.FUEL-BIND XIX	Golden Gyrocompass	5
+SpecUp.FUEL-OD I	Scirpo Sulfuric Acid Sac	1
+SpecUp.FUEL-OD II	Scirpo Sulfuric Acid Sac	1
+SpecUp.FUEL-OD III	Scirpo Sulfuric Acid Sac	1
+SpecUp.FUEL-OD IV	Scirpo Sulfuric Acid Sac	2
+SpecUp.FUEL-OD V	Scirpo Sulfuric Acid Sac	2
+SpecUp.FUEL-OD VI	Scirpo Sulfuric Acid Sac	2
+SpecUp.FUEL-OD VII	Scirpo Sulfuric Acid Sac	2
+SpecUp.FUEL-OD VIII	Scirpo Sulfuric Acid Sac	2
+SpecUp.FUEL-OD IX	Scirpo Sulfuric Acid Sac	3
+SpecUp.FUEL-OD X	Scirpo Sulfuric Acid Sac	3
+SpecUp.FUEL-OD XI	Scirpo Sulfuric Acid Sac	3
+SpecUp.FUEL-OD XII	Scirpo Sulfuric Acid Sac	3
+SpecUp.FUEL-OD XIII	Scirpo Sulfuric Acid Sac	3
+SpecUp.FUEL-OD XIV	Scirpo Sulfuric Acid Sac	4
+SpecUp.FUEL-OD XV	Scirpo Sulfuric Acid Sac	4
+SpecUp.FUEL-OD XVI	Scirpo Sulfuric Acid Sac	4
+SpecUp.FUEL-OD XVII	Scirpo Sulfuric Acid Sac	4
+SpecUp.FUEL-OD XVIII	Scirpo Sulfuric Acid Sac	4
+SpecUp.FUEL-OD XIX	Scirpo Sulfuric Acid Sac	5
+Custom.WP-ATK I	Refined Horn	1
+Custom.WP-ATK I	Insect Jaw	1
+Custom.WP-ATK I	Strong Purgovent Extract	1
+Custom.WP-ATK II	Refined Horn	1
+Custom.WP-ATK II	Insect Jaw	1
+Custom.WP-ATK II	Strong Purgovent Extract	1
+Custom.WP-ATK III	Refined Horn	1
+Custom.WP-ATK III	Insect Jaw	1
+Custom.WP-ATK III	Strong Purgovent Extract	1
+Custom.WP-ATK IV	Refined Horn	2
+Custom.WP-ATK IV	Insect Jaw	2
+Custom.WP-ATK IV	Strong Purgovent Extract	2
+Custom.WP-ATK V	Refined Horn	2
+Custom.WP-ATK V	Insect Jaw	2
+Custom.WP-ATK V	Strong Purgovent Extract	2
+Custom.WP-ATK VI	Refined Horn	2
+Custom.WP-ATK VI	Insect Jaw	2
+Custom.WP-ATK VI	Strong Purgovent Extract	2
+Custom.WP-ATK VII	Refined Horn	2
+Custom.WP-ATK VII	Insect Jaw	2
+Custom.WP-ATK VII	Strong Purgovent Extract	2
+Custom.WP-ATK VIII	Refined Horn	2
+Custom.WP-ATK VIII	Insect Jaw	2
+Custom.WP-ATK VIII	Strong Purgovent Extract	2
+Custom.WP-ATK IX	Refined Horn	3
+Custom.WP-ATK IX	Insect Jaw	3
+Custom.WP-ATK IX	Strong Purgovent Extract	3
+Custom.WP-ATK X	Quality Giant Cells	3
+Custom.WP-ATK X	Visigel Poison Orb	3
+Custom.WP-ATK X	Silver Cantor Tooth	3
+Custom.WP-ATK XI	Quality Giant Cells	3
+Custom.WP-ATK XI	Visigel Poison Orb	3
+Custom.WP-ATK XI	Silver Cantor Tooth	3
+Custom.WP-ATK XII	Quality Giant Cells	3
+Custom.WP-ATK XII	Visigel Poison Orb	3
+Custom.WP-ATK XII	Silver Cantor Tooth	3
+Custom.WP-ATK XIII	Quality Giant Cells	3
+Custom.WP-ATK XIII	Visigel Poison Orb	3
+Custom.WP-ATK XIII	Silver Cantor Tooth	3
+Custom.WP-ATK XIV	Quality Giant Cells	4
+Custom.WP-ATK XIV	Visigel Poison Orb	4
+Custom.WP-ATK XIV	Silver Cantor Tooth	4
+Custom.WP-ATK XV	Quality Giant Cells	4
+Custom.WP-ATK XV	Visigel Poison Orb	4
+Custom.WP-ATK XV	Silver Cantor Tooth	4
+Custom.WP-ATK XVI	Quality Giant Cells	4
+Custom.WP-ATK XVI	Visigel Poison Orb	4
+Custom.WP-ATK XVI	Silver Cantor Tooth	4
+Custom.WP-ATK XVII	Quality Giant Cells	4
+Custom.WP-ATK XVII	Visigel Poison Orb	4
+Custom.WP-ATK XVII	Silver Cantor Tooth	4
+Custom.WP-ATK XVIII	Quality Giant Cells	4
+Custom.WP-ATK XVIII	Visigel Poison Orb	4
+Custom.WP-ATK XVIII	Silver Cantor Tooth	4
+Custom.WP-ATK XIX	Quality Giant Cells	5
+Custom.WP-ATK XIX	Visigel Poison Orb	5
+Custom.WP-ATK XIX	Silver Cantor Tooth	5
+Custom.WP-STABLE I	Poisonous Needle	1
+Custom.WP-STABLE II	Poisonous Needle	1
+Custom.WP-STABLE III	Poisonous Needle	1
+Custom.WP-STABLE IV	Poisonous Needle	2
+Custom.WP-STABLE V	Poisonous Needle	2
+Custom.WP-STABLE VI	Poisonous Needle	2
+Custom.WP-STABLE VII	Poisonous Needle	2
+Custom.WP-STABLE VIII	Poisonous Needle	2
+Custom.WP-STABLE IX	Poisonous Needle	3
+Custom.WP-STABLE X	Poisonous Needle	3
+Custom.WP-STABLE XI	Poisonous Needle	3
+Custom.WP-STABLE XII	Poisonous Needle	3
+Custom.WP-STABLE XIII	Poisonous Needle	3
+Custom.WP-STABLE XIV	Poisonous Needle	4
+Custom.WP-STABLE XV	Poisonous Needle	4
+Custom.WP-STABLE XVI	Poisonous Needle	4
+Custom.WP-STABLE XVII	Poisonous Needle	4
+Custom.WP-STABLE XVIII	Poisonous Needle	4
+Custom.WP-STABLE XIX	Poisonous Needle	5
+Custom.WP-DESTABLE I	Broken Pincer	1
+Custom.WP-DESTABLE II	Broken Pincer	1
+Custom.WP-DESTABLE III	Broken Pincer	1
+Custom.WP-DESTABLE IV	Broken Pincer	2
+Custom.WP-DESTABLE V	Broken Pincer	2
+Custom.WP-DESTABLE VI	Broken Pincer	2
+Custom.WP-DESTABLE VII	Broken Pincer	2
+Custom.WP-DESTABLE VIII	Broken Pincer	2
+Custom.WP-DESTABLE IX	Broken Pincer	3
+Custom.WP-DESTABLE X	Broken Pincer	3
+Custom.WP-DESTABLE XI	Broken Pincer	3
+Custom.WP-DESTABLE XII	Broken Pincer	3
+Custom.WP-DESTABLE XIII	Broken Pincer	3
+Custom.WP-DESTABLE XIV	Broken Pincer	4
+Custom.WP-DESTABLE XV	Broken Pincer	4
+Custom.WP-DESTABLE XVI	Broken Pincer	4
+Custom.WP-DESTABLE XVII	Broken Pincer	4
+Custom.WP-DESTABLE XVIII	Broken Pincer	4
+Custom.WP-DESTABLE XIX	Broken Pincer	5
+Custom.WP-RFL-MAG I	Genuine Shaft	1
+Custom.WP-RFL-MAG II	Genuine Shaft	1
+Custom.WP-RFL-MAG III	Genuine Shaft	1
+Custom.WP-RFL-MAG IV	Genuine Shaft	2
+Custom.WP-RFL-MAG V	Genuine Shaft	2
+Custom.WP-RFL-MAG VI	Genuine Shaft	2
+Custom.WP-RFL-MAG VII	Genuine Shaft	2
+Custom.WP-RFL-MAG VIII	Genuine Shaft	2
+Custom.WP-RFL-MAG IX	Genuine Shaft	3
+Custom.WP-RFL-MAG X	Genuine Shaft	3
+Custom.WP-RFL-MAG XI	Genuine Shaft	3
+Custom.WP-RFL-MAG XII	Genuine Shaft	3
+Custom.WP-RFL-MAG XIII	Genuine Shaft	3
+Custom.WP-RFL-MAG XIV	Genuine Shaft	4
+Custom.WP-RFL-MAG XV	Genuine Shaft	4
+Custom.WP-RFL-MAG XVI	Genuine Shaft	4
+Custom.WP-RFL-MAG XVII	Genuine Shaft	4
+Custom.WP-RFL-MAG XVIII	Genuine Shaft	4
+Custom.WP-RFL-MAG XIX	Genuine Shaft	5
+Custom.WP-MSL-MAG I	Genuine Shaft	1
+Custom.WP-MSL-MAG II	Genuine Shaft	1
+Custom.WP-MSL-MAG III	Genuine Shaft	1
+Custom.WP-MSL-MAG IV	Genuine Shaft	2
+Custom.WP-MSL-MAG V	Genuine Shaft	2
+Custom.WP-MSL-MAG VI	Genuine Shaft	2
+Custom.WP-MSL-MAG VII	Genuine Shaft	2
+Custom.WP-MSL-MAG VIII	Genuine Shaft	2
+Custom.WP-MSL-MAG IX	Genuine Shaft	3
+Custom.WP-MSL-MAG X	Genuine Shaft	3
+Custom.WP-MSL-MAG XI	Genuine Shaft	3
+Custom.WP-MSL-MAG XII	Genuine Shaft	3
+Custom.WP-MSL-MAG XIII	Genuine Shaft	3
+Custom.WP-MSL-MAG XIV	Genuine Shaft	4
+Custom.WP-MSL-MAG XV	Genuine Shaft	4
+Custom.WP-MSL-MAG XVI	Genuine Shaft	4
+Custom.WP-MSL-MAG XVII	Genuine Shaft	4
+Custom.WP-MSL-MAG XVIII	Genuine Shaft	4
+Custom.WP-MSL-MAG XIX	Genuine Shaft	5
+Custom.WP-SPEED I	Quality Fuse	1
+Custom.WP-SPEED I	Golden Simius Mane	1
+Custom.WP-SPEED I	Upgraded Shaft Part	1
+Custom.WP-SPEED II	Quality Fuse	1
+Custom.WP-SPEED II	Golden Simius Mane	1
+Custom.WP-SPEED II	Upgraded Shaft Part	1
+Custom.WP-SPEED III	Quality Fuse	1
+Custom.WP-SPEED III	Golden Simius Mane	1
+Custom.WP-SPEED III	Upgraded Shaft Part	1
+Custom.WP-SPEED IV	Quality Fuse	2
+Custom.WP-SPEED IV	Golden Simius Mane	2
+Custom.WP-SPEED IV	Upgraded Shaft Part	2
+Custom.WP-SPEED V	Quality Fuse	2
+Custom.WP-SPEED V	Golden Simius Mane	2
+Custom.WP-SPEED V	Upgraded Shaft Part	2
+Custom.WP-SPEED VI	Quality Fuse	2
+Custom.WP-SPEED VI	Golden Simius Mane	2
+Custom.WP-SPEED VI	Upgraded Shaft Part	2
+Custom.WP-SPEED VII	Quality Fuse	2
+Custom.WP-SPEED VII	Golden Simius Mane	2
+Custom.WP-SPEED VII	Upgraded Shaft Part	2
+Custom.WP-SPEED VIII	Quality Fuse	2
+Custom.WP-SPEED VIII	Golden Simius Mane	2
+Custom.WP-SPEED VIII	Upgraded Shaft Part	2
+Custom.WP-SPEED IX	Quality Fuse	3
+Custom.WP-SPEED IX	Golden Simius Mane	3
+Custom.WP-SPEED IX	Upgraded Shaft Part	3
+Custom.WP-SPEED X	Quality Fuse	3
+Custom.WP-SPEED X	Spathi Glyph	3
+Custom.WP-SPEED X	White Yggralith Nut	3
+Custom.WP-SPEED XI	Quality Fuse	3
+Custom.WP-SPEED XI	Spathi Glyph	3
+Custom.WP-SPEED XI	White Yggralith Nut	3
+Custom.WP-SPEED XII	Quality Fuse	3
+Custom.WP-SPEED XII	Spathi Glyph	3
+Custom.WP-SPEED XII	White Yggralith Nut	3
+Custom.WP-SPEED XIII	Quality Fuse	3
+Custom.WP-SPEED XIII	Spathi Glyph	3
+Custom.WP-SPEED XIII	White Yggralith Nut	3
+Custom.WP-SPEED XIV	Quality Fuse	4
+Custom.WP-SPEED XIV	Spathi Glyph	4
+Custom.WP-SPEED XIV	White Yggralith Nut	4
+Custom.WP-SPEED XV	Quality Fuse	4
+Custom.WP-SPEED XV	Spathi Glyph	4
+Custom.WP-SPEED XV	White Yggralith Nut	4
+Custom.WP-SPEED XVI	Quality Fuse	4
+Custom.WP-SPEED XVI	Spathi Glyph	4
+Custom.WP-SPEED XVI	White Yggralith Nut	4
+Custom.WP-SPEED XVII	Quality Fuse	4
+Custom.WP-SPEED XVII	Spathi Glyph	4
+Custom.WP-SPEED XVII	White Yggralith Nut	4
+Custom.WP-SPEED XVIII	Quality Fuse	4
+Custom.WP-SPEED XVIII	Spathi Glyph	4
+Custom.WP-SPEED XVIII	White Yggralith Nut	4
+Custom.WP-SPEED XIX	Quality Fuse	5
+Custom.WP-SPEED XIX	Spathi Glyph	5
+Custom.WP-SPEED XIX	White Yggralith Nut	5
+Custom.WP-R-RANGE I	Turba Straw	1
+Custom.WP-R-RANGE I	Used Cylinder	1
+Custom.WP-R-RANGE II	Turba Straw	1
+Custom.WP-R-RANGE II	Used Cylinder	1
+Custom.WP-R-RANGE III	Turba Straw	1
+Custom.WP-R-RANGE III	Used Cylinder	1
+Custom.WP-R-RANGE IV	Turba Straw	2
+Custom.WP-R-RANGE IV	Used Cylinder	2
+Custom.WP-R-RANGE V	Turba Straw	2
+Custom.WP-R-RANGE V	Used Cylinder	2
+Custom.WP-R-RANGE VI	Turba Straw	2
+Custom.WP-R-RANGE VI	Used Cylinder	2
+Custom.WP-R-RANGE VII	Turba Straw	2
+Custom.WP-R-RANGE VII	Used Cylinder	2
+Custom.WP-R-RANGE VIII	Turba Straw	2
+Custom.WP-R-RANGE VIII	Used Cylinder	2
+Custom.WP-R-RANGE IX	Turba Straw	3
+Custom.WP-R-RANGE IX	Used Cylinder	3
+Custom.WP-R-RANGE X	Turba Straw	3
+Custom.WP-R-RANGE X	Coronid Larynx	3
+Custom.WP-R-RANGE XI	Turba Straw	3
+Custom.WP-R-RANGE XI	Coronid Larynx	3
+Custom.WP-R-RANGE XII	Turba Straw	3
+Custom.WP-R-RANGE XII	Coronid Larynx	3
+Custom.WP-R-RANGE XIII	Turba Straw	3
+Custom.WP-R-RANGE XIII	Coronid Larynx	3
+Custom.WP-R-RANGE XIV	Turba Straw	4
+Custom.WP-R-RANGE XIV	Coronid Larynx	4
+Custom.WP-R-RANGE XV	Turba Straw	4
+Custom.WP-R-RANGE XV	Coronid Larynx	4
+Custom.WP-R-RANGE XVI	Turba Straw	4
+Custom.WP-R-RANGE XVI	Coronid Larynx	4
+Custom.WP-R-RANGE XVII	Turba Straw	4
+Custom.WP-R-RANGE XVII	Coronid Larynx	4
+Custom.WP-R-RANGE XVIII	Turba Straw	4
+Custom.WP-R-RANGE XVIII	Coronid Larynx	4
+Custom.WP-R-RANGE XIX	Turba Straw	5
+Custom.WP-R-RANGE XIX	Coronid Larynx	5
+Custom.WP-FUEL I	Hi-Spec Sensor Module	1
+Custom.WP-FUEL II	Hi-Spec Sensor Module	1
+Custom.WP-FUEL III	Hi-Spec Sensor Module	1
+Custom.WP-FUEL IV	Hi-Spec Sensor Module	2
+Custom.WP-FUEL V	Hi-Spec Sensor Module	2
+Custom.WP-FUEL VI	Hi-Spec Sensor Module	2
+Custom.WP-FUEL VII	Hi-Spec Sensor Module	2
+Custom.WP-FUEL VIII	Hi-Spec Sensor Module	2
+Custom.WP-FUEL IX	Hi-Spec Sensor Module	3
+Custom.WP-FUEL X	Hi-Spec Sensor Module	3
+Custom.WP-FUEL XI	Hi-Spec Sensor Module	3
+Custom.WP-FUEL XII	Hi-Spec Sensor Module	3
+Custom.WP-FUEL XIII	Hi-Spec Sensor Module	3
+Custom.WP-FUEL XIV	Hi-Spec Sensor Module	4
+Custom.WP-FUEL XV	Hi-Spec Sensor Module	4
+Custom.WP-FUEL XVI	Hi-Spec Sensor Module	4
+Custom.WP-FUEL XVII	Hi-Spec Sensor Module	4
+Custom.WP-FUEL XVIII	Hi-Spec Sensor Module	4
+Custom.WP-FUEL XIX	Hi-Spec Sensor Module	5
+Resist.STAGGER I	Scirpo Silk	1
+Resist.STAGGER II	Scirpo Silk	1
+Resist.STAGGER III	Scirpo Silk	1
+Resist.STAGGER IV	Scirpo Silk	2
+Resist.STAGGER V	Scirpo Silk	2
+Resist.STAGGER VI	Scirpo Silk	2
+Resist.STAGGER VII	Scirpo Silk	2
+Resist.STAGGER VIII	Scirpo Silk	2
+Resist.STAGGER IX	Scirpo Silk	3
+Resist.STAGGER X	Scirpo Silk	3
+Resist.STAGGER XI	Scirpo Silk	3
+Resist.STAGGER XII	Scirpo Silk	3
+Resist.STAGGER XIII	Scirpo Silk	3
+Resist.STAGGER XIV	Scirpo Silk	4
+Resist.STAGGER XV	Scirpo Silk	4
+Resist.STAGGER XVI	Scirpo Silk	4
+Resist.STAGGER XVII	Scirpo Silk	4
+Resist.STAGGER XVIII	Scirpo Silk	4
+Resist.STAGGER XIX	Scirpo Silk	5
+Resist.FLINCH I	Taut Leather	1
+Resist.FLINCH II	Taut Leather	1
+Resist.FLINCH III	Taut Leather	1
+Resist.FLINCH IV	Taut Leather	2
+Resist.FLINCH V	Taut Leather	2
+Resist.FLINCH VI	Taut Leather	2
+Resist.FLINCH VII	Taut Leather	2
+Resist.FLINCH VIII	Taut Leather	2
+Resist.FLINCH IX	Taut Leather	3
+Resist.FLINCH X	Taut Leather	3
+Resist.FLINCH XI	Taut Leather	3
+Resist.FLINCH XII	Taut Leather	3
+Resist.FLINCH XIII	Taut Leather	3
+Resist.FLINCH XIV	Taut Leather	4
+Resist.FLINCH XV	Taut Leather	4
+Resist.FLINCH XVI	Taut Leather	4
+Resist.FLINCH XVII	Taut Leather	4
+Resist.FLINCH XVIII	Taut Leather	4
+Resist.FLINCH XIX	Taut Leather	5
+Resist.TOPPLE I	Auravis Croaking Bag	1
+Resist.TOPPLE I	Smooth Tail Fin	1
+Resist.TOPPLE II	Auravis Croaking Bag	1
+Resist.TOPPLE II	Smooth Tail Fin	1
+Resist.TOPPLE III	Auravis Croaking Bag	1
+Resist.TOPPLE III	Smooth Tail Fin	1
+Resist.TOPPLE IV	Auravis Croaking Bag	2
+Resist.TOPPLE IV	Smooth Tail Fin	2
+Resist.TOPPLE V	Auravis Croaking Bag	2
+Resist.TOPPLE V	Smooth Tail Fin	2
+Resist.TOPPLE VI	Auravis Croaking Bag	2
+Resist.TOPPLE VI	Smooth Tail Fin	2
+Resist.TOPPLE VII	Auravis Croaking Bag	2
+Resist.TOPPLE VII	Smooth Tail Fin	2
+Resist.TOPPLE VIII	Auravis Croaking Bag	2
+Resist.TOPPLE VIII	Smooth Tail Fin	2
+Resist.TOPPLE IX	Auravis Croaking Bag	3
+Resist.TOPPLE IX	Smooth Tail Fin	3
+Resist.TOPPLE X	Auravis Croaking Bag	3
+Resist.TOPPLE X	Thick Coronid Hide	3
+Resist.TOPPLE XI	Auravis Croaking Bag	3
+Resist.TOPPLE XI	Thick Coronid Hide	3
+Resist.TOPPLE XII	Auravis Croaking Bag	3
+Resist.TOPPLE XII	Thick Coronid Hide	3
+Resist.TOPPLE XIII	Auravis Croaking Bag	3
+Resist.TOPPLE XIII	Thick Coronid Hide	3
+Resist.TOPPLE XIV	Auravis Croaking Bag	4
+Resist.TOPPLE XIV	Thick Coronid Hide	4
+Resist.TOPPLE XV	Auravis Croaking Bag	4
+Resist.TOPPLE XV	Thick Coronid Hide	4
+Resist.TOPPLE XVI	Auravis Croaking Bag	4
+Resist.TOPPLE XVI	Thick Coronid Hide	4
+Resist.TOPPLE XVII	Auravis Croaking Bag	4
+Resist.TOPPLE XVII	Thick Coronid Hide	4
+Resist.TOPPLE XVIII	Auravis Croaking Bag	4
+Resist.TOPPLE XVIII	Thick Coronid Hide	4
+Resist.TOPPLE XIX	Auravis Croaking Bag	5
+Resist.TOPPLE XIX	Thick Coronid Hide	5
+Resist.KNOCKBACK I	Lovely Pom Pom	1
+Resist.KNOCKBACK II	Lovely Pom Pom	1
+Resist.KNOCKBACK III	Lovely Pom Pom	1
+Resist.KNOCKBACK IV	Lovely Pom Pom	2
+Resist.KNOCKBACK V	Lovely Pom Pom	2
+Resist.KNOCKBACK VI	Lovely Pom Pom	2
+Resist.KNOCKBACK VII	Lovely Pom Pom	2
+Resist.KNOCKBACK VIII	Lovely Pom Pom	2
+Resist.KNOCKBACK IX	Lovely Pom Pom	3
+Resist.KNOCKBACK X	Lovely Pom Pom	3
+Resist.KNOCKBACK XI	Lovely Pom Pom	3
+Resist.KNOCKBACK XII	Lovely Pom Pom	3
+Resist.KNOCKBACK XIII	Lovely Pom Pom	3
+Resist.KNOCKBACK XIV	Lovely Pom Pom	4
+Resist.KNOCKBACK XV	Lovely Pom Pom	4
+Resist.KNOCKBACK XVI	Lovely Pom Pom	4
+Resist.KNOCKBACK XVII	Lovely Pom Pom	4
+Resist.KNOCKBACK XVIII	Lovely Pom Pom	4
+Resist.KNOCKBACK XIX	Lovely Pom Pom	5
+Resist.LAUNCH I	Auravis Laughing Bag	1
+Resist.LAUNCH I	Caecus Crest	1
+Resist.LAUNCH II	Auravis Laughing Bag	1
+Resist.LAUNCH II	Caecus Crest	1
+Resist.LAUNCH III	Auravis Laughing Bag	1
+Resist.LAUNCH III	Caecus Crest	1
+Resist.LAUNCH IV	Auravis Laughing Bag	2
+Resist.LAUNCH IV	Caecus Crest	2
+Resist.LAUNCH V	Auravis Laughing Bag	2
+Resist.LAUNCH V	Caecus Crest	2
+Resist.LAUNCH VI	Auravis Laughing Bag	2
+Resist.LAUNCH VI	Caecus Crest	2
+Resist.LAUNCH VII	Auravis Laughing Bag	2
+Resist.LAUNCH VII	Caecus Crest	2
+Resist.LAUNCH VIII	Auravis Laughing Bag	2
+Resist.LAUNCH VIII	Caecus Crest	2
+Resist.LAUNCH IX	Auravis Laughing Bag	3
+Resist.LAUNCH IX	Caecus Crest	3
+Resist.LAUNCH X	Auravis Laughing Bag	3
+Resist.LAUNCH X	Red Filiavent Tentacle	3
+Resist.LAUNCH XI	Auravis Laughing Bag	3
+Resist.LAUNCH XI	Red Filiavent Tentacle	3
+Resist.LAUNCH XII	Auravis Laughing Bag	3
+Resist.LAUNCH XII	Red Filiavent Tentacle	3
+Resist.LAUNCH XIII	Auravis Laughing Bag	3
+Resist.LAUNCH XIII	Red Filiavent Tentacle	3
+Resist.LAUNCH XIV	Auravis Laughing Bag	4
+Resist.LAUNCH XIV	Red Filiavent Tentacle	4
+Resist.LAUNCH XV	Auravis Laughing Bag	4
+Resist.LAUNCH XV	Red Filiavent Tentacle	4
+Resist.LAUNCH XVI	Auravis Laughing Bag	4
+Resist.LAUNCH XVI	Red Filiavent Tentacle	4
+Resist.LAUNCH XVII	Auravis Laughing Bag	4
+Resist.LAUNCH XVII	Red Filiavent Tentacle	4
+Resist.LAUNCH XVIII	Auravis Laughing Bag	4
+Resist.LAUNCH XVIII	Red Filiavent Tentacle	4
+Resist.LAUNCH XIX	Auravis Laughing Bag	5
+Resist.LAUNCH XIX	Red Filiavent Tentacle	5
+Resist.STUN I	Upgraded Jammer	1
+Resist.STUN I	Smelly Fish Meat	1
+Resist.STUN II	Upgraded Jammer	1
+Resist.STUN II	Smelly Fish Meat	1
+Resist.STUN III	Upgraded Jammer	1
+Resist.STUN III	Smelly Fish Meat	1
+Resist.STUN IV	Upgraded Jammer	2
+Resist.STUN IV	Smelly Fish Meat	2
+Resist.STUN V	Upgraded Jammer	2
+Resist.STUN V	Smelly Fish Meat	2
+Resist.STUN VI	Upgraded Jammer	2
+Resist.STUN VI	Smelly Fish Meat	2
+Resist.STUN VII	Upgraded Jammer	2
+Resist.STUN VII	Smelly Fish Meat	2
+Resist.STUN VIII	Upgraded Jammer	2
+Resist.STUN VIII	Smelly Fish Meat	2
+Resist.STUN IX	Upgraded Jammer	3
+Resist.STUN IX	Smelly Fish Meat	3
+Resist.STUN X	Upgraded Jammer	3
+Resist.STUN X	Black Filiavent Tentacle	3
+Resist.STUN XI	Upgraded Jammer	3
+Resist.STUN XI	Black Filiavent Tentacle	3
+Resist.STUN XII	Upgraded Jammer	3
+Resist.STUN XII	Black Filiavent Tentacle	3
+Resist.STUN XIII	Upgraded Jammer	3
+Resist.STUN XIII	Black Filiavent Tentacle	3
+Resist.STUN XIV	Upgraded Jammer	4
+Resist.STUN XIV	Black Filiavent Tentacle	4
+Resist.STUN XV	Upgraded Jammer	4
+Resist.STUN XV	Black Filiavent Tentacle	4
+Resist.STUN XVI	Upgraded Jammer	4
+Resist.STUN XVI	Black Filiavent Tentacle	4
+Resist.STUN XVII	Upgraded Jammer	4
+Resist.STUN XVII	Black Filiavent Tentacle	4
+Resist.STUN XVIII	Upgraded Jammer	4
+Resist.STUN XVIII	Black Filiavent Tentacle	4
+Resist.STUN XIX	Upgraded Jammer	5
+Resist.STUN XIX	Black Filiavent Tentacle	5
+Resist.SLEEP I	Musky Nectar	1
+Resist.SLEEP II	Musky Nectar	1
+Resist.SLEEP III	Musky Nectar	1
+Resist.SLEEP IV	Musky Nectar	2
+Resist.SLEEP V	Musky Nectar	2
+Resist.SLEEP VI	Musky Nectar	2
+Resist.SLEEP VII	Musky Nectar	2
+Resist.SLEEP VIII	Musky Nectar	2
+Resist.SLEEP IX	Musky Nectar	3
+Resist.SLEEP X	Musky Nectar	3
+Resist.SLEEP XI	Musky Nectar	3
+Resist.SLEEP XII	Musky Nectar	3
+Resist.SLEEP XIII	Musky Nectar	3
+Resist.SLEEP XIV	Musky Nectar	4
+Resist.SLEEP XV	Musky Nectar	4
+Resist.SLEEP XVI	Musky Nectar	4
+Resist.SLEEP XVII	Musky Nectar	4
+Resist.SLEEP XVIII	Musky Nectar	4
+Resist.SLEEP XIX	Musky Nectar	5
+Resist.TAUNT I	Puge Self-Destruct Mechanism	1
+Resist.TAUNT II	Puge Self-Destruct Mechanism	1
+Resist.TAUNT III	Puge Self-Destruct Mechanism	1
+Resist.TAUNT IV	Puge Self-Destruct Mechanism	2
+Resist.TAUNT V	Puge Self-Destruct Mechanism	2
+Resist.TAUNT VI	Puge Self-Destruct Mechanism	2
+Resist.TAUNT VII	Puge Self-Destruct Mechanism	2
+Resist.TAUNT VIII	Puge Self-Destruct Mechanism	2
+Resist.TAUNT IX	Puge Self-Destruct Mechanism	3
+Resist.TAUNT X	Puge Self-Destruct Mechanism	3
+Resist.TAUNT XI	Puge Self-Destruct Mechanism	3
+Resist.TAUNT XII	Puge Self-Destruct Mechanism	3
+Resist.TAUNT XIII	Puge Self-Destruct Mechanism	3
+Resist.TAUNT XIV	Puge Self-Destruct Mechanism	4
+Resist.TAUNT XV	Puge Self-Destruct Mechanism	4
+Resist.TAUNT XVI	Puge Self-Destruct Mechanism	4
+Resist.TAUNT XVII	Puge Self-Destruct Mechanism	4
+Resist.TAUNT XVIII	Puge Self-Destruct Mechanism	4
+Resist.TAUNT XIX	Puge Self-Destruct Mechanism	5
+Resist.CONTROL I	Cracked Claw	1
+Resist.CONTROL II	Cracked Claw	1
+Resist.CONTROL III	Cracked Claw	1
+Resist.CONTROL IV	Cracked Claw	2
+Resist.CONTROL V	Cracked Claw	2
+Resist.CONTROL VI	Cracked Claw	2
+Resist.CONTROL VII	Cracked Claw	2
+Resist.CONTROL VIII	Cracked Claw	2
+Resist.CONTROL IX	Cracked Claw	3
+Resist.CONTROL X	Cracked Claw	3
+Resist.CONTROL XI	Cracked Claw	3
+Resist.CONTROL XII	Cracked Claw	3
+Resist.CONTROL XIII	Cracked Claw	3
+Resist.CONTROL XIV	Cracked Claw	4
+Resist.CONTROL XV	Cracked Claw	4
+Resist.CONTROL XVI	Cracked Claw	4
+Resist.CONTROL XVII	Cracked Claw	4
+Resist.CONTROL XVIII	Cracked Claw	4
+Resist.CONTROL XIX	Cracked Claw	5
+Resist.VIRUS I	Lepyx Sunstone	1
+Resist.VIRUS II	Lepyx Sunstone	1
+Resist.VIRUS III	Lepyx Sunstone	1
+Resist.VIRUS IV	Lepyx Sunstone	2
+Resist.VIRUS V	Lepyx Sunstone	2
+Resist.VIRUS VI	Lepyx Sunstone	2
+Resist.VIRUS VII	Lepyx Sunstone	2
+Resist.VIRUS VIII	Lepyx Sunstone	2
+Resist.VIRUS IX	Lepyx Sunstone	3
+Resist.VIRUS X	Lepyx Sunstone	3
+Resist.VIRUS XI	Lepyx Sunstone	3
+Resist.VIRUS XII	Lepyx Sunstone	3
+Resist.VIRUS XIII	Lepyx Sunstone	3
+Resist.VIRUS XIV	Lepyx Sunstone	4
+Resist.VIRUS XV	Lepyx Sunstone	4
+Resist.VIRUS XVI	Lepyx Sunstone	4
+Resist.VIRUS XVII	Lepyx Sunstone	4
+Resist.VIRUS XVIII	Lepyx Sunstone	4
+Resist.VIRUS XIX	Lepyx Sunstone	5
+Resist.BLACKOUT I	Dull Stone	1
+Resist.BLACKOUT II	Dull Stone	1
+Resist.BLACKOUT III	Dull Stone	1
+Resist.BLACKOUT IV	Dull Stone	2
+Resist.BLACKOUT V	Dull Stone	2
+Resist.BLACKOUT VI	Dull Stone	2
+Resist.BLACKOUT VII	Dull Stone	2
+Resist.BLACKOUT VIII	Dull Stone	2
+Resist.BLACKOUT IX	Dull Stone	3
+Resist.BLACKOUT X	Dull Stone	3
+Resist.BLACKOUT XI	Dull Stone	3
+Resist.BLACKOUT XII	Dull Stone	3
+Resist.BLACKOUT XIII	Dull Stone	3
+Resist.BLACKOUT XIV	Dull Stone	4
+Resist.BLACKOUT XV	Dull Stone	4
+Resist.BLACKOUT XVI	Dull Stone	4
+Resist.BLACKOUT XVII	Dull Stone	4
+Resist.BLACKOUT XVIII	Dull Stone	4
+Resist.BLACKOUT XIX	Dull Stone	5
+Resist.FATIGUE I	Red Blatta Wing	1
+Resist.FATIGUE II	Red Blatta Wing	1
+Resist.FATIGUE III	Red Blatta Wing	1
+Resist.FATIGUE IV	Red Blatta Wing	2
+Resist.FATIGUE V	Red Blatta Wing	2
+Resist.FATIGUE VI	Red Blatta Wing	2
+Resist.FATIGUE VII	Red Blatta Wing	2
+Resist.FATIGUE VIII	Red Blatta Wing	2
+Resist.FATIGUE IX	Red Blatta Wing	3
+Resist.FATIGUE X	Red Blatta Wing	3
+Resist.FATIGUE XI	Red Blatta Wing	3
+Resist.FATIGUE XII	Red Blatta Wing	3
+Resist.FATIGUE XIII	Red Blatta Wing	3
+Resist.FATIGUE XIV	Red Blatta Wing	4
+Resist.FATIGUE XV	Red Blatta Wing	4
+Resist.FATIGUE XVI	Red Blatta Wing	4
+Resist.FATIGUE XVII	Red Blatta Wing	4
+Resist.FATIGUE XVIII	Red Blatta Wing	4
+Resist.FATIGUE XIX	Red Blatta Wing	5
+Resist.SLOW-ARTS I	Pristine Insect Leg	1
+Resist.SLOW-ARTS II	Pristine Insect Leg	1
+Resist.SLOW-ARTS III	Pristine Insect Leg	1
+Resist.SLOW-ARTS IV	Pristine Insect Leg	2
+Resist.SLOW-ARTS V	Pristine Insect Leg	2
+Resist.SLOW-ARTS VI	Pristine Insect Leg	2
+Resist.SLOW-ARTS VII	Pristine Insect Leg	2
+Resist.SLOW-ARTS VIII	Pristine Insect Leg	2
+Resist.SLOW-ARTS IX	Pristine Insect Leg	3
+Resist.SLOW-ARTS X	Pristine Insect Leg	3
+Resist.SLOW-ARTS XI	Pristine Insect Leg	3
+Resist.SLOW-ARTS XII	Pristine Insect Leg	3
+Resist.SLOW-ARTS XIII	Pristine Insect Leg	3
+Resist.SLOW-ARTS XIV	Pristine Insect Leg	4
+Resist.SLOW-ARTS XV	Pristine Insect Leg	4
+Resist.SLOW-ARTS XVI	Pristine Insect Leg	4
+Resist.SLOW-ARTS XVII	Pristine Insect Leg	4
+Resist.SLOW-ARTS XVIII	Pristine Insect Leg	4
+Resist.SLOW-ARTS XIX	Pristine Insect Leg	5
+Resist.PHYS-DOWN I	Tough Humpsteak	1
+Resist.PHYS-DOWN II	Tough Humpsteak	1
+Resist.PHYS-DOWN III	Tough Humpsteak	1
+Resist.PHYS-DOWN IV	Tough Humpsteak	2
+Resist.PHYS-DOWN V	Tough Humpsteak	2
+Resist.PHYS-DOWN VI	Tough Humpsteak	2
+Resist.PHYS-DOWN VII	Tough Humpsteak	2
+Resist.PHYS-DOWN VIII	Tough Humpsteak	2
+Resist.PHYS-DOWN IX	Tough Humpsteak	3
+Resist.PHYS-DOWN X	Tough Humpsteak	3
+Resist.PHYS-DOWN XI	Tough Humpsteak	3
+Resist.PHYS-DOWN XII	Tough Humpsteak	3
+Resist.PHYS-DOWN XIII	Tough Humpsteak	3
+Resist.PHYS-DOWN XIV	Tough Humpsteak	4
+Resist.PHYS-DOWN XV	Tough Humpsteak	4
+Resist.PHYS-DOWN XVI	Tough Humpsteak	4
+Resist.PHYS-DOWN XVII	Tough Humpsteak	4
+Resist.PHYS-DOWN XVIII	Tough Humpsteak	4
+Resist.PHYS-DOWN XIX	Tough Humpsteak	5
+Resist.BEAM-DOWN I	Duoguill Broth	1
+Resist.BEAM-DOWN II	Duoguill Broth	1
+Resist.BEAM-DOWN III	Duoguill Broth	1
+Resist.BEAM-DOWN IV	Duoguill Broth	2
+Resist.BEAM-DOWN V	Duoguill Broth	2
+Resist.BEAM-DOWN VI	Duoguill Broth	2
+Resist.BEAM-DOWN VII	Duoguill Broth	2
+Resist.BEAM-DOWN VIII	Duoguill Broth	2
+Resist.BEAM-DOWN IX	Duoguill Broth	3
+Resist.BEAM-DOWN X	Duoguill Broth	3
+Resist.BEAM-DOWN XI	Duoguill Broth	3
+Resist.BEAM-DOWN XII	Duoguill Broth	3
+Resist.BEAM-DOWN XIII	Duoguill Broth	3
+Resist.BEAM-DOWN XIV	Duoguill Broth	4
+Resist.BEAM-DOWN XV	Duoguill Broth	4
+Resist.BEAM-DOWN XVI	Duoguill Broth	4
+Resist.BEAM-DOWN XVII	Duoguill Broth	4
+Resist.BEAM-DOWN XVIII	Duoguill Broth	4
+Resist.BEAM-DOWN XIX	Duoguill Broth	5
+Resist.THERM-DOWN I	Slimy Tongue	1
+Resist.THERM-DOWN II	Slimy Tongue	1
+Resist.THERM-DOWN III	Slimy Tongue	1
+Resist.THERM-DOWN IV	Slimy Tongue	2
+Resist.THERM-DOWN V	Slimy Tongue	2
+Resist.THERM-DOWN VI	Slimy Tongue	2
+Resist.THERM-DOWN VII	Slimy Tongue	2
+Resist.THERM-DOWN VIII	Slimy Tongue	2
+Resist.THERM-DOWN IX	Slimy Tongue	3
+Resist.THERM-DOWN X	Slimy Tongue	3
+Resist.THERM-DOWN XI	Slimy Tongue	3
+Resist.THERM-DOWN XII	Slimy Tongue	3
+Resist.THERM-DOWN XIII	Slimy Tongue	3
+Resist.THERM-DOWN XIV	Slimy Tongue	4
+Resist.THERM-DOWN XV	Slimy Tongue	4
+Resist.THERM-DOWN XVI	Slimy Tongue	4
+Resist.THERM-DOWN XVII	Slimy Tongue	4
+Resist.THERM-DOWN XVIII	Slimy Tongue	4
+Resist.THERM-DOWN XIX	Slimy Tongue	5
+Resist.ELEC-DOWN I	Blue Electrical Tentacle	1
+Resist.ELEC-DOWN II	Blue Electrical Tentacle	1
+Resist.ELEC-DOWN III	Blue Electrical Tentacle	1
+Resist.ELEC-DOWN IV	Blue Electrical Tentacle	2
+Resist.ELEC-DOWN V	Blue Electrical Tentacle	2
+Resist.ELEC-DOWN VI	Blue Electrical Tentacle	2
+Resist.ELEC-DOWN VII	Blue Electrical Tentacle	2
+Resist.ELEC-DOWN VIII	Blue Electrical Tentacle	2
+Resist.ELEC-DOWN IX	Blue Electrical Tentacle	3
+Resist.ELEC-DOWN X	Blue Electrical Tentacle	3
+Resist.ELEC-DOWN XI	Blue Electrical Tentacle	3
+Resist.ELEC-DOWN XII	Blue Electrical Tentacle	3
+Resist.ELEC-DOWN XIII	Blue Electrical Tentacle	3
+Resist.ELEC-DOWN XIV	Blue Electrical Tentacle	4
+Resist.ELEC-DOWN XV	Blue Electrical Tentacle	4
+Resist.ELEC-DOWN XVI	Blue Electrical Tentacle	4
+Resist.ELEC-DOWN XVII	Blue Electrical Tentacle	4
+Resist.ELEC-DOWN XVIII	Blue Electrical Tentacle	4
+Resist.ELEC-DOWN XIX	Blue Electrical Tentacle	5
+Resist.ETHER-DOWN I	Papil Straw	1
+Resist.ETHER-DOWN II	Papil Straw	1
+Resist.ETHER-DOWN III	Papil Straw	1
+Resist.ETHER-DOWN IV	Papil Straw	2
+Resist.ETHER-DOWN V	Papil Straw	2
+Resist.ETHER-DOWN VI	Papil Straw	2
+Resist.ETHER-DOWN VII	Papil Straw	2
+Resist.ETHER-DOWN VIII	Papil Straw	2
+Resist.ETHER-DOWN IX	Papil Straw	3
+Resist.ETHER-DOWN X	Papil Straw	3
+Resist.ETHER-DOWN XI	Papil Straw	3
+Resist.ETHER-DOWN XII	Papil Straw	3
+Resist.ETHER-DOWN XIII	Papil Straw	3
+Resist.ETHER-DOWN XIV	Papil Straw	4
+Resist.ETHER-DOWN XV	Papil Straw	4
+Resist.ETHER-DOWN XVI	Papil Straw	4
+Resist.ETHER-DOWN XVII	Papil Straw	4
+Resist.ETHER-DOWN XVIII	Papil Straw	4
+Resist.ETHER-DOWN XIX	Papil Straw	5
+Resist.GRAV-DOWN I	Lepyx Jaw Meat	1
+Resist.GRAV-DOWN II	Lepyx Jaw Meat	1
+Resist.GRAV-DOWN III	Lepyx Jaw Meat	1
+Resist.GRAV-DOWN IV	Lepyx Jaw Meat	2
+Resist.GRAV-DOWN V	Lepyx Jaw Meat	2
+Resist.GRAV-DOWN VI	Lepyx Jaw Meat	2
+Resist.GRAV-DOWN VII	Lepyx Jaw Meat	2
+Resist.GRAV-DOWN VIII	Lepyx Jaw Meat	2
+Resist.GRAV-DOWN IX	Lepyx Jaw Meat	3
+Resist.GRAV-DOWN X	Lepyx Jaw Meat	3
+Resist.GRAV-DOWN XI	Lepyx Jaw Meat	3
+Resist.GRAV-DOWN XII	Lepyx Jaw Meat	3
+Resist.GRAV-DOWN XIII	Lepyx Jaw Meat	3
+Resist.GRAV-DOWN XIV	Lepyx Jaw Meat	4
+Resist.GRAV-DOWN XV	Lepyx Jaw Meat	4
+Resist.GRAV-DOWN XVI	Lepyx Jaw Meat	4
+Resist.GRAV-DOWN XVII	Lepyx Jaw Meat	4
+Resist.GRAV-DOWN XVIII	Lepyx Jaw Meat	4
+Resist.GRAV-DOWN XIX	Lepyx Jaw Meat	5
+Resist.TIME-BOMB I	Puge Counter	1
+Resist.TIME-BOMB II	Puge Counter	1
+Resist.TIME-BOMB III	Puge Counter	1
+Resist.TIME-BOMB IV	Puge Counter	2
+Resist.TIME-BOMB V	Puge Counter	2
+Resist.TIME-BOMB VI	Puge Counter	2
+Resist.TIME-BOMB VII	Puge Counter	2
+Resist.TIME-BOMB VIII	Puge Counter	2
+Resist.TIME-BOMB IX	Puge Counter	3
+Resist.TIME-BOMB X	Puge Counter	3
+Resist.TIME-BOMB XI	Puge Counter	3
+Resist.TIME-BOMB XII	Puge Counter	3
+Resist.TIME-BOMB XIII	Puge Counter	3
+Resist.TIME-BOMB XIV	Puge Counter	4
+Resist.TIME-BOMB XV	Puge Counter	4
+Resist.TIME-BOMB XVI	Puge Counter	4
+Resist.TIME-BOMB XVII	Puge Counter	4
+Resist.TIME-BOMB XVIII	Puge Counter	4
+Resist.TIME-BOMB XIX	Puge Counter	5
+Resist.DEBUFF-DOWN I	Forfex Miso	1
+Resist.DEBUFF-DOWN II	Forfex Miso	1
+Resist.DEBUFF-DOWN III	Forfex Miso	1
+Resist.DEBUFF-DOWN IV	Forfex Miso	2
+Resist.DEBUFF-DOWN V	Forfex Miso	2
+Resist.DEBUFF-DOWN VI	Forfex Miso	2
+Resist.DEBUFF-DOWN VII	Forfex Miso	2
+Resist.DEBUFF-DOWN VIII	Forfex Miso	2
+Resist.DEBUFF-DOWN IX	Forfex Miso	3
+Resist.DEBUFF-DOWN X	Forfex Miso	3
+Resist.DEBUFF-DOWN XI	Forfex Miso	3
+Resist.DEBUFF-DOWN XII	Forfex Miso	3
+Resist.DEBUFF-DOWN XIII	Forfex Miso	3
+Resist.DEBUFF-DOWN XIV	Forfex Miso	4
+Resist.DEBUFF-DOWN XV	Forfex Miso	4
+Resist.DEBUFF-DOWN XVI	Forfex Miso	4
+Resist.DEBUFF-DOWN XVII	Forfex Miso	4
+Resist.DEBUFF-DOWN XVIII	Forfex Miso	4
+Resist.DEBUFF-DOWN XIX	Forfex Miso	5
+Resist.RECOV-DOWN I	Succulent Meat	1
+Resist.RECOV-DOWN II	Succulent Meat	1
+Resist.RECOV-DOWN III	Succulent Meat	1
+Resist.RECOV-DOWN IV	Succulent Meat	1
+Resist.RECOV-DOWN V	Succulent Meat	1
+Resist.RECOV-DOWN VI	Succulent Meat	1
+Resist.RECOV-DOWN VII	Succulent Meat	1
+Resist.RECOV-DOWN VIII	Succulent Meat	1
+Resist.RECOV-DOWN IX	Succulent Meat	1
+Resist.RECOV-DOWN X	Succulent Meat	1
+Resist.RECOV-DOWN XI	Succulent Meat	1
+Resist.RECOV-DOWN XII	Succulent Meat	1
+Resist.RECOV-DOWN XIII	Succulent Meat	1
+Resist.RECOV-DOWN XIV	Succulent Meat	1
+Resist.RECOV-DOWN XV	Succulent Meat	1
+Resist.RECOV-DOWN XVI	Succulent Meat	1
+Resist.RECOV-DOWN XVII	Succulent Meat	1
+Resist.RECOV-DOWN XVIII	Succulent Meat	1
+Resist.RECOV-DOWN XIX	Succulent Meat	1
+Resist.BLAZE I	Vesper Fry	1
+Resist.BLAZE II	Vesper Fry	1
+Resist.BLAZE III	Vesper Fry	1
+Resist.BLAZE IV	Vesper Fry	2
+Resist.BLAZE V	Vesper Fry	2
+Resist.BLAZE VI	Vesper Fry	2
+Resist.BLAZE VII	Vesper Fry	2
+Resist.BLAZE VIII	Vesper Fry	2
+Resist.BLAZE IX	Vesper Fry	3
+Resist.BLAZE X	Vesper Fry	3
+Resist.BLAZE XI	Vesper Fry	3
+Resist.BLAZE XII	Vesper Fry	3
+Resist.BLAZE XIII	Vesper Fry	3
+Resist.BLAZE XIV	Vesper Fry	4
+Resist.BLAZE XV	Vesper Fry	4
+Resist.BLAZE XVI	Vesper Fry	4
+Resist.BLAZE XVII	Vesper Fry	4
+Resist.BLAZE XVIII	Vesper Fry	4
+Resist.BLAZE XIX	Vesper Fry	5
+Resist.SHOCK I	Fine Black Belt	1
+Resist.SHOCK II	Fine Black Belt	1
+Resist.SHOCK III	Fine Black Belt	1
+Resist.SHOCK IV	Fine Black Belt	2
+Resist.SHOCK V	Fine Black Belt	2
+Resist.SHOCK VI	Fine Black Belt	2
+Resist.SHOCK VII	Fine Black Belt	2
+Resist.SHOCK VIII	Fine Black Belt	2
+Resist.SHOCK IX	Fine Black Belt	3
+Resist.SHOCK X	Fine Black Belt	3
+Resist.SHOCK XI	Fine Black Belt	3
+Resist.SHOCK XII	Fine Black Belt	3
+Resist.SHOCK XIII	Fine Black Belt	3
+Resist.SHOCK XIV	Fine Black Belt	4
+Resist.SHOCK XV	Fine Black Belt	4
+Resist.SHOCK XVI	Fine Black Belt	4
+Resist.SHOCK XVII	Fine Black Belt	4
+Resist.SHOCK XVIII	Fine Black Belt	4
+Resist.SHOCK XIX	Fine Black Belt	5
+CutTime.DEBUFF I	Sharp Vivohast Jaw	1
+CutTime.DEBUFF II	Sharp Vivohast Jaw	1
+CutTime.DEBUFF III	Sharp Vivohast Jaw	1
+CutTime.DEBUFF IV	Sharp Vivohast Jaw	2
+CutTime.DEBUFF V	Sharp Vivohast Jaw	2
+CutTime.DEBUFF VI	Sharp Vivohast Jaw	2
+CutTime.DEBUFF VII	Sharp Vivohast Jaw	2
+CutTime.DEBUFF VIII	Sharp Vivohast Jaw	2
+CutTime.DEBUFF IX	Sharp Vivohast Jaw	3
+CutTime.DEBUFF X	Sharp Vivohast Jaw	3
+CutTime.DEBUFF XI	Sharp Vivohast Jaw	3
+CutTime.DEBUFF XII	Sharp Vivohast Jaw	3
+CutTime.DEBUFF XIII	Sharp Vivohast Jaw	3
+CutTime.DEBUFF XIV	Sharp Vivohast Jaw	4
+CutTime.DEBUFF XV	Sharp Vivohast Jaw	4
+CutTime.DEBUFF XVI	Sharp Vivohast Jaw	4
+CutTime.DEBUFF XVII	Sharp Vivohast Jaw	4
+CutTime.DEBUFF XVIII	Sharp Vivohast Jaw	4
+CutTime.DEBUFF XIX	Sharp Vivohast Jaw	5
+CriticalUp I	Oc-serv Hand	1
+CriticalUp I	Ziggian Long Antennae	1
+CriticalUp I	Forfex Miso	1
+CriticalUp II	Oc-serv Hand	1
+CriticalUp II	Ziggian Long Antennae	1
+CriticalUp II	Forfex Miso	1
+CriticalUp III	Oc-serv Hand	1
+CriticalUp III	Ziggian Long Antennae	1
+CriticalUp III	Forfex Miso	1
+CriticalUp IV	Oc-serv Hand	2
+CriticalUp IV	Ziggian Long Antennae	2
+CriticalUp IV	Forfex Miso	2
+CriticalUp V	Oc-serv Hand	2
+CriticalUp V	Ziggian Long Antennae	2
+CriticalUp V	Forfex Miso	2
+CriticalUp VI	Oc-serv Hand	2
+CriticalUp VI	Ziggian Long Antennae	2
+CriticalUp VI	Forfex Miso	2
+CriticalUp VII	Oc-serv Hand	2
+CriticalUp VII	Ziggian Long Antennae	2
+CriticalUp VII	Forfex Miso	2
+CriticalUp VIII	Oc-serv Hand	2
+CriticalUp VIII	Ziggian Long Antennae	2
+CriticalUp VIII	Forfex Miso	2
+CriticalUp IX	Oc-serv Hand	3
+CriticalUp IX	Ziggian Long Antennae	3
+CriticalUp IX	Forfex Miso	3
+CriticalUp X	Oc-serv Hand	3
+CriticalUp X	Lone Red Ictus Stinger	3
+CriticalUp X	Spiked Tail Fin	3
+CriticalUp XI	Oc-serv Hand	3
+CriticalUp XI	Lone Red Ictus Stinger	3
+CriticalUp XI	Spiked Tail Fin	3
+CriticalUp XII	Oc-serv Hand	3
+CriticalUp XII	Lone Red Ictus Stinger	3
+CriticalUp XII	Spiked Tail Fin	3
+CriticalUp XIII	Oc-serv Hand	3
+CriticalUp XIII	Lone Red Ictus Stinger	3
+CriticalUp XIII	Spiked Tail Fin	3
+CriticalUp XIV	Oc-serv Hand	4
+CriticalUp XIV	Lone Red Ictus Stinger	4
+CriticalUp XIV	Spiked Tail Fin	4
+CriticalUp XV	Oc-serv Hand	4
+CriticalUp XV	Lone Red Ictus Stinger	4
+CriticalUp XV	Spiked Tail Fin	4
+CriticalUp XVI	Oc-serv Hand	4
+CriticalUp XVI	Lone Red Ictus Stinger	4
+CriticalUp XVI	Spiked Tail Fin	4
+CriticalUp XVII	Oc-serv Hand	4
+CriticalUp XVII	Lone Red Ictus Stinger	4
+CriticalUp XVII	Spiked Tail Fin	4
+CriticalUp XVIII	Oc-serv Hand	4
+CriticalUp XVIII	Lone Red Ictus Stinger	4
+CriticalUp XVIII	Spiked Tail Fin	4
+CriticalUp XIX	Oc-serv Hand	5
+CriticalUp XIX	Lone Red Ictus Stinger	5
+CriticalUp XIX	Spiked Tail Fin	5
+CritUp.THEROID I	Fleecy Fur	1
+CritUp.THEROID II	Fleecy Fur	1
+CritUp.THEROID III	Fleecy Fur	1
+CritUp.THEROID IV	Fleecy Fur	2
+CritUp.THEROID V	Fleecy Fur	2
+CritUp.THEROID VI	Fleecy Fur	2
+CritUp.THEROID VII	Fleecy Fur	2
+CritUp.THEROID VIII	Fleecy Fur	2
+CritUp.THEROID IX	Fleecy Fur	3
+CritUp.THEROID X	Fleecy Fur	3
+CritUp.THEROID XI	Fleecy Fur	3
+CritUp.THEROID XII	Fleecy Fur	3
+CritUp.THEROID XIII	Fleecy Fur	3
+CritUp.THEROID XIV	Fleecy Fur	4
+CritUp.THEROID XV	Fleecy Fur	4
+CritUp.THEROID XVI	Fleecy Fur	4
+CritUp.THEROID XVII	Fleecy Fur	4
+CritUp.THEROID XVIII	Fleecy Fur	4
+CritUp.THEROID XIX	Fleecy Fur	5
+CritUp.INSECTOID I	Tatty Insect Wing	1
+CritUp.INSECTOID II	Tatty Insect Wing	1
+CritUp.INSECTOID III	Tatty Insect Wing	1
+CritUp.INSECTOID IV	Tatty Insect Wing	2
+CritUp.INSECTOID V	Tatty Insect Wing	2
+CritUp.INSECTOID VI	Tatty Insect Wing	2
+CritUp.INSECTOID VII	Tatty Insect Wing	2
+CritUp.INSECTOID VIII	Tatty Insect Wing	2
+CritUp.INSECTOID IX	Tatty Insect Wing	3
+CritUp.INSECTOID X	Tatty Insect Wing	3
+CritUp.INSECTOID XI	Tatty Insect Wing	3
+CritUp.INSECTOID XII	Tatty Insect Wing	3
+CritUp.INSECTOID XIII	Tatty Insect Wing	3
+CritUp.INSECTOID XIV	Tatty Insect Wing	4
+CritUp.INSECTOID XV	Tatty Insect Wing	4
+CritUp.INSECTOID XVI	Tatty Insect Wing	4
+CritUp.INSECTOID XVII	Tatty Insect Wing	4
+CritUp.INSECTOID XVIII	Tatty Insect Wing	4
+CritUp.INSECTOID XIX	Tatty Insect Wing	5
+CritUp.PISCINOID I	Small Dorsal Fin	1
+CritUp.PISCINOID II	Small Dorsal Fin	1
+CritUp.PISCINOID III	Small Dorsal Fin	1
+CritUp.PISCINOID IV	Small Dorsal Fin	2
+CritUp.PISCINOID V	Small Dorsal Fin	2
+CritUp.PISCINOID VI	Small Dorsal Fin	2
+CritUp.PISCINOID VII	Small Dorsal Fin	2
+CritUp.PISCINOID VIII	Small Dorsal Fin	2
+CritUp.PISCINOID IX	Small Dorsal Fin	3
+CritUp.PISCINOID X	Small Dorsal Fin	3
+CritUp.PISCINOID XI	Small Dorsal Fin	3
+CritUp.PISCINOID XII	Small Dorsal Fin	3
+CritUp.PISCINOID XIII	Small Dorsal Fin	3
+CritUp.PISCINOID XIV	Small Dorsal Fin	4
+CritUp.PISCINOID XV	Small Dorsal Fin	4
+CritUp.PISCINOID XVI	Small Dorsal Fin	4
+CritUp.PISCINOID XVII	Small Dorsal Fin	4
+CritUp.PISCINOID XVIII	Small Dorsal Fin	4
+CritUp.PISCINOID XIX	Small Dorsal Fin	5
+CritUp.HUMANOID I	Broken Buckle	1
+CritUp.HUMANOID II	Broken Buckle	1
+CritUp.HUMANOID III	Broken Buckle	1
+CritUp.HUMANOID IV	Broken Buckle	2
+CritUp.HUMANOID V	Broken Buckle	2
+CritUp.HUMANOID VI	Broken Buckle	2
+CritUp.HUMANOID VII	Broken Buckle	2
+CritUp.HUMANOID VIII	Broken Buckle	2
+CritUp.HUMANOID IX	Broken Buckle	3
+CritUp.HUMANOID X	Broken Buckle	3
+CritUp.HUMANOID XI	Broken Buckle	3
+CritUp.HUMANOID XII	Broken Buckle	3
+CritUp.HUMANOID XIII	Broken Buckle	3
+CritUp.HUMANOID XIV	Broken Buckle	4
+CritUp.HUMANOID XV	Broken Buckle	4
+CritUp.HUMANOID XVI	Broken Buckle	4
+CritUp.HUMANOID XVII	Broken Buckle	4
+CritUp.HUMANOID XVIII	Broken Buckle	4
+CritUp.HUMANOID XIX	Broken Buckle	5
+CritUp.MECHANOID I	Standard Crank	1
+CritUp.MECHANOID II	Standard Crank	1
+CritUp.MECHANOID III	Standard Crank	1
+CritUp.MECHANOID IV	Standard Crank	2
+CritUp.MECHANOID V	Standard Crank	2
+CritUp.MECHANOID VI	Standard Crank	2
+CritUp.MECHANOID VII	Standard Crank	2
+CritUp.MECHANOID VIII	Standard Crank	2
+CritUp.MECHANOID IX	Standard Crank	3
+CritUp.MECHANOID X	Standard Crank	3
+CritUp.MECHANOID XI	Standard Crank	3
+CritUp.MECHANOID XII	Standard Crank	3
+CritUp.MECHANOID XIII	Standard Crank	3
+CritUp.MECHANOID XIV	Standard Crank	4
+CritUp.MECHANOID XV	Standard Crank	4
+CritUp.MECHANOID XVI	Standard Crank	4
+CritUp.MECHANOID XVII	Standard Crank	4
+CritUp.MECHANOID XVIII	Standard Crank	4
+CritUp.MECHANOID XIX	Standard Crank	5
+CritUp.CHIMEROID I	Sticky Mucus	1
+CritUp.CHIMEROID I	Bloodied Face	1
+CritUp.CHIMEROID I	Fine White Belt	1
+CritUp.CHIMEROID II	Sticky Mucus	1
+CritUp.CHIMEROID II	Bloodied Face	1
+CritUp.CHIMEROID II	Fine White Belt	1
+CritUp.CHIMEROID III	Sticky Mucus	1
+CritUp.CHIMEROID III	Bloodied Face	1
+CritUp.CHIMEROID III	Fine White Belt	1
+CritUp.CHIMEROID IV	Sticky Mucus	2
+CritUp.CHIMEROID IV	Bloodied Face	2
+CritUp.CHIMEROID IV	Fine White Belt	2
+CritUp.CHIMEROID V	Sticky Mucus	2
+CritUp.CHIMEROID V	Bloodied Face	2
+CritUp.CHIMEROID V	Fine White Belt	2
+CritUp.CHIMEROID VI	Sticky Mucus	2
+CritUp.CHIMEROID VI	Bloodied Face	2
+CritUp.CHIMEROID VI	Fine White Belt	2
+CritUp.CHIMEROID VII	Sticky Mucus	2
+CritUp.CHIMEROID VII	Bloodied Face	2
+CritUp.CHIMEROID VII	Fine White Belt	2
+CritUp.CHIMEROID VIII	Sticky Mucus	2
+CritUp.CHIMEROID VIII	Bloodied Face	2
+CritUp.CHIMEROID VIII	Fine White Belt	2
+CritUp.CHIMEROID IX	Sticky Mucus	3
+CritUp.CHIMEROID IX	Bloodied Face	3
+CritUp.CHIMEROID IX	Fine White Belt	3
+CritUp.CHIMEROID X	Sticky Mucus	3
+CritUp.CHIMEROID X	Black Colubrim Tail	3
+CritUp.CHIMEROID X	Brown Colubrim Tail	3
+CritUp.CHIMEROID XI	Sticky Mucus	3
+CritUp.CHIMEROID XI	Black Colubrim Tail	3
+CritUp.CHIMEROID XI	Brown Colubrim Tail	3
+CritUp.CHIMEROID XII	Sticky Mucus	3
+CritUp.CHIMEROID XII	Black Colubrim Tail	3
+CritUp.CHIMEROID XII	Brown Colubrim Tail	3
+CritUp.CHIMEROID XIII	Sticky Mucus	3
+CritUp.CHIMEROID XIII	Black Colubrim Tail	3
+CritUp.CHIMEROID XIII	Brown Colubrim Tail	3
+CritUp.CHIMEROID XIV	Sticky Mucus	4
+CritUp.CHIMEROID XIV	Black Colubrim Tail	4
+CritUp.CHIMEROID XIV	Brown Colubrim Tail	4
+CritUp.CHIMEROID XV	Sticky Mucus	4
+CritUp.CHIMEROID XV	Black Colubrim Tail	4
+CritUp.CHIMEROID XV	Brown Colubrim Tail	4
+CritUp.CHIMEROID XVI	Sticky Mucus	4
+CritUp.CHIMEROID XVI	Black Colubrim Tail	4
+CritUp.CHIMEROID XVI	Brown Colubrim Tail	4
+CritUp.CHIMEROID XVII	Sticky Mucus	4
+CritUp.CHIMEROID XVII	Black Colubrim Tail	4
+CritUp.CHIMEROID XVII	Brown Colubrim Tail	4
+CritUp.CHIMEROID XVIII	Sticky Mucus	4
+CritUp.CHIMEROID XVIII	Black Colubrim Tail	4
+CritUp.CHIMEROID XVIII	Brown Colubrim Tail	4
+CritUp.CHIMEROID XIX	Sticky Mucus	5
+CritUp.CHIMEROID XIX	Black Colubrim Tail	5
+CritUp.CHIMEROID XIX	Brown Colubrim Tail	5
+CritUp.ULTRAFAUNA I	Thick Cinicula Horn	1
+CritUp.ULTRAFAUNA I	Black Electrical Tentacle	1
+CritUp.ULTRAFAUNA I	Hot Potamus Juice	1
+CritUp.ULTRAFAUNA II	Thick Cinicula Horn	1
+CritUp.ULTRAFAUNA II	Black Electrical Tentacle	1
+CritUp.ULTRAFAUNA II	Hot Potamus Juice	1
+CritUp.ULTRAFAUNA III	Thick Cinicula Horn	1
+CritUp.ULTRAFAUNA III	Black Electrical Tentacle	1
+CritUp.ULTRAFAUNA III	Hot Potamus Juice	1
+CritUp.ULTRAFAUNA IV	Thick Cinicula Horn	2
+CritUp.ULTRAFAUNA IV	Black Electrical Tentacle	2
+CritUp.ULTRAFAUNA IV	Hot Potamus Juice	2
+CritUp.ULTRAFAUNA V	Thick Cinicula Horn	2
+CritUp.ULTRAFAUNA V	Black Electrical Tentacle	2
+CritUp.ULTRAFAUNA V	Hot Potamus Juice	2
+CritUp.ULTRAFAUNA VI	Thick Cinicula Horn	2
+CritUp.ULTRAFAUNA VI	Black Electrical Tentacle	2
+CritUp.ULTRAFAUNA VI	Hot Potamus Juice	2
+CritUp.ULTRAFAUNA VII	Thick Cinicula Horn	2
+CritUp.ULTRAFAUNA VII	Black Electrical Tentacle	2
+CritUp.ULTRAFAUNA VII	Hot Potamus Juice	2
+CritUp.ULTRAFAUNA VIII	Thick Cinicula Horn	2
+CritUp.ULTRAFAUNA VIII	Black Electrical Tentacle	2
+CritUp.ULTRAFAUNA VIII	Hot Potamus Juice	2
+CritUp.ULTRAFAUNA IX	Thick Cinicula Horn	3
+CritUp.ULTRAFAUNA IX	Black Electrical Tentacle	3
+CritUp.ULTRAFAUNA IX	Hot Potamus Juice	3
+CritUp.ULTRAFAUNA X	Thick Cinicula Horn	3
+CritUp.ULTRAFAUNA X	Reverse Colubrim Fin	3
+CritUp.ULTRAFAUNA X	Colubrim Eel Kebab	3
+CritUp.ULTRAFAUNA XI	Thick Cinicula Horn	3
+CritUp.ULTRAFAUNA XI	Reverse Colubrim Fin	3
+CritUp.ULTRAFAUNA XI	Colubrim Eel Kebab	3
+CritUp.ULTRAFAUNA XII	Thick Cinicula Horn	3
+CritUp.ULTRAFAUNA XII	Reverse Colubrim Fin	3
+CritUp.ULTRAFAUNA XII	Colubrim Eel Kebab	3
+CritUp.ULTRAFAUNA XIII	Thick Cinicula Horn	3
+CritUp.ULTRAFAUNA XIII	Reverse Colubrim Fin	3
+CritUp.ULTRAFAUNA XIII	Colubrim Eel Kebab	3
+CritUp.ULTRAFAUNA XIV	Thick Cinicula Horn	4
+CritUp.ULTRAFAUNA XIV	Reverse Colubrim Fin	4
+CritUp.ULTRAFAUNA XIV	Colubrim Eel Kebab	4
+CritUp.ULTRAFAUNA XV	Thick Cinicula Horn	4
+CritUp.ULTRAFAUNA XV	Reverse Colubrim Fin	4
+CritUp.ULTRAFAUNA XV	Colubrim Eel Kebab	4
+CritUp.ULTRAFAUNA XVI	Thick Cinicula Horn	4
+CritUp.ULTRAFAUNA XVI	Reverse Colubrim Fin	4
+CritUp.ULTRAFAUNA XVI	Colubrim Eel Kebab	4
+CritUp.ULTRAFAUNA XVII	Thick Cinicula Horn	4
+CritUp.ULTRAFAUNA XVII	Reverse Colubrim Fin	4
+CritUp.ULTRAFAUNA XVII	Colubrim Eel Kebab	4
+CritUp.ULTRAFAUNA XVIII	Thick Cinicula Horn	4
+CritUp.ULTRAFAUNA XVIII	Reverse Colubrim Fin	4
+CritUp.ULTRAFAUNA XVIII	Colubrim Eel Kebab	4
+CritUp.ULTRAFAUNA XIX	Thick Cinicula Horn	5
+CritUp.ULTRAFAUNA XIX	Reverse Colubrim Fin	5
+CritUp.ULTRAFAUNA XIX	Colubrim Eel Kebab	5
+Slayer.THEROID I	Fleecy Fur	1
+Slayer.THEROID II	Fleecy Fur	1
+Slayer.THEROID III	Fleecy Fur	1
+Slayer.THEROID IV	Fleecy Fur	2
+Slayer.THEROID V	Fleecy Fur	2
+Slayer.THEROID VI	Fleecy Fur	2
+Slayer.THEROID VII	Fleecy Fur	2
+Slayer.THEROID VIII	Fleecy Fur	2
+Slayer.THEROID IX	Fleecy Fur	3
+Slayer.THEROID X	Fleecy Fur	3
+Slayer.THEROID XI	Fleecy Fur	3
+Slayer.THEROID XII	Fleecy Fur	3
+Slayer.THEROID XIII	Fleecy Fur	3
+Slayer.THEROID XIV	Fleecy Fur	4
+Slayer.THEROID XV	Fleecy Fur	4
+Slayer.THEROID XVI	Fleecy Fur	4
+Slayer.THEROID XVII	Fleecy Fur	4
+Slayer.THEROID XVIII	Fleecy Fur	4
+Slayer.THEROID XIX	Fleecy Fur	5
+Slayer.INSECTOID I	Tatty Insect Wing	1
+Slayer.INSECTOID II	Tatty Insect Wing	1
+Slayer.INSECTOID III	Tatty Insect Wing	1
+Slayer.INSECTOID IV	Tatty Insect Wing	2
+Slayer.INSECTOID V	Tatty Insect Wing	2
+Slayer.INSECTOID VI	Tatty Insect Wing	2
+Slayer.INSECTOID VII	Tatty Insect Wing	2
+Slayer.INSECTOID VIII	Tatty Insect Wing	2
+Slayer.INSECTOID IX	Tatty Insect Wing	3
+Slayer.INSECTOID X	Tatty Insect Wing	3
+Slayer.INSECTOID XI	Tatty Insect Wing	3
+Slayer.INSECTOID XII	Tatty Insect Wing	3
+Slayer.INSECTOID XIII	Tatty Insect Wing	3
+Slayer.INSECTOID XIV	Tatty Insect Wing	4
+Slayer.INSECTOID XV	Tatty Insect Wing	4
+Slayer.INSECTOID XVI	Tatty Insect Wing	4
+Slayer.INSECTOID XVII	Tatty Insect Wing	4
+Slayer.INSECTOID XVIII	Tatty Insect Wing	4
+Slayer.INSECTOID XIX	Tatty Insect Wing	5
+Slayer.PISCINOID I	Small Dorsal Fin	1
+Slayer.PISCINOID II	Small Dorsal Fin	1
+Slayer.PISCINOID III	Small Dorsal Fin	1
+Slayer.PISCINOID IV	Small Dorsal Fin	2
+Slayer.PISCINOID V	Small Dorsal Fin	2
+Slayer.PISCINOID VI	Small Dorsal Fin	2
+Slayer.PISCINOID VII	Small Dorsal Fin	2
+Slayer.PISCINOID VIII	Small Dorsal Fin	2
+Slayer.PISCINOID IX	Small Dorsal Fin	3
+Slayer.PISCINOID X	Small Dorsal Fin	3
+Slayer.PISCINOID XI	Small Dorsal Fin	3
+Slayer.PISCINOID XII	Small Dorsal Fin	3
+Slayer.PISCINOID XIII	Small Dorsal Fin	3
+Slayer.PISCINOID XIV	Small Dorsal Fin	4
+Slayer.PISCINOID XV	Small Dorsal Fin	4
+Slayer.PISCINOID XVI	Small Dorsal Fin	4
+Slayer.PISCINOID XVII	Small Dorsal Fin	4
+Slayer.PISCINOID XVIII	Small Dorsal Fin	4
+Slayer.PISCINOID XIX	Small Dorsal Fin	5
+Slayer.HUMANOID I	Broken Buckle	1
+Slayer.HUMANOID II	Broken Buckle	1
+Slayer.HUMANOID III	Broken Buckle	1
+Slayer.HUMANOID IV	Broken Buckle	2
+Slayer.HUMANOID V	Broken Buckle	2
+Slayer.HUMANOID VI	Broken Buckle	2
+Slayer.HUMANOID VII	Broken Buckle	2
+Slayer.HUMANOID VIII	Broken Buckle	2
+Slayer.HUMANOID IX	Broken Buckle	3
+Slayer.HUMANOID X	Broken Buckle	3
+Slayer.HUMANOID XI	Broken Buckle	3
+Slayer.HUMANOID XII	Broken Buckle	3
+Slayer.HUMANOID XIII	Broken Buckle	3
+Slayer.HUMANOID XIV	Broken Buckle	4
+Slayer.HUMANOID XV	Broken Buckle	4
+Slayer.HUMANOID XVI	Broken Buckle	4
+Slayer.HUMANOID XVII	Broken Buckle	4
+Slayer.HUMANOID XVIII	Broken Buckle	4
+Slayer.HUMANOID XIX	Broken Buckle	5
+Slayer.MECHANOID I	Standard Crank	1
+Slayer.MECHANOID II	Standard Crank	1
+Slayer.MECHANOID III	Standard Crank	1
+Slayer.MECHANOID IV	Standard Crank	2
+Slayer.MECHANOID V	Standard Crank	2
+Slayer.MECHANOID VI	Standard Crank	2
+Slayer.MECHANOID VII	Standard Crank	2
+Slayer.MECHANOID VIII	Standard Crank	2
+Slayer.MECHANOID IX	Standard Crank	3
+Slayer.MECHANOID X	Standard Crank	3
+Slayer.MECHANOID XI	Standard Crank	3
+Slayer.MECHANOID XII	Standard Crank	3
+Slayer.MECHANOID XIII	Standard Crank	3
+Slayer.MECHANOID XIV	Standard Crank	4
+Slayer.MECHANOID XV	Standard Crank	4
+Slayer.MECHANOID XVI	Standard Crank	4
+Slayer.MECHANOID XVII	Standard Crank	4
+Slayer.MECHANOID XVIII	Standard Crank	4
+Slayer.MECHANOID XIX	Standard Crank	5
+Slayer.CHIMEROID I	Sticky Mucus	1
+Slayer.CHIMEROID I	Bloodied Face	1
+Slayer.CHIMEROID I	Fine White Belt	1
+Slayer.CHIMEROID II	Sticky Mucus	1
+Slayer.CHIMEROID II	Bloodied Face	1
+Slayer.CHIMEROID II	Fine White Belt	1
+Slayer.CHIMEROID III	Sticky Mucus	1
+Slayer.CHIMEROID III	Bloodied Face	1
+Slayer.CHIMEROID III	Fine White Belt	1
+Slayer.CHIMEROID IV	Sticky Mucus	2
+Slayer.CHIMEROID IV	Bloodied Face	2
+Slayer.CHIMEROID IV	Fine White Belt	2
+Slayer.CHIMEROID V	Sticky Mucus	2
+Slayer.CHIMEROID V	Bloodied Face	2
+Slayer.CHIMEROID V	Fine White Belt	2
+Slayer.CHIMEROID VI	Sticky Mucus	2
+Slayer.CHIMEROID VI	Bloodied Face	2
+Slayer.CHIMEROID VI	Fine White Belt	2
+Slayer.CHIMEROID VII	Sticky Mucus	2
+Slayer.CHIMEROID VII	Bloodied Face	2
+Slayer.CHIMEROID VII	Fine White Belt	2
+Slayer.CHIMEROID VIII	Sticky Mucus	2
+Slayer.CHIMEROID VIII	Bloodied Face	2
+Slayer.CHIMEROID VIII	Fine White Belt	2
+Slayer.CHIMEROID IX	Sticky Mucus	3
+Slayer.CHIMEROID IX	Bloodied Face	3
+Slayer.CHIMEROID IX	Fine White Belt	3
+Slayer.CHIMEROID X	Sticky Mucus	3
+Slayer.CHIMEROID X	Yellow Millepod Rock	3
+Slayer.CHIMEROID X	Millepod Ice Rock	3
+Slayer.CHIMEROID XI	Sticky Mucus	3
+Slayer.CHIMEROID XI	Yellow Millepod Rock	3
+Slayer.CHIMEROID XI	Millepod Ice Rock	3
+Slayer.CHIMEROID XII	Sticky Mucus	3
+Slayer.CHIMEROID XII	Yellow Millepod Rock	3
+Slayer.CHIMEROID XII	Millepod Ice Rock	3
+Slayer.CHIMEROID XIII	Sticky Mucus	3
+Slayer.CHIMEROID XIII	Yellow Millepod Rock	3
+Slayer.CHIMEROID XIII	Millepod Ice Rock	3
+Slayer.CHIMEROID XIV	Sticky Mucus	4
+Slayer.CHIMEROID XIV	Yellow Millepod Rock	4
+Slayer.CHIMEROID XIV	Millepod Ice Rock	4
+Slayer.CHIMEROID XV	Sticky Mucus	4
+Slayer.CHIMEROID XV	Yellow Millepod Rock	4
+Slayer.CHIMEROID XV	Millepod Ice Rock	4
+Slayer.CHIMEROID XVI	Sticky Mucus	4
+Slayer.CHIMEROID XVI	Yellow Millepod Rock	4
+Slayer.CHIMEROID XVI	Millepod Ice Rock	4
+Slayer.CHIMEROID XVII	Sticky Mucus	4
+Slayer.CHIMEROID XVII	Yellow Millepod Rock	4
+Slayer.CHIMEROID XVII	Millepod Ice Rock	4
+Slayer.CHIMEROID XVIII	Sticky Mucus	4
+Slayer.CHIMEROID XVIII	Yellow Millepod Rock	4
+Slayer.CHIMEROID XVIII	Millepod Ice Rock	4
+Slayer.CHIMEROID XIX	Sticky Mucus	5
+Slayer.CHIMEROID XIX	Yellow Millepod Rock	5
+Slayer.CHIMEROID XIX	Millepod Ice Rock	5
+Slayer.ULTRAFAUNA I	White Forfex Shell	1
+Slayer.ULTRAFAUNA I	Black Electrical Tentacle	1
+Slayer.ULTRAFAUNA I	Hot Potamus Juice	1
+Slayer.ULTRAFAUNA II	White Forfex Shell	1
+Slayer.ULTRAFAUNA II	Black Electrical Tentacle	1
+Slayer.ULTRAFAUNA II	Hot Potamus Juice	1
+Slayer.ULTRAFAUNA III	White Forfex Shell	1
+Slayer.ULTRAFAUNA III	Black Electrical Tentacle	1
+Slayer.ULTRAFAUNA III	Hot Potamus Juice	1
+Slayer.ULTRAFAUNA IV	White Forfex Shell	2
+Slayer.ULTRAFAUNA IV	Black Electrical Tentacle	2
+Slayer.ULTRAFAUNA IV	Hot Potamus Juice	2
+Slayer.ULTRAFAUNA V	White Forfex Shell	2
+Slayer.ULTRAFAUNA V	Black Electrical Tentacle	2
+Slayer.ULTRAFAUNA V	Hot Potamus Juice	2
+Slayer.ULTRAFAUNA VI	White Forfex Shell	2
+Slayer.ULTRAFAUNA VI	Black Electrical Tentacle	2
+Slayer.ULTRAFAUNA VI	Hot Potamus Juice	2
+Slayer.ULTRAFAUNA VII	White Forfex Shell	2
+Slayer.ULTRAFAUNA VII	Black Electrical Tentacle	2
+Slayer.ULTRAFAUNA VII	Hot Potamus Juice	2
+Slayer.ULTRAFAUNA VIII	White Forfex Shell	2
+Slayer.ULTRAFAUNA VIII	Black Electrical Tentacle	2
+Slayer.ULTRAFAUNA VIII	Hot Potamus Juice	2
+Slayer.ULTRAFAUNA IX	White Forfex Shell	3
+Slayer.ULTRAFAUNA IX	Black Electrical Tentacle	3
+Slayer.ULTRAFAUNA IX	Hot Potamus Juice	3
+Slayer.ULTRAFAUNA X	White Forfex Shell	3
+Slayer.ULTRAFAUNA X	Reverse Millepod Fin	3
+Slayer.ULTRAFAUNA X	Deva Caladar's Red Ear	3
+Slayer.ULTRAFAUNA XI	White Forfex Shell	3
+Slayer.ULTRAFAUNA XI	Reverse Millepod Fin	3
+Slayer.ULTRAFAUNA XI	Deva Caladar's Red Ear	3
+Slayer.ULTRAFAUNA XII	White Forfex Shell	3
+Slayer.ULTRAFAUNA XII	Reverse Millepod Fin	3
+Slayer.ULTRAFAUNA XII	Deva Caladar's Red Ear	3
+Slayer.ULTRAFAUNA XIII	White Forfex Shell	3
+Slayer.ULTRAFAUNA XIII	Reverse Millepod Fin	3
+Slayer.ULTRAFAUNA XIII	Deva Caladar's Red Ear	3
+Slayer.ULTRAFAUNA XIV	White Forfex Shell	4
+Slayer.ULTRAFAUNA XIV	Reverse Millepod Fin	4
+Slayer.ULTRAFAUNA XIV	Deva Caladar's Red Ear	4
+Slayer.ULTRAFAUNA XV	White Forfex Shell	4
+Slayer.ULTRAFAUNA XV	Reverse Millepod Fin	4
+Slayer.ULTRAFAUNA XV	Deva Caladar's Red Ear	4
+Slayer.ULTRAFAUNA XVI	White Forfex Shell	4
+Slayer.ULTRAFAUNA XVI	Reverse Millepod Fin	4
+Slayer.ULTRAFAUNA XVI	Deva Caladar's Red Ear	4
+Slayer.ULTRAFAUNA XVII	White Forfex Shell	4
+Slayer.ULTRAFAUNA XVII	Reverse Millepod Fin	4
+Slayer.ULTRAFAUNA XVII	Deva Caladar's Red Ear	4
+Slayer.ULTRAFAUNA XVIII	White Forfex Shell	4
+Slayer.ULTRAFAUNA XVIII	Reverse Millepod Fin	4
+Slayer.ULTRAFAUNA XVIII	Deva Caladar's Red Ear	4
+Slayer.ULTRAFAUNA XIX	White Forfex Shell	5
+Slayer.ULTRAFAUNA XIX	Reverse Millepod Fin	5
+Slayer.ULTRAFAUNA XIX	Deva Caladar's Red Ear	5
+AttributeDmg.PHYS I	Sharp Germivore Jaw	1
+AttributeDmg.PHYS I	Giant Falsaxum Jaw	1
+AttributeDmg.PHYS II	Sharp Germivore Jaw	1
+AttributeDmg.PHYS II	Giant Falsaxum Jaw	1
+AttributeDmg.PHYS III	Sharp Germivore Jaw	1
+AttributeDmg.PHYS III	Giant Falsaxum Jaw	1
+AttributeDmg.PHYS IV	Sharp Germivore Jaw	2
+AttributeDmg.PHYS IV	Giant Falsaxum Jaw	2
+AttributeDmg.PHYS V	Sharp Germivore Jaw	2
+AttributeDmg.PHYS V	Giant Falsaxum Jaw	2
+AttributeDmg.PHYS VI	Sharp Germivore Jaw	2
+AttributeDmg.PHYS VI	Giant Falsaxum Jaw	2
+AttributeDmg.PHYS VII	Sharp Germivore Jaw	2
+AttributeDmg.PHYS VII	Giant Falsaxum Jaw	2
+AttributeDmg.PHYS VIII	Sharp Germivore Jaw	2
+AttributeDmg.PHYS VIII	Giant Falsaxum Jaw	2
+AttributeDmg.PHYS IX	Sharp Germivore Jaw	3
+AttributeDmg.PHYS IX	Giant Falsaxum Jaw	3
+AttributeDmg.PHYS X	Experia Glyph	3
+AttributeDmg.PHYS X	Reinforced Frame	3
+AttributeDmg.PHYS XI	Experia Glyph	3
+AttributeDmg.PHYS XI	Reinforced Frame	3
+AttributeDmg.PHYS XII	Experia Glyph	3
+AttributeDmg.PHYS XII	Reinforced Frame	3
+AttributeDmg.PHYS XIII	Experia Glyph	3
+AttributeDmg.PHYS XIII	Reinforced Frame	3
+AttributeDmg.PHYS XIV	Experia Glyph	4
+AttributeDmg.PHYS XIV	Reinforced Frame	4
+AttributeDmg.PHYS XV	Experia Glyph	4
+AttributeDmg.PHYS XV	Reinforced Frame	4
+AttributeDmg.PHYS XVI	Experia Glyph	4
+AttributeDmg.PHYS XVI	Reinforced Frame	4
+AttributeDmg.PHYS XVII	Experia Glyph	4
+AttributeDmg.PHYS XVII	Reinforced Frame	4
+AttributeDmg.PHYS XVIII	Experia Glyph	4
+AttributeDmg.PHYS XVIII	Reinforced Frame	4
+AttributeDmg.PHYS XIX	Experia Glyph	5
+AttributeDmg.PHYS XIX	Reinforced Frame	5
+AttributeDmg.BEAM I	Quirky Liver	1
+AttributeDmg.BEAM I	Gold Monoceros Horn	1
+AttributeDmg.BEAM II	Quirky Liver	1
+AttributeDmg.BEAM II	Gold Monoceros Horn	1
+AttributeDmg.BEAM III	Quirky Liver	1
+AttributeDmg.BEAM III	Gold Monoceros Horn	1
+AttributeDmg.BEAM IV	Quirky Liver	2
+AttributeDmg.BEAM IV	Gold Monoceros Horn	2
+AttributeDmg.BEAM V	Quirky Liver	2
+AttributeDmg.BEAM V	Gold Monoceros Horn	2
+AttributeDmg.BEAM VI	Quirky Liver	2
+AttributeDmg.BEAM VI	Gold Monoceros Horn	2
+AttributeDmg.BEAM VII	Quirky Liver	2
+AttributeDmg.BEAM VII	Gold Monoceros Horn	2
+AttributeDmg.BEAM VIII	Quirky Liver	2
+AttributeDmg.BEAM VIII	Gold Monoceros Horn	2
+AttributeDmg.BEAM IX	Quirky Liver	3
+AttributeDmg.BEAM IX	Gold Monoceros Horn	3
+AttributeDmg.BEAM X	Esse Glyph	3
+AttributeDmg.BEAM X	Advanced Lens	3
+AttributeDmg.BEAM XI	Esse Glyph	3
+AttributeDmg.BEAM XI	Advanced Lens	3
+AttributeDmg.BEAM XII	Esse Glyph	3
+AttributeDmg.BEAM XII	Advanced Lens	3
+AttributeDmg.BEAM XIII	Esse Glyph	3
+AttributeDmg.BEAM XIII	Advanced Lens	3
+AttributeDmg.BEAM XIV	Esse Glyph	4
+AttributeDmg.BEAM XIV	Advanced Lens	4
+AttributeDmg.BEAM XV	Esse Glyph	4
+AttributeDmg.BEAM XV	Advanced Lens	4
+AttributeDmg.BEAM XVI	Esse Glyph	4
+AttributeDmg.BEAM XVI	Advanced Lens	4
+AttributeDmg.BEAM XVII	Esse Glyph	4
+AttributeDmg.BEAM XVII	Advanced Lens	4
+AttributeDmg.BEAM XVIII	Esse Glyph	4
+AttributeDmg.BEAM XVIII	Advanced Lens	4
+AttributeDmg.BEAM XIX	Esse Glyph	5
+AttributeDmg.BEAM XIX	Advanced Lens	5
+AttributeDmg.ETHER I	Elemental Fragment	1
+AttributeDmg.ETHER I	Golden Progen Wing	1
+AttributeDmg.ETHER II	Elemental Fragment	1
+AttributeDmg.ETHER II	Golden Progen Wing	1
+AttributeDmg.ETHER III	Elemental Fragment	1
+AttributeDmg.ETHER III	Golden Progen Wing	1
+AttributeDmg.ETHER IV	Elemental Fragment	2
+AttributeDmg.ETHER IV	Golden Progen Wing	2
+AttributeDmg.ETHER V	Elemental Fragment	2
+AttributeDmg.ETHER V	Golden Progen Wing	2
+AttributeDmg.ETHER VI	Elemental Fragment	2
+AttributeDmg.ETHER VI	Golden Progen Wing	2
+AttributeDmg.ETHER VII	Elemental Fragment	2
+AttributeDmg.ETHER VII	Golden Progen Wing	2
+AttributeDmg.ETHER VIII	Elemental Fragment	2
+AttributeDmg.ETHER VIII	Golden Progen Wing	2
+AttributeDmg.ETHER IX	Elemental Fragment	3
+AttributeDmg.ETHER IX	Golden Progen Wing	3
+AttributeDmg.ETHER X	Creare Glyph	3
+AttributeDmg.ETHER X	Purple Cervus Antlers	3
+AttributeDmg.ETHER XI	Creare Glyph	3
+AttributeDmg.ETHER XI	Purple Cervus Antlers	3
+AttributeDmg.ETHER XII	Creare Glyph	3
+AttributeDmg.ETHER XII	Purple Cervus Antlers	3
+AttributeDmg.ETHER XIII	Creare Glyph	3
+AttributeDmg.ETHER XIII	Purple Cervus Antlers	3
+AttributeDmg.ETHER XIV	Creare Glyph	4
+AttributeDmg.ETHER XIV	Purple Cervus Antlers	4
+AttributeDmg.ETHER XV	Creare Glyph	4
+AttributeDmg.ETHER XV	Purple Cervus Antlers	4
+AttributeDmg.ETHER XVI	Creare Glyph	4
+AttributeDmg.ETHER XVI	Purple Cervus Antlers	4
+AttributeDmg.ETHER XVII	Creare Glyph	4
+AttributeDmg.ETHER XVII	Purple Cervus Antlers	4
+AttributeDmg.ETHER XVIII	Creare Glyph	4
+AttributeDmg.ETHER XVIII	Purple Cervus Antlers	4
+AttributeDmg.ETHER XIX	Creare Glyph	5
+AttributeDmg.ETHER XIX	Purple Cervus Antlers	5
+AttributeDmg.THERM I	Reinforced Plunger	1
+AttributeDmg.THERM I	Herculean Beast Hair	1
+AttributeDmg.THERM II	Reinforced Plunger	1
+AttributeDmg.THERM II	Herculean Beast Hair	1
+AttributeDmg.THERM III	Reinforced Plunger	1
+AttributeDmg.THERM III	Herculean Beast Hair	1
+AttributeDmg.THERM IV	Reinforced Plunger	2
+AttributeDmg.THERM IV	Herculean Beast Hair	2
+AttributeDmg.THERM V	Reinforced Plunger	2
+AttributeDmg.THERM V	Black Meaty Caecus Liver	2
+AttributeDmg.THERM VI	Reinforced Plunger	2
+AttributeDmg.THERM VI	Black Meaty Caecus Liver	2
+AttributeDmg.THERM VII	Reinforced Plunger	2
+AttributeDmg.THERM VII	Black Meaty Caecus Liver	2
+AttributeDmg.THERM VIII	Reinforced Plunger	2
+AttributeDmg.THERM VIII	Black Meaty Caecus Liver	2
+AttributeDmg.THERM IX	Reinforced Plunger	3
+AttributeDmg.THERM IX	Black Meaty Caecus Liver	3
+AttributeDmg.THERM X	Experia Glyph	3
+AttributeDmg.THERM X	Jacul Horn	3
+AttributeDmg.THERM XI	Experia Glyph	3
+AttributeDmg.THERM XI	Jacul Horn	3
+AttributeDmg.THERM XII	Experia Glyph	3
+AttributeDmg.THERM XII	Jacul Horn	3
+AttributeDmg.THERM XIII	Experia Glyph	3
+AttributeDmg.THERM XIII	Jacul Horn	3
+AttributeDmg.THERM XIV	Experia Glyph	4
+AttributeDmg.THERM XIV	Jacul Horn	4
+AttributeDmg.THERM XV	Experia Glyph	4
+AttributeDmg.THERM XV	Jacul Horn	4
+AttributeDmg.THERM XVI	Experia Glyph	4
+AttributeDmg.THERM XVI	Jacul Horn	4
+AttributeDmg.THERM XVII	Experia Glyph	4
+AttributeDmg.THERM XVII	Jacul Horn	4
+AttributeDmg.THERM XVIII	Experia Glyph	4
+AttributeDmg.THERM XVIII	Jacul Horn	4
+AttributeDmg.THERM XIX	Experia Glyph	5
+AttributeDmg.THERM XIX	Jacul Horn	5
+AttributeDmg.ELEC I	Quo Pod	1
+AttributeDmg.ELEC I	Black Scintimure Tentacle	1
+AttributeDmg.ELEC II	Quo Pod	1
+AttributeDmg.ELEC II	Black Scintimure Tentacle	1
+AttributeDmg.ELEC III	Quo Pod	1
+AttributeDmg.ELEC III	Black Scintimure Tentacle	1
+AttributeDmg.ELEC IV	Quo Pod	2
+AttributeDmg.ELEC IV	Black Scintimure Tentacle	2
+AttributeDmg.ELEC V	Vivohast Crescent Hook	2
+AttributeDmg.ELEC V	Black Scintimure Tentacle	2
+AttributeDmg.ELEC VI	Vivohast Crescent Hook	2
+AttributeDmg.ELEC VI	Black Scintimure Tentacle	2
+AttributeDmg.ELEC VII	Vivohast Crescent Hook	2
+AttributeDmg.ELEC VII	Black Scintimure Tentacle	2
+AttributeDmg.ELEC VIII	Vivohast Crescent Hook	2
+AttributeDmg.ELEC VIII	Black Scintimure Tentacle	2
+AttributeDmg.ELEC IX	Vivohast Crescent Hook	3
+AttributeDmg.ELEC IX	Black Scintimure Tentacle	3
+AttributeDmg.ELEC X	Scienti Glyph	3
+AttributeDmg.ELEC X	Reinforced Plug	3
+AttributeDmg.ELEC XI	Scienti Glyph	3
+AttributeDmg.ELEC XI	Reinforced Plug	3
+AttributeDmg.ELEC XII	Scienti Glyph	3
+AttributeDmg.ELEC XII	Reinforced Plug	3
+AttributeDmg.ELEC XIII	Scienti Glyph	3
+AttributeDmg.ELEC XIII	Reinforced Plug	3
+AttributeDmg.ELEC XIV	Scienti Glyph	4
+AttributeDmg.ELEC XIV	Reinforced Plug	4
+AttributeDmg.ELEC XV	Scienti Glyph	4
+AttributeDmg.ELEC XV	Reinforced Plug	4
+AttributeDmg.ELEC XVI	Scienti Glyph	4
+AttributeDmg.ELEC XVI	Reinforced Plug	4
+AttributeDmg.ELEC XVII	Scienti Glyph	4
+AttributeDmg.ELEC XVII	Reinforced Plug	4
+AttributeDmg.ELEC XVIII	Scienti Glyph	4
+AttributeDmg.ELEC XVIII	Reinforced Plug	4
+AttributeDmg.ELEC XIX	Scienti Glyph	5
+AttributeDmg.ELEC XIX	Reinforced Plug	5
+AttributeDmg.GRAV I	Black Gyrocompass	1
+AttributeDmg.GRAV I	Visigel Waterfall Orb	1
+AttributeDmg.GRAV II	Black Gyrocompass	1
+AttributeDmg.GRAV II	Visigel Waterfall Orb	1
+AttributeDmg.GRAV III	Black Gyrocompass	1
+AttributeDmg.GRAV III	Visigel Waterfall Orb	1
+AttributeDmg.GRAV IV	Black Gyrocompass	2
+AttributeDmg.GRAV IV	Visigel Waterfall Orb	2
+AttributeDmg.GRAV V	Black Gyrocompass	2
+AttributeDmg.GRAV V	Visigel Waterfall Orb	2
+AttributeDmg.GRAV VI	Black Gyrocompass	2
+AttributeDmg.GRAV VI	Visigel Waterfall Orb	2
+AttributeDmg.GRAV VII	Black Gyrocompass	2
+AttributeDmg.GRAV VII	Visigel Waterfall Orb	2
+AttributeDmg.GRAV VIII	Black Gyrocompass	2
+AttributeDmg.GRAV VIII	Visigel Waterfall Orb	2
+AttributeDmg.GRAV IX	Black Gyrocompass	3
+AttributeDmg.GRAV IX	Visigel Waterfall Orb	3
+AttributeDmg.GRAV X	Esse Glyph	3
+AttributeDmg.GRAV X	Gold Sylooth Brace	3
+AttributeDmg.GRAV XI	Esse Glyph	3
+AttributeDmg.GRAV XI	Gold Sylooth Brace	3
+AttributeDmg.GRAV XII	Esse Glyph	3
+AttributeDmg.GRAV XII	Gold Sylooth Brace	3
+AttributeDmg.GRAV XIII	Esse Glyph	3
+AttributeDmg.GRAV XIII	Gold Sylooth Brace	3
+AttributeDmg.GRAV XIV	Esse Glyph	4
+AttributeDmg.GRAV XIV	Gold Sylooth Brace	4
+AttributeDmg.GRAV XV	Esse Glyph	4
+AttributeDmg.GRAV XV	Gold Sylooth Brace	4
+AttributeDmg.GRAV XVI	Esse Glyph	4
+AttributeDmg.GRAV XVI	Gold Sylooth Brace	4
+AttributeDmg.GRAV XVII	Esse Glyph	4
+AttributeDmg.GRAV XVII	Gold Sylooth Brace	4
+AttributeDmg.GRAV XVIII	Esse Glyph	4
+AttributeDmg.GRAV XVIII	Gold Sylooth Brace	4
+AttributeDmg.GRAV XIX	Esse Glyph	5
+AttributeDmg.GRAV XIX	Gold Sylooth Brace	5
+PositionDmg.FRONT I	Cracked Bill	1
+PositionDmg.FRONT I	Auravis Horn	1
+PositionDmg.FRONT II	Cracked Bill	1
+PositionDmg.FRONT II	Auravis Horn	1
+PositionDmg.FRONT III	Cracked Bill	1
+PositionDmg.FRONT III	Auravis Horn	1
+PositionDmg.FRONT IV	Cracked Bill	2
+PositionDmg.FRONT IV	Auravis Horn	2
+PositionDmg.FRONT V	Cracked Bill	2
+PositionDmg.FRONT V	Auravis Horn	2
+PositionDmg.FRONT VI	Cracked Bill	2
+PositionDmg.FRONT VI	Auravis Horn	2
+PositionDmg.FRONT VII	Cracked Bill	2
+PositionDmg.FRONT VII	Auravis Horn	2
+PositionDmg.FRONT VIII	Cracked Bill	2
+PositionDmg.FRONT VIII	Auravis Horn	2
+PositionDmg.FRONT IX	Cracked Bill	3
+PositionDmg.FRONT IX	Auravis Horn	3
+PositionDmg.FRONT X	Cracked Bill	3
+PositionDmg.FRONT X	Black Vigent Rock Scalp	3
+PositionDmg.FRONT XI	Cracked Bill	3
+PositionDmg.FRONT XI	Black Vigent Rock Scalp	3
+PositionDmg.FRONT XII	Cracked Bill	3
+PositionDmg.FRONT XII	Black Vigent Rock Scalp	3
+PositionDmg.FRONT XIII	Cracked Bill	3
+PositionDmg.FRONT XIII	Black Vigent Rock Scalp	3
+PositionDmg.FRONT XIV	Cracked Bill	4
+PositionDmg.FRONT XIV	Black Vigent Rock Scalp	4
+PositionDmg.FRONT XV	Cracked Bill	4
+PositionDmg.FRONT XV	Black Vigent Rock Scalp	4
+PositionDmg.FRONT XVI	Cracked Bill	4
+PositionDmg.FRONT XVI	Black Vigent Rock Scalp	4
+PositionDmg.FRONT XVII	Cracked Bill	4
+PositionDmg.FRONT XVII	Black Vigent Rock Scalp	4
+PositionDmg.FRONT XVIII	Cracked Bill	4
+PositionDmg.FRONT XVIII	Black Vigent Rock Scalp	4
+PositionDmg.FRONT XIX	Cracked Bill	5
+PositionDmg.FRONT XIX	Black Vigent Rock Scalp	5
+PositionDmg.SIDE I	Pristine Claw	1
+PositionDmg.SIDE I	Green Blatta Wing	1
+PositionDmg.SIDE II	Pristine Claw	1
+PositionDmg.SIDE II	Green Blatta Wing	1
+PositionDmg.SIDE III	Pristine Claw	1
+PositionDmg.SIDE III	Green Blatta Wing	1
+PositionDmg.SIDE IV	Pristine Claw	2
+PositionDmg.SIDE IV	Green Blatta Wing	2
+PositionDmg.SIDE V	Pristine Claw	2
+PositionDmg.SIDE V	Green Blatta Wing	2
+PositionDmg.SIDE VI	Pristine Claw	2
+PositionDmg.SIDE VI	Green Blatta Wing	2
+PositionDmg.SIDE VII	Pristine Claw	2
+PositionDmg.SIDE VII	Green Blatta Wing	2
+PositionDmg.SIDE VIII	Pristine Claw	2
+PositionDmg.SIDE VIII	Green Blatta Wing	2
+PositionDmg.SIDE IX	Pristine Claw	3
+PositionDmg.SIDE IX	Green Blatta Wing	3
+PositionDmg.SIDE X	Pristine Claw	3
+PositionDmg.SIDE X	Ingrown Virago Claw	3
+PositionDmg.SIDE XI	Pristine Claw	3
+PositionDmg.SIDE XI	Ingrown Virago Claw	3
+PositionDmg.SIDE XII	Pristine Claw	3
+PositionDmg.SIDE XII	Ingrown Virago Claw	3
+PositionDmg.SIDE XIII	Pristine Claw	3
+PositionDmg.SIDE XIII	Ingrown Virago Claw	3
+PositionDmg.SIDE XIV	Pristine Claw	4
+PositionDmg.SIDE XIV	Ingrown Virago Claw	4
+PositionDmg.SIDE XV	Pristine Claw	4
+PositionDmg.SIDE XV	Ingrown Virago Claw	4
+PositionDmg.SIDE XVI	Pristine Claw	4
+PositionDmg.SIDE XVI	Ingrown Virago Claw	4
+PositionDmg.SIDE XVII	Pristine Claw	4
+PositionDmg.SIDE XVII	Ingrown Virago Claw	4
+PositionDmg.SIDE XVIII	Pristine Claw	4
+PositionDmg.SIDE XVIII	Ingrown Virago Claw	4
+PositionDmg.SIDE XIX	Pristine Claw	5
+PositionDmg.SIDE XIX	Ingrown Virago Claw	5
+PositionDmg.BACK I	Jagged Grex Tail	1
+PositionDmg.BACK I	Ebony Evello Egg	1
+PositionDmg.BACK II	Jagged Grex Tail	1
+PositionDmg.BACK II	Ebony Evello Egg	1
+PositionDmg.BACK III	Jagged Grex Tail	1
+PositionDmg.BACK III	Ebony Evello Egg	1
+PositionDmg.BACK IV	Jagged Grex Tail	2
+PositionDmg.BACK IV	Ebony Evello Egg	2
+PositionDmg.BACK V	Jagged Grex Tail	2
+PositionDmg.BACK V	Ebony Evello Egg	2
+PositionDmg.BACK VI	Jagged Grex Tail	2
+PositionDmg.BACK VI	Ebony Evello Egg	2
+PositionDmg.BACK VII	Jagged Grex Tail	2
+PositionDmg.BACK VII	Ebony Evello Egg	2
+PositionDmg.BACK VIII	Jagged Grex Tail	2
+PositionDmg.BACK VIII	Ebony Evello Egg	2
+PositionDmg.BACK IX	Jagged Grex Tail	3
+PositionDmg.BACK IX	Ebony Evello Egg	3
+PositionDmg.BACK X	Jagged Grex Tail	3
+PositionDmg.BACK X	Purple Virago Alloy Plate	3
+PositionDmg.BACK XI	Jagged Grex Tail	3
+PositionDmg.BACK XI	Purple Virago Alloy Plate	3
+PositionDmg.BACK XII	Jagged Grex Tail	3
+PositionDmg.BACK XII	Purple Virago Alloy Plate	3
+PositionDmg.BACK XIII	Jagged Grex Tail	3
+PositionDmg.BACK XIII	Purple Virago Alloy Plate	3
+PositionDmg.BACK XIV	Jagged Grex Tail	4
+PositionDmg.BACK XIV	Purple Virago Alloy Plate	4
+PositionDmg.BACK XV	Jagged Grex Tail	4
+PositionDmg.BACK XV	Purple Virago Alloy Plate	4
+PositionDmg.BACK XVI	Jagged Grex Tail	4
+PositionDmg.BACK XVI	Purple Virago Alloy Plate	4
+PositionDmg.BACK XVII	Jagged Grex Tail	4
+PositionDmg.BACK XVII	Purple Virago Alloy Plate	4
+PositionDmg.BACK XVIII	Jagged Grex Tail	4
+PositionDmg.BACK XVIII	Purple Virago Alloy Plate	4
+PositionDmg.BACK XIX	Jagged Grex Tail	5
+PositionDmg.BACK XIX	Purple Virago Alloy Plate	5
+PositionDmg.ABOVE I	Supple Leather	1
+PositionDmg.ABOVE II	Supple Leather	1
+PositionDmg.ABOVE III	Supple Leather	1
+PositionDmg.ABOVE IV	Supple Leather	2
+PositionDmg.ABOVE V	Supple Leather	2
+PositionDmg.ABOVE VI	Supple Leather	2
+PositionDmg.ABOVE VII	Supple Leather	2
+PositionDmg.ABOVE VIII	Supple Leather	2
+PositionDmg.ABOVE IX	Supple Leather	3
+PositionDmg.ABOVE X	Supple Leather	3
+PositionDmg.ABOVE XI	Supple Leather	3
+PositionDmg.ABOVE XII	Supple Leather	3
+PositionDmg.ABOVE XIII	Supple Leather	3
+PositionDmg.ABOVE XIV	Supple Leather	4
+PositionDmg.ABOVE XV	Supple Leather	4
+PositionDmg.ABOVE XVI	Supple Leather	4
+PositionDmg.ABOVE XVII	Supple Leather	4
+PositionDmg.ABOVE XVIII	Supple Leather	4
+PositionDmg.ABOVE XIX	Supple Leather	5
+M-Auto.BLACKOUT I	Ovis Polishing Stone	1
+M-Auto.BLACKOUT II	Ovis Polishing Stone	1
+M-Auto.BLACKOUT III	Ovis Polishing Stone	1
+M-Auto.BLACKOUT IV	Ovis Polishing Stone	2
+M-Auto.BLACKOUT V	Ovis Polishing Stone	2
+M-Auto.BLACKOUT VI	Ovis Polishing Stone	2
+M-Auto.BLACKOUT VII	Ovis Polishing Stone	2
+M-Auto.BLACKOUT VIII	Ovis Polishing Stone	2
+M-Auto.BLACKOUT IX	Ovis Polishing Stone	3
+M-Auto.BLACKOUT X	Ovis Polishing Stone	3
+M-Auto.BLACKOUT XI	Ovis Polishing Stone	3
+M-Auto.BLACKOUT XII	Ovis Polishing Stone	3
+M-Auto.BLACKOUT XIII	Ovis Polishing Stone	3
+M-Auto.BLACKOUT XIV	Ovis Polishing Stone	4
+M-Auto.BLACKOUT XV	Ovis Polishing Stone	4
+M-Auto.BLACKOUT XVI	Ovis Polishing Stone	4
+M-Auto.BLACKOUT XVII	Ovis Polishing Stone	4
+M-Auto.BLACKOUT XVIII	Ovis Polishing Stone	4
+M-Auto.BLACKOUT XIX	Ovis Polishing Stone	5
+M-Auto.FATIGUE I	Muscled Suid Bulge	1
+M-Auto.FATIGUE II	Muscled Suid Bulge	1
+M-Auto.FATIGUE III	Muscled Suid Bulge	1
+M-Auto.FATIGUE IV	Muscled Suid Bulge	2
+M-Auto.FATIGUE V	Muscled Suid Bulge	2
+M-Auto.FATIGUE VI	Muscled Suid Bulge	2
+M-Auto.FATIGUE VII	Muscled Suid Bulge	2
+M-Auto.FATIGUE VIII	Muscled Suid Bulge	2
+M-Auto.FATIGUE IX	Muscled Suid Bulge	3
+M-Auto.FATIGUE X	Muscled Suid Bulge	3
+M-Auto.FATIGUE XI	Muscled Suid Bulge	3
+M-Auto.FATIGUE XII	Muscled Suid Bulge	3
+M-Auto.FATIGUE XIII	Muscled Suid Bulge	3
+M-Auto.FATIGUE XIV	Muscled Suid Bulge	4
+M-Auto.FATIGUE XV	Muscled Suid Bulge	4
+M-Auto.FATIGUE XVI	Muscled Suid Bulge	4
+M-Auto.FATIGUE XVII	Muscled Suid Bulge	4
+M-Auto.FATIGUE XVIII	Muscled Suid Bulge	4
+M-Auto.FATIGUE XIX	Muscled Suid Bulge	5
+M-Auto.PHYS-DOWN I	Juicy Wild Meat	1
+M-Auto.PHYS-DOWN II	Juicy Wild Meat	1
+M-Auto.PHYS-DOWN III	Juicy Wild Meat	1
+M-Auto.PHYS-DOWN IV	Juicy Wild Meat	2
+M-Auto.PHYS-DOWN V	Juicy Wild Meat	2
+M-Auto.PHYS-DOWN VI	Juicy Wild Meat	2
+M-Auto.PHYS-DOWN VII	Juicy Wild Meat	2
+M-Auto.PHYS-DOWN VIII	Juicy Wild Meat	2
+M-Auto.PHYS-DOWN IX	Juicy Wild Meat	3
+M-Auto.PHYS-DOWN X	Juicy Wild Meat	3
+M-Auto.PHYS-DOWN XI	Juicy Wild Meat	3
+M-Auto.PHYS-DOWN XII	Juicy Wild Meat	3
+M-Auto.PHYS-DOWN XIII	Juicy Wild Meat	3
+M-Auto.PHYS-DOWN XIV	Juicy Wild Meat	4
+M-Auto.PHYS-DOWN XV	Juicy Wild Meat	4
+M-Auto.PHYS-DOWN XVI	Juicy Wild Meat	4
+M-Auto.PHYS-DOWN XVII	Juicy Wild Meat	4
+M-Auto.PHYS-DOWN XVIII	Juicy Wild Meat	4
+M-Auto.PHYS-DOWN XIX	Juicy Wild Meat	5
+M-Auto.BEAM-DOWN I	Adsecula Straw	1
+M-Auto.BEAM-DOWN II	Adsecula Straw	1
+M-Auto.BEAM-DOWN III	Adsecula Straw	1
+M-Auto.BEAM-DOWN IV	Adsecula Straw	2
+M-Auto.BEAM-DOWN V	Adsecula Straw	2
+M-Auto.BEAM-DOWN VI	Adsecula Straw	2
+M-Auto.BEAM-DOWN VII	Adsecula Straw	2
+M-Auto.BEAM-DOWN VIII	Adsecula Straw	2
+M-Auto.BEAM-DOWN IX	Adsecula Straw	3
+M-Auto.BEAM-DOWN X	Adsecula Straw	3
+M-Auto.BEAM-DOWN XI	Adsecula Straw	3
+M-Auto.BEAM-DOWN XII	Adsecula Straw	3
+M-Auto.BEAM-DOWN XIII	Adsecula Straw	3
+M-Auto.BEAM-DOWN XIV	Adsecula Straw	4
+M-Auto.BEAM-DOWN XV	Adsecula Straw	4
+M-Auto.BEAM-DOWN XVI	Adsecula Straw	4
+M-Auto.BEAM-DOWN XVII	Adsecula Straw	4
+M-Auto.BEAM-DOWN XVIII	Adsecula Straw	4
+M-Auto.BEAM-DOWN XIX	Adsecula Straw	5
+M-Auto.ETHER-DOWN I	Perforated Oar	1
+M-Auto.ETHER-DOWN II	Perforated Oar	1
+M-Auto.ETHER-DOWN III	Perforated Oar	1
+M-Auto.ETHER-DOWN IV	Perforated Oar	2
+M-Auto.ETHER-DOWN V	Perforated Oar	2
+M-Auto.ETHER-DOWN VI	Perforated Oar	2
+M-Auto.ETHER-DOWN VII	Perforated Oar	2
+M-Auto.ETHER-DOWN VIII	Perforated Oar	2
+M-Auto.ETHER-DOWN IX	Perforated Oar	3
+M-Auto.ETHER-DOWN X	Perforated Oar	3
+M-Auto.ETHER-DOWN XI	Perforated Oar	3
+M-Auto.ETHER-DOWN XII	Perforated Oar	3
+M-Auto.ETHER-DOWN XIII	Perforated Oar	3
+M-Auto.ETHER-DOWN XIV	Perforated Oar	4
+M-Auto.ETHER-DOWN XV	Perforated Oar	4
+M-Auto.ETHER-DOWN XVI	Perforated Oar	4
+M-Auto.ETHER-DOWN XVII	Perforated Oar	4
+M-Auto.ETHER-DOWN XVIII	Perforated Oar	4
+M-Auto.ETHER-DOWN XIX	Perforated Oar	5
+M-Auto.THERM-DOWN I	Red Forfex Shell	1
+M-Auto.THERM-DOWN II	Red Forfex Shell	1
+M-Auto.THERM-DOWN III	Red Forfex Shell	1
+M-Auto.THERM-DOWN IV	Red Forfex Shell	2
+M-Auto.THERM-DOWN V	Red Forfex Shell	2
+M-Auto.THERM-DOWN VI	Red Forfex Shell	2
+M-Auto.THERM-DOWN VII	Red Forfex Shell	2
+M-Auto.THERM-DOWN VIII	Red Forfex Shell	2
+M-Auto.THERM-DOWN IX	Red Forfex Shell	3
+M-Auto.THERM-DOWN X	Red Forfex Shell	3
+M-Auto.THERM-DOWN XI	Red Forfex Shell	3
+M-Auto.THERM-DOWN XII	Red Forfex Shell	3
+M-Auto.THERM-DOWN XIII	Red Forfex Shell	3
+M-Auto.THERM-DOWN XIV	Red Forfex Shell	4
+M-Auto.THERM-DOWN XV	Red Forfex Shell	4
+M-Auto.THERM-DOWN XVI	Red Forfex Shell	4
+M-Auto.THERM-DOWN XVII	Red Forfex Shell	4
+M-Auto.THERM-DOWN XVIII	Red Forfex Shell	4
+M-Auto.THERM-DOWN XIX	Red Forfex Shell	5
+M-Auto.ELEC-DOWN I	Muddy Pelt	1
+M-Auto.ELEC-DOWN II	Muddy Pelt	1
+M-Auto.ELEC-DOWN III	Muddy Pelt	1
+M-Auto.ELEC-DOWN IV	Muddy Pelt	2
+M-Auto.ELEC-DOWN V	Muddy Pelt	2
+M-Auto.ELEC-DOWN VI	Muddy Pelt	2
+M-Auto.ELEC-DOWN VII	Muddy Pelt	2
+M-Auto.ELEC-DOWN VIII	Muddy Pelt	2
+M-Auto.ELEC-DOWN IX	Muddy Pelt	3
+M-Auto.ELEC-DOWN X	Muddy Pelt	3
+M-Auto.ELEC-DOWN XI	Muddy Pelt	3
+M-Auto.ELEC-DOWN XII	Muddy Pelt	3
+M-Auto.ELEC-DOWN XIII	Muddy Pelt	3
+M-Auto.ELEC-DOWN XIV	Muddy Pelt	4
+M-Auto.ELEC-DOWN XV	Muddy Pelt	4
+M-Auto.ELEC-DOWN XVI	Muddy Pelt	4
+M-Auto.ELEC-DOWN XVII	Muddy Pelt	4
+M-Auto.ELEC-DOWN XVIII	Muddy Pelt	4
+M-Auto.ELEC-DOWN XIX	Muddy Pelt	5
+M-Auto.GRAV-DOWN I	Black Blatta Wing	1
+M-Auto.GRAV-DOWN II	Black Blatta Wing	1
+M-Auto.GRAV-DOWN III	Black Blatta Wing	1
+M-Auto.GRAV-DOWN IV	Black Blatta Wing	2
+M-Auto.GRAV-DOWN V	Black Blatta Wing	2
+M-Auto.GRAV-DOWN VI	Black Blatta Wing	2
+M-Auto.GRAV-DOWN VII	Black Blatta Wing	2
+M-Auto.GRAV-DOWN VIII	Black Blatta Wing	2
+M-Auto.GRAV-DOWN IX	Black Blatta Wing	3
+M-Auto.GRAV-DOWN X	Black Blatta Wing	3
+M-Auto.GRAV-DOWN XI	Black Blatta Wing	3
+M-Auto.GRAV-DOWN XII	Black Blatta Wing	3
+M-Auto.GRAV-DOWN XIII	Black Blatta Wing	3
+M-Auto.GRAV-DOWN XIV	Black Blatta Wing	4
+M-Auto.GRAV-DOWN XV	Black Blatta Wing	4
+M-Auto.GRAV-DOWN XVI	Black Blatta Wing	4
+M-Auto.GRAV-DOWN XVII	Black Blatta Wing	4
+M-Auto.GRAV-DOWN XVIII	Black Blatta Wing	4
+M-Auto.GRAV-DOWN XIX	Black Blatta Wing	5
+M-Auto.BLAZE I	Scirpo Malic Acid Sac	1
+M-Auto.BLAZE I	Pugilith Lamp	1
+M-Auto.BLAZE II	Scirpo Malic Acid Sac	1
+M-Auto.BLAZE II	Pugilith Lamp	1
+M-Auto.BLAZE III	Scirpo Malic Acid Sac	1
+M-Auto.BLAZE III	Pugilith Lamp	1
+M-Auto.BLAZE IV	Scirpo Malic Acid Sac	2
+M-Auto.BLAZE IV	Pugilith Lamp	2
+M-Auto.BLAZE V	Scirpo Malic Acid Sac	2
+M-Auto.BLAZE V	Pugilith Lamp	2
+M-Auto.BLAZE VI	Scirpo Malic Acid Sac	2
+M-Auto.BLAZE VI	Pugilith Lamp	2
+M-Auto.BLAZE VII	Scirpo Malic Acid Sac	2
+M-Auto.BLAZE VII	Pugilith Lamp	2
+M-Auto.BLAZE VIII	Scirpo Malic Acid Sac	2
+M-Auto.BLAZE VIII	Pugilith Lamp	2
+M-Auto.BLAZE IX	Scirpo Malic Acid Sac	3
+M-Auto.BLAZE IX	Pugilith Lamp	3
+M-Auto.BLAZE X	Scirpo Malic Acid Sac	3
+M-Auto.BLAZE X	Imperial Sphinx Fang	3
+M-Auto.BLAZE XI	Scirpo Malic Acid Sac	3
+M-Auto.BLAZE XI	Imperial Sphinx Fang	3
+M-Auto.BLAZE XII	Scirpo Malic Acid Sac	3
+M-Auto.BLAZE XII	Imperial Sphinx Fang	3
+M-Auto.BLAZE XIII	Scirpo Malic Acid Sac	3
+M-Auto.BLAZE XIII	Imperial Sphinx Fang	3
+M-Auto.BLAZE XIV	Scirpo Malic Acid Sac	4
+M-Auto.BLAZE XIV	Imperial Sphinx Fang	4
+M-Auto.BLAZE XV	Scirpo Malic Acid Sac	4
+M-Auto.BLAZE XV	Imperial Sphinx Fang	4
+M-Auto.BLAZE XVI	Scirpo Malic Acid Sac	4
+M-Auto.BLAZE XVI	Imperial Sphinx Fang	4
+M-Auto.BLAZE XVII	Scirpo Malic Acid Sac	4
+M-Auto.BLAZE XVII	Imperial Sphinx Fang	4
+M-Auto.BLAZE XVIII	Scirpo Malic Acid Sac	4
+M-Auto.BLAZE XVIII	Imperial Sphinx Fang	4
+M-Auto.BLAZE XIX	Scirpo Malic Acid Sac	5
+M-Auto.BLAZE XIX	Imperial Sphinx Fang	5
+M-Auto.SHOCK I	Scirpo Cyanide Sac	1
+M-Auto.SHOCK I	Electrified Xeno Blood	1
+M-Auto.SHOCK II	Scirpo Cyanide Sac	1
+M-Auto.SHOCK II	Electrified Xeno Blood	1
+M-Auto.SHOCK III	Scirpo Cyanide Sac	1
+M-Auto.SHOCK III	Electrified Xeno Blood	1
+M-Auto.SHOCK IV	Scirpo Cyanide Sac	2
+M-Auto.SHOCK IV	Electrified Xeno Blood	2
+M-Auto.SHOCK V	Scirpo Cyanide Sac	2
+M-Auto.SHOCK V	Electrified Xeno Blood	2
+M-Auto.SHOCK VI	Scirpo Cyanide Sac	2
+M-Auto.SHOCK VI	Electrified Xeno Blood	2
+M-Auto.SHOCK VII	Scirpo Cyanide Sac	2
+M-Auto.SHOCK VII	Electrified Xeno Blood	2
+M-Auto.SHOCK VIII	Scirpo Cyanide Sac	2
+M-Auto.SHOCK VIII	Electrified Xeno Blood	2
+M-Auto.SHOCK IX	Scirpo Cyanide Sac	3
+M-Auto.SHOCK IX	Electrified Xeno Blood	3
+M-Auto.SHOCK X	Scirpo Cyanide Sac	3
+M-Auto.SHOCK X	Electric Tersqual Tear	3
+M-Auto.SHOCK XI	Scirpo Cyanide Sac	3
+M-Auto.SHOCK XI	Electric Tersqual Tear	3
+M-Auto.SHOCK XII	Scirpo Cyanide Sac	3
+M-Auto.SHOCK XII	Electric Tersqual Tear	3
+M-Auto.SHOCK XIII	Scirpo Cyanide Sac	3
+M-Auto.SHOCK XIII	Electric Tersqual Tear	3
+M-Auto.SHOCK XIV	Scirpo Cyanide Sac	4
+M-Auto.SHOCK XIV	Electric Tersqual Tear	4
+M-Auto.SHOCK XV	Scirpo Cyanide Sac	4
+M-Auto.SHOCK XV	Electric Tersqual Tear	4
+M-Auto.SHOCK XVI	Scirpo Cyanide Sac	4
+M-Auto.SHOCK XVI	Electric Tersqual Tear	4
+M-Auto.SHOCK XVII	Scirpo Cyanide Sac	4
+M-Auto.SHOCK XVII	Electric Tersqual Tear	4
+M-Auto.SHOCK XVIII	Scirpo Cyanide Sac	4
+M-Auto.SHOCK XVIII	Electric Tersqual Tear	4
+M-Auto.SHOCK XIX	Scirpo Cyanide Sac	5
+M-Auto.SHOCK XIX	Electric Tersqual Tear	5
+M-Auto.HP-RECOV I	Thallus Crescent Hook	1
+M-Auto.HP-RECOV I	Green Monoceros Horn	1
+M-Auto.HP-RECOV I	Liceor Horn	1
+M-Auto.HP-RECOV II	Thallus Crescent Hook	1
+M-Auto.HP-RECOV II	Green Monoceros Horn	1
+M-Auto.HP-RECOV II	Liceor Horn	1
+M-Auto.HP-RECOV III	Thallus Crescent Hook	1
+M-Auto.HP-RECOV III	Green Monoceros Horn	1
+M-Auto.HP-RECOV III	Liceor Horn	1
+M-Auto.HP-RECOV IV	Thallus Crescent Hook	2
+M-Auto.HP-RECOV IV	Green Monoceros Horn	2
+M-Auto.HP-RECOV IV	Liceor Horn	2
+M-Auto.HP-RECOV V	Thallus Crescent Hook	2
+M-Auto.HP-RECOV V	Green Monoceros Horn	2
+M-Auto.HP-RECOV V	Liceor Horn	2
+M-Auto.HP-RECOV VI	Thallus Crescent Hook	2
+M-Auto.HP-RECOV VI	Green Monoceros Horn	2
+M-Auto.HP-RECOV VI	Liceor Horn	2
+M-Auto.HP-RECOV VII	Thallus Crescent Hook	2
+M-Auto.HP-RECOV VII	Green Monoceros Horn	2
+M-Auto.HP-RECOV VII	Liceor Horn	2
+M-Auto.HP-RECOV VIII	Thallus Crescent Hook	2
+M-Auto.HP-RECOV VIII	Green Monoceros Horn	2
+M-Auto.HP-RECOV VIII	Liceor Horn	2
+M-Auto.HP-RECOV IX	Thallus Crescent Hook	3
+M-Auto.HP-RECOV IX	Green Monoceros Horn	3
+M-Auto.HP-RECOV IX	Liceor Horn	3
+M-Auto.HP-RECOV X	Thallus Crescent Hook	3
+M-Auto.HP-RECOV X	Millesaur Dung	3
+M-Auto.HP-RECOV X	Coronid Dung	3
+M-Auto.HP-RECOV XI	Thallus Crescent Hook	3
+M-Auto.HP-RECOV XI	Millesaur Dung	3
+M-Auto.HP-RECOV XI	Coronid Dung	3
+M-Auto.HP-RECOV XII	Thallus Crescent Hook	3
+M-Auto.HP-RECOV XII	Millesaur Dung	3
+M-Auto.HP-RECOV XII	Coronid Dung	3
+M-Auto.HP-RECOV XIII	Thallus Crescent Hook	3
+M-Auto.HP-RECOV XIII	Millesaur Dung	3
+M-Auto.HP-RECOV XIII	Coronid Dung	3
+M-Auto.HP-RECOV XIV	Thallus Crescent Hook	4
+M-Auto.HP-RECOV XIV	Millesaur Dung	4
+M-Auto.HP-RECOV XIV	Coronid Dung	4
+M-Auto.HP-RECOV XV	Thallus Crescent Hook	4
+M-Auto.HP-RECOV XV	Millesaur Dung	4
+M-Auto.HP-RECOV XV	Coronid Dung	4
+M-Auto.HP-RECOV XVI	Thallus Crescent Hook	4
+M-Auto.HP-RECOV XVI	Millesaur Dung	4
+M-Auto.HP-RECOV XVI	Coronid Dung	4
+M-Auto.HP-RECOV XVII	Thallus Crescent Hook	4
+M-Auto.HP-RECOV XVII	Millesaur Dung	4
+M-Auto.HP-RECOV XVII	Coronid Dung	4
+M-Auto.HP-RECOV XVIII	Thallus Crescent Hook	4
+M-Auto.HP-RECOV XVIII	Millesaur Dung	4
+M-Auto.HP-RECOV XVIII	Coronid Dung	4
+M-Auto.HP-RECOV XIX	Thallus Crescent Hook	5
+M-Auto.HP-RECOV XIX	Millesaur Dung	5
+M-Auto.HP-RECOV XIX	Coronid Dung	5
+Damage.GP-GAIN I	Topaz Wine	1
+Damage.GP-GAIN I	Glowing Retina	1
+Damage.GP-GAIN I	Terebra Water Grease	1
+Damage.GP-GAIN II	Topaz Wine	1
+Damage.GP-GAIN II	Glowing Retina	1
+Damage.GP-GAIN II	Terebra Water Grease	1
+Damage.GP-GAIN III	Topaz Wine	1
+Damage.GP-GAIN III	Glowing Retina	1
+Damage.GP-GAIN III	Terebra Water Grease	1
+Damage.GP-GAIN IV	Topaz Wine	2
+Damage.GP-GAIN IV	Glowing Retina	2
+Damage.GP-GAIN IV	Terebra Water Grease	2
+Damage.GP-GAIN V	Topaz Wine	2
+Damage.GP-GAIN V	Glowing Retina	2
+Damage.GP-GAIN V	Terebra Water Grease	2
+Damage.GP-GAIN VI	Topaz Wine	2
+Damage.GP-GAIN VI	Glowing Retina	2
+Damage.GP-GAIN VI	Terebra Water Grease	2
+Damage.GP-GAIN VII	Topaz Wine	2
+Damage.GP-GAIN VII	Glowing Retina	2
+Damage.GP-GAIN VII	Terebra Water Grease	2
+Damage.GP-GAIN VIII	Topaz Wine	2
+Damage.GP-GAIN VIII	Glowing Retina	2
+Damage.GP-GAIN VIII	Terebra Water Grease	2
+Damage.GP-GAIN IX	Topaz Wine	3
+Damage.GP-GAIN IX	Glowing Retina	3
+Damage.GP-GAIN IX	Terebra Water Grease	3
+Damage.GP-GAIN X	Topaz Wine	3
+Damage.GP-GAIN X	Silver Petramand Silk	3
+Damage.GP-GAIN X	Big Balaena Sand Bag	3
+Damage.GP-GAIN XI	Topaz Wine	3
+Damage.GP-GAIN XI	Silver Petramand Silk	3
+Damage.GP-GAIN XI	Big Balaena Sand Bag	3
+Damage.GP-GAIN XII	Topaz Wine	3
+Damage.GP-GAIN XII	Silver Petramand Silk	3
+Damage.GP-GAIN XII	Big Balaena Sand Bag	3
+Damage.GP-GAIN XIII	Topaz Wine	3
+Damage.GP-GAIN XIII	Silver Petramand Silk	3
+Damage.GP-GAIN XIII	Big Balaena Sand Bag	3
+Damage.GP-GAIN XIV	Topaz Wine	4
+Damage.GP-GAIN XIV	Silver Petramand Silk	4
+Damage.GP-GAIN XIV	Big Balaena Sand Bag	4
+Damage.GP-GAIN XV	Topaz Wine	4
+Damage.GP-GAIN XV	Silver Petramand Silk	4
+Damage.GP-GAIN XV	Big Balaena Sand Bag	4
+Damage.GP-GAIN XVI	Topaz Wine	4
+Damage.GP-GAIN XVI	Silver Petramand Silk	4
+Damage.GP-GAIN XVI	Big Balaena Sand Bag	4
+Damage.GP-GAIN XVII	Topaz Wine	4
+Damage.GP-GAIN XVII	Silver Petramand Silk	4
+Damage.GP-GAIN XVII	Big Balaena Sand Bag	4
+Damage.GP-GAIN XVIII	Topaz Wine	4
+Damage.GP-GAIN XVIII	Silver Petramand Silk	4
+Damage.GP-GAIN XVIII	Big Balaena Sand Bag	4
+Damage.GP-GAIN XIX	Topaz Wine	5
+Damage.GP-GAIN XIX	Silver Petramand Silk	5
+Damage.GP-GAIN XIX	Big Balaena Sand Bag	5
+Damage.APPEND I	Shiny Silver Caro Plate	1
+Damage.APPEND II	Shiny Silver Caro Plate	1
+Damage.APPEND III	Shiny Silver Caro Plate	1
+Damage.APPEND IV	Shiny Silver Caro Plate	2
+Damage.APPEND V	Shiny Silver Caro Plate	2
+Damage.APPEND VI	Shiny Silver Caro Plate	2
+Damage.APPEND VII	Shiny Silver Caro Plate	2
+Damage.APPEND VIII	Shiny Silver Caro Plate	2
+Damage.APPEND IX	Shiny Silver Caro Plate	3
+Damage.APPEND X	Shiny Silver Caro Plate	3
+Damage.APPEND XI	Shiny Silver Caro Plate	3
+Damage.APPEND XII	Shiny Silver Caro Plate	3
+Damage.APPEND XIII	Shiny Silver Caro Plate	3
+Damage.APPEND XIV	Shiny Silver Caro Plate	4
+Damage.APPEND XV	Shiny Silver Caro Plate	4
+Damage.APPEND XVI	Shiny Silver Caro Plate	4
+Damage.APPEND XVII	Shiny Silver Caro Plate	4
+Damage.APPEND XVIII	Shiny Silver Caro Plate	4
+Damage.APPEND XIX	Shiny Silver Caro Plate	5
+Jamming I	Silver Sacrifole Feather	1
+Jamming II	Silver Sacrifole Feather	1
+Jamming III	Silver Sacrifole Feather	1
+Jamming IV	Silver Sacrifole Feather	2
+Jamming V	Silver Sacrifole Feather	2
+Jamming VI	Silver Sacrifole Feather	2
+Jamming VII	Silver Sacrifole Feather	2
+Jamming VIII	Silver Sacrifole Feather	2
+Jamming IX	Silver Sacrifole Feather	3
+Jamming X	Silver Sacrifole Feather	3
+Jamming XI	Silver Sacrifole Feather	3
+Jamming XII	Silver Sacrifole Feather	3
+Jamming XIII	Silver Sacrifole Feather	3
+Jamming XIV	Silver Sacrifole Feather	4
+Jamming XV	Silver Sacrifole Feather	4
+Jamming XVI	Silver Sacrifole Feather	4
+Jamming XVII	Silver Sacrifole Feather	4
+Jamming XVIII	Silver Sacrifole Feather	4
+Jamming XIX	Silver Sacrifole Feather	5
+AppendLost.ATK-UP I	Golden Puff	1
+AppendLost.ATK-UP II	Golden Puff	1
+AppendLost.ATK-UP III	Golden Puff	1
+AppendLost.ATK-UP IV	Golden Puff	2
+AppendLost.ATK-UP V	Golden Puff	2
+AppendLost.ATK-UP VI	Golden Puff	2
+AppendLost.ATK-UP VII	Golden Puff	2
+AppendLost.ATK-UP VIII	Golden Puff	2
+AppendLost.ATK-UP IX	Golden Puff	3
+AppendLost.ATK-UP X	Golden Puff	3
+AppendLost.ATK-UP XI	Golden Puff	3
+AppendLost.ATK-UP XII	Golden Puff	3
+AppendLost.ATK-UP XIII	Golden Puff	3
+AppendLost.ATK-UP XIV	Golden Puff	4
+AppendLost.ATK-UP XV	Golden Puff	4
+AppendLost.ATK-UP XVI	Golden Puff	4
+AppendLost.ATK-UP XVII	Golden Puff	4
+AppendLost.ATK-UP XVIII	Golden Puff	4
+AppendLost.ATK-UP XIX	Golden Puff	5
+AppendLost.EVA-UP I	Longevity Bough	1
+AppendLost.EVA-UP II	Longevity Bough	1
+AppendLost.EVA-UP III	Longevity Bough	1
+AppendLost.EVA-UP IV	Longevity Bough	2
+AppendLost.EVA-UP V	Longevity Bough	2
+AppendLost.EVA-UP VI	Longevity Bough	2
+AppendLost.EVA-UP VII	Longevity Bough	2
+AppendLost.EVA-UP VIII	Longevity Bough	2
+AppendLost.EVA-UP IX	Longevity Bough	3
+AppendLost.EVA-UP X	Longevity Bough	3
+AppendLost.EVA-UP XI	Longevity Bough	3
+AppendLost.EVA-UP XII	Longevity Bough	3
+AppendLost.EVA-UP XIII	Longevity Bough	3
+AppendLost.EVA-UP XIV	Longevity Bough	4
+AppendLost.EVA-UP XV	Longevity Bough	4
+AppendLost.EVA-UP XVI	Longevity Bough	4
+AppendLost.EVA-UP XVII	Longevity Bough	4
+AppendLost.EVA-UP XVIII	Longevity Bough	4
+AppendLost.EVA-UP XIX	Longevity Bough	5
+AppendLost.GP I	Lucky Cervus Sapling	1
+AppendLost.GP II	Lucky Cervus Sapling	1
+AppendLost.GP III	Lucky Cervus Sapling	1
+AppendLost.GP IV	Lucky Cervus Sapling	2
+AppendLost.GP V	Lucky Cervus Sapling	2
+AppendLost.GP VI	Lucky Cervus Sapling	2
+AppendLost.GP VII	Lucky Cervus Sapling	2
+AppendLost.GP VIII	Lucky Cervus Sapling	2
+AppendLost.GP IX	Lucky Cervus Sapling	3
+AppendLost.GP X	Lucky Cervus Sapling	3
+AppendLost.GP XI	Lucky Cervus Sapling	3
+AppendLost.GP XII	Lucky Cervus Sapling	3
+AppendLost.GP XIII	Lucky Cervus Sapling	3
+AppendLost.GP XIV	Lucky Cervus Sapling	4
+AppendLost.GP XV	Lucky Cervus Sapling	4
+AppendLost.GP XVI	Lucky Cervus Sapling	4
+AppendLost.GP XVII	Lucky Cervus Sapling	4
+AppendLost.GP XVIII	Lucky Cervus Sapling	4
+AppendLost.GP XIX	Lucky Cervus Sapling	5
+Reflect.DAMAGE-UP I	Green Crystal	1
+Reflect.DAMAGE-UP I	Diamond Seed	1
+Reflect.DAMAGE-UP I	Cimmerian Pom Pom	1
+Reflect.DAMAGE-UP II	Green Crystal	1
+Reflect.DAMAGE-UP II	Diamond Seed	1
+Reflect.DAMAGE-UP II	Cimmerian Pom Pom	1
+Reflect.DAMAGE-UP III	Green Crystal	1
+Reflect.DAMAGE-UP III	Diamond Seed	1
+Reflect.DAMAGE-UP III	Cimmerian Pom Pom	1
+Reflect.DAMAGE-UP IV	Green Crystal	2
+Reflect.DAMAGE-UP IV	Diamond Seed	2
+Reflect.DAMAGE-UP IV	Cimmerian Pom Pom	2
+Reflect.DAMAGE-UP V	Odorous Tentacle	2
+Reflect.DAMAGE-UP V	Iron Lump	2
+Reflect.DAMAGE-UP V	Pristine Dorsal Fin	2
+Reflect.DAMAGE-UP VI	Odorous Tentacle	2
+Reflect.DAMAGE-UP VI	Iron Lump	2
+Reflect.DAMAGE-UP VI	Pristine Dorsal Fin	2
+Reflect.DAMAGE-UP VII	Odorous Tentacle	2
+Reflect.DAMAGE-UP VII	Iron Lump	2
+Reflect.DAMAGE-UP VII	Pristine Dorsal Fin	2
+Reflect.DAMAGE-UP VIII	Odorous Tentacle	2
+Reflect.DAMAGE-UP VIII	Iron Lump	2
+Reflect.DAMAGE-UP VIII	Pristine Dorsal Fin	2
+Reflect.DAMAGE-UP IX	Odorous Tentacle	3
+Reflect.DAMAGE-UP IX	Iron Lump	3
+Reflect.DAMAGE-UP IX	Pristine Dorsal Fin	3
+Reflect.DAMAGE-UP X	Yggralith Horn	3
+Reflect.DAMAGE-UP X	Cloudy Gerrid Soup	3
+Reflect.DAMAGE-UP X	Sabula Backbone	3
+Reflect.DAMAGE-UP XI	Yggralith Horn	3
+Reflect.DAMAGE-UP XI	Cloudy Gerrid Soup	3
+Reflect.DAMAGE-UP XI	Sabula Backbone	3
+Reflect.DAMAGE-UP XII	Yggralith Horn	3
+Reflect.DAMAGE-UP XII	Cloudy Gerrid Soup	3
+Reflect.DAMAGE-UP XII	Sabula Backbone	3
+Reflect.DAMAGE-UP XIII	Yggralith Horn	3
+Reflect.DAMAGE-UP XIII	Cloudy Gerrid Soup	3
+Reflect.DAMAGE-UP XIII	Sabula Backbone	3
+Reflect.DAMAGE-UP XIV	Yggralith Horn	4
+Reflect.DAMAGE-UP XIV	Cloudy Gerrid Soup	4
+Reflect.DAMAGE-UP XIV	Sabula Backbone	4
+Reflect.DAMAGE-UP XV	Yggralith Horn	4
+Reflect.DAMAGE-UP XV	Cloudy Gerrid Soup	4
+Reflect.DAMAGE-UP XV	Sabula Backbone	4
+Reflect.DAMAGE-UP XVI	Yggralith Horn	4
+Reflect.DAMAGE-UP XVI	Cloudy Gerrid Soup	4
+Reflect.DAMAGE-UP XVI	Sabula Backbone	4
+Reflect.DAMAGE-UP XVII	Yggralith Horn	4
+Reflect.DAMAGE-UP XVII	Cloudy Gerrid Soup	4
+Reflect.DAMAGE-UP XVII	Sabula Backbone	4
+Reflect.DAMAGE-UP XVIII	Yggralith Horn	4
+Reflect.DAMAGE-UP XVIII	Cloudy Gerrid Soup	4
+Reflect.DAMAGE-UP XVIII	Sabula Backbone	4
+Reflect.DAMAGE-UP XIX	Yggralith Horn	5
+Reflect.DAMAGE-UP XIX	Cloudy Gerrid Soup	5
+Reflect.DAMAGE-UP XIX	Sabula Backbone	5
+Reflect.NEG-PHYS I	Juicy Wild Meat	1
+Reflect.NEG-PHYS II	Juicy Wild Meat	1
+Reflect.NEG-PHYS III	Juicy Wild Meat	1
+Reflect.NEG-PHYS IV	Juicy Wild Meat	2
+Reflect.NEG-PHYS V	Juicy Wild Meat	2
+Reflect.NEG-PHYS VI	Juicy Wild Meat	2
+Reflect.NEG-PHYS VII	Juicy Wild Meat	2
+Reflect.NEG-PHYS VIII	Juicy Wild Meat	2
+Reflect.NEG-PHYS IX	Juicy Wild Meat	3
+Reflect.NEG-PHYS X	Juicy Wild Meat	3
+Reflect.NEG-PHYS XI	Juicy Wild Meat	3
+Reflect.NEG-PHYS XII	Juicy Wild Meat	3
+Reflect.NEG-PHYS XIII	Juicy Wild Meat	3
+Reflect.NEG-PHYS XIV	Juicy Wild Meat	4
+Reflect.NEG-PHYS XV	Juicy Wild Meat	4
+Reflect.NEG-PHYS XVI	Juicy Wild Meat	4
+Reflect.NEG-PHYS XVII	Juicy Wild Meat	4
+Reflect.NEG-PHYS XVIII	Juicy Wild Meat	4
+Reflect.NEG-PHYS XIX	Juicy Wild Meat	5
+Reflect.NEG-BEAM I	Adsecula Straw	1
+Reflect.NEG-BEAM II	Adsecula Straw	1
+Reflect.NEG-BEAM III	Adsecula Straw	1
+Reflect.NEG-BEAM IV	Adsecula Straw	2
+Reflect.NEG-BEAM V	Adsecula Straw	2
+Reflect.NEG-BEAM VI	Adsecula Straw	2
+Reflect.NEG-BEAM VII	Adsecula Straw	2
+Reflect.NEG-BEAM VIII	Adsecula Straw	2
+Reflect.NEG-BEAM IX	Adsecula Straw	3
+Reflect.NEG-BEAM X	Adsecula Straw	3
+Reflect.NEG-BEAM XI	Adsecula Straw	3
+Reflect.NEG-BEAM XII	Adsecula Straw	3
+Reflect.NEG-BEAM XIII	Adsecula Straw	3
+Reflect.NEG-BEAM XIV	Adsecula Straw	4
+Reflect.NEG-BEAM XV	Adsecula Straw	4
+Reflect.NEG-BEAM XVI	Adsecula Straw	4
+Reflect.NEG-BEAM XVII	Adsecula Straw	4
+Reflect.NEG-BEAM XVIII	Adsecula Straw	4
+Reflect.NEG-BEAM XIX	Adsecula Straw	5
+Reflect.NEG-ETHER I	Perforated Oar	1
+Reflect.NEG-ETHER II	Perforated Oar	1
+Reflect.NEG-ETHER III	Perforated Oar	1
+Reflect.NEG-ETHER IV	Perforated Oar	2
+Reflect.NEG-ETHER V	Perforated Oar	2
+Reflect.NEG-ETHER VI	Perforated Oar	2
+Reflect.NEG-ETHER VII	Perforated Oar	2
+Reflect.NEG-ETHER VIII	Perforated Oar	2
+Reflect.NEG-ETHER IX	Perforated Oar	3
+Reflect.NEG-ETHER X	Perforated Oar	3
+Reflect.NEG-ETHER XI	Perforated Oar	3
+Reflect.NEG-ETHER XII	Perforated Oar	3
+Reflect.NEG-ETHER XIII	Perforated Oar	3
+Reflect.NEG-ETHER XIV	Perforated Oar	4
+Reflect.NEG-ETHER XV	Perforated Oar	4
+Reflect.NEG-ETHER XVI	Perforated Oar	4
+Reflect.NEG-ETHER XVII	Perforated Oar	4
+Reflect.NEG-ETHER XVIII	Perforated Oar	4
+Reflect.NEG-ETHER XIX	Perforated Oar	5
+Reflect.NEG-THERM I	Red Forfex Shell	1
+Reflect.NEG-THERM II	Red Forfex Shell	1
+Reflect.NEG-THERM III	Red Forfex Shell	1
+Reflect.NEG-THERM IV	Red Forfex Shell	2
+Reflect.NEG-THERM V	Red Forfex Shell	2
+Reflect.NEG-THERM VI	Red Forfex Shell	2
+Reflect.NEG-THERM VII	Red Forfex Shell	2
+Reflect.NEG-THERM VIII	Red Forfex Shell	2
+Reflect.NEG-THERM IX	Red Forfex Shell	3
+Reflect.NEG-THERM X	Red Forfex Shell	3
+Reflect.NEG-THERM XI	Red Forfex Shell	3
+Reflect.NEG-THERM XII	Red Forfex Shell	3
+Reflect.NEG-THERM XIII	Red Forfex Shell	3
+Reflect.NEG-THERM XIV	Red Forfex Shell	4
+Reflect.NEG-THERM XV	Red Forfex Shell	4
+Reflect.NEG-THERM XVI	Red Forfex Shell	4
+Reflect.NEG-THERM XVII	Red Forfex Shell	4
+Reflect.NEG-THERM XVIII	Red Forfex Shell	4
+Reflect.NEG-THERM XIX	Red Forfex Shell	5
+Reflect.NEG-ELEC I	Muddy Pelt	1
+Reflect.NEG-ELEC II	Muddy Pelt	1
+Reflect.NEG-ELEC III	Muddy Pelt	1
+Reflect.NEG-ELEC IV	Muddy Pelt	2
+Reflect.NEG-ELEC V	Muddy Pelt	2
+Reflect.NEG-ELEC VI	Muddy Pelt	2
+Reflect.NEG-ELEC VII	Muddy Pelt	2
+Reflect.NEG-ELEC VIII	Muddy Pelt	2
+Reflect.NEG-ELEC IX	Muddy Pelt	3
+Reflect.NEG-ELEC X	Muddy Pelt	3
+Reflect.NEG-ELEC XI	Muddy Pelt	3
+Reflect.NEG-ELEC XII	Muddy Pelt	3
+Reflect.NEG-ELEC XIII	Muddy Pelt	3
+Reflect.NEG-ELEC XIV	Muddy Pelt	4
+Reflect.NEG-ELEC XV	Muddy Pelt	4
+Reflect.NEG-ELEC XVI	Muddy Pelt	4
+Reflect.NEG-ELEC XVII	Muddy Pelt	4
+Reflect.NEG-ELEC XVIII	Muddy Pelt	4
+Reflect.NEG-ELEC XIX	Muddy Pelt	5
+Reflect.NEG-GRAV I	Black Blatta Wing	1
+Reflect.NEG-GRAV II	Black Blatta Wing	1
+Reflect.NEG-GRAV III	Black Blatta Wing	1
+Reflect.NEG-GRAV IV	Black Blatta Wing	2
+Reflect.NEG-GRAV V	Black Blatta Wing	2
+Reflect.NEG-GRAV VI	Black Blatta Wing	2
+Reflect.NEG-GRAV VII	Black Blatta Wing	2
+Reflect.NEG-GRAV VIII	Black Blatta Wing	2
+Reflect.NEG-GRAV IX	Black Blatta Wing	3
+Reflect.NEG-GRAV X	Black Blatta Wing	3
+Reflect.NEG-GRAV XI	Black Blatta Wing	3
+Reflect.NEG-GRAV XII	Black Blatta Wing	3
+Reflect.NEG-GRAV XIII	Black Blatta Wing	3
+Reflect.NEG-GRAV XIV	Black Blatta Wing	4
+Reflect.NEG-GRAV XV	Black Blatta Wing	4
+Reflect.NEG-GRAV XVI	Black Blatta Wing	4
+Reflect.NEG-GRAV XVII	Black Blatta Wing	4
+Reflect.NEG-GRAV XVIII	Black Blatta Wing	4
+Reflect.NEG-GRAV XIX	Black Blatta Wing	5
+Overdrive.FRAME-HP I	Black Turba Nectar	1
+Overdrive.FRAME-HP I	Shimmering Silk	1
+Overdrive.FRAME-HP I	Scirpo Silk	1
+Overdrive.FRAME-HP II	Black Turba Nectar	1
+Overdrive.FRAME-HP II	Shimmering Silk	1
+Overdrive.FRAME-HP II	Scirpo Silk	1
+Overdrive.FRAME-HP III	Black Turba Nectar	1
+Overdrive.FRAME-HP III	Shimmering Silk	1
+Overdrive.FRAME-HP III	Scirpo Silk	1
+Overdrive.FRAME-HP IV	Black Turba Nectar	2
+Overdrive.FRAME-HP IV	Shimmering Silk	2
+Overdrive.FRAME-HP IV	Scirpo Silk	2
+Overdrive.FRAME-HP V	Black Turba Nectar	2
+Overdrive.FRAME-HP V	Shimmering Silk	2
+Overdrive.FRAME-HP V	Scirpo Silk	2
+Overdrive.FRAME-HP VI	Black Turba Nectar	2
+Overdrive.FRAME-HP VI	Shimmering Silk	2
+Overdrive.FRAME-HP VI	Scirpo Silk	2
+Overdrive.FRAME-HP VII	Black Turba Nectar	2
+Overdrive.FRAME-HP VII	Shimmering Silk	2
+Overdrive.FRAME-HP VII	Scirpo Silk	2
+Overdrive.FRAME-HP VIII	Black Turba Nectar	2
+Overdrive.FRAME-HP VIII	Shimmering Silk	2
+Overdrive.FRAME-HP VIII	Scirpo Silk	2
+Overdrive.FRAME-HP IX	Black Turba Nectar	3
+Overdrive.FRAME-HP IX	Shimmering Silk	3
+Overdrive.FRAME-HP IX	Scirpo Silk	3
+Overdrive.FRAME-HP X	Black Turba Nectar	3
+Overdrive.FRAME-HP X	Tasty Fish Belly	3
+Overdrive.FRAME-HP X	Black Sylooth Brace	3
+Overdrive.FRAME-HP XI	Black Turba Nectar	3
+Overdrive.FRAME-HP XI	Tasty Fish Belly	3
+Overdrive.FRAME-HP XI	Black Sylooth Brace	3
+Overdrive.FRAME-HP XII	Black Turba Nectar	3
+Overdrive.FRAME-HP XII	Tasty Fish Belly	3
+Overdrive.FRAME-HP XII	Black Sylooth Brace	3
+Overdrive.FRAME-HP XIII	Black Turba Nectar	3
+Overdrive.FRAME-HP XIII	Tasty Fish Belly	3
+Overdrive.FRAME-HP XIII	Black Sylooth Brace	3
+Overdrive.FRAME-HP XIV	Black Turba Nectar	4
+Overdrive.FRAME-HP XIV	Tasty Fish Belly	4
+Overdrive.FRAME-HP XIV	Black Sylooth Brace	4
+Overdrive.FRAME-HP XV	Black Turba Nectar	4
+Overdrive.FRAME-HP XV	Tasty Fish Belly	4
+Overdrive.FRAME-HP XV	Black Sylooth Brace	4
+Overdrive.FRAME-HP XVI	Black Turba Nectar	4
+Overdrive.FRAME-HP XVI	Tasty Fish Belly	4
+Overdrive.FRAME-HP XVI	Black Sylooth Brace	4
+Overdrive.FRAME-HP XVII	Black Turba Nectar	4
+Overdrive.FRAME-HP XVII	Tasty Fish Belly	4
+Overdrive.FRAME-HP XVII	Black Sylooth Brace	4
+Overdrive.FRAME-HP XVIII	Black Turba Nectar	4
+Overdrive.FRAME-HP XVIII	Tasty Fish Belly	4
+Overdrive.FRAME-HP XVIII	Black Sylooth Brace	4
+Overdrive.FRAME-HP XIX	Black Turba Nectar	5
+Overdrive.FRAME-HP XIX	Tasty Fish Belly	5
+Overdrive.FRAME-HP XIX	Black Sylooth Brace	5
+Overdrive.APPEND-HP I	Azure Sacrifole Feather	1
+Overdrive.APPEND-HP II	Azure Sacrifole Feather	1
+Overdrive.APPEND-HP III	Azure Sacrifole Feather	1
+Overdrive.APPEND-HP IV	Azure Sacrifole Feather	2
+Overdrive.APPEND-HP V	Azure Sacrifole Feather	2
+Overdrive.APPEND-HP VI	Azure Sacrifole Feather	2
+Overdrive.APPEND-HP VII	Azure Sacrifole Feather	2
+Overdrive.APPEND-HP VIII	Azure Sacrifole Feather	2
+Overdrive.APPEND-HP IX	Azure Sacrifole Feather	3
+Overdrive.APPEND-HP X	Azure Sacrifole Feather	3
+Overdrive.APPEND-HP XI	Azure Sacrifole Feather	3
+Overdrive.APPEND-HP XII	Azure Sacrifole Feather	3
+Overdrive.APPEND-HP XIII	Azure Sacrifole Feather	3
+Overdrive.APPEND-HP XIV	Azure Sacrifole Feather	4
+Overdrive.APPEND-HP XV	Azure Sacrifole Feather	4
+Overdrive.APPEND-HP XVI	Azure Sacrifole Feather	4
+Overdrive.APPEND-HP XVII	Azure Sacrifole Feather	4
+Overdrive.APPEND-HP XVIII	Azure Sacrifole Feather	4
+Overdrive.APPEND-HP XIX	Azure Sacrifole Feather	5
+Overdrive.EXTEND I	Elemental Cluster	1
+Overdrive.EXTEND I	Moving Thallus Tail	1
+Overdrive.EXTEND I	Puge Counter	1
+Overdrive.EXTEND II	Elemental Cluster	1
+Overdrive.EXTEND II	Moving Thallus Tail	1
+Overdrive.EXTEND II	Puge Counter	1
+Overdrive.EXTEND III	Elemental Cluster	1
+Overdrive.EXTEND III	Moving Thallus Tail	1
+Overdrive.EXTEND III	Puge Counter	1
+Overdrive.EXTEND IV	Elemental Cluster	2
+Overdrive.EXTEND IV	Moving Thallus Tail	2
+Overdrive.EXTEND IV	Puge Counter	2
+Overdrive.EXTEND V	Elemental Cluster	2
+Overdrive.EXTEND V	Moving Thallus Tail	2
+Overdrive.EXTEND V	Puge Counter	2
+Overdrive.EXTEND VI	Elemental Cluster	2
+Overdrive.EXTEND VI	Moving Thallus Tail	2
+Overdrive.EXTEND VI	Puge Counter	2
+Overdrive.EXTEND VII	Elemental Cluster	2
+Overdrive.EXTEND VII	Moving Thallus Tail	2
+Overdrive.EXTEND VII	Puge Counter	2
+Overdrive.EXTEND VIII	Elemental Cluster	2
+Overdrive.EXTEND VIII	Moving Thallus Tail	2
+Overdrive.EXTEND VIII	Puge Counter	2
+Overdrive.EXTEND IX	Elemental Cluster	3
+Overdrive.EXTEND IX	Moving Thallus Tail	3
+Overdrive.EXTEND IX	Puge Counter	3
+Overdrive.EXTEND X	Elemental Cluster	3
+Overdrive.EXTEND X	Fertilized Jacul Egg	3
+Overdrive.EXTEND X	Maple Oil	3
+Overdrive.EXTEND XI	Elemental Cluster	3
+Overdrive.EXTEND XI	Fertilized Jacul Egg	3
+Overdrive.EXTEND XI	Maple Oil	3
+Overdrive.EXTEND XII	Elemental Cluster	3
+Overdrive.EXTEND XII	Fertilized Jacul Egg	3
+Overdrive.EXTEND XII	Maple Oil	3
+Overdrive.EXTEND XIII	Elemental Cluster	3
+Overdrive.EXTEND XIII	Fertilized Jacul Egg	3
+Overdrive.EXTEND XIII	Maple Oil	3
+Overdrive.EXTEND XIV	Elemental Cluster	4
+Overdrive.EXTEND XIV	Fertilized Jacul Egg	4
+Overdrive.EXTEND XIV	Maple Oil	4
+Overdrive.EXTEND XV	Elemental Cluster	4
+Overdrive.EXTEND XV	Fertilized Jacul Egg	4
+Overdrive.EXTEND XV	Maple Oil	4
+Overdrive.EXTEND XVI	Elemental Cluster	4
+Overdrive.EXTEND XVI	Fertilized Jacul Egg	4
+Overdrive.EXTEND XVI	Maple Oil	4
+Overdrive.EXTEND XVII	Elemental Cluster	4
+Overdrive.EXTEND XVII	Fertilized Jacul Egg	4
+Overdrive.EXTEND XVII	Maple Oil	4
+Overdrive.EXTEND XVIII	Elemental Cluster	4
+Overdrive.EXTEND XVIII	Fertilized Jacul Egg	4
+Overdrive.EXTEND XVIII	Maple Oil	4
+Overdrive.EXTEND XIX	Elemental Cluster	5
+Overdrive.EXTEND XIX	Fertilized Jacul Egg	5
+Overdrive.EXTEND XIX	Maple Oil	5
+Arts.GP I	White Mortifole Feather	1
+Arts.GP I	Ornate Insidia Claw	1
+Arts.GP I	Blue Fungi	1
+Arts.GP II	White Mortifole Feather	1
+Arts.GP II	Ornate Insidia Claw	1
+Arts.GP II	Blue Fungi	1
+Arts.GP III	White Mortifole Feather	1
+Arts.GP III	Ornate Insidia Claw	1
+Arts.GP III	Blue Fungi	1
+Arts.GP IV	White Mortifole Feather	2
+Arts.GP IV	Ornate Insidia Claw	2
+Arts.GP IV	Blue Fungi	2
+Arts.GP V	White Mortifole Feather	2
+Arts.GP V	Ornate Insidia Claw	2
+Arts.GP V	Blue Fungi	2
+Arts.GP VI	White Mortifole Feather	2
+Arts.GP VI	Ornate Insidia Claw	2
+Arts.GP VI	Blue Fungi	2
+Arts.GP VII	White Mortifole Feather	2
+Arts.GP VII	Ornate Insidia Claw	2
+Arts.GP VII	Blue Fungi	2
+Arts.GP VIII	White Mortifole Feather	2
+Arts.GP VIII	Ornate Insidia Claw	2
+Arts.GP VIII	Blue Fungi	2
+Arts.GP IX	White Mortifole Feather	3
+Arts.GP IX	Ornate Insidia Claw	3
+Arts.GP IX	Blue Fungi	3
+Arts.GP X	White Mortifole Feather	3
+Arts.GP X	Aeviter Star Wing	3
+Arts.GP X	Red Vigent Rock Scalp	3
+Arts.GP XI	White Mortifole Feather	3
+Arts.GP XI	Aeviter Star Wing	3
+Arts.GP XI	Red Vigent Rock Scalp	3
+Arts.GP XII	White Mortifole Feather	3
+Arts.GP XII	Aeviter Star Wing	3
+Arts.GP XII	Red Vigent Rock Scalp	3
+Arts.GP XIII	White Mortifole Feather	3
+Arts.GP XIII	Aeviter Star Wing	3
+Arts.GP XIII	Red Vigent Rock Scalp	3
+Arts.GP XIV	White Mortifole Feather	4
+Arts.GP XIV	Aeviter Star Wing	4
+Arts.GP XIV	Red Vigent Rock Scalp	4
+Arts.GP XV	White Mortifole Feather	4
+Arts.GP XV	Aeviter Star Wing	4
+Arts.GP XV	Red Vigent Rock Scalp	4
+Arts.GP XVI	White Mortifole Feather	4
+Arts.GP XVI	Aeviter Star Wing	4
+Arts.GP XVI	Red Vigent Rock Scalp	4
+Arts.GP XVII	White Mortifole Feather	4
+Arts.GP XVII	Aeviter Star Wing	4
+Arts.GP XVII	Red Vigent Rock Scalp	4
+Arts.GP XVIII	White Mortifole Feather	4
+Arts.GP XVIII	Aeviter Star Wing	4
+Arts.GP XVIII	Red Vigent Rock Scalp	4
+Arts.GP XIX	White Mortifole Feather	5
+Arts.GP XIX	Aeviter Star Wing	5
+Arts.GP XIX	Red Vigent Rock Scalp	5
+TimeEx.TAUNT I	Small Insect Leg	1
+TimeEx.TAUNT II	Small Insect Leg	1
+TimeEx.TAUNT III	Small Insect Leg	1
+TimeEx.TAUNT IV	Small Insect Leg	2
+TimeEx.TAUNT V	Small Insect Leg	2
+TimeEx.TAUNT VI	Small Insect Leg	2
+TimeEx.TAUNT VII	Small Insect Leg	2
+TimeEx.TAUNT VIII	Small Insect Leg	2
+TimeEx.TAUNT IX	Small Insect Leg	3
+TimeEx.TAUNT X	Small Insect Leg	3
+TimeEx.TAUNT XI	Small Insect Leg	3
+TimeEx.TAUNT XII	Small Insect Leg	3
+TimeEx.TAUNT XIII	Small Insect Leg	3
+TimeEx.TAUNT XIV	Small Insect Leg	4
+TimeEx.TAUNT XV	Small Insect Leg	4
+TimeEx.TAUNT XVI	Small Insect Leg	4
+TimeEx.TAUNT XVII	Small Insect Leg	4
+TimeEx.TAUNT XVIII	Small Insect Leg	4
+TimeEx.TAUNT XIX	Small Insect Leg	5
+TimeEx.CONTROL I	Taut Leather	1
+TimeEx.CONTROL II	Taut Leather	1
+TimeEx.CONTROL III	Taut Leather	1
+TimeEx.CONTROL IV	Taut Leather	2
+TimeEx.CONTROL V	Taut Leather	2
+TimeEx.CONTROL VI	Taut Leather	2
+TimeEx.CONTROL VII	Taut Leather	2
+TimeEx.CONTROL VIII	Taut Leather	2
+TimeEx.CONTROL IX	Taut Leather	3
+TimeEx.CONTROL X	Taut Leather	3
+TimeEx.CONTROL XI	Taut Leather	3
+TimeEx.CONTROL XII	Taut Leather	3
+TimeEx.CONTROL XIII	Taut Leather	3
+TimeEx.CONTROL XIV	Taut Leather	4
+TimeEx.CONTROL XV	Taut Leather	4
+TimeEx.CONTROL XVI	Taut Leather	4
+TimeEx.CONTROL XVII	Taut Leather	4
+TimeEx.CONTROL XVIII	Taut Leather	4
+TimeEx.CONTROL XIX	Taut Leather	5
+TimeEx.SLEEP I	Moving Vivohast Tail	1
+TimeEx.SLEEP II	Moving Vivohast Tail	1
+TimeEx.SLEEP III	Moving Vivohast Tail	1
+TimeEx.SLEEP IV	Moving Vivohast Tail	2
+TimeEx.SLEEP V	Moving Vivohast Tail	2
+TimeEx.SLEEP VI	Moving Vivohast Tail	2
+TimeEx.SLEEP VII	Moving Vivohast Tail	2
+TimeEx.SLEEP VIII	Moving Vivohast Tail	2
+TimeEx.SLEEP IX	Moving Vivohast Tail	3
+TimeEx.SLEEP X	Moving Vivohast Tail	3
+TimeEx.SLEEP XI	Moving Vivohast Tail	3
+TimeEx.SLEEP XII	Moving Vivohast Tail	3
+TimeEx.SLEEP XIII	Moving Vivohast Tail	3
+TimeEx.SLEEP XIV	Moving Vivohast Tail	4
+TimeEx.SLEEP XV	Moving Vivohast Tail	4
+TimeEx.SLEEP XVI	Moving Vivohast Tail	4
+TimeEx.SLEEP XVII	Moving Vivohast Tail	4
+TimeEx.SLEEP XVIII	Moving Vivohast Tail	4
+TimeEx.SLEEP XIX	Moving Vivohast Tail	5
+TimeEx.VIRUS I	Small Insect Leg	1
+TimeEx.VIRUS II	Small Insect Leg	1
+TimeEx.VIRUS III	Small Insect Leg	1
+TimeEx.VIRUS IV	Small Insect Leg	2
+TimeEx.VIRUS V	Small Insect Leg	2
+TimeEx.VIRUS VI	Small Insect Leg	2
+TimeEx.VIRUS VII	Small Insect Leg	2
+TimeEx.VIRUS VIII	Small Insect Leg	2
+TimeEx.VIRUS IX	Small Insect Leg	3
+TimeEx.VIRUS X	Small Insect Leg	3
+TimeEx.VIRUS XI	Small Insect Leg	3
+TimeEx.VIRUS XII	Small Insect Leg	3
+TimeEx.VIRUS XIII	Small Insect Leg	3
+TimeEx.VIRUS XIV	Small Insect Leg	4
+TimeEx.VIRUS XV	Small Insect Leg	4
+TimeEx.VIRUS XVI	Small Insect Leg	4
+TimeEx.VIRUS XVII	Small Insect Leg	4
+TimeEx.VIRUS XVIII	Small Insect Leg	4
+TimeEx.VIRUS XIX	Small Insect Leg	5
+TimeEx.BLACKOUT I	Ovis Polishing Stone	1
+TimeEx.BLACKOUT II	Ovis Polishing Stone	1
+TimeEx.BLACKOUT III	Ovis Polishing Stone	1
+TimeEx.BLACKOUT IV	Ovis Polishing Stone	2
+TimeEx.BLACKOUT V	Ovis Polishing Stone	2
+TimeEx.BLACKOUT VI	Ovis Polishing Stone	2
+TimeEx.BLACKOUT VII	Ovis Polishing Stone	2
+TimeEx.BLACKOUT VIII	Ovis Polishing Stone	2
+TimeEx.BLACKOUT IX	Ovis Polishing Stone	3
+TimeEx.BLACKOUT X	Ovis Polishing Stone	3
+TimeEx.BLACKOUT XI	Ovis Polishing Stone	3
+TimeEx.BLACKOUT XII	Ovis Polishing Stone	3
+TimeEx.BLACKOUT XIII	Ovis Polishing Stone	3
+TimeEx.BLACKOUT XIV	Ovis Polishing Stone	4
+TimeEx.BLACKOUT XV	Ovis Polishing Stone	4
+TimeEx.BLACKOUT XVI	Ovis Polishing Stone	4
+TimeEx.BLACKOUT XVII	Ovis Polishing Stone	4
+TimeEx.BLACKOUT XVIII	Ovis Polishing Stone	4
+TimeEx.BLACKOUT XIX	Ovis Polishing Stone	5
+TimeEx.FATIGUE I	Broken Pincer	1
+TimeEx.FATIGUE II	Broken Pincer	1
+TimeEx.FATIGUE III	Broken Pincer	1
+TimeEx.FATIGUE IV	Broken Pincer	2
+TimeEx.FATIGUE V	Broken Pincer	2
+TimeEx.FATIGUE VI	Broken Pincer	2
+TimeEx.FATIGUE VII	Broken Pincer	2
+TimeEx.FATIGUE VIII	Broken Pincer	2
+TimeEx.FATIGUE IX	Broken Pincer	3
+TimeEx.FATIGUE X	Broken Pincer	3
+TimeEx.FATIGUE XI	Broken Pincer	3
+TimeEx.FATIGUE XII	Broken Pincer	3
+TimeEx.FATIGUE XIII	Broken Pincer	3
+TimeEx.FATIGUE XIV	Broken Pincer	4
+TimeEx.FATIGUE XV	Broken Pincer	4
+TimeEx.FATIGUE XVI	Broken Pincer	4
+TimeEx.FATIGUE XVII	Broken Pincer	4
+TimeEx.FATIGUE XVIII	Broken Pincer	4
+TimeEx.FATIGUE XIX	Broken Pincer	5
+TimeEx.SLOW-ARTS I	Supple Leather	1
+TimeEx.SLOW-ARTS II	Supple Leather	1
+TimeEx.SLOW-ARTS III	Supple Leather	1
+TimeEx.SLOW-ARTS IV	Supple Leather	2
+TimeEx.SLOW-ARTS V	Supple Leather	2
+TimeEx.SLOW-ARTS VI	Supple Leather	2
+TimeEx.SLOW-ARTS VII	Supple Leather	2
+TimeEx.SLOW-ARTS VIII	Supple Leather	2
+TimeEx.SLOW-ARTS IX	Supple Leather	3
+TimeEx.SLOW-ARTS X	Supple Leather	3
+TimeEx.SLOW-ARTS XI	Supple Leather	3
+TimeEx.SLOW-ARTS XII	Supple Leather	3
+TimeEx.SLOW-ARTS XIII	Supple Leather	3
+TimeEx.SLOW-ARTS XIV	Supple Leather	4
+TimeEx.SLOW-ARTS XV	Supple Leather	4
+TimeEx.SLOW-ARTS XVI	Supple Leather	4
+TimeEx.SLOW-ARTS XVII	Supple Leather	4
+TimeEx.SLOW-ARTS XVIII	Supple Leather	4
+TimeEx.SLOW-ARTS XIX	Supple Leather	5
+TimeEx.DEBUFF-DOWN I	Lovely Pom Pom	1
+TimeEx.DEBUFF-DOWN II	Lovely Pom Pom	1
+TimeEx.DEBUFF-DOWN III	Lovely Pom Pom	1
+TimeEx.DEBUFF-DOWN IV	Lovely Pom Pom	2
+TimeEx.DEBUFF-DOWN V	Lovely Pom Pom	2
+TimeEx.DEBUFF-DOWN VI	Lovely Pom Pom	2
+TimeEx.DEBUFF-DOWN VII	Lovely Pom Pom	2
+TimeEx.DEBUFF-DOWN VIII	Lovely Pom Pom	2
+TimeEx.DEBUFF-DOWN IX	Lovely Pom Pom	3
+TimeEx.DEBUFF-DOWN X	Lovely Pom Pom	3
+TimeEx.DEBUFF-DOWN XI	Lovely Pom Pom	3
+TimeEx.DEBUFF-DOWN XII	Lovely Pom Pom	3
+TimeEx.DEBUFF-DOWN XIII	Lovely Pom Pom	3
+TimeEx.DEBUFF-DOWN XIV	Lovely Pom Pom	4
+TimeEx.DEBUFF-DOWN XV	Lovely Pom Pom	4
+TimeEx.DEBUFF-DOWN XVI	Lovely Pom Pom	4
+TimeEx.DEBUFF-DOWN XVII	Lovely Pom Pom	4
+TimeEx.DEBUFF-DOWN XVIII	Lovely Pom Pom	4
+TimeEx.DEBUFF-DOWN XIX	Lovely Pom Pom	5
+TimeEx.RECOV-DOWN I	Murky Potamus Water	1
+TimeEx.RECOV-DOWN II	Murky Potamus Water	1
+TimeEx.RECOV-DOWN III	Murky Potamus Water	1
+TimeEx.RECOV-DOWN IV	Murky Potamus Water	2
+TimeEx.RECOV-DOWN V	Murky Potamus Water	2
+TimeEx.RECOV-DOWN VI	Murky Potamus Water	2
+TimeEx.RECOV-DOWN VII	Murky Potamus Water	2
+TimeEx.RECOV-DOWN VIII	Murky Potamus Water	2
+TimeEx.THERM-DOWN XV	Red Forfex Shell	4
+TimeEx.RECOV-DOWN IX	Murky Potamus Water	3
+TimeEx.RECOV-DOWN X	Murky Potamus Water	3
+TimeEx.RECOV-DOWN XI	Murky Potamus Water	3
+TimeEx.RECOV-DOWN XII	Murky Potamus Water	3
+TimeEx.RECOV-DOWN XIII	Murky Potamus Water	3
+TimeEx.RECOV-DOWN XIV	Murky Potamus Water	4
+TimeEx.RECOV-DOWN XV	Murky Potamus Water	4
+TimeEx.RECOV-DOWN XVI	Murky Potamus Water	4
+TimeEx.RECOV-DOWN XVII	Murky Potamus Water	4
+TimeEx.RECOV-DOWN XVIII	Murky Potamus Water	4
+TimeEx.RECOV-DOWN XIX	Murky Potamus Water	5
+TimeEx.BLAZE I	Poisonous Needle	1
+TimeEx.BLAZE II	Poisonous Needle	1
+TimeEx.BLAZE III	Poisonous Needle	1
+TimeEx.BLAZE IV	Poisonous Needle	2
+TimeEx.BLAZE V	Poisonous Needle	2
+TimeEx.BLAZE VI	Poisonous Needle	2
+TimeEx.BLAZE VII	Poisonous Needle	2
+TimeEx.BLAZE VIII	Poisonous Needle	2
+TimeEx.BLAZE IX	Poisonous Needle	3
+TimeEx.BLAZE X	Poisonous Needle	3
+TimeEx.BLAZE XI	Poisonous Needle	3
+TimeEx.BLAZE XII	Poisonous Needle	3
+TimeEx.BLAZE XIII	Poisonous Needle	3
+TimeEx.BLAZE XIV	Poisonous Needle	4
+TimeEx.BLAZE XV	Poisonous Needle	4
+TimeEx.BLAZE XVI	Poisonous Needle	4
+TimeEx.BLAZE XVII	Poisonous Needle	4
+TimeEx.BLAZE XVIII	Poisonous Needle	4
+TimeEx.BLAZE XIX	Poisonous Needle	5
+TimeEx.SHOCK I	Vesper Fang	1
+TimeEx.SHOCK II	Vesper Fang	1
+TimeEx.SHOCK III	Vesper Fang	1
+TimeEx.SHOCK IV	Vesper Fang	2
+TimeEx.SHOCK V	Vesper Fang	2
+TimeEx.SHOCK VI	Vesper Fang	2
+TimeEx.SHOCK VII	Vesper Fang	2
+TimeEx.SHOCK VIII	Vesper Fang	2
+TimeEx.SHOCK IX	Vesper Fang	3
+TimeEx.SHOCK X	Vesper Fang	3
+TimeEx.SHOCK XI	Vesper Fang	3
+TimeEx.SHOCK XII	Vesper Fang	3
+TimeEx.SHOCK XIII	Vesper Fang	3
+TimeEx.SHOCK XIV	Vesper Fang	4
+TimeEx.SHOCK XV	Vesper Fang	4
+TimeEx.SHOCK XVI	Vesper Fang	4
+TimeEx.SHOCK XVII	Vesper Fang	4
+TimeEx.SHOCK XVIII	Vesper Fang	4
+TimeEx.SHOCK XIX	Vesper Fang	5
+TimeEx.PHYS-DOWN I	Juicy Wild Meat	1
+TimeEx.PHYS-DOWN II	Juicy Wild Meat	1
+TimeEx.PHYS-DOWN III	Juicy Wild Meat	1
+TimeEx.PHYS-DOWN IV	Juicy Wild Meat	2
+TimeEx.PHYS-DOWN V	Juicy Wild Meat	2
+TimeEx.PHYS-DOWN VI	Juicy Wild Meat	2
+TimeEx.PHYS-DOWN VII	Juicy Wild Meat	2
+TimeEx.PHYS-DOWN VIII	Juicy Wild Meat	2
+TimeEx.PHYS-DOWN IX	Juicy Wild Meat	3
+TimeEx.PHYS-DOWN X	Juicy Wild Meat	3
+TimeEx.PHYS-DOWN XI	Juicy Wild Meat	3
+TimeEx.PHYS-DOWN XII	Juicy Wild Meat	3
+TimeEx.PHYS-DOWN XIII	Juicy Wild Meat	3
+TimeEx.PHYS-DOWN XIV	Juicy Wild Meat	4
+TimeEx.PHYS-DOWN XV	Juicy Wild Meat	4
+TimeEx.PHYS-DOWN XVI	Juicy Wild Meat	4
+TimeEx.PHYS-DOWN XVII	Juicy Wild Meat	4
+TimeEx.PHYS-DOWN XVIII	Juicy Wild Meat	4
+TimeEx.PHYS-DOWN XIX	Juicy Wild Meat	5
+TimeEx.BEAM-DOWN I	Adsecula Straw	1
+TimeEx.BEAM-DOWN II	Adsecula Straw	1
+TimeEx.BEAM-DOWN III	Adsecula Straw	1
+TimeEx.BEAM-DOWN IV	Adsecula Straw	2
+TimeEx.BEAM-DOWN V	Adsecula Straw	2
+TimeEx.BEAM-DOWN VI	Adsecula Straw	2
+TimeEx.BEAM-DOWN VII	Adsecula Straw	2
+TimeEx.BEAM-DOWN VIII	Adsecula Straw	2
+TimeEx.BEAM-DOWN IX	Adsecula Straw	3
+TimeEx.BEAM-DOWN X	Adsecula Straw	3
+TimeEx.BEAM-DOWN XI	Adsecula Straw	3
+TimeEx.BEAM-DOWN XII	Adsecula Straw	3
+TimeEx.BEAM-DOWN XIII	Adsecula Straw	3
+TimeEx.BEAM-DOWN XIV	Adsecula Straw	4
+TimeEx.BEAM-DOWN XV	Adsecula Straw	4
+TimeEx.BEAM-DOWN XVI	Adsecula Straw	4
+TimeEx.BEAM-DOWN XVII	Adsecula Straw	4
+TimeEx.BEAM-DOWN XVIII	Adsecula Straw	4
+TimeEx.BEAM-DOWN XIX	Adsecula Straw	5
+TimeEx.ETHER-DOWN I	Perforated Oar	1
+TimeEx.ETHER-DOWN II	Perforated Oar	1
+TimeEx.ETHER-DOWN III	Perforated Oar	1
+TimeEx.ETHER-DOWN IV	Perforated Oar	2
+TimeEx.ETHER-DOWN V	Perforated Oar	2
+TimeEx.ETHER-DOWN VI	Perforated Oar	2
+TimeEx.ETHER-DOWN VII	Perforated Oar	2
+TimeEx.ETHER-DOWN VIII	Perforated Oar	2
+TimeEx.ETHER-DOWN IX	Perforated Oar	3
+TimeEx.ETHER-DOWN X	Perforated Oar	3
+TimeEx.ETHER-DOWN XI	Perforated Oar	3
+TimeEx.ETHER-DOWN XII	Perforated Oar	3
+TimeEx.ETHER-DOWN XIII	Perforated Oar	3
+TimeEx.ETHER-DOWN XIV	Perforated Oar	4
+TimeEx.ETHER-DOWN XV	Perforated Oar	4
+TimeEx.ETHER-DOWN XVI	Perforated Oar	4
+TimeEx.ETHER-DOWN XVII	Perforated Oar	4
+TimeEx.ETHER-DOWN XVIII	Perforated Oar	4
+TimeEx.ETHER-DOWN XIX	Perforated Oar	5
+TimeEx.THERM-DOWN I	Red Forfex Shell	1
+TimeEx.THERM-DOWN II	Red Forfex Shell	1
+TimeEx.THERM-DOWN III	Red Forfex Shell	1
+TimeEx.THERM-DOWN IV	Red Forfex Shell	2
+TimeEx.THERM-DOWN V	Red Forfex Shell	2
+TimeEx.THERM-DOWN VI	Red Forfex Shell	2
+TimeEx.THERM-DOWN VII	Red Forfex Shell	2
+TimeEx.THERM-DOWN VIII	Red Forfex Shell	2
+TimeEx.THERM-DOWN IX	Red Forfex Shell	3
+TimeEx.THERM-DOWN X	Red Forfex Shell	3
+TimeEx.THERM-DOWN XI	Red Forfex Shell	3
+TimeEx.THERM-DOWN XII	Red Forfex Shell	3
+TimeEx.THERM-DOWN XIII	Red Forfex Shell	3
+TimeEx.THERM-DOWN XIV	Red Forfex Shell	4
+TimeEx.THERM-DOWN XVI	Red Forfex Shell	4
+TimeEx.THERM-DOWN XVII	Red Forfex Shell	4
+TimeEx.THERM-DOWN XVIII	Red Forfex Shell	4
+TimeEx.THERM-DOWN XIX	Red Forfex Shell	5
+TimeEx.ELEC-DOWN I	Muddy Pelt	1
+TimeEx.ELEC-DOWN II	Muddy Pelt	1
+TimeEx.ELEC-DOWN III	Muddy Pelt	1
+TimeEx.ELEC-DOWN IV	Muddy Pelt	2
+TimeEx.ELEC-DOWN V	Muddy Pelt	2
+TimeEx.ELEC-DOWN VI	Muddy Pelt	2
+TimeEx.ELEC-DOWN VII	Muddy Pelt	2
+TimeEx.ELEC-DOWN VIII	Muddy Pelt	2
+TimeEx.ELEC-DOWN IX	Muddy Pelt	3
+TimeEx.ELEC-DOWN X	Muddy Pelt	3
+TimeEx.ELEC-DOWN XI	Muddy Pelt	3
+TimeEx.ELEC-DOWN XII	Muddy Pelt	3
+TimeEx.ELEC-DOWN XIII	Muddy Pelt	3
+TimeEx.ELEC-DOWN XIV	Muddy Pelt	4
+TimeEx.ELEC-DOWN XV	Muddy Pelt	4
+TimeEx.ELEC-DOWN XVI	Muddy Pelt	4
+TimeEx.ELEC-DOWN XVII	Muddy Pelt	4
+TimeEx.ELEC-DOWN XVIII	Muddy Pelt	4
+TimeEx.ELEC-DOWN XIX	Muddy Pelt	5
+TimeEx.GRAV-DOWN I	Black Blatta Wing	1
+TimeEx.GRAV-DOWN II	Black Blatta Wing	1
+TimeEx.GRAV-DOWN III	Black Blatta Wing	1
+TimeEx.GRAV-DOWN IV	Black Blatta Wing	2
+TimeEx.GRAV-DOWN V	Black Blatta Wing	2
+TimeEx.GRAV-DOWN VI	Black Blatta Wing	2
+TimeEx.GRAV-DOWN VII	Black Blatta Wing	2
+TimeEx.GRAV-DOWN VIII	Black Blatta Wing	2
+TimeEx.GRAV-DOWN IX	Black Blatta Wing	3
+TimeEx.GRAV-DOWN X	Black Blatta Wing	3
+TimeEx.GRAV-DOWN XI	Black Blatta Wing	3
+TimeEx.GRAV-DOWN XII	Black Blatta Wing	3
+TimeEx.GRAV-DOWN XIII	Black Blatta Wing	3
+TimeEx.GRAV-DOWN XIV	Black Blatta Wing	4
+TimeEx.GRAV-DOWN XV	Black Blatta Wing	4
+TimeEx.GRAV-DOWN XVI	Black Blatta Wing	4
+TimeEx.GRAV-DOWN XVII	Black Blatta Wing	4
+TimeEx.GRAV-DOWN XVIII	Black Blatta Wing	4
+TimeEx.GRAV-DOWN XIX	Black Blatta Wing	5
+Draw.OPENING-DMG I	Red Thallus Antenna	1
+Draw.OPENING-DMG I	Monoceros Wing	1
+Draw.OPENING-DMG I	Reinforced Thruster	1
+Draw.OPENING-DMG II	Red Thallus Antenna	1
+Draw.OPENING-DMG II	Monoceros Wing	1
+Draw.OPENING-DMG II	Reinforced Thruster	1
+Draw.OPENING-DMG III	Red Thallus Antenna	1
+Draw.OPENING-DMG III	Monoceros Wing	1
+Draw.OPENING-DMG III	Reinforced Thruster	1
+Draw.OPENING-DMG IV	Red Thallus Antenna	2
+Draw.OPENING-DMG IV	Monoceros Wing	2
+Draw.OPENING-DMG IV	Reinforced Thruster	2
+Draw.OPENING-DMG V	Red Thallus Antenna	2
+Draw.OPENING-DMG V	Monoceros Wing	2
+Draw.OPENING-DMG V	Reinforced Thruster	2
+Draw.OPENING-DMG VI	Red Thallus Antenna	2
+Draw.OPENING-DMG VI	Monoceros Wing	2
+Draw.OPENING-DMG VI	Reinforced Thruster	2
+Draw.OPENING-DMG VII	Red Thallus Antenna	2
+Draw.OPENING-DMG VII	Monoceros Wing	2
+Draw.OPENING-DMG VII	Reinforced Thruster	2
+Draw.OPENING-DMG VIII	Red Thallus Antenna	2
+Draw.OPENING-DMG VIII	Monoceros Wing	2
+Draw.OPENING-DMG VIII	Reinforced Thruster	2
+Draw.OPENING-DMG IX	Red Thallus Antenna	3
+Draw.OPENING-DMG IX	Monoceros Wing	3
+Draw.OPENING-DMG IX	Reinforced Thruster	3
+Draw.OPENING-DMG X	Red Thallus Antenna	3
+Draw.OPENING-DMG X	Parasitic Capsule	3
+Draw.OPENING-DMG X	Large Saw Tooth	3
+Draw.OPENING-DMG XI	Red Thallus Antenna	3
+Draw.OPENING-DMG XI	Parasitic Capsule	3
+Draw.OPENING-DMG XI	Large Saw Tooth	3
+Draw.OPENING-DMG XII	Red Thallus Antenna	3
+Draw.OPENING-DMG XII	Parasitic Capsule	3
+Draw.OPENING-DMG XII	Large Saw Tooth	3
+Draw.OPENING-DMG XIII	Red Thallus Antenna	3
+Draw.OPENING-DMG XIII	Parasitic Capsule	3
+Draw.OPENING-DMG XIII	Large Saw Tooth	3
+Draw.OPENING-DMG XIV	Red Thallus Antenna	4
+Draw.OPENING-DMG XIV	Parasitic Capsule	4
+Draw.OPENING-DMG XIV	Large Saw Tooth	4
+Draw.OPENING-DMG XV	Red Thallus Antenna	4
+Draw.OPENING-DMG XV	Parasitic Capsule	4
+Draw.OPENING-DMG XV	Large Saw Tooth	4
+Draw.OPENING-DMG XVI	Red Thallus Antenna	4
+Draw.OPENING-DMG XVI	Parasitic Capsule	4
+Draw.OPENING-DMG XVI	Large Saw Tooth	4
+Draw.OPENING-DMG XVII	Red Thallus Antenna	4
+Draw.OPENING-DMG XVII	Parasitic Capsule	4
+Draw.OPENING-DMG XVII	Large Saw Tooth	4
+Draw.OPENING-DMG XVIII	Red Thallus Antenna	4
+Draw.OPENING-DMG XVIII	Parasitic Capsule	4
+Draw.OPENING-DMG XVIII	Large Saw Tooth	4
+Draw.OPENING-DMG XIX	Red Thallus Antenna	5
+Draw.OPENING-DMG XIX	Parasitic Capsule	5
+Draw.OPENING-DMG XIX	Large Saw Tooth	5
+Cloak.SIGHT I	White Mirrorglass	1
+Cloak.SIGHT I	Glossy Saltat Fan	1
+Cloak.SIGHT II	White Mirrorglass	1
+Cloak.SIGHT II	Glossy Saltat Fan	1
+Cloak.SIGHT III	White Mirrorglass	1
+Cloak.SIGHT III	Glossy Saltat Fan	1
+Cloak.SIGHT IV	White Mirrorglass	2
+Cloak.SIGHT IV	Glossy Saltat Fan	2
+Cloak.SIGHT V	White Mirrorglass	2
+Cloak.SIGHT V	Glossy Saltat Fan	2
+Cloak.SIGHT VI	White Mirrorglass	2
+Cloak.SIGHT VI	Glossy Saltat Fan	2
+Cloak.SIGHT VII	White Mirrorglass	2
+Cloak.SIGHT VII	Glossy Saltat Fan	2
+Cloak.SIGHT VIII	White Mirrorglass	2
+Cloak.SIGHT VIII	Glossy Saltat Fan	2
+Cloak.SIGHT IX	White Mirrorglass	3
+Cloak.SIGHT IX	Glossy Saltat Fan	3
+Cloak.SIGHT X	White Mirrorglass	3
+Cloak.SIGHT X	Luminescent Tail	3
+Cloak.SIGHT XI	White Mirrorglass	3
+Cloak.SIGHT XI	Luminescent Tail	3
+Cloak.SIGHT XII	White Mirrorglass	3
+Cloak.SIGHT XII	Luminescent Tail	3
+Cloak.SIGHT XIII	White Mirrorglass	3
+Cloak.SIGHT XIII	Luminescent Tail	3
+Cloak.SIGHT XIV	White Mirrorglass	4
+Cloak.SIGHT XIV	Luminescent Tail	4
+Cloak.SIGHT XV	White Mirrorglass	4
+Cloak.SIGHT XV	Luminescent Tail	4
+Cloak.SIGHT XVI	White Mirrorglass	4
+Cloak.SIGHT XVI	Luminescent Tail	4
+Cloak.SIGHT XVII	White Mirrorglass	4
+Cloak.SIGHT XVII	Luminescent Tail	4
+Cloak.SIGHT XVIII	White Mirrorglass	4
+Cloak.SIGHT XVIII	Luminescent Tail	4
+Cloak.SIGHT XIX	White Mirrorglass	5
+Cloak.SIGHT XIX	Luminescent Tail	5
+Cloak.SOUND I	Lightweight Pelt	1
+Cloak.SOUND I	Evolved Insidia Claw	1
+Cloak.SOUND II	Lightweight Pelt	1
+Cloak.SOUND II	Evolved Insidia Claw	1
+Cloak.SOUND III	Lightweight Pelt	1
+Cloak.SOUND III	Evolved Insidia Claw	1
+Cloak.SOUND IV	Lightweight Pelt	2
+Cloak.SOUND IV	Evolved Insidia Claw	2
+Cloak.SOUND V	Lightweight Pelt	2
+Cloak.SOUND V	Evolved Insidia Claw	2
+Cloak.SOUND VI	Lightweight Pelt	2
+Cloak.SOUND VI	Evolved Insidia Claw	2
+Cloak.SOUND VII	Lightweight Pelt	2
+Cloak.SOUND VII	Evolved Insidia Claw	2
+Cloak.SOUND VIII	Lightweight Pelt	2
+Cloak.SOUND VIII	Evolved Insidia Claw	2
+Cloak.SOUND IX	Lightweight Pelt	3
+Cloak.SOUND IX	Evolved Insidia Claw	3
+Cloak.SOUND X	Lightweight Pelt	3
+Cloak.SOUND X	Gray Shell	3
+Cloak.SOUND XI	Lightweight Pelt	3
+Cloak.SOUND XI	Gray Shell	3
+Cloak.SOUND XII	Lightweight Pelt	3
+Cloak.SOUND XII	Gray Shell	3
+Cloak.SOUND XIII	Lightweight Pelt	3
+Cloak.SOUND XIII	Gray Shell	3
+Cloak.SOUND XIV	Lightweight Pelt	4
+Cloak.SOUND XIV	Gray Shell	4
+Cloak.SOUND XV	Lightweight Pelt	4
+Cloak.SOUND XV	Gray Shell	4
+Cloak.SOUND XVI	Lightweight Pelt	4
+Cloak.SOUND XVI	Gray Shell	4
+Cloak.SOUND XVII	Lightweight Pelt	4
+Cloak.SOUND XVII	Gray Shell	4
+Cloak.SOUND XVIII	Lightweight Pelt	4
+Cloak.SOUND XVIII	Gray Shell	4
+Cloak.SOUND XIX	Lightweight Pelt	5
+Cloak.SOUND XIX	Gray Shell	5
+Crush.GP I	Pristine Insect Jaw	1
+Crush.GP I	Oc-serv Western Crest	1
+Crush.GP I	Vesper Fry	1
+Crush.GP II	Pristine Insect Jaw	1
+Crush.GP II	Oc-serv Western Crest	1
+Crush.GP II	Vesper Fry	1
+Crush.GP III	Pristine Insect Jaw	1
+Crush.GP III	Oc-serv Western Crest	1
+Crush.GP III	Vesper Fry	1
+Crush.GP IV	Pristine Insect Jaw	2
+Crush.GP IV	Oc-serv Western Crest	2
+Crush.GP IV	Vesper Fry	2
+Crush.GP V	Pristine Insect Jaw	2
+Crush.GP V	Oc-serv Western Crest	2
+Crush.GP V	Vesper Fry	2
+Crush.GP VI	Pristine Insect Jaw	2
+Crush.GP VI	Oc-serv Western Crest	2
+Crush.GP VI	Vesper Fry	2
+Crush.GP VII	Pristine Insect Jaw	2
+Crush.GP VII	Oc-serv Western Crest	2
+Crush.GP VII	Vesper Fry	2
+Crush.GP VIII	Pristine Insect Jaw	2
+Crush.GP VIII	Oc-serv Western Crest	2
+Crush.GP VIII	Vesper Fry	2
+Crush.GP IX	Pristine Insect Jaw	3
+Crush.GP IX	Oc-serv Western Crest	3
+Crush.GP IX	Vesper Fry	3
+Crush.GP X	Pristine Insect Jaw	3
+Crush.GP X	Golden Petramand Silk	3
+Crush.GP X	Red Scintimure Tentacle	3
+Crush.GP XI	Pristine Insect Jaw	3
+Crush.GP XI	Golden Petramand Silk	3
+Crush.GP XI	Red Scintimure Tentacle	3
+Crush.GP XII	Pristine Insect Jaw	3
+Crush.GP XII	Golden Petramand Silk	3
+Crush.GP XII	Red Scintimure Tentacle	3
+Crush.GP XIII	Pristine Insect Jaw	3
+Crush.GP XIII	Golden Petramand Silk	3
+Crush.GP XIII	Red Scintimure Tentacle	3
+Crush.GP XIV	Pristine Insect Jaw	4
+Crush.GP XIV	Golden Petramand Silk	4
+Crush.GP XIV	Red Scintimure Tentacle	4
+Crush.GP XV	Pristine Insect Jaw	4
+Crush.GP XV	Golden Petramand Silk	4
+Crush.GP XV	Red Scintimure Tentacle	4
+Crush.GP XVI	Pristine Insect Jaw	4
+Crush.GP XVI	Golden Petramand Silk	4
+Crush.GP XVI	Red Scintimure Tentacle	4
+Crush.GP XVII	Pristine Insect Jaw	4
+Crush.GP XVII	Golden Petramand Silk	4
+Crush.GP XVII	Red Scintimure Tentacle	4
+Crush.GP XVIII	Pristine Insect Jaw	4
+Crush.GP XVIII	Golden Petramand Silk	4
+Crush.GP XVIII	Red Scintimure Tentacle	4
+Crush.GP XIX	Pristine Insect Jaw	5
+Crush.GP XIX	Golden Petramand Silk	5
+Crush.GP XIX	Red Scintimure Tentacle	5
+Crush.APPEND I	Sapphire Horn	1
+Crush.APPEND I	Monoceros Hoof Hook	1
+Crush.APPEND I	Cracked Claw	1
+Crush.APPEND II	Sapphire Horn	1
+Crush.APPEND II	Monoceros Hoof Hook	1
+Crush.APPEND II	Cracked Claw	1
+Crush.APPEND III	Sapphire Horn	1
+Crush.APPEND III	Monoceros Hoof Hook	1
+Crush.APPEND III	Cracked Claw	1
+Crush.APPEND IV	Sapphire Horn	2
+Crush.APPEND IV	Monoceros Hoof Hook	2
+Crush.APPEND IV	Cracked Claw	2
+Crush.APPEND V	Sapphire Horn	2
+Crush.APPEND V	Monoceros Hoof Hook	2
+Crush.APPEND V	Cracked Claw	2
+Crush.APPEND VI	Sapphire Horn	2
+Crush.APPEND VI	Monoceros Hoof Hook	2
+Crush.APPEND VI	Cracked Claw	2
+Crush.APPEND VII	Sapphire Horn	2
+Crush.APPEND VII	Monoceros Hoof Hook	2
+Crush.APPEND VII	Cracked Claw	2
+Crush.APPEND VIII	Sapphire Horn	2
+Crush.APPEND VIII	Monoceros Hoof Hook	2
+Crush.APPEND VIII	Cracked Claw	2
+Crush.APPEND IX	Sapphire Horn	3
+Crush.APPEND IX	Monoceros Hoof Hook	3
+Crush.APPEND IX	Cracked Claw	3
+Crush.APPEND X	Sapphire Horn	3
+Crush.APPEND X	Malevolent Petramand Silk	3
+Crush.APPEND X	Brown Monoceros Horn	3
+Crush.APPEND XI	Sapphire Horn	3
+Crush.APPEND XI	Malevolent Petramand Silk	3
+Crush.APPEND XI	Brown Monoceros Horn	3
+Crush.APPEND XII	Sapphire Horn	3
+Crush.APPEND XII	Malevolent Petramand Silk	3
+Crush.APPEND XII	Brown Monoceros Horn	3
+Crush.APPEND XIII	Sapphire Horn	3
+Crush.APPEND XIII	Malevolent Petramand Silk	3
+Crush.APPEND XIII	Brown Monoceros Horn	3
+Crush.APPEND XIV	Sapphire Horn	4
+Crush.APPEND XIV	Malevolent Petramand Silk	4
+Crush.APPEND XIV	Brown Monoceros Horn	4
+Crush.APPEND XV	Sapphire Horn	4
+Crush.APPEND XV	Malevolent Petramand Silk	4
+Crush.APPEND XV	Brown Monoceros Horn	4
+Crush.APPEND XVI	Sapphire Horn	4
+Crush.APPEND XVI	Malevolent Petramand Silk	4
+Crush.APPEND XVI	Brown Monoceros Horn	4
+Crush.APPEND XVII	Sapphire Horn	4
+Crush.APPEND XVII	Malevolent Petramand Silk	4
+Crush.APPEND XVII	Brown Monoceros Horn	4
+Crush.APPEND XVIII	Sapphire Horn	4
+Crush.APPEND XVIII	Malevolent Petramand Silk	4
+Crush.APPEND XVIII	Brown Monoceros Horn	4
+Crush.APPEND XIX	Sapphire Horn	5
+Crush.APPEND XIX	Malevolent Petramand Silk	5
+Crush.APPEND XIX	Brown Monoceros Horn	5
+Spike.EVA I	Adsecula Oil Drop	1
+Spike.EVA I	Ebony Evello Egg	1
+Spike.EVA I	Vesper Hair Clip	1
+Spike.EVA II	Adsecula Oil Drop	1
+Spike.EVA II	Ebony Evello Egg	1
+Spike.EVA II	Vesper Hair Clip	1
+Spike.EVA III	Adsecula Oil Drop	1
+Spike.EVA III	Ebony Evello Egg	1
+Spike.EVA III	Vesper Hair Clip	1
+Spike.EVA IV	Adsecula Oil Drop	2
+Spike.EVA IV	Ebony Evello Egg	2
+Spike.EVA IV	Vesper Hair Clip	2
+Spike.EVA V	Adsecula Oil Drop	2
+Spike.EVA V	Ebony Evello Egg	2
+Spike.EVA V	Vesper Hair Clip	2
+Spike.EVA VI	Adsecula Oil Drop	2
+Spike.EVA VI	Ebony Evello Egg	2
+Spike.EVA VI	Vesper Hair Clip	2
+Spike.EVA VII	Adsecula Oil Drop	2
+Spike.EVA VII	Ebony Evello Egg	2
+Spike.EVA VII	Vesper Hair Clip	2
+Spike.EVA VIII	Adsecula Oil Drop	2
+Spike.EVA VIII	Ebony Evello Egg	2
+Spike.EVA VIII	Vesper Hair Clip	2
+Spike.EVA IX	Adsecula Oil Drop	3
+Spike.EVA IX	Ebony Evello Egg	3
+Spike.EVA IX	Vesper Hair Clip	3
+Spike.EVA X	Adsecula Oil Drop	3
+Spike.EVA X	Lava Crystal	3
+Spike.EVA X	Gularthian Flint	3
+Spike.EVA XI	Adsecula Oil Drop	3
+Spike.EVA XI	Lava Crystal	3
+Spike.EVA XI	Gularthian Flint	3
+Spike.EVA XII	Adsecula Oil Drop	3
+Spike.EVA XII	Lava Crystal	3
+Spike.EVA XII	Gularthian Flint	3
+Spike.EVA XIII	Adsecula Oil Drop	3
+Spike.EVA XIII	Lava Crystal	3
+Spike.EVA XIII	Gularthian Flint	3
+Spike.EVA XIV	Adsecula Oil Drop	4
+Spike.EVA XIV	Lava Crystal	4
+Spike.EVA XIV	Gularthian Flint	4
+Spike.EVA XV	Adsecula Oil Drop	4
+Spike.EVA XV	Lava Crystal	4
+Spike.EVA XV	Gularthian Flint	4
+Spike.EVA XVI	Adsecula Oil Drop	4
+Spike.EVA XVI	Lava Crystal	4
+Spike.EVA XVI	Gularthian Flint	4
+Spike.EVA XVII	Adsecula Oil Drop	4
+Spike.EVA XVII	Lava Crystal	4
+Spike.EVA XVII	Gularthian Flint	4
+Spike.EVA XVIII	Adsecula Oil Drop	4
+Spike.EVA XVIII	Lava Crystal	4
+Spike.EVA XVIII	Gularthian Flint	4
+Spike.EVA XIX	Adsecula Oil Drop	5
+Spike.EVA XIX	Lava Crystal	5
+Spike.EVA XIX	Gularthian Flint	5
+Vehicle.APPEND-DEF I	Multicolor Murra Wing	1
+Vehicle.APPEND-DEF II	Multicolor Murra Wing	1
+Vehicle.APPEND-DEF III	Multicolor Murra Wing	1
+Vehicle.APPEND-DEF IV	Multicolor Murra Wing	2
+Vehicle.APPEND-DEF V	Multicolor Murra Wing	2
+Vehicle.APPEND-DEF VI	Multicolor Murra Wing	2
+Vehicle.APPEND-DEF VII	Multicolor Murra Wing	2
+Vehicle.APPEND-DEF VIII	Multicolor Murra Wing	2
+Vehicle.APPEND-DEF IX	Multicolor Murra Wing	3
+Vehicle.APPEND-DEF X	Multicolor Murra Wing	3
+Vehicle.APPEND-DEF XI	Multicolor Murra Wing	3
+Vehicle.APPEND-DEF XII	Multicolor Murra Wing	3
+Vehicle.APPEND-DEF XIII	Multicolor Murra Wing	3
+Vehicle.APPEND-DEF XIV	Multicolor Murra Wing	4
+Vehicle.APPEND-DEF XV	Multicolor Murra Wing	4
+Vehicle.APPEND-DEF XVI	Multicolor Murra Wing	4
+Vehicle.APPEND-DEF XVII	Multicolor Murra Wing	4
+Vehicle.APPEND-DEF XVIII	Multicolor Murra Wing	4
+Vehicle.APPEND-DEF XIX	Multicolor Murra Wing	5
+Vehicle.FRAME-DEF I	Giant Blue Pearl	1
+Vehicle.FRAME-DEF II	Giant Blue Pearl	1
+Vehicle.FRAME-DEF III	Giant Blue Pearl	1
+Vehicle.FRAME-DEF IV	Giant Blue Pearl	2
+Vehicle.FRAME-DEF V	Giant Blue Pearl	2
+Vehicle.FRAME-DEF VI	Giant Blue Pearl	2
+Vehicle.FRAME-DEF VII	Giant Blue Pearl	2
+Vehicle.FRAME-DEF VIII	Giant Blue Pearl	2
+Vehicle.FRAME-DEF IX	Giant Blue Pearl	3
+Vehicle.FRAME-DEF X	Giant Blue Pearl	3
+Vehicle.FRAME-DEF XI	Giant Blue Pearl	3
+Vehicle.FRAME-DEF XII	Giant Blue Pearl	3
+Vehicle.FRAME-DEF XIII	Giant Blue Pearl	3
+Vehicle.FRAME-DEF XIV	Giant Blue Pearl	4
+Vehicle.FRAME-DEF XV	Giant Blue Pearl	4
+Vehicle.FRAME-DEF XVI	Giant Blue Pearl	4
+Vehicle.FRAME-DEF XVII	Giant Blue Pearl	4
+Vehicle.FRAME-DEF XVIII	Giant Blue Pearl	4
+Vehicle.FRAME-DEF XIX	Giant Blue Pearl	5
+Vehicle.DEBUFF-RES I	Flowering Papil Scales	1
+Vehicle.DEBUFF-RES II	Flowering Papil Scales	1
+Vehicle.DEBUFF-RES III	Flowering Papil Scales	1
+Vehicle.DEBUFF-RES IV	Flowering Papil Scales	2
+Vehicle.DEBUFF-RES V	Flowering Papil Scales	2
+Vehicle.DEBUFF-RES VI	Flowering Papil Scales	2
+Vehicle.DEBUFF-RES VII	Flowering Papil Scales	2
+Vehicle.DEBUFF-RES VIII	Flowering Papil Scales	2
+Vehicle.DEBUFF-RES IX	Flowering Papil Scales	3
+Vehicle.DEBUFF-RES X	Flowering Papil Scales	3
+Vehicle.DEBUFF-RES XI	Flowering Papil Scales	3
+Vehicle.DEBUFF-RES XII	Flowering Papil Scales	3
+Vehicle.DEBUFF-RES XIII	Flowering Papil Scales	3
+Vehicle.DEBUFF-RES XIV	Flowering Papil Scales	4
+Vehicle.DEBUFF-RES XV	Flowering Papil Scales	4
+Vehicle.DEBUFF-RES XVI	Flowering Papil Scales	4
+Vehicle.DEBUFF-RES XVII	Flowering Papil Scales	4
+Vehicle.DEBUFF-RES XVIII	Flowering Papil Scales	4
+Vehicle.DEBUFF-RES XIX	Flowering Papil Scales	5
+Night.MR-ACC I	White Scintimure Tentacle	1
+Night.MR-ACC II	White Scintimure Tentacle	1
+Night.MR-ACC III	White Scintimure Tentacle	1
+Night.MR-ACC IV	White Scintimure Tentacle	2
+Night.MR-ACC V	White Scintimure Tentacle	2
+Night.MR-ACC VI	White Scintimure Tentacle	2
+Night.MR-ACC VII	White Scintimure Tentacle	2
+Night.MR-ACC VIII	White Scintimure Tentacle	2
+Night.MR-ACC IX	White Scintimure Tentacle	3
+Night.MR-ACC X	White Scintimure Tentacle	3
+Night.MR-ACC XI	White Scintimure Tentacle	3
+Night.MR-ACC XII	White Scintimure Tentacle	3
+Night.MR-ACC XIII	White Scintimure Tentacle	3
+Night.MR-ACC XIV	White Scintimure Tentacle	4
+Night.MR-ACC XV	White Scintimure Tentacle	4
+Night.MR-ACC XVI	White Scintimure Tentacle	4
+Night.MR-ACC XVII	White Scintimure Tentacle	4
+Night.MR-ACC XVIII	White Scintimure Tentacle	4
+Night.MR-ACC XIX	White Scintimure Tentacle	5
+Weather.DAMAGE-RES I	Blue Forfex Shell	1
+Weather.DAMAGE-RES I	Auravis Courtship Feather	1
+Weather.DAMAGE-RES II	Blue Forfex Shell	1
+Weather.DAMAGE-RES II	Auravis Courtship Feather	1
+Weather.DAMAGE-RES III	Blue Forfex Shell	1
+Weather.DAMAGE-RES III	Auravis Courtship Feather	1
+Weather.DAMAGE-RES IV	Blue Forfex Shell	2
+Weather.DAMAGE-RES IV	Auravis Courtship Feather	2
+Weather.DAMAGE-RES V	Blue Forfex Shell	2
+Weather.DAMAGE-RES V	Auravis Courtship Feather	2
+Weather.DAMAGE-RES VI	Blue Forfex Shell	2
+Weather.DAMAGE-RES VI	Auravis Courtship Feather	2
+Weather.DAMAGE-RES VII	Blue Forfex Shell	2
+Weather.DAMAGE-RES VII	Auravis Courtship Feather	2
+Weather.DAMAGE-RES VIII	Blue Forfex Shell	2
+Weather.DAMAGE-RES VIII	Auravis Courtship Feather	2
+Weather.DAMAGE-RES IX	Blue Forfex Shell	3
+Weather.DAMAGE-RES IX	Auravis Courtship Feather	3
+Weather.DAMAGE-RES X	Blue Forfex Shell	3
+Weather.DAMAGE-RES X	Blue Vigent Rock Scalp	3
+Weather.DAMAGE-RES XI	Blue Forfex Shell	3
+Weather.DAMAGE-RES XI	Blue Vigent Rock Scalp	3
+Weather.DAMAGE-RES XII	Blue Forfex Shell	3
+Weather.DAMAGE-RES XII	Blue Vigent Rock Scalp	3
+Weather.DAMAGE-RES XIII	Blue Forfex Shell	3
+Weather.DAMAGE-RES XIII	Blue Vigent Rock Scalp	3
+Weather.DAMAGE-RES XIV	Blue Forfex Shell	4
+Weather.DAMAGE-RES XIV	Blue Vigent Rock Scalp	4
+Weather.DAMAGE-RES XV	Blue Forfex Shell	4
+Weather.DAMAGE-RES XV	Blue Vigent Rock Scalp	4
+Weather.DAMAGE-RES XVI	Blue Forfex Shell	4
+Weather.DAMAGE-RES XVI	Blue Vigent Rock Scalp	4
+Weather.DAMAGE-RES XVII	Blue Forfex Shell	4
+Weather.DAMAGE-RES XVII	Blue Vigent Rock Scalp	4
+Weather.DAMAGE-RES XVIII	Blue Forfex Shell	4
+Weather.DAMAGE-RES XVIII	Blue Vigent Rock Scalp	4
+Weather.DAMAGE-RES XIX	Blue Forfex Shell	5
+Weather.DAMAGE-RES XIX	Blue Vigent Rock Scalp	5
 \.
 
 
@@ -13538,6 +27759,22 @@ ALTER TABLE ONLY xenox.affixes
 
 
 --
+-- Name: augment_create_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.augment_create
+    ADD CONSTRAINT augment_create_pkey PRIMARY KEY (name, material);
+
+
+--
+-- Name: augment_upgrade_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.augment_upgrade
+    ADD CONSTRAINT augment_upgrade_pkey PRIMARY KEY (name, material);
+
+
+--
 -- Name: augments_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
 --
 
@@ -13591,6 +27828,22 @@ ALTER TABLE ONLY xenox.classes
 
 ALTER TABLE ONLY xenox.skills
     ADD CONSTRAINT skills_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: augment_create_name_fkey; Type: FK CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.augment_create
+    ADD CONSTRAINT augment_create_name_fkey FOREIGN KEY (name) REFERENCES xenox.augments(name);
+
+
+--
+-- Name: augment_upgrade_name_fkey; Type: FK CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.augment_upgrade
+    ADD CONSTRAINT augment_upgrade_name_fkey FOREIGN KEY (name) REFERENCES xenox.augments(name);
 
 
 --
