@@ -282,7 +282,20 @@ class XenobladeX:
 
         await ctx.send(embed=embed)
 
+    @augment.command(name='all')
+    async def augment_all(self, ctx):
+        """Lists all augments."""
+
+        await self.all_entries(ctx, 'augments')
+
+    @augment.command(name='search')
+    async def augment_search(self, ctx, *, name: str):
+        """Searches for an augment."""
+
+        await self.search_entries(ctx, 'augments', name)
+
     @augment.error
+    @augment_search.error
     async def augment_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing augment name.')
