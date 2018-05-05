@@ -151,6 +151,18 @@ CREATE TABLE xenox.classes (
 ALTER TABLE xenox.classes OWNER TO poppi;
 
 --
+-- Name: items; Type: TABLE; Schema: xenox; Owner: poppi
+--
+
+CREATE TABLE xenox.items (
+    name text NOT NULL,
+    tickets smallint
+);
+
+
+ALTER TABLE xenox.items OWNER TO poppi;
+
+--
 -- Name: skills; Type: TABLE; Schema: xenox; Owner: poppi
 --
 
@@ -27649,6 +27661,521 @@ Mia	Knife	Raygun	3	20
 
 
 --
+-- Data for Name: items; Type: TABLE DATA; Schema: xenox; Owner: poppi
+--
+
+COPY xenox.items (name, tickets) FROM stdin;
+Active Cells	54
+Adsecula Gold Nugget	34
+Adsecula Oil Drop	50
+Adsecula Straw	30
+Advanced Chamber	138
+Advanced Core	138
+Advanced Crank	138
+Advanced Jet	54
+Advanced Lens	98
+Advanced Thruster	42
+Aeviter Death Stone	138
+Aeviter Membrane	108
+Aeviter Star Wing	138
+All-Purpose Plug	42
+Alluring Lophid Extract	114
+Alluring Papil Scales	34
+Amber Aetrygon Horn	54
+Amber Cervus Antlers	114
+Amber Dilus Eye	90
+Amethyst Metal	138
+Ancient Armor	138
+Appetizing Suid Tail	30
+Aprica Back Moss	90
+Arenatect Shell	72
+Auravis Courtship Feather	54
+Auravis Croaking Bag	54
+Auravis Horn	54
+Auravis Laughing Bag	54
+Azure Sacrifole Feather	54
+Beryl Aetrygon Horn	42
+Big Balaena Sand Bag	114
+Big Balaena Water Bag	138
+Black Blatta Wing	24
+Black Colubrim Tail	198
+Black Electrical Tentacle	90
+Black Filiavent Tentacle	168
+Black Fog Deposits	26
+Black Gyrocompass	54
+Black Meaty Caecus Liver	66
+Black Petramand Silk	90
+Black Puff	42
+Black Scintimure Tentacle	90
+Black Stabilizer	108
+Black Steel Heavy Armor	66
+Black Sylooth Brace	114
+Black Thallus Antenna	90
+Black Turba Nectar	50
+Black Vigent Rock Scalp	138
+Black Yggralith Nut	138
+Black Yggralith Scale	78
+Blazing Gas Sac	114
+Blinding Lophid Extract	138
+Bloodied Face	72
+Blue Electrical Tentacle	42
+Blue Forfex Shell	36
+Blue Fungi	54
+Blue Jacul Wing	72
+Blue Milsaadi Hood	48
+Blue Progen Wing	72
+Blue Sylooth Brace	114
+Blue Vigent Rock Scalp	138
+Bone-In Thigh Meat	42
+Brilliant Murra Liquid	42
+Brilliant Tersqual Liquid	90
+Brilliant Visigel Liquid	54
+Broken Antenna	22
+Broken Buckle	20
+Broken Pincer	24
+Brown Colubrim Tail	198
+Brown Monoceros Horn	90
+Caecus Crest	54
+Caro Tail Light	54
+Ceto Roe	178
+Chipped Talon	34
+Cimmerian Pom Pom	42
+Cinicula Shell	90
+Clear Gerrid Soup	90
+Cloudy Eyeball	72
+Cloudy Gerrid Soup	90
+Coconut Oil	114
+Colubrim Eel Kebab	198
+Combat Boost Meds	34
+Coronid Dung	168
+Coronid Larynx	168
+Cracked Bill	42
+Cracked Claw	24
+Creare Glyph	90
+Crimson Dilus Eye	90
+Crimson Sacrifole Feather	78
+Crude Nielnail Mask	210
+Dagahn's Adamant Band	162
+Damask Metal	138
+Decrepit Wing	198
+Demonic Jewel	42
+Deva Caladar's Red Ear	210
+Developed Balaena Fat	146
+Dialek Glyph	114
+Diamond Seed	66
+Dirty Cloth	26
+Distilled Sap	82
+Dried Seaweed Lichen	42
+Dual Boards	42
+Dull Stone	34
+Duoguill Broth	50
+E.M. Unit	90
+Ebony Evello Egg	50
+Eerie Lightning Tentacle	66
+Electric Tersqual Tear	138
+Electrified Xeno Blood	54
+Elemental Cluster	54
+Elemental Fragment	54
+Emerald Horn	42
+Emerald Whiskey	72
+Energy Tube	22
+Esse Glyph	90
+Eternal Arenatect Moss	72
+Evergreen Aprica Antlers	90
+Evolved Insidia Claw	66
+Experia Glyph	90
+Falsaxum Shell	90
+Fal-swo Solar Crest	90
+Fatty Fish Belly	50
+Fertilized Jacul Egg	90
+Filiavent Intestine	218
+Filthy Wing	26
+Fine Aprica Wood	114
+Fine Black Belt	22
+Fine Duoguill Fishmeal	42
+Fine Red Belt	30
+Fine Transparent Belt	26
+Fine White Belt	30
+Flaming Rock	50
+Fleecy Fur	22
+Flowering Germivore Scales	24
+Flowering Papil Scales	34
+Fluffy Tuft	26
+Forfex Miso	36
+Fossilized Bone	138
+Fresh Fish Meat	34
+Galaxial Jewel	42
+Galdr Head	90
+Genuine Chamber	138
+Genuine Crank	54
+Genuine Frame	72
+Genuine Plate	72
+Genuine Shaft	72
+Gerrid Navel	72
+Gerrid Shell	72
+Giant Blue Pearl	42
+Giant Cavity	114
+Giant Cinicula Jaw	90
+Giant Falsaxum Jaw	90
+Giant Jade Pearl	66
+Giant Protein	168
+Glossy Saltat Fan	42
+Glowing Retina	42
+Goetia's Black Heel	162
+Gold Ceto Membrane	138
+Gold Monoceros Horn	72
+Gold Sylooth Brace	114
+Golden Armor	66
+Golden Blatta Wing	36
+Golden Cantor Tooth	108
+Golden Gyrocompass	54
+Golden Jewel	42
+Golden Mortifole Feather	30
+Golden Petramand Silk	90
+Golden Progen Wing	72
+Golden Puff	4
+Golden Simius Mane	54
+Golden Stabilizer	90
+Golden Yggralith Heart	636
+Golden Yggralith Nut	276
+Gooey Gunge	36
+Gray Shell	90
+Green Blatta Wing	24
+Green Crystal	114
+Green Jacul Wing	72
+Green Monoceros Horn	72
+Green Mortifole Feather	42
+Green Puff	42
+Green Simius Mane	54
+Gremlin Stone	114
+Grex Wisdom Tooth	34
+Gularthian Everflame	146
+Gularthian Flint	114
+Hard Backbone	42
+Hard Pom Pom	30
+Herculean Beast Hair	54
+Hidden Cantor Hoard	90
+Hi-Spec Sensor Module	54
+Honey Oil	114
+Hot Potamus Juice	30
+Hulking Incisor	30
+Ictus Shell	90
+Infinite Telethia Pen	207
+Imperial Sphinx Fang	210
+Ingrown Virago Claw	138
+Insect Jaw	22
+Insidia Mohawk	54
+Iron Lump	66
+Jacul Horn	72
+Jacul Waterfall Orb	72
+Jagged Grex Tail	30
+Juicy Wild Meat	26
+Large Hoof	54
+Large Lophid Liver	146
+Large Purgovent Liver	114
+Large Saw Tooth	138
+Laser Light	66
+Lava Crystal	82
+Lead Carapace	36
+Lepyx Elastic Cell	36
+Lepyx Jaw Meat	36
+Lepyx Moonstone	72
+Lepyx Sunstone	36
+Levitath Feather	138
+Levitath Sun Bead	138
+Libertas Glyph	114
+Liceor Horn	50
+Liceor Sun Bead	42
+Light-Speed Jet Fin	50
+Lightweight Pelt	34
+Lone Purple Ictus Stinger	114
+Lone Red Ictus Stinger	114
+Lone White Ictus Stinger	114
+Longevity Bough	114
+Lophid Jaw Meat	114
+Lovely Pom Pom	30
+Lucky Cervus Sapling	146
+Lucky Rainbow Whisker	114
+Luminescent Antenna	54
+Luminescent Tail	72
+Malevolent Petramand Silk	90
+Maple Oil	114
+Marbled Suid Fillet	34
+Meaty Evello Egg	50
+Medicinal Blatta Oil	26
+Melon Oil	114
+Mephite Ear Hair	42
+Mephite Stinkbag	50
+Metal Xeno Chain	54
+Millepod Ice Rock	198
+Millesaur Dung	168
+Millesaur Larynx	168
+Mollusk Mucus	68
+Monoceros Hoof Hook	90
+Monoceros Wing	72
+Mortifole Pollen	30
+Moving Dilus Tail	72
+Moving Thallus Tail	90
+Moving Vivohast Tail	90
+Muddy Pelt	22
+Multicolor Murra Wing	50
+Multi-Wire	42
+Murky Potamus Water	30
+Muscled Cantor Bulge	72
+Muscled Simius Bulge	54
+Muscled Suid Bulge	30
+Musky Nectar	26
+New Cylinder	66
+Noble Yggralith Scale	396
+Nutritious Microbes	54
+O.X. Unit	90
+Obsidian Cluster	168
+Obsidian Fragment	118
+Ocher Stabilizer	72
+Oc-serv Eastern Crest	98
+Oc-serv Hand	54
+Oc-serv Northern Crest	78
+Oc-serv Southern Crest	98
+Oc-serv Western Crest	78
+Octopus Board	98
+Odorous Tentacle	72
+Opaque Membrane	26
+Opaque Mirror	42
+Orange Tequila	54
+Orichalcum Metal	138
+Ornate Insidia Claw	82
+Ornate Petramand Claw	90
+Ornate Progen Horn	72
+Ovis Polishing Stone	30
+Papil Straw	30
+Parasitic Capsule	34
+Perforated Oar	26
+Pink Ceto Membrane	138
+Poisonous Needle	30
+Potamus Life Lung	34
+Pristine Bristle	66
+Pristine Claw	36
+Pristine Dorsal Fin	72
+Pristine Insect Jaw	54
+Pristine Insect Leg	30
+Pristine Pincer	36
+Pristine Spicule	34
+Pristine Whiskers	78
+Progen Hoof Seal	90
+Prone Coin Purse	26
+Puge Counter	26
+Puge Self-Destruct Mechanism	26
+Pugilith Lamp	66
+Pure White Caro Tusk	66
+Purgovent Jaw Meat	90
+Purple Cervus Antlers	138
+Purple Scintimure Tentacle	114
+Purple Virago Alloy Plate	138
+Qmoevan Capacitor	72
+Quality Core	58
+Quality Crank	36
+Quality Fuse	54
+Quality Giant Cells	114
+Quality Pelt	54
+Quality Scale	138
+Quality Shaft	72
+Quality Skin	118
+Quality Vigent Claw	138
+Quirky Liver	66
+Quo Pod	54
+R.B. Unit	90
+Rainbow Carving Shard	66
+Rainbow Metal	114
+Raw Meaty Caecus Liver	66
+Red Blatta Wing	24
+Red Brandy	90
+Red Filiavent Tentacle	168
+Red Forfex Shell	36
+Red Milsaadi Hood	42
+Red Mortifole Feather	66
+Red Scintimure Tentacle	66
+Red Simius Mane	54
+Red Thallus Antenna	90
+Red Vigent Rock Scalp	138
+Redwood Aprica Antlers	90
+Refined Horn	66
+Reinforced Crank	30
+Reinforced Frame	90
+Reinforced Jet	36
+Reinforced Plug	90
+Reinforced Plunger	54
+Reinforced Thruster	24
+Reverse Colubrim Fin	198
+Reverse Millepod Fin	198
+Rexoskell Sucker	210
+Rich Scintimure Meat	82
+Robust Evello Horn	42
+Rotten Meat	26
+Rough Skin	42
+Rugged Skin	58
+Ryyz's Silver Piercings	162
+S.P. Unit	90
+Sabula Backbone	90
+Saltat Horn	50
+Sapphire Horn	42
+Scienti Glyph	90
+Scintimure Fat	66
+Scirpo Cyanide Sac	36
+Scirpo Malic Acid Sac	36
+Scirpo Silk	42
+Scirpo Sulfuric Acid Sac	54
+Scorching Giant Cells	114
+Scratched Jewel	30
+Seidr Control Device	138
+Sharp Ear	30
+Sharp Germivore Jaw	26
+Sharp Vivohast Jaw	72
+Shed Germivore Scales	24
+Shimmering Silk	42
+Shiny Black Caro Plate	54
+Shiny Copper Caro Plate	54
+Shiny Mortifole Seed	34
+Shiny Silver Caro Plate	66
+Shrad Eye	54
+Silver Blatta Wing	24
+Silver Cantor Tooth	72
+Silver Petramand Silk	90
+Silver Progen Wing	72
+Silver Sacrifole Feather	54
+Silver Vita Core	210
+Silver Yggralith Nut	156
+Simius Snack Stash	66
+Sky Jewel	42
+Slender Horn	54
+Slimy Epithelium	30
+Slimy Tongue	26
+Small Dorsal Fin	26
+Small Insect Leg	22
+Small Scale	26
+Small Shell	30
+Smelly Fish Meat	42
+Smooth Tail Fin	90
+Sparkling Blue Gem	178
+Sparkling Purple Gem	178
+Sparkling Red Gem	178
+Spathi Glyph	114
+Spicy Sacrifole Pollen	54
+Spiked Tail Fin	114
+Squishy Cartilage	42
+Standard Blade Module	54
+Standard Coil	30
+Standard Crank	20
+Standard Jammer	30
+Standard Sensor Part	36
+Standard Shaft	72
+Steel Unafulge Cell	42
+Sticky Mucus	20
+Sticky Scirpo Silk	36
+Stiff Hair	30
+Stout Purgovent Extract	90
+Stripped Plating	30
+Strong Purgovent Extract	114
+Sturdy Drakebone	58
+Succulent Meat	26
+Suid Fillet	34
+Supple Leather	22
+Supple Tail	54
+Sylooth Tonic Water	146
+T.P. Unit	90
+Tasty Fish Belly	82
+Tatty Insect Wing	20
+Taut Leather	22
+Tectinsula Back Moss	54
+Tectinsula Shell	54
+Telethia Emerald	387
+Telethia Mirror	117
+Telethia Ring	477
+Telethia Stem Cell	297
+Tempered Blade Module	54
+Tempus Glyph	114
+Terebra Oil Grease	30
+Terebra Paw Stamp	34
+Terebra Water Grease	30
+Tersqual Eel Kebab	90
+Tersqual Fire Pouch	114
+Thallus Crescent Hook	72
+Thick Cinicula Horn	90
+Thick Coronid Hide	168
+Thick Falsaxum Horn	90
+Thick Millesaur Hide	168
+Topaz Wine	54
+Tough Humpsteak	30
+Tough Tendon	168
+Transparent Membrane	34
+Tricolored Ovis Meat	34
+Turba Nectar	50
+Turba Straw	42
+Turquoise Metal	138
+Unafulge Death Toxin	98
+Unafulge Numbing Toxin	50
+Unfertilized Auravis Egg	66
+Unlucky Black Whisker	138
+Upgraded Coil	42
+Upgraded Jammer	42
+Upgraded Lens	58
+Upgraded Sensor Part	54
+Upgraded Shaft Part	72
+Upgraded Spindle Part	66
+Used Cylinder	54
+Vasara War Medal	210
+Vesper Fang	30
+Vesper Fry	34
+Vesper Hair Clip	30
+Vibrant Plume	34
+Vigent Blood	138
+Virago Alloy Plate	138
+Virago Blood Sweat	138
+Viscous Humour	22
+Visigel Poison Orb	66
+Visigel Waterfall Orb	66
+Vivohast Crescent Hook	72
+Warrior Race's Seal	98
+White Forfex Shell	36
+White Fungal Egg	50
+White Meaty Caecus Liver	82
+White Mirrorglass	30
+White Mortifole Feather	42
+White Scintimure Tentacle	90
+White Stabilizer	90
+White Sylooth Brace	114
+White Yggralith Nut	78
+White Yggralith Scale	72
+Worn Muscle Fiber	26
+Xe-dom Crimson Crest	178
+Xe-dom Golden Crest	178
+Xe-dom Hand	138
+Xe-dom Jet-Black Crest	178
+Xe-dom Silver Crest	178
+Xiphias Mine Egg	50
+Yellow Millepod Rock	198
+Yggralith Gold	516
+Yggralith Horn	258
+Yggralith Recovery Horn	258
+Ziggian Long Antennae	90
+Lionbone Bort	\N
+Foucaultium	\N
+Enduron Lead	\N
+White Cometite	\N
+Everfreeze Ore	\N
+Ouroboros Crystal	\N
+Marine Rutile	\N
+Bonjelium	\N
+Boiled-Egg Ore	\N
+Infernium	\N
+Dawnstone	\N
+Aurorite	\N
+Arc Sand Ore	\N
+Parhelion Platinum	\N
+Cimmerian Cinnabar	\N
+\.
+
+
+--
 -- Data for Name: skills; Type: TABLE DATA; Schema: xenox; Owner: poppi
 --
 
@@ -27823,6 +28350,14 @@ ALTER TABLE ONLY xenox.classes
 
 
 --
+-- Name: items_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.items
+    ADD CONSTRAINT items_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: skills_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
 --
 
@@ -27831,11 +28366,27 @@ ALTER TABLE ONLY xenox.skills
 
 
 --
+-- Name: augment_create_material_fkey; Type: FK CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.augment_create
+    ADD CONSTRAINT augment_create_material_fkey FOREIGN KEY (material) REFERENCES xenox.items(name);
+
+
+--
 -- Name: augment_create_name_fkey; Type: FK CONSTRAINT; Schema: xenox; Owner: poppi
 --
 
 ALTER TABLE ONLY xenox.augment_create
     ADD CONSTRAINT augment_create_name_fkey FOREIGN KEY (name) REFERENCES xenox.augments(name);
+
+
+--
+-- Name: augment_upgrade_material_fkey; Type: FK CONSTRAINT; Schema: xenox; Owner: poppi
+--
+
+ALTER TABLE ONLY xenox.augment_upgrade
+    ADD CONSTRAINT augment_upgrade_material_fkey FOREIGN KEY (material) REFERENCES xenox.items(name);
 
 
 --
