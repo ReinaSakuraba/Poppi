@@ -43,7 +43,7 @@ class Images:
 
         member = member or ctx.author
 
-        async with ctx.session.get(member.avatar_url_as(format='png')) as r:
+        async with ctx.session.get(member.avatar_url_as(format='jpg')) as r:
             with Image.open(io.BytesIO(await r.read())) as image:
                 file = io.BytesIO()
                 image.save(file, format='jpeg', quality=1)
