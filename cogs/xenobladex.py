@@ -245,7 +245,7 @@ class XenobladeX:
                     STRING_AGG(
                         CASE WHEN tickets != 0 THEN amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)'
                              ELSE amount || ' ' || items.name
-                        END, E'\n ') || E'\n' ||
+                        END, E'\n') || E'\n' ||
                     '(' || SUM(amount * tickets) || ' Total Tickets)'
                 FROM xenox.augment_create
                 JOIN xenox.items
@@ -257,7 +257,7 @@ class XenobladeX:
 
         query = """
                 SELECT
-                    STRING_AGG(amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)', E'\n ') ||
+                    STRING_AGG(amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)', E'\n') ||
                     E'\n' || '(' || SUM(amount * tickets) || ' Total Tickets)'
                 FROM xenox.augment_upgrade
                 JOIN xenox.items
