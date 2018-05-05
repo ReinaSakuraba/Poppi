@@ -375,7 +375,7 @@ class XenobladeX:
     async def armor_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing armor name.')
-        
+
     @commands.command()
     async def loadout(self, ctx):
         fmt = f'Class: {random.choice(self.classes)}\n' \
