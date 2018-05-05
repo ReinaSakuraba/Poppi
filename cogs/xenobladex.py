@@ -78,7 +78,7 @@ class XenobladeX:
             'Intergalactic': 0xAB6C02,
         }
 
-        for filename in ['arts', 'augments', 'weapons', 'armors']:
+        for filename in ['arts', 'weapons', 'armors']:
             with open(f'xenox/json/{filename}.json') as f:
                 setattr(self, filename, json.load(f))
                 self.data[filename[:-1]] = getattr(self, filename)
@@ -88,9 +88,6 @@ class XenobladeX:
             env = {'parent_command': parent_command}
             env.update(globals())
             exec(thing.format(key, 'an' if key[0] == 'a' else 'a'), env)
-
-        with open('xenox/json/materials.json') as f:
-            self.materials = json.load(f)
 
     def get_entry(self, entry_type, name):
         data = self.data[entry_type.lower()]
@@ -253,59 +250,68 @@ class XenobladeX:
             await ctx.send('Missing art name.')
 
     @utils.group(invoke_without_command=True, aliases=['aug'])
-    async def augment(self, ctx, *, augment: str):
+    async def augment(self, ctx, *, name: str.lower):
         """Gives you information about an augment."""
-        try:
-            augment = self.get_entry('Augment', augment.lower())
-        except RuntimeError as e:
-            return await ctx.send(e)
 
-        miranium = augment.get('Miranium')
-        created = augment.get('Create')
-        upgrade = augment.get('Upgrade')
+        query = """
+                SELECT
+                    augments.name,
+                    effect,
+                    rarity,
+                    sell_price,
+                    miranium
+                FROM xenox.augments
+                JOIN xenox.affixes
+                ON augments.name = affixes.name
+                WHERE LOWER(augments.name)=$1;
+                """
 
-        total_tickets = 0
+        record = await ctx.pool.fetchrow(query, name)
 
-        embed = discord.Embed(title=augment['Name'], color=self.colors[augment['Rarity']])
-        embed.description = augment['Effect']
+        if record is None:
+            return await self.show_possibilities(ctx, 'augments', name)
 
-        embed.add_field(name='Sell Price', value=augment['Price'])
+        name, effect, rarity, price, miranium = record
+
+        query = """
+                SELECT
+                    STRING_AGG(
+                        CASE WHEN tickets != 0 THEN amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)'
+                             ELSE amount || ' ' || items.name
+                        END, E'\n ') || E'\n' ||
+                    '(' || SUM(amount * tickets) || ' Total Tickets)'
+                FROM xenox.augment_create
+                JOIN xenox.items
+                ON augment_create.material = items.name
+                WHERE augment_create.name = $1;
+                """
+
+        created = await ctx.pool.fetchval(query, name)
+
+        query = """
+                SELECT
+                    STRING_AGG(amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)', E'\n ') ||
+                    E'\n' || '(' || SUM(amount * tickets) || ' Total Tickets)'
+                FROM xenox.augment_upgrade
+                JOIN xenox.items
+                ON augment_upgrade.material = items.name
+                WHERE augment_upgrade.name = $1;
+                """
+
+        upgrade = await ctx.pool.fetchval(query, name)
+
+        embed = discord.Embed(title=name, color=self.colors[rarity], description=effect)
+
+        embed.add_field(name='Sell Price', value=price)
 
         if miranium:
             embed.add_field(name='Required Miranium', value=miranium)
 
         if created:
-            fmt = []
-            total = 0
-
-            for mat in created[:-1]:
-                name = mat["Name"]
-                count = mat["Count"]
-                tickets = self.materials[name.lower()]["price"] * count
-
-                fmt.append(f'{count} {name} ({tickets} Tickets)')
-                total += tickets
-
-            fmt.append(f'{created[-1]["Count"]} {created[-1]["Name"]}')
-            fmt.append(f'({total} Total Tickets)')
-
-            embed.add_field(name='Create', value='\n'.join(fmt))
+            embed.add_field(name='Create', value=created)
 
         if upgrade:
-            fmt = []
-            total = 0
-
-            for mat in upgrade:
-                name = mat["Name"]
-                count = mat["Count"]
-                tickets = self.materials[name.lower()]["price"] * count
-
-                fmt.append(f'{count} {name} ({tickets} Tickets)')
-                total += tickets
-
-            fmt.append(f'({total} Total Tickets)')
-
-            embed.add_field(name='Upgrade From', value='\n'.join(fmt))
+            embed.add_field(name='Upgrade From', value=upgrade)
 
 
         await ctx.send(embed=embed)
