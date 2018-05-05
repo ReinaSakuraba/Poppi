@@ -81,7 +81,7 @@ async def create_db(pool):
                 threshold SMALLINT DEFAULT 1
             );
 
-            CREATE TABLE stardboard_entries (
+            CREATE TABLE starboard_entries (
                 message_id BIGINT PRIMARY KEY,
                 bot_message_id BIGINT NOT NULL,
                 channel_id BIGINT NOT NULL,
@@ -91,7 +91,7 @@ async def create_db(pool):
 
             CREATE TABLE starrers (
                 author_id BIGINT,
-                message_id BIGINT REFERENCES starboard_entries(message_id)
+                message_id BIGINT REFERENCES starboard_entries(message_id),
                 PRIMARY KEY (author_id, message_id)
             );
             """
