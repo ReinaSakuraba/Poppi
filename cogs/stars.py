@@ -311,7 +311,16 @@ class Stars:
             return
 
         if channel.id == star_channel.id:
-            return # Star the original message here
+            query = "SELECT channel_id, message_id FROM starboard_entries WHERE bot_message_id=$1;"
+            record = await self.bot.pool.fetchrow(query, message_id)
+            if record is None:
+                return
+
+            chan = channel.guild.get_channel(record['channel_id'])
+            if chan is None:
+                return
+
+            return await self.star_message(chan, record['message_id'], user_id)
 
         message = await channel.get_message(message_id)
 
@@ -378,7 +387,16 @@ class Stars:
             return
 
         if channel.id == star_channel.id:
-            return # Unstar the original message here
+            query = "SELECT channel_id, message_id FROM starboard_entries WHERE bot_message_id=$1;"
+            record = await self.bot.pool.fetchrow(query, message_id)
+            if record is None:
+                return
+
+            chan = channel.guild.get_channel(record['channel_id'])
+            if chan is None:
+                return
+
+            return await self.unstar_message(chan, record['message_id'], user_id)
 
         query = """
                 DELETE FROM starrers
