@@ -74,7 +74,7 @@ class Stars:
 
         await ctx.send(f'Messages now require {utils.plural("star", stars)} to show up in the starboard.')
 
-    @starboard.command(name='stats')
+    @starboard.group(name='stats', invoke_without_command=True)
     async def starboard_stats(self, ctx, *, member: discord.Member = None):
         member = member or ctx.author
 
@@ -107,6 +107,69 @@ class Stars:
         embed.add_field(name='Messages Starred', value=messages_starred)
         embed.add_field(name='Stars Recieved', value=stars_recieved)
         embed.add_field(name='Stars Given', value=stars_given)
+
+        await ctx.send(embed=embed)
+
+    @starboard_stats.command(name='server')
+    async def starboard_stats_server(self, ctx):
+        embed = discord.Embed(title='Server Starboard Stats', color=discord.Color.gold())
+
+        query = "SELECT * FROM starboards WHERE guild_id=$1;"
+        starboard = await ctx.pool.fetchrow(query, ctx.guild.id)
+
+        if starboard is None:
+            return await ctx.send('Starboard channel does not exist.')
+
+        embed.timestamp = ctx.guild.get_channel(starboard['channel_id']).created_at
+        embed.set_footer(text='Adding stars since')
+
+        query = "SELECT COUNT(*) FROM starboard_entries WHERE guild_id=$1;"
+        total_messages = await ctx.pool.fetchval(query, ctx.guild.id)
+
+        query = """
+                SELECT COUNT(*)
+                FROM starrers
+                JOIN starboard_entries
+                ON starrers.message_id=starboard_entries.message_id
+                WHERE starboard_entries.guild_id=$1;
+                """
+        total_stars = await ctx.pool.fetchval(query, ctx.guild.id)
+
+        embed.description = f'{utils.plural("message", total_messages)} starred with a total of {utils.plural("star", total_stars)}.'
+
+        query = """
+                SELECT starboard_entries.author_id, COUNT(*) AS stars
+                FROM starboard_entries
+                JOIN starrers
+                ON starboard_entries.message_id=starrers.message_id
+                WHERE guild_id=$1
+                GROUP BY starboard_entries.author_id
+                ORDER BY stars DESC
+                LIMIT 3;
+                """
+        records = await ctx.pool.fetch(query, ctx.guild.id)
+
+        value = '\n'.join(f'{index}: <@!{author_id}> ({count} stars)'
+                          for (index, (author_id, count)) in enumerate(records, 1))
+
+        embed.add_field(name='Top Star Recievers', value=value, inline=False)
+
+        query = """
+                SELECT starrers.author_id, COUNT(*) AS stars
+                FROM starboard_entries
+                JOIN starrers
+                ON starboard_entries.message_id=starrers.message_id
+                WHERE guild_id=$1
+                GROUP BY starrers.author_id
+                ORDER BY stars DESC
+                LIMIT 3;
+                """
+        records = await ctx.pool.fetch(query, ctx.guild.id)
+
+        value = '\n'.join(f'{index}: <@!{author_id}> ({count} stars)'
+                          for (index, (author_id, count)) in enumerate(records, 1))
+
+        embed.add_field(name='Top Star Givers', value=value, inline=False)
 
         await ctx.send(embed=embed)
 
