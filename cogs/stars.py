@@ -173,6 +173,40 @@ class Stars:
 
         await ctx.send(embed=embed)
 
+    @starboard.command(name='random')
+    async def starboard_random(self, ctx):
+        query = """
+                SELECT message_id, channel_id
+                FROM starboard_entries
+                WHERE guild_id=$1
+                AND bot_message_id IS NOT NULL
+                ORDER BY RANDOM()
+                LIMIT 1;
+                """
+        record = await ctx.pool.fetchrow(query, ctx.guild.id)
+
+        if record is None:
+            return await ctx.send('Could not find anything.')
+
+        message_id, channel_id = record
+
+        channel = ctx.guild.get_channel(channel_id)
+
+        if channel is None:
+            return await ctx.send('Message\'s channel was deleted. Please retry.')
+
+        message = await channel.get_message(message_id)
+
+        if message is None:
+            return await ctx.send('Original message was deleted. Please retry.')
+
+        query = "SELECT COUNT(*) FROM starrers WHERE message_id=$1;"
+        stars = await ctx.pool.fetchval(query, message_id)
+
+        content, embed = self.create_post(message, stars)
+
+        await ctx.send(content, embed=embed)
+
     async def on_raw_reaction_add(self, payload):
         await self.reaction_action('star', payload)
 
