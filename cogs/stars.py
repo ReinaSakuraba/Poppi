@@ -101,6 +101,34 @@ class Stars:
         content, embed = self.create_post(message, record['stars'])
         await ctx.send(content, embed=embed)
 
+    @starboard.command(name='who')
+    async def starboard_who(self, ctx, message_id: int):
+        query = """
+                SELECT ARRAY(
+                    SELECT starrers.author_id
+                    FROM starboard_entries
+                    JOIN starrers
+                    ON starboard_entries.message_id=starrers.message_id
+                    WHERE starboard_entries.message_id=$1
+                );
+                """
+        member_ids = await ctx.pool.fetchval(query, message_id)
+        if member_ids is None:
+            return await ctx.send('This message has not been starred.')
+
+        members = list(map(str, filter(None, map(ctx.guild.get_member, member_ids))))
+
+        base = utils.plural('star', len(member_ids))
+        if len(member_ids) > len(members):
+            base += f' ({len(member_ids) - len(members)} left server)'
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=members, per_page=20)
+            paginator.embed.title = base
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
+
     @starboard.group(name='stats', invoke_without_command=True)
     async def starboard_stats(self, ctx, *, member: discord.Member = None):
         member = member or ctx.author
