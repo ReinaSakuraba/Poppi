@@ -135,6 +135,26 @@ class Stars:
         embed.add_field(name='Stars Recieved', value=stars_recieved)
         embed.add_field(name='Stars Given', value=stars_given)
 
+        query = """
+                SELECT
+                    starboard_entries.message_id,
+                    COUNT(*) AS stars
+                FROM starboard_entries
+                JOIN starrers
+                ON starboard_entries.message_id=starrers.message_id
+                WHERE guild_id=$1
+                AND starboard_entries.author_id=$2
+                GROUP BY starboard_entries.message_id
+                ORDER BY stars DESC
+                LIMIT 3;
+                """
+        records = await ctx.pool.fetch(query, ctx.guild.id, member.id)
+
+        value = '\n'.join(f'{index}: {message_id} ({count} stars)'
+                          for (index, (message_id, count)) in enumerate(records, 1))
+
+        embed.add_field(name='Top Starred Posts', value=value, inline=False)
+
         await ctx.send(embed=embed)
 
     @starboard_stats.command(name='server')
@@ -197,6 +217,25 @@ class Stars:
                           for (index, (author_id, count)) in enumerate(records, 1))
 
         embed.add_field(name='Top Star Givers', value=value, inline=False)
+
+        query = """
+                SELECT
+                    starboard_entries.message_id,
+                    COUNT(*) AS stars
+                FROM starboard_entries
+                JOIN starrers
+                ON starboard_entries.message_id=starrers.message_id
+                WHERE guild_id=$1
+                GROUP BY starboard_entries.message_id
+                ORDER BY stars DESC
+                LIMIT 3;
+                """
+        records = await ctx.pool.fetch(query, ctx.guild.id)
+
+        value = '\n'.join(f'{index}: {message_id} ({count} stars)'
+                          for (index, (message_id, count)) in enumerate(records, 1))
+
+        embed.add_field(name='Top Starred Posts', value=value, inline=False)
 
         await ctx.send(embed=embed)
 
