@@ -5,7 +5,7 @@ import utils
 
 
 class Stars:
-    @commands.command()
+    @utils.group(invoke_without_command=True)
     @utils.mod_or_permissions()
     async def starboard(self, ctx, *, name='starboard'):
         query = "SELECT * FROM starboards WHERE guild_id=$1;"
@@ -48,6 +48,24 @@ class Stars:
         await ctx.pool.execute(query, ctx.guild.id, channel.id)
 
         await ctx.send(f'Starboard created at {channel.mention}')
+
+    @starboard.command(name='limit')
+    @utils.mod_or_permissions()
+    async def starboard_limit(self, ctx, stars: int):
+        stars = min(max(stars, 1), 25)
+
+        query = """
+                UPDATE starboards
+                SET threshold=$2
+                WHERE guild_id=$1
+                RETURNING 1;
+                """
+        result = await ctx.pool.fetchval(query, ctx.guild.id, stars)
+
+        if result is None:
+            return await ctx.send('This server does not have a starboard.')
+
+        await ctx.send(f'Messages now require {utils.plural("star", stars)} to show up in the starboard.')
 
 
 def setup(bot):
