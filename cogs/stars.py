@@ -475,16 +475,15 @@ class Stars:
         image = None
         attachments = []
 
-        if message.embeds:
-            data = message.embeds[0]
-            if data.type == 'image':
-                image = data.url
-
         for attachment in message.attachments:
             if image is None and attachment.url.lower().endswith(('png', 'jpeg', 'jpg', 'gif', 'webp')):
                 image = attachment.url
             else:
                 attachments.append(f'[{attachment.filename}]({attachment.url})')
+
+        for e in message.embeds:
+            if e.type == 'image' and image is None:
+                image = data.url
 
         if image:
             embed.set_image(url=image)
