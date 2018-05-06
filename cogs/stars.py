@@ -77,6 +77,9 @@ class Stars:
     async def on_raw_reaction_add(self, payload):
         await self.reaction_action('star', payload)
 
+    async def on_raw_reaction_remove(self, payload):
+        await self.reaction_action('unstar', payload)
+
     async def reaction_action(self, event, payload):
         if str(payload.emoji) != '\N{WHITE MEDIUM STAR}':
             return
@@ -159,7 +162,62 @@ class Stars:
                 await self.bot.pool.execute(query, new_msg.id, message.id)
             else:
                 new_msg = await star_channel.get_message(bot_message_id)
-                await new_msg.edit(content, embed=embed)
+                await new_msg.edit(content=content, embed=embed)
+
+    async def unstar_message(self, channel, message_id, user_id):
+        async with self.lock:
+            query = "SELECT * FROM starboards WHERE guild_id=$1;"
+            starboard = await self.bot.pool.fetchrow(query, channel.guild.id)
+
+            if starboard is None:
+                return
+
+            star_channel = channel.guild.get_channel(starboard['channel_id'])
+
+            if star_channel is None:
+                return
+
+            if channel.id == star_channel.id:
+                return # Unstar the original message here
+
+            query = """
+                    DELETE FROM starrers
+                    WHERE message_id=$1
+                    AND author_id=$2
+                    RETURNING 1;
+                    """
+            result = await self.bot.pool.fetchval(query, message_id, user_id)
+            if result is None:
+                return
+
+            query = "SELECT COUNT(*) FROM starrers WHERE message_id=$1;"
+            stars = await self.bot.pool.fetchval(query, message_id)
+
+            query = "SELECT bot_message_id FROM starboard_entries WHERE message_id=$1;"
+            bot_message_id = await self.bot.pool.fetchval(query, message_id)
+
+            if stars == 0:
+                query = "DELETE FROM starboard_entries WHERE message_id=$1;"
+                await self.bot.pool.execute(query, message_id)
+
+            if bot_message_id is None:
+                return
+
+            bot_message = await star_channel.get_message(bot_message_id)
+            if bot_message is None:
+                return
+
+            if stars < starboard['threshold']:
+                query = "UPDATE starboard_entries SET bot_message_id=NULL WHERE message_id=$1;"
+                await self.bot.pool.execute(query, message_id)
+                await bot_message.delete()
+            else:
+                msg = await channel.get_message(message_id)
+                if msg is None:
+                    return
+
+                content, embed = self.create_post(msg, stars)
+                await bot_message.edit(content=content, embed=embed)
 
     def star_emoji(self, stars):
         if 5 >= stars >= 0:

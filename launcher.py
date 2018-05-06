@@ -86,12 +86,12 @@ async def create_db(pool):
                 bot_message_id BIGINT,
                 channel_id BIGINT NOT NULL,
                 author_id BIGINT NOT NULL,
-                guild_id BIGINT NOT NULL REFERENCES starboards(guild_id)
+                guild_id BIGINT NOT NULL REFERENCES starboards(guild_id) ON DELETE CASCADE
             );
 
             CREATE TABLE starrers (
                 author_id BIGINT,
-                message_id BIGINT REFERENCES starboard_entries(message_id),
+                message_id BIGINT REFERENCES starboard_entries(message_id) ON DELETE CASCADE,
                 PRIMARY KEY (author_id, message_id)
             );
             """
