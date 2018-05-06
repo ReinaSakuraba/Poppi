@@ -74,6 +74,42 @@ class Stars:
 
         await ctx.send(f'Messages now require {utils.plural("star", stars)} to show up in the starboard.')
 
+    @starboard.command(name='stats')
+    async def starboard_stats(self, ctx, *, member: discord.Member = None):
+        member = member or ctx.author
+
+        embed = discord.Embed(color=discord.Color.gold())
+        embed.set_author(name=member, icon_url=member.avatar_url_as(format='png'))
+
+        query = "SELECT COUNT(*) FROM starboard_entries WHERE guild_id=$1 AND author_id=$2;"
+        messages_starred = await ctx.pool.fetchval(query, ctx.guild.id, member.id)
+
+        query = """
+                SELECT COUNT(*)
+                FROM starboard_entries
+                JOIN starrers
+                ON starboard_entries.message_id=starrers.message_id
+                WHERE guild_id=$1
+                AND starboard_entries.author_id=$2
+                """
+        stars_recieved = await ctx.pool.fetchval(query, ctx.guild.id, member.id)
+
+        query = """
+                SELECT COUNT(*)
+                FROM starboard_entries
+                JOIN starrers
+                ON starboard_entries.message_id=starrers.message_id
+                WHERE guild_id=$1
+                AND starrers.author_id=$2
+                """
+        stars_given = await ctx.pool.fetchval(query, ctx.guild.id, member.id)
+
+        embed.add_field(name='Messages Starred', value=messages_starred)
+        embed.add_field(name='Stars Recieved', value=stars_recieved)
+        embed.add_field(name='Stars Given', value=stars_given)
+
+        await ctx.send(embed=embed)
+
     async def on_raw_reaction_add(self, payload):
         await self.reaction_action('star', payload)
 
