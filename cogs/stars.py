@@ -74,6 +74,33 @@ class Stars:
 
         await ctx.send(f'Messages now require {utils.plural("star", stars)} to show up in the starboard.')
 
+    @starboard.command(name='show')
+    async def starboard_show(self, ctx, message_id: int):
+        query = """
+                SELECT
+                    channel_id,
+                    starboard_entries.message_id,
+                    COUNT(*) OVER (PARTITION BY starrers.message_id) AS stars
+                FROM starboard_entries
+                JOIN starrers
+                ON starboard_entries.message_id=starrers.message_id
+                WHERE starboard_entries.message_id=$1;
+                """
+        record = await ctx.pool.fetchrow(query, message_id)
+        if record is None:
+            return await ctx.send('This message has not been starred.')
+
+        channel = ctx.guild.get_channel(record['channel_id'])
+        if channel is None:
+            return await ctx.send('Message\'s channel was deleted.')
+
+        message = await channel.get_message(message_id)
+        if message is None:
+            return await ctx.send('Original message was deleted.')
+
+        content, embed = self.create_post(message, record['stars'])
+        await ctx.send(content, embed=embed)
+
     @starboard.group(name='stats', invoke_without_command=True)
     async def starboard_stats(self, ctx, *, member: discord.Member = None):
         member = member or ctx.author
