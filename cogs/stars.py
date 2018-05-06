@@ -376,16 +376,16 @@ class Stars:
         emoji = self.star_emoji(stars)
 
         if stars > 1:
-            content = f'{emoji} **{stars}** {message.channel.mention}'
+            content = f'{emoji} **{stars}** {message.channel.mention} ID: {message.id}'
         else:
-            content = f'{emoji} {message.channel.mention}'
+            content = f'{emoji} {message.channel.mention} ID: {message.id}'
 
         embed = discord.Embed()
         embed.description = message.content
         embed.timestamp = message.created_at
         embed.color = self.star_gradient_colour(stars)
 
-        embed.set_author(name=message.author, icon_url=message.author.avatar_url_as(format='png'))
+        embed.set_author(name=message.author.display_name, icon_url=message.author.avatar_url_as(format='png'))
 
         image = None
         attachments = []
