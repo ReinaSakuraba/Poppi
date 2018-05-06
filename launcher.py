@@ -83,7 +83,7 @@ async def create_db(pool):
 
             CREATE TABLE starboard_entries (
                 message_id BIGINT PRIMARY KEY,
-                bot_message_id BIGINT NOT NULL,
+                bot_message_id BIGINT,
                 channel_id BIGINT NOT NULL,
                 author_id BIGINT NOT NULL,
                 guild_id BIGINT NOT NULL REFERENCES starboards(guild_id)
