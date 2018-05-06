@@ -203,8 +203,13 @@ class Stars:
     @starboard.command(name='random')
     async def starboard_random(self, ctx):
         query = """
-                SELECT message_id, channel_id
+                SELECT
+                    channel_id,
+                    starboard_entries.message_id,
+                    COUNT(*) OVER (PARTITION BY starrers.message_id) AS stars
                 FROM starboard_entries
+                JOIN starrers
+                ON starboard_entries.message_id=starrers.message_id
                 WHERE guild_id=$1
                 AND bot_message_id IS NOT NULL
                 ORDER BY RANDOM()
@@ -215,7 +220,7 @@ class Stars:
         if record is None:
             return await ctx.send('Could not find anything.')
 
-        message_id, channel_id = record
+        channel_id, message_id, stars = record
 
         channel = ctx.guild.get_channel(channel_id)
 
@@ -226,9 +231,6 @@ class Stars:
 
         if message is None:
             return await ctx.send('Original message was deleted. Please retry.')
-
-        query = "SELECT COUNT(*) FROM starrers WHERE message_id=$1;"
-        stars = await ctx.pool.fetchval(query, message_id)
 
         content, embed = self.create_post(message, stars)
 
