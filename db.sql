@@ -392,10 +392,10 @@ Ultraslash	Jin	Nodachi	Physical	300/340/380/420/460/500	2	One Target	8/8/7/7/6/5
 Skyward Slash	Jin	Nodachi	Ether	600/680/760/840/920/1000	1	Ahead	11/11/10/10/9/8	Break		0/440/1980/4400/11000	AOE / Break	14	10
 Empty Moment	Jin	Nodachi	Physical	200/240/280/320/360/400	8	All	14/14/13/13/12/11	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/360/1620/3600/9000	AOE / Pierce	14	10
 Stunned Swallow	Jin	Nodachi	Ether	0/0/0/0/0/0	1	One Target	11/11/10/10/9/8	None	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/480/2160/4800/12000	Evasion / Counter	8	10
-Hammer Bash	Malos	Sword Tonda	Physical	450/510/570/630/690/750	1	One Target	11/11/10/10/9/8	Topple		0/480/2160/4800/12000	Topple	8	22
-Sword Strike	Malos	Sword Tonda	Physical	300/360/420/480/540/600	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/440/1980/4400/11000	Front attack↑	8	22
-Spiral Savate	Malos	Sword Tonda	Physical	240/290/340/390/440/480	1	One Target	14/14/13/13/12/11	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/380/1730/3840/9600	High HP↑	8	22
-Chakra Burst	Malos	Sword Tonda	Ether	180/220/260/300/340/360	1	All	11/11/10/10/9/8	Knockback		0/360/1620/3600/9000	AOE / Knockback	8	25
+Hammer Bash	Malos	Sword Tonfa	Physical	450/510/570/630/690/750	1	One Target	11/11/10/10/9/8	Topple		0/480/2160/4800/12000	Topple	8	22
+Sword Strike	Malos	Sword Tonfa	Physical	300/360/420/480/540/600	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/440/1980/4400/11000	Front attack↑	8	22
+Spiral Savate	Malos	Sword Tonfa	Physical	240/290/340/390/440/480	1	One Target	14/14/13/13/12/11	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/380/1730/3840/9600	High HP↑	8	22
+Chakra Burst	Malos	Sword Tonfa	Ether	180/220/260/300/340/360	1	All	11/11/10/10/9/8	Knockback		0/360/1620/3600/9000	AOE / Knockback	8	25
 Revolt Smash	Rex	Calamity Scythe	Physical	360/410/460/510/560/600	1	One Target	11/11/10/10/9/8	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/790/3560/7920/19800	Heal party on attack	8	14
 Screw Reaper	Rex	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle	8/8/7/7/6/5	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/580/2590/5760/14400	AOE / Aggro down	8	0
 Rising Crescent	Rex	Calamity Scythe	Physical	220/260/300/340/380/440	1	One Target	13/13/12/12/11/10	Launch		0/650/2920/6480/16200	Launch	8	10
