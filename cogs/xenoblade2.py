@@ -118,6 +118,60 @@ class Xenoblade2:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing skill name.')
 
+    @utils.group(invoke_without_command=True)
+    async def xc2weapon(self, ctx, *, name: str.lower):
+        """Gives information for a Xenoblade Chronicles 2 weapon."""
+
+        query = """
+                SELECT
+                    name,
+                    type,
+                    rank,
+                    damage,
+                    '±' || stability,
+                    crit_rate || '%',
+                    block_rate || '%',
+                    effect
+                FROM xeno2.weapons
+                WHERE LOWER(name)=$1;
+                """
+
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'skills', name)
+
+        name, weapon_type, rank, damage, stability, crit_rate, block_rate, effect = record
+
+        embed = discord.Embed(title=name)
+        embed.add_field(name='Weapon Type', value=weapon_type)
+        embed.add_field(name='Auto-Attack', value=damage)
+        embed.add_field(name='Stability', value=stability)
+        embed.add_field(name='Crit Rate', value=crit_rate)
+        embed.add_field(name='Block Rate', value=block_rate)
+        if effect:
+            embed.add_field(name='Effect', value=effect, inline=False)
+
+        await ctx.send(embed=embed)
+
+    @xc2weapon.command(name='all')
+    async def xc2weapon_all(self, ctx):
+        """Lists all Xenoblade Chronicles 2 weapons."""
+
+        await self.all_entries(ctx, 'weapons')
+
+    @xc2weapon.command(name='search')
+    async def xc2weapon_search(self, ctx, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 weapon."""
+
+        await self.search_entries(ctx, 'weapons', name)
+
+    @xc2weapon.error
+    @xc2weapon_search.error
+    async def xc2weapon_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing weapon name.')
+
     async def show_possibilities(self, ctx, table_name, name):
         query = f"""
                 SELECT
