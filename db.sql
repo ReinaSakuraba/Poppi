@@ -61,6 +61,44 @@ CREATE TABLE xeno2.arts (
 ALTER TABLE xeno2.arts OWNER TO poppi;
 
 --
+-- Name: chip_locations; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.chip_locations (
+    chip text NOT NULL,
+    location text NOT NULL
+);
+
+
+ALTER TABLE xeno2.chip_locations OWNER TO poppi;
+
+--
+-- Name: chip_weapons; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.chip_weapons (
+    chip text NOT NULL,
+    weapon text NOT NULL
+);
+
+
+ALTER TABLE xeno2.chip_weapons OWNER TO poppi;
+
+--
+-- Name: chips; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.chips (
+    name text NOT NULL,
+    rank smallint NOT NULL,
+    sell_price smallint NOT NULL,
+    rarity text NOT NULL
+);
+
+
+ALTER TABLE xeno2.chips OWNER TO poppi;
+
+--
 -- Name: skills; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -541,6 +579,1116 @@ Menacing Lariat	Zeke	Sword Tonfa	Physical	180/220/260/300/340/360	1	One Target	1
 Hurricane Dropkick	Zeke	Sword Tonfa	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt by [50/50/60/60/75/75]% when HP is 30% or less.	0/790/3560/7920/19800	Blowdown / Low HP↑	8	22
 Shuddering Tonfa	Zeke	Sword Tonfa	Ether	110/140/170/200/230/240	1	Circle	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	AOE / Aggroed↑	8	22
 Wind Dragon Chop	Zeke	Sword Tonfa	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/580/2590/5760/14400	AOE / Aggro up	8	22
+\.
+
+
+--
+-- Data for Name: chip_locations; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.chip_locations (chip, location) FROM stdin;
+Lead Chip	Gormott Province
+Tin Chip	Gormott Province
+Bronze Chip	Kingdom of Uraya
+Silver Chip	Gormott Province
+Silver Chip	Temperantia
+Iron Chip	Argentum Trade Guild
+Cobalt Chip	Argentum Trade Guild
+Steel Chip	Argentum Trade Guild
+Gold Chip	Kingdom of Uraya
+Gold Chip	Empire of Mor Ardain
+Fang Chip	Gormott Province
+Wing Chip	Gormott Province
+Scale Chip	Gormott Province
+Horn Chip	Gormott Province
+Wood Chip	Leftherian Archipelago
+Flower Chip	Leftherian Archipelago
+Glass Chip	Leftherian Archipelago
+Forest Chip	Gormott Province
+Turquoise Chip	Kingdom of Uraya
+Spinel Chip	Kingdom of Uraya
+Amethyst Chip	Kingdom of Uraya
+Fluorite Chip	Kingdom of Uraya
+Fluorite Chip	Empire of Mor Ardain
+Garnet Chip	Spirit Crucible Elpys
+Aquamarine Chip	Spirit Crucible Elpys
+Opal Chip	Spirit Crucible Elpys
+Zircon Chip	Kingdom of Uraya
+Coil Chip	Empire of Mor Ardain
+Chain Chip	Empire of Mor Ardain
+Magnet Chip	Empire of Mor Ardain
+Shaft Chip	Gormott Province
+Shaft Chip	Empire of Mor Ardain
+Battery Chip	Kingdom of Tantal
+Engine Chip	Kingdom of Tantal
+Motor Chip	Kingdom of Tantal
+Booster Chip	Empire of Mor Ardain
+Tri-Chip	Gormott Province
+Rhombus Chip	Gormott Province
+Pentagon Chip	Gormott Province
+Hexagon Chip	Gormott Province
+Sphere Chip	Indoline Praetorium
+Cube Chip	Indoline Praetorium
+Polygon Chip	Temperantia
+Spiral Chip	Kingdom of Tantal
+Lodranite Chip	Kingdom of Tantal
+Brachinite Chip	Kingdom of Tantal
+Ureilite Chip	Kingdom of Tantal
+Winonaite Chip	Kingdom of Uraya
+Winonaite Chip	Temperantia
+Nakhlite Chip	Land of Morytha
+Howardite Chip	Land of Morytha
+Aubrite Chip	Land of Morytha
+Angrite Chip	Kingdom of Uraya
+Angrite Chip	Temperantia
+Dark Matter Chip	World Tree
+Axion Chip	World Tree
+Mirror Matter Chip	World Tree
+Shining Star Chip	Temperantia
+Moon Matter Chip	Kingdom of Tantal
+Sunlight Chip	World Tree
+Photon Chip	World Tree
+Positron Chip	World Tree
+Hadron Chip	World Tree
+Dilaton Chip	Cliffs of Morytha
+Preon Chip	Empire of Mor Ardain
+Tachyon Chip	Temperantia
+\.
+
+
+--
+-- Data for Name: chip_weapons; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.chip_weapons (chip, weapon) FROM stdin;
+Lead Chip	Primitive Sword
+Lead Chip	Primitive Scimitar
+Lead Chip	Primitive Rings
+Lead Chip	Primitive Shield
+Lead Chip	Primitive Arms
+Lead Chip	Primitive Saber
+Lead Chip	Primitive Whips
+Lead Chip	Primitive Edge
+Lead Chip	Primitive Scythes
+Lead Chip	Primitive Axe
+Lead Chip	Primitive Lance
+Lead Chip	Primitive Cannon
+Lead Chip	Primitive Hammer
+Lead Chip	Nameless Katana
+Lead Chip	Primitive Ball
+Lead Chip	Primitive Knuckles
+Tin Chip	Plain Sword
+Tin Chip	Plain Scimitar
+Tin Chip	Plain Rings
+Tin Chip	Plain Shield
+Tin Chip	Plain Arms
+Tin Chip	Plain Saber
+Tin Chip	Plain Whips
+Tin Chip	Plain Edge
+Tin Chip	Plain Scythes
+Tin Chip	Plain Axe
+Tin Chip	Plain Lance
+Tin Chip	Plain Cannon
+Tin Chip	Plain Hammer
+Tin Chip	Eastern Tachi
+Tin Chip	Plain Ball
+Tin Chip	Plain Knuckles
+Bronze Chip	Flatform Sword
+Bronze Chip	Flatform Scimitar
+Bronze Chip	Flatform Rings
+Bronze Chip	Flatform Shield
+Bronze Chip	Flatform Arms
+Bronze Chip	Flatform Saber
+Bronze Chip	Flatform Whips
+Bronze Chip	Flatform Edge
+Bronze Chip	Flatform Scythes
+Bronze Chip	Flatform Axe
+Bronze Chip	Flatform Lance
+Bronze Chip	Flatform Cannon
+Bronze Chip	Flatform Hammer
+Bronze Chip	Vagrant Tachi
+Bronze Chip	Flatform Ball
+Bronze Chip	Flatform Knuckles
+Silver Chip	Ornate Sword
+Silver Chip	Ornate Scimitar
+Silver Chip	Rings of Plenty
+Silver Chip	Shield of Plenty
+Silver Chip	Ornate Arms
+Silver Chip	Ornate Saber
+Silver Chip	Whips of Plenty
+Silver Chip	Edge of Plenty
+Silver Chip	Sickles of Plenty
+Silver Chip	Hatchet of Plenty
+Silver Chip	Ornate Lance
+Silver Chip	Ornate Cannon
+Silver Chip	Ornate Hammer
+Silver Chip	Katana of Plenty
+Silver Chip	Ornate Ball
+Silver Chip	Ornate Knuckles
+Iron Chip	Breaker Sword
+Iron Chip	Breaker Scimitar
+Iron Chip	Breaker Rings
+Iron Chip	Breaker Shield
+Iron Chip	Breaker Arms
+Iron Chip	Breaker Saber
+Iron Chip	Breaker Whips
+Iron Chip	Breaker Edge
+Iron Chip	Breaker Scythes
+Iron Chip	Breaker Axe
+Iron Chip	Breaker Lance
+Iron Chip	Breaker Cannon
+Iron Chip	Breaker Hammer
+Iron Chip	Breaker Tachi
+Iron Chip	Breaker Ball
+Iron Chip	Breaker Knuckles
+Cobalt Chip	Duelist's Sword
+Cobalt Chip	Duelist's Scimitar
+Cobalt Chip	Duelist's Rings
+Cobalt Chip	Duelist's Shield
+Cobalt Chip	Duelist's Arms
+Cobalt Chip	Duelist's Saber
+Cobalt Chip	Duelist's Whips
+Cobalt Chip	Duelist's Edge
+Cobalt Chip	Duelist's Scythes
+Cobalt Chip	Duelist's Axe
+Cobalt Chip	Duelist's Lance
+Cobalt Chip	Duelist's Cannon
+Cobalt Chip	Duelist's Hammer
+Cobalt Chip	Duelist's Tachi
+Cobalt Chip	Duelist's Ball
+Cobalt Chip	Duelist's Knuckles
+Steel Chip	Battle Sword
+Steel Chip	Battle Scimitar
+Steel Chip	Battle Rings
+Steel Chip	Battle Shield
+Steel Chip	Battle Arms
+Steel Chip	Battle Saber
+Steel Chip	Battle Whips
+Steel Chip	Battle Edge
+Steel Chip	Battle Scythes
+Steel Chip	Battle Axe
+Steel Chip	Battle Lance
+Steel Chip	Battle Cannon
+Steel Chip	Battle Hammer
+Steel Chip	War Tachi
+Steel Chip	Battle Ball
+Steel Chip	Battle Knuckles
+Gold Chip	Snare Sword
+Gold Chip	Snare Scimitar
+Gold Chip	Plunder Rings
+Gold Chip	Plunder Shield
+Gold Chip	Snare Arms
+Gold Chip	Snare Saber
+Gold Chip	Plunder Whips
+Gold Chip	Plunder Edge
+Gold Chip	Plunder Sickles
+Gold Chip	Plunder Hatchet
+Gold Chip	Snare Lance
+Gold Chip	Snare Cannon
+Gold Chip	Snare Hammer
+Gold Chip	Plunder Katana
+Gold Chip	Snare Ball
+Gold Chip	Snare Knuckles
+Fang Chip	Sword of the Fox
+Fang Chip	Scimitar of Shores
+Fang Chip	Wild Rings
+Fang Chip	Bitey Bitey Shield
+Fang Chip	Studded Arms
+Fang Chip	Deadly Saber
+Fang Chip	Whips of the Sparrow
+Fang Chip	Flighty Edge
+Fang Chip	Pixie Scythes
+Fang Chip	Large Axe
+Fang Chip	Spike Lance
+Fang Chip	Osseous Cannon
+Fang Chip	Horn Hammer
+Fang Chip	Wildflower Tachi
+Fang Chip	Wooden Ball
+Fang Chip	Knuckles of the Crow
+Wing Chip	Sword of the Dingo
+Wing Chip	Scimitar of Waves
+Wing Chip	Howling Rings
+Wing Chip	Gnashy Gnashy Shield
+Wing Chip	Rash Arms
+Wing Chip	Razorgraze Saber
+Wing Chip	Whips of the Robin
+Wing Chip	Feathered Edge
+Wing Chip	Sylph's Scythes
+Wing Chip	Grand Axe
+Wing Chip	Needle Lance
+Wing Chip	Roaring Cannon
+Wing Chip	Beastly Hammer
+Wing Chip	Meadow Katana
+Wing Chip	Maple Ball
+Wing Chip	Peak Knuckles
+Scale Chip	Sword of the Lycaon
+Scale Chip	Scimitar of Calm
+Scale Chip	Shell Rings
+Scale Chip	Nibbly Nibbly Shield
+Scale Chip	Battering Arms
+Scale Chip	Whirlchip Saber
+Scale Chip	Whips of the Lark
+Scale Chip	Winged Edge
+Scale Chip	Faerie Scythes
+Scale Chip	Huge Axe
+Scale Chip	Sharp Lance
+Scale Chip	Loud Cannon
+Scale Chip	Raider's Hammer
+Scale Chip	Herbalist's Katana
+Scale Chip	Birch Ball
+Scale Chip	Crested Knuckles
+Horn Chip	Sword of the Jackal
+Horn Chip	Scimitar of Affection
+Horn Chip	Rings of the Earth
+Horn Chip	Pokey Pokey Shield
+Horn Chip	Pounding Arms
+Horn Chip	Songslice Saber
+Horn Chip	Whips of the Swift
+Horn Chip	Triumph Edge
+Horn Chip	Titania's Scythes
+Horn Chip	Enormous Axe
+Horn Chip	Stinger Lance
+Horn Chip	Skull Cannon
+Horn Chip	Crushing Hammer
+Horn Chip	Katana of Springtime
+Horn Chip	Pine Ball
+Horn Chip	Titan Knuckles
+Wood Chip	Sword of the Jaguar
+Wood Chip	Scimitar of Purity
+Wood Chip	Ripper Rings
+Wood Chip	Blasty Blasty Shield
+Wood Chip	Crushing Arms
+Wood Chip	Chopcuff Saber
+Wood Chip	Whips of the Crane
+Wood Chip	Avian Edge
+Wood Chip	Spriggan's Scythes
+Wood Chip	Gargantuan Axe
+Wood Chip	Lance of Harm
+Wood Chip	Gourmand's Cannon
+Wood Chip	Druid's Hammer
+Wood Chip	Shadeleaf Tachi
+Wood Chip	Linden Ball
+Wood Chip	Raider's Knuckles
+Flower Chip	Sword of the Lynx
+Flower Chip	Scimitar of Splendor
+Flower Chip	Dicer Rings
+Flower Chip	Cheery Cheery Shield
+Flower Chip	Thumping Arms
+Flower Chip	Swishslash Saber
+Flower Chip	Whips of the Ibis
+Flower Chip	Edge of the Raptor
+Flower Chip	Banshee Scythes
+Flower Chip	Violent Axe
+Flower Chip	Lance of Torment
+Flower Chip	Monstrous Cannon
+Flower Chip	Forest Hammer
+Flower Chip	Budding Katana
+Flower Chip	Camellia Ball
+Flower Chip	Jawbone Knuckles
+Glass Chip	Sword of the Puma
+Glass Chip	Scimitar of Integrity
+Glass Chip	Slicer Rings
+Glass Chip	Rippy Rippy Shield
+Glass Chip	Pummeling Arms
+Glass Chip	Twirlslip Saber
+Glass Chip	Whips of the Shrike
+Glass Chip	Edge of the Vulture
+Glass Chip	Ainsel's Scythes
+Glass Chip	Berserker's Axe
+Glass Chip	Plague Lance
+Glass Chip	Brutal Cannon
+Glass Chip	Highland Hammer
+Glass Chip	Greenbough Tachi
+Glass Chip	Magnolia Ball
+Glass Chip	Bear Knuckles
+Forest Chip	Insect Slayer
+Forest Chip	Scimitar of Grace
+Forest Chip	Slasher Rings
+Forest Chip	Carnivore's Shield
+Forest Chip	Strongjaw Gauntlets
+Forest Chip	Insect Slicer
+Forest Chip	The Cormorants
+Forest Chip	Predator's Edge
+Forest Chip	Elf King's Scythes
+Forest Chip	Axe of Wrath
+Forest Chip	Dread Lance
+Forest Chip	Glutton's Cannon
+Forest Chip	Gaia Hammer
+Forest Chip	Aesthete's Katana
+Forest Chip	Ivy Ball
+Forest Chip	Chimaera Knuckles
+Turquoise Chip	Knight's Sword
+Turquoise Chip	Knight's Scimitar
+Turquoise Chip	Knight's Rings
+Turquoise Chip	Knight's Shield
+Turquoise Chip	Knight's Arms
+Turquoise Chip	Knight's Saber
+Turquoise Chip	Knight's Whips
+Turquoise Chip	Knight's Edge
+Turquoise Chip	Knight's Scythes
+Turquoise Chip	Knight's Axe
+Turquoise Chip	Knight's Lance
+Turquoise Chip	Knight's Cannon
+Turquoise Chip	Knight's Hammer
+Turquoise Chip	Warrior's Tachi
+Turquoise Chip	Knight's Ball
+Turquoise Chip	Knight's Knuckles
+Spinel Chip	Guardian's Sword
+Spinel Chip	Guardian's Scimitar
+Spinel Chip	Guardian's Rings
+Spinel Chip	Guardian's Shield
+Spinel Chip	Guardian's Arms
+Spinel Chip	Guardian's Saber
+Spinel Chip	Guardian's Whips
+Spinel Chip	Guardian's Edge
+Spinel Chip	Guardian's Scythes
+Spinel Chip	Guardian's Axe
+Spinel Chip	Guardian's Lance
+Spinel Chip	Guardian's Cannon
+Spinel Chip	Guardian's Hammer
+Spinel Chip	Yojimbo
+Spinel Chip	Guardian's Ball
+Spinel Chip	Guardian's Knuckles
+Amethyst Chip	Cavalry Sword
+Amethyst Chip	Scimitar of Prayer
+Amethyst Chip	Rings of the Maiden
+Amethyst Chip	Daring Shield
+Amethyst Chip	Temptation Gauntlets
+Amethyst Chip	Saint's Saber
+Amethyst Chip	Whips of the Sun
+Amethyst Chip	Orion's Rise
+Amethyst Chip	Augur's Scythes
+Amethyst Chip	Hatchet of the Round
+Amethyst Chip	Cleric's Lance
+Amethyst Chip	Sniper Cannon
+Amethyst Chip	Concert Hammer
+Amethyst Chip	Fencer's Tachi
+Amethyst Chip	Chancy Ball
+Amethyst Chip	Face Punchers
+Fluorite Chip	Valkyrie's Sword
+Fluorite Chip	Valkyrie's Scimitar
+Fluorite Chip	Valkyrie's Rings
+Fluorite Chip	Valkyrie's Shield
+Fluorite Chip	Valkyrie's Arms
+Fluorite Chip	Valkyrie's Saber
+Fluorite Chip	Valkyrie's Whips
+Fluorite Chip	Valkyrie's Edge
+Fluorite Chip	Valkyrie's Scythes
+Fluorite Chip	Valkyrie's Axe
+Fluorite Chip	Valkyrie's Lance
+Fluorite Chip	Valkyrie's Cannon
+Fluorite Chip	Valkyrie's Hammer
+Fluorite Chip	Flowing Tachi
+Fluorite Chip	Valkyrie's Ball
+Fluorite Chip	Valkyrie's Knuckles
+Garnet Chip	Paladin's Sword
+Garnet Chip	Paladin's Scimitar
+Garnet Chip	Paladin's Rings
+Garnet Chip	Paladin's Shield
+Garnet Chip	Paladin's Arms
+Garnet Chip	Paladin's Saber
+Garnet Chip	Paladin's Whips
+Garnet Chip	Paladin's Edge
+Garnet Chip	Paladin's Scythes
+Garnet Chip	Paladin's Axe
+Garnet Chip	Paladin's Lance
+Garnet Chip	Paladin's Cannon
+Garnet Chip	Paladin's Hammer
+Garnet Chip	Flagbearer's Tachi
+Garnet Chip	Paladin's Ball
+Garnet Chip	Paladin's Knuckles
+Aquamarine Chip	Holy Sword
+Aquamarine Chip	Holy Scimitar
+Aquamarine Chip	Holy Rings
+Aquamarine Chip	Holy Shield
+Aquamarine Chip	Holy Arms
+Aquamarine Chip	Holy Saber
+Aquamarine Chip	Holy Whips
+Aquamarine Chip	Holy Edge
+Aquamarine Chip	Holy Scythes
+Aquamarine Chip	Holy Axe
+Aquamarine Chip	Holy Lance
+Aquamarine Chip	Holy Cannon
+Aquamarine Chip	Holy Hammer
+Aquamarine Chip	Lifeline Katana
+Aquamarine Chip	Holy Ball
+Aquamarine Chip	Holy Knuckles
+Opal Chip	Sword of Valor
+Opal Chip	Scimitar of Valor
+Opal Chip	Rings of Valor
+Opal Chip	Shield of Valor
+Opal Chip	Arms of Valor
+Opal Chip	Saber of Valor
+Opal Chip	Whips of Valor
+Opal Chip	Edge of Valor
+Opal Chip	Scythes of Valor
+Opal Chip	Axe of Valor
+Opal Chip	Lance of Valor
+Opal Chip	Cannon of Valor
+Opal Chip	Hammer of Valor
+Opal Chip	Brave Katana
+Opal Chip	Ball of Valor
+Opal Chip	Knuckles of Valor
+Zircon Chip	Zephyr Sword
+Zircon Chip	Winged Scimitar
+Zircon Chip	Airslash Rings
+Zircon Chip	Birdivore Shield
+Zircon Chip	Hunter's Arms
+Zircon Chip	Regal Saber
+Zircon Chip	Soaring Swallows
+Zircon Chip	Arbiter's Brand
+Zircon Chip	Executioner's Sickles
+Zircon Chip	Axe of Order
+Zircon Chip	Lance of Longinus
+Zircon Chip	Buzzard Cannon
+Zircon Chip	The Maestro
+Zircon Chip	Clearglass Katana
+Zircon Chip	Homing Ball
+Zircon Chip	Kaiser Knuckles
+Coil Chip	Custom Sword
+Coil Chip	Custom Scimitar
+Coil Chip	Custom Rings
+Coil Chip	Custom Shield
+Coil Chip	Custom Arms
+Coil Chip	Custom Saber
+Coil Chip	Custom Whips
+Coil Chip	Custom Edge
+Coil Chip	Custom Scythes
+Coil Chip	Custom Axe
+Coil Chip	Custom Lance
+Coil Chip	Custom Cannon
+Coil Chip	Custom Hammer
+Coil Chip	Trick Katana
+Coil Chip	Custom Ball
+Coil Chip	Custom Knuckles
+Chain Chip	Clockwork Sword
+Chain Chip	Clockwork Scimitar
+Chain Chip	Clockwork Rings
+Chain Chip	Clockwork Shield
+Chain Chip	Clockwork Arms
+Chain Chip	Clockwork Saber
+Chain Chip	Clockwork Whips
+Chain Chip	Clockwork Edge
+Chain Chip	Clockwork Scythes
+Chain Chip	Clockwork Axe
+Chain Chip	Clockwork Lance
+Chain Chip	Clockwork Cannon
+Chain Chip	Clockwork Hammer
+Chain Chip	Blackiron Tachi
+Chain Chip	Clockwork Ball
+Chain Chip	Clockwork Knuckles
+Magnet Chip	Technical Sword
+Magnet Chip	Scimitar of the Owl
+Magnet Chip	Rings of Revival
+Magnet Chip	Loud Shield
+Magnet Chip	Turbojet Arms
+Magnet Chip	Ranger's Saber
+Magnet Chip	Muscle Whips
+Magnet Chip	Fearful Symmetry
+Magnet Chip	Tenacious Sickles
+Magnet Chip	General's Axe
+Magnet Chip	Charged Lance
+Magnet Chip	Darkseeker
+Magnet Chip	Sonic Hammer
+Magnet Chip	Eightfold Tachi
+Magnet Chip	Stealth Ball
+Magnet Chip	Brawler Knuckles
+Shaft Chip	Accelerator Sword
+Shaft Chip	Accelerator Scimitar
+Shaft Chip	Accelerator Rings
+Shaft Chip	Accelerator Shield
+Shaft Chip	Accelerator Arms
+Shaft Chip	Accelerator Saber
+Shaft Chip	Accelerator Whips
+Shaft Chip	Accelerator Edge
+Shaft Chip	Accelerator Scythes
+Shaft Chip	Accelerator Axe
+Shaft Chip	Accelerator Lance
+Shaft Chip	Accelerator Cannon
+Shaft Chip	Accelerator Hammer
+Shaft Chip	Armored Tachi
+Shaft Chip	Accelerator Ball
+Shaft Chip	Accelerator Knuckles
+Battery Chip	Turbine Sword
+Battery Chip	Turbine Scimitar
+Battery Chip	Turbine Rings
+Battery Chip	Turbine Shield
+Battery Chip	Turbine Arms
+Battery Chip	Turbine Saber
+Battery Chip	Turbine Whips
+Battery Chip	Turbine Edge
+Battery Chip	Turbine Scythes
+Battery Chip	Turbine Axe
+Battery Chip	Turbine Lance
+Battery Chip	Turbine Cannon
+Battery Chip	Turbine Hammer
+Battery Chip	Mechatronic Tachi
+Battery Chip	Turbine Ball
+Battery Chip	Turbine Knuckles
+Engine Chip	Ceramic Sword
+Engine Chip	Ceramic Scimitar
+Engine Chip	Ceramic Rings
+Engine Chip	Ceramic Shield
+Engine Chip	Ceramic Arms
+Engine Chip	Ceramic Saber
+Engine Chip	Ceramic Whips
+Engine Chip	Ceramic Edge
+Engine Chip	Ceramic Scythes
+Engine Chip	Ceramic Axe
+Engine Chip	Ceramic Lance
+Engine Chip	Ceramic Cannon
+Engine Chip	Ceramic Hammer
+Engine Chip	Steamdrive Tachi
+Engine Chip	Ceramic Ball
+Engine Chip	Ceramic Knuckles
+Motor Chip	Mechanized Sword
+Motor Chip	Mechanized Scimitar
+Motor Chip	Mechanized Rings
+Motor Chip	Mechanized Shield
+Motor Chip	Mechanized Arms
+Motor Chip	Mechanized Saber
+Motor Chip	Mechanized Whips
+Motor Chip	Mechanized Edge
+Motor Chip	Mechanized Scythes
+Motor Chip	Mechanized Axe
+Motor Chip	Mechanized Lance
+Motor Chip	Mechanized Cannon
+Motor Chip	Mechanized Hammer
+Motor Chip	Galvanic Katana
+Motor Chip	Mechanized Ball
+Motor Chip	Mechanized Knuckles
+Booster Chip	Machine Slayer
+Booster Chip	Machine Cleaver
+Booster Chip	Ferrous Rings
+Booster Chip	Supreme Destroyer
+Booster Chip	Machine Busters
+Booster Chip	Commando's Saber
+Booster Chip	Nitro Whips
+Booster Chip	The Ingot
+Booster Chip	Optimized Scythes
+Booster Chip	Admiral's Axe
+Booster Chip	Stalk, Mecha-Spear
+Booster Chip	Full Metal Cannon
+Booster Chip	The Flattener
+Booster Chip	Deus Ex Tachi
+Booster Chip	Advanced Ball
+Booster Chip	Thunderstrikers
+Tri-Chip	Ancient Sword
+Tri-Chip	Ancient Scimitar
+Tri-Chip	Ancient Rings
+Tri-Chip	Ancient Shield
+Tri-Chip	Ancient Arms
+Tri-Chip	Ancient Saber
+Tri-Chip	Ancient Whips
+Tri-Chip	Ancient Edge
+Tri-Chip	Ancient Scythes
+Tri-Chip	Ancient Axe
+Tri-Chip	Ancient Lance
+Tri-Chip	Ancient Cannon
+Tri-Chip	Ancient Hammer
+Tri-Chip	Antique Tachi
+Tri-Chip	Ancient Ball
+Tri-Chip	Ancient Knuckles
+Rhombus Chip	Elder Sword
+Rhombus Chip	Elder Scimitar
+Rhombus Chip	Elder Rings
+Rhombus Chip	Elder Shield
+Rhombus Chip	Elder Arms
+Rhombus Chip	Elder Saber
+Rhombus Chip	Elder Whips
+Rhombus Chip	Elder Edge
+Rhombus Chip	Elder Scythes
+Rhombus Chip	Elder Axe
+Rhombus Chip	Elder Lance
+Rhombus Chip	Elder Cannon
+Rhombus Chip	Elder Hammer
+Rhombus Chip	Eternal Tachi
+Rhombus Chip	Elder Ball
+Rhombus Chip	Elder Knuckles
+Pentagon Chip	Blessed Sword
+Pentagon Chip	Furtive Scimitar
+Pentagon Chip	Rage of the Oceans
+Pentagon Chip	Escutcheon of Athena
+Pentagon Chip	Gauntlets of Lament
+Pentagon Chip	Mystical Saber
+Pentagon Chip	Whips of the Chariot
+Pentagon Chip	Edge of the Mother
+Pentagon Chip	Emperor Scythes
+Pentagon Chip	Antique Greataxe
+Pentagon Chip	Ancestral Lance
+Pentagon Chip	Arcanum Cannon
+Pentagon Chip	Faultless
+Pentagon Chip	Mysterious Tachi
+Pentagon Chip	Spirit Ball
+Pentagon Chip	Mirage Knuckles
+Hexagon Chip	Legendary Sword
+Hexagon Chip	Legendary Scimitar
+Hexagon Chip	Legendary Rings
+Hexagon Chip	Legendary Shield
+Hexagon Chip	Legendary Arms
+Hexagon Chip	Legendary Saber
+Hexagon Chip	Legendary Whips
+Hexagon Chip	Legendary Edge
+Hexagon Chip	Legendary Scythes
+Hexagon Chip	Legendary Axe
+Hexagon Chip	Legendary Lance
+Hexagon Chip	Legendary Cannon
+Hexagon Chip	Legendary Hammer
+Hexagon Chip	Legendary Tachi
+Hexagon Chip	Legendary Ball
+Hexagon Chip	Legendary Knuckles
+Sphere Chip	Agarthan Sword
+Sphere Chip	Agarthan Scimitar
+Sphere Chip	Agarthan Rings
+Sphere Chip	Agarthan Shield
+Sphere Chip	Agarthan Arms
+Sphere Chip	Agarthan Saber
+Sphere Chip	Agarthan Whips
+Sphere Chip	Agarthan Edge
+Sphere Chip	Agarthan Scythes
+Sphere Chip	Agarthan Axe
+Sphere Chip	Agarthan Lance
+Sphere Chip	Agarthan Cannon
+Sphere Chip	Agarthan Hammer
+Sphere Chip	Tectonic Katana
+Sphere Chip	Agarthan Ball
+Sphere Chip	Agarthan Knuckles
+Cube Chip	Sword of El Dorado
+Cube Chip	Scimitar of El Dorado
+Cube Chip	Rings of El Dorado
+Cube Chip	Shield of El Dorado
+Cube Chip	Arms of El Dorado
+Cube Chip	Saber of El Dorado
+Cube Chip	Whips of El Dorado
+Cube Chip	Edge of El Dorado
+Cube Chip	Scythes of El Dorado
+Cube Chip	Axe of El Dorado
+Cube Chip	Lance of El Dorado
+Cube Chip	Cannon of El Dorado
+Cube Chip	Hammer of El Dorado
+Cube Chip	24-Carat Tachi
+Cube Chip	Ball of El Dorado
+Cube Chip	Knuckles of El Dorado
+Polygon Chip	Sword of Eden
+Polygon Chip	Scimitar of Eden
+Polygon Chip	Rings of Eden
+Polygon Chip	Shield of Eden
+Polygon Chip	Arms of Eden
+Polygon Chip	Saber of Eden
+Polygon Chip	Whips of Eden
+Polygon Chip	Edge of Eden
+Polygon Chip	Scythes of Eden
+Polygon Chip	Axe of Eden
+Polygon Chip	Lance of Eden
+Polygon Chip	Cannon of Eden
+Polygon Chip	Hammer of Eden
+Polygon Chip	Neverdull Tachi
+Polygon Chip	Ball of Eden
+Polygon Chip	Knuckles of Eden
+Spiral Chip	King of Sharks
+Spiral Chip	The Kraken
+Spiral Chip	Marine Slayers
+Spiral Chip	Maelstrom Plate
+Spiral Chip	Doom of Atlantis
+Spiral Chip	Rifled Saber
+Spiral Chip	Avalon
+Spiral Chip	Just Oceanus
+Spiral Chip	Amazon's Scythes
+Spiral Chip	Sealed Hatchet
+Spiral Chip	Empress' Lance
+Spiral Chip	Gordian Cannon
+Spiral Chip	Nautilus Hammer
+Spiral Chip	Illusive Tachi
+Spiral Chip	Jewel of Yore
+Spiral Chip	Fists of the Advent
+Lodranite Chip	Adamant Sword
+Lodranite Chip	Adamant Scimitar
+Lodranite Chip	Adamant Rings
+Lodranite Chip	Adamant Shield
+Lodranite Chip	Adamant Arms
+Lodranite Chip	Adamant Saber
+Lodranite Chip	Adamant Whips
+Lodranite Chip	Adamant Edge
+Lodranite Chip	Adamant Scythes
+Lodranite Chip	Adamant Axe
+Lodranite Chip	Adamant Lance
+Lodranite Chip	Adamant Cannon
+Lodranite Chip	Adamant Hammer
+Lodranite Chip	Tempered Katana
+Lodranite Chip	Adamant Ball
+Lodranite Chip	Adamant Knuckles
+Brachinite Chip	Wootz Sword
+Brachinite Chip	Wootz Scimitar
+Brachinite Chip	Wootz Rings
+Brachinite Chip	Wootz Shield
+Brachinite Chip	Wootz Arms
+Brachinite Chip	Wootz Saber
+Brachinite Chip	Wootz Whips
+Brachinite Chip	Wootz Edge
+Brachinite Chip	Wootz Scythes
+Brachinite Chip	Wootz Axe
+Brachinite Chip	Wootz Lance
+Brachinite Chip	Wootz Cannon
+Brachinite Chip	Wootz Hammer
+Brachinite Chip	Darksilver Tachi
+Brachinite Chip	Wootz Ball
+Brachinite Chip	Wootz Knuckles
+Ureilite Chip	Energy Edge
+Ureilite Chip	Assassin's Scimitar
+Ureilite Chip	Rings of Serendipity
+Ureilite Chip	Damascene Shield
+Ureilite Chip	Most Wanted
+Ureilite Chip	Ether Saber
+Ureilite Chip	The Assessors
+Ureilite Chip	Black Chronos
+Ureilite Chip	Enigma Scythes
+Ureilite Chip	Axe of Fortune
+Ureilite Chip	The Phalanx
+Ureilite Chip	Silent Gunner
+Ureilite Chip	Infallible
+Ureilite Chip	Rippling Tachi
+Ureilite Chip	The Peacemaker
+Ureilite Chip	Fists of Healing
+Winonaite Chip	Orichalcum Sword
+Winonaite Chip	Orichalcum Scimitar
+Winonaite Chip	Orichalcum Rings
+Winonaite Chip	Orichalcum Shield
+Winonaite Chip	Orichalcum Arms
+Winonaite Chip	Orichalcum Saber
+Winonaite Chip	Orichalcum Whips
+Winonaite Chip	Orichalcum Edge
+Winonaite Chip	Orichalcum Scythes
+Winonaite Chip	Orichalcum Axe
+Winonaite Chip	Orichalcum Lance
+Winonaite Chip	Orichalcum Cannon
+Winonaite Chip	Orichalcum Hammer
+Winonaite Chip	Unbreakable Katana
+Winonaite Chip	Orichalcum Ball
+Winonaite Chip	Orichalcum Knuckles
+Nakhlite Chip	Sigma Sword
+Nakhlite Chip	Sigma Scimitar
+Nakhlite Chip	Sigma Rings
+Nakhlite Chip	Sigma Shield
+Nakhlite Chip	Sigma Arms
+Nakhlite Chip	Sigma Saber
+Nakhlite Chip	Sigma Whips
+Nakhlite Chip	Sigma Edge
+Nakhlite Chip	Sigma Scythes
+Nakhlite Chip	Sigma Axe
+Nakhlite Chip	Sigma Lance
+Nakhlite Chip	Sigma Cannon
+Nakhlite Chip	Sigma Hammer
+Nakhlite Chip	Zero Tachi
+Nakhlite Chip	Sigma Ball
+Nakhlite Chip	Sigma Knuckles
+Howardite Chip	Delta Sword
+Howardite Chip	Delta Scimitar
+Howardite Chip	Delta Rings
+Howardite Chip	Delta Shield
+Howardite Chip	Delta Arms
+Howardite Chip	Delta Saber
+Howardite Chip	Delta Whips
+Howardite Chip	Delta Edge
+Howardite Chip	Delta Scythes
+Howardite Chip	Delta Axe
+Howardite Chip	Delta Lance
+Howardite Chip	Delta Cannon
+Howardite Chip	Delta Hammer
+Howardite Chip	Zetsu
+Howardite Chip	Delta Ball
+Howardite Chip	Delta Knuckles
+Aubrite Chip	Godspeed Sword
+Aubrite Chip	Energy Scimitar
+Aubrite Chip	Invisible Rings
+Aubrite Chip	Legionnaire's Shield
+Aubrite Chip	Terminal Velocity
+Aubrite Chip	Sanguine Saber
+Aubrite Chip	Whips of Celerity
+Aubrite Chip	Barghest's Claw
+Aubrite Chip	Dark Order
+Aubrite Chip	Truestrike Axe
+Aubrite Chip	Nuclear Lance
+Aubrite Chip	The Longstone
+Aubrite Chip	Growler Half-Full
+Aubrite Chip	Dimensional Katana
+Aubrite Chip	Cypher
+Aubrite Chip	Lambda Knuckles
+Angrite Chip	Saintslayer Brand
+Angrite Chip	Seraphsbane
+Angrite Chip	Deity Erasers
+Angrite Chip	Saintslayer Pavise
+Angrite Chip	Deserved Retribution
+Angrite Chip	Creation Eater
+Angrite Chip	Ascension Denied
+Angrite Chip	Sainthunter
+Angrite Chip	Titan Gutters
+Angrite Chip	Mythical Greataxe
+Angrite Chip	Vindicator
+Angrite Chip	Cannon of Babel
+Angrite Chip	Traitor to the Cause
+Angrite Chip	The Empty Sky
+Angrite Chip	Omega Ball
+Angrite Chip	Spirits of the Knife
+Dark Matter Chip	Sword of Despair
+Dark Matter Chip	Scimitar of Despair
+Dark Matter Chip	Rings of Despair
+Dark Matter Chip	Shield of Despair
+Dark Matter Chip	Arms of Despair
+Dark Matter Chip	Saber of Despair
+Dark Matter Chip	Whips of Despair
+Dark Matter Chip	Edge of Despair
+Dark Matter Chip	Scythes of Despair
+Dark Matter Chip	Axe of Despair
+Dark Matter Chip	Lance of Despair
+Dark Matter Chip	Cannon of Despair
+Dark Matter Chip	Hammer of Despair
+Dark Matter Chip	Katana of Lost Hopes
+Dark Matter Chip	Ball of Despair
+Dark Matter Chip	Knuckles of Despair
+Axion Chip	Sword of Chaos
+Axion Chip	Scimitar of Chaos
+Axion Chip	Rings of Chaos
+Axion Chip	Shield of Chaos
+Axion Chip	Arms of Chaos
+Axion Chip	Saber of Chaos
+Axion Chip	Whips of Chaos
+Axion Chip	Edge of Chaos
+Axion Chip	Scythes of Chaos
+Axion Chip	Axe of Chaos
+Axion Chip	Lance of Chaos
+Axion Chip	Cannon of Chaos
+Axion Chip	Hammer of Chaos
+Axion Chip	Katana of Chaos
+Axion Chip	Ball of Chaos
+Axion Chip	Knuckles of Chaos
+Mirror Matter Chip	Mutinous Sword
+Mirror Matter Chip	Supersonic Scimitar
+Mirror Matter Chip	Rings of the Kingslayer
+Mirror Matter Chip	Thundercrash Shield
+Mirror Matter Chip	Insatiable Gauntlets
+Mirror Matter Chip	Barbatos, the Durable
+Mirror Matter Chip	Belial's Whips
+Mirror Matter Chip	Apocalypse
+Mirror Matter Chip	Inferno
+Mirror Matter Chip	Reactionary Axe
+Mirror Matter Chip	Vampiric Lance
+Mirror Matter Chip	Spectral Cannon
+Mirror Matter Chip	Demon's Hoof
+Mirror Matter Chip	Katana of Demise
+Mirror Matter Chip	Public Enemy No. 1
+Mirror Matter Chip	Hands of Ruin
+Shining Star Chip	Sword of Thanatos
+Shining Star Chip	Scimitar of Thanatos
+Shining Star Chip	Rings of Thanatos
+Shining Star Chip	Shield of Thanatos
+Shining Star Chip	Arms of Thanatos
+Shining Star Chip	Saber of Thanatos
+Shining Star Chip	Whips of Thanatos
+Shining Star Chip	Edge of Thanatos
+Shining Star Chip	Scythes of Thanatos
+Shining Star Chip	Axe of Thanatos
+Shining Star Chip	Lance of Thanatos
+Shining Star Chip	Cannon of Thanatos
+Shining Star Chip	Hammer of Thanatos
+Shining Star Chip	Katana of Slaughter
+Shining Star Chip	Ball of Thanatos
+Shining Star Chip	Knuckles of Thanatos
+Moon Matter Chip	Sword of Banishing
+Moon Matter Chip	Scimitar of Banishing
+Moon Matter Chip	Rings of Banishing
+Moon Matter Chip	Shield of Banishing
+Moon Matter Chip	Arms of Banishing
+Moon Matter Chip	Saber of Banishing
+Moon Matter Chip	Whips of Banishing
+Moon Matter Chip	Edge of Banishing
+Moon Matter Chip	Scythes of Banishing
+Moon Matter Chip	Axe of Banishing
+Moon Matter Chip	Lance of Banishing
+Moon Matter Chip	Cannon of Banishing
+Moon Matter Chip	Hammer of Banishing
+Moon Matter Chip	Exorcist's Katana
+Moon Matter Chip	Ball of Banishing
+Moon Matter Chip	Knuckles of Banishing
+Sunlight Chip	Eater of Souls
+Sunlight Chip	The Trickster
+Sunlight Chip	Specters
+Sunlight Chip	Nemesis Shield
+Sunlight Chip	Arms of Hermes
+Sunlight Chip	Metatron's Saber
+Sunlight Chip	Dominion
+Sunlight Chip	Rightful Payback
+Sunlight Chip	The Grim Reapers
+Sunlight Chip	Ruinous Hatchet
+Sunlight Chip	Warhead
+Sunlight Chip	The Ashen Horse
+Sunlight Chip	The Lidless Eye
+Sunlight Chip	Wisdom's Cradle
+Sunlight Chip	Morningstar Ascending
+Sunlight Chip	Sacrifice
+Photon Chip	Sword of Origin
+Photon Chip	Scimitar of Origin
+Photon Chip	Rings of Origin
+Photon Chip	Shield of Origin
+Photon Chip	Arms of Origin
+Photon Chip	Saber of Origin
+Photon Chip	Whips of Origin
+Photon Chip	Edge of Origin
+Photon Chip	Scythes of Origin
+Photon Chip	Axe of Origin
+Photon Chip	Lance of Origin
+Photon Chip	Cannon of Origin
+Photon Chip	Hammer of Origin
+Photon Chip	Original Tachi
+Photon Chip	Ball of Origin
+Photon Chip	Knuckles of Origin
+Positron Chip	Eternal Sword
+Positron Chip	Eternal Scimitar
+Positron Chip	Eternal Rings
+Positron Chip	Eternal Shield
+Positron Chip	Eternal Arms
+Positron Chip	Eternal Saber
+Positron Chip	Eternal Whips
+Positron Chip	Eternal Edge
+Positron Chip	Eternal Scythes
+Positron Chip	Eternal Axe
+Positron Chip	Eternal Lance
+Positron Chip	Eternal Cannon
+Positron Chip	Eternal Hammer
+Positron Chip	Tachi of Forever
+Positron Chip	Eternal Ball
+Positron Chip	Eternal Knuckles
+Hadron Chip	Final Sword
+Hadron Chip	Final Scimitar
+Hadron Chip	Final Rings
+Hadron Chip	Final Shield
+Hadron Chip	Final Arms
+Hadron Chip	Final Saber
+Hadron Chip	Final Whips
+Hadron Chip	Final Edge
+Hadron Chip	Final Scythes
+Hadron Chip	Final Axe
+Hadron Chip	Final Lance
+Hadron Chip	Final Cannon
+Hadron Chip	Final Hammer
+Hadron Chip	All That Is
+Hadron Chip	Final Ball
+Hadron Chip	Final Knuckles
+Dilaton Chip	Satellite Sword
+Dilaton Chip	Satellite Scimitar
+Dilaton Chip	Satellite Rings
+Dilaton Chip	Satellite Shield
+Dilaton Chip	Satellite Arms
+Dilaton Chip	Satellite Saber
+Dilaton Chip	Satellite Whips
+Dilaton Chip	Satellite Edge
+Dilaton Chip	Satellite Scythes
+Dilaton Chip	Satellite Axe
+Dilaton Chip	Satellite Lance
+Dilaton Chip	Satellite Cannon
+Dilaton Chip	Satellite Hammer
+Dilaton Chip	Celestial Tachi
+Dilaton Chip	Satellite Ball
+Dilaton Chip	Satellite Knuckles
+Preon Chip	Meteorite Sword
+Preon Chip	Meteorite Scimitar
+Preon Chip	Meteorite Rings
+Preon Chip	Meteorite Shield
+Preon Chip	Meteorite Arms
+Preon Chip	Meteorite Saber
+Preon Chip	Meteorite Whips
+Preon Chip	Meteorite Edge
+Preon Chip	Meteorite Scythes
+Preon Chip	Meteorite Axe
+Preon Chip	Meteorite Lance
+Preon Chip	Meteorite Cannon
+Preon Chip	Meteorite Hammer
+Preon Chip	Shooting Star Katana
+Preon Chip	Meteorite Ball
+Preon Chip	Meteorite Knuckles
+Tachyon Chip	Shooting Star
+Tachyon Chip	Scimitar of Creation
+Tachyon Chip	Transmigration
+Tachyon Chip	Cosmic Impact
+Tachyon Chip	Gigantomachy
+Tachyon Chip	Ultima Ratio
+Tachyon Chip	The Dreadnoughts
+Tachyon Chip	Bigger Bang
+Tachyon Chip	Spendthrift Knight
+Tachyon Chip	Galaxy Dusking
+Tachyon Chip	Extinction Event
+Tachyon Chip	Regurgitator
+Tachyon Chip	Graviton Smasher
+Tachyon Chip	Andromeda
+Tachyon Chip	Eclipse of Reason
+Tachyon Chip	The First Principle
+\.
+
+
+--
+-- Data for Name: chips; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.chips (name, rank, sell_price, rarity) FROM stdin;
+Lead Chip	1	900	Common
+Tin Chip	1	800	Common
+Bronze Chip	3	1400	Common
+Silver Chip	15	9000	Legendary
+Iron Chip	5	2400	Common
+Cobalt Chip	5	2400	Common
+Steel Chip	5	2400	Common
+Gold Chip	15	9000	Legendary
+Fang Chip	2	1000	Common
+Wing Chip	2	1300	Common
+Scale Chip	3	1700	Common
+Horn Chip	16	9900	Legendary
+Wood Chip	7	3800	Common
+Flower Chip	7	3800	Common
+Glass Chip	7	3400	Rare
+Forest Chip	16	9900	Legendary
+Turquoise Chip	4	2200	Common
+Spinel Chip	4	2600	Common
+Amethyst Chip	4	2600	Rare
+Fluorite Chip	17	10800	Legendary
+Garnet Chip	10	7000	Common
+Aquamarine Chip	10	7000	Common
+Opal Chip	10	6300	Rare
+Zircon Chip	17	10800	Legendary
+Coil Chip	6	2700	Common
+Chain Chip	6	2700	Common
+Magnet Chip	6	3300	Rare
+Shaft Chip	18	11700	Legendary
+Battery Chip	9	5000	Common
+Engine Chip	9	5000	Common
+Motor Chip	9	5300	Rare
+Booster Chip	18	11700	Legendary
+Tri-Chip	8	4200	Common
+Rhombus Chip	8	4200	Common
+Pentagon Chip	8	4800	Rare
+Hexagon Chip	19	12600	Legendary
+Sphere Chip	11	7600	Common
+Cube Chip	11	7600	Common
+Polygon Chip	11	7600	Rare
+Spiral Chip	19	12600	Legendary
+Lodranite Chip	9	5800	Common
+Brachinite Chip	9	6200	Common
+Ureilite Chip	9	6200	Rare
+Winonaite Chip	19	13100	Legendary
+Nakhlite Chip	12	7600	Common
+Howardite Chip	12	8300	Common
+Aubrite Chip	12	8300	Rare
+Angrite Chip	19	12600	Legendary
+Dark Matter Chip	13	8200	Common
+Axion Chip	13	8200	Common
+Mirror Matter Chip	13	8200	Rare
+Shining Star Chip	20	13500	Legendary
+Moon Matter Chip	20	13500	Legendary
+Sunlight Chip	20	13500	Legendary
+Photon Chip	14	8200	Rare
+Positron Chip	14	8200	Rare
+Hadron Chip	14	8200	Rare
+Dilaton Chip	20	13500	Legendary
+Preon Chip	20	13500	Legendary
+Tachyon Chip	20	13500	Legendary
 \.
 
 
@@ -29828,6 +30976,30 @@ ALTER TABLE ONLY xeno2.arts
 
 
 --
+-- Name: chip_locations_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.chip_locations
+    ADD CONSTRAINT chip_locations_pkey PRIMARY KEY (chip, location);
+
+
+--
+-- Name: chip_weapons_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.chip_weapons
+    ADD CONSTRAINT chip_weapons_pkey PRIMARY KEY (chip, weapon);
+
+
+--
+-- Name: chips_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.chips
+    ADD CONSTRAINT chips_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -29929,6 +31101,30 @@ ALTER TABLE ONLY xenox.items
 
 ALTER TABLE ONLY xenox.skills
     ADD CONSTRAINT skills_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: chip_locations_chip_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.chip_locations
+    ADD CONSTRAINT chip_locations_chip_fkey FOREIGN KEY (chip) REFERENCES xeno2.chips(name);
+
+
+--
+-- Name: chip_weapons_chip_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.chip_weapons
+    ADD CONSTRAINT chip_weapons_chip_fkey FOREIGN KEY (chip) REFERENCES xeno2.chips(name);
+
+
+--
+-- Name: chip_weapons_weapon_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.chip_weapons
+    ADD CONSTRAINT chip_weapons_weapon_fkey FOREIGN KEY (weapon) REFERENCES xeno2.weapons(name);
 
 
 --
