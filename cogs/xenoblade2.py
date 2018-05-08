@@ -71,6 +71,53 @@ class Xenoblade2:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing art name.')
 
+    @utils.group(invoke_without_command=True)
+    async def xc2skill(self, ctx, *, name: str.lower):
+        """Gives information for a Xenoblade Chronicles 2 skill."""
+
+        query = """
+                SELECT
+                    name,
+                    driver,
+                    description,
+                    chart,
+                    sp
+                FROM xeno2.skills
+                WHERE LOWER(name)=$1;
+                """
+
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'skills', name)
+
+        name, driver, description, chart, sp = record
+
+        embed = discord.Embed(title=name, description=description)
+        embed.add_field(name='Driver', value=driver)
+        embed.add_field(name='Chart', value=chart)
+        embed.add_field(name='SP Needed', value=sp)
+
+        await ctx.send(embed=embed)
+
+    @xc2skill.command(name='all')
+    async def xc2skill_all(self, ctx):
+        """Lists all Xenoblade Chronicles 2 skills."""
+
+        await self.all_entries(ctx, 'skills')
+
+    @xc2skill.command(name='search')
+    async def xc2skill_search(self, ctx, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 skill."""
+
+        await self.search_entries(ctx, 'skills', name)
+
+    @xc2skill.error
+    @xc2skill_search.error
+    async def xc2skill_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing skill name.')
+
     async def show_possibilities(self, ctx, table_name, name):
         query = f"""
                 SELECT
