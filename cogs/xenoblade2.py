@@ -131,8 +131,11 @@ class Xenoblade2:
                     '±' || stability,
                     crit_rate || '%',
                     block_rate || '%',
-                    effect
+                    effect,
+                    chip
                 FROM xeno2.weapons
+                LEFT JOIN xeno2.chip_weapons
+                ON name=weapon
                 WHERE LOWER(name)=$1;
                 """
 
@@ -141,7 +144,7 @@ class Xenoblade2:
         if record is None:
             return await self.show_possibilities(ctx, 'skills', name)
 
-        name, weapon_type, rank, damage, stability, crit_rate, block_rate, effect = record
+        name, weapon_type, rank, damage, stability, crit_rate, block_rate, effect, chip = record
 
         embed = discord.Embed(title=name)
         embed.add_field(name='Weapon Type', value=weapon_type)
@@ -149,6 +152,8 @@ class Xenoblade2:
         embed.add_field(name='Stability', value=stability)
         embed.add_field(name='Crit Rate', value=crit_rate)
         embed.add_field(name='Block Rate', value=block_rate)
+        if chip:
+            embed.add_field(name='Chip', value=chip)
         if effect:
             embed.add_field(name='Effect', value=effect, inline=False)
 
