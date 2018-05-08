@@ -172,6 +172,61 @@ class Xenoblade2:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing weapon name.')
 
+    @utils.group(invoke_without_command=True)
+    async def xc2chip(self, ctx, *, name: str.lower):
+        """Gives information for a Xenoblade Chronicles 2 core chip."""
+
+        query = """
+                SELECT
+                    name,
+                    rank,
+                    sell_price,
+                    rarity,
+                    STRING_AGG(DISTINCT weapon, E'\n') AS weapons,
+                    STRING_AGG(DISTINCT location, E'\n') AS locations
+                FROM xeno2.chips
+                JOIN xeno2.chip_weapons
+                ON chips.name=chip_weapons.chip
+                JOIN xeno2.chip_locations
+                ON chips.name=chip_locations.chip
+                WHERE LOWER(name)=$1
+                GROUP BY name;
+                """
+
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'chips', name)
+
+        name, rank, sell_price, rarity, weapons, locations = record
+
+        embed = discord.Embed(title=name)
+        embed.add_field(name='Rank', value=rank)
+        embed.add_field(name='Rarity', value=rarity)
+        embed.add_field(name='Sell Price', value=sell_price)
+        embed.add_field(name='Locations', value=locations)
+        embed.add_field(name='Weapons', value=weapons, inline=False)
+
+        await ctx.send(embed=embed)
+
+    @xc2chip.command(name='all')
+    async def xc2chip_all(self, ctx):
+        """Lists all Xenoblade Chronicles 2 core chips."""
+
+        await self.all_entries(ctx, 'chips')
+
+    @xc2chip.command(name='search')
+    async def xc2chip_search(self, ctx, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 core chip."""
+
+        await self.search_entries(ctx, 'chips', name)
+
+    @xc2chip.error
+    @xc2chip_search.error
+    async def xc2chip_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing core chip name.')
+
     async def show_possibilities(self, ctx, table_name, name):
         query = f"""
                 SELECT
