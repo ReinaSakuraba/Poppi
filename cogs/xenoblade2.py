@@ -142,7 +142,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await self.show_possibilities(ctx, 'skills', name)
+            return await self.show_possibilities(ctx, 'weapons', name)
 
         name, weapon_type, rank, damage, stability, crit_rate, block_rate, effect, chip = record
 
