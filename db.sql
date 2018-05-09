@@ -292,7 +292,7 @@ Double Spinning Edge (Broadsword)	Rex	Broadsword	Physical	200/240/280/320/360/40
 Anchor Shot (Broadsword)	Rex	Broadsword	Physical	240/270/300/330/360/400	2	One Target	6/6/6/6/6/6	None	Spawns a small HP Potion when landing a hit.	0/240/1080/2400/6000	HP Potion	8	18
 Rolling Smash (Broadsword)	Rex	Broadsword	Physical	330/370/410/450/490/545	1	Ahead	14/14/13/13/12/11	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/160/720/1600/4000	AOE / Aggro down	8	14
 Saber Slash	Rex	Catalyst Scimitar	Physical	170/200/230/260/290/336	3	One Target	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/310/1390/3080/7700	HP Potion	8	14
-Redemption	Rex	Catalyst Scimitar	Recovery	231/250/270/290/310/341	0	One Target	14/14/13/13/12/11	None		0/340/1510/3360/8400	Heal party	200	18
+Redemption	Rex	Catalyst Scimitar	Recovery	231/250/270/290/310/341	0	All	14/14/13/13/12/11	None		0/340/1510/3360/8400	Heal party	200	18
 Hydro Blast	Rex	Catalyst Scimitar	Ether	250/300/350/400/450/500	1	Ahead	10/10/9/9/8/7	Knockback		0/220/1010/2240/5600	AOE / Knockback	12	10
 Water Flower	Rex	Catalyst Scimitar	Ether	300/340/380/420/460/500	1	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/250/1130/2520/6300	Pierce	8	10
 Wide Slash	Rex	Twin Rings	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/480/2180/4840/12100	Side attack↑	8	10
@@ -302,11 +302,11 @@ Spin of Bravery	Rex	Twin Rings	Physical	300/340/380/420/460/500	4	Circle	14/14/1
 Butterfly Blade	Nia	Twin Rings	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break		0/400/1780/3960/9900	Break	8	10
 Jaguar Slash	Nia	Twin Rings	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/320/1460/3240/8100	HP Potion	8	18
 Gemini Loop	Nia	Twin Rings	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	Increases damage dealt from the side by 50%.	0/290/1300/2880/7200	AOE / Side atk↑	8	10
-Healing Halo	Nia	Twin Rings	Recovery	210/230/250/270/290/290	0	One Target	14/14/13/13/12/11	None		0/430/1940/4320/10800	Heal party	200	18
+Healing Halo	Nia	Twin Rings	Recovery	210/230/250/270/290/290	0	All	14/14/13/13/12/11	None		0/430/1940/4320/10800	Heal party	200	18
 Halo Strike	Mòrag	Twin Rings	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/440/1980/4400/11000	HP Potion	8	18
 Inferno Wheel	Mòrag	Twin Rings	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	Beasts↑	8	10
 Twin Moonblade	Mòrag	Twin Rings	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None		0/360/1620/3600/9000	AOE	8	10
-Revolution Flash	Mòrag	Twin Rings	Recovery	200/220/240/260/280/290	0	One Target	14/14/13/13/12/11	None		0/480/2160/4800/12000	Heal party	200	18
+Revolution Flash	Mòrag	Twin Rings	Recovery	200/220/240/260/280/290	0	All	14/14/13/13/12/11	None		0/480/2160/4800/12000	Heal party	200	18
 Rapid Twist	Zeke	Twin Rings	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/380/1730/3840/9600	Beasts↑	8	10
 Clear Divide	Zeke	Twin Rings	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/580/2590/5760/14400	HP Potion	8	18
 Righteous Guillotine	Zeke	Twin Rings	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt to aerial creatures by [50/50/70/70/100/100]%.	0/430/1940/4320/10800	AOE / Flying↑	8	10
@@ -381,7 +381,7 @@ Powerhouse Smash	Zeke	Megalance	Physical	200/240/280/320/360/400	2	One Target	11
 Supersonic Spin	Zeke	Megalance	Ether	150/170/190/210/230/240	2	Ahead	14/14/13/13/12/11	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/480/2180/4840/12100	AOE / Aggro down	10	10
 Daring Shot	Rex	Ether Cannon	Ether	108/130/150/170/190/216	5	One Target	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/400/1780/3960/9900	High HP↑	20	14
 Armor Crusher	Rex	Ether Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/350/1580/3520/8800	Pierce	20	14
-Grenade Launcher	Rex	Ether Cannon	Ether	300/340/380/420/460/500	1	All	12/12/11/11/10/9	Blowdown		0/530/2380/5280/13200	AOE / Blowdown	20	14
+Grenade Launcher	Rex	Ether Cannon	Ether	300/340/380/420/460/500	1	Circle	12/12/11/11/10/9	Blowdown		0/530/2380/5280/13200	AOE / Blowdown	20	14
 Wild Volley	Rex	Ether Cannon	Ether	180/220/260/300/340/360	1	Ahead	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/480/2180/4840/12100	AOE / Cancel attack↑	20	14
 Breach Shot	Nia	Ether Cannon	Ether	180/220/260/300/340/360	2	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/360/1620/3600/9000	Cancel atk↑	20	14
 Leopard Blow	Nia	Ether Cannon	Ether	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/480/2160/4800/12000	Break / Pierce	20	14
@@ -393,7 +393,7 @@ Touch-Me-Not	Mòrag	Ether Cannon	Ether	330/370/410/450/490/550	11	Ahead	12/12/11
 Mist Buster	Mòrag	Ether Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/290/1300/2880/7200	Launched↑	20	14
 Burst Gunner	Zeke	Ether Cannon	Ether	300/340/380/420/460/500	3	One Target	12/12/11/11/10/9	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/580/2590/5760/14400	Break / Pierce	20	14
 Haywire Chainshot	Zeke	Ether Cannon	Ether	108/130/150/170/190/216	6	One Target	8/8/7/7/6/5	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/430/1940/4320/10800	Cancel attack↑	20	14
-Blowback Cannon	Zeke	Ether Cannon	Ether	300/340/380/420/460/500	1	All	12/12/11/11/10/9	Knockback		0/530/2380/5280/13200	AOE / Knockback	20	14
+Blowback Cannon	Zeke	Ether Cannon	Ether	300/340/380/420/460/500	1	Circle	12/12/11/11/10/9	Knockback		0/530/2380/5280/13200	AOE / Knockback	20	14
 Laserpoint Bazooka	Zeke	Ether Cannon	Ether	220/260/300/340/380/440	6	Ahead	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/380/1730/3840/9600	AOE / Launched↑	20	14
 Iron Wall	Rex	Shield Hammer	Defensive	270/270/360/360/360/450	0	One Target	14/14/13/13/12/11	None	Restores [6/7/8/9/10/10]% HP when guarding. Recharges other Arts when attacked.	0/360/1620/3600/9000	Defense	8	22
 Diving Swing	Rex	Shield Hammer	Physical	120/140/160/180/200/240	2	Ahead	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	AOE / Aggro up	8	22
@@ -432,17 +432,17 @@ Brave Throw	Rex	Bitball	Ether	220/260/300/340/380/440	1	One Target	8/8/7/7/6/5	N
 Strong Shot	Rex	Bitball	Ether	300/340/380/420/460/500	1	One Target	11/11/10/10/9/8	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/530/2380/5280/13200	Heal party on attack	15	10
 Mighty Ball	Rex	Bitball	Ether	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to launched enemies by [50/50/60/60/75/75]%.	0/350/1580/3520/8800	Launched↑	15	10
 Dolphin Spin	Nia	Bitball	Ether	125/150/170/190/210/240	3	One Target	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/320/1460/3240/8100	HP Potion	6	18
-Healing Circle	Nia	Bitball	Recovery	210/230/250/270/290/310	0	One Target	11/11/10/10/9/8	None		0/430/1940/4320/10800	Heal party	200	18
+Healing Circle	Nia	Bitball	Recovery	210/230/250/270/290/310	0	All	11/11/10/10/9/8	None		0/430/1940/4320/10800	Heal party	200	18
 Falcon Turn	Nia	Bitball	Ether	200/240/280/320/360/400	1	One Target	5/5/4/4/3/2	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/290/1300/2880/7200	Toppled↑	6	10
-Acrobatic Bomber	Nia	Bitball	Ether	300/340/380/420/460/500	1	All	11/11/10/10/9/8	Break		0/400/1780/3960/9900	AOE / Break	15	10
+Acrobatic Bomber	Nia	Bitball	Ether	300/340/380/420/460/500	1	Circle	11/11/10/10/9/8	Break		0/400/1780/3960/9900	AOE / Break	15	10
 Dragonbane Shot	Mòrag	Bitball	Ether	100/120/140/160/180/192	1	One Target	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/440/1980/4400/11000	HP Potion	15	18
-Celestial Flash	Mòrag	Bitball	Recovery	210/230/250/270/290/310	0	One Target	11/11/10/10/9/8	None		0/480/2160/4800/12000	Heal party	200	18
+Celestial Flash	Mòrag	Bitball	Recovery	210/230/250/270/290/310	0	All	11/11/10/10/9/8	None		0/480/2160/4800/12000	Heal party	200	18
 Shadowrunner	Mòrag	Bitball	Ether	160/190/220/250/280/320	1	One Target	5/5/4/4/3/2	None	Increases damage dealt to launched enemies by [50/50/60/60/75/75]%.	0/320/1440/3200/8000	Launched↑	15	10
 Gliding Swallow	Mòrag	Bitball	Ether	270/310/350/390/430/450	1	One Target	11/11/10/10/9/8	None	Increases damage dealt by [50/50/60/60/75/75]% when HP is 90% or higher.	0/360/1620/3600/9000	High HP↑	15	10
 Rumble Pitch	Zeke	Bitball	Ether	330/370/410/450/490/550	1	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [50/50/60/60/75/75]%.	0/430/1940/4320/10800	Back attack↑	15	10
 Pulverizing Dunk	Zeke	Bitball	Ether	250/300/350/400/450/500	1	Circle	5/5/4/4/3/2	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/380/1730/3840/9600	AOE / Toppled↑	6	10
 Shell Shot	Zeke	Bitball	Ether	200/240/280/320/360/400	1	One Target	9/9/8/8/7/6	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/530/2380/5280/13200	Heal party on attack	15	10
-Precipitous Impact	Zeke	Bitball	Ether	100/120/140/160/180/192	1	All	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/580/2590/5760/14400	AOE / HP Potion	15	18
+Precipitous Impact	Zeke	Bitball	Ether	100/120/140/160/180/192	1	Circle	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/580/2590/5760/14400	AOE / HP Potion	15	18
 Feral Uppercut	Rex	Knuckle Claws	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Blowdown	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/480/2180/4840/12100	Blowdown / Cancel atk↑	8	10
 Grand Smash	Rex	Knuckle Claws	Ether	110/140/170/200/230/240	1	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/530/2380/5280/13200	HP Potion	8	18
 Bullet Punch	Rex	Knuckle Claws	Physical	200/240/280/320/360/400	4	Ahead	11/11/10/10/9/8	None		0/350/1580/3520/8800	AOE	8	10
@@ -461,16 +461,16 @@ Dynamite Knuckle	Zeke	Knuckle Claws	Ether	110/140/170/200/230/240	1	Circle	11/11
 Skysplitter Cross Chop	Zeke	Knuckle Claws	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/360/1620/3600/9000	AOE / Aggro down	8	10
 Ultraslash	Jin	Nodachi	Physical	300/340/380/420/460/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/320/1440/3200/8000	Back attack↑	10	10
 Skyward Slash	Jin	Nodachi	Ether	600/680/760/840/920/1000	1	Ahead	11/11/10/10/9/8	Break		0/440/1980/4400/11000	AOE / Break	14	10
-Empty Moment	Jin	Nodachi	Physical	200/240/280/320/360/400	8	All	14/14/13/13/12/11	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/360/1620/3600/9000	AOE / Pierce	14	10
-Stunned Swallow	Jin	Nodachi	Ether	0/0/0/0/0/0	1	One Target	11/11/10/10/9/8	None	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/480/2160/4800/12000	Evasion / Counter	8	10
+Empty Moment	Jin	Nodachi	Physical	200/240/280/320/360/400	8	Circle	14/14/13/13/12/11	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/360/1620/3600/9000	AOE / Pierce	14	10
+Stunned Swallow	Jin	Nodachi	Ether	0/0/0/0/0/0	1	One Target	11/11/10/10/9/8	Blowdown	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/480/2160/4800/12000	Evasion / Counter	8	10
 Ultraslash (Chapter 8)	Jin	Nodachi	Physical	420/420/420/420/460/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/320/1440/3200/8000	Back attack↑	10	10
 Skyward Slash (Chapter 8)	Jin	Nodachi	Ether	840/840/840/840/920/1000	1	Ahead	11/11/10/10/9/8	Break		0/360/1620/3600/9000	AOE / Break	14	10
 Heavenly Disrupt	Jin	Nodachi	Physical	1300/1300/1300/1300/1400/1500	9	One Target	24/24/23/23/22/21	Topple / Launch / Smash	Adds [50/50/70/70/100/100]% chance to annul defense.	0/400/1800/4000/10000	Topple / Launch / Smash	12	10
-Stunned Swallow (Chapter 8)	Jin	Nodachi	Ether	0/0/0/0/0/0	1	All	11/11/10/10/9/8	None	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/440/1980/4400/11000	Evasion / Counter	8	10
+Stunned Swallow (Chapter 8)	Jin	Nodachi	Ether	0/0/0/0/0/0	1	Circle	11/11/10/10/9/8	Blowdown	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/440/1980/4400/11000	Evasion / Counter	8	10
 Hammer Bash	Malos	Sword Tonfa	Physical	450/510/570/630/690/750	1	One Target	11/11/10/10/9/8	Topple		0/480/2160/4800/12000	Topple	8	22
 Sword Strike	Malos	Sword Tonfa	Physical	300/360/420/480/540/600	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/440/1980/4400/11000	Front attack↑	8	22
 Spiral Savate	Malos	Sword Tonfa	Physical	240/290/340/390/440/480	1	One Target	14/14/13/13/12/11	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/380/1730/3840/9600	High HP↑	8	22
-Chakra Burst	Malos	Sword Tonfa	Ether	180/220/260/300/340/360	1	All	11/11/10/10/9/8	Knockback		0/360/1620/3600/9000	AOE / Knockback	8	25
+Chakra Burst	Malos	Sword Tonfa	Ether	180/220/260/300/340/360	1	Circle	11/11/10/10/9/8	Knockback		0/360/1620/3600/9000	AOE / Knockback	8	25
 Revolt Smash	Rex	Calamity Scythe	Physical	360/410/460/510/560/600	1	One Target	11/11/10/10/9/8	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/790/3560/7920/19800	Heal party on attack	8	14
 Screw Reaper	Rex	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle	8/8/7/7/6/5	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/580/2590/5760/14400	AOE / Aggro down	8	0
 Rising Crescent	Rex	Calamity Scythe	Physical	220/260/300/340/380/440	1	One Target	13/13/12/12/11/10	Launch		0/650/2920/6480/16200	Launch	8	10
@@ -510,11 +510,11 @@ Brave Wing	Rex	Infinity Fans	Physical	300/340/380/420/460/500	4	Circle	14/14/13/
 Swallowtail	Nia	Infinity Fans	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break		0/750/3370/7480/18700	Break	8	20
 Scarecrow	Nia	Infinity Fans	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/540/2450/5440/13600	Aggroed↑	8	22
 Vicious Circle	Nia	Infinity Fans	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/610/2750/6120/15300	AOE / Front attack↑	8	20
-Healing Trick	Nia	Infinity Fans	Recovery	168/180/200/220/240/248	0	One Target	14/14/13/13/12/11	None		0/820/3670/8160/20400	Heal party	200	20
+Healing Trick	Nia	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/820/3670/8160/20400	Heal party	200	20
 Albatross Cut	Mòrag	Infinity Fans	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	Aggroed↑	8	22
 2,000 Wings	Mòrag	Infinity Fans	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/580/2590/5760/14400	Beasts↑	8	20
 Black Wing Dance	Mòrag	Infinity Fans	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/790/3560/7920/19800	AOE / Front attack↑	8	20
-Stoking the Fire	Mòrag	Infinity Fans	Recovery	168/180/200/220/240/248	0	One Target	14/14/13/13/12/11	None		0/860/3890/8640/21600	Heal party	200	20
+Stoking the Fire	Mòrag	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/860/3890/8640/21600	Heal party	200	20
 Twilight Twist	Zeke	Infinity Fans	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/720/3240/7200/18000	Beasts↑	8	20
 Bold Division	Zeke	Infinity Fans	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/880/3960/8800/22000	Aggroed↑	8	22
 Gutsy Cutter	Zeke	Infinity Fans	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/640/2880/6400/16000	AOE / Aggro up	8	20
@@ -526,18 +526,18 @@ Rebel's Dagger	Rex	Brilliant Twinblades	Physical	300/340/380/420/460/500	4	Circl
 Papillon Dance	Nia	Brilliant Twinblades	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/750/3370/7480/18700	Break / Critical recharge	8	14
 Cheetah Scratch	Nia	Brilliant Twinblades	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/540/2450/5440/13600	Cancel attack↑	8	14
 Tricksy Loop	Nia	Brilliant Twinblades	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	Increases damage dealt from the side by 50%.	0/610/2750/6120/15300	AOE / Side attack↑	8	14
-Lustrous Heal	Nia	Brilliant Twinblades	Recovery	168/180/200/220/240/248	0	One Target	14/14/13/13/12/11	None		0/820/3670/8160/20400	Heal party	200	18
+Lustrous Heal	Nia	Brilliant Twinblades	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/820/3670/8160/20400	Heal party	200	18
 Photon Slash	Mòrag	Brilliant Twinblades	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/650/2920/6480/16200	Cancel attack↑	8	14
 Marigold in Bloom	Mòrag	Brilliant Twinblades	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/790/3560/7920/19800	Critical recharge	8	14
 Flowing Shadow	Mòrag	Brilliant Twinblades	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None		0/580/2590/5760/14400	AOE	8	14
-Mastery of Sky Sparks	Mòrag	Brilliant Twinblades	Recovery	168/180/200/220/240/248	0	One Target	14/14/13/13/12/11	None		0/860/3890/8640/21600	Heal party	200	18
+Mastery of Sky Sparks	Mòrag	Brilliant Twinblades	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/860/3890/8640/21600	Heal party	200	18
 Electroshade Twist	Zeke	Brilliant Twinblades	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/880/3960/8800/22000	Critical recharge	8	14
 Bewitching Divide	Zeke	Brilliant Twinblades	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/720/3240/7200/18000	Cancel attack↑	8	14
 Thunderslam	Zeke	Brilliant Twinblades	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt to aerial creatures by [50/50/70/70/100/100]%.	0/640/2880/6400/16000	AOE / Flying↑	8	14
 Florid Spiral	Zeke	Brilliant Twinblades	Physical	220/260/300/340/380/440	2	Circle	11/11/10/10/9/8	None	Increases damage dealt from the back by [50/50/60/60/75/75]%.	0/960/4320/9600/24000	AOE / Back attack↑	8	14
 Critical Trigger	Rex	Decimation Cannon	Ether	108/130/150/170/190/216	5	One Target	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/680/3080/6840/17100	High HP↑	20	14
 Mighty Missile	Rex	Decimation Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/610/2740/6080/15200	Launched↑ / Pierce	20	14
-Grenade Burst	Rex	Decimation Cannon	Ether	300/340/380/420/460/500	1	All	14/14/13/13/12/11	Blowdown		0/840/3760/8360/20900	AOE / Blowdown	20	14
+Grenade Burst	Rex	Decimation Cannon	Ether	300/340/380/420/460/500	1	Circle	14/14/13/13/12/11	Blowdown		0/840/3760/8360/20900	AOE / Blowdown	20	14
 Flamecaster	Rex	Decimation Cannon	Ether	180/220/260/300/340/360	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/910/4100/9120/22800	AOE / Front attack↑	20	14
 Surprise Shot	Nia	Decimation Cannon	Ether	180/220/260/300/340/360	2	One Target	11/11/10/10/9/8	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	Front attack↑	20	14
 Porcupine Blow	Nia	Decimation Cannon	Ether	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/860/3890/8640/21600	Break / Pierce	20	14
@@ -549,7 +549,7 @@ Rhododendron	Mòrag	Decimation Cannon	Ether	330/370/410/450/490/550	11	Ahead	12/
 Chimera Drop	Mòrag	Decimation Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/540/2450/5440/13600	Launched↑	20	14
 Breakthrough Cannon	Zeke	Decimation Cannon	Ether	300/340/380/420/460/500	3	One Target	14/14/13/13/12/11	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/960/4320/9600/24000	Break / Pierce	20	14
 Frenzied Fire	Zeke	Decimation Cannon	Ether	108/130/150/170/190/216	6	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/880/3960/8800/22000	Front attack↑	20	14
-Stark Artillery	Zeke	Decimation Cannon	Ether	300/340/380/420/460/500	1	All	14/14/13/13/12/11	Knockback		0/720/3240/7200/18000	AOE / Knockback	20	14
+Stark Artillery	Zeke	Decimation Cannon	Ether	300/340/380/420/460/500	1	Circle	14/14/13/13/12/11	Knockback		0/720/3240/7200/18000	AOE / Knockback	20	14
 Crazed Bazooka	Zeke	Decimation Cannon	Ether	220/260/300/340/380/440	6	Ahead	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/640/2880/6400/16000	AOE / Launched↑	20	14
 Wild Slugger	Rex	Rockrending Gauntlets	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/910/4100/9120/22800	Blowdown / Front attack↑	8	22
 Terror Smash	Rex	Rockrending Gauntlets	Ether	110/140/170/200/230/240	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/840/3760/8360/20900	Aggroed↑	8	22
