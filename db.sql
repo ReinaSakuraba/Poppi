@@ -1774,13 +1774,13 @@ Mach Prep II	Zeke	Allows use of the Driver Art assigned to Y at the start of bat
 Air Extender	Zeke	Extends Launch duration by 15%.	Normal	6000
 Ether Autarch	Zeke	Boosts Ether by 10%.	NG+	7500
 A Hero's Work	Zeke	Slightly fills the Party Gauge for each critical hit delivered.	NG+	15000
-Second Wind	Zeke	50% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).	NG+	30000
+Second Wind	Zeke	50% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).	NG+	25000
 Natural Healing	Zeke	Increases HP restored to self (not using HP Potions) by 10%.	NG+	5000
 Obsidian Slash	Zeke	Increases damage dealt by a surprise attack by 50%.	NG+	7500
 Raucous Cheer	Zeke	Increases Affinity by 25% after winning a Special button challenge.	NG+	10000
 Heart of Gold	Zeke	Boosts maximum HP by 10%.	NG+	3750
 Hotshot Hit	Zeke	Increases Dexterity by 20.	NG+	5000
-Under a Lucky Star	Zeke	Boosts Luck by 10%.	NG+	25000
+Unleash Shining Justice	Zeke	At max Affinity w/ Pandoria: R and + to awaken for a time (once per battle).	NG+	30000
 Professional Hit	Zeke	Boosts Dexterity by 10%.	NG+	6250
 Fleetfoot Flit	Zeke	Boosts Agility by 10%.	NG+	10000
 Medicinal Maestro	Zeke	Boosts the effect of HP Potions by 20%.	NG+	20000
