@@ -485,20 +485,20 @@ Standing Ovation	Zeke	Calamity Scythe	Physical	390/430/470/510/550/600	1	Ahead	1
 Bewilder Slash	Zeke	Calamity Scythe	Physical	240/290/340/390/440/480	2	Ahead	12/12/11/11/10/9	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/540/2450/5440/13600	AOE / HP Potion	8	0
 Earth Splitter	Rex	Combra Bardiche	Physical	160/190/220/250/280/320	1	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/610/2750/6120/15300	Low HP↑	10	14
 Powerquake	Rex	Combra Bardiche	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/820/3670/8160/20400	Break / Side attack↑	10	14
-Final Stone	Rex	Combra Bardiche	Physical	375/430/480/530/580/625	1	One Target	10/10/9/9/8/7	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/750/3370/7480/18700	HP down	10	14
+Final Stone	Rex	Combra Bardiche	Physical	375/430/480/530/580/625	1	One Target	10/10/9/9/8/7	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/750/3370/7480/18700	HP down / Evasion	10	14
 Dust Up	Rex	Combra Bardiche	Physical	300/340/380/420/460/500	3	Circle	13/13/12/12/11/10	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/540/2450/5440/13600	AOE / Insects↑	10	14
 Condor's Beak	Nia	Combra Bardiche	Physical	160/190/220/250/280/320	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/840/3760/8360/20900	Low HP↑	10	14
 Sand Break	Nia	Combra Bardiche	Physical	300/340/380/420/460/500	2	Circle	14/14/13/13/12/11	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/610/2740/6080/15200	AOE / Insects↑	10	14
 Cobra Raid	Nia	Combra Bardiche	Physical	130/160/190/220/250/264	2	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/910/4100/9120/22800	Back attack↑	10	14
-Merciless Twister	Nia	Combra Bardiche	Ether	375/430/480/530/580/625	3	Circle	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down	10	10
+Merciless Twister	Nia	Combra Bardiche	Ether	375/430/480/530/580/625	3	Circle	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down / Evasion	10	10
 Blunt Force	Mòrag	Combra Bardiche	Physical	240/290/340/390/440/500	1	One Target	11/11/10/10/9/8	Smash		0/860/3890/8640/21600	Smash	10	14
 Heaven's Valor	Mòrag	Combra Bardiche	Physical	130/160/190/220/250/264	1	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/790/3560/7920/19800	Back attack↑	10	14
 Lunar Salutation	Mòrag	Combra Bardiche	Physical	200/240/280/320/360/420	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/650/2920/6480/16200	Low HP↑	10	14
-Twisted Thistle	Mòrag	Combra Bardiche	Physical	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/580/2590/5760/14400	AOE / HP down	10	14
+Twisted Thistle	Mòrag	Combra Bardiche	Physical	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/580/2590/5760/14400	AOE / HP down / Evasion	10	14
 Grudge Blow	Zeke	Combra Bardiche	Physical	120/140/160/180/200/240	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [100/100/120/120/150/150]%.	0/610/2740/6080/15200	Side attack↑	10	14
 Heaven's Revenge	Zeke	Combra Bardiche	Ether	130/160/190/220/250/264	1	Ahead	12/12/11/11/10/9	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/840/3760/8360/20900	AOE / Back attack↑	10	14
 Takedown Smash	Zeke	Combra Bardiche	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	Smash		0/910/4100/9120/22800	Smash	10	14
-Whirlwind of Passion	Zeke	Combra Bardiche	Ether	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down	10	10
+Whirlwind of Passion	Zeke	Combra Bardiche	Ether	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down / Evasion	10	10
 Opened Fan	Rex	Infinity Fans	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/840/3760/8360/20900	Front attack↑	8	20
 Screw Cutter	Rex	Infinity Fans	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/910/4100/9120/22800	Aggroed↑	8	22
 Cross Edge	Rex	Infinity Fans	Physical	240/290/340/390/440/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/680/3080/6840/17100	Beasts↑	8	20
