@@ -287,6 +287,10 @@ Sword Bash	Rex	Aegis Sword	Physical	170/200/230/260/290/336	1	One Target	7/7/6/6
 Double Spinning Edge	Rex	Aegis Sword	Physical	200/240/280/320/360/400	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/440/1980/4400/11000	Side attack↑	8	14
 Anchor Shot	Rex	Aegis Sword	Physical	100/120/140/160/180/192	2	One Target	6/6/6/6/6/6	Topple	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/480/2160/4800/12000	HP Potion	8	18
 Rolling Smash	Rex	Aegis Sword	Ether	330/370/410/450/490/545	1	Ahead	11/11/10/10/9/8	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/320/1440/3200/8000	AOE / Aggro down	8	14
+Sword Bash (Broadsword)	Rex	Broadsword	Physical	170/200/230/260/290/336	1	One Target	7/7/6/6/5/4	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/180/810/1800/4500	Back attack↑	8	14
+Double Spinning Edge (Broadsword)	Rex	Broadsword	Physical	200/240/280/320/360/400	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/220/990/2200/5500	Side attack↑	8	14
+Anchor Shot (Broadsword)	Rex	Broadsword	Physical	240/270/300/330/360/400	2	One Target	6/6/6/6/6/6	None	Spawns a small HP Potion when landing a hit.	0/240/1080/2400/6000	HP Potion	8	18
+Rolling Smash (Broadsword)	Rex	Broadsword	Physical	330/370/410/450/490/545	1	Ahead	14/14/13/13/12/11	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/160/720/1600/4000	AOE / Aggro down	8	14
 Saber Slash	Rex	Catalyst Scimitar	Physical	170/200/230/260/290/336	3	One Target	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/310/1390/3080/7700	HP Potion	8	14
 Redemption	Rex	Catalyst Scimitar	Recovery	231/250/270/290/310/341	0	One Target	14/14/13/13/12/11	None		0/340/1510/3360/8400	Heal party	200	18
 Hydro Blast	Rex	Catalyst Scimitar	Ether	250/300/350/400/450/500	1	Ahead	10/10/9/9/8/7	Knockback		0/220/1010/2240/5600	AOE / Knockback	12	10
@@ -455,14 +459,14 @@ Hammer Lariat	Zeke	Knuckle Claws	Physical	180/220/260/300/340/360	1	One Target	1
 Fury Dropkick	Zeke	Knuckle Claws	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt from the back by [50/50/60/60/75/75]%.	0/320/1440/3200/8000	Blowdown / Back atk↑	8	10
 Dynamite Knuckle	Zeke	Knuckle Claws	Ether	110/140/170/200/230/240	1	Circle	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/440/1980/4400/11000	AOE / HP Potion	8	18
 Skysplitter Cross Chop	Zeke	Knuckle Claws	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/360/1620/3600/9000	AOE / Aggro down	8	10
-Sword Bash (Broadsword)	Rex	Broadsword	Physical	170/200/230/260/290/336	1	One Target	7/7/6/6/5/4	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/180/810/1800/4500	Back attack↑	8	14
-Double Spinning Edge (Broadsword)	Rex	Broadsword	Physical	200/240/280/320/360/400	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/220/990/2200/5500	Side attack↑	8	14
-Rolling Smash (Broadsword)	Rex	Broadsword	Physical	330/370/410/450/490/545	1	Ahead	14/14/13/13/12/11	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/160/720/1600/4000	AOE / Aggro down	8	14
-Anchor Shot (Broadsword)	Rex	Broadsword	Physical	240/270/300/330/360/400	2	One Target	6/6/6/6/6/6	None	Spawns a small HP Potion when landing a hit.	0/240/1080/2400/6000	HP Potion	8	18
 Ultraslash	Jin	Nodachi	Physical	300/340/380/420/460/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/320/1440/3200/8000	Back attack↑	10	10
 Skyward Slash	Jin	Nodachi	Ether	600/680/760/840/920/1000	1	Ahead	11/11/10/10/9/8	Break		0/440/1980/4400/11000	AOE / Break	14	10
 Empty Moment	Jin	Nodachi	Physical	200/240/280/320/360/400	8	All	14/14/13/13/12/11	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/360/1620/3600/9000	AOE / Pierce	14	10
 Stunned Swallow	Jin	Nodachi	Ether	0/0/0/0/0/0	1	One Target	11/11/10/10/9/8	None	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/480/2160/4800/12000	Evasion / Counter	8	10
+Ultraslash (Chapter 8)	Jin	Nodachi	Physical	420/420/420/420/460/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/320/1440/3200/8000	Back attack↑	10	10
+Skyward Slash (Chapter 8)	Jin	Nodachi	Ether	840/840/840/840/920/1000	1	Ahead	11/11/10/10/9/8	Break		0/360/1620/3600/9000	AOE / Break	14	10
+Heavenly Disrupt	Jin	Nodachi	Physical	1300/1300/1300/1300/1400/1500	9	One Target	24/24/23/23/22/21	Topple / Launch / Smash	Adds [50/50/70/70/100/100]% chance to annul defense.	0/400/1800/4000/10000	Topple / Launch / Smash	12	10
+Stunned Swallow (Chapter 8)	Jin	Nodachi	Ether	0/0/0/0/0/0	1	All	11/11/10/10/9/8	None	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/440/1980/4400/11000	Evasion / Counter	8	10
 Hammer Bash	Malos	Sword Tonfa	Physical	450/510/570/630/690/750	1	One Target	11/11/10/10/9/8	Topple		0/480/2160/4800/12000	Topple	8	22
 Sword Strike	Malos	Sword Tonfa	Physical	300/360/420/480/540/600	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/440/1980/4400/11000	Front attack↑	8	22
 Spiral Savate	Malos	Sword Tonfa	Physical	240/290/340/390/440/480	1	One Target	14/14/13/13/12/11	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/380/1730/3840/9600	High HP↑	8	22
