@@ -286,7 +286,6 @@ ALTER TABLE xenox.skills OWNER TO poppi;
 --
 
 COPY xeno2.arts (name, driver, weapon, type, damage_ratio, hits, range, recharge, reaction, description, wp, caption, distance, radius, hate, accuracy_mod, crit_mod) FROM stdin;
-Healing Halo	Nia	Twin Rings	Recovery	210/230/250/270/290/290	0	All	14/14/13/13/12/11	None		0/430/1940/4320/10800	Heal party	200	0	18	0	0
 Sword Bash	Rex	Aegis Sword	Physical	170/200/230/260/290/336	1	One Target	7/7/6/6/5/4	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/360/1620/3600/9000	Back attack↑	8	0	14	0	0
 Double Spinning Edge	Rex	Aegis Sword	Physical	200/240/280/320/360/400	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/440/1980/4400/11000	Side attack↑	8	0	14	0	0
 Anchor Shot	Rex	Aegis Sword	Physical	100/120/140/160/180/192	2	One Target	6/6/6/6/6/6	Topple	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/480/2160/4800/12000	HP Potion	8	0	18	0	0
@@ -306,6 +305,7 @@ Spin of Bravery	Rex	Twin Rings	Physical	300/340/380/420/460/500	4	Circle (User)	
 Butterfly Blade	Nia	Twin Rings	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break		0/400/1780/3960/9900	Break	8	0	10	0	0
 Jaguar Slash	Nia	Twin Rings	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/320/1460/3240/8100	HP Potion	8	0	18	0	0
 Gemini Loop	Nia	Twin Rings	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	Increases damage dealt from the side by 50%.	0/290/1300/2880/7200	AOE / Side atk↑	8	2	10	0	0
+Healing Halo	Nia	Twin Rings	Recovery	210/230/250/270/290/290	0	All	14/14/13/13/12/11	None		0/430/1940/4320/10800	Heal party	200	0	18	0	0
 Halo Strike	Mòrag	Twin Rings	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/440/1980/4400/11000	HP Potion	8	0	18	0	0
 Inferno Wheel	Mòrag	Twin Rings	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	Beasts↑	8	0	10	0	0
 Twin Moonblade	Mòrag	Twin Rings	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None		0/360/1620/3600/9000	AOE	8	2	10	0	0
@@ -342,7 +342,6 @@ Stratospheric Thunder	Zeke	Big Bang Edge	Physical	300/340/380/420/460/500	1	One 
 Dynamic Spark Sword	Zeke	Big Bang Edge	Physical	300/350/400/450/500/550	3	One Target	8/8/7/7/6/5	Knockback	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/440/1980/4400/11000	Knockback / Front atk↑	9	0	14	0	0
 Overload Thunder Beam	Zeke	Big Bang Edge	Ether	360/390/420/450/480/500	7	Ahead	7/7/6/6/5/4	None	Increases damage dealt to machines by [25/25/35/35/50/50]%.	0/320/1440/3200/8000	AOE / Machines↑	12	2	14	0	0
 ULFS Max	Zeke	Big Bang Edge	Ether	420/450/480/510/540/589	2	Circle (User)	11/11/10/10/9/8	Blowdown	Increases damage dealt to toppled enemies by [100/100/120/120/150/150]%.	0/360/1620/3600/9000	AOE / Toppled↑/ Blowdown	9	2	14	0	0
-Stoking the Fire	Mòrag	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/860/3890/8640/21600	Heal party	200	0	20	0	0
 Cyclone Smash	Rex	Dual Scythes	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/360/1620/3600/9000	Low HP↑	8	0	10	0	0
 Wild Scythe	Rex	Dual Scythes	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/440/1980/4400/11000	HP down / Evasion	8	0	10	0	0
 Wing Smash	Rex	Dual Scythes	Physical	250/300/350/400/450/500	1	One Target	12/12/11/11/10/9	Smash		0/480/2160/4800/12000	Smash	8	0	10	0	0
@@ -484,7 +483,6 @@ Capra Assault	Nia	Calamity Scythe	Physical	240/290/340/390/440/480	3	One Target	
 Grizzly Smash	Nia	Calamity Scythe	Physical	330/390/450/510/570/625	1	One Target	13/13/12/12/11/10	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/680/3080/6840/17100	Heal party on attack	8	0	14	0	0
 Creeping Slicer	Nia	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle (User)	8/8/7/7/6/5	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/840/3760/8360/20900	AOE / Aggro down	8	2	0	0	0
 Tempest Strike	Mòrag	Calamity Scythe	Physical	260/310/360/410/460/520	1	One Target	11/11/10/10/9/8	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/880/3960/8800/22000	Heal party on attack	8	0	14	0	0
-Twilight Twist	Zeke	Infinity Fans	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/720/3240/7200/18000	Beasts↑	8	0	20	0	0
 Sacred Beast's Blessing	Mòrag	Calamity Scythe	Physical	240/290/340/390/440/480	2	One Target	12/12/11/11/10/9	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/720/3240/7200/18000	HP Potion	8	0	14	0	20
 Cyclonic Blade	Mòrag	Calamity Scythe	Physical	360/410/460/510/560/600	1	One Target	13/13/12/12/11/10	Blowdown		0/640/2880/6400/16000	Blowdown	8	0	10	0	0
 Azure Dragon Storm	Mòrag	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle (User)	8/8/7/7/6/5	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/960/4320/9600/24000	Aggro down / AOE	8	2	0	0	0
@@ -519,6 +517,8 @@ Healing Trick	Nia	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/
 Albatross Cut	Mòrag	Infinity Fans	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	Aggroed↑	8	0	22	0	0
 2,000 Wings	Mòrag	Infinity Fans	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/580/2590/5760/14400	Beasts↑	8	0	20	0	0
 Black Wing Dance	Mòrag	Infinity Fans	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/790/3560/7920/19800	AOE / Front attack↑	8	2	20	0	0
+Stoking the Fire	Mòrag	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/860/3890/8640/21600	Heal party	200	0	20	0	0
+Twilight Twist	Zeke	Infinity Fans	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/720/3240/7200/18000	Beasts↑	8	0	20	0	0
 Bold Division	Zeke	Infinity Fans	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/880/3960/8800/22000	Aggroed↑	8	0	22	0	0
 Gutsy Cutter	Zeke	Infinity Fans	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/640/2880/6400/16000	AOE / Aggro up	8	3	20	0	0
 Exquisite Spiral	Zeke	Infinity Fans	Physical	220/260/300/340/380/440	2	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/960/4320/9600/24000	AOE / Front attack↑	8	2	20	0	0
