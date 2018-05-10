@@ -200,11 +200,11 @@ class Xenoblade2:
                 ON chips.name=chip_weapons.chip
                 JOIN xeno2.chip_locations
                 ON chips.name=chip_locations.chip
-                WHERE LOWER(name)=$1
+                WHERE LOWER(name)=$1 || ' chip'
                 GROUP BY name;
                 """
 
-        record = await ctx.pool.fetchrow(query, name)
+        record = await ctx.pool.fetchrow(query, name.replace(' chip', ''))
 
         if record is None:
             return await self.show_possibilities(ctx, 'chips', name)
