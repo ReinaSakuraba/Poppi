@@ -24,7 +24,10 @@ class Xenoblade2:
                     wp,
                     caption,
                     distance,
-                    hate
+                    radius,
+                    hate,
+                    '+' || accuracy_mod || '%',
+                    '+' || crit_mod || '%'
                 FROM xeno2.arts
                 WHERE LOWER(name)=$1;
                 """
@@ -34,7 +37,7 @@ class Xenoblade2:
         if record is None:
             return await self.show_possibilities(ctx, 'arts', name)
 
-        name, driver, weapon, type_, damage_ratio, hits, range_, recharge, reaction, description, wp, caption, distance, hate = record
+        name, driver, weapon, type_, damage_ratio, hits, range_, recharge, reaction, description, wp, caption, distance, radius, hate, accuracy_mod, crit_mod = record
 
         embed = discord.Embed(title=name, description=caption)
         embed.add_field(name='Driver', value=driver)
@@ -48,7 +51,10 @@ class Xenoblade2:
             embed.add_field(name='Decription', value=description, inline=False)
         embed.add_field(name='Reaction', value=reaction)
         embed.add_field(name='Distance', value=distance)
+        embed.add_field(name='Radius', value=radius)
         embed.add_field(name='Hate', value=hate)
+        embed.add_field(name='Accuracy Modifier', value=accuracy_mod)
+        embed.add_field(name='Crit Modifier', value=crit_mod)
         embed.add_field(name='WP', value=wp)
 
         await ctx.send(embed=embed)
