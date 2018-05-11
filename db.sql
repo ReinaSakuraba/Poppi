@@ -117,6 +117,30 @@ CREATE TABLE xeno2.skills (
 ALTER TABLE xeno2.skills OWNER TO poppi;
 
 --
+-- Name: specials; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.specials (
+    name text NOT NULL,
+    level smallint NOT NULL,
+    type text NOT NULL,
+    damage_ratio text NOT NULL,
+    hits smallint NOT NULL,
+    range text NOT NULL,
+    reaction text NOT NULL,
+    description text NOT NULL,
+    caption text NOT NULL,
+    distance smallint NOT NULL,
+    radius smallint NOT NULL,
+    hate smallint NOT NULL,
+    accuracy_mod smallint NOT NULL,
+    crit_mod smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.specials OWNER TO poppi;
+
+--
 -- Name: weapons; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -1884,6 +1908,212 @@ Battle Stance	Mòrag	Boosts Strength by 10%.	NG+	25000
 Survival Training	Mòrag	Increases maximum HP by 200.	NG+	5000
 Divination	Mòrag	Boosts Luck by 10%.	NG+	12500
 Cheer Master	Mòrag	Increases Affinity by 25% after winning a Special button challenge.	NG+	15000
+\.
+
+
+--
+-- Data for Name: specials; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.specials (name, level, type, damage_ratio, hits, range, reaction, description, caption, distance, radius, hate, accuracy_mod, crit_mod) FROM stdin;
+Flame Nova	1	Ether	300/360/420/480/540/576	1	One Target	None	Increases damage dealt to beasts by [60/70/80/90/100/100]%.	Absorb ether from the air and transform it into fighting spirit.	10	0	5	0	0
+Prominence Revolt	2	Ether	400/450/500/550/600/638	1	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Pillars of fire erupt from beneath all enemies.	15	100	5	0	0
+Blazing End	3	Ether	500/570/640/710/780/850	9	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Concentrate attack on a single enemy, incinerating them.	10	0	5	0	25
+Burning Sword	4	Ether	1150	11	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Cleave the enemy with a giant sword of flame that detonates on impact.	10	0	10	100	20
+Ray of Punishment	1	Ether	360/400/440/480/520/576	1	One Target	Knockback	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Fire concentrated arrows of light at an enemy.	15	5	5	0	0
+Photon Edge	2	Ether	440/480/520/560/600/638	13	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Move at light-speed to cut the enemy instantaneously.	15	100	5	0	25
+Lightning Buster	3	Ether	625/670/720/770/820/850	4	Circle (Target)	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Slice an enemy multiple times with a blade of light.	10	5	5	0	50
+Sacred Arrow	4	Ether	1400	7	Circle (Target)	None	Adds a 100% chance of dealing a guard-annulling attack.	Rain down arrows of light from above to tear the enemy apart.	10	50	10	100	40
+Starburst	1	Ether	720/720/720/720/720/720	6	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Blast a merciless siren beam through enemies.	20	0	35	100	100
+Radiant Flare	2	Ether	870/870/870/870/870/870	5	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Attack hostiles with a light-speed attack.	20	100	35	100	100
+Genesis Saber	3	Ether	1020/1020/1020/1020/1020/1020	6	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Pierce enemies with countless light blades created by ether.	20	100	35	100	100
+Infinity Blade	4	Ether	2025	1	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Unleash energy and sever the enemy with a sword of light.	10	0	100	100	60
+Raging Tiger	1	Physical	300/350/400/450/500/528	3	One Target	None	Absorbs [60/70/80/90/100/100]% of critical damage dealt as HP.	Slash repeatedly by unleashing your inner beast.	10	0	5	0	25
+Aqua Wave	2	Ether	360/400/440/480/520/580	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Attack enemies and heal allies with a wave of ether.	15	8	5	0	0
+Wild Roar	3	Ether	500/550/600/650/700/748	1	Ahead	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Shoot forward all ether collected by the rings.	15	3	5	0	0
+Dark Maelstrom	4	Ether	1100	5	One Target	None	Spawns a small HP Potion on hit, with a 100% chance to spawn 2.	Follow up Wild Roar with an overwhelming assault.	10	0	10	100	20
+Poppi Spinning Slash	1	Physical	300/340/380/420/460/480	4	Circle (User)	None		Attack all within range with spinning motion.	10	4	25	0	0
+Noponic Storm	2	Ether	400/440/480/520/560/580	6	Ahead	Knockback		Shoot out a vortex of ether created within the body.	15	3	25	0	0
+Poppi Drill	3	Physical	500/540/580/620/660/714	1	One Target	None		Charge with jet propulsion like a spinning drill.	10	0	25	0	0
+Jet Biter	4	Physical	500	1	One Target	None	Increases damage dealt to toppled enemies by 150%.	Attack with the Big Mecha Biter (once charged).	10	0	40	100	20
+Poppi Missile	1	Ether	300/340/380/420/460/480	2	Circle (Target)	None		Launch a large missile and audaciously bomb the enemy.	10	5	20	0	0
+Poppi Crushing Blow	2	Physical	400/440/480/520/560/609	5	One Target	None		Pulverize the enemy with a spinning punch then an explosive uppercut.	15	5	20	0	0
+Noponic Destruction	3	Ether	525/570/610/650/690/748	1	Ahead	None		Launch countless missiles while in the air to mow down your enemies.	15	3	20	0	0
+Quixotic Megaburst	4	Ether	550	6	One Target	Blowdown	Increases damage dealt to launched enemies by 150%.	Fire off numerous destructive missiles (once charged).	10	0	30	100	40
+Poppi Ignition	1	Physical	300/340/380/420/460/480	5	One Target	None		Shoot repeated slashing attacks while maneuvering freely.	10	0	20	0	25
+Noponic Axion	2	Ether	400/440/480/520/560/609	5	Ahead	None		Mop up the enemy with a laser blast in bombardment mode.	15	2	20	0	25
+Poppi Unlimited	3	Ether	500/550/600/650/700/748	4	One Target	None		Overwhelm the enemy with unlimited repeat attacks.	10	0	20	25	50
+Quantum Judgment	4	Ether	575	10	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Dice the enemy and unleash 100% power in mid-air.	10	0	30	100	60
+Death Wing	1	Physical	300/340/380/420/460/480	4	One Target	None	Increases damage dealt to aerial creatures by [60/70/80/90/100/100]%.	Combine the Dual Scythes and throw them at the enemy.	10	0	5	25	0
+Crushing Twister	2	Physical	400/440/480/520/560/580	8	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Take the enemy by surprise with acrobatic movements.	10	0	5	0	0
+Feather Typhoon	3	Ether	500/540/580/620/660/680	4	Ahead	Blowdown	[1/2/3/4/5/5]% chance of felling an aerial foe on attack (fails on bosses/uniques).	Create a giant vortex to suck up the enemy in one go.	15	3	5	0	25
+Crimson Storm	4	Physical	575	2	One Target	Blowdown	Increases damage dealt to launched enemies by 150%.	Roc follows up Driver attack with an assault from the air.	10	0	0	100	40
+Heat Haze	1	Ether	300/340/380/420/460/480	4	Circle (Target)	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Spin your weapon round and incinerate enemies within range.	10	5	25	0	0
+Will-o'-the-Wisp	2	Ether	400/440/480/520/560/609	16	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Blue flames follow the enemy and deal damage.	15	0	25	25	0
+Swirling Dragon	3	Physical	500/550/600/650/700/748	11	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Swing round your weapon and focus the attack on a single enemy.	10	0	25	0	25
+Azure III: Soulfire	4	Ether	1000	16	One Target	None	Increases damage dealt to enemies targeting user by 100%.	Engulf the enemy in countless blue flames, reducing them to ashes.	20	0	40	100	20
+Lightning Force	1	Ether	270/340/410/480/550/600	1	Ahead	None	Increases damage dealt to machines by [60/70/80/90/100/100]%.	Catch a lightning strike with your wand and throw it out to attack enemies.	10	3	5	0	25
+Electric Circus	2	Physical	360/430/500/570/640/725	2	Ahead	None	Increases critical damage by [25/40/55/70/85/85]%.	Manipulate an electrified weapon with your wand and attack the enemy.	10	4	5	0	25
+Thunder Doom	3	Ether	450/530/610/690/770/850	1	Circle (Target)	None	Increases critical damage by [25/40/55/70/85/85]%.	Smash your weapon into the ground for a massive lightning explosion.	10	5	5	0	25
+Sonic Thunderslash	4	Physical	1150	16	One Target	None	Increases critical damage by 85%.	Power up Driver to strike the enemy at ultra high speed.	10	0	10	100	60
+Last Hope	1	Physical	315/350/390/430/470/504	3	One Target	None	Restores [10/12/15/17/20/20]% HP of damage dealt when a Special connects.	Drain enemies' life force, and distribute it to allies.	10	0	5	0	0
+Merciful Heart	2	Ether	420/460/500/540/580/609	1	Ahead	Knockback	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Attack enemies with a water shock wave.	10	3	5	0	0
+Redeeming Strike	3	Ether	525/560/600/640/680/714	2	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Destroy enemies from within by manipulating the power of regeneration.	10	100	5	0	0
+Divine Sword	4	Ether	1150	6	One Target	Blowdown	When landing a hit, restores 50% of damage dealt to the whole party.	Invert the power of regeneration to erode the enemy from within.	10	0	10	100	20
+Water Moon	1	Ether	300/340/380/420/460/480	1	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Gather ether in the Chroma Katana and release it as you draw the blade.	15	0	25	0	0
+Breaking Wave	2	Physical	400/440/480/520/560/609	3	One Target	Knockback	Increases critical damage by [25/40/55/70/85/85]%.	Use a flying kick to dissolve the enemy's composure then tear them up.	10	0	25	0	25
+Midnight Mist	3	Physical	500/550/600/650/700/748	13	One Target	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Perform a series of quick draw slashes the moment you engage the enemy.	10	0	25	0	0
+Sea God's Tidal Wave	4	Physical	500	3	One Target	Knockback	Increases damage dealt to enemies targeting user by 100%.	Sharpen senses and unleash a series of fierce strikes.	10	0	40	100	40
+Tough Break	1	Physical	300/340/380/420/460/480	1	One Target	Knockback	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Attack by grasping your shield and thrusting forward with all your might.	10	0	35	0	0
+Cold Judgment	2	Ether	400/440/480/520/560/580	1	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Create a shock wave and ice pillar to overwhelm the enemy.	10	5	35	0	0
+Justice Blizzard	3	Ether	500/540/580/620/660/680	7	Circle (Target)	Blowdown	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Release all power and cause a massive ice explosion.	10	5	35	0	0
+Whiteout	4	Physical	500	5	One Target	Blowdown		Attack repeatedly and slam your weapon to create a shockwave.	10	0	50	100	20
+Brutal Lance	1	Physical	300/340/380/420/460/480	4	Ahead	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Spin weapon erratically and strike.	10	4	5	0	0
+Termination Blast	2	Ether	400/440/480/520/560/609	6	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Shoot out absorbed energy in a laser blast.	15	2	5	25	0
+Hellbound	3	Physical	500/550/600/650/700/748	14	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Fly up and perform a drop attack with maximum power.	10	0	5	0	25
+Apocalypse	4	Physical	690	6	One Target	Blowdown	Increases critical damage by 85%.	Jab at the enemy repeatedly and fire a laser from the chest.	10	0	10	100	60
+Dark Serpent	1	Ether	300/340/380/420/460/480	4	Ahead	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Attack by spraying out dark ether.	10	3	25	0	0
+Blade Vortex	2	Physical	400/440/480/520/560/580	1	One Target	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	At the moment of movement, perform quick draw cuts at visible speed.	10	0	25	0	0
+Grim Moon	3	Physical	500/550/600/650/700/748	2	Ahead	None	Adds [1/1/2/2/3/3]% chance to incapacitate enemy (fails on bosses and uniques).	Adopt a quick draw pose, then in an instant slash all enemies in range.	10	8	25	0	25
+Demon Quadrant	4	Physical	500	4	One Target	Knockback	Adds 3% chance to incapacitate enemy (fails on bosses and uniques).	Mow down the enemy with 3 strikes, then finish with an almighty slice.	10	0	50	100	50
+Blood Altar	1	Physical	270/300/330/360/390/432	3	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Slap the enemy with the side of your weapon, then go on the attack.	10	0	5	0	0
+Tainted Palace	2	Physical	360/400/440/480/520/580	4	Ahead	None	[1/2/3/4/5/5]% chance of felling a beast on attack (fails on bosses/uniques).	Seal enemy movements and pierce with the lance as far as possible.	10	3	5	25	0
+Accursed Prison	3	Ether	450/510/570/630/690/748	5	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Throw your weapon twice, then hit the enemy with a drop attack.	10	6	5	0	25
+Dark Drama	4	Physical	575	4	One Target	None	Increases damage dealt by 150% when HP is 30% or less.	Lose control completely and batter the enemy with the lance.	10	0	10	100	60
+Heliodor Passion	1	Physical	300/340/380/420/460/480	3	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	The thrown weapon spins and cuts up the enemy.	10	0	5	0	0
+Star Beryl Courage	2	Physical	400/440/480/520/560/580	3	One Target	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Swing the weapon down with all your strength as if digging.	10	0	5	0	0
+Rhodochrosite Might	3	Ether	500/540/580/620/660/680	3	Ahead	None	Increases critical damage by [25/40/55/70/85/85]%.	Attack the enemy by smashing up a crystal.	10	3	5	0	25
+Invincible Moldavite	4	Ether	500	7	One Target	Blowdown	Increases damage dealt to toppled enemies by 150%.	Launch an attack while spinning the weapon around.	10	0	10	100	20
+Innocent Teardrop	1	Ether	300/340/380/420/460/480	1	Ahead	Knockback	Increases Affinity by [60/70/80/90/100/100] when using a Special.	Condense water ether and attack all enemies over a wide range.	10	5	5	0	0
+Bittersweet Dreams	2	Ether	400/440/480/520/560/580	3	Circle (Target)	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Attack by shooting out water ether from your spinning weapon.	10	6	5	0	25
+Leave Me Alone	3	Physical	500/540/580/620/660/680	8	One Target	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	After high-speed spinning slashes, launch a giant water pillar.	10	0	5	25	0
+Rock My World	4	Ether	500	3	Circle (Target)	Blowdown		Use the momentum of a spinning cut to jump and fire a shockwave.	10	4	10	100	20
+Open Wide!	1	Physical	300/350/400/450/500/528	1	One Target	None	Absorbs [60/70/80/90/100/100]% of critical damage dealt as HP.	Cover your whole body with wind ether and charge.	15	0	5	0	0
+Snack On This!	2	Ether	400/440/480/520/560/580	5	One Target	None	Restores [10/12/15/17/20/20]% HP of damage dealt when a Special connects.	Chew a Bitball and shoot out balls of energy.	20	0	5	0	0
+Gobble 'em Up!	3	Ether	550/590/630/670/710/748	6	Ahead	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Shoot out a laser while in the air and eradicate your enemies.	15	8	5	0	25
+Gobble Gobble!	4	Ether	500	2	One Target	None	When landing a hit, restores 50% of damage dealt to the whole party.	Jump after a spinning attack to fire a hail of bullets.	15	0	10	100	20
+Flame Crown	1	Physical	300/340/380/420/460/480	1	One Target	None	Increases damage dealt to aquatic organisms by [60/70/80/90/100/100]%.	Calmly draw near the enemy and perform intense slashing attacks.	10	0	5	0	0
+Tyrant Crush	2	Physical	400/450/500/550/600/638	3	One Target	Blowdown	Increases critical damage by [25/40/55/70/85/85]%.	Pursue a downed enemy with a kick and perform spinning slashes.	10	0	5	0	0
+Kaiser Flare	3	Ether	500/550/600/650/700/748	2	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Spread maximum ether and incinerate everything.	10	3	5	25	25
+Blazing Conquest	4	Ether	600	1	One Target	None	Increases damage dealt to toppled enemies by 150%.	Slowly build up energy to burn the enemy to a crisp.	10	0	10	100	40
+Flame Crown (Weak)	1	Physical	120/130/140/150/160/192	1	One Target	None	Increases damage dealt to aquatic organisms by [60/70/80/90/100/100]%.	Calmly draw near the enemy and perform intense slashing attacks.	10	0	5	0	0
+Tyrant Crush (Weak)	2	Physical	160/170/180/190/200/232	3	One Target	Blowdown	Increases critical damage by [25/40/55/70/85/85]%.	Pursue a downed enemy with a kick and perform spinning slashes.	10	0	5	0	0
+Kaiser Flare (Weak)	3	Ether	200/210/220/230/240/272	2	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Spread maximum ether and incinerate everything.	10	3	5	25	25
+Blazing Conquest (Weak)	4	Ether	450	1	One Target	None	Increases damage dealt to toppled enemies by 150%.	Slowly build up energy to burn the enemy to a crisp.	10	0	10	100	40
+Sentimental Burst	1	Ether	300/340/380/420/460/480	1	One Target	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Condense dark ether until it explodes.	10	0	35	0	0
+Hidden Emotion	2	Ether	400/440/480/520/560/609	1	Ahead	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Hit the shield while in the air, and emit a large amount of healing.	10	3	35	0	0
+Secret Desire	3	Physical	500/550/600/650/700/748	7	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Enter unconscious state with the mask and draw out your true power.	10	0	35	0	0
+Melancholic Break	4	Ether	600	6	One Target	None		Offer prayers to your shield, then release a large number of bandages.	10	0	50	100	20
+Foam Blast	1	Ether	270/310/350/390/430/456	1	Ahead	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Transform ether into bubble form and spray it forward.	10	3	0	0	0
+Geyser Spring	2	Ether	400/440/480/520/560/609	1	Ahead	Knockback	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Gather ether on your weapon and shoot it out as a powerful current of water.	15	2	5	25	0
+Fierce Deluge	3	Physical	500/540/580/620/660/680	9	One Target	None	Increases damage dealt from the side by [100/110/120/130/150/150]%.	Use water ether to attack with high-speed repeated thrusts.	10	0	5	0	0
+Torrential Pain	4	Physical	400	5	One Target	Knockback / Blowdown	Increases damage dealt from the side by 150%.	Launch a continuous, hard-to-dodge attack at high speeds.	10	0	10	100	40
+Ice Slash	1	Ether	300/340/380/420/460/480	2	Ahead	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	After throwing ice knives, attack with slashes.	15	3	25	25	0
+Frost Banish	2	Physical	400/440/480/520/560/609	4	One Target	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Release a powerful somersault kick after three repeat attacks.	10	0	25	0	0
+Rebel Sister	3	Ether	500/550/600/650/700/748	2	Circle (Target)	None	Increases critical damage by [25/40/55/70/85/85]%.	With one slash, smash an ice pillar and attack enemies over a wide area.	10	8	25	0	0
+Winter's Wake	4	Physical	400	4	One Target	None	Increases damage dealt to enemies targeting user by 100%.	Hurl out continuous ice strikes to freeze the enemy in their tracks.	10	0	40	100	40
+Cold Sever	1	Physical	300/340/380/420/460/480	16	One Target	None	Increases damage dealt from the side by [100/110/120/130/150/150]%.	Use ice ether to attack with a series of high-speed stabs.	10	0	5	0	0
+Punishment Strike	2	Ether	400/440/480/520/560/580	1	Circle (Target)	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Swing your weapon round above your head to create a giant block of ice.	10	5	5	0	0
+Extinction Icicle	3	Physical	500/540/580/620/660/680	1	One Target	None	Increases damage dealt when an ally is incapacitated by [50/75/100/125/150/150]%.	Create a giant ice lance and use it in an extra powerful charge.	10	0	5	0	25
+Snowflake of Judgment	4	Physical	450	8	One Target	Blowdown	Increases damage dealt when an ally is incapacitated by 150%.	After a series of trifling cuts, unleash a giant pillar of ice.	10	0	10	100	40
+Electric Pompom	1	Ether	300/340/380/420/460/480	1	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Do lively jumps and smash your weapon into the ground.	10	0	5	0	0
+Vivid Love	2	Ether	400/440/480/520/560/580	1	Ahead	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Give heart-shaped electric ether to your enemies as a present.	15	3	5	0	0
+Angelic Drop	3	Physical	500/550/600/650/700/748	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Release a powerful flying kick while spinning your weapon.	10	5	5	0	25
+Sweet Emotion	4	Ether	500	2	One Target	None	Spawns a small HP Potion on hit, with a 100% chance to spawn 2.	Break the enemy's block, then throw a full-strength lightning punch.	10	0	10	100	20
+Nightmare Rondeau	1	Ether	300/340/380/420/460/480	5	Circle (Target)	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Throw your weapon spinning into the air so it shoots out lasers.	20	6	5	0	0
+Shadow Rhapsody	2	Ether	400/440/480/520/560/580	10	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Ether becomes a dark hand that rises out of the ground to attack the enemy.	20	3	5	25	0
+Decadent Finale	3	Ether	500/540/580/620/660/680	3	Circle (Target)	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Throw your weapon into the air and spray bullets to annihilate the enemy.	20	2	5	50	25
+Evil Ensemble	4	Ether	400	5	One Target	None	Increases damage dealt by 150% when HP is 30% or less.	Fire bullets continuously at the enemy while dancing in a circle.	20	0	10	100	40
+Beary Strong	1	Physical	300/340/380/420/460/504	2	One Target	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Beary swipes his ice claws and mows down the enemy.	10	0	5	0	25
+Beary Helpful	2	Ether	380/410/440/470/500/551	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Beary attacks the enemy with an ice shockwave.	15	10	5	0	0
+Beary-Go-Round	3	Physical	550/600/650/700/750/816	8	One Target	Blowdown	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Beary spins round and overwhelms all enemies in range.	10	0	5	0	0
+Ursine Phantasm	4	Ether	550	5	One Target	Knockback / Blowdown	When landing a hit, restores 50% of damage dealt to the whole party.	Attack with an uppercut while Beary rushes the enemy.	15	0	10	100	20
+Flaming Slashwave	1	Ether	300/340/380/420/460/480	1	Ahead	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Change ether into flaming slashes that shoot out ahead.	15	3	25	25	0
+Immolating Cleave	2	Physical	440/480/520/560/600/638	1	Ahead	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Wrap the Chroma Katana in flames and cut enemies ahead in two.	10	3	25	0	0
+Extreme Gutsy Spirit	3	Physical	600/640/680/720/760/816	12	One Target	Blowdown	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	After dealing a series of violent punches, cut enemies in two.	10	0	25	0	50
+Going Ballistic	4	Physical	575	4	One Target	Knockback / Blowdown		Attack with a series of cuts, then an explosion with ether from the scabbard.	10	0	40	100	40
+Fierce Healer	1	Ether	285/320/350/380/410/456	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Shoot out your own ether as a shockwave.	10	10	5	0	0
+Wild Grappler	2	Physical	400/440/480/520/560/609	4	One Target	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Rush in wielding a weapon of concentrated ether.	10	0	5	0	0
+Organic Automata	3	Ether	550/600/650/700/750/782	5	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Kit and Sunny emit a laser beam.	10	12	5	0	0
+Earth Priestess	4	Ether	500	5	One Target	None		After a series of attacks, hit the enemy with a high-powered laser shot.	10	0	10	100	20
+Dessert Bomb	1	Ether	270/300/330/360/390/432	1	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 90% or higher.	Explode a giant ball of water ether in mid-air.	20	6	5	0	0
+Tea Leaves	2	Physical	380/410/440/470/500/551	1	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	An unprecedented bathtub-based charging assault.	20	5	5	0	50
+Golden Font	3	Ether	500/540/580/620/660/680	1	Circle (Target)	Blowdown	Adds [60/70/80/90/100/100]% chance to drop gold upon landing a hit.	Fly up in the bath and attack indiscriminately.	100	100	5	0	0
+Royal Tea Party	4	Ether	690	13	One Target	None		Sheba sits in her bathtub to attack in tandem with her watery lover.	20	0	10	100	60
+Healing Bolt	1	Ether	300/340/380/420/460/480	2	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Swing your weapon round your head and release a shockwave.	15	5	5	0	0
+Ball Lightning	2	Ether	400/440/480/520/560/580	1	One Target	None	Increases damage dealt to machines by [60/70/80/90/100/100]%.	Throw your weapon about randomly and cause a lightning explosion.	15	5	5	0	0
+Thunderstrike	3	Ether	550/590/630/670/710/748	2	One Target	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Kick a ball and lightning will strike where it bounces.	10	0	5	0	25
+Divine Plasma	4	Ether	425	1	One Target	None	When landing a hit, restores 50% of damage dealt to the whole party.	Attack the enemy with a ball of lightning formed by Vess's weapon.	15	0	10	100	20
+Harness the Wind	1	Ether	300/340/380/420/460/480	1	Circle (Target)	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Compress wind ether and blow away the enemy.	15	5	5	0	0
+Slipstream	2	Ether	400/440/480/520/560/580	3	Ahead	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Create a vacuum with high-speed chops and kicks.	15	4	5	0	25
+Mortal Storm	3	Physical	550/590/630/670/710/748	5	One Target	Knockback / Blowdown	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Hit the enemy with a series of compressed air kicks.	15	0	5	50	50
+Literacy Beatdown	4	Ether	550	5	One Target	Blowdown		As the enemy recoils from a series of attacks, fire a blast of compressed air.	10	0	10	100	60
+Bang-Bang Bound	1	Ether	285/320/350/380/410/456	3	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Hit the ground while cheerfully jumping and bounding.	10	3	35	0	0
+Shocking Assault	2	Ether	380/430/480/530/580/609	1	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Charge forward after charging up electric ether.	10	0	35	0	0
+Rolling Thunder	3	Ether	500/550/600/650/700/748	3	Circle (Target)	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Create thunder clouds and attack enemies in range with lightning strikes.	10	5	35	0	25
+Electrifying Show	4	Physical	400	3	One Target	None	Increases damage dealt from the front by 100%.	Electra hits her weapon like a drum to trigger a shockwave.	10	0	50	100	20
+Diabolic Zephyr	1	Physical	330/370/410/450/490/528	2	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Gently raise the axe overhead then bring it down crashing.	10	4	5	0	25
+Adamantine Axe	2	Physical	480/520/560/600/640/696	1	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Quickly raise the axe overhead and attack quickly.	10	5	5	0	0
+Ascension Blade	3	Ether	625/670/720/770/820/850	10	One Target	None	Increases damage dealt to higher-level enemies by [60/70/80/90/100/100]%.	Fly around cutting up the enemy with powerful slash attacks.	10	5	5	0	50
+Twixt Heaven & Hell	4	Physical	600	8	One Target	None	Increases damage dealt to higher-level enemies by 100%.	Strike down on the enemy from on high with a powerful weapon.	10	0	10	100	60
+Blast of Fresh Air	1	Ether	315/350/390/430/470/504	1	Circle (Target)	Knockback	Increases Affinity by [60/70/80/90/100/100] when using a Special.	Swing the hammer and hit ether balls.	15	5	5	0	0
+Whoopsie Crazy	2	Physical	440/480/520/560/600/638	3	One Target	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Attack enemies within range while jumping and spinning your weapon.	10	0	5	0	25
+Wake-Up Whirl	3	Physical	575/620/660/700/740/782	1	Circle (Target)	Blowdown	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	After jumping up in the sky, crash into the ground at high speed.	10	5	5	0	0
+Perfect Storm	4	Ether	500	4	One Target	None		During a spinning attack...slip and let go of the hammer.	10	0	80	100	20
+Lavender Drive	1	Physical	300/340/380/420/460/480	3	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Kick a Bitball three times while spinning.	10	0	5	0	0
+Lilium Dance	2	Ether	400/440/480/520/560/609	3	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Release a shockwave while spinning a Bitball.	15	5	5	0	0
+Physalis Judgment	3	Ether	550/600/650/700/750/782	1	Circle (Target)	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Massively enlarge a Bitball and roll it over the enemy.	10	5	5	0	25
+Lethal Lavender	4	Ether	500	6	One Target	None	When landing a hit, restores 50% of damage dealt to the whole party.	Spin along with the Bitball to send out a shockwave in all directions.	15	0	10	100	20
+R-Blade	1	Ether	330/370/410/450/490/528	4	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Put your enemies into a hornet's nest by spraying out bullets.	20	0	5	0	50
+H-Effect R	2	Ether	480/520/560/600/640/696	4	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Develop the Hilbert Effect and change the course of battle.	20	50	5	0	0
+F-G-Shot	3	Ether	650/700/750/800/850/884	16	Ahead	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	After charging energy, shoot out scattered laser beams.	20	2	5	50	100
+X-Buster	4	Ether	719	9	Ahead	None	Adds a 100% chance of dealing a guard-annulling attack.	Fire a concentrated laser beam, but only when energy reserves are full.	20	5	10	100	60
+Empyrean Salvo	1	Ether	300/350/400/450/500/528	16	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Launch homing missiles from your weapon and tail.	20	0	5	0	0
+The Heavens Open	2	Ether	400/460/520/580/640/696	1	Circle (Target)	Blowdown	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Release maximum electric ether and cause a huge explosion.	20	5	5	0	50
+Final Retribution	3	Physical	500/580/660/740/820/884	3	Ahead	Blowdown	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Remove limiter and charge the enemy, exterminating them.	20	4	5	50	100
+Heaven on Earth	4	Ether	621	8	One Target	Blowdown	Increases critical damage by 85%.	Fire a super-strong laser to annihilate the enemy.	20	0	10	100	60
+Crystal Blizzard	1	Ether	300/340/380/420/460/480	1	Circle (Target)	None	Increases critical damage by [25/40/55/70/85/85]%.	Lift foot up high and throw the ball as hard as possible.	15	5	5	0	25
+Snowblind	2	Ether	400/440/480/520/560/580	1	One Target	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Kiss and attack with a ball filled with ether.	15	0	5	0	0
+Frost Queen	3	Ether	500/550/600/650/700/748	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Charge up a Bitball on an ice stage, then attack.	15	10	5	25	0
+Silver-Snow Glory	4	Ether	450	5	One Target	None	When landing a hit, restores 50% of damage dealt to the whole party.	Fire icy crystals from the ball as it moves around Dahlia.	15	0	10	100	20
+Storm Edge	1	Ether	300/340/380/420/460/480	1	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Slash enemies in Tonfa mode and create a whirlwind.	10	0	5	0	0
+Engrave	2	Ether	400/450/500/550/600/638	10	Ahead	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Pierce the enemy countless times in Sword mode.	10	3	5	0	0
+Death Match	3	Ether	550/600/650/700/750/816	3	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Shoot out a whirlwind to collect ether in Shield mode.	10	5	5	0	50
+Deadly Divide	4	Physical	575	1	One Target	None		Slash the enemy with a giant blade of ether.	10	0	10	100	60
+White Wave	1	Ether	300/340/380/420/460/480	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Release a shockwave from your weapon in Shield mode.	10	10	5	0	0
+Sacred Wyrm	2	Ether	400/450/500/550/600/638	4	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 90% or higher.	Shoot in Bow mode while flying back.	10	0	5	50	0
+Dark Judgment	3	Physical	550/600/650/700/750/816	5	One Target	None	Restores [10/12/15/17/20/20]% HP of damage dealt when a Special connects.	Cut up the enemy while spinning horizontally in the air with a kama.	10	0	5	0	50
+Hellwind of Ruin	4	Ether	575	6	One Target	Blowdown	Adds a 100% chance of dealing a guard-annulling attack.	Perform a spinning attack in the air, finishing with a bowshot.	10	0	10	100	40
+Swallow's Flight	1	Physical	300/340/380/420/460/480	3	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Perform a horizontal sweeping three-pronged attack.	10	0	5	0	50
+Great Garland	2	Ether	420/460/500/540/580/609	1	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Smash the naginata into the ground to send out a shockwave.	10	10	5	0	0
+Dragonfly Slash	3	Ether	550/620/690/760/830/884	3	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Release a strong slashing attack with a backward somersault.	10	3	5	0	50
+Illusory Bloom	4	Ether	600	10	One Target	Blowdown	Increases damage dealt by 150% when HP is 30% or less.	Transform weapon into scimitar and hack the enemy to pieces.	10	0	10	100	60
+Crow Beat	1	Ether	300/340/380/420/460/480	1	Circle (Target)	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Soar into the air and attack with black wings.	10	5	5	0	0
+Crow Feather	2	Ether	400/440/480/520/560/580	1	Ahead	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Deal serious damage simply by twisting your fan.	10	3	5	0	0
+Final Crow	3	Ether	500/540/580/620/660/680	1	Circle (Target)	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Compress ether between two fans and shoot it at the enemy.	10	5	5	50	50
+Ultimate Crow	4	Ether	575	10	One Target	Blowdown		Flourish two fans to slice the enemy with an elegant dance.	10	0	10	100	40
+Shred	1	Physical	300/340/380/420/460/480	8	One Target	None	Increases damage dealt from the back by [100/110/120/130/150/150]%.	Tear into the enemy at great speed, haphazardly wielding your weapon.	10	0	5	0	0
+Skewer	2	Ether	400/440/480/520/560/580	6	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 90% or higher.	Create a short sword from electric ether and skewer the enemy.	18	0	5	100	50
+Cruel World	3	Ether	500/540/580/620/660/680	6	Ahead	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Emits a mysterious light from giant eyes on your wings.	10	3	5	0	0
+Lacerator	4	Ether	575	10	One Target	Knockback	Increases damage dealt by 150% when HP is 90% or higher.	Slash the enemy and emit mystic rays of light from your wings.	10	0	10	100	40
+Diamond Crash	1	Physical	300/340/380/420/460/480	1	One Target	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Bash the hammer into the ground and set off a shockwave.	20	0	5	0	0
+Diamond Flight	2	Ether	420/460/500/540/580/609	5	Circle (Target)	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Release ether in one burst, attacking indiscriminately.	20	5	5	0	0
+Diamond Hands	3	Physical	550/600/650/700/750/816	4	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Wield four weapons and shower the enemy with blows.	20	0	5	50	50
+Diamond Inferno	4	Physical	625	8	One Target	None		Annihilate the enemy with attacks from four different weapons.	20	0	10	100	80
+Dead Ball	1	Ether	300/340/380/420/460/480	1	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Throw out a ball of condensed energy from your right hand.	10	0	5	50	0
+Berserk March	2	Physical	440/500/560/620/680/725	4	Ahead	Knockback / Blowdown	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Go on a rampage, bowling over the enemy.	10	4	5	0	50
+Earth Breath	3	Ether	550/590/630/670/710/748	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Hit the ground with ether collected between both fists.	10	5	5	0	0
+Star Crusher	4	Ether	575	4	One Target	Knockback	Increases critical damage by 85%.	Rush down the enemy and slam them with a leaping body press.	10	0	10	100	40
+ECHIDNA	1	Physical	330/370/410/450/490/528	2	One Target	Knockback	Increases critical damage by [25/40/55/70/85/85]%.	Deliver a slashing attack, and follow it up with a powerful kick.	10	0	5	0	25
+MAGDALENE 16	2	Ether	480/520/560/600/640/696	7	Ahead	None	Increases damage dealt to higher-level enemies by [60/70/80/90/100/100]%.	Deliver a whirling blow followed by a wild volley of shots.	10	2	5	0	25
+T-SKYLLA	3	Ether	650/700/750/800/850/884	4	Ahead	Blowdown	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Unleash a midair slash and then unload your firearm at the enemy.	10	4	5	50	100
+U-TENERITAS	4	Ether	719	2	Ahead	None	Adds a 100% chance of dealing a guard-annulling attack.	Detonate a high-energy explosive that damages all enemies in the vicinity.	10	5	10	100	60
+Buster Cyclone	1	Physical	300/350/400/450/500/528	7	Circle (Target)	Blowdown	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Transform your weapon into knuckle claws and barrel into the enemy.	10	6	35	0	0
+Buster Cannon	2	Ether	400/460/520/580/640/696	1	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Transform your weapon into a cannon and unload it into the enemy.	15	6	35	0	0
+Buster Mirage	3	Physical	500/570/640/710/780/850	7	Ahead	Knockback	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Unleash the combined power of Poppi Mk. II and Poppibuster on the enemy.	10	3	35	0	25
+Buster Impact	4	Ether	975	9	Circle (Target)	Knockback	Adds a 100% chance of dealing a guard-annulling attack.	Initiate Poppibuster self-destruct mode.	10	12	50	100	20
+Union Sword	4	Ether	1500	5	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Beat the enemy to a pulp with a medley of fire and water.	10	0	10	100	40
+Nexus Force	4	Ether	1500	2	One Target	Blowdown	When landing a hit, restores 50% of damage dealt to the whole party.	Beat the enemy to a pulp with a medley of fire and water.	10	0	10	100	40
 \.
 
 
@@ -31012,6 +31242,14 @@ ALTER TABLE ONLY xeno2.chips
 
 ALTER TABLE ONLY xeno2.skills
     ADD CONSTRAINT skills_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: specials_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.specials
+    ADD CONSTRAINT specials_pkey PRIMARY KEY (name);
 
 
 --
