@@ -78,6 +78,72 @@ class Xenoblade2:
             await ctx.send('Missing art name.')
 
     @utils.group(invoke_without_command=True)
+    async def xc2special(self, ctx, *, name: str.lower):
+        """Gives information for a Xenoblade Chronicles 2 special."""
+
+        query = """
+                SELECT
+                    name,
+                    level,
+                    type,
+                    damage_ratio,
+                    hits,
+                    range,
+                    reaction,
+                    description,
+                    caption,
+                    distance,
+                    radius,
+                    hate,
+                    '+' || accuracy_mod || '%',
+                    '+' || crit_mod || '%'
+                FROM xeno2.specials
+                WHERE LOWER(name)=$1;
+                """
+
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'specials', name)
+
+        name, level, type_, damage_ratio, hits, range_, reaction, description, caption, distance, radius, hate, accuracy_mod, crit_mod = record
+
+        embed = discord.Embed(title=name, description=caption)
+        embed.add_field(name='Type', value=type_)
+        embed.add_field(name='Hits', value=hits)
+        embed.add_field(name='Range', value=range_)
+        embed.add_field(name='Special Level', value=level)
+        embed.add_field(name='Reaction', value=reaction)
+        embed.add_field(name='Distance', value=distance)
+        embed.add_field(name='Radius', value=radius)
+        embed.add_field(name='Hate', value=hate)
+        embed.add_field(name='Accuracy Modifier', value=accuracy_mod)
+        embed.add_field(name='Crit Modifier', value=crit_mod)
+        embed.add_field(name='Damage Ratio', value=damage_ratio, inline=False)
+        if description:
+            embed.add_field(name='Decription', value=description, inline=False)
+
+        await ctx.send(embed=embed)
+
+    @xc2special.command(name='all')
+    async def xc2special_all(self, ctx):
+        """Lists all Xenoblade Chronicles 2 specials."""
+
+        await self.all_entries(ctx, 'specials')
+
+    @xc2special.command(name='search')
+    async def xc2special_search(self, ctx, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 special."""
+
+        await self.search_entries(ctx, 'specials', name)
+
+    @xc2special.error
+    @xc2special_search.error
+    async def xc2special_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing special name.')
+
+    @utils.group(invoke_without_command=True)
     async def xc2skill(self, ctx, *, name: str.lower):
         """Gives information for a Xenoblade Chronicles 2 skill."""
 
