@@ -304,6 +304,60 @@ class Xenoblade2:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing core chip name.')
 
+    @utils.group(invoke_without_command=True)
+    async def xc2core(self, ctx, *, name: str.lower):
+        """Gives information for a Xenoblade Chronicles 2 aux cores."""
+
+        query = """
+                SELECT
+                    name,
+                    effect,
+                    'Unrefined: ' || unrefined_sell_price || E'\n'
+                    'Refined: ' || refined_sell_price AS rarity,
+                    rarity,
+                    CASE WHEN material_type='Specific'
+                         THEN STRING_AGG(material || ' x' || amount, E'\n')
+                         ELSE material_type || ' x' || material_amount
+                    END AS materials
+                FROM xeno2.cores
+                LEFT JOIN xeno2.core_materials
+                ON name=core
+                WHERE LOWER(name)=$1
+                GROUP BY name
+                """
+
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'cores', name)
+
+        name, effect, sell_price, rarity, materials = record
+
+        embed = discord.Embed(title=name, description=effect)
+        embed.add_field(name='Rarity', value=rarity)
+        embed.add_field(name='Sell Price', value=sell_price)
+        embed.add_field(name='Refining Materials', value=materials)
+
+        await ctx.send(embed=embed)
+
+    @xc2core.command(name='all')
+    async def xc2core_all(self, ctx):
+        """Lists all Xenoblade Chronicles 2 aux cores."""
+
+        await self.all_entries(ctx, 'cores')
+
+    @xc2core.command(name='search')
+    async def xc2core_search(self, ctx, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 aux cores."""
+
+        await self.search_entries(ctx, 'cores', name)
+
+    @xc2core.error
+    @xc2core_search.error
+    async def xc2core_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing aux core name.')
+
     async def show_possibilities(self, ctx, table_name, name):
         query = f"""
                 SELECT
@@ -335,8 +389,7 @@ class Xenoblade2:
         results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query, name), 1)]
 
         if not results:
-            strip = 2 if table_name.endswith('es') else 1
-            type_name = table_name[:-strip].title()
+            type_name = table_name[:-1].title()
             return await ctx.send(f'{type_name} not found.')
 
         try:
