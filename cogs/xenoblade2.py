@@ -306,7 +306,7 @@ class Xenoblade2:
 
     @utils.group(invoke_without_command=True)
     async def xc2core(self, ctx, *, name: str.lower):
-        """Gives information for a Xenoblade Chronicles 2 aux cores."""
+        """Gives information for a Xenoblade Chronicles 2 aux core."""
 
         query = """
                 SELECT
@@ -348,7 +348,7 @@ class Xenoblade2:
 
     @xc2core.command(name='search')
     async def xc2core_search(self, ctx, *, name: str):
-        """Searches for a Xenoblade Chronicles 2 aux cores."""
+        """Searches for a Xenoblade Chronicles 2 aux core."""
 
         await self.search_entries(ctx, 'cores', name)
 
