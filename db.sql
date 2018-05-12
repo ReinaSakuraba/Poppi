@@ -102,6 +102,36 @@ CREATE TABLE xeno2.chips (
 ALTER TABLE xeno2.chips OWNER TO poppi;
 
 --
+-- Name: class_roles; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.class_roles (
+    class text NOT NULL,
+    role text NOT NULL
+);
+
+
+ALTER TABLE xeno2.class_roles OWNER TO poppi;
+
+--
+-- Name: classes; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.classes (
+    name text NOT NULL,
+    damage_given smallint NOT NULL,
+    damage_recieved smallint NOT NULL,
+    healing_given smallint NOT NULL,
+    auto_attack_aggro smallint NOT NULL,
+    arts_aggro smallint NOT NULL,
+    potion_collect boolean NOT NULL,
+    prioritize_revive boolean NOT NULL
+);
+
+
+ALTER TABLE xeno2.classes OWNER TO poppi;
+
+--
 -- Name: core_materials; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -1750,6 +1780,86 @@ Hadron Chip	14	8200	Rare
 Dilaton Chip	20	13500	Legendary
 Preon Chip	20	13500	Legendary
 Tachyon Chip	20	13500	Legendary
+\.
+
+
+--
+-- Data for Name: class_roles; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.class_roles (class, role) FROM stdin;
+Fighter	ATK
+Defender	TNK
+Healer	HLR
+Elite Fighter	ATK
+Elite Fighter	ATK
+Warrior	ATK
+Warrior	TNK
+Cavalier	ATK
+Cavalier	HLR
+Elite Defender	TNK
+Elite Defender	TNK
+Knight	TNK
+Knight	HLR
+Elite Healer	HLR
+Elite Healer	HLR
+Master Fighter	ATK
+Master Fighter	ATK
+Master Fighter	ATK
+Wild Warrior	ATK
+Wild Warrior	ATK
+Wild Warrior	TNK
+Wild Cavalier	ATK
+Wild Cavalier	ATK
+Wild Cavalier	HLR
+Master Defender	TNK
+Master Defender	TNK
+Master Defender	TNK
+Royal Warrior	TNK
+Royal Warrior	TNK
+Royal Warrior	ATK
+Royal Knight	TNK
+Royal Knight	TNK
+Royal Knight	HLR
+Master Healer	HLR
+Master Healer	HLR
+Master Healer	HLR
+Holy Cavalier	HLR
+Holy Cavalier	HLR
+Holy Cavalier	ATK
+Holy Knight	HLR
+Holy Knight	HLR
+Holy Knight	TNK
+Jack-of-all-Trades	ATK
+Jack-of-all-Trades	TNK
+Jack-of-all-Trades	HLR
+\.
+
+
+--
+-- Data for Name: classes; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.classes (name, damage_given, damage_recieved, healing_given, auto_attack_aggro, arts_aggro, potion_collect, prioritize_revive) FROM stdin;
+Fighter	10	0	0	0	0	f	f
+Defender	0	10	0	1	4	f	f
+Healer	0	0	30	0	-4	t	f
+Elite Fighter	15	0	0	0	0	f	f
+Warrior	10	10	0	0	4	f	f
+Cavalier	10	0	30	0	-4	t	t
+Elite Defender	0	15	0	2	8	f	f
+Knight	0	10	30	0	0	t	t
+Elite Healer	0	0	40	0	-8	t	t
+Master Fighter	20	0	0	0	0	f	f
+Wild Warrior	15	10	0	0	4	f	f
+Wild Cavalier	15	0	30	0	-4	t	f
+Master Defender	0	20	0	3	12	f	f
+Royal Warrior	10	15	0	0	8	f	f
+Royal Knight	0	15	30	0	4	t	f
+Master Healer	0	0	50	0	-12	t	t
+Holy Cavalier	10	0	40	0	-8	t	t
+Holy Knight	0	10	40	0	-4	t	t
+Jack-of-all-Trades	10	10	30	0	0	t	f
 \.
 
 
@@ -32011,6 +32121,14 @@ ALTER TABLE ONLY xeno2.chips
 
 
 --
+-- Name: classes_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.classes
+    ADD CONSTRAINT classes_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: core_materials_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -32160,6 +32278,14 @@ ALTER TABLE ONLY xeno2.chip_weapons
 
 ALTER TABLE ONLY xeno2.chip_weapons
     ADD CONSTRAINT chip_weapons_weapon_fkey FOREIGN KEY (weapon) REFERENCES xeno2.weapons(name);
+
+
+--
+-- Name: class_roles_class_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.class_roles
+    ADD CONSTRAINT class_roles_class_fkey FOREIGN KEY (class) REFERENCES xeno2.classes(name);
 
 
 --
