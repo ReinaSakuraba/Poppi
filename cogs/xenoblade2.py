@@ -313,7 +313,7 @@ class Xenoblade2:
                     name,
                     effect,
                     'Unrefined: ' || unrefined_sell_price || E'\n'
-                    'Refined: ' || refined_sell_price AS rarity,
+                    'Refined: ' || refined_sell_price AS sell_price,
                     rarity,
                     CASE WHEN material_type='Specific'
                          THEN STRING_AGG(material || ' x' || amount, E'\n')
