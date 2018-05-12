@@ -102,6 +102,36 @@ CREATE TABLE xeno2.chips (
 ALTER TABLE xeno2.chips OWNER TO poppi;
 
 --
+-- Name: core_materials; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.core_materials (
+    core text NOT NULL,
+    material text NOT NULL,
+    amount smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.core_materials OWNER TO poppi;
+
+--
+-- Name: cores; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.cores (
+    name text NOT NULL,
+    effect text NOT NULL,
+    unrefined_sell_price smallint NOT NULL,
+    refined_sell_price smallint NOT NULL,
+    rarity text NOT NULL,
+    material_type text NOT NULL,
+    material_amount smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.cores OWNER TO poppi;
+
+--
 -- Name: skills; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -1720,6 +1750,750 @@ Hadron Chip	14	8200	Rare
 Dilaton Chip	20	13500	Legendary
 Preon Chip	20	13500	Legendary
 Tachyon Chip	20	13500	Legendary
+\.
+
+
+--
+-- Data for Name: core_materials; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.core_materials (core, material, amount) FROM stdin;
+Blade Combo Boost I	Deer Wood	1
+Blade Combo Boost I	Puzzletree Wood	1
+Blade Combo Boost I	Steel Salmon	1
+Blade Combo Boost II	Panda Pansy	2
+Blade Combo Boost II	Twinkle Leaf	2
+Blade Combo Boost II	Welcome Cactus	2
+Blade Combo Boost II	Amber Leaf	1
+Blade Combo Boost III	Groove Wood	1
+Blade Combo Boost III	Silent Wood	1
+Blade Combo Boost III	Foolin' Ivy	1
+Blade Combo Boost III	Vinenut	1
+Blade Combo Boost IV	Puzzletree Wood	2
+Blade Combo Boost IV	Foolin' Ivy	2
+Blade Combo Boost IV	Soapberry Box	1
+Blade Combo Boost IV	Love Raspberry	1
+Blade Combo Boost IV	Missing Tree	1
+Blade Combo Boost V	Vermilion Bark	2
+Blade Combo Boost V	Insanity Moss	1
+Blade Combo Boost V	Elima Leaf	1
+Blade Combo Boost V	Minute Mantis	1
+Blade Combo Boost V	Missing Tree	1
+Blade Combo Boost VI	Leaf Coil	2
+Blade Combo Boost VI	Rabbit Diode	1
+Blade Combo Boost VI	Grape Spring	1
+Blade Combo Boost VI	Vortex Panel	1
+Blade Combo Boost VI	Crimson Gear	1
+Aggro Attack Up I	Puri Leaf Cabbage	1
+Aggro Attack Up I	Spark Cucumber	1
+Aggro Attack Up I	Black Pomegranate	1
+Aggro Attack Up II	Dusk Bamboo	2
+Aggro Attack Up II	Plumage Peach	2
+Aggro Attack Up II	Choice Cherry	2
+Aggro Attack Up II	Dolphin Carrot	1
+Aggro Attack Up III	Love Lemon	1
+Aggro Attack Up III	Ice Cabbage	1
+Aggro Attack Up III	Deadly Kiwi	1
+Aggro Attack Up III	Vinenut	1
+Aggro Attack Up IV	Death Mushroom	2
+Aggro Attack Up IV	Acid Tomato	2
+Aggro Attack Up IV	Cranberry Bell	1
+Aggro Attack Up IV	Deadly Kiwi	1
+Aggro Attack Up IV	Tarnish Apple	1
+Aggro Attack Up V	Death Mushroom	2
+Aggro Attack Up V	Dolphin Carrot	1
+Aggro Attack Up V	Bright Fig	1
+Aggro Attack Up V	Robotic Placoderm	1
+Aggro Attack Up V	Amethyst Vanilla	1
+Ultimate Shield	Welcome Cactus	2
+Ultimate Shield	Killi-Killi Killifish	1
+Ultimate Shield	Secret Turf	1
+Ultimate Shield	Gravity Rock	1
+Ultimate Shield	Vortex Panel	1
+Fire Absorb	Scent Stone	2
+Fire Absorb	Glutinous Sand	2
+Fire Absorb	Lemon Stone	1
+Fire Absorb	Throwing Star Rock	1
+Fire Absorb	Black Ash	1
+Water Absorb	Pinfin	2
+Water Absorb	Hedron Stonefish	2
+Water Absorb	Horsecrab	1
+Water Absorb	Rainbow Slug	1
+Water Absorb	Emblazoned Ray	1
+Earth Absorb	Vinegar Leaf	2
+Earth Absorb	Lightning Stump	2
+Earth Absorb	Bronze Wood	2
+Earth Absorb	Insanity Moss	1
+Earth Absorb	Hide 'n' Creeper	1
+Wind Absorb	Shepherd's Purse	2
+Wind Absorb	Chain Grass	2
+Wind Absorb	Gromrice	1
+Wind Absorb	Mookah Flour	1
+Wind Absorb	Mystic Dahlia	1
+Electric Absorb	Tricky Disc	2
+Electric Absorb	Chain-Shot Gear	2
+Electric Absorb	Snow Transistor	1
+Electric Absorb	Art Core Coil	1
+Electric Absorb	Digital Filament	1
+Ice Absorb	Puri Leaf Cabbage	2
+Ice Absorb	Death Mushroom	2
+Ice Absorb	Meaty Carrot	1
+Ice Absorb	Cranberry Bell	1
+Ice Absorb	Amethyst Vanilla	1
+Dark Absorb	Soap Coral	2
+Dark Absorb	Mille-Feuille Rock	2
+Dark Absorb	Ripple Stone	1
+Dark Absorb	Shell Rock	1
+Dark Absorb	Dragon Incense	1
+Light Absorb	Chain-Shot Gear	2
+Light Absorb	White Cover	2
+Light Absorb	Grape Spring	1
+Light Absorb	Rabbit Diode	1
+Light Absorb	Strong Screw	1
+Swift Evasion I	Armored Centipede	1
+Swift Evasion I	Wet Rat	1
+Swift Evasion I	Blue Ladybird	1
+Swift Evasion II	Pilehorn Rhino Beetle	2
+Swift Evasion II	Fan Skink	2
+Swift Evasion II	Digging Sandfly	2
+Swift Evasion II	Mystery Firefly	1
+Swift Evasion III	Gleambug	1
+Swift Evasion III	Watering Spider	1
+Swift Evasion III	Luckroach	1
+Swift Evasion III	Sworlbug	1
+Swift Evasion IV	Fan Skink	2
+Swift Evasion IV	Giant Stag Beetle	2
+Swift Evasion IV	Wet Rat	1
+Swift Evasion IV	Fire Tarantula	1
+Swift Evasion IV	Benign Cricket	1
+Swift Evasion V	Tartan Ladybird	2
+Swift Evasion V	Rainbow Bug	1
+Swift Evasion V	Beelze Mosquito	1
+Swift Evasion V	Abyss Heather	1
+Swift Evasion V	Minute Mantis	1
+Arts Heal I	Moonbeam Banana	1
+Arts Heal I	Hustle Hyacinth	1
+Arts Heal I	Puri Leaf Cabbage	1
+Arts Heal II	Binding Roots	2
+Arts Heal II	Welcome Cactus	2
+Arts Heal II	Breath Charcoal	2
+Arts Heal II	Fusty Fungus	1
+Arts Heal III	Love Lemon	1
+Arts Heal III	Ice Cabbage	1
+Arts Heal III	Belloat Grass	1
+Arts Heal III	Whisper Tomato	1
+Arts Heal IV	Puri Leaf Cabbage	2
+Arts Heal IV	Ice Cabbage	2
+Arts Heal IV	Ruby Mangosteen	1
+Arts Heal IV	Whisper Tomato	1
+Arts Heal IV	Tarnish Apple	1
+Arts Heal V	Acid Tomato	2
+Arts Heal V	Ruby Mangosteen	1
+Arts Heal V	Starry Persimmon	1
+Arts Heal V	Love Beetle	1
+Arts Heal V	Tarnish Apple	1
+Movement Heal I	Crystal Camellia	1
+Movement Heal I	Doomsday Poppy	1
+Movement Heal I	Melosian Honey	1
+Movement Heal II	Sunset Clover	2
+Movement Heal II	Jellyfish Balsam	2
+Movement Heal II	Beautiful Shoot	2
+Movement Heal II	Mysteroe	1
+Movement Heal III	Wisteria Bud	1
+Movement Heal III	Chain Grass	1
+Movement Heal III	Bellflower Crystal	1
+Movement Heal III	Linka Honey	1
+Movement Heal IV	Secret Turf	1
+Movement Heal IV	Delerium Foxglove	2
+Movement Heal IV	Belloat Grass	1
+Movement Heal IV	Gloomy Pitcher Plant	1
+Movement Heal IV	Mystic Dahlia	1
+Movement Heal V	Jujube Silver	2
+Movement Heal V	Gloomy Pitcher Plant	1
+Movement Heal V	Linka Honey	1
+Movement Heal V	Speckled Whalefish	1
+Movement Heal V	Lewisia Silver	1
+Damage Heal I	Forrestone	1
+Damage Heal I	Dicy Stone	1
+Damage Heal I	Fancy Bolt	1
+Damage Heal II	Blue Ladybird	2
+Damage Heal II	Scent Stone	2
+Damage Heal II	Nitrotoluite	2
+Damage Heal II	Cubic Diamond	1
+Damage Heal III	Siren Nut	1
+Damage Heal III	Wavelet Stone	1
+Damage Heal III	Lemon Stone	1
+Damage Heal III	Shell Rock	1
+Damage Heal IV	Hezodron Petra	2
+Damage Heal IV	Rubble Gem	2
+Damage Heal IV	Platinatriumarine	1
+Damage Heal IV	Icicle Marine	1
+Damage Heal IV	Rainbow Crystal	1
+Damage Heal V	Charcoal Cube	2
+Damage Heal V	Dilemma Rock	1
+Damage Heal V	Pione Stone	1
+Damage Heal V	Robotic Placoderm	1
+Damage Heal V	Rainbow Crystal	1
+Telepathy I	Zigzag Shaft	1
+Telepathy I	Helix Tube	1
+Telepathy I	Bully Tuna	1
+Telepathy II	Iron Seedling	2
+Telepathy II	Groove Wood	2
+Telepathy II	Whirlpool Plate	2
+Telepathy II	Snow Transistor	1
+Telepathy III	Tail Antenna	1
+Telepathy III	Dynamo Turbine	1
+Telepathy III	Blue Gear Shard	1
+Telepathy III	Beelze Mosquito	1
+Telepathy IV	Rumble Part	2
+Telepathy IV	Gunmetal Bolt	2
+Telepathy IV	Snow Transistor	1
+Telepathy IV	Gold Condenser	1
+Telepathy IV	Android Gear	1
+Telepathy V	Chain-Shot Gear	2
+Telepathy V	Winding Gear	1
+Telepathy V	Fairy-Tale Belt Pulley	1
+Telepathy V	Benign Cricket	1
+Telepathy V	Vortex Panel	1
+Affinity MAX Evade I	Pearl Lobster	1
+Affinity MAX Evade I	Marriage Bluegill	1
+Affinity MAX Evade I	Argentum Monkfish	1
+Affinity MAX Evade II	Flying Flounder	2
+Affinity MAX Evade II	Tender Shark	2
+Affinity MAX Evade II	Pinfin	2
+Affinity MAX Evade II	Mysteroe	1
+Affinity MAX Evade III	Fragrant Shrimp	1
+Affinity MAX Evade III	Horned Bonytongue	1
+Affinity MAX Evade III	Chandelier Monkfish	1
+Affinity MAX Evade III	Horsecrab	1
+Affinity MAX Evade IV	Poison Flash	2
+Affinity MAX Evade IV	Hedron Stonefish	2
+Affinity MAX Evade IV	Lazy Crayfish	1
+Affinity MAX Evade IV	Bipedal Crab	1
+Affinity MAX Evade IV	Trippy Catfish	1
+Affinity MAX Evade V	Necromanta Ray	2
+Affinity MAX Evade V	Horsecrab	1
+Affinity MAX Evade V	Noughtilus	1
+Affinity MAX Evade V	Warning Lamp	1
+Affinity MAX Evade V	Robotic Placoderm	1
+Fast Blade Switch I	Rumble Part	1
+Fast Blade Switch I	Jungle Frame	1
+Fast Blade Switch I	Shepherd's Purse	1
+Fast Blade Switch II	Helix Tube	2
+Fast Blade Switch II	Snow Ring	2
+Fast Blade Switch II	Locust Spring	2
+Fast Blade Switch II	Fancy Bolt	2
+Fast Blade Switch III	Bird Chip	1
+Fast Blade Switch III	White Cover	1
+Fast Blade Switch III	Snow Transistor	1
+Fast Blade Switch III	Fairy-Tale Belt Pulley	1
+Fast Blade Switch IV	Bird Chip	2
+Fast Blade Switch IV	Siren Nut	2
+Fast Blade Switch IV	Fairy-Tale Belt Pulley	1
+Fast Blade Switch IV	Grape Spring	1
+Fast Blade Switch IV	Golden Cog	1
+Fast Blade Switch V	Green Diode	2
+Fast Blade Switch V	Grape Spring	1
+Fast Blade Switch V	Screw Coil	1
+Fast Blade Switch V	Confusion Ivy	1
+Fast Blade Switch V	Robotic Placoderm	1
+Fast Blade Switch VI	Magmalachite	2
+Fast Blade Switch VI	Salty Soil	1
+Fast Blade Switch VI	Cubic Diamond	1
+Fast Blade Switch VI	Black Ash	1
+Fast Blade Switch VI	Gravity Rock	1
+Specials Lv 3 Plus I	Mille-Feuille Rock	1
+Specials Lv 3 Plus I	Tricolor Rock	1
+Specials Lv 3 Plus I	Forrestone	1
+Specials Lv 3 Plus II	Chain-Shot Gear	2
+Specials Lv 3 Plus II	Nitrotoluite	2
+Specials Lv 3 Plus II	Charged Elbaite	2
+Specials Lv 3 Plus II	Maple Bite	1
+Specials Lv 3 Plus III	Addam's Tear	1
+Specials Lv 3 Plus III	Frozen Sapphire	1
+Specials Lv 3 Plus III	Magnet Clay	1
+Specials Lv 3 Plus III	Emerald Snow	1
+Specials Lv 3 Plus IV	Magmalachite	2
+Specials Lv 3 Plus IV	Slime Rock	2
+Specials Lv 3 Plus IV	Salty Soil	1
+Specials Lv 3 Plus IV	Digidigite	1
+Specials Lv 3 Plus IV	Dragon Incense	1
+Specials Lv 3 Plus V	Abyss Metal	2
+Specials Lv 3 Plus V	Ripple Stone	1
+Specials Lv 3 Plus V	Throwing Star Rock	1
+Specials Lv 3 Plus V	Minute Mantis	1
+Specials Lv 3 Plus V	Dragon Incense	1
+Specials Lv 4 Plus I	Fancy Bolt	1
+Specials Lv 4 Plus I	Jungle Frame	1
+Specials Lv 4 Plus I	Mille-Feuille Rock	1
+Specials Lv 4 Plus II	Dusk Bamboo	2
+Specials Lv 4 Plus II	Snake Joint	2
+Specials Lv 4 Plus II	Siren Nut	2
+Specials Lv 4 Plus II	Rabbit Diode	1
+Specials Lv 4 Plus III	Cyber Spoon	1
+Specials Lv 4 Plus III	Dynamo Turbine	1
+Specials Lv 4 Plus III	Magnet Clay	1
+Specials Lv 4 Plus III	Tail Antenna	1
+Specials Lv 4 Plus IV	Cyber Spoon	2
+Specials Lv 4 Plus IV	Dynamo Turbine	2
+Specials Lv 4 Plus IV	Screw Coil	1
+Specials Lv 4 Plus IV	Dark Gray Spring	1
+Specials Lv 4 Plus IV	Warning Lamp	1
+Specials Lv 4 Plus V	Modern Resistor	2
+Specials Lv 4 Plus V	Gold Condenser	1
+Specials Lv 4 Plus V	Art Core Coil	1
+Specials Lv 4 Plus V	Mystic Dahlia	1
+Specials Lv 4 Plus V	Glory Angler	1
+Aggro Attack Up VI	Death Mushroom	2
+Aggro Attack Up VI	Dolphin Carrot	2
+Aggro Attack Up VI	Bright Fig	1
+Aggro Attack Up VI	Robotic Placoderm	1
+Aggro Attack Up VI	Amethyst Vanilla	1
+Swift Evasion VI	Tartan Ladybird	2
+Swift Evasion VI	Rainbow Bug	2
+Swift Evasion VI	Beelze Mosquito	1
+Swift Evasion VI	Abyss Heather	1
+Swift Evasion VI	Minute Mantis	1
+Arts Heal VI	Acid Tomato	2
+Arts Heal VI	Ruby Mangosteen	2
+Arts Heal VI	Starry Persimmon	1
+Arts Heal VI	Love Beetle	1
+Arts Heal VI	Tarnish Apple	1
+Movement Heal VI	Jujube Silver	2
+Movement Heal VI	Gloomy Pitcher Plant	2
+Movement Heal VI	Linka Honey	1
+Movement Heal VI	Speckled Whalefish	1
+Movement Heal VI	Lewisia Silver	1
+Damage Heal VI	Charcoal Cube	2
+Damage Heal VI	Dilemma Rock	2
+Damage Heal VI	Pione Stone	1
+Damage Heal VI	Robotic Placoderm	1
+Damage Heal VI	Rainbow Crystal	1
+Affinity MAX Evade VI	Necromanta Ray	2
+Affinity MAX Evade VI	Horsecrab	2
+Affinity MAX Evade VI	Noughtilus	1
+Affinity MAX Evade VI	Warning Lamp	1
+Affinity MAX Evade VI	Robotic Placoderm	1
+Specials Lv 3 Plus VI	Abyss Metal	2
+Specials Lv 3 Plus VI	Ripple Stone	2
+Specials Lv 3 Plus VI	Throwing Star Rock	1
+Specials Lv 3 Plus VI	Minute Mantis	1
+Specials Lv 3 Plus VI	Dragon Incense	1
+Specials Lv 4 Plus VI	Modern Resistor	2
+Specials Lv 4 Plus VI	Gold Condenser	2
+Specials Lv 4 Plus VI	Art Core Coil	1
+Specials Lv 4 Plus VI	Mystic Dahlia	1
+Specials Lv 4 Plus VI	Glory Angler	1
+\.
+
+
+--
+-- Data for Name: cores; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.cores (name, effect, unrefined_sell_price, refined_sell_price, rarity, material_type, material_amount) FROM stdin;
+Critical Up I	Boosts critical hit rate by 10%.	700	900	Common	Common	4
+Critical Up II	Boosts critical hit rate by 12%.	1800	2300	Common	Common	8
+Critical Up III	Boosts critical hit rate by 15%.	2800	3600	Rare	Rare	3
+Critical Up IV	Boosts critical hit rate by 17%.	3500	4600	Rare	Rare	6
+Critical Up V	Boosts critical hit rate by 20%.	3800	4900	Legendary	Legendary	2
+Physical Defense Up I	Boosts physical defense by 10%.	700	900	Common	Common	4
+Physical Defense Up II	Boosts physical defense by 12%.	1900	2500	Common	Common	8
+Physical Defense Up III	Boosts physical defense by 15%.	3100	4000	Rare	Rare	3
+Physical Defense Up IV	Boosts physical defense by 17%.	5200	6800	Rare	Rare	6
+Physical Defense Up V	Boosts physical defense by 20%.	5700	7400	Legendary	Legendary	2
+Ether Defense Up I	Boosts ether defense by 10%.	1000	1300	Common	Common	4
+Ether Defense Up II	Boosts ether defense by 12%.	2700	3500	Common	Common	8
+Ether Defense Up III	Boosts ether defense by 15%.	4200	5500	Rare	Rare	3
+Ether Defense Up IV	Boosts ether defense by 17%.	5200	6800	Rare	Rare	6
+Ether Defense Up V	Boosts ether defense by 20%.	5700	7400	Legendary	Legendary	2
+Block Rate Up I	Boosts block rate by 10%.	800	900	Common	Ore	3
+Block Rate Up II	Boosts block rate by 12%.	2200	2400	Common	Ore	6
+Block Rate Up III	Boosts block rate by 15%.	3500	3900	Rare	Ore	9
+Block Rate Up IV	Boosts block rate by 17%.	4300	4700	Rare	Ore	12
+Block Rate Up V	Boosts block rate by 20%.	4700	5200	Legendary	Ore	15
+Beast Hunter I	Increases damage dealt to beasts by 20%.	500	600	Common	Insect	3
+Beast Hunter II	Increases damage dealt to beasts by 25%.	1300	1400	Common	Insect	6
+Beast Hunter III	Increases damage dealt to beasts by 30%.	2100	2300	Rare	Insect	9
+Beast Hunter IV	Increases damage dealt to beasts by 35%.	2600	2900	Rare	Insect	12
+Beast Hunter V	Increases damage dealt to beasts by 40%.	2800	3100	Legendary	Insect	15
+Insect Hunter I	Increases damage dealt to insects by 20%.	300	300	Common	Flower	3
+Insect Hunter II	Increases damage dealt to insects by 25%.	900	1000	Common	Flower	6
+Insect Hunter III	Increases damage dealt to insects by 30%.	1600	1800	Rare	Flower	9
+Insect Hunter IV	Increases damage dealt to insects by 35%.	2100	2300	Rare	Flower	12
+Insect Hunter V	Increases damage dealt to insects by 40%.	2800	3100	Legendary	Flower	15
+Aerial Hunter I	Increases damage dealt to aerial creatures by 20%.	500	600	Common	Fish	3
+Aerial Hunter II	Increases damage dealt to aerial creatures by 25%.	1300	1400	Common	Fish	6
+Aerial Hunter III	Increases damage dealt to aerial creatures by 30%.	2100	2300	Rare	Fish	9
+Aerial Hunter IV	Increases damage dealt to aerial creatures by 35%.	2600	2900	Rare	Fish	12
+Aerial Hunter V	Increases damage dealt to aerial creatures by 40%.	2800	3100	Legendary	Fish	15
+Aquatic Hunter I	Increases damage dealt to aquatic organisms by 20%.	300	300	Common	Tree	3
+Aquatic Hunter II	Increases damage dealt to aquatic organisms by 25%.	900	1000	Common	Tree	6
+Aquatic Hunter III	Increases damage dealt to aquatic organisms by 30%.	1600	1800	Rare	Tree	9
+Aquatic Hunter IV	Increases damage dealt to aquatic organisms by 35%.	2100	2300	Rare	Tree	12
+Aquatic Hunter V	Increases damage dealt to aquatic organisms by 40%.	2800	3100	Legendary	Tree	15
+Humanoid Hunter I	Increases damage dealt to humanoids by 20%.	500	600	Common	Vegetable	3
+Humanoid Hunter II	Increases damage dealt to humanoids by 25%.	1300	1400	Common	Vegetable	6
+Humanoid Hunter III	Increases damage dealt to humanoids by 30%.	2100	2300	Rare	Vegetable	9
+Humanoid Hunter IV	Increases damage dealt to humanoids by 35%.	2600	2900	Rare	Vegetable	12
+Humanoid Hunter V	Increases damage dealt to humanoids by 40%.	2800	3100	Legendary	Vegetable	15
+Machine Hunter I	Increases damage dealt to machines by 20%.	300	300	Common	Mechanical	3
+Machine Hunter II	Increases damage dealt to machines by 25%.	900	1000	Common	Mechanical	6
+Machine Hunter III	Increases damage dealt to machines by 30%.	1600	1800	Rare	Mechanical	9
+Machine Hunter IV	Increases damage dealt to machines by 35%.	2100	2300	Rare	Mechanical	12
+Machine Hunter V	Increases damage dealt to machines by 40%.	2800	3100	Legendary	Mechanical	15
+Titan Hunter I	Increases damage dealt to Titans by 20%.	300	300	Common	Tree	3
+Titan Hunter II	Increases damage dealt to Titans by 25%.	900	1000	Common	Tree	6
+Titan Hunter III	Increases damage dealt to Titans by 30%.	1600	1800	Rare	Tree	9
+Titan Hunter IV	Increases damage dealt to Titans by 35%.	2100	2300	Rare	Tree	12
+Titan Hunter V	Increases damage dealt to Titans by 40%.	2800	3100	Legendary	Tree	15
+Blade Combo Boost I	Increases Blade Combo damage by 10%.	1000	1500	Common	Specific	0
+Blade Combo Boost II	Increases Blade Combo damage by 15%.	2700	4100	Common	Specific	0
+Blade Combo Boost III	Increases Blade Combo damage by 20%.	4200	6300	Rare	Specific	0
+Blade Combo Boost IV	Increases Blade Combo damage by 25%.	5200	7800	Rare	Specific	0
+Blade Combo Boost V	Increases Blade Combo damage by 30%.	5700	8600	Legendary	Specific	0
+Blade Combo Boost VI	Increases Blade Combo damage by 36%.	6300	9500	Legendary	Specific	0
+Fusion Combo Up I	Boosts Fusion Combo effect by 10%	400	500	Common	Common	4
+Fusion Combo Up II	Boosts Fusion Combo effect by 15%	1300	1700	Common	Common	8
+Fusion Combo Up III	Boosts Fusion Combo effect by 20%	2100	2700	Rare	Rare	3
+Fusion Combo Up IV	Boosts Fusion Combo effect by 25%	3500	4600	Rare	Rare	6
+Fusion Combo Up V	Boosts Fusion Combo effect by 30%	3800	4900	Legendary	Legendary	2
+Ambush Boost I	Increases damage dealt by a surprise attack by 60%.	300	300	Common	Insect	3
+Ambush Boost II	Increases damage dealt by a surprise attack by 70%.	900	1000	Common	Insect	6
+Ambush Boost III	Increases damage dealt by a surprise attack by 80%.	1400	1500	Rare	Insect	9
+Ambush Boost IV	Increases damage dealt by a surprise attack by 90%.	1700	1900	Rare	Insect	12
+Ambush Boost V	Increases damage dealt by a surprise attack by 100%.	1900	2100	Legendary	Insect	15
+Reflect Immunity	Annuls reflect.	1900	2100	Legendary	Fish	15
+Aggro Attack Up I	Increases damage dealt to enemies targeting user by 10%.	1000	1500	Common	Specific	0
+Aggro Attack Up II	Increases damage dealt to enemies targeting user by 15%.	2700	4100	Common	Specific	0
+Aggro Attack Up III	Increases damage dealt to enemies targeting user by 20%.	4200	6300	Rare	Specific	0
+Aggro Attack Up IV	Increases damage dealt to enemies targeting user by 25%.	5200	7800	Rare	Specific	0
+Aggro Attack Up V	Increases damage dealt to enemies targeting user by 30%.	5700	8600	Legendary	Specific	0
+Indoor Attack Up I	Increases damage dealt indoors by 20%.	300	300	Common	Insect	3
+Indoor Attack Up II	Increases damage dealt indoors by 25%.	900	1000	Common	Insect	6
+Indoor Attack Up III	Increases damage dealt indoors by 30%.	1600	1800	Rare	Insect	9
+Indoor Attack Up IV	Increases damage dealt indoors by 35%.	2600	2900	Rare	Insect	12
+Indoor Attack Up V	Increases damage dealt indoors by 40%.	2800	3100	Legendary	Insect	15
+Outdoor Attack Up I	Increases damage dealt outdoors by 20%.	500	600	Common	Tree	3
+Outdoor Attack Up II	Increases damage dealt outdoors by 25%.	1300	1400	Common	Tree	6
+Outdoor Attack Up III	Increases damage dealt outdoors by 30%.	2100	2300	Rare	Tree	9
+Outdoor Attack Up IV	Increases damage dealt outdoors by 35%.	2600	2900	Rare	Tree	12
+Outdoor Attack Up V	Increases damage dealt outdoors by 40%.	2800	3100	Legendary	Tree	15
+Fire Def Up I	Reduces fire damage received by 10%.	400	400	Common	Ore	3
+Fire Def Up II	Reduces fire damage received by 15%.	1300	1400	Common	Ore	6
+Fire Def Up III	Reduces fire damage received by 20%.	2100	2300	Rare	Ore	9
+Fire Def Up IV	Reduces fire damage received by 25%.	2800	3100	Rare	Ore	12
+Fire Def Up V	Reduces fire damage received by 30%.	3500	3900	Legendary	Ore	15
+Water Def Up I	Reduces water damage received by 10%.	400	400	Common	Fish	3
+Water Def Up II	Reduces water damage received by 15%.	1300	1400	Common	Fish	6
+Water Def Up III	Reduces water damage received by 20%.	2100	2300	Rare	Fish	9
+Water Def Up IV	Reduces water damage received by 25%.	2800	3100	Rare	Fish	12
+Water Def Up V	Reduces water damage received by 30%.	3500	3900	Legendary	Fish	15
+Earth Def Up I	Reduces earth damage received by 10%.	400	400	Common	Tree	3
+Earth Def Up II	Reduces earth damage received by 15%.	1300	1400	Common	Tree	6
+Earth Def Up III	Reduces earth damage received by 20%.	2100	2300	Rare	Tree	9
+Earth Def Up IV	Reduces earth damage received by 25%.	2800	3100	Rare	Tree	12
+Earth Def Up V	Reduces earth damage received by 30%.	3500	3900	Legendary	Tree	15
+Wind Def Up I	Reduces wind damage received by 10%.	400	400	Common	Flower	3
+Wind Def Up II	Reduces wind damage received by 15%.	1300	1400	Common	Flower	6
+Wind Def Up III	Reduces wind damage received by 20%.	2100	2300	Rare	Flower	9
+Wind Def Up IV	Reduces wind damage received by 25%.	2800	3100	Rare	Flower	12
+Wind Def Up V	Reduces wind damage received by 30%.	3500	3900	Legendary	Flower	15
+Electric Def Up I	Reduces electric damage received by 10%.	400	400	Common	Mechanical	3
+Electric Def Up II	Reduces electric damage received by 15%.	1300	1400	Common	Mechanical	6
+Electric Def Up III	Reduces electric damage received by 20%.	2100	2300	Rare	Mechanical	9
+Electric Def Up IV	Reduces electric damage received by 25%.	2800	3100	Rare	Mechanical	12
+Electric Def Up V	Reduces electric damage received by 30%.	3500	3900	Legendary	Mechanical	15
+Ice Def Up I	Reduces ice damage received by 10%.	400	400	Common	Vegetable	3
+Ice Def Up II	Reduces ice damage received by 15%.	1300	1400	Common	Vegetable	6
+Ice Def Up III	Reduces ice damage received by 20%.	2100	2300	Rare	Vegetable	9
+Ice Def Up IV	Reduces ice damage received by 25%.	2800	3100	Rare	Vegetable	12
+Ice Def Up V	Reduces ice damage received by 30%.	3500	3900	Legendary	Vegetable	15
+Dark Def Up I	Reduces dark damage received by 10%.	400	400	Common	Ore	3
+Dark Def Up II	Reduces dark damage received by 15%.	1300	1400	Common	Ore	6
+Dark Def Up III	Reduces dark damage received by 20%.	2100	2300	Rare	Ore	9
+Dark Def Up IV	Reduces dark damage received by 25%.	2800	3100	Rare	Ore	12
+Dark Def Up V	Reduces dark damage received by 30%.	3500	3900	Legendary	Ore	15
+Light Def Up I	Reduces light damage received by 10%.	400	400	Common	Mechanical	3
+Light Def Up II	Reduces light damage received by 15%.	1300	1400	Common	Mechanical	6
+Light Def Up III	Reduces light damage received by 20%.	2100	2300	Rare	Mechanical	9
+Light Def Up IV	Reduces light damage received by 25%.	2800	3100	Rare	Mechanical	12
+Light Def Up V	Reduces light damage received by 30%.	3500	3900	Legendary	Mechanical	15
+Ultimate Shield	On Block, gives 50% chance to completely deflect enemy attack.	4200	6300	Legendary	Specific	0
+Fire Absorb	On Block, Fire damage is absorbed, restoring HP instead of taking damage.	3500	5300	Legendary	Specific	0
+Water Absorb	On Block, Water damage is absorbed, restoring HP instead of taking damage.	3500	5300	Legendary	Specific	0
+Earth Absorb	On Block, Earth damage is absorbed, restoring HP instead of taking damage.	3500	5300	Legendary	Specific	0
+Wind Absorb	On Block, Wind damage is absorbed, restoring HP instead of taking damage.	3500	5300	Legendary	Specific	0
+Electric Absorb	On Block, Electric damage is absorbed, restoring HP instead of taking damage.	3500	5300	Legendary	Specific	0
+Ice Absorb	On Block, Ice damage is absorbed, restoring HP instead of taking damage.	3500	5300	Legendary	Specific	0
+Dark Absorb	On Block, Dark damage is absorbed, restoring HP instead of taking damage.	3500	5300	Legendary	Specific	0
+Light Absorb	On Block, Light damage is absorbed, restoring HP instead of taking damage.	3500	5300	Legendary	Specific	0
+Fire Reflect	On Block, Fire damage is reflected, damaging the enemy instead.	3800	4900	Legendary	Legendary	2
+Water Reflect	On Block, Water damage is reflected, damaging the enemy instead.	3800	4900	Legendary	Legendary	2
+Earth Reflect	On Block, Earth damage is reflected, damaging the enemy instead.	3800	4900	Legendary	Legendary	2
+Wind Reflect	On Block, Wind damage is reflected, damaging the enemy instead.	3800	4900	Legendary	Legendary	2
+Electric Reflect	On Block, Electric damage is reflected, damaging the enemy instead.	3800	4900	Legendary	Legendary	2
+Ice Reflect	On Block, Ice damage is reflected, damaging the enemy instead.	3800	4900	Legendary	Legendary	2
+Dark Reflect	On Block, Dark damage is reflected, damaging the enemy instead.	3800	4900	Legendary	Legendary	2
+Light Reflect	On Block, Light damage is reflected, damaging the enemy instead.	3800	4900	Legendary	Legendary	2
+Evasion Focus I	Improves evasion by 10% when HP is 30% or lower.	700	900	Common	Common	4
+Evasion Focus II	Improves evasion by 15% when HP is 30% or lower.	1300	1700	Common	Common	8
+Evasion Focus III	Improves evasion by 20% when HP is 30% or lower.	2100	2700	Rare	Rare	3
+Evasion Focus IV	Improves evasion by 25% when HP is 30% or lower.	3500	4600	Rare	Rare	6
+Evasion Focus V	Improves evasion by 30% when HP is 30% or lower.	3800	4900	Legendary	Legendary	2
+Swift Evasion I	Improves evasion by 10% while moving.	700	1100	Common	Specific	0
+Swift Evasion II	Improves evasion by 15% while moving.	1800	2700	Common	Specific	0
+Swift Evasion III	Improves evasion by 20% while moving.	2800	4200	Rare	Specific	0
+Swift Evasion IV	Improves evasion by 25% while moving.	3500	5300	Rare	Specific	0
+Swift Evasion V	Improves evasion by 30% while moving.	3800	5700	Legendary	Specific	0
+Emergency Guard I	Boosts block rate by 10% when HP is 30% or lower.	400	400	Common	Flower	3
+Emergency Guard II	Boosts block rate by 15% when HP is 30% or lower.	1300	1400	Common	Flower	6
+Emergency Guard III	Boosts block rate by 20% when HP is 30% or lower.	2100	2300	Rare	Flower	9
+Emergency Guard IV	Boosts block rate by 25% when HP is 30% or lower.	3500	3900	Rare	Flower	12
+Emergency Guard V	Boosts block rate by 30% when HP is 30% or lower.	3800	4200	Legendary	Flower	15
+Endurance I	Reduces damage taken by 10% when HP is 30% or lower.	700	900	Common	Common	4
+Endurance II	Reduces damage taken by 12% when HP is 30% or lower.	1800	2300	Common	Common	8
+Endurance III	Reduces damage taken by 15% when HP is 30% or lower.	2800	3600	Rare	Rare	3
+Endurance IV	Reduces damage taken by 17% when HP is 30% or lower.	3500	4600	Rare	Rare	6
+Endurance V	Reduces damage taken by 20% when HP is 30% or lower.	3800	4900	Legendary	Legendary	2
+HP Attack Boost I	Increases damage dealt by 10% when HP is 90% or higher.	700	900	Common	Common	4
+HP Attack Boost II	Increases damage dealt by 15% when HP is 90% or higher.	1300	1700	Common	Common	8
+HP Attack Boost III	Increases damage dealt by 20% when HP is 90% or higher.	2100	2700	Rare	Rare	3
+HP Attack Boost IV	Increases damage dealt by 25% when HP is 90% or higher.	3500	4600	Rare	Rare	6
+HP Attack Boost V	Increases damage dealt by 30% when HP is 90% or higher.	3800	4900	Legendary	Legendary	2
+Spike Defense I	Reduces Spike damage taken by 60%.	700	800	Common	Vegetable	3
+Spike Defense II	Reduces Spike damage taken by 70%.	1800	2000	Common	Vegetable	6
+Spike Defense III	Reduces Spike damage taken by 80%.	2800	3100	Rare	Vegetable	9
+Spike Defense IV	Reduces Spike damage taken by 90%.	3500	3900	Rare	Vegetable	12
+Spike Defense V	Reduces Spike damage taken by 100%.	3800	4200	Legendary	Vegetable	15
+Break Resist I	Boosts Break resistance by 25%.	900	1200	Common	Common	4
+Break Resist II	Boosts Break resistance by 30%.	2500	3300	Common	Common	8
+Break Resist III	Boosts Break resistance by 35%.	4200	5500	Rare	Rare	3
+Break Resist IV	Boosts Break resistance by 40%.	6900	9000	Rare	Rare	6
+Break Resist V	Boosts Break resistance by 50%.	7600	9900	Legendary	Legendary	2
+Topple Resist I	Boosts Topple resistance by 25%.	1200	1600	Common	Common	4
+Topple Resist II	Boosts Topple resistance by 30%.	3100	4000	Common	Common	8
+Topple Resist III	Boosts Topple resistance by 35%.	4900	6400	Rare	Rare	3
+Topple Resist IV	Boosts Topple resistance by 40%.	6000	7800	Rare	Rare	6
+Topple Resist V	Boosts Topple resistance by 50%.	6600	8600	Legendary	Legendary	2
+Launch Resist I	Boosts Launch resistance by 25%.	700	900	Common	Common	4
+Launch Resist II	Boosts Launch resistance by 30%.	1900	2500	Common	Common	8
+Launch Resist III	Boosts Launch resistance by 35%.	3100	4000	Rare	Rare	3
+Launch Resist IV	Boosts Launch resistance by 40%.	5200	6800	Rare	Rare	6
+Launch Resist V	Boosts Launch resistance by 50%.	5700	7400	Legendary	Legendary	2
+Smash Resist I	Boosts Smash resistance by 25%.	700	900	Common	Common	4
+Smash Resist II	Boosts Smash resistance by 30%.	1800	2300	Common	Common	8
+Smash Resist III	Boosts Smash resistance by 35%.	2800	3600	Rare	Rare	3
+Smash Resist IV	Boosts Smash resistance by 40%.	3500	4600	Rare	Rare	6
+Smash Resist V	Boosts Smash resistance by 50%.	3800	4900	Legendary	Legendary	2
+Blowdown Resist I	Boosts Blowdown resistance by 25%.	300	400	Common	Common	4
+Blowdown Resist II	Boosts Blowdown resistance by 30%.	900	1200	Common	Common	8
+Blowdown Resist III	Boosts Blowdown resistance by 35%.	1600	2100	Rare	Rare	3
+Blowdown Resist IV	Boosts Blowdown resistance by 40%.	2600	3400	Rare	Rare	6
+Blowdown Resist V	Boosts Blowdown resistance by 50%.	2800	3600	Legendary	Legendary	2
+Knockback Resist I	Boosts Knockback resistance by 25%.	500	700	Common	Common	4
+Knockback Resist II	Boosts Knockback resistance by 30%.	1300	1700	Common	Common	8
+Knockback Resist III	Boosts Knockback resistance by 35%.	2100	2700	Rare	Rare	3
+Knockback Resist IV	Boosts Knockback resistance by 40%.	2600	3400	Rare	Rare	6
+Knockback Resist V	Boosts Knockback resistance by 50%.	2800	3600	Legendary	Legendary	2
+Annul Resist I	Boosts resistance to defense annulling attacks by 25%.	300	300	Common	Fish	3
+Annul Resist II	Boosts resistance to defense annulling attacks by 30%.	900	1000	Common	Fish	6
+Annul Resist III	Boosts resistance to defense annulling attacks by 35%.	1600	1800	Rare	Fish	9
+Annul Resist IV	Boosts resistance to defense annulling attacks by 40%.	2600	2900	Rare	Fish	12
+Annul Resist V	Boosts resistance to defense annulling attacks by 50%.	2800	3100	Legendary	Fish	15
+Shackle Blade Resist I	Boosts Blade shackle resistance by 20%.	700	800	Common	Flower	3
+Shackle Blade Resist II	Boosts Blade shackle resistance by 40%.	1800	2000	Common	Flower	6
+Shackle Blade Resist III	Boosts Blade shackle resistance by 60%.	2800	3100	Rare	Flower	9
+Shackle Blade Resist IV	Boosts Blade shackle resistance by 80%.	3500	3900	Rare	Flower	12
+Shackle Blade Resist V	Boosts Blade shackle resistance by 100%.	3800	4200	Legendary	Flower	15
+Auto-Attack Stealth I	Reduces aggro drawn from auto-attacks by 15%.	700	900	Common	Common	4
+Auto-Attack Stealth II	Reduces aggro drawn from auto-attacks by 17%.	1900	2500	Common	Common	8
+Auto-Attack Stealth III	Reduces aggro drawn from auto-attacks by 20%.	3100	4000	Rare	Rare	3
+Auto-Attack Stealth IV	Reduces aggro drawn from auto-attacks by 22%.	5200	6800	Rare	Rare	6
+Auto-Attack Stealth V	Reduces aggro drawn from auto-attacks by 25%.	5700	7400	Legendary	Legendary	2
+Aggro Boost I	Increases aggro drawn from auto-attacks by 15%.	1000	1300	Common	Common	4
+Aggro Boost II	Increases aggro drawn from auto-attacks by 17%.	2700	3500	Common	Common	8
+Aggro Boost III	Increases aggro drawn from auto-attacks by 20%.	4200	5500	Rare	Rare	3
+Aggro Boost IV	Increases aggro drawn from auto-attacks by 22%.	5200	6800	Rare	Rare	6
+Aggro Boost V	Increases aggro drawn from auto-attacks by 25%.	5700	7400	Legendary	Legendary	2
+Arts Stealth I	Reduces aggro drawn from Specials and Driver Arts by 5%.	700	900	Common	Common	4
+Arts Stealth II	Reduces aggro drawn from Specials and Driver Arts by 7%.	1900	2500	Common	Common	8
+Arts Stealth III	Reduces aggro drawn from Specials and Driver Arts by 10%.	3100	4000	Rare	Rare	3
+Arts Stealth IV	Reduces aggro drawn from Specials and Driver Arts by 12%.	5200	6800	Rare	Rare	6
+Arts Stealth V	Reduces aggro drawn from Specials and Driver Arts by 15%.	5700	7400	Legendary	Legendary	2
+Arts Aggro Boost I	Increases aggro drawn from Specials and Driver Arts by 5%.	1000	1300	Common	Common	4
+Arts Aggro Boost II	Increases aggro drawn from Specials and Driver Arts by 7%.	2700	3500	Common	Common	8
+Arts Aggro Boost III	Increases aggro drawn from Specials and Driver Arts by 10%.	4200	5500	Rare	Rare	3
+Arts Aggro Boost IV	Increases aggro drawn from Specials and Driver Arts by 12%.	5200	6800	Rare	Rare	6
+Arts Aggro Boost V	Increases aggro drawn from Specials and Driver Arts by 15%.	5700	7400	Legendary	Legendary	2
+Arts Heal I	Restores 3% HP when using a Driver Art.	500	800	Common	Specific	0
+Arts Heal II	Restores 3.5% HP when using a Driver Art.	1600	2400	Common	Specific	0
+Arts Heal III	Restores 4% HP when using a Driver Art.	2600	3900	Rare	Specific	0
+Arts Heal IV	Restores 4.5% HP when using a Driver Art.	4300	6500	Rare	Specific	0
+Arts Heal V	Restores 5% HP when using a Driver Art.	4700	7100	Legendary	Specific	0
+Movement Heal I	Restores 1% HP every second while moving.	700	1100	Common	Specific	0
+Movement Heal II	Restores 1.5% HP every second while moving.	1800	2700	Common	Specific	0
+Movement Heal III	Restores 2% HP every second while moving.	2800	4200	Rare	Specific	0
+Movement Heal IV	Restores 2.5% HP every second while moving.	3500	5300	Rare	Specific	0
+Movement Heal V	Restores 3% HP every second while moving.	3800	5700	Legendary	Specific	0
+Damage Heal I	Adds 25% chance of restoring 4% HP after taking a hit.	500	800	Common	Specific	0
+Damage Heal II	Adds 25% chance of restoring 6% HP after taking a hit.	1600	2400	Common	Specific	0
+Damage Heal III	Adds 25% chance of restoring 8% HP after taking a hit.	2600	3900	Rare	Specific	0
+Damage Heal IV	Adds 25% chance of restoring 10% HP after taking a hit.	4300	6500	Rare	Specific	0
+Damage Heal V	Adds 25% chance of restoring 12% HP after taking a hit.	4700	7100	Legendary	Specific	0
+Night Vision I	Increases Accuracy during the night by 20%.	300	300	Common	Insect	3
+Night Vision II	Increases Accuracy during the night by 40%.	900	1000	Common	Insect	6
+Night Vision III	Increases Accuracy during the night by 60%.	1400	1500	Rare	Insect	9
+Night Vision IV	Increases Accuracy during the night by 80%.	1700	1900	Rare	Insect	12
+Night Vision V	Increases Accuracy during the night by 100%.	1900	2100	Legendary	Insect	15
+Sunlight Eye I	Increases Accuracy during the day by 20%.	200	200	Common	Tree	3
+Sunlight Eye II	Increases Accuracy during the day by 40%.	600	700	Common	Tree	6
+Sunlight Eye III	Increases Accuracy during the day by 60%.	1000	1100	Rare	Tree	9
+Sunlight Eye IV	Increases Accuracy during the day by 80%.	1700	1900	Rare	Tree	12
+Sunlight Eye V	Increases Accuracy during the day by 100%.	1900	2100	Legendary	Tree	15
+Reflect Damage Up I	Increases reflect damage by 25%.	300	400	Common	Common	4
+Reflect Damage Up II	Increases reflect damage by 50%.	900	1200	Common	Common	8
+Reflect Damage Up III	Increases reflect damage by 75%.	1400	1800	Rare	Rare	3
+Reflect Damage Up IV	Increases reflect damage by 100%.	1700	2200	Rare	Rare	6
+Reflect Damage Up V	Increases reflect damage by 125%.	1900	2500	Legendary	Legendary	2
+Range Boost Up I	Adds 1m to the range of Ether Cannon.	300	300	Common	Flower	3
+Range Boost Up II	Adds 2m to the range of Ether Cannon.	900	1000	Common	Flower	6
+Range Boost Up III	Adds 3m to the range of Ether Cannon.	1600	1800	Rare	Flower	9
+Range Boost Up IV	Adds 4m to the range of Ether Cannon.	2600	2900	Rare	Flower	12
+Range Boost Up V	Adds 5m to the range of Ether Cannon.	2800	3100	Legendary	Flower	15
+Opening Art I	Increases damage dealt by 100% for the first Driver Art per battle.	200	200	Common	Fish	3
+Opening Art II	Increases damage dealt by 125% for the first Driver Art per battle.	600	700	Common	Fish	6
+Opening Art III	Increases damage dealt by 150% for the first Driver Art per battle.	1000	1100	Rare	Fish	9
+Opening Art IV	Increases damage dealt by 175% for the first Driver Art per battle.	1700	1900	Rare	Fish	12
+Opening Art V	Increases damage dealt by 200% for the first Driver Art per battle.	1900	2100	Legendary	Fish	15
+Telepathy I	Increases chance of triggering Blade Arts by 20%.	700	1100	Common	Specific	0
+Telepathy II	Increases chance of triggering Blade Arts by 40%.	1800	2700	Common	Specific	0
+Telepathy III	Increases chance of triggering Blade Arts by 60%.	2800	4200	Rare	Specific	0
+Telepathy IV	Increases chance of triggering Blade Arts by 80%.	3500	5300	Rare	Specific	0
+Telepathy V	Increases chance of triggering Blade Arts by 100%.	3800	5700	Legendary	Specific	0
+Helping Hand I	Increases Blade Arts duration time by 10%.	400	500	Common	Common	4
+Helping Hand II	Increases Blade Arts duration time by 20%.	1300	1700	Common	Common	8
+Helping Hand III	Increases Blade Arts duration time by 30%.	2100	2700	Rare	Rare	3
+Helping Hand IV	Increases Blade Arts duration time by 40%.	3500	4600	Rare	Rare	6
+Helping Hand V	Increases Blade Arts duration time by 50%.	3800	4900	Legendary	Legendary	2
+Affinity MAX Barrier I	When Affinity reaches max, grant party damage barrier of 10% of max HP.	500	600	Common	Vegetable	3
+Affinity MAX Barrier II	When Affinity reaches max, grant party damage barrier of 15% of max HP.	1300	1400	Common	Vegetable	6
+Affinity MAX Barrier III	When Affinity reaches max, grant party damage barrier of 20% of max HP.	2100	2300	Rare	Vegetable	9
+Affinity MAX Barrier IV	When Affinity reaches max, grant party damage barrier of 25% of max HP.	2600	2900	Rare	Vegetable	12
+Affinity MAX Barrier V	When Affinity reaches max, grant party damage barrier of 30% of max HP.	2800	3100	Legendary	Vegetable	15
+Affinity MAX Atk I	Increases damage dealt by 30% when Affinity is at max.	700	900	Common	Common	4
+Affinity MAX Atk II	Increases damage dealt by 35% when Affinity is at max.	1900	2500	Common	Common	8
+Affinity MAX Atk III	Increases damage dealt by 40% when Affinity is at max.	3100	4000	Rare	Rare	3
+Affinity MAX Atk IV	Increases damage dealt by 45% when Affinity is at max.	5200	6800	Rare	Rare	6
+Affinity MAX Atk V	Increases damage dealt by 50% when Affinity is at max.	5700	7400	Legendary	Legendary	2
+Affinity MAX Evade I	Increases evasion rate by 8% when Affinity is at max.	1000	1500	Common	Specific	0
+Affinity MAX Evade II	Increases evasion rate by 10% when Affinity is at max.	2700	4100	Common	Specific	0
+Affinity MAX Evade III	Increases evasion rate by 12% when Affinity is at max.	4200	6300	Rare	Specific	0
+Affinity MAX Evade IV	Increases evasion rate by 14% when Affinity is at max.	5200	7800	Rare	Specific	0
+Affinity MAX Evade V	Increases evasion rate by 16% when Affinity is at max.	5700	8600	Legendary	Specific	0
+Hunter's Chemistry I	Increases Affinity by 150 when starting a battle with the initiative.	300	300	Common	Vegetable	3
+Hunter's Chemistry II	Increases Affinity by 175 when starting a battle with the initiative.	900	1000	Common	Vegetable	6
+Hunter's Chemistry III	Increases Affinity by 200 when starting a battle with the initiative.	1600	1800	Rare	Vegetable	9
+Hunter's Chemistry IV	Increases Affinity by 225 when starting a battle with the initiative.	2600	2900	Rare	Vegetable	12
+Hunter's Chemistry V	Increases Affinity by 250 when starting a battle with the initiative.	2800	3100	Legendary	Vegetable	15
+Shoulder to Shoulder I	Increases Affinity by 150 when the enemy starts with the initiative.	500	600	Common	Flower	3
+Shoulder to Shoulder II	Increases Affinity by 175 when the enemy starts with the initiative.	1300	1400	Common	Flower	6
+Shoulder to Shoulder III	Increases Affinity by 200 when the enemy starts with the initiative.	2100	2300	Rare	Flower	9
+Shoulder to Shoulder IV	Increases Affinity by 225 when the enemy starts with the initiative.	2600	2900	Rare	Flower	12
+Shoulder to Shoulder V	Increases Affinity by 250 when the enemy starts with the initiative.	2800	3100	Legendary	Flower	15
+Fast Blade Switch I	Reduces the cooldown time for a Blade Switch by 10%.	900	1400	Common	Specific	0
+Fast Blade Switch II	Reduces the cooldown time for a Blade Switch by 15%.	2500	3800	Common	Specific	0
+Fast Blade Switch III	Reduces the cooldown time for a Blade Switch by 20%.	4200	6300	Rare	Specific	0
+Fast Blade Switch IV	Reduces the cooldown time for a Blade Switch by 25%.	6900	10400	Rare	Specific	0
+Fast Blade Switch V	Reduces the cooldown time for a Blade Switch by 30%.	7600	11400	Legendary	Specific	0
+Fast Blade Switch VI	Reduces the cooldown time for a Blade Switch by 35%.	8400	12600	Legendary	Specific	0
+Specials Lv 1 Plus I	Increases Blade's Lv 1 Special damage by 20%.	700	800	Common	Vegetable	3
+Specials Lv 1 Plus II	Increases Blade's Lv 1 Special damage by 30%.	1800	2000	Common	Vegetable	6
+Specials Lv 1 Plus III	Increases Blade's Lv 1 Special damage by 40%.	2800	3100	Rare	Vegetable	9
+Specials Lv 1 Plus IV	Increases Blade's Lv 1 Special damage by 50%.	3500	3900	Rare	Vegetable	12
+Specials Lv 1 Plus V	Increases Blade's Lv 1 Special damage by 60%.	3800	4200	Legendary	Vegetable	15
+Specials Lv 2 Plus I	Increases Blade's Lv 2 Special damage by 20%.	700	900	Common	Common	4
+Specials Lv 2 Plus II	Increases Blade's Lv 2 Special damage by 30%.	1800	2300	Common	Common	8
+Specials Lv 2 Plus III	Increases Blade's Lv 2 Special damage by 40%.	2800	3600	Rare	Rare	3
+Specials Lv 2 Plus IV	Increases Blade's Lv 2 Special damage by 50%.	3500	4600	Rare	Rare	6
+Specials Lv 2 Plus V	Increases Blade's Lv 2 Special damage by 60%.	3800	4900	Legendary	Legendary	2
+Specials Lv 3 Plus I	Increases Blade's Lv 3 Special damage by 20%.	700	1100	Common	Specific	0
+Specials Lv 3 Plus II	Increases Blade's Lv 3 Special damage by 30%.	1800	2700	Common	Specific	0
+Specials Lv 3 Plus III	Increases Blade's Lv 3 Special damage by 40%.	2800	4200	Rare	Specific	0
+Specials Lv 3 Plus IV	Increases Blade's Lv 3 Special damage by 50%.	3500	5300	Rare	Specific	0
+Specials Lv 3 Plus V	Increases Blade's Lv 3 Special damage by 60%.	3800	5700	Legendary	Specific	0
+Specials Lv 4 Plus I	Increases Blade's Lv 4 Special damage by 20%.	700	1100	Common	Specific	0
+Specials Lv 4 Plus II	Increases Blade's Lv 4 Special damage by 30%.	1800	2700	Common	Specific	0
+Specials Lv 4 Plus III	Increases Blade's Lv 4 Special damage by 40%.	2800	4200	Rare	Specific	0
+Specials Lv 4 Plus IV	Increases Blade's Lv 4 Special damage by 50%.	3500	5300	Rare	Specific	0
+Specials Lv 4 Plus V	Increases Blade's Lv 4 Special damage by 60%.	3800	5700	Legendary	Specific	0
+Affinity MAX Acc I	Increases accuracy by 15% at max Affinity.	800	1000	Common	Common	4
+Affinity MAX Acc II	Increases accuracy by 20% at max Affinity.	2200	2900	Common	Common	8
+Affinity MAX Acc III	Increases accuracy by 25% at max Affinity.	3500	4600	Rare	Rare	3
+Affinity MAX Acc IV	Increases accuracy by 30% at max Affinity.	4300	5600	Rare	Rare	6
+Affinity MAX Acc V	Increases accuracy by 35% at max Affinity.	4700	6100	Legendary	Legendary	2
+Jamming I	Adds 10% chance of evading ranged attacks.	400	500	Common	Common	4
+Jamming II	Adds 20% chance of evading ranged attacks.	1300	1700	Common	Common	8
+Jamming III	Adds 30% chance of evading ranged attacks.	2100	2700	Rare	Rare	3
+Jamming IV	Adds 40% chance of evading ranged attacks.	3500	4600	Rare	Rare	6
+Jamming V	Adds 50% chance of evading ranged attacks.	3800	4900	Legendary	Legendary	2
+Element Orb Ender	Destroys an element orb when hit with an opposing element in a Chain Attack.	2700	3500	Rare	Common	8
+Element Orb Prioritizer	Targets damaged element orbs when not using opposing element in a Chain.	1400	1500	Common	Mechanical	3
+Critical Up VI	Boosts critical hit rate by 22%.	4800	4800	Legendary	Legendary	3
+Physical Defense Up VI	Boosts physical defense by 22%.	7100	7100	Legendary	Legendary	3
+Ether Defense Up VI	Boosts ether defense by 22%.	7100	7100	Legendary	Legendary	3
+Block Rate Up VI	Boosts block rate by 22%.	5900	5900	Legendary	Ore	18
+Beast Hunter VI	Increases damage dealt to beasts by 45%.	3500	3500	Legendary	Insect	18
+Insect Hunter VI	Increases damage dealt to insects by 45%.	3500	3500	Legendary	Flower	18
+Aerial Hunter VI	Increases damage dealt to aerial creatures by 45%.	3500	3500	Legendary	Fish	18
+Aquatic Hunter VI	Increases damage dealt to aquatic organisms by 45%.	3500	3500	Legendary	Tree	18
+Humanoid Hunter VI	Increases damage dealt to humanoids by 45%.	3500	3500	Legendary	Vegetable	18
+Machine Hunter VI	Increases damage dealt to machines by 40%.	3500	3500	Legendary	Mechanical	18
+Titan Hunter VI	Increases damage dealt to Titans by 45%.	3500	3500	Legendary	Tree	18
+Fusion Combo Up VI	Boosts Fusion Combo effect by 36%	4800	4800	Legendary	Legendary	3
+Ambush Boost VI	Increases damage dealt by a surprise attack by 110%.	2400	2400	Legendary	Insect	18
+Aggro Attack Up VI	Increases damage dealt to enemies targeting user by 35%.	7100	7100	Legendary	Specific	0
+Indoor Attack Up VI	Increases damage dealt indoors by 45%.	3500	3500	Legendary	Insect	18
+Outdoor Attack Up VI	Increases damage dealt outdoors by 45%.	3500	3500	Legendary	Tree	18
+Fire Def Up VI	Reduces fire damage received by 35%.	4400	4400	Legendary	Ore	18
+Water Def Up VI	Reduces water damage received by 35%.	4400	4400	Legendary	Fish	18
+Wind Def Up VI	Reduces wind damage received by 35%.	4400	4400	Legendary	Flower	18
+Earth Def Up VI	Reduces earth damage received by 35%.	4400	4400	Legendary	Tree	18
+Electric Def Up VI	Reduces electric damage received by 35%.	4400	4400	Legendary	Mechanical	18
+Ice Def Up VI	Reduces ice damage received by 35%.	4400	4400	Legendary	Vegetable	18
+Light Def Up VI	Reduces light damage received by 35%.	4400	4400	Legendary	Mechanical	18
+Dark Def Up VI	Reduces dark damage received by 35%.	4400	4400	Legendary	Ore	18
+Evasion Focus VI	Improves evasion by 35% when HP is 30% or lower.	4800	4800	Legendary	Legendary	3
+Swift Evasion VI	Improves evasion by 35% while moving.	4800	4800	Legendary	Specific	0
+Emergency Guard VI	Boosts block rate by 35% when HP is 30% or lower.	4800	4800	Legendary	Flower	18
+Endurance VI	Reduces damage taken by 22% when HP is 30% or lower.	4800	4800	Legendary	Legendary	3
+HP Attack Boost VI	Increases damage dealt by 35% when HP is 90% or higher.	4800	4800	Legendary	Legendary	3
+Break Resist VI	Boosts Break resistance by 60%.	9500	9500	Legendary	Legendary	3
+Topple Resist VI	Boosts Topple resistance by 60%.	8300	8300	Legendary	Legendary	3
+Launch Resist VI	Boosts Launch resistance by 60%.	7100	7100	Legendary	Legendary	3
+Smash Resist VI	Boosts Smash resistance by 60%.	4800	4800	Legendary	Legendary	3
+Blowdown Resist VI	Boosts Blowdown resistance by 50%.	3500	3500	Legendary	Legendary	3
+Knockback Resist VI	Boosts Knockback resistance by 60%.	3500	3500	Legendary	Legendary	3
+Auto-Attack Stealth VI	Reduces aggro drawn from auto-attacks by 30%.	7100	7100	Legendary	Legendary	3
+Aggro Boost VI	Increases aggro drawn from auto-attacks by 30%.	7100	7100	Legendary	Legendary	3
+Arts Stealth VI	Reduces aggro drawn from Specials and Driver Arts by 17%.	7100	7100	Legendary	Legendary	3
+Arts Aggro Boost VI	Increases aggro drawn from Specials and Driver Arts by 17%.	7100	7100	Legendary	Legendary	3
+Arts Heal VI	Restores 5.5% HP when using a Driver Art.	5900	5900	Legendary	Specific	0
+Movement Heal VI	Restores 3.5% HP every second while moving.	4800	4800	Legendary	Specific	0
+Damage Heal VI	Adds 25% chance of restoring 14% HP after taking a hit.	5900	5900	Legendary	Specific	0
+Night Vision VI	Increases Accuracy during the night by 120%.	2400	2400	Legendary	Insect	18
+Sunlight Eye VI	Increases Accuracy during the day by 120%.	2400	2400	Legendary	Tree	18
+Reflect Damage Up VI	Increases reflect damage by 150%.	2400	2400	Legendary	Legendary	3
+Opening Art VI	Increases damage dealt by 225% for the first Driver Art per battle.	2400	2400	Legendary	Fish	18
+Affinity MAX Barrier VI	When Affinity reaches max, grant party damage barrier of 35% of max HP.	3500	3500	Legendary	Vegetable	18
+Affinity MAX Atk VI	Increases damage dealt by 55% when Affinity is at max.	7100	7100	Legendary	Legendary	3
+Affinity MAX Evade VI	Increases evasion rate by 18% when Affinity is at max.	7100	7100	Legendary	Specific	0
+Specials Lv 1 Plus VI	Increases Blade's Lv 1 Special damage by 70%.	4800	4800	Legendary	Vegetable	18
+Specials Lv 2 Plus VI	Increases Blade's Lv 2 Special damage by 70%.	4800	4800	Legendary	Legendary	3
+Specials Lv 3 Plus VI	Increases Blade's Lv 3 Special damage by 70%.	4800	4800	Legendary	Specific	0
+Specials Lv 4 Plus VI	Increases Blade's Lv 4 Special damage by 70%.	4800	4800	Legendary	Specific	0
+Affinity MAX Acc VI	Increases accuracy by 40% at max Affinity.	5900	5900	Legendary	Legendary	3
+Jamming VI	Adds 60% chance of evading ranged attacks.	4800	4800	Legendary	Legendary	3
 \.
 
 
@@ -31237,6 +32011,22 @@ ALTER TABLE ONLY xeno2.chips
 
 
 --
+-- Name: core_materials_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.core_materials
+    ADD CONSTRAINT core_materials_pkey PRIMARY KEY (core, material);
+
+
+--
+-- Name: cores_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.cores
+    ADD CONSTRAINT cores_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -31370,6 +32160,14 @@ ALTER TABLE ONLY xeno2.chip_weapons
 
 ALTER TABLE ONLY xeno2.chip_weapons
     ADD CONSTRAINT chip_weapons_weapon_fkey FOREIGN KEY (weapon) REFERENCES xeno2.weapons(name);
+
+
+--
+-- Name: core_materials_core_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.core_materials
+    ADD CONSTRAINT core_materials_core_fkey FOREIGN KEY (core) REFERENCES xeno2.cores(name);
 
 
 --
