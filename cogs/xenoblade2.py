@@ -358,6 +358,65 @@ class Xenoblade2:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing aux core name.')
 
+    @utils.group(invoke_without_command=True)
+    async def xc2class(self, ctx, *, name: str.lower):
+        """Gives information for a Xenoblade Chronicles 2 class."""
+
+        query = """
+                SELECT
+                    name,
+                    STRING_AGG(role, E'\n'),
+                    damage_given,
+                    damage_recieved,
+                    healing_given,
+                    auto_attack_aggro,
+                    arts_aggro,
+                    potion_collect,
+                    prioritize_revive
+                FROM xeno2.classes
+                JOIN xeno2.class_roles
+                ON name=class
+                WHERE LOWER(name)=$1
+                GROUP BY name;
+                """
+
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'classes', name)
+
+        name, roles, given, recieved, heal, auto, arts, potion, revive = record
+
+        embed = discord.Embed(title=name)
+        embed.add_field(name='Damage Dealt', value=f'{given:+d}%')
+        embed.add_field(name='Damage Recieved', value=f'{-recieved:+d}%')
+        embed.add_field(name='Healing', value=f'{heal:+d}%')
+        embed.add_field(name='Auto-Attack Aggro', value=f'{given:+d}')
+        embed.add_field(name='Arts Aggro', value=f'{given:+d}')
+        embed.add_field(name='Collect Potions', value=potion)
+        embed.add_field(name='Prioritize Revival', value=revive)
+        embed.add_field(name='Roles', value=roles, inline=False)
+
+        await ctx.send(embed=embed)
+
+    @xc2class.command(name='all')
+    async def xc2class_all(self, ctx):
+        """Lists all Xenoblade Chronicles 2 classes."""
+
+        await self.all_entries(ctx, 'classes')
+
+    @xc2class.command(name='search')
+    async def xc2class_search(self, ctx, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 class."""
+
+        await self.search_entries(ctx, 'classes', name)
+
+    @xc2class.error
+    @xc2class_search.error
+    async def xc2class_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing class name.')
+
     async def show_possibilities(self, ctx, table_name, name):
         query = f"""
                 SELECT
@@ -368,7 +427,7 @@ class Xenoblade2:
 
         possibilities = await ctx.pool.fetchval(query, name)
 
-        strip = 2 if table_name.endswith('es') else 1
+        strip = 2 if table_name == 'classes' else 1
         type_name = table_name[:-strip].title()
 
         if not possibilities:
@@ -389,7 +448,8 @@ class Xenoblade2:
         results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query, name), 1)]
 
         if not results:
-            type_name = table_name[:-1].title()
+            strip = 2 if table_name == 'classes' else 1
+            type_name = table_name[:-strip].title()
             return await ctx.send(f'{type_name} not found.')
 
         try:
