@@ -162,6 +162,36 @@ CREATE TABLE xeno2.cores (
 ALTER TABLE xeno2.cores OWNER TO poppi;
 
 --
+-- Name: pouch_item_effects; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.pouch_item_effects (
+    pouch_item text NOT NULL,
+    effect text NOT NULL
+);
+
+
+ALTER TABLE xeno2.pouch_item_effects OWNER TO poppi;
+
+--
+-- Name: pouch_items; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.pouch_items (
+    name text NOT NULL,
+    category text NOT NULL,
+    sell_price integer NOT NULL,
+    rarity text NOT NULL,
+    location text NOT NULL,
+    max_carry smallint NOT NULL,
+    "time" smallint NOT NULL,
+    trust smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.pouch_items OWNER TO poppi;
+
+--
 -- Name: skills; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -2604,6 +2634,793 @@ Specials Lv 3 Plus VI	Increases Blade's Lv 3 Special damage by 70%.	4800	4800	Le
 Specials Lv 4 Plus VI	Increases Blade's Lv 4 Special damage by 70%.	4800	4800	Legendary	Specific	0
 Affinity MAX Acc VI	Increases accuracy by 40% at max Affinity.	5900	5900	Legendary	Legendary	3
 Jamming VI	Adds 60% chance of evading ranged attacks.	4800	4800	Legendary	Legendary	3
+\.
+
+
+--
+-- Data for Name: pouch_item_effects; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.pouch_item_effects (pouch_item, effect) FROM stdin;
+Juicy Samod	+8% max HP to dmg barrier
+Lightly Fried Rice	+10% max HP to dmg barrier
+Argentum Noodle Soup	+20% max HP to dmg barrier
+Massive Mushroom Pie	+15% max HP to dmg barrier
+Bright Samod	+15% max HP to dmg barrier
+Bright Samod	+5% HP recovery
+Tasty Kordeth Samod	+25% max HP to dmg barrier
+Tasty Kordeth Samod	+20% Party Gauge gain
+Tasty Kordeth Samod	+8% HP recovery
+Grilled Anchortail	-3% ether dmg taken
+Oyster Stir-Fry	-4% ether dmg taken
+Marine Stir-Fry	-4% ether dmg taken
+Marine Stir-Fry	+5% HP recovery
+Marine Stir-Fry	+8% Party Gauge gain
+Melodious Melon Parfait	Recharges Arts by 0.1 each second.
+Cinnopon Roll	Recharges Arts by 0.2 each second.
+Sparklesugar	Recharges Arts by 0.3 each second.
+Fruity Rice Ball	Recharges Arts by 0.3 each second.
+Fruity Rice Ball	-2% physical dmg taken
+Narcipear Jelly	Recharges Arts by 0.4 each second.
+Narcipear Jelly	-4% physical dmg taken
+Narcipear Jelly	-3% ether dmg taken
+Twinklejuice	+8% Party Gauge gain
+Fizz Juice	+10% Party Gauge gain
+Chunky Juice	+15% Party Gauge gain
+Sappan Veg Juice	+25% Party Gauge gain
+Sappan Veg Juice	+8% HP recovery
+Honey au Lait	+25% Party Gauge gain
+Honey au Lait	-5% ether dmg taken
+Crispy Blendshake	+30% Party Gauge gain
+Crispy Blendshake	+25% max HP to dmg barrier
+Roly-Poly Maracas	Specials recharge 0.3 each second.
+Nopolele	Specials recharge 0.5 each second.
+Funky Conga	Specials recharge 0.8 each second.
+Whispercorder	Specials recharge 1 each second.
+Casta-Mutes	Specials recharge 0.8 each second.
+Casta-Mutes	+6% Affinity gain
+Clicky-Clacks	Specials recharge 2 each second.
+Clicky-Clacks	-13% Affinity loss
+Salvaging Made Easy	+6% dmg dealt by Specials
+Yumyum's Golden Gun	+8% dmg dealt by Specials
+The Millenarian Titan	+12% dmg dealt by Specials
+Adventures of Myram	+12% dmg dealt by Specials
+Adventures of Myram	Specials recharge 0.3 each second.
+Mumuni the Littlepon	+16% dmg dealt by Specials
+Mumuni the Littlepon	+10% Affinity gain
+Clattertongue	+4% Blade Arts effect
+Nopon Chess Set	+8% Blade Arts effect
+Sneak-Thief King	+14% Blade Arts effect
+Tradeway 66	+20% Blade Arts effect
+Coral Nopon Chess Set	+14% Blade Arts effect
+Coral Nopon Chess Set	Specials recharge 0.5 each second.
+Leftherian Life	+20% Blade Arts effect
+Leftherian Life	+6% Affinity gain
+Leftherian Life	Specials recharge 0.5 each second.
+Eau de Doux	+50 base Affinity
+Elastifying Tonic	+75 base Affinity
+Freshening Gel	+100 base Affinity
+Curled Eyelashes	+125 base Affinity
+Bubbly Mani-Pedi Kit	+100 base Affinity
+Bubbly Mani-Pedi Kit	+5% Affinity gain
+Full Moon Eyeliner	+125 base Affinity
+Full Moon Eyeliner	+12% dmg dealt by Specials
+Full Moon Eyeliner	-5% Affinity loss
+Ruska Dumplings	+8% max HP to dmg barrier
+Ruska Noodle Goulash	+10% max HP to dmg barrier
+Deluxe Ham Toastie	+15% max HP to dmg barrier
+Ruska Noodle Soup	+15% max HP to dmg barrier
+Ruska Noodle Soup	-2% physical dmg taken
+Beat Paste Paratha	+20% max HP to dmg barrier
+Beat Paste Paratha	-5% ether dmg taken
+Crispy Sauté	+4% HP recovery
+Torigoth Marinade	+5% HP recovery
+Stuffed Meaty Carrot	+8% HP recovery
+Puri Leaf Salad	+8% HP recovery
+Puri Leaf Salad	+8% max HP to dmg barrier
+Snowy Dudleya Gelée	+13% HP recovery
+Snowy Dudleya Gelée	+20% Party Gauge gain
+Snowy Dudleya Gelée	+15% max HP to dmg barrier
+Estral Steak	-3% physical dmg taken
+Tasty Sausage	-2% physical dmg taken
+Mince & Lentil Stir-Fry	-4% physical dmg taken
+Mince & Lentil Stir-Fry	+10% Party Gauge gain
+Mustard Kordeth	-7% physical dmg taken
+Mustard Kordeth	-5% ether dmg taken
+Mustard Kordeth	+15% Party Gauge gain
+Gormotti Fish Flakes	-3% ether dmg taken
+Grass-Smoked Salmon	-4% ether dmg taken
+Bipedal Crab Chili	-5% ether dmg taken
+Bipedal Crab Chili	+15% max HP to dmg barrier
+Bipedal Crab Chili	Recharges Arts by 0.2 each second.
+Lunana Smoothie	+8% Party Gauge gain
+Gormotti Honeytea	+10% Party Gauge gain
+Kukurel Springwater	+15% Party Gauge gain
+Passion Fruit Shake	+15% Party Gauge gain
+Passion Fruit Shake	-3% ether dmg taken
+Victory Smoothie	+20% Party Gauge gain
+Victory Smoothie	Recharges Arts by 0.3 each second.
+Victory Smoothie	+5% HP recovery
+Torigonda	Specials recharge 0.3 each second.
+Woodgrain Alphorn	Specials recharge 0.5 each second.
+Cedarwood Koto	Specials recharge 0.8 each second.
+Woodboard	Specials recharge 0.8 each second.
+Woodboard	+8% Blade Arts effect
+Coralline Marimba	Specials recharge 1 each second.
+Coralline Marimba	+12% dmg dealt by Specials
+Coralline Marimba	+5% Affinity gain
+The Girl on the Hill	+4% Affinity gain
+Black Flower Field	+5% Affinity gain
+Woodcut Print of Bana	+6% Affinity gain
+Woodcut Print of Bana	+4% Blade Arts effect
+Wood-Carven Queen	+10% Affinity gain
+Wood-Carven Queen	+14% Blade Arts effect
+Wood-Carven Queen	-5% Affinity loss
+Puffoundation	+50 base Affinity
+Treesap Conditioner	+75 base Affinity
+Flurrycomb	+100 base Affinity
+Conch Hairpin	+100 base Affinity
+Conch Hairpin	-6% Affinity loss
+Sparkly Snow Perfume	+175 base Affinity
+Sparkly Snow Perfume	Specials recharge 1.5 each second.
+Puzzletree Pouch	-4% Affinity loss
+Torigoth-Weave Mat	-5% Affinity loss
+Wood-Dye Waistcloth	-6% Affinity loss
+Sun-Dappled Curtains	-10% Affinity loss
+Leaf-Weave Cape	-6% Affinity loss
+Leaf-Weave Cape	Specials recharge 0.8 each second.
+Snowflake Scarf	-13% Affinity loss
+Snowflake Scarf	+10% Affinity gain
+Snowflake Scarf	+100 base Affinity
+Wrapped Glarna Bake	+10% max HP to dmg barrier
+Three-Cheese Puran	+15% max HP to dmg barrier
+Glitterspud Puran	+15% max HP to dmg barrier
+Glitterspud Puran	Recharges Arts by 0.1 each second.
+Hearty Kordeth Puran	+20% max HP to dmg barrier
+Hearty Kordeth Puran	Recharges Arts by 0.3 each second.
+Hearty Kordeth Puran	-3% physical dmg taken
+Pomegranate Soup	+5% HP recovery
+Sour-Spark-on-a-Stick	+8% HP recovery
+Boiled Hustle Hyacinth	+8% HP recovery
+Boiled Hustle Hyacinth	-3% physical dmg taken
+Pickled Ice Cabbage	+10% HP recovery
+Pickled Ice Cabbage	Recharges Arts by 0.3 each second.
+Pickled Ice Cabbage	-3% ether dmg taken
+Armu T-Bone Steak	-3% physical dmg taken
+Mixed Meat Platter	-4% physical dmg taken
+Hotplate Fry-Up	-4% physical dmg taken
+Hotplate Fry-Up	Recharges Arts by 0.2 each second.
+Char-Grilled Grumbird	-7% physical dmg taken
+Char-Grilled Grumbird	Recharges Arts by 0.4 each second.
+Char-Grilled Grumbird	+8% HP recovery
+Dried Sunfish	-3% ether dmg taken
+Bullybelly Carpaccio	-4% ether dmg taken
+Steamed Bluegill	-4% ether dmg taken
+Steamed Bluegill	-2% physical dmg taken
+Whitebait With Seeds	-5% ether dmg taken
+Whitebait With Seeds	+15% Party Gauge gain
+Whitebait With Seeds	-3% physical dmg taken
+Rainbow Parfait	Recharges Arts by 0.1 each second.
+Blossom Custard	Recharges Arts by 0.3 each second.
+Plumage Peach Jelly	Recharges Arts by 0.3 each second.
+Plumage Peach Jelly	+8% HP recovery
+Champ's Churros	Recharges Arts by 0.2 each second.
+Snipe Flan	Recharges Arts by 0.3 each second.
+Cherry Cheese Mousse	Recharges Arts by 0.3 each second.
+Cherry Cheese Mousse	-3% physical dmg taken
+Neon Grape Flan	Recharges Arts by 0.3 each second.
+Neon Grape Flan	-4% ether dmg taken
+Black Roast Coffee	+10% Party Gauge gain
+Jenerossi Tea	+15% Party Gauge gain
+Fizzy Lassi	+15% Party Gauge gain
+Fizzy Lassi	Recharges Arts by 0.1 each second.
+Lentil Milkshake	+25% Party Gauge gain
+Lentil Milkshake	+10% HP recovery
+Lentil Milkshake	+15% max HP to dmg barrier
+Scarlet Shamisen	Specials recharge 0.3 each second.
+Fonsan Viola	Specials recharge 0.5 each second.
+Hero's Harp	Specials recharge 0.8 each second.
+Rumble Cello	Specials recharge 0.8 each second.
+Rumble Cello	+6% dmg dealt by Specials
+Cloudsnail Arpeggione	Specials recharge 1 each second.
+Cloudsnail Arpeggione	+125 base Affinity
+Patron King's Carving	+5% Affinity gain
+Final Chorus	+6% Affinity gain
+Singing Maiden Statue	+6% Affinity gain
+Singing Maiden Statue	+12% dmg dealt by Specials
+Skywards by Titan	+13% Affinity gain
+Skywards by Titan	+125 base Affinity
+Skywards by Titan	+14% Blade Arts effect
+The Alrestogony	+8% dmg dealt by Specials
+The Legacy of Selosia	+12% dmg dealt by Specials
+Masterpieces of Alrest	+12% dmg dealt by Specials
+Masterpieces of Alrest	-5% Affinity loss
+Addam's Love and War	+16% dmg dealt by Specials
+Addam's Love and War	+14% Blade Arts effect
+Addam's Love and War	-5% Affinity loss
+Castle Poker	+4% Blade Arts effect
+Gladiator Wrestling	+8% Blade Arts effect
+Coral Reversi	+14% Blade Arts effect
+Duel Line	+20% Blade Arts effect
+Nopopo Yard	+14% Blade Arts effect
+Nopopo Yard	Specials recharge 0.3 each second.
+Coral Casino	+26% Blade Arts effect
+Coral Casino	-10% Affinity loss
+Coral Casino	+100 base Affinity
+Red Opal Lipstick	+75 base Affinity
+Titan-Oil Hand Cream	+100 base Affinity
+Golden Mascara	+125 base Affinity
+Gorgeous Blusher	+100 base Affinity
+Gorgeous Blusher	Specials recharge 0.3 each second.
+Fonsett-Rouge Lipgloss	+125 base Affinity
+Fonsett-Rouge Lipgloss	+20% Blade Arts effect
+Sanar-Knit Headband	-4% Affinity loss
+Armu-Skin Gladiator	-5% Affinity loss
+Coralweave Towel	-6% Affinity loss
+Dazzling Handkerchief	-10% Affinity loss
+Gormotti Woodwing	-6% Affinity loss
+Gormotti Woodwing	+8% dmg dealt by Specials
+Sanar-Knit Blanket	-10% Affinity loss
+Sanar-Knit Blanket	+14% Blade Arts effect
+Sanar-Knit Blanket	+5% Affinity gain
+Dolphin Carrot Sliders	+5% HP recovery
+Campfire Skewers	+8% HP recovery
+Crispy Vegetable Salad	+8% HP recovery
+Crispy Vegetable Salad	-2% ether dmg taken
+Steamflake Tabbouleh	+10% HP recovery
+Steamflake Tabbouleh	-4% ether dmg taken
+Steamflake Tabbouleh	-3% physical dmg taken
+Meat & Lentil Skewer	-3% physical dmg taken
+Herbal Tartare Kascha	-4% physical dmg taken
+Grumbird Casserole	-5% physical dmg taken
+Estral Quotelettas	-4% physical dmg taken
+Estral Quotelettas	-2% ether dmg taken
+Armu & Bean Stew	-5% physical dmg taken
+Armu & Bean Stew	+10% HP recovery
+Grilled Salmon in Herbs	-4% ether dmg taken
+Cloud Sea Crab Sticks	-5% ether dmg taken
+Sand Salmon Ceviche	-4% ether dmg taken
+Sand Salmon Ceviche	Recharges Arts by 0.2 each second.
+Fish and Herb Broth	-7% ether dmg taken
+Fish and Herb Broth	Recharges Arts by 0.4 each second.
+Fish and Herb Broth	+8% HP recovery
+Steamed Milk Brioche	Recharges Arts by 0.1 each second.
+Steam-Gel Ice Cream	Recharges Arts by 0.2 each second.
+Sweet Lentil Bun	Recharges Arts by 0.3 each second.
+Sky-Jewel Tart	Recharges Arts by 0.3 each second.
+Odifa Gelée Tart	Recharges Arts by 0.3 each second.
+Odifa Gelée Tart	+15% max HP to dmg barrier
+Hot Ruby Steamed Bun	Recharges Arts by 0.4 each second.
+Hot Ruby Steamed Bun	+15% Party Gauge gain
+Hot Ruby Steamed Bun	-3% physical dmg taken
+Pipe Trumpet	Specials recharge 0.5 each second.
+Steamwork Organ	Specials recharge 0.8 each second.
+Army-Issue Violin	Specials recharge 1 each second.
+Hammerplate Snare	Specials recharge 1.5 each second.
+Tube Xylophone	Specials recharge 0.8 each second.
+Tube Xylophone	-4% Affinity loss
+Icicle Marimba	Specials recharge 1 each second.
+Icicle Marimba	+14% Blade Arts effect
+Icicle Marimba	-5% Affinity loss
+Punk Doll	+5% Affinity gain
+Copper Ephem Statue	+6% Affinity gain
+Felmeri Fairy Statue	+6% Affinity gain
+Felmeri Fairy Statue	-4% Affinity loss
+Conch Music Box	+10% Affinity gain
+Conch Music Box	+125 base Affinity
+Ardainian Arms Album	+8% dmg dealt by Specials
+Emperor Ephem's War	+12% dmg dealt by Specials
+Imperial Secret Escapes	+16% dmg dealt by Specials
+Les Awfuls	+16% dmg dealt by Specials
+How Wars Profit Nopon	+12% dmg dealt by Specials
+How Wars Profit Nopon	+75 base Affinity
+Love Beyond the Clouds	+16% dmg dealt by Specials
+Love Beyond the Clouds	+100 base Affinity
+Love Beyond the Clouds	Specials recharge 0.5 each second.
+Army Field Manual	+8% Blade Arts effect
+Chooby Tubes	+14% Blade Arts effect
+Secret Trials	+20% Blade Arts effect
+Dueling Kingdoms	+26% Blade Arts effect
+Dealing Kingdoms	+14% Blade Arts effect
+Dealing Kingdoms	+75 base Affinity
+Plumber Escape Game	+32% Blade Arts effect
+Plumber Escape Game	+20% dmg dealt by Specials
+Lybarian Chowder	+5% HP recovery
+Green Cheese Salad	+8% HP recovery
+Vegetable Mille-Feuille	+10% HP recovery
+Veg & Oyster Aspic	+8% HP recovery
+Veg & Oyster Aspic	Recharges Arts by 0.1 each second.
+Snowbaby Potato Salad	+13% HP recovery
+Snowbaby Potato Salad	-5% physical dmg taken
+Snowbaby Potato Salad	+15% Party Gauge gain
+Pastel Camill	-2% physical dmg taken
+Albacon Frystack	-3% physical dmg taken
+Sweet Armu Belly Stew	-4% physical dmg taken
+Zaproast Power Bowl	-5% physical dmg taken
+Fragrant Samod Stralu	-4% physical dmg taken
+Fragrant Samod Stralu	+8% max HP to dmg barrier
+Glarna Stir-Fry	-5% physical dmg taken
+Glarna Stir-Fry	Recharges Arts by 0.4 each second.
+Broiled Pinfin	-4% ether dmg taken
+Sautéed Beat Shrimps	-5% ether dmg taken
+Braised Cloud Sea Shark	-5% ether dmg taken
+Braised Cloud Sea Shark	-5% physical dmg taken
+Smoke-Braised Killifish	-4% ether dmg taken
+Smoke-Braised Killifish	+10% Party Gauge gain
+Seared Whitebait	-7% ether dmg taken
+Seared Whitebait	-5% physical dmg taken
+Seared Whitebait	+15% max HP to dmg barrier
+Odifa	+10% Party Gauge gain
+Indoline Tea	+15% Party Gauge gain
+Frozen Odifa	+20% Party Gauge gain
+Pipestraw Smoothie	+15% Party Gauge gain
+Pipestraw Smoothie	-3% physical dmg taken
+Armu Milk Earl Grey	+20% Party Gauge gain
+Armu Milk Earl Grey	-4% ether dmg taken
+Armu Milk Earl Grey	-3% physical dmg taken
+Luna Lizard Wreath	+6% Affinity gain
+Montecoran Doll	+10% Affinity gain
+Steel Pipe Lexos	+6% Affinity gain
+Steel Pipe Lexos	+8% Blade Arts effect
+Lush Moonbeam Mask	+10% Affinity gain
+Lush Moonbeam Mask	Specials recharge 0.8 each second.
+Lush Moonbeam Mask	+8% dmg dealt by Specials
+Jellyfish Balsam Rug	-5% Affinity loss
+Codweave Shop Curtain	-6% Affinity loss
+Codweave Safety Blanky	-10% Affinity loss
+Silken Stool	-13% Affinity loss
+Noponcho	-6% Affinity loss
+Noponcho	+50 base Affinity
+Prismatic Headband	-10% Affinity loss
+Prismatic Headband	+20% Blade Arts effect
+Fondant Rice Cake	+15% max HP to dmg barrier
+Tantalese Porridge	+20% max HP to dmg barrier
+Poached Fruit Samod	+15% max HP to dmg barrier
+Poached Fruit Samod	+8% Party Gauge gain
+Grumbird Rice Bowl	+20% max HP to dmg barrier
+Grumbird Rice Bowl	-4% ether dmg taken
+Grumbird Rice Bowl	Recharges Arts by 0.2 each second.
+Steamed Veg Stralu	+10% HP recovery
+Addam's Embercakes	+13% HP recovery
+Vinaigrette Ice Cabbage	+8% HP recovery
+Vinaigrette Ice Cabbage	+10% Party Gauge gain
+Prickly Snowpickle	+15% HP recovery
+Prickly Snowpickle	+25% max HP to dmg barrier
+Aromalocaris Sauté	-5% ether dmg taken
+Abyssturgeon Medallion	-7% ether dmg taken
+Bagna Oyster Roll	-4% ether dmg taken
+Bagna Oyster Roll	+8% max HP to dmg barrier
+Whitebait-Samod Hotpot	-5% ether dmg taken
+Whitebait-Samod Hotpot	+10% HP recovery
+Airy Snowflake Sherbet	Recharges Arts by 0.1 each second.
+Thawing Mille-Feuille	Recharges Arts by 0.2 each second.
+Baked Narcipear	Recharges Arts by 0.3 each second.
+Sno-Bake Cheesecake	Recharges Arts by 0.4 each second.
+Odifa Punch	Recharges Arts by 0.2 each second.
+Odifa Punch	+8% Party Gauge gain
+Snow Dumplings	Recharges Arts by 0.3 each second.
+Snow Dumplings	+5% HP recovery
+Snow Dumplings	+8% max HP to dmg barrier
+Ancient King’s Portrait	+6% Affinity gain
+Snow-Crystal Vase	+10% Affinity gain
+Portrait of Ger the Hero	+13% Affinity gain
+Prideful Walking	+8% dmg dealt by Specials
+The Armu Who Loved	+12% dmg dealt by Specials
+Witness the Crustip	+16% dmg dealt by Specials
+The Annals of Addam	+20% dmg dealt by Specials
+The Blizzard Choir	+12% dmg dealt by Specials
+The Blizzard Choir	+8% Blade Arts effect
+Astrology Made Simple	+24% dmg dealt by Specials
+Astrology Made Simple	+13% Affinity gain
+Don't Feed the Armu	+14% Blade Arts effect
+Bluff Knight	+20% Blade Arts effect
+Money-Bye-Bye	+26% Blade Arts effect
+Smack-A-Nopon	+14% Blade Arts effect
+Smack-A-Nopon	Specials recharge 0.3 each second.
+Jeweled Billiard Balls	+20% Blade Arts effect
+Jeweled Billiard Balls	+10% Affinity gain
+Jeweled Billiard Balls	-0% Affinity loss
+Steamy Oil	+100 base Affinity
+Chocolate Shadow	+125 base Affinity
+Moonstar Lipstick	+150 base Affinity
+Noponic Nails	+100 base Affinity
+Noponic Nails	+4% Blade Arts effect
+Steam Powder	+125 base Affinity
+Steam Powder	+6% Affinity gain
+Steam Powder	+8% dmg dealt by Specials
+Tantalese Velvet	-5% Affinity loss
+Snowflake-Weave Sole	-6% Affinity loss
+Genbu-Weave Cloth	-10% Affinity loss
+Heatstripe	-13% Affinity loss
+Musical Hair Clasp	-6% Affinity loss
+Musical Hair Clasp	+6% Affinity gain
+Torigoth Snowpouch	-13% Affinity loss
+Torigoth Snowpouch	Specials recharge 1 each second.
+Torigoth Snowpouch	+12% dmg dealt by Specials
+Glitterbake	+15% max HP to dmg barrier
+Tricolor Bowl	+25% max HP to dmg barrier
+Tricolor Bowl	+8% HP recovery
+Hot Moonbeam Salad	+8% HP recovery
+Addam's Supercakes	+13% HP recovery
+Addam's Supercakes	+20% max HP to dmg barrier
+Meatball Pot-au-Feu	-4% physical dmg taken
+Pan-Fried Tartari	-7% physical dmg taken
+Pan-Fried Tartari	-7% ether dmg taken
+Roast Meat Tagliata	-7% physical dmg taken
+Roast Meat Tagliata	+20% Party Gauge gain
+Roast Meat Tagliata	+8% HP recovery
+Sunshine Pie	-9% physical dmg taken
+Sunshine Pie	+13% HP recovery
+Acqua Pearl Pazza	-9% ether dmg taken
+Acqua Pearl Pazza	-7% physical dmg taken
+Vess’s Dumplings	+15% max HP to dmg barrier
+Rainbow Dumplings	+15% max HP to dmg barrier
+Rainbow Dumplings	-2% ether dmg taken
+Gromrice Dumplings	+20% max HP to dmg barrier
+Gromrice Dumplings	Recharges Arts by 0.3 each second.
+Puri Leaf Dumplings	+25% max HP to dmg barrier
+Puri Leaf Dumplings	-7% physical dmg taken
+Spicy Stralu	-7% physical dmg taken
+Lovemerry Cake	Recharges Arts by 0.5 each second.
+Lovemerry Cake	+25% max HP to dmg barrier
+Neon Cookies	Recharges Arts by 0.4 each second.
+Neon Cookies	-4% ether dmg taken
+Neon Cookies	+5% HP recovery
+Bitter Choclit	Recharges Arts by 0.2 each second.
+Bitlip Drink	+8% Party Gauge gain
+Pucklip Drink	+8% Party Gauge gain
+Tinglip Drink	+8% Party Gauge gain
+Sourlip Drink	+8% Party Gauge gain
+Tricolor Ice Floe	+5% Affinity gain
+Tricolor Ice Floe	+50 base Affinity
+Sparkling Snowglobe	+10% Affinity gain
+Sparkling Snowglobe	+12% dmg dealt by Specials
+Rainbow Scope	+10% Affinity gain
+Rainbow Scope	-6% Affinity loss
+Tantal Icecube	+13% Affinity gain
+Tantal Icecube	Specials recharge 1.5 each second.
+Titan Illuminations	+17% Affinity gain
+Titan Illuminations	Specials recharge 1.5 each second.
+Salted Brog Sauté	-5% physical dmg taken
+Salted Brog Sauté	+15% Party Gauge gain
+Cream Orange Paratha	Recharges Arts by 0.3 each second.
+The Flora of Alrest	+12% dmg dealt by Specials
+Gentlemen: A Study	+24% dmg dealt by Specials
+Quoteletta	-5% physical dmg taken
+Fried Octomayo	+20% max HP to dmg barrier
+Ardainian Bear Carving	+10% Affinity gain
+Master's Curry	+25% max HP to dmg barrier
+Lucky Dawn Bread	+20% max HP to dmg barrier
+Choclit Dumplings	+30% max HP to dmg barrier
+Choclit Dumplings	-7% physical dmg taken
+Heart Cookies	Recharges Arts by 0.2 each second.
+Rizzente Mantle	-5% Affinity loss
+Rizzente Mantle	Specials recharge 0.3 each second.
+Felt Cushioning	-6% Affinity loss
+Felt Cushioning	+8% dmg dealt by Specials
+Brut Silk	-10% Affinity loss
+Brut Silk	Specials recharge 0.8 each second.
+Shelton Broadcloth	-13% Affinity loss
+Shelton Broadcloth	+16% dmg dealt by Specials
+Crinkly Wool	-17% Affinity loss
+Crinkly Wool	Specials recharge 1.5 each second.
+Pyra's Baked Redfish	-9% ether dmg taken
+Pyra's Baked Redfish	-7% physical dmg taken
+Pyra's Baked Redfish	+20% max HP to dmg barrier
+Fabulously Fierce Hat	-17% Affinity loss
+Fabulously Fierce Hat	Specials recharge 1.5 each second.
+Fabulously Fierce Hat	+10% Affinity gain
+Love Source	+15% Party Gauge gain
+\.
+
+
+--
+-- Data for Name: pouch_items; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.pouch_items (name, category, sell_price, rarity, location, max_carry, "time", trust) FROM stdin;
+Juicy Samod	Staple Foods	60	Common	Argentum Trade Guild	10	20	9
+Lightly Fried Rice	Staple Foods	120	Common	Argentum Trade Guild	10	20	9
+Argentum Noodle Soup	Staple Foods	240	Rare	Argentum Trade Guild	10	20	9
+Massive Mushroom Pie	Staple Foods	180	Rare	Argentum Trade Guild	10	20	9
+Bright Samod	Staple Foods	600	Rare	Argentum Trade Guild	10	40	12
+Tasty Kordeth Samod	Staple Foods	2520	Rare	Argentum Trade Guild	10	70	12
+Grilled Anchortail	Seafood	120	Common	Argentum Trade Guild	10	20	12
+Oyster Stir-Fry	Seafood	180	Rare	Argentum Trade Guild	10	20	12
+Marine Stir-Fry	Seafood	1080	Rare	Argentum Trade Guild	10	60	12
+Melodious Melon Parfait	Desserts	60	Common	Argentum Trade Guild	10	20	9
+Cinnopon Roll	Desserts	120	Common	Argentum Trade Guild	10	20	9
+Sparklesugar	Desserts	180	Rare	Argentum Trade Guild	10	20	9
+Fruity Rice Ball	Desserts	360	Rare	Argentum Trade Guild	10	30	12
+Narcipear Jelly	Desserts	2520	Legendary	Argentum Trade Guild	10	70	12
+Twinklejuice	Drinks	60	Common	Argentum Trade Guild	10	20	9
+Fizz Juice	Drinks	120	Common	Argentum Trade Guild	10	20	9
+Chunky Juice	Drinks	180	Common	Argentum Trade Guild	10	20	9
+Sappan Veg Juice	Drinks	720	Rare	Argentum Trade Guild	10	30	12
+Honey au Lait	Drinks	1080	Rare	Argentum Trade Guild	10	40	12
+Crispy Blendshake	Drinks	1650	Legendary	Argentum Trade Guild	10	50	12
+Roly-Poly Maracas	Instruments	360	Common	Argentum Trade Guild	3	120	12
+Nopolele	Instruments	720	Common	Argentum Trade Guild	3	120	12
+Funky Conga	Instruments	1080	Common	Argentum Trade Guild	3	120	12
+Whispercorder	Instruments	1440	Rare	Argentum Trade Guild	3	120	12
+Casta-Mutes	Instruments	3460	Rare	Argentum Trade Guild	3	192	15
+Clicky-Clacks	Instruments	6340	Legendary	Argentum Trade Guild	3	240	15
+Salvaging Made Easy	Literature	360	Common	Argentum Trade Guild	3	120	12
+Yumyum's Golden Gun	Literature	720	Common	Argentum Trade Guild	3	120	12
+The Millenarian Titan	Literature	1080	Rare	Argentum Trade Guild	3	120	12
+Adventures of Myram	Literature	1730	Rare	Argentum Trade Guild	3	144	15
+Mumuni the Littlepon	Literature	4610	Legendary	Argentum Trade Guild	3	192	15
+Clattertongue	Board Games	360	Common	Argentum Trade Guild	3	120	12
+Nopon Chess Set	Board Games	720	Common	Argentum Trade Guild	3	120	12
+Sneak-Thief King	Board Games	1080	Common	Argentum Trade Guild	3	120	12
+Tradeway 66	Board Games	1440	Rare	Argentum Trade Guild	3	120	12
+Coral Nopon Chess Set	Board Games	2520	Rare	Argentum Trade Guild	3	168	15
+Leftherian Life	Board Games	5840	Legendary	Argentum Trade Guild	3	216	15
+Eau de Doux	Cosmetics	360	Rare	Argentum Trade Guild	3	120	12
+Elastifying Tonic	Cosmetics	720	Rare	Argentum Trade Guild	3	120	12
+Freshening Gel	Cosmetics	1080	Rare	Argentum Trade Guild	3	120	12
+Curled Eyelashes	Cosmetics	1440	Rare	Argentum Trade Guild	3	120	12
+Bubbly Mani-Pedi Kit	Cosmetics	2520	Rare	Argentum Trade Guild	3	168	15
+Full Moon Eyeliner	Cosmetics	5840	Legendary	Argentum Trade Guild	3	216	15
+Ruska Dumplings	Staple Foods	60	Common	Gormott Province	10	20	9
+Ruska Noodle Goulash	Staple Foods	120	Common	Gormott Province	10	20	9
+Deluxe Ham Toastie	Staple Foods	180	Common	Gormott Province	10	20	9
+Ruska Noodle Soup	Staple Foods	360	Rare	Gormott Province	10	30	12
+Beat Paste Paratha	Staple Foods	1200	Legendary	Gormott Province	10	50	12
+Crispy Sauté	Vegetables	60	Common	Gormott Province	10	20	9
+Torigoth Marinade	Vegetables	120	Common	Gormott Province	10	20	9
+Stuffed Meaty Carrot	Vegetables	180	Common	Gormott Province	10	20	9
+Puri Leaf Salad	Vegetables	360	Rare	Gormott Province	10	30	12
+Snowy Dudleya Gelée	Vegetables	2520	Legendary	Kingdom of Tantal	10	70	12
+Estral Steak	Meat	120	Common	Gormott Province	10	20	9
+Tasty Sausage	Meat	60	Common	Gormott Province	10	20	9
+Mince & Lentil Stir-Fry	Meat	600	Rare	Gormott Province	10	40	12
+Mustard Kordeth	Meat	2520	Legendary	Gormott Province	10	70	12
+Gormotti Fish Flakes	Seafood	120	Common	Gormott Province	10	20	9
+Grass-Smoked Salmon	Seafood	180	Rare	Gormott Province	10	20	9
+Bipedal Crab Chili	Seafood	1620	Legendary	Gormott Province	10	60	12
+Lunana Smoothie	Drinks	60	Common	Gormott Province	10	20	9
+Gormotti Honeytea	Drinks	120	Common	Gormott Province	10	20	9
+Kukurel Springwater	Drinks	180	Common	Gormott Province	10	20	9
+Passion Fruit Shake	Drinks	600	Rare	Gormott Province	10	40	12
+Victory Smoothie	Drinks	1620	Legendary	Gormott Province	10	60	12
+Torigonda	Instruments	360	Common	Gormott Province	3	120	12
+Woodgrain Alphorn	Instruments	720	Common	Gormott Province	3	120	12
+Cedarwood Koto	Instruments	1080	Common	Gormott Province	3	120	12
+Woodboard	Instruments	2520	Rare	Gormott Province	3	168	15
+Coralline Marimba	Instruments	5840	Legendary	Gormott Province	3	216	15
+The Girl on the Hill	Arts	360	Common	Gormott Province	3	120	12
+Black Flower Field	Arts	720	Common	Gormott Province	3	120	12
+Woodcut Print of Bana	Arts	1730	Rare	Gormott Province	3	144	15
+Wood-Carven Queen	Arts	5840	Legendary	Gormott Province	3	216	15
+Puffoundation	Cosmetics	360	Common	Gormott Province	3	120	12
+Treesap Conditioner	Cosmetics	720	Common	Gormott Province	3	120	12
+Flurrycomb	Cosmetics	1080	Common	Gormott Province	3	120	12
+Conch Hairpin	Cosmetics	3460	Rare	Gormott Province	3	192	15
+Sparkly Snow Perfume	Cosmetics	6340	Legendary	Gormott Province	3	240	15
+Puzzletree Pouch	Textiles	360	Common	Gormott Province	3	120	12
+Torigoth-Weave Mat	Textiles	720	Common	Gormott Province	3	120	12
+Wood-Dye Waistcloth	Textiles	1080	Common	Gormott Province	3	120	12
+Sun-Dappled Curtains	Textiles	1440	Rare	Gormott Province	3	120	12
+Leaf-Weave Cape	Textiles	3460	Rare	Gormott Province	3	192	15
+Snowflake Scarf	Textiles	8640	Legendary	Gormott Province	3	240	15
+Wrapped Glarna Bake	Staple Foods	180	Common	Kingdom of Uraya	10	20	12
+Three-Cheese Puran	Staple Foods	270	Common	Kingdom of Uraya	10	20	12
+Glitterspud Puran	Staple Foods	540	Rare	Kingdom of Uraya	10	30	15
+Hearty Kordeth Puran	Staple Foods	2430	Legendary	Kingdom of Uraya	10	60	15
+Pomegranate Soup	Vegetables	120	Common	Kingdom of Uraya	10	20	12
+Sour-Spark-on-a-Stick	Vegetables	180	Common	Kingdom of Uraya	10	20	12
+Boiled Hustle Hyacinth	Vegetables	600	Rare	Kingdom of Uraya	10	40	15
+Pickled Ice Cabbage	Vegetables	1620	Legendary	Kingdom of Uraya	10	60	15
+Armu T-Bone Steak	Meat	180	Common	Kingdom of Uraya	10	20	12
+Mixed Meat Platter	Meat	270	Common	Kingdom of Uraya	10	20	12
+Hotplate Fry-Up	Meat	900	Rare	Kingdom of Uraya	10	40	15
+Char-Grilled Grumbird	Meat	3780	Legendary	Kingdom of Uraya	10	70	15
+Dried Sunfish	Seafood	180	Common	Kingdom of Uraya	10	20	12
+Bullybelly Carpaccio	Seafood	270	Common	Kingdom of Uraya	10	20	12
+Steamed Bluegill	Seafood	540	Rare	Kingdom of Uraya	10	30	15
+Whitebait With Seeds	Seafood	2430	Legendary	Kingdom of Uraya	10	60	15
+Rainbow Parfait	Desserts	90	Common	Kingdom of Uraya	10	20	12
+Blossom Custard	Desserts	270	Rare	Kingdom of Uraya	10	20	12
+Plumage Peach Jelly	Desserts	1800	Legendary	Kingdom of Uraya	10	50	15
+Champ's Churros	Desserts	180	Common	Kingdom of Uraya	10	20	12
+Snipe Flan	Desserts	240	Rare	Kingdom of Uraya	10	20	15
+Cherry Cheese Mousse	Desserts	840	Legendary	Kingdom of Uraya	10	40	15
+Neon Grape Flan	Desserts	1200	Legendary	Kingdom of Uraya	10	50	15
+Black Roast Coffee	Drinks	120	Common	Kingdom of Uraya	10	20	12
+Jenerossi Tea	Drinks	180	Common	Kingdom of Uraya	10	20	12
+Fizzy Lassi	Drinks	360	Rare	Kingdom of Uraya	10	30	15
+Lentil Milkshake	Drinks	2520	Legendary	Kingdom of Uraya	10	70	15
+Scarlet Shamisen	Instruments	360	Common	Kingdom of Uraya	3	120	15
+Fonsan Viola	Instruments	720	Common	Kingdom of Uraya	3	120	15
+Hero's Harp	Instruments	1080	Rare	Kingdom of Uraya	3	120	15
+Rumble Cello	Instruments	1730	Rare	Kingdom of Uraya	3	144	18
+Cloudsnail Arpeggione	Instruments	4610	Legendary	Kingdom of Uraya	3	192	18
+Patron King's Carving	Arts	720	Common	Kingdom of Uraya	3	120	15
+Final Chorus	Arts	1080	Common	Kingdom of Uraya	3	120	15
+Singing Maiden Statue	Arts	3460	Rare	Kingdom of Uraya	3	192	18
+Skywards by Titan	Arts	8640	Legendary	Kingdom of Uraya	3	240	18
+The Alrestogony	Literature	720	Common	Kingdom of Uraya	3	120	15
+The Legacy of Selosia	Literature	1080	Common	Kingdom of Uraya	3	120	15
+Masterpieces of Alrest	Literature	2520	Rare	Kingdom of Uraya	3	168	18
+Addam's Love and War	Literature	5840	Legendary	Kingdom of Uraya	3	216	18
+Castle Poker	Board Games	360	Common	Kingdom of Uraya	3	120	15
+Gladiator Wrestling	Board Games	720	Common	Kingdom of Uraya	3	120	15
+Coral Reversi	Board Games	1080	Common	Kingdom of Uraya	3	120	15
+Duel Line	Board Games	1440	Rare	Kingdom of Uraya	3	120	15
+Nopopo Yard	Board Games	1730	Rare	Kingdom of Uraya	3	144	18
+Coral Casino	Board Games	8640	Legendary	Kingdom of Uraya	3	240	18
+Red Opal Lipstick	Cosmetics	720	Common	Kingdom of Uraya	3	120	15
+Titan-Oil Hand Cream	Cosmetics	1080	Common	Kingdom of Uraya	3	120	15
+Golden Mascara	Cosmetics	1440	Common	Kingdom of Uraya	3	120	15
+Gorgeous Blusher	Cosmetics	1730	Rare	Kingdom of Uraya	3	144	18
+Fonsett-Rouge Lipgloss	Cosmetics	4610	Legendary	Kingdom of Uraya	3	192	18
+Sanar-Knit Headband	Textiles	360	Common	Kingdom of Uraya	3	120	15
+Armu-Skin Gladiator	Textiles	720	Common	Kingdom of Uraya	3	120	15
+Coralweave Towel	Textiles	1080	Common	Kingdom of Uraya	3	120	15
+Dazzling Handkerchief	Textiles	1440	Rare	Kingdom of Uraya	3	120	15
+Gormotti Woodwing	Textiles	2520	Rare	Kingdom of Uraya	3	168	18
+Sanar-Knit Blanket	Textiles	5840	Legendary	Kingdom of Uraya	3	216	18
+Dolphin Carrot Sliders	Vegetables	120	Common	Empire of Mor Ardain	10	20	12
+Campfire Skewers	Vegetables	180	Common	Empire of Mor Ardain	10	20	12
+Crispy Vegetable Salad	Vegetables	360	Rare	Empire of Mor Ardain	10	30	15
+Steamflake Tabbouleh	Vegetables	1620	Legendary	Empire of Mor Ardain	10	60	15
+Meat & Lentil Skewer	Meat	120	Common	Empire of Mor Ardain	10	20	12
+Herbal Tartare Kascha	Meat	180	Common	Empire of Mor Ardain	10	20	12
+Grumbird Casserole	Meat	240	Common	Empire of Mor Ardain	10	20	12
+Estral Quotelettas	Meat	360	Rare	Empire of Mor Ardain	10	30	15
+Armu & Bean Stew	Meat	1200	Legendary	Empire of Mor Ardain	10	50	15
+Grilled Salmon in Herbs	Seafood	180	Common	Empire of Mor Ardain	10	20	12
+Cloud Sea Crab Sticks	Seafood	240	Common	Empire of Mor Ardain	10	20	12
+Sand Salmon Ceviche	Seafood	600	Rare	Empire of Mor Ardain	10	40	15
+Fish and Herb Broth	Seafood	2520	Legendary	Empire of Mor Ardain	10	70	15
+Steamed Milk Brioche	Desserts	120	Common	Empire of Mor Ardain	10	20	12
+Steam-Gel Ice Cream	Desserts	180	Common	Empire of Mor Ardain	10	20	12
+Sweet Lentil Bun	Desserts	240	Common	Empire of Mor Ardain	10	20	12
+Sky-Jewel Tart	Desserts	240	Rare	Empire of Mor Ardain	10	20	12
+Odifa Gelée Tart	Desserts	900	Rare	Empire of Mor Ardain	10	50	15
+Hot Ruby Steamed Bun	Desserts	2520	Legendary	Empire of Mor Ardain	10	70	15
+Pipe Trumpet	Instruments	720	Common	Empire of Mor Ardain	3	120	15
+Steamwork Organ	Instruments	1080	Common	Empire of Mor Ardain	3	120	15
+Army-Issue Violin	Instruments	1440	Common	Empire of Mor Ardain	3	120	15
+Hammerplate Snare	Instruments	1800	Rare	Empire of Mor Ardain	3	120	15
+Tube Xylophone	Instruments	1730	Rare	Empire of Mor Ardain	3	144	18
+Icicle Marimba	Instruments	5840	Legendary	Empire of Mor Ardain	3	216	18
+Punk Doll	Arts	720	Common	Empire of Mor Ardain	3	120	15
+Copper Ephem Statue	Arts	1080	Common	Empire of Mor Ardain	3	120	15
+Felmeri Fairy Statue	Arts	1730	Rare	Empire of Mor Ardain	3	144	18
+Conch Music Box	Arts	4610	Legendary	Empire of Mor Ardain	3	192	18
+Ardainian Arms Album	Literature	720	Common	Empire of Mor Ardain	3	120	15
+Emperor Ephem's War	Literature	1080	Common	Empire of Mor Ardain	3	120	15
+Imperial Secret Escapes	Literature	1440	Common	Empire of Mor Ardain	3	120	15
+Les Awfuls	Literature	1440	Rare	Empire of Mor Ardain	3	120	15
+How Wars Profit Nopon	Literature	2520	Rare	Empire of Mor Ardain	3	168	18
+Love Beyond the Clouds	Literature	5840	Legendary	Empire of Mor Ardain	3	216	18
+Army Field Manual	Board Games	720	Common	Empire of Mor Ardain	3	120	15
+Chooby Tubes	Board Games	1080	Common	Empire of Mor Ardain	3	120	15
+Secret Trials	Board Games	1440	Common	Empire of Mor Ardain	3	120	15
+Dueling Kingdoms	Board Games	1800	Rare	Empire of Mor Ardain	3	120	15
+Dealing Kingdoms	Board Games	2520	Rare	Empire of Mor Ardain	3	168	18
+Plumber Escape Game	Board Games	6340	Legendary	Empire of Mor Ardain	3	240	18
+Lybarian Chowder	Vegetables	120	Common	Leftherian Archipelago	10	20	15
+Green Cheese Salad	Vegetables	180	Common	Leftherian Archipelago	10	20	15
+Vegetable Mille-Feuille	Vegetables	240	Common	Leftherian Archipelago	10	20	15
+Veg & Oyster Aspic	Vegetables	360	Rare	Leftherian Archipelago	10	30	18
+Snowbaby Potato Salad	Vegetables	2520	Legendary	Leftherian Archipelago	10	70	18
+Pastel Camill	Meat	60	Common	Leftherian Archipelago	10	20	15
+Albacon Frystack	Meat	120	Common	Leftherian Archipelago	10	20	15
+Sweet Armu Belly Stew	Meat	180	Common	Leftherian Archipelago	10	20	15
+Zaproast Power Bowl	Meat	240	Rare	Leftherian Archipelago	10	20	15
+Fragrant Samod Stralu	Meat	360	Rare	Leftherian Archipelago	10	30	18
+Glarna Stir-Fry	Meat	1200	Legendary	Leftherian Archipelago	10	50	18
+Broiled Pinfin	Seafood	180	Common	Leftherian Archipelago	10	20	15
+Sautéed Beat Shrimps	Seafood	240	Common	Leftherian Archipelago	10	20	15
+Braised Cloud Sea Shark	Seafood	480	Common	Leftherian Archipelago	10	20	15
+Smoke-Braised Killifish	Seafood	600	Rare	Leftherian Archipelago	10	40	18
+Seared Whitebait	Seafood	2520	Legendary	Leftherian Archipelago	10	70	18
+Odifa	Drinks	120	Common	Indoline Praetorium	10	20	15
+Indoline Tea	Drinks	180	Common	Indoline Praetorium	10	20	15
+Frozen Odifa	Drinks	240	Common	Indoline Praetorium	10	20	15
+Pipestraw Smoothie	Drinks	600	Rare	Leftherian Archipelago	10	40	18
+Armu Milk Earl Grey	Drinks	1620	Legendary	Leftherian Archipelago	10	60	18
+Luna Lizard Wreath	Arts	1080	Common	Leftherian Archipelago	3	120	18
+Montecoran Doll	Arts	1440	Common	Leftherian Archipelago	3	120	18
+Steel Pipe Lexos	Arts	2520	Rare	Leftherian Archipelago	3	168	21
+Lush Moonbeam Mask	Arts	5840	Legendary	Leftherian Archipelago	3	216	21
+Jellyfish Balsam Rug	Textiles	720	Common	Leftherian Archipelago	3	120	18
+Codweave Shop Curtain	Textiles	1080	Common	Leftherian Archipelago	3	120	18
+Codweave Safety Blanky	Textiles	1440	Common	Leftherian Archipelago	3	120	18
+Silken Stool	Textiles	1800	Rare	Leftherian Archipelago	3	120	18
+Noponcho	Textiles	1730	Rare	Leftherian Archipelago	3	144	21
+Prismatic Headband	Textiles	4610	Legendary	Leftherian Archipelago	3	192	21
+Fondant Rice Cake	Staple Foods	900	Common	Kingdom of Tantal	10	20	15
+Tantalese Porridge	Staple Foods	1200	Common	Kingdom of Tantal	10	20	15
+Poached Fruit Samod	Staple Foods	1800	Rare	Kingdom of Tantal	10	30	18
+Grumbird Rice Bowl	Staple Foods	8100	Legendary	Kingdom of Tantal	10	60	18
+Steamed Veg Stralu	Vegetables	1200	Common	Kingdom of Tantal	10	20	15
+Addam's Embercakes	Vegetables	1500	Common	Kingdom of Tantal	10	20	15
+Vinaigrette Ice Cabbage	Vegetables	3000	Rare	Kingdom of Tantal	10	40	18
+Prickly Snowpickle	Vegetables	8250	Legendary	Kingdom of Tantal	10	70	18
+Aromalocaris Sauté	Seafood	1200	Common	Kingdom of Tantal	10	20	15
+Abyssturgeon Medallion	Seafood	1500	Common	Kingdom of Tantal	10	20	18
+Bagna Oyster Roll	Seafood	1800	Rare	Kingdom of Tantal	10	30	18
+Whitebait-Samod Hotpot	Seafood	6000	Legendary	Kingdom of Tantal	10	50	18
+Airy Snowflake Sherbet	Desserts	600	Common	Kingdom of Tantal	10	20	15
+Thawing Mille-Feuille	Desserts	900	Common	Kingdom of Tantal	10	20	15
+Baked Narcipear	Desserts	1200	Common	Kingdom of Tantal	10	20	15
+Sno-Bake Cheesecake	Desserts	1500	Rare	Kingdom of Tantal	10	20	15
+Odifa Punch	Desserts	3000	Rare	Kingdom of Tantal	10	40	18
+Snow Dumplings	Desserts	8100	Legendary	Kingdom of Tantal	10	60	18
+Ancient King’s Portrait	Arts	5400	Legendary	Kingdom of Tantal	3	120	18
+Snow-Crystal Vase	Arts	7200	Legendary	Kingdom of Tantal	3	120	18
+Portrait of Ger the Hero	Arts	9000	Legendary	Kingdom of Tantal	3	120	18
+Prideful Walking	Literature	3600	Common	Kingdom of Tantal	3	120	18
+The Armu Who Loved	Literature	5400	Common	Kingdom of Tantal	3	120	18
+Witness the Crustip	Literature	7200	Common	Kingdom of Tantal	3	120	18
+The Annals of Addam	Literature	9000	Rare	Kingdom of Tantal	3	120	18
+The Blizzard Choir	Literature	12600	Rare	Kingdom of Tantal	3	168	21
+Astrology Made Simple	Literature	31680	Legendary	Kingdom of Tantal	3	240	21
+Don't Feed the Armu	Board Games	5400	Common	Kingdom of Tantal	3	120	18
+Bluff Knight	Board Games	7200	Common	Kingdom of Tantal	3	120	18
+Money-Bye-Bye	Board Games	9000	Common	Kingdom of Tantal	3	120	18
+Smack-A-Nopon	Board Games	8640	Rare	Kingdom of Tantal	3	144	21
+Jeweled Billiard Balls	Board Games	23040	Legendary	Kingdom of Tantal	3	192	21
+Steamy Oil	Cosmetics	5400	Common	Kingdom of Tantal	3	120	18
+Chocolate Shadow	Cosmetics	7200	Common	Kingdom of Tantal	3	120	18
+Moonstar Lipstick	Cosmetics	9000	Common	Kingdom of Tantal	3	120	18
+Noponic Nails	Cosmetics	8640	Rare	Kingdom of Tantal	3	144	21
+Steam Powder	Cosmetics	29160	Legendary	Kingdom of Tantal	3	216	21
+Tantalese Velvet	Textiles	3600	Common	Kingdom of Tantal	3	120	18
+Snowflake-Weave Sole	Textiles	5400	Common	Kingdom of Tantal	3	120	18
+Genbu-Weave Cloth	Textiles	7200	Common	Kingdom of Tantal	3	120	18
+Heatstripe	Textiles	9000	Rare	Kingdom of Tantal	3	120	18
+Musical Hair Clasp	Textiles	17280	Rare	Kingdom of Tantal	3	192	21
+Torigoth Snowpouch	Textiles	43200	Legendary	Kingdom of Tantal	3	240	21
+Glitterbake	Staple Foods	180	Common	Gormott Province	10	20	12
+Tricolor Bowl	Staple Foods	720	Rare	Gormott Province	10	30	12
+Hot Moonbeam Salad	Vegetables	180	Common	Gormott Province	10	20	12
+Addam's Supercakes	Vegetables	1080	Rare	Gormott Province	10	40	12
+Meatball Pot-au-Feu	Meat	180	Common	Gormott Province	10	20	12
+Pan-Fried Tartari	Meat	1500	Rare	Gormott Province	10	50	12
+Roast Meat Tagliata	Meat	2160	Rare	Gormott Province	10	60	12
+Sunshine Pie	Meat	1650	Legendary	Gormott Province	10	70	12
+Acqua Pearl Pazza	Meat	1650	Legendary	Gormott Province	10	20	12
+Vess’s Dumplings	Staple Foods	180	Common	Gormott Province	10	20	6
+Rainbow Dumplings	Staple Foods	360	Common	Gormott Province	10	30	9
+Gromrice Dumplings	Staple Foods	840	Rare	Gormott Province	10	40	12
+Puri Leaf Dumplings	Staple Foods	1500	Rare	Gormott Province	10	50	15
+Spicy Stralu	Meat	300	Legendary	Argentum Trade Guild	10	20	12
+Lovemerry Cake	Desserts	1650	Legendary	Kingdom of Uraya	10	70	15
+Neon Cookies	Desserts	2160	Rare	Kingdom of Uraya	10	60	15
+Bitter Choclit	Desserts	180	Common	Kingdom of Uraya	10	20	12
+Bitlip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
+Pucklip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
+Tinglip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
+Sourlip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
+Tricolor Ice Floe	Arts	1300	Common	Argentum Trade Guild	10	144	9
+Sparkling Snowglobe	Arts	3530	Rare	Argentum Trade Guild	10	168	12
+Rainbow Scope	Arts	3530	Rare	Argentum Trade Guild	10	168	12
+Tantal Icecube	Arts	5760	Rare	Argentum Trade Guild	10	192	15
+Titan Illuminations	Arts	6340	Legendary	Argentum Trade Guild	10	192	15
+Salted Brog Sauté	Meat	840	Rare	Gormott Province	10	40	15
+Cream Orange Paratha	Staple Foods	180	Rare	Gormott Province	10	20	9
+The Flora of Alrest	Literature	5400	Common	Kingdom of Tantal	10	120	21
+Gentlemen: A Study	Literature	10800	Legendary	Kingdom of Tantal	10	120	21
+Quoteletta	Meat	300	Rare	Empire of Mor Ardain	10	20	12
+Fried Octomayo	Staple Foods	1300	Rare	Kingdom of Tantal	10	20	15
+Ardainian Bear Carving	Arts	1440	Rare	Empire of Mor Ardain	10	120	15
+Master's Curry	Staple Foods	600	Rare	Kingdom of Uraya	10	20	9
+Lucky Dawn Bread	Staple Foods	240	Rare	Gormott Province	10	20	12
+Choclit Dumplings	Staple Foods	1650	Rare	Gormott Province	10	60	18
+Heart Cookies	Desserts	120	Rare	Indoline Praetorium	10	20	9
+Rizzente Mantle	Textiles	1520	Common	Leftherian Archipelago	10	120	9
+Felt Cushioning	Textiles	2520	Common	Leftherian Archipelago	10	120	12
+Brut Silk	Textiles	3530	Rare	Leftherian Archipelago	10	120	12
+Shelton Broadcloth	Textiles	4540	Rare	Leftherian Archipelago	10	120	15
+Crinkly Wool	Textiles	6340	Legendary	Leftherian Archipelago	10	120	15
+Pyra's Baked Redfish	Seafood	6340	Legendary	Gormott Province	10	60	18
+Fabulously Fierce Hat	Textiles	6340	Legendary	Leftherian Archipelago	10	60	18
+Love Source	Drinks	6340	Legendary	None	10	60	3000
 \.
 
 
@@ -32145,6 +32962,22 @@ ALTER TABLE ONLY xeno2.cores
 
 
 --
+-- Name: pouch_item_effects_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.pouch_item_effects
+    ADD CONSTRAINT pouch_item_effects_pkey PRIMARY KEY (pouch_item, effect);
+
+
+--
+-- Name: pouch_items_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.pouch_items
+    ADD CONSTRAINT pouch_items_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -32294,6 +33127,14 @@ ALTER TABLE ONLY xeno2.class_roles
 
 ALTER TABLE ONLY xeno2.core_materials
     ADD CONSTRAINT core_materials_core_fkey FOREIGN KEY (core) REFERENCES xeno2.cores(name);
+
+
+--
+-- Name: pouch_item_effects_pouch_item_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.pouch_item_effects
+    ADD CONSTRAINT pouch_item_effects_pouch_item_fkey FOREIGN KEY (pouch_item) REFERENCES xeno2.pouch_items(name);
 
 
 --
