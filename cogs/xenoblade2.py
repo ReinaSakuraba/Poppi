@@ -360,6 +360,65 @@ class Xenoblade2:
             await ctx.send('Missing aux core name.')
 
     @utils.group(invoke_without_command=True)
+    async def xc2pouch(self, ctx: utils.Context, *, name: str):
+        """Gives information for a Xenoblade Chronicles 2 pouch item."""
+
+        query = """
+                SELECT
+                    name,
+                    category,
+                    sell_price,
+                    rarity,
+                    location,
+                    max_carry,
+                    time,
+                    trust,
+                    STRING_AGG(effect, E'\n') AS effects
+                FROM xeno2.pouch_items
+                JOIN xeno2.pouch_item_effects
+                ON name=pouch_item
+                WHERE LOWER(name)=$1
+                GROUP BY name;
+                """
+
+        record = await ctx.pool.fetchrow(query, name.lower())
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'pouch_items', name)
+
+        name, category, sell_price, rarity, location, max_carry, time, trust, effects = record
+
+        embed = discord.Embed(title=name)
+        embed.add_field(name='Category', value=category)
+        embed.add_field(name='Rarity', value=rarity)
+        embed.add_field(name='Sell Price', value=sell_price)
+        embed.add_field(name='Location', value=location)
+        embed.add_field(name='Max Carry', value=max_carry)
+        embed.add_field(name='Trust', value=trust)
+        embed.add_field(name='Effect Time', value=f'{time} minutes')
+        embed.add_field(name='Effects', value=effects, inline=False)
+
+        await ctx.send(embed=embed)
+
+    @xc2pouch.command(name='all')
+    async def xc2pouch_all(self, ctx: utils.Context):
+        """Lists all Xenoblade Chronicles 2 pouch items."""
+
+        await self.all_entries(ctx, 'pouch_items')
+
+    @xc2pouch.command(name='search')
+    async def xc2pouch_search(self, ctx: utils.Context, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 pouch item."""
+
+        await self.search_entries(ctx, 'pouch_items', name)
+
+    @xc2pouch.error
+    @xc2pouch_search.error
+    async def xc2pouch_error(self, ctx: utils.Context, error: Exception):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing pouch item name.')
+
+    @utils.group(invoke_without_command=True)
     async def xc2class(self, ctx: utils.Context, *, name: str):
         """Gives information for a Xenoblade Chronicles 2 class."""
 
@@ -429,7 +488,7 @@ class Xenoblade2:
         possibilities = await ctx.pool.fetchval(query, name)
 
         strip = 2 if table_name == 'classes' else 1
-        type_name = table_name[:-strip].title()
+        type_name = table_name[:-strip].replace('_', ' ').title()
 
         if not possibilities:
             return await ctx.send(f'{type_name} not found.')
@@ -450,7 +509,7 @@ class Xenoblade2:
 
         if not results:
             strip = 2 if table_name == 'classes' else 1
-            type_name = table_name[:-strip].title()
+            type_name = table_name[:-strip].replace('_', ' ').title()
             return await ctx.send(f'{type_name} not found.')
 
         try:
