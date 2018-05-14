@@ -34,6 +34,8 @@ Type the following in the ``psql`` tool
   CREATE DATABASE poppi OWNER poppi;
   CREATE EXTENSION pg_trgm;
 
+Exit the tool and run ``psql poppi < db.sql``
+
 3. **Setup config file**
 
 Edit the ``config_template.py`` file with your info and rename to ``config.py``
