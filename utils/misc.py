@@ -1,4 +1,8 @@
 import asyncio
+from concurrent.futures import ThreadPoolExecutor
+
+
+__all__ = ('run_subprocess', 'run_in_executor', 'CaseInsensitiveDict')
 
 
 async def run_subprocess(cmd):
@@ -8,6 +12,18 @@ async def run_subprocess(cmd):
 
     result = await process.communicate()
     return [x.decode('utf-8') for x in result]
+
+
+async def run_in_executor(func, *, executor=None, loop=None):
+    executor = executor or ThreadPoolExecutor(max_workers=4)
+    loop = loop or asyncio.get_event_loop()
+
+    future = executor.submit(func)
+    future = asyncio.wrap_future(future)
+
+    result = await asyncio.wait_for(future, timeout=None, loop=loop)
+
+    return result
 
 
 class CaseInsensitiveDict(dict):
