@@ -1,10 +1,13 @@
 import io
 import re
 import random
+import functools
 
 import discord
 from discord.ext import commands
 from PIL import Image, ImageOps, ImageFilter
+
+import utils
 
 
 class Images:
@@ -18,7 +21,8 @@ class Images:
 
         async with ctx.session.get(member.avatar_url_as(format='png')) as r:
             with io.BytesIO(await r.read()) as f:
-                file = await ctx.bot.loop.run_in_executor(None, self.invert_image, f)
+                func = functools.partial(self.invert_image, f)
+                file = await utils.run_in_executor(func, loop=ctx.bot.loop)
 
                 await ctx.send(file=discord.File(file, f'inverted.png'))
 
@@ -57,7 +61,8 @@ class Images:
 
         async with ctx.session.get(member.avatar_url_as(format='png')) as r:
             with io.BytesIO(await r.read()) as f:
-                file = await ctx.bot.loop.run_in_executor(None, self.make_edge, f)
+                func = functools.partial(self.make_edge, f)
+                file = await utils.run_in_executor(func, loop=ctx.bot.loop)
 
                 await ctx.send(file=discord.File(file, 'edge.png'))
 
@@ -108,7 +113,8 @@ class Images:
     async def mirror(self, ctx, link):
         async with ctx.session.get(link) as r:
             with io.BytesIO(await r.read()) as f:
-                file = await ctx.bot.loop.run_in_executor(None, self.mirror_image, f, ctx.command.name)
+                func = functools.partial(self.mirror_image, f, ctx.command.name)
+                file = await utils.run_in_executor(func, loop=ctx.bot.loop)
 
                 await ctx.send(file=discord.File(file, f'{ctx.command.name}.png'))
 
@@ -130,6 +136,7 @@ class Images:
             f.seek(0)
 
             return f
+
 
 
 def setup(bot):
