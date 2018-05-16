@@ -1,7 +1,9 @@
 import io
 import re
+import math
 import random
 import functools
+from collections import defaultdict
 
 import discord
 from discord.ext import commands
@@ -137,6 +139,64 @@ class Images:
 
             return f
 
+    @commands.command()
+    async def oil(self, ctx, *, member: discord.Member = None):
+        member = member or ctx.author
+
+        async with ctx.session.get(member.avatar_url_as(format='png', size=256)) as r:
+            f = io.BytesIO(await r.read())
+
+            func = functools.partial(self._oil, f, 3, 20)
+            file = await utils.run_in_executor(func, loop=ctx.bot.loop)
+
+            await ctx.send(file=discord.File(file, 'oil.png'))
+
+    def dist(self, a, b):
+        return math.sqrt(sum((c - d) ** 2 for c, d in zip(a, b)))
+
+    def _oil(self, data, radius, levels):
+        with Image.open(data) as image:
+            with Image.new('RGB', image.size) as out:
+                pixels = image.load()
+                out_pixels = out.load()
+                width, height = image.size
+
+                for x in range(width):
+                    for y in range(height):
+                        x_min = max(x - radius, 0)
+                        x_max = min(x + radius, width)
+                        y_min = max(y - radius, 0)
+                        y_max = min(y + radius, height)
+
+                        avgR = defaultdict(int)
+                        avgG = defaultdict(int)
+                        avgB = defaultdict(int)
+                        count = defaultdict(int)
+
+                        for x_sub in range(x_min, x_max):
+                            for y_sub in range(y_min, y_max):
+                                if self.dist((x, y), (x_sub, y_sub)) <= radius:
+                                    r, g, b, *_ = pixels[x_sub, y_sub]
+                                    lvl = int((((r + g + b) / 3) * levels) / 255)
+
+                                    count[lvl] += 1
+                                    avgR[lvl] += r
+                                    avgG[lvl] += g
+                                    avgB[lvl] += b
+
+                        countmaxkey = max(count.keys(), key=lambda a: count[a])
+                        countmax = count[countmaxkey]
+
+                        finR = int(avgR[countmaxkey] / countmax)
+                        finG = int(avgG[countmaxkey] / countmax)
+                        finB = int(avgB[countmaxkey] / countmax)
+
+                        out_pixels[x, y] = (finR, finG, finB)
+
+                b = io.BytesIO()
+                out.save(b, format='png')
+                b.seek(0)
+                return b
 
 
 def setup(bot):
