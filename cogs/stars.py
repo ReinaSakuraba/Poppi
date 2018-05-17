@@ -511,7 +511,7 @@ class Stars:
 
         for e in message.embeds:
             if e.type == 'image' and image is None:
-                image = data.url
+                image = e.url
 
         if image:
             embed.set_image(url=image)
