@@ -74,8 +74,12 @@ class Stars:
 
         await ctx.send(f'Messages now require {utils.plural("star", stars)} to show up in the starboard.')
 
-    @starboard.command(name='show')
-    async def starboard_show(self, ctx, message_id: int):
+    @utils.group(invoke_without_command=True)
+    async def star(self, ctx, message_id: int):
+        pass
+
+    @star.command(name='show')
+    async def star_show(self, ctx, message_id: int):
         query = """
                 SELECT
                     channel_id,
@@ -101,8 +105,8 @@ class Stars:
         content, embed = self.create_post(message, record['stars'])
         await ctx.send(content, embed=embed)
 
-    @starboard.command(name='who')
-    async def starboard_who(self, ctx, message_id: int):
+    @star.command(name='who')
+    async def star_who(self, ctx, message_id: int):
         query = """
                 SELECT ARRAY(
                     SELECT starrers.author_id
@@ -129,8 +133,8 @@ class Stars:
         except Exception as e:
             await ctx.send(e)
 
-    @starboard.group(name='stats', invoke_without_command=True)
-    async def starboard_stats(self, ctx, *, member: discord.Member = None):
+    @star.group(name='stats', invoke_without_command=True)
+    async def star_stats(self, ctx, *, member: discord.Member = None):
         member = member or ctx.author
 
         embed = discord.Embed(color=discord.Color.gold())
@@ -185,8 +189,8 @@ class Stars:
 
         await ctx.send(embed=embed)
 
-    @starboard_stats.command(name='server')
-    async def starboard_stats_server(self, ctx):
+    @star_stats.command(name='server')
+    async def star_stats_server(self, ctx):
         embed = discord.Embed(title='Server Starboard Stats', color=discord.Color.gold())
 
         query = "SELECT * FROM starboards WHERE guild_id=$1;"
@@ -267,8 +271,8 @@ class Stars:
 
         await ctx.send(embed=embed)
 
-    @starboard.command(name='random')
-    async def starboard_random(self, ctx):
+    @star.command(name='random')
+    async def star_random(self, ctx):
         query = """
                 SELECT
                     channel_id,
