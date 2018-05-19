@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-__all__ = ('MissingPerms', 'role_or_permissions', 'mod_or_permissions')
+__all__ = ('MissingPerms', 'StarError', 'role_or_permissions', 'mod_or_permissions', 'requires_starboard')
 
 
 class MissingPerms(commands.MissingPermissions):
@@ -30,6 +30,10 @@ class MissingPerms(commands.MissingPermissions):
         Exception.__init__(self, '\n'.join(stuffs))
 
 
+class StarError(commands.CheckFailure):
+    pass
+
+
 def role_or_permissions(ctx, *roles, **perms):
     if not isinstance(ctx.channel, discord.abc.GuildChannel):
         raise commands.NoPrivateMessage
@@ -53,5 +57,21 @@ def mod_or_permissions(**perms):
     perms['manage_guild'] = True
     def predicate(ctx):
         return role_or_permissions(ctx, 'Mod', 'Admin', **perms)
+
+    return commands.check(predicate)
+
+
+def requires_starboard():
+    async def predicate(ctx):
+        if ctx.guild is None:
+            return False
+
+        query = "SELECT 1 FROM starboards WHERE guild_id=$1;"
+        exists = await ctx.pool.fetchval(query, ctx.guild.id)
+
+        if exists is None:
+            raise StarError('Starboard not found.')
+
+        return True
 
     return commands.check(predicate)

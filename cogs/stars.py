@@ -12,6 +12,10 @@ class Stars:
         self.bot = bot
         self.lock = asyncio.Lock(loop=bot.loop)
 
+    async def __error(self, ctx, error):
+        if isinstance(error, utils.StarError):
+            await ctx.send(error)
+
     @utils.group(invoke_without_command=True)
     @utils.mod_or_permissions()
     async def starboard(self, ctx, *, name='starboard'):
@@ -79,6 +83,7 @@ class Stars:
         pass
 
     @star.command(name='show')
+    @utils.requires_starboard()
     async def star_show(self, ctx, message_id: int):
         query = """
                 SELECT
@@ -106,6 +111,7 @@ class Stars:
         await ctx.send(content, embed=embed)
 
     @star.command(name='who')
+    @utils.requires_starboard()
     async def star_who(self, ctx, message_id: int):
         query = """
                 SELECT ARRAY(
@@ -134,6 +140,7 @@ class Stars:
             await ctx.send(e)
 
     @star.group(name='stats', invoke_without_command=True)
+    @utils.requires_starboard()
     async def star_stats(self, ctx, *, member: discord.Member = None):
         member = member or ctx.author
 
@@ -190,6 +197,7 @@ class Stars:
         await ctx.send(embed=embed)
 
     @star_stats.command(name='server')
+    @utils.requires_starboard()
     async def star_stats_server(self, ctx):
         embed = discord.Embed(title='Server Starboard Stats', color=discord.Color.gold())
 
@@ -272,6 +280,7 @@ class Stars:
         await ctx.send(embed=embed)
 
     @star.command(name='random')
+    @utils.requires_starboard()
     async def star_random(self, ctx):
         query = """
                 SELECT
