@@ -93,13 +93,16 @@ class Stars:
                 FROM starboard_entries
                 JOIN starrers
                 ON starboard_entries.message_id=starrers.message_id
-                WHERE starboard_entries.message_id=$1;
+                WHERE guild_id=$1
+                AND (starboard_entries.message_id=$2 OR starboard_entries.bot_message_id=$2);
                 """
-        record = await ctx.pool.fetchrow(query, message_id)
+        record = await ctx.pool.fetchrow(query, ctx.guild.id, message_id)
         if record is None:
             return await ctx.send('This message has not been starred.')
 
-        channel = ctx.guild.get_channel(record['channel_id'])
+        channel_id, message_id, stars = record
+
+        channel = ctx.guild.get_channel(channel_id)
         if channel is None:
             return await ctx.send('Message\'s channel was deleted.')
 
@@ -107,7 +110,7 @@ class Stars:
         if message is None:
             return await ctx.send('Original message was deleted.')
 
-        content, embed = self.create_post(message, record['stars'])
+        content, embed = self.create_post(message, stars)
         await ctx.send(content, embed=embed)
 
     @star.command(name='who')
