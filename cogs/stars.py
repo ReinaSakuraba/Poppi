@@ -122,10 +122,11 @@ class Stars:
                     FROM starboard_entries
                     JOIN starrers
                     ON starboard_entries.message_id=starrers.message_id
-                    WHERE starboard_entries.message_id=$1
+                    WHERE starboard_entries.guild_id=$1
+                    AND (starboard_entries.message_id=$2 OR starboard_entries.bot_message_id=$2)
                 );
                 """
-        member_ids = await ctx.pool.fetchval(query, message_id)
+        member_ids = await ctx.pool.fetchval(query, ctx.guild.id, message_id)
         if member_ids is None:
             return await ctx.send('This message has not been starred.')
 
