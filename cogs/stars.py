@@ -196,7 +196,7 @@ class Stars:
         value = '\n'.join(f'{index}: {message_id} ({count} stars)'
                           for (index, (message_id, count)) in enumerate(records, 1))
 
-        embed.add_field(name='Top Starred Posts', value=value, inline=False)
+        embed.add_field(name='Top Starred Posts', value=value or 'None', inline=False)
 
         await ctx.send(embed=embed)
 
@@ -243,7 +243,7 @@ class Stars:
         value = '\n'.join(f'{index}: <@!{author_id}> ({count} stars)'
                           for (index, (author_id, count)) in enumerate(records, 1))
 
-        embed.add_field(name='Top Star Recievers', value=value, inline=False)
+        embed.add_field(name='Top Star Recievers', value=value or 'None', inline=False)
 
         query = """
                 SELECT starrers.author_id, COUNT(*) AS stars
@@ -260,7 +260,7 @@ class Stars:
         value = '\n'.join(f'{index}: <@!{author_id}> ({count} stars)'
                           for (index, (author_id, count)) in enumerate(records, 1))
 
-        embed.add_field(name='Top Star Givers', value=value, inline=False)
+        embed.add_field(name='Top Star Givers', value=value or 'None', inline=False)
 
         query = """
                 SELECT
@@ -279,7 +279,7 @@ class Stars:
         value = '\n'.join(f'{index}: {message_id} ({count} stars)'
                           for (index, (message_id, count)) in enumerate(records, 1))
 
-        embed.add_field(name='Top Starred Posts', value=value, inline=False)
+        embed.add_field(name='Top Starred Posts', value=value or 'None', inline=False)
 
         await ctx.send(embed=embed)
 
