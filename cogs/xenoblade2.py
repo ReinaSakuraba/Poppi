@@ -40,6 +40,16 @@ class Xenoblade2:
 
         name, driver, weapon, type_, damage_ratio, hits, range_, recharge, reaction, description, wp, caption, distance, radius, hate, accuracy_mod, crit_mod = record
 
+        types = {
+            'Physical': 'Damage Ratio',
+            'Ether': 'Damage Ratio',
+            'Recovery': 'Rate of Healing',
+            'Defensive': 'Active Period'
+        }
+
+        if type_ == 'Defensive':
+            damage_ratio = '/'.join([str(int(int(ratio) / 30)) for ratio in damage_ratio.split('/')])
+
         embed = discord.Embed(title=name, description=caption)
         embed.add_field(name='Driver', value=driver)
         embed.add_field(name='Weapon', value=weapon)
@@ -47,7 +57,7 @@ class Xenoblade2:
         embed.add_field(name='Hits', value=hits)
         embed.add_field(name='Range', value=range_)
         embed.add_field(name='Recharge', value=recharge)
-        embed.add_field(name='Damage Ratio', value=damage_ratio, inline=False)
+        embed.add_field(name=types[type_], value=damage_ratio, inline=False)
         if description:
             embed.add_field(name='Decription', value=description, inline=False)
         embed.add_field(name='Reaction', value=reaction)
