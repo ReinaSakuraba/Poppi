@@ -24,8 +24,8 @@ class Xenoblade2:
                     description,
                     wp,
                     caption,
-                    distance,
-                    radius,
+                    distance || ' meters',
+                    radius || ' meters',
                     hate,
                     '+' || accuracy_mod || '%',
                     '+' || crit_mod || '%'
@@ -103,8 +103,8 @@ class Xenoblade2:
                     reaction,
                     description,
                     caption,
-                    distance,
-                    radius,
+                    distance || ' meters',
+                    radius || ' meters',
                     hate,
                     '+' || accuracy_mod || '%',
                     '+' || crit_mod || '%'
