@@ -370,6 +370,49 @@ class Xenoblade2:
             await ctx.send('Missing aux core name.')
 
     @utils.group(invoke_without_command=True)
+    async def xc2accessory(self, ctx: utils.Context, *, name: str):
+        """Gives information for a Xenoblade Chronicles 2 accessory."""
+
+        query = """
+                SELECT
+                    name,
+                    rarity,
+                    description
+                FROM xeno2.accessories
+                WHERE LOWER(name)=$1;
+                """
+
+        records = await ctx.pool.fetch(query, name.lower())
+
+        if not records:
+            return await self.show_possibilities(ctx, 'accessories', name)
+
+        embed = discord.Embed(title=records[0]['name'])
+
+        for row in records:
+            embed.add_field(name=row['rarity'], value=row['description'])
+
+        await ctx.send(embed=embed)
+
+    @xc2accessory.command(name='all')
+    async def xc2accessory_all(self, ctx: utils.Context):
+        """Lists all Xenoblade Chronicles 2 accessories."""
+
+        await self.all_entries(ctx, 'accessories')
+
+    @xc2accessory.command(name='search')
+    async def xc2accessory_search(self, ctx: utils.Context, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 accessory."""
+
+        await self.search_entries(ctx, 'accessories', name)
+
+    @xc2accessory.error
+    @xc2accessory_search.error
+    async def xc2accessory_error(self, ctx: utils.Context, error: Exception):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing accessory name.')
+
+    @utils.group(invoke_without_command=True)
     async def xc2pouch(self, ctx: utils.Context, *, name: str):
         """Gives information for a Xenoblade Chronicles 2 pouch item."""
 
@@ -492,13 +535,17 @@ class Xenoblade2:
                 SELECT
                     STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
                 FROM xeno2.{table_name}
-                WHERE name % $1;
+                WHERE name % $1
+                GROUP BY name;
                 """
 
         possibilities = await ctx.pool.fetchval(query, name)
 
-        strip = 2 if table_name == 'classes' else 1
-        type_name = table_name[:-strip].replace('_', ' ').title()
+        if table_name == 'accessories':
+            type_name='Accessory'
+        else:
+            strip = 2 if table_name == 'classes' else 1
+            type_name = table_name[:-strip].replace('_', ' ').title()
 
         if not possibilities:
             return await ctx.send(f'{type_name} not found.')
@@ -511,6 +558,7 @@ class Xenoblade2:
                     SELECT name
                     FROM xeno2.{table_name}
                     WHERE name % $1
+                    GROUP BY name
                     ORDER BY SIMILARITY(name, $1) DESC
                 );
                 """
@@ -518,8 +566,12 @@ class Xenoblade2:
         results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query, name), 1)]
 
         if not results:
-            strip = 2 if table_name == 'classes' else 1
-            type_name = table_name[:-strip].replace('_', ' ').title()
+            if table_name == 'accessories':
+                type_name='Accessory'
+            else:
+                strip = 2 if table_name == 'classes' else 1
+                type_name = table_name[:-strip].replace('_', ' ').title()
+
             return await ctx.send(f'{type_name} not found.')
 
         try:
