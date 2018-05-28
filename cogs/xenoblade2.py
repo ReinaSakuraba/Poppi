@@ -584,8 +584,9 @@ class Xenoblade2:
     async def all_entries(self, ctx: utils.Context, table_name: str):
         query = f"""
                 SELECT ARRAY(
-                    SELECT name
+                    SELECT DISTINCT name
                     FROM xeno2.{table_name}
+                    ORDER BY name
                 );
                 """
 
