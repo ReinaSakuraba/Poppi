@@ -315,7 +315,7 @@ class Xenoblade2:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing core chip name.')
 
-    @utils.group(invoke_without_command=True)
+    @utils.group(invoke_without_command=True, aliases=['xc2aux'])
     async def xc2core(self, ctx: utils.Context, *, name: str):
         """Gives information for a Xenoblade Chronicles 2 aux core."""
 
@@ -369,7 +369,7 @@ class Xenoblade2:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing aux core name.')
 
-    @utils.group(invoke_without_command=True)
+    @utils.group(invoke_without_command=True, aliases=['xc2acc'])
     async def xc2accessory(self, ctx: utils.Context, *, name: str):
         """Gives information for a Xenoblade Chronicles 2 accessory."""
 
