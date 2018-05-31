@@ -33,6 +33,20 @@ CREATE SCHEMA xenox;
 ALTER SCHEMA xenox OWNER TO poppi;
 
 --
+-- Name: format_caption(text, numeric); Type: FUNCTION; Schema: xeno2; Owner: poppi
+--
+
+CREATE FUNCTION xeno2.format_caption(caption text, param numeric) RETURNS text
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN REPLACE(caption, '[ML:PouchParam ]', param::text);
+END; $$;
+
+
+ALTER FUNCTION xeno2.format_caption(caption text, param numeric) OWNER TO poppi;
+
+--
 -- Name: format_caption(text, smallint, numeric, numeric); Type: FUNCTION; Schema: xeno2; Owner: poppi
 --
 
@@ -217,12 +231,25 @@ CREATE TABLE xeno2.enhance_captions (
 ALTER TABLE xeno2.enhance_captions OWNER TO poppi;
 
 --
+-- Name: pouch_captions; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.pouch_captions (
+    id smallint NOT NULL,
+    caption text NOT NULL
+);
+
+
+ALTER TABLE xeno2.pouch_captions OWNER TO poppi;
+
+--
 -- Name: pouch_item_effects; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
 CREATE TABLE xeno2.pouch_item_effects (
     pouch_item text NOT NULL,
-    effect text NOT NULL
+    caption smallint NOT NULL,
+    param numeric(4,1) NOT NULL
 );
 
 
@@ -7022,479 +7049,499 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 
 
 --
+-- Data for Name: pouch_captions; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.pouch_captions (id, caption) FROM stdin;
+1	+[ML:PouchParam ]% max HP to dmg barrier
+2	+[ML:PouchParam ]% HP recovery
+3	-[ML:PouchParam ]% physical dmg taken
+4	-[ML:PouchParam ]% ether dmg taken
+5	Recharges Arts by [ML:PouchParam ] each second.
+6	+[ML:PouchParam ]% Party Gauge gain
+7	+[ML:PouchParam ] base Affinity
+8	+[ML:PouchParam ]% Affinity gain
+9	-[ML:PouchParam ]% Affinity loss
+10	Specials recharge [ML:PouchParam ] each second.
+11	+[ML:PouchParam ]% Blade Arts effect
+12	+[ML:PouchParam ]% dmg dealt by Specials
+\.
+
+
+--
 -- Data for Name: pouch_item_effects; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
-COPY xeno2.pouch_item_effects (pouch_item, effect) FROM stdin;
-Juicy Samod	+8% max HP to dmg barrier
-Lightly Fried Rice	+10% max HP to dmg barrier
-Argentum Noodle Soup	+20% max HP to dmg barrier
-Massive Mushroom Pie	+15% max HP to dmg barrier
-Bright Samod	+15% max HP to dmg barrier
-Bright Samod	+5% HP recovery
-Tasty Kordeth Samod	+25% max HP to dmg barrier
-Tasty Kordeth Samod	+20% Party Gauge gain
-Tasty Kordeth Samod	+8% HP recovery
-Grilled Anchortail	-3% ether dmg taken
-Oyster Stir-Fry	-4% ether dmg taken
-Marine Stir-Fry	-4% ether dmg taken
-Marine Stir-Fry	+5% HP recovery
-Marine Stir-Fry	+8% Party Gauge gain
-Melodious Melon Parfait	Recharges Arts by 0.1 each second.
-Cinnopon Roll	Recharges Arts by 0.2 each second.
-Sparklesugar	Recharges Arts by 0.3 each second.
-Fruity Rice Ball	Recharges Arts by 0.3 each second.
-Fruity Rice Ball	-2% physical dmg taken
-Narcipear Jelly	Recharges Arts by 0.4 each second.
-Narcipear Jelly	-4% physical dmg taken
-Narcipear Jelly	-3% ether dmg taken
-Twinklejuice	+8% Party Gauge gain
-Fizz Juice	+10% Party Gauge gain
-Chunky Juice	+15% Party Gauge gain
-Sappan Veg Juice	+25% Party Gauge gain
-Sappan Veg Juice	+8% HP recovery
-Honey au Lait	+25% Party Gauge gain
-Honey au Lait	-5% ether dmg taken
-Crispy Blendshake	+30% Party Gauge gain
-Crispy Blendshake	+25% max HP to dmg barrier
-Roly-Poly Maracas	Specials recharge 0.3 each second.
-Nopolele	Specials recharge 0.5 each second.
-Funky Conga	Specials recharge 0.8 each second.
-Whispercorder	Specials recharge 1 each second.
-Casta-Mutes	Specials recharge 0.8 each second.
-Casta-Mutes	+6% Affinity gain
-Clicky-Clacks	Specials recharge 2 each second.
-Clicky-Clacks	-13% Affinity loss
-Salvaging Made Easy	+6% dmg dealt by Specials
-Yumyum's Golden Gun	+8% dmg dealt by Specials
-The Millenarian Titan	+12% dmg dealt by Specials
-Adventures of Myram	+12% dmg dealt by Specials
-Adventures of Myram	Specials recharge 0.3 each second.
-Mumuni the Littlepon	+16% dmg dealt by Specials
-Mumuni the Littlepon	+10% Affinity gain
-Clattertongue	+4% Blade Arts effect
-Nopon Chess Set	+8% Blade Arts effect
-Sneak-Thief King	+14% Blade Arts effect
-Tradeway 66	+20% Blade Arts effect
-Coral Nopon Chess Set	+14% Blade Arts effect
-Coral Nopon Chess Set	Specials recharge 0.5 each second.
-Leftherian Life	+20% Blade Arts effect
-Leftherian Life	+6% Affinity gain
-Leftherian Life	Specials recharge 0.5 each second.
-Eau de Doux	+50 base Affinity
-Elastifying Tonic	+75 base Affinity
-Freshening Gel	+100 base Affinity
-Curled Eyelashes	+125 base Affinity
-Bubbly Mani-Pedi Kit	+100 base Affinity
-Bubbly Mani-Pedi Kit	+5% Affinity gain
-Full Moon Eyeliner	+125 base Affinity
-Full Moon Eyeliner	+12% dmg dealt by Specials
-Full Moon Eyeliner	-5% Affinity loss
-Ruska Dumplings	+8% max HP to dmg barrier
-Ruska Noodle Goulash	+10% max HP to dmg barrier
-Deluxe Ham Toastie	+15% max HP to dmg barrier
-Ruska Noodle Soup	+15% max HP to dmg barrier
-Ruska Noodle Soup	-2% physical dmg taken
-Beat Paste Paratha	+20% max HP to dmg barrier
-Beat Paste Paratha	-5% ether dmg taken
-Crispy Sauté	+4% HP recovery
-Torigoth Marinade	+5% HP recovery
-Stuffed Meaty Carrot	+8% HP recovery
-Puri Leaf Salad	+8% HP recovery
-Puri Leaf Salad	+8% max HP to dmg barrier
-Snowy Dudleya Gelée	+13% HP recovery
-Snowy Dudleya Gelée	+20% Party Gauge gain
-Snowy Dudleya Gelée	+15% max HP to dmg barrier
-Estral Steak	-3% physical dmg taken
-Tasty Sausage	-2% physical dmg taken
-Mince & Lentil Stir-Fry	-4% physical dmg taken
-Mince & Lentil Stir-Fry	+10% Party Gauge gain
-Mustard Kordeth	-7% physical dmg taken
-Mustard Kordeth	-5% ether dmg taken
-Mustard Kordeth	+15% Party Gauge gain
-Gormotti Fish Flakes	-3% ether dmg taken
-Grass-Smoked Salmon	-4% ether dmg taken
-Bipedal Crab Chili	-5% ether dmg taken
-Bipedal Crab Chili	+15% max HP to dmg barrier
-Bipedal Crab Chili	Recharges Arts by 0.2 each second.
-Lunana Smoothie	+8% Party Gauge gain
-Gormotti Honeytea	+10% Party Gauge gain
-Kukurel Springwater	+15% Party Gauge gain
-Passion Fruit Shake	+15% Party Gauge gain
-Passion Fruit Shake	-3% ether dmg taken
-Victory Smoothie	+20% Party Gauge gain
-Victory Smoothie	Recharges Arts by 0.3 each second.
-Victory Smoothie	+5% HP recovery
-Torigonda	Specials recharge 0.3 each second.
-Woodgrain Alphorn	Specials recharge 0.5 each second.
-Cedarwood Koto	Specials recharge 0.8 each second.
-Woodboard	Specials recharge 0.8 each second.
-Woodboard	+8% Blade Arts effect
-Coralline Marimba	Specials recharge 1 each second.
-Coralline Marimba	+12% dmg dealt by Specials
-Coralline Marimba	+5% Affinity gain
-The Girl on the Hill	+4% Affinity gain
-Black Flower Field	+5% Affinity gain
-Woodcut Print of Bana	+6% Affinity gain
-Woodcut Print of Bana	+4% Blade Arts effect
-Wood-Carven Queen	+10% Affinity gain
-Wood-Carven Queen	+14% Blade Arts effect
-Wood-Carven Queen	-5% Affinity loss
-Puffoundation	+50 base Affinity
-Treesap Conditioner	+75 base Affinity
-Flurrycomb	+100 base Affinity
-Conch Hairpin	+100 base Affinity
-Conch Hairpin	-6% Affinity loss
-Sparkly Snow Perfume	+175 base Affinity
-Sparkly Snow Perfume	Specials recharge 1.5 each second.
-Puzzletree Pouch	-4% Affinity loss
-Torigoth-Weave Mat	-5% Affinity loss
-Wood-Dye Waistcloth	-6% Affinity loss
-Sun-Dappled Curtains	-10% Affinity loss
-Leaf-Weave Cape	-6% Affinity loss
-Leaf-Weave Cape	Specials recharge 0.8 each second.
-Snowflake Scarf	-13% Affinity loss
-Snowflake Scarf	+10% Affinity gain
-Snowflake Scarf	+100 base Affinity
-Wrapped Glarna Bake	+10% max HP to dmg barrier
-Three-Cheese Puran	+15% max HP to dmg barrier
-Glitterspud Puran	+15% max HP to dmg barrier
-Glitterspud Puran	Recharges Arts by 0.1 each second.
-Hearty Kordeth Puran	+20% max HP to dmg barrier
-Hearty Kordeth Puran	Recharges Arts by 0.3 each second.
-Hearty Kordeth Puran	-3% physical dmg taken
-Pomegranate Soup	+5% HP recovery
-Sour-Spark-on-a-Stick	+8% HP recovery
-Boiled Hustle Hyacinth	+8% HP recovery
-Boiled Hustle Hyacinth	-3% physical dmg taken
-Pickled Ice Cabbage	+10% HP recovery
-Pickled Ice Cabbage	Recharges Arts by 0.3 each second.
-Pickled Ice Cabbage	-3% ether dmg taken
-Armu T-Bone Steak	-3% physical dmg taken
-Mixed Meat Platter	-4% physical dmg taken
-Hotplate Fry-Up	-4% physical dmg taken
-Hotplate Fry-Up	Recharges Arts by 0.2 each second.
-Char-Grilled Grumbird	-7% physical dmg taken
-Char-Grilled Grumbird	Recharges Arts by 0.4 each second.
-Char-Grilled Grumbird	+8% HP recovery
-Dried Sunfish	-3% ether dmg taken
-Bullybelly Carpaccio	-4% ether dmg taken
-Steamed Bluegill	-4% ether dmg taken
-Steamed Bluegill	-2% physical dmg taken
-Whitebait With Seeds	-5% ether dmg taken
-Whitebait With Seeds	+15% Party Gauge gain
-Whitebait With Seeds	-3% physical dmg taken
-Rainbow Parfait	Recharges Arts by 0.1 each second.
-Blossom Custard	Recharges Arts by 0.3 each second.
-Plumage Peach Jelly	Recharges Arts by 0.3 each second.
-Plumage Peach Jelly	+8% HP recovery
-Champ's Churros	Recharges Arts by 0.2 each second.
-Snipe Flan	Recharges Arts by 0.3 each second.
-Cherry Cheese Mousse	Recharges Arts by 0.3 each second.
-Cherry Cheese Mousse	-3% physical dmg taken
-Neon Grape Flan	Recharges Arts by 0.3 each second.
-Neon Grape Flan	-4% ether dmg taken
-Black Roast Coffee	+10% Party Gauge gain
-Jenerossi Tea	+15% Party Gauge gain
-Fizzy Lassi	+15% Party Gauge gain
-Fizzy Lassi	Recharges Arts by 0.1 each second.
-Lentil Milkshake	+25% Party Gauge gain
-Lentil Milkshake	+10% HP recovery
-Lentil Milkshake	+15% max HP to dmg barrier
-Scarlet Shamisen	Specials recharge 0.3 each second.
-Fonsan Viola	Specials recharge 0.5 each second.
-Hero's Harp	Specials recharge 0.8 each second.
-Rumble Cello	Specials recharge 0.8 each second.
-Rumble Cello	+6% dmg dealt by Specials
-Cloudsnail Arpeggione	Specials recharge 1 each second.
-Cloudsnail Arpeggione	+125 base Affinity
-Patron King's Carving	+5% Affinity gain
-Final Chorus	+6% Affinity gain
-Singing Maiden Statue	+6% Affinity gain
-Singing Maiden Statue	+12% dmg dealt by Specials
-Skywards by Titan	+13% Affinity gain
-Skywards by Titan	+125 base Affinity
-Skywards by Titan	+14% Blade Arts effect
-The Alrestogony	+8% dmg dealt by Specials
-The Legacy of Selosia	+12% dmg dealt by Specials
-Masterpieces of Alrest	+12% dmg dealt by Specials
-Masterpieces of Alrest	-5% Affinity loss
-Addam's Love and War	+16% dmg dealt by Specials
-Addam's Love and War	+14% Blade Arts effect
-Addam's Love and War	-5% Affinity loss
-Castle Poker	+4% Blade Arts effect
-Gladiator Wrestling	+8% Blade Arts effect
-Coral Reversi	+14% Blade Arts effect
-Duel Line	+20% Blade Arts effect
-Nopopo Yard	+14% Blade Arts effect
-Nopopo Yard	Specials recharge 0.3 each second.
-Coral Casino	+26% Blade Arts effect
-Coral Casino	-10% Affinity loss
-Coral Casino	+100 base Affinity
-Red Opal Lipstick	+75 base Affinity
-Titan-Oil Hand Cream	+100 base Affinity
-Golden Mascara	+125 base Affinity
-Gorgeous Blusher	+100 base Affinity
-Gorgeous Blusher	Specials recharge 0.3 each second.
-Fonsett-Rouge Lipgloss	+125 base Affinity
-Fonsett-Rouge Lipgloss	+20% Blade Arts effect
-Sanar-Knit Headband	-4% Affinity loss
-Armu-Skin Gladiator	-5% Affinity loss
-Coralweave Towel	-6% Affinity loss
-Dazzling Handkerchief	-10% Affinity loss
-Gormotti Woodwing	-6% Affinity loss
-Gormotti Woodwing	+8% dmg dealt by Specials
-Sanar-Knit Blanket	-10% Affinity loss
-Sanar-Knit Blanket	+14% Blade Arts effect
-Sanar-Knit Blanket	+5% Affinity gain
-Dolphin Carrot Sliders	+5% HP recovery
-Campfire Skewers	+8% HP recovery
-Crispy Vegetable Salad	+8% HP recovery
-Crispy Vegetable Salad	-2% ether dmg taken
-Steamflake Tabbouleh	+10% HP recovery
-Steamflake Tabbouleh	-4% ether dmg taken
-Steamflake Tabbouleh	-3% physical dmg taken
-Meat & Lentil Skewer	-3% physical dmg taken
-Herbal Tartare Kascha	-4% physical dmg taken
-Grumbird Casserole	-5% physical dmg taken
-Estral Quotelettas	-4% physical dmg taken
-Estral Quotelettas	-2% ether dmg taken
-Armu & Bean Stew	-5% physical dmg taken
-Armu & Bean Stew	+10% HP recovery
-Grilled Salmon in Herbs	-4% ether dmg taken
-Cloud Sea Crab Sticks	-5% ether dmg taken
-Sand Salmon Ceviche	-4% ether dmg taken
-Sand Salmon Ceviche	Recharges Arts by 0.2 each second.
-Fish and Herb Broth	-7% ether dmg taken
-Fish and Herb Broth	Recharges Arts by 0.4 each second.
-Fish and Herb Broth	+8% HP recovery
-Steamed Milk Brioche	Recharges Arts by 0.1 each second.
-Steam-Gel Ice Cream	Recharges Arts by 0.2 each second.
-Sweet Lentil Bun	Recharges Arts by 0.3 each second.
-Sky-Jewel Tart	Recharges Arts by 0.3 each second.
-Odifa Gelée Tart	Recharges Arts by 0.3 each second.
-Odifa Gelée Tart	+15% max HP to dmg barrier
-Hot Ruby Steamed Bun	Recharges Arts by 0.4 each second.
-Hot Ruby Steamed Bun	+15% Party Gauge gain
-Hot Ruby Steamed Bun	-3% physical dmg taken
-Pipe Trumpet	Specials recharge 0.5 each second.
-Steamwork Organ	Specials recharge 0.8 each second.
-Army-Issue Violin	Specials recharge 1 each second.
-Hammerplate Snare	Specials recharge 1.5 each second.
-Tube Xylophone	Specials recharge 0.8 each second.
-Tube Xylophone	-4% Affinity loss
-Icicle Marimba	Specials recharge 1 each second.
-Icicle Marimba	+14% Blade Arts effect
-Icicle Marimba	-5% Affinity loss
-Punk Doll	+5% Affinity gain
-Copper Ephem Statue	+6% Affinity gain
-Felmeri Fairy Statue	+6% Affinity gain
-Felmeri Fairy Statue	-4% Affinity loss
-Conch Music Box	+10% Affinity gain
-Conch Music Box	+125 base Affinity
-Ardainian Arms Album	+8% dmg dealt by Specials
-Emperor Ephem's War	+12% dmg dealt by Specials
-Imperial Secret Escapes	+16% dmg dealt by Specials
-Les Awfuls	+16% dmg dealt by Specials
-How Wars Profit Nopon	+12% dmg dealt by Specials
-How Wars Profit Nopon	+75 base Affinity
-Love Beyond the Clouds	+16% dmg dealt by Specials
-Love Beyond the Clouds	+100 base Affinity
-Love Beyond the Clouds	Specials recharge 0.5 each second.
-Army Field Manual	+8% Blade Arts effect
-Chooby Tubes	+14% Blade Arts effect
-Secret Trials	+20% Blade Arts effect
-Dueling Kingdoms	+26% Blade Arts effect
-Dealing Kingdoms	+14% Blade Arts effect
-Dealing Kingdoms	+75 base Affinity
-Plumber Escape Game	+32% Blade Arts effect
-Plumber Escape Game	+20% dmg dealt by Specials
-Lybarian Chowder	+5% HP recovery
-Green Cheese Salad	+8% HP recovery
-Vegetable Mille-Feuille	+10% HP recovery
-Veg & Oyster Aspic	+8% HP recovery
-Veg & Oyster Aspic	Recharges Arts by 0.1 each second.
-Snowbaby Potato Salad	+13% HP recovery
-Snowbaby Potato Salad	-5% physical dmg taken
-Snowbaby Potato Salad	+15% Party Gauge gain
-Pastel Camill	-2% physical dmg taken
-Albacon Frystack	-3% physical dmg taken
-Sweet Armu Belly Stew	-4% physical dmg taken
-Zaproast Power Bowl	-5% physical dmg taken
-Fragrant Samod Stralu	-4% physical dmg taken
-Fragrant Samod Stralu	+8% max HP to dmg barrier
-Glarna Stir-Fry	-5% physical dmg taken
-Glarna Stir-Fry	Recharges Arts by 0.4 each second.
-Broiled Pinfin	-4% ether dmg taken
-Sautéed Beat Shrimps	-5% ether dmg taken
-Braised Cloud Sea Shark	-5% ether dmg taken
-Braised Cloud Sea Shark	-5% physical dmg taken
-Smoke-Braised Killifish	-4% ether dmg taken
-Smoke-Braised Killifish	+10% Party Gauge gain
-Seared Whitebait	-7% ether dmg taken
-Seared Whitebait	-5% physical dmg taken
-Seared Whitebait	+15% max HP to dmg barrier
-Odifa	+10% Party Gauge gain
-Indoline Tea	+15% Party Gauge gain
-Frozen Odifa	+20% Party Gauge gain
-Pipestraw Smoothie	+15% Party Gauge gain
-Pipestraw Smoothie	-3% physical dmg taken
-Armu Milk Earl Grey	+20% Party Gauge gain
-Armu Milk Earl Grey	-4% ether dmg taken
-Armu Milk Earl Grey	-3% physical dmg taken
-Luna Lizard Wreath	+6% Affinity gain
-Montecoran Doll	+10% Affinity gain
-Steel Pipe Lexos	+6% Affinity gain
-Steel Pipe Lexos	+8% Blade Arts effect
-Lush Moonbeam Mask	+10% Affinity gain
-Lush Moonbeam Mask	Specials recharge 0.8 each second.
-Lush Moonbeam Mask	+8% dmg dealt by Specials
-Jellyfish Balsam Rug	-5% Affinity loss
-Codweave Shop Curtain	-6% Affinity loss
-Codweave Safety Blanky	-10% Affinity loss
-Silken Stool	-13% Affinity loss
-Noponcho	-6% Affinity loss
-Noponcho	+50 base Affinity
-Prismatic Headband	-10% Affinity loss
-Prismatic Headband	+20% Blade Arts effect
-Fondant Rice Cake	+15% max HP to dmg barrier
-Tantalese Porridge	+20% max HP to dmg barrier
-Poached Fruit Samod	+15% max HP to dmg barrier
-Poached Fruit Samod	+8% Party Gauge gain
-Grumbird Rice Bowl	+20% max HP to dmg barrier
-Grumbird Rice Bowl	-4% ether dmg taken
-Grumbird Rice Bowl	Recharges Arts by 0.2 each second.
-Steamed Veg Stralu	+10% HP recovery
-Addam's Embercakes	+13% HP recovery
-Vinaigrette Ice Cabbage	+8% HP recovery
-Vinaigrette Ice Cabbage	+10% Party Gauge gain
-Prickly Snowpickle	+15% HP recovery
-Prickly Snowpickle	+25% max HP to dmg barrier
-Aromalocaris Sauté	-5% ether dmg taken
-Abyssturgeon Medallion	-7% ether dmg taken
-Bagna Oyster Roll	-4% ether dmg taken
-Bagna Oyster Roll	+8% max HP to dmg barrier
-Whitebait-Samod Hotpot	-5% ether dmg taken
-Whitebait-Samod Hotpot	+10% HP recovery
-Airy Snowflake Sherbet	Recharges Arts by 0.1 each second.
-Thawing Mille-Feuille	Recharges Arts by 0.2 each second.
-Baked Narcipear	Recharges Arts by 0.3 each second.
-Sno-Bake Cheesecake	Recharges Arts by 0.4 each second.
-Odifa Punch	Recharges Arts by 0.2 each second.
-Odifa Punch	+8% Party Gauge gain
-Snow Dumplings	Recharges Arts by 0.3 each second.
-Snow Dumplings	+5% HP recovery
-Snow Dumplings	+8% max HP to dmg barrier
-Ancient King’s Portrait	+6% Affinity gain
-Snow-Crystal Vase	+10% Affinity gain
-Portrait of Ger the Hero	+13% Affinity gain
-Prideful Walking	+8% dmg dealt by Specials
-The Armu Who Loved	+12% dmg dealt by Specials
-Witness the Crustip	+16% dmg dealt by Specials
-The Annals of Addam	+20% dmg dealt by Specials
-The Blizzard Choir	+12% dmg dealt by Specials
-The Blizzard Choir	+8% Blade Arts effect
-Astrology Made Simple	+24% dmg dealt by Specials
-Astrology Made Simple	+13% Affinity gain
-Don't Feed the Armu	+14% Blade Arts effect
-Bluff Knight	+20% Blade Arts effect
-Money-Bye-Bye	+26% Blade Arts effect
-Smack-A-Nopon	+14% Blade Arts effect
-Smack-A-Nopon	Specials recharge 0.3 each second.
-Jeweled Billiard Balls	+20% Blade Arts effect
-Jeweled Billiard Balls	+10% Affinity gain
-Jeweled Billiard Balls	-0% Affinity loss
-Steamy Oil	+100 base Affinity
-Chocolate Shadow	+125 base Affinity
-Moonstar Lipstick	+150 base Affinity
-Noponic Nails	+100 base Affinity
-Noponic Nails	+4% Blade Arts effect
-Steam Powder	+125 base Affinity
-Steam Powder	+6% Affinity gain
-Steam Powder	+8% dmg dealt by Specials
-Tantalese Velvet	-5% Affinity loss
-Snowflake-Weave Sole	-6% Affinity loss
-Genbu-Weave Cloth	-10% Affinity loss
-Heatstripe	-13% Affinity loss
-Musical Hair Clasp	-6% Affinity loss
-Musical Hair Clasp	+6% Affinity gain
-Torigoth Snowpouch	-13% Affinity loss
-Torigoth Snowpouch	Specials recharge 1 each second.
-Torigoth Snowpouch	+12% dmg dealt by Specials
-Glitterbake	+15% max HP to dmg barrier
-Tricolor Bowl	+25% max HP to dmg barrier
-Tricolor Bowl	+8% HP recovery
-Hot Moonbeam Salad	+8% HP recovery
-Addam's Supercakes	+13% HP recovery
-Addam's Supercakes	+20% max HP to dmg barrier
-Meatball Pot-au-Feu	-4% physical dmg taken
-Pan-Fried Tartari	-7% physical dmg taken
-Pan-Fried Tartari	-7% ether dmg taken
-Roast Meat Tagliata	-7% physical dmg taken
-Roast Meat Tagliata	+20% Party Gauge gain
-Roast Meat Tagliata	+8% HP recovery
-Sunshine Pie	-9% physical dmg taken
-Sunshine Pie	+13% HP recovery
-Acqua Pearl Pazza	-9% ether dmg taken
-Acqua Pearl Pazza	-7% physical dmg taken
-Vess’s Dumplings	+15% max HP to dmg barrier
-Rainbow Dumplings	+15% max HP to dmg barrier
-Rainbow Dumplings	-2% ether dmg taken
-Gromrice Dumplings	+20% max HP to dmg barrier
-Gromrice Dumplings	Recharges Arts by 0.3 each second.
-Puri Leaf Dumplings	+25% max HP to dmg barrier
-Puri Leaf Dumplings	-7% physical dmg taken
-Spicy Stralu	-7% physical dmg taken
-Lovemerry Cake	Recharges Arts by 0.5 each second.
-Lovemerry Cake	+25% max HP to dmg barrier
-Neon Cookies	Recharges Arts by 0.4 each second.
-Neon Cookies	-4% ether dmg taken
-Neon Cookies	+5% HP recovery
-Bitter Choclit	Recharges Arts by 0.2 each second.
-Bitlip Drink	+8% Party Gauge gain
-Pucklip Drink	+8% Party Gauge gain
-Tinglip Drink	+8% Party Gauge gain
-Sourlip Drink	+8% Party Gauge gain
-Tricolor Ice Floe	+5% Affinity gain
-Tricolor Ice Floe	+50 base Affinity
-Sparkling Snowglobe	+10% Affinity gain
-Sparkling Snowglobe	+12% dmg dealt by Specials
-Rainbow Scope	+10% Affinity gain
-Rainbow Scope	-6% Affinity loss
-Tantal Icecube	+13% Affinity gain
-Tantal Icecube	Specials recharge 1.5 each second.
-Titan Illuminations	+17% Affinity gain
-Titan Illuminations	Specials recharge 1.5 each second.
-Salted Brog Sauté	-5% physical dmg taken
-Salted Brog Sauté	+15% Party Gauge gain
-Cream Orange Paratha	Recharges Arts by 0.3 each second.
-The Flora of Alrest	+12% dmg dealt by Specials
-Gentlemen: A Study	+24% dmg dealt by Specials
-Quoteletta	-5% physical dmg taken
-Fried Octomayo	+20% max HP to dmg barrier
-Ardainian Bear Carving	+10% Affinity gain
-Master's Curry	+25% max HP to dmg barrier
-Lucky Dawn Bread	+20% max HP to dmg barrier
-Choclit Dumplings	+30% max HP to dmg barrier
-Choclit Dumplings	-7% physical dmg taken
-Heart Cookies	Recharges Arts by 0.2 each second.
-Rizzente Mantle	-5% Affinity loss
-Rizzente Mantle	Specials recharge 0.3 each second.
-Felt Cushioning	-6% Affinity loss
-Felt Cushioning	+8% dmg dealt by Specials
-Brut Silk	-10% Affinity loss
-Brut Silk	Specials recharge 0.8 each second.
-Shelton Broadcloth	-13% Affinity loss
-Shelton Broadcloth	+16% dmg dealt by Specials
-Crinkly Wool	-17% Affinity loss
-Crinkly Wool	Specials recharge 1.5 each second.
-Pyra's Baked Redfish	-9% ether dmg taken
-Pyra's Baked Redfish	-7% physical dmg taken
-Pyra's Baked Redfish	+20% max HP to dmg barrier
-Fabulously Fierce Hat	-17% Affinity loss
-Fabulously Fierce Hat	Specials recharge 1.5 each second.
-Fabulously Fierce Hat	+10% Affinity gain
-Love Source	+15% Party Gauge gain
+COPY xeno2.pouch_item_effects (pouch_item, caption, param) FROM stdin;
+Juicy Samod	1	8.0
+Lightly Fried Rice	1	10.0
+Argentum Noodle Soup	1	20.0
+Massive Mushroom Pie	1	15.0
+Bright Samod	1	15.0
+Bright Samod	2	5.0
+Tasty Kordeth Samod	1	25.0
+Tasty Kordeth Samod	6	20.0
+Tasty Kordeth Samod	2	8.0
+Grilled Anchortail	4	3.0
+Oyster Stir-Fry	4	4.0
+Marine Stir-Fry	4	4.0
+Marine Stir-Fry	2	5.0
+Marine Stir-Fry	6	8.0
+Melodious Melon Parfait	5	0.1
+Cinnopon Roll	5	0.2
+Sparklesugar	5	0.3
+Fruity Rice Ball	5	0.3
+Fruity Rice Ball	3	2.0
+Narcipear Jelly	5	0.4
+Narcipear Jelly	3	4.0
+Narcipear Jelly	4	3.0
+Twinklejuice	6	8.0
+Fizz Juice	6	10.0
+Chunky Juice	6	15.0
+Sappan Veg Juice	6	25.0
+Sappan Veg Juice	2	8.0
+Honey au Lait	6	25.0
+Honey au Lait	4	5.0
+Crispy Blendshake	6	30.0
+Crispy Blendshake	1	25.0
+Roly-Poly Maracas	10	0.3
+Nopolele	10	0.5
+Funky Conga	10	0.8
+Whispercorder	10	1.0
+Casta-Mutes	10	0.8
+Casta-Mutes	8	6.0
+Clicky-Clacks	10	2.0
+Clicky-Clacks	9	13.0
+Salvaging Made Easy	12	6.0
+Yumyum's Golden Gun	12	8.0
+The Millenarian Titan	12	12.0
+Adventures of Myram	12	12.0
+Adventures of Myram	10	0.3
+Mumuni the Littlepon	12	16.0
+Mumuni the Littlepon	8	10.0
+Clattertongue	11	4.0
+Nopon Chess Set	11	8.0
+Sneak-Thief King	11	14.0
+Tradeway 66	11	20.0
+Coral Nopon Chess Set	11	14.0
+Coral Nopon Chess Set	10	0.5
+Leftherian Life	11	20.0
+Leftherian Life	8	6.0
+Leftherian Life	10	0.5
+Eau de Doux	7	50.0
+Elastifying Tonic	7	75.0
+Freshening Gel	7	100.0
+Curled Eyelashes	7	125.0
+Bubbly Mani-Pedi Kit	7	100.0
+Bubbly Mani-Pedi Kit	8	5.0
+Full Moon Eyeliner	7	125.0
+Full Moon Eyeliner	12	12.0
+Full Moon Eyeliner	9	5.0
+Ruska Dumplings	1	8.0
+Ruska Noodle Goulash	1	10.0
+Deluxe Ham Toastie	1	15.0
+Ruska Noodle Soup	1	15.0
+Ruska Noodle Soup	3	2.0
+Beat Paste Paratha	1	20.0
+Beat Paste Paratha	4	5.0
+Crispy Sauté	2	4.0
+Torigoth Marinade	2	5.0
+Stuffed Meaty Carrot	2	8.0
+Puri Leaf Salad	2	8.0
+Puri Leaf Salad	1	8.0
+Snowy Dudleya Gelée	2	13.0
+Snowy Dudleya Gelée	6	20.0
+Snowy Dudleya Gelée	1	15.0
+Estral Steak	3	3.0
+Tasty Sausage	3	2.0
+Mince & Lentil Stir-Fry	3	4.0
+Mince & Lentil Stir-Fry	6	10.0
+Mustard Kordeth	3	7.0
+Mustard Kordeth	4	5.0
+Mustard Kordeth	6	15.0
+Gormotti Fish Flakes	4	3.0
+Grass-Smoked Salmon	4	4.0
+Bipedal Crab Chili	4	5.0
+Bipedal Crab Chili	1	15.0
+Bipedal Crab Chili	5	0.2
+Lunana Smoothie	6	8.0
+Gormotti Honeytea	6	10.0
+Kukurel Springwater	6	15.0
+Passion Fruit Shake	6	15.0
+Passion Fruit Shake	4	3.0
+Victory Smoothie	6	20.0
+Victory Smoothie	5	0.3
+Victory Smoothie	2	5.0
+Torigonda	10	0.3
+Woodgrain Alphorn	10	0.5
+Cedarwood Koto	10	0.8
+Woodboard	10	0.8
+Woodboard	11	8.0
+Coralline Marimba	10	1.0
+Coralline Marimba	12	12.0
+Coralline Marimba	8	5.0
+The Girl on the Hill	8	4.0
+Black Flower Field	8	5.0
+Woodcut Print of Bana	8	6.0
+Woodcut Print of Bana	11	4.0
+Wood-Carven Queen	8	10.0
+Wood-Carven Queen	11	14.0
+Wood-Carven Queen	9	5.0
+Puffoundation	7	50.0
+Treesap Conditioner	7	75.0
+Flurrycomb	7	100.0
+Conch Hairpin	7	100.0
+Conch Hairpin	9	6.0
+Sparkly Snow Perfume	7	175.0
+Sparkly Snow Perfume	10	1.5
+Puzzletree Pouch	9	4.0
+Torigoth-Weave Mat	9	5.0
+Wood-Dye Waistcloth	9	6.0
+Sun-Dappled Curtains	9	10.0
+Leaf-Weave Cape	9	6.0
+Leaf-Weave Cape	10	0.8
+Snowflake Scarf	9	13.0
+Snowflake Scarf	8	10.0
+Snowflake Scarf	7	100.0
+Wrapped Glarna Bake	1	10.0
+Three-Cheese Puran	1	15.0
+Glitterspud Puran	1	15.0
+Glitterspud Puran	5	0.1
+Hearty Kordeth Puran	1	20.0
+Hearty Kordeth Puran	5	0.3
+Hearty Kordeth Puran	3	3.0
+Pomegranate Soup	2	5.0
+Sour-Spark-on-a-Stick	2	8.0
+Boiled Hustle Hyacinth	2	8.0
+Boiled Hustle Hyacinth	3	3.0
+Pickled Ice Cabbage	2	10.0
+Pickled Ice Cabbage	5	0.3
+Pickled Ice Cabbage	4	3.0
+Armu T-Bone Steak	3	3.0
+Mixed Meat Platter	3	4.0
+Hotplate Fry-Up	3	4.0
+Hotplate Fry-Up	5	0.2
+Char-Grilled Grumbird	3	7.0
+Char-Grilled Grumbird	5	0.4
+Char-Grilled Grumbird	2	8.0
+Dried Sunfish	4	3.0
+Bullybelly Carpaccio	4	4.0
+Steamed Bluegill	4	4.0
+Steamed Bluegill	3	2.0
+Whitebait With Seeds	4	5.0
+Whitebait With Seeds	6	15.0
+Whitebait With Seeds	3	3.0
+Rainbow Parfait	5	0.1
+Blossom Custard	5	0.3
+Plumage Peach Jelly	5	0.3
+Plumage Peach Jelly	2	8.0
+Champ's Churros	5	0.2
+Snipe Flan	5	0.3
+Cherry Cheese Mousse	5	0.3
+Cherry Cheese Mousse	3	3.0
+Neon Grape Flan	5	0.3
+Neon Grape Flan	4	4.0
+Black Roast Coffee	6	10.0
+Jenerossi Tea	6	15.0
+Fizzy Lassi	6	15.0
+Fizzy Lassi	5	0.1
+Lentil Milkshake	6	25.0
+Lentil Milkshake	2	10.0
+Lentil Milkshake	1	15.0
+Scarlet Shamisen	10	0.3
+Fonsan Viola	10	0.5
+Hero's Harp	10	0.8
+Rumble Cello	10	0.8
+Rumble Cello	12	6.0
+Cloudsnail Arpeggione	10	1.0
+Cloudsnail Arpeggione	7	125.0
+Patron King's Carving	8	5.0
+Final Chorus	8	6.0
+Singing Maiden Statue	8	6.0
+Singing Maiden Statue	12	12.0
+Skywards by Titan	8	13.0
+Skywards by Titan	7	125.0
+Skywards by Titan	11	14.0
+The Alrestogony	12	8.0
+The Legacy of Selosia	12	12.0
+Masterpieces of Alrest	12	12.0
+Masterpieces of Alrest	9	5.0
+Addam's Love and War	12	16.0
+Addam's Love and War	11	14.0
+Addam's Love and War	9	5.0
+Castle Poker	11	4.0
+Gladiator Wrestling	11	8.0
+Coral Reversi	11	14.0
+Duel Line	11	20.0
+Nopopo Yard	11	14.0
+Nopopo Yard	10	0.3
+Coral Casino	11	26.0
+Coral Casino	9	10.0
+Coral Casino	7	100.0
+Red Opal Lipstick	7	75.0
+Titan-Oil Hand Cream	7	100.0
+Golden Mascara	7	125.0
+Gorgeous Blusher	7	100.0
+Gorgeous Blusher	10	0.3
+Fonsett-Rouge Lipgloss	7	125.0
+Fonsett-Rouge Lipgloss	11	20.0
+Sanar-Knit Headband	9	4.0
+Armu-Skin Gladiator	9	5.0
+Coralweave Towel	9	6.0
+Dazzling Handkerchief	9	10.0
+Gormotti Woodwing	9	6.0
+Gormotti Woodwing	12	8.0
+Sanar-Knit Blanket	9	10.0
+Sanar-Knit Blanket	11	14.0
+Sanar-Knit Blanket	8	5.0
+Dolphin Carrot Sliders	2	5.0
+Campfire Skewers	2	8.0
+Crispy Vegetable Salad	2	8.0
+Crispy Vegetable Salad	4	2.0
+Steamflake Tabbouleh	2	10.0
+Steamflake Tabbouleh	4	4.0
+Steamflake Tabbouleh	3	3.0
+Meat & Lentil Skewer	3	3.0
+Herbal Tartare Kascha	3	4.0
+Grumbird Casserole	3	5.0
+Estral Quotelettas	3	4.0
+Estral Quotelettas	4	2.0
+Armu & Bean Stew	3	5.0
+Armu & Bean Stew	2	10.0
+Grilled Salmon in Herbs	4	4.0
+Cloud Sea Crab Sticks	4	5.0
+Sand Salmon Ceviche	4	4.0
+Sand Salmon Ceviche	5	0.2
+Fish and Herb Broth	4	7.0
+Fish and Herb Broth	5	0.4
+Fish and Herb Broth	2	8.0
+Steamed Milk Brioche	5	0.1
+Steam-Gel Ice Cream	5	0.2
+Sweet Lentil Bun	5	0.3
+Sky-Jewel Tart	5	0.3
+Odifa Gelée Tart	5	0.3
+Odifa Gelée Tart	1	15.0
+Hot Ruby Steamed Bun	5	0.4
+Hot Ruby Steamed Bun	6	15.0
+Hot Ruby Steamed Bun	3	3.0
+Pipe Trumpet	10	0.5
+Steamwork Organ	10	0.8
+Army-Issue Violin	10	1.0
+Hammerplate Snare	10	1.5
+Tube Xylophone	10	0.8
+Tube Xylophone	9	4.0
+Icicle Marimba	10	1.0
+Icicle Marimba	11	14.0
+Icicle Marimba	9	5.0
+Punk Doll	8	5.0
+Copper Ephem Statue	8	6.0
+Felmeri Fairy Statue	8	6.0
+Felmeri Fairy Statue	9	4.0
+Conch Music Box	8	10.0
+Conch Music Box	7	125.0
+Ardainian Arms Album	12	8.0
+Emperor Ephem's War	12	12.0
+Imperial Secret Escapes	12	16.0
+Les Awfuls	12	16.0
+How Wars Profit Nopon	12	12.0
+How Wars Profit Nopon	7	75.0
+Love Beyond the Clouds	12	16.0
+Love Beyond the Clouds	7	100.0
+Love Beyond the Clouds	10	0.5
+Army Field Manual	11	8.0
+Chooby Tubes	11	14.0
+Secret Trials	11	20.0
+Dueling Kingdoms	11	26.0
+Dealing Kingdoms	11	14.0
+Dealing Kingdoms	7	75.0
+Plumber Escape Game	11	32.0
+Plumber Escape Game	12	20.0
+Lybarian Chowder	2	5.0
+Green Cheese Salad	2	8.0
+Vegetable Mille-Feuille	2	10.0
+Veg & Oyster Aspic	2	8.0
+Veg & Oyster Aspic	5	0.1
+Snowbaby Potato Salad	2	13.0
+Snowbaby Potato Salad	3	5.0
+Snowbaby Potato Salad	6	15.0
+Pastel Camill	3	2.0
+Albacon Frystack	3	3.0
+Sweet Armu Belly Stew	3	4.0
+Zaproast Power Bowl	3	5.0
+Fragrant Samod Stralu	3	4.0
+Fragrant Samod Stralu	1	8.0
+Glarna Stir-Fry	3	5.0
+Glarna Stir-Fry	5	0.4
+Broiled Pinfin	4	4.0
+Sautéed Beat Shrimps	4	5.0
+Braised Cloud Sea Shark	4	5.0
+Braised Cloud Sea Shark	3	5.0
+Smoke-Braised Killifish	4	4.0
+Smoke-Braised Killifish	6	10.0
+Seared Whitebait	4	7.0
+Seared Whitebait	3	5.0
+Seared Whitebait	1	15.0
+Odifa	6	10.0
+Indoline Tea	6	15.0
+Frozen Odifa	6	20.0
+Pipestraw Smoothie	6	15.0
+Pipestraw Smoothie	3	3.0
+Armu Milk Earl Grey	6	20.0
+Armu Milk Earl Grey	4	4.0
+Armu Milk Earl Grey	3	3.0
+Luna Lizard Wreath	8	6.0
+Montecoran Doll	8	10.0
+Steel Pipe Lexos	8	6.0
+Steel Pipe Lexos	11	8.0
+Lush Moonbeam Mask	8	10.0
+Lush Moonbeam Mask	10	0.8
+Lush Moonbeam Mask	12	8.0
+Jellyfish Balsam Rug	9	5.0
+Codweave Shop Curtain	9	6.0
+Codweave Safety Blanky	9	10.0
+Silken Stool	9	13.0
+Noponcho	9	6.0
+Noponcho	7	50.0
+Prismatic Headband	9	10.0
+Prismatic Headband	11	20.0
+Fondant Rice Cake	1	15.0
+Tantalese Porridge	1	20.0
+Poached Fruit Samod	1	15.0
+Poached Fruit Samod	6	8.0
+Grumbird Rice Bowl	1	20.0
+Grumbird Rice Bowl	4	4.0
+Grumbird Rice Bowl	5	0.2
+Steamed Veg Stralu	2	10.0
+Addam's Embercakes	2	13.0
+Vinaigrette Ice Cabbage	2	8.0
+Vinaigrette Ice Cabbage	6	10.0
+Prickly Snowpickle	2	15.0
+Prickly Snowpickle	1	25.0
+Aromalocaris Sauté	4	5.0
+Abyssturgeon Medallion	4	7.0
+Bagna Oyster Roll	4	4.0
+Bagna Oyster Roll	1	8.0
+Whitebait-Samod Hotpot	4	5.0
+Whitebait-Samod Hotpot	2	10.0
+Airy Snowflake Sherbet	5	0.1
+Thawing Mille-Feuille	5	0.2
+Baked Narcipear	5	0.3
+Sno-Bake Cheesecake	5	0.4
+Odifa Punch	5	0.2
+Odifa Punch	6	8.0
+Snow Dumplings	5	0.3
+Snow Dumplings	2	5.0
+Snow Dumplings	1	8.0
+Ancient King’s Portrait	8	6.0
+Snow-Crystal Vase	8	10.0
+Portrait of Ger the Hero	8	13.0
+Prideful Walking	12	8.0
+The Armu Who Loved	12	12.0
+Witness the Crustip	12	16.0
+The Annals of Addam	12	20.0
+The Blizzard Choir	12	12.0
+The Blizzard Choir	11	8.0
+Astrology Made Simple	12	24.0
+Astrology Made Simple	8	13.0
+Don't Feed the Armu	11	14.0
+Bluff Knight	11	20.0
+Money-Bye-Bye	11	26.0
+Smack-A-Nopon	11	14.0
+Smack-A-Nopon	10	0.3
+Jeweled Billiard Balls	11	20.0
+Jeweled Billiard Balls	8	10.0
+Jeweled Billiard Balls	9	0.0
+Steamy Oil	7	100.0
+Chocolate Shadow	7	125.0
+Moonstar Lipstick	7	150.0
+Noponic Nails	7	100.0
+Noponic Nails	11	4.0
+Steam Powder	7	125.0
+Steam Powder	8	6.0
+Steam Powder	12	8.0
+Tantalese Velvet	9	5.0
+Snowflake-Weave Sole	9	6.0
+Genbu-Weave Cloth	9	10.0
+Heatstripe	9	13.0
+Musical Hair Clasp	9	6.0
+Musical Hair Clasp	8	6.0
+Torigoth Snowpouch	9	13.0
+Torigoth Snowpouch	10	1.0
+Torigoth Snowpouch	12	12.0
+Glitterbake	1	15.0
+Tricolor Bowl	1	25.0
+Tricolor Bowl	2	8.0
+Hot Moonbeam Salad	2	8.0
+Addam's Supercakes	2	13.0
+Addam's Supercakes	1	20.0
+Meatball Pot-au-Feu	3	4.0
+Pan-Fried Tartari	3	7.0
+Pan-Fried Tartari	4	7.0
+Roast Meat Tagliata	3	7.0
+Roast Meat Tagliata	6	20.0
+Roast Meat Tagliata	2	8.0
+Sunshine Pie	3	9.0
+Sunshine Pie	2	13.0
+Acqua Pearl Pazza	4	9.0
+Acqua Pearl Pazza	3	7.0
+Vess’s Dumplings	1	15.0
+Rainbow Dumplings	1	15.0
+Rainbow Dumplings	4	2.0
+Gromrice Dumplings	1	20.0
+Gromrice Dumplings	5	0.3
+Puri Leaf Dumplings	1	25.0
+Puri Leaf Dumplings	3	7.0
+Spicy Stralu	3	7.0
+Lovemerry Cake	5	0.5
+Lovemerry Cake	1	25.0
+Neon Cookies	5	0.4
+Neon Cookies	4	4.0
+Neon Cookies	2	5.0
+Bitter Choclit	5	0.2
+Bitlip Drink	6	8.0
+Pucklip Drink	6	8.0
+Tinglip Drink	6	8.0
+Sourlip Drink	6	8.0
+Tricolor Ice Floe	8	5.0
+Tricolor Ice Floe	7	50.0
+Sparkling Snowglobe	8	10.0
+Sparkling Snowglobe	12	12.0
+Rainbow Scope	8	10.0
+Rainbow Scope	9	6.0
+Tantal Icecube	8	13.0
+Tantal Icecube	10	1.5
+Titan Illuminations	8	17.0
+Titan Illuminations	10	1.5
+Salted Brog Sauté	3	5.0
+Salted Brog Sauté	6	15.0
+Cream Orange Paratha	5	0.3
+The Flora of Alrest	12	12.0
+Gentlemen: A Study	12	24.0
+Quoteletta	3	5.0
+Fried Octomayo	1	20.0
+Ardainian Bear Carving	8	10.0
+Master's Curry	1	25.0
+Lucky Dawn Bread	1	20.0
+Choclit Dumplings	1	30.0
+Choclit Dumplings	3	7.0
+Heart Cookies	5	0.2
+Rizzente Mantle	9	5.0
+Rizzente Mantle	10	0.3
+Felt Cushioning	9	6.0
+Felt Cushioning	12	8.0
+Brut Silk	9	10.0
+Brut Silk	10	0.8
+Shelton Broadcloth	9	13.0
+Shelton Broadcloth	12	16.0
+Crinkly Wool	9	17.0
+Crinkly Wool	10	1.5
+Pyra's Baked Redfish	4	9.0
+Pyra's Baked Redfish	3	7.0
+Pyra's Baked Redfish	1	20.0
+Fabulously Fierce Hat	9	17.0
+Fabulously Fierce Hat	10	1.5
+Fabulously Fierce Hat	8	10.0
+Love Source	6	15.0
 \.
 
 
@@ -37370,11 +37417,19 @@ ALTER TABLE ONLY xeno2.enhance
 
 
 --
+-- Name: pouch_captions_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.pouch_captions
+    ADD CONSTRAINT pouch_captions_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: pouch_item_effects_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
 ALTER TABLE ONLY xeno2.pouch_item_effects
-    ADD CONSTRAINT pouch_item_effects_pkey PRIMARY KEY (pouch_item, effect);
+    ADD CONSTRAINT pouch_item_effects_pkey PRIMARY KEY (pouch_item, caption);
 
 
 --
@@ -37551,6 +37606,14 @@ ALTER TABLE ONLY xeno2.core_materials
 
 ALTER TABLE ONLY xeno2.enhance
     ADD CONSTRAINT enhance_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance_captions(id);
+
+
+--
+-- Name: pouch_item_effects_caption_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.pouch_item_effects
+    ADD CONSTRAINT pouch_item_effects_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.pouch_captions(id);
 
 
 --
