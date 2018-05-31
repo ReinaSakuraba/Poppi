@@ -377,8 +377,12 @@ class Xenoblade2:
                 SELECT
                     name,
                     rarity,
-                    description
+                    xeno2.format_caption(enhance_captions.caption, param, param_one, param_two) AS caption
                 FROM xeno2.accessories
+                JOIN xeno2.enhance
+                ON accessories.caption=enhance.id
+                JOIN xeno2.enhance_captions
+                ON enhance.caption=enhance_captions.id
                 WHERE LOWER(name)=$1;
                 """
 
@@ -390,7 +394,7 @@ class Xenoblade2:
         embed = discord.Embed(title=records[0]['name'])
 
         for row in records:
-            embed.add_field(name=row['rarity'], value=row['description'])
+            embed.add_field(name=row['rarity'], value=row['caption'])
 
         await ctx.send(embed=embed)
 
