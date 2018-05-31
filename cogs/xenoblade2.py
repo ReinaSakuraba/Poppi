@@ -538,9 +538,12 @@ class Xenoblade2:
         query = f"""
                 SELECT
                     STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
-                FROM xeno2.{table_name}
-                WHERE name % $1
-                GROUP BY name;
+                FROM (
+                    SELECT name
+                    FROM xeno2.{table_name}
+                    WHERE name % $1
+                    GROUP BY name
+                ) AS a;
                 """
 
         possibilities = await ctx.pool.fetchval(query, name)
