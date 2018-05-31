@@ -6773,8 +6773,8 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 53	Increases damage dealt outdoors by [ML:Enhance kind=Param1 ]%.
 54	Increases damage dealt per Blade Switch by [ML:Enhance kind=Param1 ]% (max: [ML:Enhance ]%).
 55	Increases damage dealt while Blade is the opposite gender by [ML:Enhance kind=Param1 ]%.
-56	Reduces enemy Topple resist.
-57	Reduces enemy Launch resist.
+56	Reduces enemy Topple resist by [ML:Enhance kind=Param1 ]%.
+57	Reduces enemy Launch resist by [ML:Enhance kind=Param1 ]%.
 58	On Block, gives [ML:Enhance kind=Param1 ]% chance to completely deflect enemy attack.
 59	Improves evasion by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or lower.
 60	Improves evasion by [ML:Enhance kind=Param1 ]% while moving.
@@ -6801,15 +6801,15 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 81	Increases aggro drawn from Specials by [ML:Enhance kind=Param1 ]%.
 82	Increases aggro reduction by [ML:Enhance kind=Param1 ]%.
 83	Increases aggro every second.
-84	Increases aggro every second. (Minor effect.)
-85	Increases aggro every second. (Medium effect.)
-86	Increases aggro every second. (Major effect.)
-87	Increases aggro every second. (Extra-major effect.)
+84	Increases aggro by [ML:Enhance kind=Param1 ] every second.
+85	Increases aggro by [ML:Enhance kind=Param1 ] every second.
+86	Increases aggro by [ML:Enhance kind=Param1 ] every second.
+87	Increases aggro by [ML:Enhance kind=Param1 ] every second.
 88	Lets you start each battle with some aggro already accumulated.
-89	Start each battle with aggro. (Minor effect.)
-90	Start each battle with aggro. (Medium effect.)
-91	Start each battle with aggro. (Major effect.)
-92	Start each battle with aggro. (Extra-major effect.)
+89	Start each battle with [ML:Enhance kind=Param1 ] aggro.
+90	Start each battle with [ML:Enhance kind=Param1 ] aggro.
+91	Start each battle with [ML:Enhance kind=Param1 ] aggro.
+92	Start each battle with [ML:Enhance kind=Param1 ] aggro.
 93	Increases the HP restored when being revived by [ML:Enhance kind=Param1 ]%.
 94	Increases the HP restored when reviving a teammate by [ML:Enhance kind=Param1 ]%.
 95	Improves the effect of Healing Arts by [ML:Enhance kind=Param1 ]%.
@@ -6824,16 +6824,16 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 104	Increases the strength of elemental effects user has inflicted by [ML:Enhance kind=Param1 ]%.
 105	Increases the duration of elemental effects user has inflicted by [ML:Enhance kind=Param1 ]%.
 106	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.
-107	Fills Party Gauge on "Excellent" Specials. (Minor effect.)
-108	Fills Party Gauge on "Excellent" Specials. (Major effect.)
-109	Slightly fills the Party Gauge for each critical hit delivered.
-110	Slightly fills the Party Gauge for each Driver Art used.
+107	Fills Party Gauge by [ML:Enhance kind=Param1 ] on "Excellent" Specials.
+108	Fills Party Gauge by [ML:Enhance kind=Param1 ] on "Excellent" Specials.
+109	Fills the Party Gauge by [ML:Enhance kind=Param1 ] for each critical hit delivered.
+110	Fills the Party Gauge by [ML:Enhance kind=Param1 ] for each Driver Art used.
 111	[ML:Enhance kind=Param1 ]% more damage dealt for each enemy in the battle (max: [ML:Enhance ]%).
 112	Increases reflect damage by [ML:Enhance kind=Param1 ]%.
 113	Increases critical hit rate during a Chain Attack by [ML:Enhance kind=Param1 ]%.
 114	Heals [ML:Enhance kind=Param1 ]% HP each time a Chain Attack is initiated.
 115	Revives Driver each time a Chain Attack is initiated.
-116	Slightly fills the Party Gauge at the end of each Chain Attack.
+116	Fills the Party Gauge by [ML:Enhance kind=Param1 ] at the end of each Chain Attack.
 117	Adds [ML:Enhance kind=Param1 ]m to the range of Ether Cannon.
 118	Restores [ML:Enhance kind=Param1 ]% HP to teammates when incapacitated.
 119	Increases damage dealt by [ML:Enhance kind=Param1 ]% for the first Driver Art per battle.
@@ -6902,7 +6902,7 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 182	Recharges Arts used by [ML:Enhance kind=Param1 ]% upon landing a critical hit.
 183	Recharges Art or Special used by [ML:Enhance kind=Param1 ]% upon landing a critical hit.
 184	Increases Affinity by [ML:Enhance kind=Param1 ] when using a Special.
-185	Reduces enemy Break resist.
+185	Reduces enemy Break resist by [ML:Enhance kind=Param1 ]%.
 186	Increases damage dealt by [ML:Enhance kind=Param1 ]% each time a Special is used (max: [ML:Enhance ]%)
 187	Adds [ML:Enhance kind=Param1 ]% chance of Knockback when attacked by an enemy.
 188	Increases accuracy by [ML:Enhance kind=Param1 ]% at max Affinity.
@@ -6984,7 +6984,7 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 264	Allows use of the Driver Art assigned to Y at the start of battle.
 265	Allows use of the Driver Art assigned to B at the start of battle.
 266	Lets you use a Driver Art after canceling a Driver Art.
-267	Shortens cooldown time relative to the no. of Arts ready after a Blade Switch.
+267	Shortens cooldown time by [ML:Enhance kind=Param1 ]% for each Art ready after a Blade Switch.
 268	Boosts taunt resistance by [ML:Enhance kind=Param1 ]%.
 269	Boosts Driver shackle resistance by [ML:Enhance kind=Param1 ]%.
 270	Boosts Blade shackle resistance by [ML:Enhance kind=Param1 ]%.
