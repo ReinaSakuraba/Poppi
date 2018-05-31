@@ -58,7 +58,7 @@ CREATE TABLE xeno2.accessories (
     name text NOT NULL,
     rarity text NOT NULL,
     price integer NOT NULL,
-    description text NOT NULL
+    caption smallint NOT NULL
 );
 
 
@@ -454,450 +454,450 @@ ALTER TABLE xenox.skills OWNER TO poppi;
 -- Data for Name: accessories; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
-COPY xeno2.accessories (name, rarity, price, description) FROM stdin;
-Abyss Vest	Rare	5000	Boosts maximum HP by 24%.
-Gear Vest	Common	5000	Boosts maximum HP by 20%.
-Jade Vest	Common	9600	Boosts maximum HP by 25%.
-Titanium Vest	Common	16200	Boosts maximum HP by 30%.
-Steam Belt	Common	5000	Boosts Strength by 20%.
-Silver Belt	Common	9600	Boosts Strength by 25%.
-Ceramic Belt	Common	16200	Boosts Strength by 30%.
-Bolt Hat	Common	5600	Boosts Ether by 20%.
-Pearl Hat	Common	9600	Boosts Ether by 25%.
-Fiber Hat	Common	16200	Boosts Ether by 30%.
-Rainbow Gloves	Common	7900	Boosts Dexterity by 20%.
-Hero Gloves	Common	13600	Boosts Dexterity by 25%.
-Carbon Gloves	Common	16200	Boosts Dexterity by 30%.
-Shell Shoes	Common	7900	Boosts Agility by 20%.
-Assassin Shoes	Common	13600	Boosts Agility by 25%.
-Ester Shoes	Common	16200	Boosts Agility by 30%.
-Nacre Choker	Common	5100	Boosts Luck by 20%.
-Goddess Choker	Common	9800	Boosts Luck by 25%.
-Comet Choker	Common	11700	Boosts Luck by 30%.
-Rigid Vest	Common	700	Increases maximum HP by 200.
-Infantry Vest	Common	2000	Increases maximum HP by 400.
-Muscle Belt	Common	700	Increases Strength by 20.
-Champion Belt	Common	2000	Increases Strength by 25.
-Fluffy Hat	Common	700	Increases Ether by 20.
-Fabulous Hat	Common	3200	Increases Ether by 25.
-Leather Gloves	Common	1400	Increases Dexterity by 20.
-Smithy Gloves	Common	4000	Increases Dexterity by 25.
-Wolf Shoes	Common	1400	Increases Agility by 10.
-Spring Shoes	Common	4000	Increases Agility by 15.
-Bunnit Choker	Common	1300	Increases Luck by 20.
-Gold Gear Choker	Common	3600	Increases Luck by 25.
-Garnet	Common	9400	Restores 4% HP of damage dealt after a successful auto-attack.
-Sapphire	Common	16300	Restores 6% HP of damage dealt after a successful auto-attack.
-Diamond	Common	19500	Restores 8% HP of damage dealt after a successful auto-attack.
-Classic Medal	Common	3600	Absorbs 10% of critical damage dealt as HP.
-Modern Medal	Common	6600	Absorbs 15% of critical damage dealt as HP.
-Avant-Garde Medal	Common	9500	Absorbs 20% of critical damage dealt as HP.
-Iron Headband	Common	3200	Increases critical damage by 20%.
-Ice Headband	Common	6200	Increases critical damage by 30%.
-Optical Headband	Common	10400	Increases critical damage by 40%.
-Moon Cube	Common	8500	Adds a 20% chance of attacking again after a successful auto-attack.
-Star Cube	Common	16300	Adds a 35% chance of attacking again after a successful auto-attack.
-Galaxy Cube	Common	19500	Adds a 50% chance of attacking again after a successful auto-attack.
-Mechanized Greaves	Common	4000	Increases damage dealt to toppled enemies by 50%.
-Crystal Greaves	Common	7700	Increases damage dealt to toppled enemies by 75%.
-Graphite Greaves	Common	11900	Increases damage dealt to toppled enemies by 100%.
-Swordfighting Banner	Common	4500	Increases damage dealt to launched enemies by 50%.
-Goddess Banner	Common	7700	Increases damage dealt to launched enemies by 75%.
-Ancient Banner	Common	11900	Increases damage dealt to launched enemies by 100%.
-Spiked Pauldrons	Common	5000	Increases smash damage by 50%.
-Hero Pauldrons	Common	8700	Increases smash damage by 75%.
-Jet Pauldrons	Common	10400	Increases smash damage by 100%.
-Apprentice Vambraces	Common	4900	Increases damage dealt to higher-level enemies by 20%.
-Boxer Vambraces	Common	11900	Increases damage dealt to higher-level enemies by 35%.
-Hero Vambraces	Common	14300	Increases damage dealt to higher-level enemies by 50%.
-Dark Orb	Common	3500	Increases damage dealt when an ally is incapacitated by 50%.
-Eraser Orb	Common	9100	Increases damage dealt when an ally is incapacitated by 100%.
-Bloody Orb	Common	13100	Increases damage dealt when an ally is incapacitated by 150%.
-Chrome Scarf	Common	4500	Extends Break duration by 15%.
-Unicorn Scarf	Common	8200	Extends Break duration by 30%.
-Quantum Scarf	Common	11900	Extends Break duration by 45%.
-White Belt	Common	7100	Extends Topple duration by 15%.
-Black Belt	Common	13600	Extends Topple duration by 20%.
-Platinum Belt	Common	16200	Extends Topple duration by 25%.
-Soldier Ring	Common	6700	Extends Launch duration by 15%.
-Berserk Ring	Common	12400	Extends Launch duration by 20%.
-Tyrant Ring	Common	17800	Extends Launch duration by 25%.
-Attack Stone	Common	900	Increases auto-attack damage by 20%.
-Assault Stone	Common	5400	Increases auto-attack damage by 40%.
-Break Stone	Common	13000	Increases auto-attack damage by 60%.
-World Tree Drop	Common	19500	Increases damage dealt per Blade Switch by 10% (max: 25%).
-Male Loincloth	Common	10900	Increases damage dealt while Blade is the opposite gender by 50%.
-Charming Swimsuit	Common	16300	Increases damage dealt while Blade is the opposite gender by 50%.
-Alpha Scope	Common	7900	Reduces enemy Topple resist.
-Gamma Scope	Common	16500	Reduces enemy Launch resist.
-Beast Hood	Common	2100	Increases aggro reduction by 20%.
-Camo Hood	Common	6700	Increases aggro reduction by 25%.
-Skeleton Hood	Common	12400	Increases aggro reduction by 30%.
-Nopon Mask	Common	2800	Increases aggro every second. (Minor effect.)
-Metal Nopon Mask	Common	9000	Increases aggro every second. (Medium effect.)
-Gold Nopon Mask	Common	16500	Increases aggro every second. (Major effect.)
-Colorful Feather	Common	1600	Start each battle with aggro. (Minor effect.)
-Silver Feather	Common	5000	Start each battle with aggro. (Medium effect.)
-Phantom Feather	Common	8700	Start each battle with aggro. (Major effect.)
-Grandarbor Ward	Common	1200	Increases the HP restored when being revived by 25%.
-Spirit Tree Ward	Common	4700	Increases the HP restored when being revived by 35%.
-World Tree Ward	Common	8900	Increases the HP restored when being revived by 45%.
-Friendship Ring	Common	600	Increases the HP restored when reviving a teammate by 25%.
-Affection Ring	Common	1500	Increases the HP restored when reviving a teammate by 35%.
-Promise Ring	Common	4700	Increases the HP restored when reviving a teammate by 45%.
-Harvest Necklace	Common	3800	Improves the effect of Healing Arts by 10%.
-Affection Necklace	Common	9900	Improves the effect of Healing Arts by 15%.
-Holy Necklace	Common	15600	Improves the effect of Healing Arts by 20%.
-Shell Cameo	Common	1100	Increases HP restored to self (not using HP Potions) by 10%.
-Chivalric Medal	Common	6200	Restores 3% HP when canceling an auto-attack with a Driver Art.
-Military Medal	Common	11900	Restores 4% HP when canceling an auto-attack with a Driver Art.
-Round Table Medal	Common	14300	Restores 5% HP when canceling an auto-attack with a Driver Art.
-Gauntlet	Common	6200	Boosts recharge for Specials after canceling by 20%.
-Bio Gauntlet	Common	11900	Boosts recharge for Specials after canceling by 30%.
-Nano-Metal Gauntlet	Common	14300	Boosts recharge for Specials after canceling by 40%.
-Eyepatch	Common	3200	Adds 20% to damage ratio after canceling an auto-attack.
-Leader's Eyepatch	Common	8200	Adds 35% to damage ratio after canceling an auto-attack.
-Hi-Tech Eyepatch	Common	13000	Adds 50% to damage ratio after canceling an auto-attack.
-Revival Pod	Legendary	29700	100% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).
-0-Battle Course	Common	39700	Boosts experience received from defeating enemies by 25%.
-0-Battle Course+	Common	23800	Boosts experience received from defeating enemies by 50%.
-Alphabet Course	Common	63000	Boosts WP received from defeating enemies by 25%.
-Alphabet Course+	Common	26000	Boosts WP received from defeating enemies by 50%.
-Silver Earrings	Common	4500	Fills Party Gauge on "Excellent" Specials. (Minor effect.)
-Crystal Earrings	Common	10900	Fills Party Gauge on "Excellent" Specials. (Major effect.)
-Omega Drive	Common	19500	Slightly fills the Party Gauge for each critical hit delivered.
-Sigma Drive	Common	23800	Slightly fills the Party Gauge for each Driver Art used.
-Burst Symbol	Common	10300	Increases attack power ratio at the start of a Chain Attack.
-Critical Symbol	Common	14800	Increases critical hit rate during a Chain Attack by 50%.
-Recovery Symbol	Common	8700	Heals 50% HP each time a Chain Attack is initiated.
-Resurrection Symbol	Legendary	11900	Revives Driver each time a Chain Attack is initiated.
-Infinity Symbol	Common	16500	Slightly fills the Party Gauge at the end of each Chain Attack.
-Auto-Balancer	Legendary	26000	Prevents deflections when an enemy guards an attack.
-Sword Attachment	Common	10700	Increases attack power of Aegis Sword-class weapons by 25%.
-Scimitar Attachment	Common	10700	Increases attack power of Catalyst Scimitar-class weapons by 25%.
-Ring Attachment	Common	6900	Increases attack power of Twin Rings-class weapons by 25%.
-Shield Attachment	Common	9800	Increases attack power of Drill Shield-class weapons by 25%.
-Arms Attachment	Common	9800	Increases attack power of Mech Arms-class weapons by 25%.
-Saber Attachment	Common	9800	Increases attack power of Variable Saber-class weapons by 25%.
-Whip Attachment	Common	6900	Increases attack power of Whipsword-class weapons by 25%.
-Edge Attachment	Common	6900	Increases attack power of Big Bang Edge-class weapons by 25%.
-Scythe Attachment	Common	10700	Increases attack power of Dual Scythes-class weapons by 25%.
-Axe Attachment	Common	1200	Increases attack power of Greataxe-class weapons by 25%.
-Lance Attachment	Common	1200	Increases attack power of Megalance-class weapons by 25%.
-Cannon Attachment	Common	1800	Increases attack power of Ether Cannon-class weapons by 25%.
-Hammer Attachment	Common	2900	Increases attack power of Shield Hammer-class weapons by 25%.
-Katana Attachment	Common	3600	Increases attack power of Chroma Katana-class weapons by 25%.
-Ball Attachment	Common	3600	Increases attack power of Bitball-class weapons by 25%.
-Knuckle Attachment	Common	5700	Increases attack power of Knuckle Claws-class weapons by 25%.
-Master Attachment	Common	26000	Increases the attack power of all weapon classes by 10%.
-Memory Rocket	Legendary	1300	Prevents Affinity loss when a teammate falls in battle.
-Cheer Treat	Common	6600	Increases Affinity by 50% after winning a Special button challenge.
-Red Thread	Common	1100	Extends the range of Driver-Blade Affinity by 100cm.
-Love Thread	Common	5000	Extends the range of Driver-Blade Affinity by 150cm.
-Passion Thread	Common	9500	Extends the range of Driver-Blade Affinity by 200cm.
-Activity Amulet	Common	2900	Boosts the effect of HP Potions by 20%.
-Healing Amulet	Common	6900	Boosts the effect of HP Potions by 30%.
-Rebirth Amulet	Common	10700	Boosts the effect of HP Potions by 40%.
-Beta Scope	Common	23800	Reduces enemy Break resist.
-Rush Hour	Common	1400	Expands the window of opportunity for canceling by 50%.
-Appealing Lamp	Common	3200	Adds 25% buffer time to combos if switching to a combo-requesting Blade.
-Overclocking Bangle	Common	5700	Shortens cooldown time relative to the no. of Arts ready after a Blade Switch.
-Mint Potpourri	Common	3200	Boosts taunt resistance by 60%.
-Lavender Potpourri	Common	5700	Boosts taunt resistance by 90%.
-Priestess's Auspices	Common	3200	Boosts Driver shackle resistance by 60%.
-Sage's Auspices	Common	5700	Boosts Driver shackle resistance by 90%.
-Incense of Calm	Common	5700	Increases resistance to Stench by 60%.
-Incense of Insight	Common	10900	Increases resistance to Stench by 90%.
-Gear Vest	Rare	5000	Boosts maximum HP by 21%.
-Jade Vest	Rare	9600	Boosts maximum HP by 26%.
-Titanium Vest	Rare	16200	Boosts maximum HP by 31%.
-Steam Belt	Rare	5000	Boosts Strength by 21%.
-Silver Belt	Rare	9600	Boosts Strength by 26%.
-Ceramic Belt	Rare	16200	Boosts Strength by 31%.
-Bolt Hat	Rare	5600	Boosts Ether by 21%.
-Pearl Hat	Rare	9600	Boosts Ether by 26%.
-Fiber Hat	Rare	16200	Boosts Ether by 31%.
-Rainbow Gloves	Rare	7900	Boosts Dexterity by 21%.
-Hero Gloves	Rare	13600	Boosts Dexterity by 26%.
-Carbon Gloves	Rare	16200	Boosts Dexterity by 31%.
-Shell Shoes	Rare	7900	Boosts Agility by 21%.
-Assassin Shoes	Rare	13600	Boosts Agility by 26%.
-Ester Shoes	Rare	16200	Boosts Agility by 31%.
-Nacre Choker	Rare	5100	Boosts Luck by 21%.
-Goddess Choker	Rare	9800	Boosts Luck by 26%.
-Comet Choker	Rare	11700	Boosts Luck by 31%.
-Rigid Vest	Rare	700	Increases maximum HP by 250.
-Infantry Vest	Rare	2000	Increases maximum HP by 450.
-Muscle Belt	Rare	700	Increases Strength by 21.
-Champion Belt	Rare	2000	Increases Strength by 26.
-Fluffy Hat	Rare	700	Increases Ether by 21.
-Fabulous Hat	Rare	3200	Increases Ether by 26.
-Leather Gloves	Rare	1400	Increases Dexterity by 21.
-Smithy Gloves	Rare	4000	Increases Dexterity by 26.
-Wolf Shoes	Rare	1400	Increases Agility by 11.
-Spring Shoes	Rare	4000	Increases Agility by 16.
-Bunnit Choker	Rare	1300	Increases Luck by 21.
-Gold Gear Choker	Rare	3600	Increases Luck by 26.
-Garnet	Rare	9400	Restores 4.5% HP of damage dealt after a successful auto-attack.
-Sapphire	Rare	16300	Restores 6.5% HP of damage dealt after a successful auto-attack.
-Diamond	Rare	19500	Restores 8.5% HP of damage dealt after a successful auto-attack.
-Classic Medal	Rare	3600	Absorbs 11% of critical damage dealt as HP.
-Modern Medal	Rare	6600	Absorbs 16% of critical damage dealt as HP.
-Avant-Garde Medal	Rare	9500	Absorbs 21% of critical damage dealt as HP.
-Iron Headband	Rare	3200	Increases critical damage by 25%.
-Ice Headband	Rare	6200	Increases critical damage by 35%.
-Optical Headband	Rare	10400	Increases critical damage by 45%.
-Moon Cube	Rare	8500	Adds a 25% chance of attacking again after a successful auto-attack.
-Star Cube	Rare	16300	Adds a 40% chance of attacking again after a successful auto-attack.
-Galaxy Cube	Rare	19500	Adds a 55% chance of attacking again after a successful auto-attack.
-Mechanized Greaves	Rare	4000	Increases damage dealt to toppled enemies by 55%.
-Crystal Greaves	Rare	7700	Increases damage dealt to toppled enemies by 80%.
-Graphite Greaves	Rare	11900	Increases damage dealt to toppled enemies by 105%.
-Swordfighting Banner	Rare	4500	Increases damage dealt to launched enemies by 55%.
-Goddess Banner	Rare	7700	Increases damage dealt to launched enemies by 80%.
-Ancient Banner	Rare	11900	Increases damage dealt to launched enemies by 105%.
-Spiked Pauldrons	Rare	5000	Increases smash damage by 55%.
-Hero Pauldrons	Rare	8700	Increases smash damage by 80%.
-Jet Pauldrons	Rare	10400	Increases smash damage by 105%.
-Apprentice Vambraces	Rare	4900	Increases damage dealt to higher-level enemies by 25%.
-Boxer Vambraces	Rare	11900	Increases damage dealt to higher-level enemies by 40%.
-Hero Vambraces	Rare	14300	Increases damage dealt to higher-level enemies by 55%.
-Dark Orb	Rare	3500	Increases damage dealt when an ally is incapacitated by 55%.
-Eraser Orb	Rare	9100	Increases damage dealt when an ally is incapacitated by 105%.
-Bloody Orb	Rare	13100	Increases damage dealt when an ally is incapacitated by 155%.
-Chrome Scarf	Rare	4500	Extends Break duration by 17%.
-Unicorn Scarf	Rare	8200	Extends Break duration by 32%.
-Quantum Scarf	Rare	11900	Extends Break duration by 47%.
-White Belt	Rare	7100	Extends Topple duration by 16%.
-Black Belt	Rare	13600	Extends Topple duration by 21%.
-Platinum Belt	Rare	16200	Extends Topple duration by 26%.
-Soldier Ring	Rare	6700	Extends Launch duration by 16%.
-Berserk Ring	Rare	12400	Extends Launch duration by 21%.
-Tyrant Ring	Rare	17800	Extends Launch duration by 26%.
-Attack Stone	Rare	900	Increases auto-attack damage by 25%.
-Assault Stone	Rare	5400	Increases auto-attack damage by 45%.
-Break Stone	Rare	13000	Increases auto-attack damage by 65%.
-World Tree Drop	Rare	19500	Increases damage dealt per Blade Switch by 11% (max: 25%).
-Male Loincloth	Rare	10900	Increases damage dealt while Blade is the opposite gender by 55%.
-Charming Swimsuit	Rare	16300	Increases damage dealt while Blade is the opposite gender by 55%.
-Alpha Scope	Rare	7900	Reduces enemy Topple resist.
-Gamma Scope	Rare	16500	Reduces enemy Launch resist.
-Beast Hood	Rare	2100	Increases aggro reduction by 21%.
-Camo Hood	Rare	6700	Increases aggro reduction by 26%.
-Skeleton Hood	Rare	12400	Increases aggro reduction by 31%.
-Nopon Mask	Rare	2800	Increases aggro every second. (Minor effect.)
-Metal Nopon Mask	Rare	9000	Increases aggro every second. (Medium effect.)
-Gold Nopon Mask	Rare	16500	Increases aggro every second. (Major effect.)
-Colorful Feather	Rare	1600	Start each battle with aggro. (Minor effect.)
-Silver Feather	Rare	5000	Start each battle with aggro. (Medium effect.)
-Phantom Feather	Rare	8700	Start each battle with aggro. (Major effect.)
-Grandarbor Ward	Rare	1200	Increases the HP restored when being revived by 27%.
-Spirit Tree Ward	Rare	4700	Increases the HP restored when being revived by 37%.
-World Tree Ward	Rare	8900	Increases the HP restored when being revived by 47%.
-Friendship Ring	Rare	600	Increases the HP restored when reviving a teammate by 27%.
-Affection Ring	Rare	1500	Increases the HP restored when reviving a teammate by 37%.
-Promise Ring	Rare	4700	Increases the HP restored when reviving a teammate by 47%.
-Harvest Necklace	Rare	3800	Improves the effect of Healing Arts by 12%.
-Affection Necklace	Rare	9900	Improves the effect of Healing Arts by 17%.
-Holy Necklace	Rare	15600	Improves the effect of Healing Arts by 22%.
-Shell Cameo	Rare	1100	Increases HP restored to self (not using HP Potions) by 12%.
-Chivalric Medal	Rare	6200	Restores 3.2% HP when canceling an auto-attack with a Driver Art.
-Military Medal	Rare	11900	Restores 4.2% HP when canceling an auto-attack with a Driver Art.
-Round Table Medal	Rare	14300	Restores 5.2% HP when canceling an auto-attack with a Driver Art.
-Gauntlet	Rare	6200	Boosts recharge for Specials after canceling by 22%.
-Bio Gauntlet	Rare	11900	Boosts recharge for Specials after canceling by 32%.
-Nano-Metal Gauntlet	Rare	14300	Boosts recharge for Specials after canceling by 42%.
-Eyepatch	Rare	3200	Adds 22% to damage ratio after canceling an auto-attack.
-Leader's Eyepatch	Rare	8200	Adds 37% to damage ratio after canceling an auto-attack.
-Hi-Tech Eyepatch	Rare	13000	Adds 52% to damage ratio after canceling an auto-attack.
-Silver Earrings	Rare	4500	Fills Party Gauge on "Excellent" Specials. (Minor effect.)
-Crystal Earrings	Rare	10900	Fills Party Gauge on "Excellent" Specials. (Major effect.)
-Omega Drive	Rare	19500	Slightly fills the Party Gauge for each critical hit delivered.
-Sigma Drive	Rare	23800	Slightly fills the Party Gauge for each Driver Art used.
-Burst Symbol	Rare	10300	Increases attack power ratio at the start of a Chain Attack.
-Critical Symbol	Rare	14800	Increases critical hit rate during a Chain Attack by 52%.
-Recovery Symbol	Rare	8700	Heals 55% HP each time a Chain Attack is initiated.
-Infinity Symbol	Rare	16500	Slightly fills the Party Gauge at the end of each Chain Attack.
-Sword Attachment	Rare	10700	Increases attack power of Aegis Sword-class weapons by 27%.
-Scimitar Attachment	Rare	10700	Increases attack power of Catalyst Scimitar-class weapons by 27%.
-Ring Attachment	Rare	6900	Increases attack power of Twin Rings-class weapons by 27%.
-Shield Attachment	Rare	9800	Increases attack power of Drill Shield-class weapons by 27%.
-Arms Attachment	Rare	9800	Increases attack power of Mech Arms-class weapons by 27%.
-Saber Attachment	Rare	9800	Increases attack power of Variable Saber-class weapons by 27%.
-Whip Attachment	Rare	6900	Increases attack power of Whipsword-class weapons by 27%.
-Edge Attachment	Rare	6900	Increases attack power of Big Bang Edge-class weapons by 27%.
-Scythe Attachment	Rare	10700	Increases attack power of Dual Scythes-class weapons by 27%.
-Axe Attachment	Rare	1200	Increases attack power of Greataxe-class weapons by 27%.
-Lance Attachment	Rare	1200	Increases attack power of Megalance-class weapons by 27%.
-Cannon Attachment	Rare	1800	Increases attack power of Ether Cannon-class weapons by 27%.
-Hammer Attachment	Rare	2900	Increases attack power of Shield Hammer-class weapons by 27%.
-Katana Attachment	Rare	3600	Increases attack power of Chroma Katana-class weapons by 27%.
-Ball Attachment	Rare	3600	Increases attack power of Bitball-class weapons by 27%.
-Knuckle Attachment	Rare	5700	Increases attack power of Knuckle Claws-class weapons by 27%.
-Master Attachment	Rare	26000	Increases the attack power of all weapon classes by 12%.
-Cheer Treat	Rare	6600	Increases Affinity by 55% after winning a Special button challenge.
-Red Thread	Rare	1100	Extends the range of Driver-Blade Affinity by 110cm.
-Love Thread	Rare	5000	Extends the range of Driver-Blade Affinity by 160cm.
-Passion Thread	Rare	9500	Extends the range of Driver-Blade Affinity by 210cm.
-Activity Amulet	Rare	2900	Boosts the effect of HP Potions by 22%.
-Healing Amulet	Rare	6900	Boosts the effect of HP Potions by 32%.
-Rebirth Amulet	Rare	10700	Boosts the effect of HP Potions by 42%.
-Beta Scope	Rare	23800	Reduces enemy Break resist.
-Rush Hour	Rare	1400	Expands the window of opportunity for canceling by 60%.
-Appealing Lamp	Rare	3200	Adds 30% buffer time to combos if switching to a combo-requesting Blade.
-Overclocking Bangle	Rare	5700	Shortens cooldown time relative to the no. of Arts ready after a Blade Switch.
-Mint Potpourri	Rare	3200	Boosts taunt resistance by 65%.
-Lavender Potpourri	Rare	5700	Boosts taunt resistance by 95%.
-Priestess's Auspices	Rare	3200	Boosts Driver shackle resistance by 65%.
-Sage's Auspices	Rare	5700	Boosts Driver shackle resistance by 95%.
-Incense of Calm	Rare	5700	Increases resistance to Stench by 65%.
-Incense of Insight	Rare	10900	Increases resistance to Stench by 95%.
-Gear Vest	Legendary	5000	Boosts maximum HP by 22%.
-Jade Vest	Legendary	9600	Boosts maximum HP by 27%.
-Titanium Vest	Legendary	16200	Boosts maximum HP by 32%.
-Steam Belt	Legendary	5000	Boosts Strength by 22%.
-Silver Belt	Legendary	9600	Boosts Strength by 27%.
-Ceramic Belt	Legendary	16200	Boosts Strength by 32%.
-Bolt Hat	Legendary	5600	Boosts Ether by 22%.
-Pearl Hat	Legendary	9600	Boosts Ether by 27%.
-Fiber Hat	Legendary	16200	Boosts Ether by 32%.
-Rainbow Gloves	Legendary	7900	Boosts Dexterity by 22%.
-Hero Gloves	Legendary	13600	Boosts Dexterity by 27%.
-Carbon Gloves	Legendary	16200	Boosts Dexterity by 32%.
-Shell Shoes	Legendary	7900	Boosts Agility by 22%.
-Assassin Shoes	Legendary	13600	Boosts Agility by 27%.
-Ester Shoes	Legendary	16200	Boosts Agility by 32%.
-Nacre Choker	Legendary	5100	Boosts Luck by 22%.
-Goddess Choker	Legendary	9800	Boosts Luck by 27%.
-Comet Choker	Legendary	11700	Boosts Luck by 32%.
-Rigid Vest	Legendary	700	Increases maximum HP by 300.
-Infantry Vest	Legendary	2000	Increases maximum HP by 500.
-Muscle Belt	Legendary	700	Increases Strength by 22.
-Champion Belt	Legendary	2000	Increases Strength by 27.
-Fluffy Hat	Legendary	700	Increases Ether by 22.
-Fabulous Hat	Legendary	3200	Increases Ether by 27.
-Leather Gloves	Legendary	1400	Increases Dexterity by 22.
-Smithy Gloves	Legendary	4000	Increases Dexterity by 27.
-Wolf Shoes	Legendary	1400	Increases Agility by 12.
-Spring Shoes	Legendary	4000	Increases Agility by 17.
-Bunnit Choker	Legendary	1300	Increases Luck by 22.
-Gold Gear Choker	Legendary	3600	Increases Luck by 27.
-Garnet	Legendary	9400	Restores 5% HP of damage dealt after a successful auto-attack.
-Sapphire	Legendary	16300	Restores 7% HP of damage dealt after a successful auto-attack.
-Diamond	Legendary	19500	Restores 9% HP of damage dealt after a successful auto-attack.
-Classic Medal	Legendary	3600	Absorbs 12% of critical damage dealt as HP.
-Modern Medal	Legendary	6600	Absorbs 17% of critical damage dealt as HP.
-Avant-Garde Medal	Legendary	9500	Absorbs 22% of critical damage dealt as HP.
-Iron Headband	Legendary	3200	Increases critical damage by 30%.
-Ice Headband	Legendary	6200	Increases critical damage by 40%.
-Optical Headband	Legendary	10400	Increases critical damage by 50%.
-Moon Cube	Legendary	8500	Adds a 30% chance of attacking again after a successful auto-attack.
-Star Cube	Legendary	16300	Adds a 45% chance of attacking again after a successful auto-attack.
-Galaxy Cube	Legendary	19500	Adds a 60% chance of attacking again after a successful auto-attack.
-Mechanized Greaves	Legendary	4000	Increases damage dealt to toppled enemies by 60%.
-Crystal Greaves	Legendary	7700	Increases damage dealt to toppled enemies by 85%.
-Graphite Greaves	Legendary	11900	Increases damage dealt to toppled enemies by 110%.
-Swordfighting Banner	Legendary	4500	Increases damage dealt to launched enemies by 60%.
-Goddess Banner	Legendary	7700	Increases damage dealt to launched enemies by 85%.
-Ancient Banner	Legendary	11900	Increases damage dealt to launched enemies by 110%.
-Spiked Pauldrons	Legendary	5000	Increases smash damage by 60%.
-Hero Pauldrons	Legendary	8700	Increases smash damage by 85%.
-Jet Pauldrons	Legendary	10400	Increases smash damage by 110%.
-Apprentice Vambraces	Legendary	4900	Increases damage dealt to higher-level enemies by 30%.
-Boxer Vambraces	Legendary	11900	Increases damage dealt to higher-level enemies by 45%.
-Hero Vambraces	Legendary	14300	Increases damage dealt to higher-level enemies by 60%.
-Dark Orb	Legendary	3500	Increases damage dealt when an ally is incapacitated by 60%.
-Eraser Orb	Legendary	9100	Increases damage dealt when an ally is incapacitated by 110%.
-Bloody Orb	Legendary	13100	Increases damage dealt when an ally is incapacitated by 160%.
-Chrome Scarf	Legendary	4500	Extends Break duration by 19%.
-Unicorn Scarf	Legendary	8200	Extends Break duration by 34%.
-Quantum Scarf	Legendary	11900	Extends Break duration by 49%.
-White Belt	Legendary	7100	Extends Topple duration by 17%.
-Black Belt	Legendary	13600	Extends Topple duration by 22%.
-Platinum Belt	Legendary	16200	Extends Topple duration by 27%.
-Soldier Ring	Legendary	6700	Extends Launch duration by 17%.
-Berserk Ring	Legendary	12400	Extends Launch duration by 22%.
-Tyrant Ring	Legendary	17800	Extends Launch duration by 27%.
-Attack Stone	Legendary	900	Increases auto-attack damage by 30%.
-Assault Stone	Legendary	5400	Increases auto-attack damage by 50%.
-Break Stone	Legendary	13000	Increases auto-attack damage by 70%.
-World Tree Drop	Legendary	19500	Increases damage dealt per Blade Switch by 12% (max: 25%).
-Male Loincloth	Legendary	10900	Increases damage dealt while Blade is the opposite gender by 60%.
-Charming Swimsuit	Legendary	16300	Increases damage dealt while Blade is the opposite gender by 60%.
-Alpha Scope	Legendary	7900	Reduces enemy Topple resist.
-Gamma Scope	Legendary	16500	Reduces enemy Launch resist.
-Beast Hood	Legendary	2100	Increases aggro reduction by 22%.
-Camo Hood	Legendary	6700	Increases aggro reduction by 27%.
-Skeleton Hood	Legendary	12400	Increases aggro reduction by 32%.
-Nopon Mask	Legendary	2800	Increases aggro every second. (Minor effect.)
-Metal Nopon Mask	Legendary	9000	Increases aggro every second. (Medium effect.)
-Gold Nopon Mask	Legendary	16500	Increases aggro every second. (Major effect.)
-Colorful Feather	Legendary	1600	Start each battle with aggro. (Minor effect.)
-Silver Feather	Legendary	5000	Start each battle with aggro. (Medium effect.)
-Phantom Feather	Legendary	8700	Start each battle with aggro. (Major effect.)
-Grandarbor Ward	Legendary	1200	Increases the HP restored when being revived by 29%.
-Spirit Tree Ward	Legendary	4700	Increases the HP restored when being revived by 39%.
-World Tree Ward	Legendary	8900	Increases the HP restored when being revived by 49%.
-Friendship Ring	Legendary	600	Increases the HP restored when reviving a teammate by 29%.
-Affection Ring	Legendary	1500	Increases the HP restored when reviving a teammate by 39%.
-Promise Ring	Legendary	4700	Increases the HP restored when reviving a teammate by 49%.
-Harvest Necklace	Legendary	3800	Improves the effect of Healing Arts by 14%.
-Affection Necklace	Legendary	9900	Improves the effect of Healing Arts by 19%.
-Holy Necklace	Legendary	15600	Improves the effect of Healing Arts by 24%.
-Shell Cameo	Legendary	1100	Increases HP restored to self (not using HP Potions) by 14%.
-Chivalric Medal	Legendary	6200	Restores 3.5% HP when canceling an auto-attack with a Driver Art.
-Military Medal	Legendary	11900	Restores 4.5% HP when canceling an auto-attack with a Driver Art.
-Round Table Medal	Legendary	14300	Restores 5.5% HP when canceling an auto-attack with a Driver Art.
-Gauntlet	Legendary	6200	Boosts recharge for Specials after canceling by 24%.
-Bio Gauntlet	Legendary	11900	Boosts recharge for Specials after canceling by 34%.
-Nano-Metal Gauntlet	Legendary	14300	Boosts recharge for Specials after canceling by 44%.
-Eyepatch	Legendary	3200	Adds 24% to damage ratio after canceling an auto-attack.
-Leader's Eyepatch	Legendary	8200	Adds 39% to damage ratio after canceling an auto-attack.
-Hi-Tech Eyepatch	Legendary	13000	Adds 54% to damage ratio after canceling an auto-attack.
-Silver Earrings	Legendary	4500	Fills Party Gauge on "Excellent" Specials. (Minor effect.)
-Crystal Earrings	Legendary	10900	Fills Party Gauge on "Excellent" Specials. (Major effect.)
-Omega Drive	Legendary	19500	Slightly fills the Party Gauge for each critical hit delivered.
-Sigma Drive	Legendary	23800	Slightly fills the Party Gauge for each Driver Art used.
-Burst Symbol	Legendary	10300	Increases attack power ratio at the start of a Chain Attack.
-Critical Symbol	Legendary	14800	Increases critical hit rate during a Chain Attack by 54%.
-Recovery Symbol	Legendary	8700	Heals 60% HP each time a Chain Attack is initiated.
-Infinity Symbol	Legendary	16500	Slightly fills the Party Gauge at the end of each Chain Attack.
-Sword Attachment	Legendary	10700	Increases attack power of Aegis Sword-class weapons by 29%.
-Scimitar Attachment	Legendary	10700	Increases attack power of Catalyst Scimitar-class weapons by 29%.
-Ring Attachment	Legendary	6900	Increases attack power of Twin Rings-class weapons by 29%.
-Shield Attachment	Legendary	9800	Increases attack power of Drill Shield-class weapons by 29%.
-Arms Attachment	Legendary	9800	Increases attack power of Mech Arms-class weapons by 29%.
-Saber Attachment	Legendary	9800	Increases attack power of Variable Saber-class weapons by 29%.
-Whip Attachment	Legendary	6900	Increases attack power of Whipsword-class weapons by 29%.
-Edge Attachment	Legendary	6900	Increases attack power of Big Bang Edge-class weapons by 29%.
-Scythe Attachment	Legendary	10700	Increases attack power of Dual Scythes-class weapons by 29%.
-Axe Attachment	Legendary	1200	Increases attack power of Greataxe-class weapons by 29%.
-Lance Attachment	Legendary	1200	Increases attack power of Megalance-class weapons by 29%.
-Cannon Attachment	Legendary	1800	Increases attack power of Ether Cannon-class weapons by 29%.
-Hammer Attachment	Legendary	2900	Increases attack power of Shield Hammer-class weapons by 29%.
-Katana Attachment	Legendary	3600	Increases attack power of Chroma Katana-class weapons by 29%.
-Ball Attachment	Legendary	3600	Increases attack power of Bitball-class weapons by 29%.
-Knuckle Attachment	Legendary	5700	Increases attack power of Knuckle Claws-class weapons by 29%.
-Master Attachment	Legendary	26000	Increases the attack power of all weapon classes by 14%.
-Cheer Treat	Legendary	6600	Increases Affinity by 60% after winning a Special button challenge.
-Red Thread	Legendary	1100	Extends the range of Driver-Blade Affinity by 120cm.
-Love Thread	Legendary	5000	Extends the range of Driver-Blade Affinity by 170cm.
-Passion Thread	Legendary	9500	Extends the range of Driver-Blade Affinity by 220cm.
-Activity Amulet	Legendary	2900	Boosts the effect of HP Potions by 24%.
-Healing Amulet	Legendary	6900	Boosts the effect of HP Potions by 34%.
-Rebirth Amulet	Legendary	10700	Boosts the effect of HP Potions by 44%.
-Beta Scope	Legendary	23800	Reduces enemy Break resist.
-Rush Hour	Legendary	1400	Expands the window of opportunity for canceling by 70%.
-Appealing Lamp	Legendary	3200	Adds 35% buffer time to combos if switching to a combo-requesting Blade.
-Overclocking Bangle	Legendary	5700	Shortens cooldown time relative to the no. of Arts ready after a Blade Switch.
-Mint Potpourri	Legendary	3200	Boosts taunt resistance by 70%.
-Lavender Potpourri	Legendary	5700	Boosts taunt resistance by 100%.
-Priestess's Auspices	Legendary	3200	Boosts Driver shackle resistance by 70%.
-Sage's Auspices	Legendary	5700	Boosts Driver shackle resistance by 100%.
-Incense of Calm	Legendary	5700	Increases resistance to Stench by 70%.
-Incense of Insight	Legendary	10900	Increases resistance to Stench by 100%.
-Nopon Doll	Common	10900	When a Driver is incapacitated, 50% of aggro is retained.
-Avian Totem Carving	Legendary	1400	Restores 5.5% HP of damage dealt after a successful auto-attack.
+COPY xeno2.accessories (name, rarity, price, caption) FROM stdin;
+Abyss Vest	Rare	5000	667
+Gear Vest	Common	5000	655
+Jade Vest	Common	9600	658
+Titanium Vest	Common	16200	661
+Steam Belt	Common	5000	668
+Silver Belt	Common	9600	671
+Ceramic Belt	Common	16200	674
+Bolt Hat	Common	5600	680
+Pearl Hat	Common	9600	683
+Fiber Hat	Common	16200	686
+Rainbow Gloves	Common	7900	692
+Hero Gloves	Common	13600	695
+Carbon Gloves	Common	16200	698
+Shell Shoes	Common	7900	704
+Assassin Shoes	Common	13600	707
+Ester Shoes	Common	16200	710
+Nacre Choker	Common	5100	716
+Goddess Choker	Common	9800	719
+Comet Choker	Common	11700	722
+Rigid Vest	Common	700	728
+Infantry Vest	Common	2000	731
+Muscle Belt	Common	700	734
+Champion Belt	Common	2000	737
+Fluffy Hat	Common	700	740
+Fabulous Hat	Common	3200	743
+Leather Gloves	Common	1400	746
+Smithy Gloves	Common	4000	749
+Wolf Shoes	Common	1400	752
+Spring Shoes	Common	4000	755
+Bunnit Choker	Common	1300	758
+Gold Gear Choker	Common	3600	761
+Garnet	Common	9400	764
+Sapphire	Common	16300	767
+Diamond	Common	19500	770
+Classic Medal	Common	3600	776
+Modern Medal	Common	6600	779
+Avant-Garde Medal	Common	9500	782
+Iron Headband	Common	3200	785
+Ice Headband	Common	6200	788
+Optical Headband	Common	10400	791
+Moon Cube	Common	8500	797
+Star Cube	Common	16300	800
+Galaxy Cube	Common	19500	803
+Mechanized Greaves	Common	4000	809
+Crystal Greaves	Common	7700	812
+Graphite Greaves	Common	11900	815
+Swordfighting Banner	Common	4500	821
+Goddess Banner	Common	7700	824
+Ancient Banner	Common	11900	827
+Spiked Pauldrons	Common	5000	833
+Hero Pauldrons	Common	8700	836
+Jet Pauldrons	Common	10400	839
+Apprentice Vambraces	Common	4900	845
+Boxer Vambraces	Common	11900	848
+Hero Vambraces	Common	14300	851
+Dark Orb	Common	3500	857
+Eraser Orb	Common	9100	860
+Bloody Orb	Common	13100	863
+Chrome Scarf	Common	4500	869
+Unicorn Scarf	Common	8200	872
+Quantum Scarf	Common	11900	875
+White Belt	Common	7100	881
+Black Belt	Common	13600	884
+Platinum Belt	Common	16200	887
+Soldier Ring	Common	6700	893
+Berserk Ring	Common	12400	896
+Tyrant Ring	Common	17800	899
+Attack Stone	Common	900	905
+Assault Stone	Common	5400	908
+Break Stone	Common	13000	911
+World Tree Drop	Common	19500	917
+Male Loincloth	Common	10900	920
+Charming Swimsuit	Common	16300	920
+Alpha Scope	Common	7900	926
+Gamma Scope	Common	16500	929
+Beast Hood	Common	2100	932
+Camo Hood	Common	6700	935
+Skeleton Hood	Common	12400	938
+Nopon Mask	Common	2800	944
+Metal Nopon Mask	Common	9000	947
+Gold Nopon Mask	Common	16500	950
+Colorful Feather	Common	1600	956
+Silver Feather	Common	5000	959
+Phantom Feather	Common	8700	962
+Grandarbor Ward	Common	1200	968
+Spirit Tree Ward	Common	4700	971
+World Tree Ward	Common	8900	974
+Friendship Ring	Common	600	977
+Affection Ring	Common	1500	980
+Promise Ring	Common	4700	983
+Harvest Necklace	Common	3800	986
+Affection Necklace	Common	9900	989
+Holy Necklace	Common	15600	992
+Shell Cameo	Common	1100	998
+Chivalric Medal	Common	6200	1004
+Military Medal	Common	11900	1007
+Round Table Medal	Common	14300	1010
+Gauntlet	Common	6200	1016
+Bio Gauntlet	Common	11900	1019
+Nano-Metal Gauntlet	Common	14300	1022
+Eyepatch	Common	3200	1028
+Leader's Eyepatch	Common	8200	1031
+Hi-Tech Eyepatch	Common	13000	1034
+Revival Pod	Legendary	29700	1040
+0-Battle Course	Common	39700	1041
+0-Battle Course+	Common	23800	1044
+Alphabet Course	Common	63000	1047
+Alphabet Course+	Common	26000	1050
+Silver Earrings	Common	4500	1053
+Crystal Earrings	Common	10900	1056
+Omega Drive	Common	19500	1059
+Sigma Drive	Common	23800	1062
+Burst Symbol	Common	10300	1065
+Critical Symbol	Common	14800	1068
+Recovery Symbol	Common	8700	1071
+Resurrection Symbol	Legendary	11900	1074
+Infinity Symbol	Common	16500	1075
+Auto-Balancer	Legendary	26000	1078
+Sword Attachment	Common	10700	1079
+Scimitar Attachment	Common	10700	1082
+Ring Attachment	Common	6900	1085
+Shield Attachment	Common	9800	1088
+Arms Attachment	Common	9800	1091
+Saber Attachment	Common	9800	1094
+Whip Attachment	Common	6900	1097
+Edge Attachment	Common	6900	1100
+Scythe Attachment	Common	10700	1103
+Axe Attachment	Common	1200	1106
+Lance Attachment	Common	1200	1109
+Cannon Attachment	Common	1800	1112
+Hammer Attachment	Common	2900	1115
+Katana Attachment	Common	3600	1118
+Ball Attachment	Common	3600	1121
+Knuckle Attachment	Common	5700	1124
+Master Attachment	Common	26000	1127
+Memory Rocket	Legendary	1300	1130
+Cheer Treat	Common	6600	1131
+Red Thread	Common	1100	1134
+Love Thread	Common	5000	1137
+Passion Thread	Common	9500	1140
+Activity Amulet	Common	2900	1143
+Healing Amulet	Common	6900	1146
+Rebirth Amulet	Common	10700	1149
+Beta Scope	Common	23800	1152
+Rush Hour	Common	1400	1158
+Appealing Lamp	Common	3200	1161
+Overclocking Bangle	Common	5700	1164
+Mint Potpourri	Common	3200	1167
+Lavender Potpourri	Common	5700	1170
+Priestess's Auspices	Common	3200	1173
+Sage's Auspices	Common	5700	1176
+Incense of Calm	Common	5700	1180
+Incense of Insight	Common	10900	1183
+Gear Vest	Rare	5000	656
+Jade Vest	Rare	9600	659
+Titanium Vest	Rare	16200	662
+Steam Belt	Rare	5000	669
+Silver Belt	Rare	9600	672
+Ceramic Belt	Rare	16200	675
+Bolt Hat	Rare	5600	681
+Pearl Hat	Rare	9600	684
+Fiber Hat	Rare	16200	687
+Rainbow Gloves	Rare	7900	693
+Hero Gloves	Rare	13600	696
+Carbon Gloves	Rare	16200	699
+Shell Shoes	Rare	7900	705
+Assassin Shoes	Rare	13600	708
+Ester Shoes	Rare	16200	711
+Nacre Choker	Rare	5100	717
+Goddess Choker	Rare	9800	720
+Comet Choker	Rare	11700	723
+Rigid Vest	Rare	700	729
+Infantry Vest	Rare	2000	732
+Muscle Belt	Rare	700	735
+Champion Belt	Rare	2000	738
+Fluffy Hat	Rare	700	741
+Fabulous Hat	Rare	3200	744
+Leather Gloves	Rare	1400	747
+Smithy Gloves	Rare	4000	750
+Wolf Shoes	Rare	1400	753
+Spring Shoes	Rare	4000	756
+Bunnit Choker	Rare	1300	759
+Gold Gear Choker	Rare	3600	762
+Garnet	Rare	9400	765
+Sapphire	Rare	16300	768
+Diamond	Rare	19500	771
+Classic Medal	Rare	3600	777
+Modern Medal	Rare	6600	780
+Avant-Garde Medal	Rare	9500	783
+Iron Headband	Rare	3200	786
+Ice Headband	Rare	6200	789
+Optical Headband	Rare	10400	792
+Moon Cube	Rare	8500	798
+Star Cube	Rare	16300	801
+Galaxy Cube	Rare	19500	804
+Mechanized Greaves	Rare	4000	810
+Crystal Greaves	Rare	7700	813
+Graphite Greaves	Rare	11900	816
+Swordfighting Banner	Rare	4500	822
+Goddess Banner	Rare	7700	825
+Ancient Banner	Rare	11900	828
+Spiked Pauldrons	Rare	5000	834
+Hero Pauldrons	Rare	8700	837
+Jet Pauldrons	Rare	10400	840
+Apprentice Vambraces	Rare	4900	846
+Boxer Vambraces	Rare	11900	849
+Hero Vambraces	Rare	14300	852
+Dark Orb	Rare	3500	858
+Eraser Orb	Rare	9100	861
+Bloody Orb	Rare	13100	864
+Chrome Scarf	Rare	4500	870
+Unicorn Scarf	Rare	8200	873
+Quantum Scarf	Rare	11900	876
+White Belt	Rare	7100	882
+Black Belt	Rare	13600	885
+Platinum Belt	Rare	16200	888
+Soldier Ring	Rare	6700	894
+Berserk Ring	Rare	12400	897
+Tyrant Ring	Rare	17800	900
+Attack Stone	Rare	900	906
+Assault Stone	Rare	5400	909
+Break Stone	Rare	13000	912
+World Tree Drop	Rare	19500	918
+Male Loincloth	Rare	10900	921
+Charming Swimsuit	Rare	16300	921
+Alpha Scope	Rare	7900	927
+Gamma Scope	Rare	16500	930
+Beast Hood	Rare	2100	933
+Camo Hood	Rare	6700	936
+Skeleton Hood	Rare	12400	939
+Nopon Mask	Rare	2800	945
+Metal Nopon Mask	Rare	9000	948
+Gold Nopon Mask	Rare	16500	951
+Colorful Feather	Rare	1600	957
+Silver Feather	Rare	5000	960
+Phantom Feather	Rare	8700	963
+Grandarbor Ward	Rare	1200	969
+Spirit Tree Ward	Rare	4700	972
+World Tree Ward	Rare	8900	975
+Friendship Ring	Rare	600	978
+Affection Ring	Rare	1500	981
+Promise Ring	Rare	4700	984
+Harvest Necklace	Rare	3800	987
+Affection Necklace	Rare	9900	990
+Holy Necklace	Rare	15600	993
+Shell Cameo	Rare	1100	999
+Chivalric Medal	Rare	6200	1005
+Military Medal	Rare	11900	1008
+Round Table Medal	Rare	14300	1011
+Gauntlet	Rare	6200	1017
+Bio Gauntlet	Rare	11900	1020
+Nano-Metal Gauntlet	Rare	14300	1023
+Eyepatch	Rare	3200	1029
+Leader's Eyepatch	Rare	8200	1032
+Hi-Tech Eyepatch	Rare	13000	1035
+Silver Earrings	Rare	4500	1054
+Crystal Earrings	Rare	10900	1057
+Omega Drive	Rare	19500	1060
+Sigma Drive	Rare	23800	1063
+Burst Symbol	Rare	10300	1066
+Critical Symbol	Rare	14800	1069
+Recovery Symbol	Rare	8700	1072
+Infinity Symbol	Rare	16500	1076
+Sword Attachment	Rare	10700	1080
+Scimitar Attachment	Rare	10700	1083
+Ring Attachment	Rare	6900	1086
+Shield Attachment	Rare	9800	1089
+Arms Attachment	Rare	9800	1092
+Saber Attachment	Rare	9800	1095
+Whip Attachment	Rare	6900	1098
+Edge Attachment	Rare	6900	1101
+Scythe Attachment	Rare	10700	1104
+Axe Attachment	Rare	1200	1107
+Lance Attachment	Rare	1200	1110
+Cannon Attachment	Rare	1800	1113
+Hammer Attachment	Rare	2900	1116
+Katana Attachment	Rare	3600	1119
+Ball Attachment	Rare	3600	1122
+Knuckle Attachment	Rare	5700	1125
+Master Attachment	Rare	26000	1128
+Cheer Treat	Rare	6600	1132
+Red Thread	Rare	1100	1135
+Love Thread	Rare	5000	1138
+Passion Thread	Rare	9500	1141
+Activity Amulet	Rare	2900	1144
+Healing Amulet	Rare	6900	1147
+Rebirth Amulet	Rare	10700	1150
+Beta Scope	Rare	23800	1153
+Rush Hour	Rare	1400	1159
+Appealing Lamp	Rare	3200	1162
+Overclocking Bangle	Rare	5700	1165
+Mint Potpourri	Rare	3200	1168
+Lavender Potpourri	Rare	5700	1171
+Priestess's Auspices	Rare	3200	1174
+Sage's Auspices	Rare	5700	1177
+Incense of Calm	Rare	5700	1181
+Incense of Insight	Rare	10900	1184
+Gear Vest	Legendary	5000	657
+Jade Vest	Legendary	9600	660
+Titanium Vest	Legendary	16200	663
+Steam Belt	Legendary	5000	670
+Silver Belt	Legendary	9600	673
+Ceramic Belt	Legendary	16200	676
+Bolt Hat	Legendary	5600	682
+Pearl Hat	Legendary	9600	685
+Fiber Hat	Legendary	16200	688
+Rainbow Gloves	Legendary	7900	694
+Hero Gloves	Legendary	13600	697
+Carbon Gloves	Legendary	16200	700
+Shell Shoes	Legendary	7900	706
+Assassin Shoes	Legendary	13600	709
+Ester Shoes	Legendary	16200	712
+Nacre Choker	Legendary	5100	718
+Goddess Choker	Legendary	9800	721
+Comet Choker	Legendary	11700	724
+Rigid Vest	Legendary	700	730
+Infantry Vest	Legendary	2000	733
+Muscle Belt	Legendary	700	736
+Champion Belt	Legendary	2000	739
+Fluffy Hat	Legendary	700	742
+Fabulous Hat	Legendary	3200	745
+Leather Gloves	Legendary	1400	748
+Smithy Gloves	Legendary	4000	751
+Wolf Shoes	Legendary	1400	754
+Spring Shoes	Legendary	4000	757
+Bunnit Choker	Legendary	1300	760
+Gold Gear Choker	Legendary	3600	763
+Garnet	Legendary	9400	766
+Sapphire	Legendary	16300	769
+Diamond	Legendary	19500	772
+Classic Medal	Legendary	3600	778
+Modern Medal	Legendary	6600	781
+Avant-Garde Medal	Legendary	9500	784
+Iron Headband	Legendary	3200	787
+Ice Headband	Legendary	6200	790
+Optical Headband	Legendary	10400	793
+Moon Cube	Legendary	8500	799
+Star Cube	Legendary	16300	802
+Galaxy Cube	Legendary	19500	805
+Mechanized Greaves	Legendary	4000	811
+Crystal Greaves	Legendary	7700	814
+Graphite Greaves	Legendary	11900	817
+Swordfighting Banner	Legendary	4500	823
+Goddess Banner	Legendary	7700	826
+Ancient Banner	Legendary	11900	829
+Spiked Pauldrons	Legendary	5000	835
+Hero Pauldrons	Legendary	8700	838
+Jet Pauldrons	Legendary	10400	841
+Apprentice Vambraces	Legendary	4900	847
+Boxer Vambraces	Legendary	11900	850
+Hero Vambraces	Legendary	14300	853
+Dark Orb	Legendary	3500	859
+Eraser Orb	Legendary	9100	862
+Bloody Orb	Legendary	13100	865
+Chrome Scarf	Legendary	4500	871
+Unicorn Scarf	Legendary	8200	874
+Quantum Scarf	Legendary	11900	877
+White Belt	Legendary	7100	883
+Black Belt	Legendary	13600	886
+Platinum Belt	Legendary	16200	889
+Soldier Ring	Legendary	6700	895
+Berserk Ring	Legendary	12400	898
+Tyrant Ring	Legendary	17800	901
+Attack Stone	Legendary	900	907
+Assault Stone	Legendary	5400	910
+Break Stone	Legendary	13000	913
+World Tree Drop	Legendary	19500	919
+Male Loincloth	Legendary	10900	922
+Charming Swimsuit	Legendary	16300	922
+Alpha Scope	Legendary	7900	928
+Gamma Scope	Legendary	16500	931
+Beast Hood	Legendary	2100	934
+Camo Hood	Legendary	6700	937
+Skeleton Hood	Legendary	12400	940
+Nopon Mask	Legendary	2800	946
+Metal Nopon Mask	Legendary	9000	949
+Gold Nopon Mask	Legendary	16500	952
+Colorful Feather	Legendary	1600	958
+Silver Feather	Legendary	5000	961
+Phantom Feather	Legendary	8700	964
+Grandarbor Ward	Legendary	1200	970
+Spirit Tree Ward	Legendary	4700	973
+World Tree Ward	Legendary	8900	976
+Friendship Ring	Legendary	600	979
+Affection Ring	Legendary	1500	982
+Promise Ring	Legendary	4700	985
+Harvest Necklace	Legendary	3800	988
+Affection Necklace	Legendary	9900	991
+Holy Necklace	Legendary	15600	994
+Shell Cameo	Legendary	1100	1000
+Chivalric Medal	Legendary	6200	1006
+Military Medal	Legendary	11900	1009
+Round Table Medal	Legendary	14300	1012
+Gauntlet	Legendary	6200	1018
+Bio Gauntlet	Legendary	11900	1021
+Nano-Metal Gauntlet	Legendary	14300	1024
+Eyepatch	Legendary	3200	1030
+Leader's Eyepatch	Legendary	8200	1033
+Hi-Tech Eyepatch	Legendary	13000	1036
+Silver Earrings	Legendary	4500	1055
+Crystal Earrings	Legendary	10900	1058
+Omega Drive	Legendary	19500	1061
+Sigma Drive	Legendary	23800	1064
+Burst Symbol	Legendary	10300	1067
+Critical Symbol	Legendary	14800	1070
+Recovery Symbol	Legendary	8700	1073
+Infinity Symbol	Legendary	16500	1077
+Sword Attachment	Legendary	10700	1081
+Scimitar Attachment	Legendary	10700	1084
+Ring Attachment	Legendary	6900	1087
+Shield Attachment	Legendary	9800	1090
+Arms Attachment	Legendary	9800	1093
+Saber Attachment	Legendary	9800	1096
+Whip Attachment	Legendary	6900	1099
+Edge Attachment	Legendary	6900	1102
+Scythe Attachment	Legendary	10700	1105
+Axe Attachment	Legendary	1200	1108
+Lance Attachment	Legendary	1200	1111
+Cannon Attachment	Legendary	1800	1114
+Hammer Attachment	Legendary	2900	1117
+Katana Attachment	Legendary	3600	1120
+Ball Attachment	Legendary	3600	1123
+Knuckle Attachment	Legendary	5700	1126
+Master Attachment	Legendary	26000	1129
+Cheer Treat	Legendary	6600	1133
+Red Thread	Legendary	1100	1136
+Love Thread	Legendary	5000	1139
+Passion Thread	Legendary	9500	1142
+Activity Amulet	Legendary	2900	1145
+Healing Amulet	Legendary	6900	1148
+Rebirth Amulet	Legendary	10700	1151
+Beta Scope	Legendary	23800	1154
+Rush Hour	Legendary	1400	1160
+Appealing Lamp	Legendary	3200	1163
+Overclocking Bangle	Legendary	5700	1166
+Mint Potpourri	Legendary	3200	1169
+Lavender Potpourri	Legendary	5700	1172
+Priestess's Auspices	Legendary	3200	1175
+Sage's Auspices	Legendary	5700	1178
+Incense of Calm	Legendary	5700	1182
+Incense of Insight	Legendary	10900	1185
+Nopon Doll	Common	10900	1186
+Avian Totem Carving	Legendary	1400	3432
 \.
 
 
@@ -37495,6 +37495,14 @@ ALTER TABLE ONLY xenox.items
 
 ALTER TABLE ONLY xenox.skills
     ADD CONSTRAINT skills_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: accessories_caption_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.accessories
+    ADD CONSTRAINT accessories_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance(id);
 
 
 --
