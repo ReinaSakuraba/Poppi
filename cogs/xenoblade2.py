@@ -394,7 +394,7 @@ class Xenoblade2:
         embed = discord.Embed(title=records[0]['name'])
 
         for row in records:
-            embed.add_field(name=row['rarity'], value=row['caption'])
+            embed.add_field(name=row['rarity'], value=row['caption'], inline=False)
 
         await ctx.send(embed=embed)
 
