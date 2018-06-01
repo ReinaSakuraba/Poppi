@@ -54,6 +54,10 @@ CREATE FUNCTION xeno2.format_caption(caption text, param smallint, param_one num
     LANGUAGE plpgsql
     AS $$
 BEGIN
+    IF caption='Increases attack power ratio by [ML:Enhance kind=Param1 ]% at the start of a Chain Attack.' THEN
+        param_one := param_one*100;
+    END IF;
+
     RETURN REPLACE(REPLACE(REPLACE(caption, '[ML:Enhance ]', param::text), '[ML:Enhance kind=Param1 ]', param_one::float::text), '[ML:Enhance kind=Param2 ]', param_two::float::text);
 END; $$;
 
@@ -6952,7 +6956,7 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 205	Reduces ice damage received by [ML:Enhance kind=Param2 ]%.
 206	Reduces light damage received by [ML:Enhance kind=Param2 ]%.
 207	Reduces dark damage received by [ML:Enhance kind=Param2 ]%.
-208	Increases attack power ratio at the start of a Chain Attack.
+208	Increases attack power ratio by [ML:Enhance kind=Param1 ]% at the start of a Chain Attack.
 209	Increases damage dealt to beasts by [ML:Enhance kind=Param2 ]%.
 210	Increases damage dealt to insects by [ML:Enhance kind=Param2 ]%.
 211	Increases damage dealt to aerial creatures by [ML:Enhance kind=Param2 ]%.
