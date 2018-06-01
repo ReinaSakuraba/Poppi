@@ -284,7 +284,7 @@ ALTER TABLE xeno2.pouch_items OWNER TO poppi;
 CREATE TABLE xeno2.skills (
     name text NOT NULL,
     driver text NOT NULL,
-    description text NOT NULL,
+    caption smallint NOT NULL,
     chart text NOT NULL,
     sp smallint NOT NULL
 );
@@ -7863,187 +7863,187 @@ Love Source	Drinks	6340	Legendary	None	10	60	3000
 -- Data for Name: skills; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
-COPY xeno2.skills (name, driver, description, chart, sp) FROM stdin;
-Muscle Builder	Rex	Increases Strength by 20.	Normal	375
-Picture of Health	Rex	Increases HP restored to self (not using HP Potions) by 10%.	Normal	1500
-Rapid Attack III	Rex	Allows use of the Driver Art assigned to B at the start of battle.	Normal	5000
-Reflex Response	Rex	Increases Agility by 20.	Normal	250
-Arts Chain	Rex	Lets you use a Driver Art after canceling a Driver Art.	Normal	3000
-Lively Lad	Rex	Increases maximum HP by 200.	Normal	2000
-Rapid Attack I	Rex	Allows use of the Driver Art assigned to X at the start of battle.	Normal	750
-Combo Enhance	Rex	Adds 20% to damage ratio after canceling an auto-attack.	Normal	2000
-Ultimate Relay	Rex	Increases attack power ratio at the start of a Chain Attack.	Normal	4000
-Ether Studies	Rex	Increases Ether by 20.	Normal	625
-Rapid Attack II	Rex	Allows use of the Driver Art assigned to Y at the start of battle.	Normal	2500
-Topple Champ	Rex	Extends Topple duration by 15%.	Normal	6000
-Rescue	Rex	Increases the HP restored when reviving a teammate by 15%.	Normal	500
-Gramps' Blessing	Rex	Increases Luck by 20.	Normal	1000
-Drive to Win	Rex	Slightly fills the Party Gauge for each critical hit delivered.	Normal	3000
-Further Ether Studies	Rex	Boosts Ether by 10%.	NG+	7500
-Inherit Muscle	Rex	Boosts Strength by 10%.	NG+	7500
-Solidarity	Rex	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.	NG+	15000
-Shadow Strike	Rex	Increases damage dealt by a surprise attack by 50%.	NG+	3750
-Herbalism	Rex	Boosts the effect of HP Potions by 20%.	NG+	12500
-Relentless Spirit	Rex	50% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).	NG+	30000
-Cheer Up	Rex	Increases Affinity by 25% after winning a Special button challenge.	NG+	2500
-Eyes on the Prize	Rex	Boosts Agility by 10%.	NG+	5000
-Heart Recharge	Rex	Boosts recharge for Specials after canceling by 20%.	NG+	25000
-Prediction	Rex	Increases Dexterity by 20.	NG+	5000
-Combat Boost	Rex	Restores 3% HP when canceling an auto-attack with a Driver Art.	NG+	15000
-Child of Steel	Rex	Boosts maximum HP by 10%.	NG+	20000
-Fight or Flight	Rex	Reduces enemy Break resist.	NG+	6250
-Pre-empt Moves	Rex	Boosts Dexterity by 10%.	NG+	10000
-Gramps' Auspices	Rex	Boosts Luck by 10%.	NG+	10000
-Feral Awakening I	Nia	Allows use of the Driver Art assigned to X at the start of battle.	Normal	750
-Herb Synthesis	Nia	Boosts the effect of HP Potions by 20%.	Normal	1000
-Feral Awakening III	Nia	Allows use of the Driver Art assigned to B at the start of battle.	Normal	5000
-Soothing Hand	Nia	Increases the HP restored when reviving a teammate by 15%.	Normal	250
-Big Cat	Nia	Increases maximum HP by 200.	Normal	2000
-Hard Hitter	Nia	Extends Break duration by 20%.	Normal	6000
-Catgirl	Nia	Increases Agility by 20.	Normal	625
-Mutual Happiness	Nia	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.	Normal	1500
-Bestial Pursuit	Nia	Adds 20% to damage ratio after canceling an auto-attack.	Normal	4000
-Ether Talent	Nia	Increases Ether by 20.	Normal	375
-Tooth and Claw	Nia	Lets you use a Driver Art after canceling a Driver Art.	Normal	3000
-Natural Selection	Nia	Increases HP restored to self (not using HP Potions) by 10%.	Normal	3000
-Kinetic Vision	Nia	Increases Dexterity by 20.	Normal	500
-Feral Awakening II	Nia	Allows use of the Driver Art assigned to Y at the start of battle.	Normal	2500
-Panther Pounce	Nia	Increases damage dealt by a surprise attack by 50%.	Normal	2000
-Chance Recovery	Nia	Heals 25% HP each time a Chain Attack is initiated.	NG+	2500
-Transmit Power	Nia	Boosts recharge for Specials after canceling by 20%.	NG+	15000
-Adrenaline	Nia	Restores 3% HP when canceling an auto-attack with a Driver Art.	NG+	15000
-Tiger's Eye	Nia	Boosts Dexterity by 10%.	NG+	3750
-Cheer Leader	Nia	Increases Affinity by 25% after winning a Special button challenge.	NG+	12500
-Road to Victory	Nia	Slightly fills the Party Gauge for each critical hit delivered.	NG+	25000
-Focused Technique	Nia	Reduces enemy Break resist.	NG+	7500
-Inner Strength	Nia	Boosts Ether by 10%.	NG+	5000
-Sore Loser	Nia	50% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).	NG+	30000
-Lithe Strength	Nia	Increases Strength by 20.	NG+	6250
-Lady of Luck	Nia	Boosts Luck by 10%.	NG+	7500
-Bear Knuckles	Nia	Boosts Strength by 10%.	NG+	20000
-Lucky Cat	Nia	Increases Luck by 20.	NG+	5000
-Wild Life	Nia	Boosts maximum HP by 10%.	NG+	10000
-Tigergirl	Nia	Boosts Agility by 10%.	NG+	10000
-Mach Prep I	Zeke	Allows use of the Driver Art assigned to X at the start of battle.	Normal	500
-Critical Pro	Zeke	Increases critical damage by 10%.	Normal	1500
-Histrionic Hero	Zeke	Increases critical hit rate during a Chain Attack by 10%.	Normal	3000
-Brawn over Brain	Zeke	Increases Strength by 20.	Normal	250
-Camaraderie	Zeke	Boosts recharge for Specials after canceling by 20%.	Normal	2500
-Mach Prep III	Zeke	Allows use of the Driver Art assigned to B at the start of battle.	Normal	5000
-Lucky Duck	Zeke	Increases Luck by 20.	Normal	750
-Herculean Strength	Zeke	Boosts Strength by 10%.	Normal	1000
-Tantal Courage	Zeke	Increases the HP restored when reviving a teammate by 15%.	Normal	2000
-Adamant Heart	Zeke	Increases maximum HP by 200.	Normal	375
-Move Chaining	Zeke	Lets you use a Driver Art after canceling a Driver Art.	Normal	3000
-Ether Prodigy	Zeke	Increases Ether by 20.	Normal	4000
-Flash Step	Zeke	Increases Agility by 20.	Normal	625
-Mach Prep II	Zeke	Allows use of the Driver Art assigned to Y at the start of battle.	Normal	2000
-Air Extender	Zeke	Extends Launch duration by 15%.	Normal	6000
-Ether Autarch	Zeke	Boosts Ether by 10%.	NG+	7500
-A Hero's Work	Zeke	Slightly fills the Party Gauge for each critical hit delivered.	NG+	15000
-Second Wind	Zeke	50% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).	NG+	25000
-Natural Healing	Zeke	Increases HP restored to self (not using HP Potions) by 10%.	NG+	5000
-Obsidian Slash	Zeke	Increases damage dealt by a surprise attack by 50%.	NG+	7500
-Raucous Cheer	Zeke	Increases Affinity by 25% after winning a Special button challenge.	NG+	10000
-Heart of Gold	Zeke	Boosts maximum HP by 10%.	NG+	3750
-Hotshot Hit	Zeke	Increases Dexterity by 20.	NG+	5000
-Unleash Shining Justice	Zeke	At max Affinity w/ Pandoria: R and + to awaken for a time (once per battle).	NG+	30000
-Professional Hit	Zeke	Boosts Dexterity by 10%.	NG+	6250
-Fleetfoot Flit	Zeke	Boosts Agility by 10%.	NG+	10000
-Medicinal Maestro	Zeke	Boosts the effect of HP Potions by 20%.	NG+	20000
-Fiendish Pursuit	Zeke	Adds 20% to damage ratio after canceling an auto-attack.	NG+	2500
-Zeal Heal	Zeke	Restores 3% HP when canceling an auto-attack with a Driver Art.	NG+	12500
-As One	Zeke	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.	NG+	15000
-Placebo	Tora	Boosts the effect of HP Potions by 20%.	Normal	625
-Super Spongy Bod	Tora	Boosts maximum HP by 10%.	Normal	1000
-Tiger Muscles	Tora	Increases Strength by 20.	Normal	5000
-Raring to Go I	Tora	Allows use of the Driver Art assigned to X at the start of battle.	Normal	750
-Double-Luckypon	Tora	Boosts Luck by 10%.	Normal	1500
-Crazy With Hands	Tora	Boosts Dexterity by 10%.	Normal	2000
-Good With Hands	Tora	Increases Dexterity by 20.	Normal	375
-Health Bomb	Tora	Increases HP restored to self (not using HP Potions) by 10%.	Normal	2000
-Rapture	Tora	Slightly fills the Party Gauge at the end of each Chain Attack.	Normal	6000
-Spongy Bod	Tora	Increases maximum HP by 200.	Normal	250
-Raring to Go II	Tora	Allows use of the Driver Art assigned to Y at the start of battle.	Normal	2500
-Nopon Chain Arts	Tora	Lets you use a Driver Art after canceling a Driver Art.	Normal	4000
-Luckypon	Tora	Increases Luck by 20.	Normal	500
-Grin and Bear It	Tora	50% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).	Normal	3000
-Raring to Go III	Tora	Allows use of the Driver Art assigned to B at the start of battle.	Normal	3000
-Keen Recovery	Tora	Restores 3% HP when canceling an auto-attack with a Driver Art.	NG+	6250
-Team Mascot	Tora	Increases Affinity by 25% after winning a Special button challenge.	NG+	5000
-Poppi Care	Tora	Boosts recharge for Specials after canceling by 20%.	NG+	20000
-Hidden Talent	Tora	Increases Ether by 20.	NG+	7500
-Nopon Topple Arts	Tora	Extends Topple duration by 15%.	NG+	15000
-Inherit Protein	Tora	Boosts Strength by 10%.	NG+	15000
-Forced Initiative	Tora	Increases damage dealt by a surprise attack by 50%.	NG+	3750
-Super Restless Foot	Tora	Boosts Agility by 10%.	NG+	7500
-Burgeoning Talent...?	Tora	Boosts Ether by 10%.	NG+	30000
-Nopon Rescue Service	Tora	Increases the HP restored when reviving a teammate by 15%.	NG+	5000
-Look Over There!	Tora	Reduces enemy Break resist.	NG+	12500
-Nopon Chain Boost	Tora	Adds 20% to damage ratio after canceling an auto-attack.	NG+	25000
-Restless Foot	Tora	Increases Agility by 20.	NG+	2500
-Hope for the Best	Tora	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.	NG+	10000
-Mood Maker	Tora	Slightly fills the Party Gauge for each critical hit delivered.	NG+	10000
-Burly Chain	Vandham	Lets you use a Driver Art after canceling a Driver Art.	Normal	750
-Ether Power	Vandham	Increases Ether by 20.	Normal	2500
-Serious Recovery	Vandham	Boosts the effect of HP Potions by 20%.	Normal	3000
-Tough Nut	Vandham	Increases maximum HP by 200.	Normal	250
-Elite Muscles	Vandham	Boosts Strength by 10%.	Normal	1000
-Muscle Accelerator III	Vandham	Allows use of the Driver Art assigned to B at the start of battle.	Normal	4000
-10,000 Push-Ups	Vandham	Increases Strength by 20.	Normal	375
-Beefcake Flurry	Vandham	Adds 20% to damage ratio after canceling an auto-attack.	Normal	2000
-Last Man Standing	Vandham	50% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).	Normal	6000
-Veteran	Vandham	Adds a 10% chance of attacking again after a successful auto-attack.	Normal	625
-Muscle Accelerator II	Vandham	Allows use of the Driver Art assigned to Y at the start of battle.	Normal	3000
-Big Strong Hands	Vandham	Increases the HP restored when reviving a teammate by 15%.	Normal	2000
-Muscle Accelerator I	Vandham	Allows use of the Driver Art assigned to X at the start of battle.	Normal	500
-Guardian	Vandham	Boosts maximum HP by 10%.	Normal	1500
-Ether Muscle	Vandham	Boosts Ether by 10%.	Normal	5000
-Power Lift	Vandham	Extends Launch duration by 15%.	NG+	7500
-World's Strongest Man	Vandham	Boosts Strength by 10%.	NG+	5000
-Buff Buff	Vandham	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.	NG+	15000
-Quick Muscles	Vandham	Increases Agility by 20.	NG+	3750
-Honed to Perfection	Vandham	Boosts Dexterity by 10%.	NG+	10000
-Higher Powers	Vandham	Boosts Luck by 10%.	NG+	30000
-Dependable Guy	Vandham	Slightly fills the Party Gauge for each critical hit delivered.	NG+	2500
-Recuperation	Vandham	Increases HP restored to self (not using HP Potions) by 10%.	NG+	12500
-Physical Fitness	Vandham	Restores 3% HP when canceling an auto-attack with a Driver Art.	NG+	25000
-Anything for a Mate	Vandham	Boosts recharge for Specials after canceling by 20%.	NG+	6250
-Pumped Dodge	Vandham	Boosts Agility by 10%.	NG+	7500
-Booming Aid	Vandham	Increases Affinity by 25% after winning a Special button challenge.	NG+	10000
-Knack for Battle	Vandham	Increases Dexterity by 20.	NG+	5000
-Thank the Heavens	Vandham	Increases Luck by 20.	NG+	15000
-Greatest Work	Vandham	Slightly fills the Party Gauge at the end of each Chain Attack.	NG+	20000
-Arts Relay	Mòrag	Lets you use a Driver Art after canceling a Driver Art.	Normal	750
-Vigilance	Mòrag	Increases Dexterity by 20.	Normal	1000
-Imperial First Aid	Mòrag	Increases the HP restored when reviving a teammate by 15%.	Normal	3000
-Imperial Footwork	Mòrag	Increases Agility by 20.	Normal	250
-Alchemy	Mòrag	Boosts the effect of HP Potions by 20%.	Normal	1500
-Initiative III	Mòrag	Allows use of the Driver Art assigned to B at the start of battle.	Normal	6000
-Etherology	Mòrag	Increases Ether by 20.	Normal	500
-Initiative II	Mòrag	Allows use of the Driver Art assigned to Y at the start of battle.	Normal	2500
-Physical Discipline	Mòrag	Increases Strength by 20.	Normal	4000
-Basic Discipline	Mòrag	Increases auto-attack damage by 20%.	Normal	375
-Martial Prowess	Mòrag	Restores 3% HP when canceling an auto-attack with a Driver Art.	Normal	3000
-Imperial Pursuit	Mòrag	Adds 20% to damage ratio after canceling an auto-attack.	Normal	5000
-Initiative I	Mòrag	Allows use of the Driver Art assigned to X at the start of battle.	Normal	625
-Charmed Life	Mòrag	Increases Luck by 20.	Normal	2000
-Ultimate Footwork	Mòrag	Boosts Agility by 10%.	Normal	2000
-Inspiration	Mòrag	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.	NG+	3750
-Ultimate Etherology	Mòrag	Boosts Ether by 10%.	NG+	10000
-Imperial Pride	Mòrag	50% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).	NG+	30000
-Silent Bloodshed	Mòrag	Increases damage dealt by a surprise attack by 50%.	NG+	2500
-Life's Flow	Mòrag	Increases HP restored to self (not using HP Potions) by 10%.	NG+	5000
-Legendary Skill	Mòrag	Slightly fills the Party Gauge for each critical hit delivered.	NG+	10000
-Instant Chain	Mòrag	Adds a 10% chance of attacking again after a successful auto-attack.	NG+	7500
-Cool Focus	Mòrag	Boosts Dexterity by 10%.	NG+	7500
-Golden Opportunity	Mòrag	Increases attack power ratio at the start of a Chain Attack.	NG+	20000
-Blade Alliance	Mòrag	Boosts recharge for Specials after canceling by 20%.	NG+	6250
-Warrior's Resolve	Mòrag	Boosts maximum HP by 10%.	NG+	15000
-Battle Stance	Mòrag	Boosts Strength by 10%.	NG+	25000
-Survival Training	Mòrag	Increases maximum HP by 200.	NG+	5000
-Divination	Mòrag	Boosts Luck by 10%.	NG+	12500
-Cheer Master	Mòrag	Increases Affinity by 25% after winning a Special button challenge.	NG+	15000
+COPY xeno2.skills (name, driver, caption, chart, sp) FROM stdin;
+Muscle Builder	Rex	1240	Normal	375
+Picture of Health	Rex	1231	Normal	1500
+Rapid Attack III	Rex	1230	Normal	5000
+Reflex Response	Rex	1229	Normal	250
+Arts Chain	Rex	1242	Normal	3000
+Lively Lad	Rex	1232	Normal	2000
+Rapid Attack I	Rex	1239	Normal	750
+Combo Enhance	Rex	1241	Normal	2000
+Ultimate Relay	Rex	1253	Normal	4000
+Ether Studies	Rex	1249	Normal	625
+Rapid Attack II	Rex	1252	Normal	2500
+Topple Champ	Rex	1233	Normal	6000
+Rescue	Rex	1250	Normal	500
+Gramps' Blessing	Rex	1251	Normal	1000
+Drive to Win	Rex	1243	Normal	3000
+Further Ether Studies	Rex	1254	NG+	7500
+Inherit Muscle	Rex	1246	NG+	7500
+Solidarity	Rex	1257	NG+	15000
+Shadow Strike	Rex	1244	NG+	3750
+Herbalism	Rex	1256	NG+	12500
+Relentless Spirit	Rex	1238	NG+	30000
+Cheer Up	Rex	1255	NG+	2500
+Eyes on the Prize	Rex	1235	NG+	5000
+Heart Recharge	Rex	1248	NG+	25000
+Prediction	Rex	1245	NG+	5000
+Combat Boost	Rex	1236	NG+	15000
+Child of Steel	Rex	1237	NG+	20000
+Fight or Flight	Rex	1234	NG+	6250
+Pre-empt Moves	Rex	1247	NG+	10000
+Gramps' Auspices	Rex	1258	NG+	10000
+Feral Awakening I	Nia	1283	Normal	750
+Herb Synthesis	Nia	1281	Normal	1000
+Feral Awakening III	Nia	1261	Normal	5000
+Soothing Hand	Nia	1279	Normal	250
+Big Cat	Nia	1260	Normal	2000
+Hard Hitter	Nia	1263	Normal	6000
+Catgirl	Nia	1259	Normal	625
+Mutual Happiness	Nia	1282	Normal	1500
+Bestial Pursuit	Nia	1273	Normal	4000
+Ether Talent	Nia	1280	Normal	375
+Tooth and Claw	Nia	1271	Normal	3000
+Natural Selection	Nia	1262	Normal	3000
+Kinetic Vision	Nia	1269	Normal	500
+Feral Awakening II	Nia	1270	Normal	2500
+Panther Pounce	Nia	1272	Normal	2000
+Chance Recovery	Nia	1284	NG+	2500
+Transmit Power	Nia	1276	NG+	15000
+Adrenaline	Nia	1268	NG+	15000
+Tiger's Eye	Nia	1275	NG+	3750
+Cheer Leader	Nia	1286	NG+	12500
+Road to Victory	Nia	1278	NG+	25000
+Focused Technique	Nia	1264	NG+	7500
+Inner Strength	Nia	1287	NG+	5000
+Sore Loser	Nia	1267	NG+	30000
+Lithe Strength	Nia	1274	NG+	6250
+Lady of Luck	Nia	1288	NG+	7500
+Bear Knuckles	Nia	1277	NG+	20000
+Lucky Cat	Nia	1285	NG+	5000
+Wild Life	Nia	1265	NG+	10000
+Tigergirl	Nia	1266	NG+	10000
+Mach Prep I	Zeke	1389	Normal	500
+Critical Pro	Zeke	1382	Normal	1500
+Histrionic Hero	Zeke	1403	Normal	3000
+Brawn over Brain	Zeke	1390	Normal	250
+Camaraderie	Zeke	1391	Normal	2500
+Mach Prep III	Zeke	1402	Normal	5000
+Lucky Duck	Zeke	1399	Normal	750
+Herculean Strength	Zeke	1392	Normal	1000
+Tantal Courage	Zeke	1401	Normal	2000
+Adamant Heart	Zeke	1379	Normal	375
+Move Chaining	Zeke	1393	Normal	3000
+Ether Prodigy	Zeke	1400	Normal	4000
+Flash Step	Zeke	1380	Normal	625
+Mach Prep II	Zeke	1381	Normal	2000
+Air Extender	Zeke	1383	Normal	6000
+Ether Autarch	Zeke	1404	NG+	7500
+A Hero's Work	Zeke	1398	NG+	15000
+Second Wind	Zeke	1388	NG+	25000
+Natural Healing	Zeke	1384	NG+	5000
+Obsidian Slash	Zeke	1397	NG+	7500
+Raucous Cheer	Zeke	1407	NG+	10000
+Heart of Gold	Zeke	1385	NG+	3750
+Hotshot Hit	Zeke	1396	NG+	5000
+Unleash Shining Justice	Zeke	1406	NG+	30000
+Professional Hit	Zeke	1395	NG+	6250
+Fleetfoot Flit	Zeke	1387	NG+	10000
+Medicinal Maestro	Zeke	1405	NG+	20000
+Fiendish Pursuit	Zeke	1394	NG+	2500
+Zeal Heal	Zeke	1386	NG+	12500
+As One	Zeke	1408	NG+	15000
+Placebo	Tora	1310	Normal	625
+Super Spongy Bod	Tora	1292	Normal	1000
+Tiger Muscles	Tora	1301	Normal	5000
+Raring to Go I	Tora	1289	Normal	750
+Double-Luckypon	Tora	1312	Normal	1500
+Crazy With Hands	Tora	1303	Normal	2000
+Good With Hands	Tora	1299	Normal	375
+Health Bomb	Tora	1291	Normal	2000
+Rapture	Tora	1313	Normal	6000
+Spongy Bod	Tora	1290	Normal	250
+Raring to Go II	Tora	1311	Normal	2500
+Nopon Chain Arts	Tora	1302	Normal	4000
+Luckypon	Tora	1309	Normal	500
+Grin and Bear It	Tora	1293	Normal	3000
+Raring to Go III	Tora	1300	Normal	3000
+Keen Recovery	Tora	1294	NG+	6250
+Team Mascot	Tora	1317	NG+	5000
+Poppi Care	Tora	1307	NG+	20000
+Hidden Talent	Tora	1315	NG+	7500
+Nopon Topple Arts	Tora	1296	NG+	15000
+Inherit Protein	Tora	1306	NG+	15000
+Forced Initiative	Tora	1304	NG+	3750
+Super Restless Foot	Tora	1298	NG+	7500
+Burgeoning Talent...?	Tora	1318	NG+	30000
+Nopon Rescue Service	Tora	1314	NG+	5000
+Look Over There!	Tora	1297	NG+	12500
+Nopon Chain Boost	Tora	1305	NG+	25000
+Restless Foot	Tora	1295	NG+	2500
+Hope for the Best	Tora	1316	NG+	10000
+Mood Maker	Tora	1308	NG+	10000
+Burly Chain	Vandham	1330	Normal	750
+Ether Power	Vandham	1339	Normal	2500
+Serious Recovery	Vandham	1343	Normal	3000
+Tough Nut	Vandham	1319	Normal	250
+Elite Muscles	Vandham	1333	Normal	1000
+Muscle Accelerator III	Vandham	1340	Normal	4000
+10,000 Push-Ups	Vandham	1329	Normal	375
+Beefcake Flurry	Vandham	1332	Normal	2000
+Last Man Standing	Vandham	1323	Normal	6000
+Veteran	Vandham	1320	Normal	625
+Muscle Accelerator II	Vandham	1322	Normal	3000
+Big Strong Hands	Vandham	1341	Normal	2000
+Muscle Accelerator I	Vandham	1331	Normal	500
+Guardian	Vandham	1321	Normal	1500
+Ether Muscle	Vandham	1342	Normal	5000
+Power Lift	Vandham	1324	NG+	7500
+World's Strongest Man	Vandham	1338	NG+	5000
+Buff Buff	Vandham	1346	NG+	15000
+Quick Muscles	Vandham	1325	NG+	3750
+Honed to Perfection	Vandham	1337	NG+	10000
+Higher Powers	Vandham	1347	NG+	30000
+Dependable Guy	Vandham	1336	NG+	2500
+Recuperation	Vandham	1326	NG+	12500
+Physical Fitness	Vandham	1328	NG+	25000
+Anything for a Mate	Vandham	1335	NG+	6250
+Pumped Dodge	Vandham	1327	NG+	7500
+Booming Aid	Vandham	1345	NG+	10000
+Knack for Battle	Vandham	1334	NG+	5000
+Thank the Heavens	Vandham	1344	NG+	15000
+Greatest Work	Vandham	1348	NG+	20000
+Arts Relay	Mòrag	1359	Normal	750
+Vigilance	Mòrag	1361	Normal	1000
+Imperial First Aid	Mòrag	1372	Normal	3000
+Imperial Footwork	Mòrag	1349	Normal	250
+Alchemy	Mòrag	1370	Normal	1500
+Initiative III	Mòrag	1373	Normal	6000
+Etherology	Mòrag	1369	Normal	500
+Initiative II	Mòrag	1360	Normal	2500
+Physical Discipline	Mòrag	1362	Normal	4000
+Basic Discipline	Mòrag	1350	Normal	375
+Martial Prowess	Mòrag	1352	Normal	3000
+Imperial Pursuit	Mòrag	1363	Normal	5000
+Initiative I	Mòrag	1351	Normal	625
+Charmed Life	Mòrag	1371	Normal	2000
+Ultimate Footwork	Mòrag	1353	Normal	2000
+Inspiration	Mòrag	1374	NG+	3750
+Ultimate Etherology	Mòrag	1375	NG+	10000
+Imperial Pride	Mòrag	1358	NG+	30000
+Silent Bloodshed	Mòrag	1364	NG+	2500
+Life's Flow	Mòrag	1357	NG+	5000
+Legendary Skill	Mòrag	1368	NG+	10000
+Instant Chain	Mòrag	1354	NG+	7500
+Cool Focus	Mòrag	1366	NG+	7500
+Golden Opportunity	Mòrag	1378	NG+	20000
+Blade Alliance	Mòrag	1365	NG+	6250
+Warrior's Resolve	Mòrag	1356	NG+	15000
+Battle Stance	Mòrag	1367	NG+	25000
+Survival Training	Mòrag	1355	NG+	5000
+Divination	Mòrag	1376	NG+	12500
+Cheer Master	Mòrag	1377	NG+	15000
 \.
 
 
@@ -37626,6 +37626,14 @@ ALTER TABLE ONLY xeno2.pouch_item_effects
 
 ALTER TABLE ONLY xeno2.pouch_item_effects
     ADD CONSTRAINT pouch_item_effects_pouch_item_fkey FOREIGN KEY (pouch_item) REFERENCES xeno2.pouch_items(name);
+
+
+--
+-- Name: skills_caption_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.skills
+    ADD CONSTRAINT skills_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance(id);
 
 
 --
