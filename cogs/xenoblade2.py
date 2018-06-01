@@ -162,10 +162,14 @@ class Xenoblade2:
                 SELECT
                     name,
                     driver,
-                    description,
+                    xeno2.format_caption(enhance_captions.caption, param, param_one, param_two),
                     chart,
                     sp
                 FROM xeno2.skills
+                JOIN xeno2.enhance
+                ON skills.caption=enhance.id
+                JOIN xeno2.enhance_captions
+                ON enhance.caption=enhance_captions.id
                 WHERE LOWER(name)=$1;
                 """
 
