@@ -6854,7 +6854,7 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 103	Boosts WP received from defeating enemies by [ML:Enhance kind=Param1 ]%.
 104	Increases the strength of elemental effects user has inflicted by [ML:Enhance kind=Param1 ]%.
 105	Increases the duration of elemental effects user has inflicted by [ML:Enhance kind=Param1 ]%.
-106	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.
+106	Fills Party Gauge by [ML:Enhance kind=Param1 ] on "Excellent" Specials
 107	Fills Party Gauge by [ML:Enhance kind=Param1 ] on "Excellent" Specials.
 108	Fills Party Gauge by [ML:Enhance kind=Param1 ] on "Excellent" Specials.
 109	Fills the Party Gauge by [ML:Enhance kind=Param1 ] for each critical hit delivered.
