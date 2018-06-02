@@ -49,17 +49,17 @@ class Gold:
 
         original_amount = amount
 
-        try:
-            await self.remove_gold(ctx.author.id, amount)
-        except RuntimeError as e:
-            return await ctx.send(e)
-
         choices = ['rock', 'paper', 'scissors']
 
         try:
             player_choice = choices.index(choice.lower())
         except ValueError:
             return await ctx.send('Invalid choice')
+
+        try:
+            await self.remove_gold(ctx.author.id, amount)
+        except RuntimeError as e:
+            return await ctx.send(e)
 
         cpu_choice = random.choice((0, 1, 2))
 
