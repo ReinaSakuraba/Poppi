@@ -24,6 +24,9 @@ class Gold:
         if amount < 0:
             return await ctx.send('Amount can not be less than 0.')
 
+        if member == ctx.author:
+            return await ctx.send('You can not give gold to yourself.')
+
         try:
             await self.remove_gold(ctx.author.id, amount)
         except RuntimeError as e:
