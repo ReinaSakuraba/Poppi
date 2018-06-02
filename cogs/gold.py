@@ -72,7 +72,7 @@ class Gold:
             msg += 'It\'s a tie!'
         else:
             amount *= 2
-            msg += f'You won {amount - original_amount} gold!'
+            msg += f'You won {original_amount} gold!'
 
         await self.add_gold(ctx.author.id, amount)
         await ctx.send(msg)
