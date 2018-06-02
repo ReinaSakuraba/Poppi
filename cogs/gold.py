@@ -1,3 +1,5 @@
+import random
+
 import discord
 from discord.ext import commands
 
@@ -35,6 +37,45 @@ class Gold:
         await self.add_gold(member.id, amount)
 
         await ctx.send(f'{ctx.author.display_name} gave {member.display_name} {amount} gold!')
+
+    @utils.group(invoke_without_command=True)
+    async def bet(self, ctx):
+        """Bets gold."""
+        pass
+
+    @bet.command(name='rps')
+    async def bet_rps(self, ctx, amount: int, choice: str):
+        """Bets gold on a Rock Paper Scissors game."""
+
+        original_amount = amount
+
+        try:
+            await self.remove_gold(ctx.author.id, amount)
+        except RuntimeError as e:
+            return await ctx.send(e)
+
+        choices = ['rock', 'paper', 'scissors']
+
+        try:
+            player_choice = choices.index(choice.lower())
+        except ValueError:
+            return await ctx.send('Invalid choice')
+
+        cpu_choice = random.choice((0, 1, 2))
+
+        msg = f'I chose {choices[cpu_choice].title()}! '
+
+        if (player_choice + 1) % 3 == cpu_choice:
+            amount = 0
+            msg += f'You lost {original_amount} gold!'
+        elif player_choice == cpu_choice:
+            msg += 'It\'s a tie!'
+        else:
+            amount *= 2
+            msg += f'You won {amount - original_amount} gold!'
+
+        await self.add_gold(ctx.author.id, amount)
+        await ctx.send(msg)
 
     async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
