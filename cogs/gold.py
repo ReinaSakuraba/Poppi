@@ -54,7 +54,7 @@ class Gold:
         try:
             player_choice = choices.index(choice.lower())
         except ValueError:
-            return await ctx.send('Invalid choice')
+            return await ctx.send('Invalid choice.')
 
         try:
             await self.remove_gold(ctx.author.id, amount)
@@ -90,7 +90,7 @@ class Gold:
                 ) VALUES ($1, $2)
                 ON CONFLICT (user_id)
                 DO UPDATE
-                SET amount = bank.amount + $2
+                SET amount = bank.amount + $2;
                 """
         await self.pool.execute(query, user_id, amount)
 
