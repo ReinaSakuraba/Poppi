@@ -13,7 +13,7 @@ class Gold:
         """Shows how much gold a user has."""
 
         member = member or ctx.author
-        gold = await self.get_gold(ctx.author.id)
+        gold = await self.get_gold(member.id)
 
         await ctx.send(f'{member.display_name} has {gold} gold!')
 
