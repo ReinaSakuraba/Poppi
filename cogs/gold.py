@@ -1,23 +1,41 @@
 import discord
 from discord.ext import commands
 
+import utils
+
 
 class Gold:
     def __init__(self, pool):
         self.pool = pool
 
-    @commands.command()
+    @utils.group(invoke_without_command=True)
     async def gold(self, ctx, *, member: discord.Member = None):
         """Shows how much gold a user has."""
 
         member = member or ctx.author
-        gold = await self.get_gold(ctx, ctx.author.id)
+        gold = await self.get_gold(ctx.author.id)
 
         await ctx.send(f'{member.display_name} has {gold} gold!')
 
-    async def get_gold(self, ctx, user_id):
+    @gold.command(name='give')
+    async def gold_give(self, ctx, amount: int, *, member: discord.Member):
+        """Gives gold to a user."""
+
+        if amount < 0:
+            return await ctx.send('Amount can not be less than 0.')
+
+        try:
+            await self.remove_gold(ctx.author.id, amount)
+        except RuntimeError as e:
+            return await ctx.send(e)
+
+        await self.add_gold(member.id, amount)
+
+        await ctx.send(f'{ctx.author.display_name} gave {member.display_name} {amount} gold!')
+
+    async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
-        gold = await ctx.pool.fetchval(query, ctx.author.id) or 0
+        gold = await self.pool.fetchval(query, user_id) or 0
         return gold
 
     async def add_gold(self, user_id, amount):
@@ -30,6 +48,15 @@ class Gold:
                 DO UPDATE
                 SET amount = bank.amount + $2
                 """
+        await self.pool.execute(query, user_id, amount)
+
+    async def remove_gold(self, user_id, amount):
+        gold = await self.get_gold(user_id)
+
+        if amount > gold:
+            raise RuntimeError('Amount is over current gold.')
+
+        query = "UPDATE bank SET amount = amount - $2 WHERE user_id=$1;"
         await self.pool.execute(query, user_id, amount)                
 
     async def on_message(self, message):
