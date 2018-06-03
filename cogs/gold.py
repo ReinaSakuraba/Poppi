@@ -174,6 +174,38 @@ class Gold:
         except Exception as e:
             await ctx.send(e)
 
+
+    @shop.command(name='buy')
+    async def shop_buy(self, ctx, *, item):
+        """Buys an item from the shop."""
+
+        query = "SELECT item, price FROM shop WHERE LOWER(item)=$1;"
+        record = await ctx.pool.fetchrow(query, item.lower())
+
+        if record is None:
+            return await ctx.send('Item with that name was not found.')
+
+        item, price = record
+
+        try:
+            await self.remove_gold(ctx.author.id, price)
+        except RuntimeError as e:
+            return await ctx.send('You do not have enough gold to buy this item.')
+
+        query = """
+                INSERT INTO inventory (
+                    user_id,
+                    item,
+                    amount
+                ) VALUES ($1, $2, $3)
+                ON CONFLICT (user_id, item)
+                DO UPDATE
+                SET amount = inventory.amount + $3;
+                """
+        await ctx.pool.execute(query, ctx.author.id, item, 1)
+
+        await ctx.send(f'Successfully bought {item}!')
+
     async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
         gold = await self.pool.fetchval(query, user_id) or 0
