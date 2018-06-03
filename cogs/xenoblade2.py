@@ -1,3 +1,5 @@
+import math
+
 import discord
 from discord.ext import commands
 
@@ -539,6 +541,44 @@ class Xenoblade2:
     async def xc2class_error(self, ctx: utils.Context, error: Exception):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing class name.')
+
+    @commands.command()
+    async def xc2pull(self, ctx, blade: str, luck: int, idea_level: int, core: str = 'Common'):
+        """Shows chances for pulling a blade in Xenoblade Chronicles 2."""
+
+        cores = {
+            'legendary': 3,
+            'rare': 1.5,
+            'common': 1
+        }
+
+        try:
+            core_multiplier = cores[core.lower()]
+        except KeyError:
+            return await ctx.send('Invalid core.')
+
+        luck_multiplier = max(math.sqrt(luck) * 0.01 * 1.3 + 0.95, 1)
+        idea_multiplier = 1 + 0.05 * idea_level
+
+        query = """
+                SELECT
+                    seed,
+                    (probability * ROUND($2::numeric * $3 * $4, 2))::float || '%'
+                FROM xeno2.blade_chances
+                WHERE LOWER(blade)=$1;
+                """
+
+        results = await ctx.pool.fetch(query, blade.lower(), core_multiplier, luck_multiplier, idea_multiplier)
+
+        if not results:
+            return await ctx.send('This is not a pullable Blade.')
+
+        table = utils.TabularData()
+        table.set_columns(('Seed', 'Probability'))
+        table.add_rows(list(r.values()) for r in results)
+        render = table.render()
+
+        await ctx.send(f'```\n{render}\n```')
 
     async def show_possibilities(self, ctx: utils.Context, table_name: str, name: str):
         query = f"""
