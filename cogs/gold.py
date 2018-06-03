@@ -161,6 +161,19 @@ class Gold:
         await self.add_gold(ctx.author.id, amount)
         await ctx.send(msg)
 
+    @utils.group(invoke_without_command=True)
+    async def shop(self, ctx):
+        """Shows current items in the shop."""
+
+        query = "SELECT item, price || 'G' FROM shop;"
+        items = await ctx.pool.fetch(query)
+
+        try:
+            paginator = utils.FieldEmbedPaginator(ctx, entries=items)
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
+
     async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
         gold = await self.pool.fetchval(query, user_id) or 0
