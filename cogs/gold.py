@@ -77,6 +77,45 @@ class Gold:
         await self.add_gold(ctx.author.id, amount)
         await ctx.send(msg)
 
+    @bet.command(name='flip')
+    async def bet_flip(self, ctx, amount: int, choice: str):
+        """Bets gold on a coin flip."""
+
+        original_amount = amount
+
+        choices = {
+            'heads': 'heads',
+            'head': 'heads',
+            'h': 'heads',
+            'tails': 'tails',
+            'tail': 'tails',
+            't': 'tails'
+        }
+
+        try:
+            player_choice = choices[choice.lower()]
+        except KeyError:
+            return await ctx.send('Invalid choice.')
+
+        try:
+            await self.remove_gold(ctx.author.id, amount)
+        except RuntimeError as e:
+            return await ctx.send(e)
+
+        cpu_choice = random.choice(('heads', 'tails'))
+
+        if player_choice == cpu_choice:
+            amount *= 2
+            result = 'won'
+        else:
+            amount = 0
+            result = 'lost'
+
+        msg = f'The coin landed on {cpu_choice}! You {result} {original_amount} gold!'
+
+        await self.add_gold(ctx.author.id, amount)
+        await ctx.send(msg)
+
     async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
         gold = await self.pool.fetchval(query, user_id) or 0
