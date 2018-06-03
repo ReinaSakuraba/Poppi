@@ -319,6 +319,25 @@ class Gold:
 
         await ctx.send(msg)
 
+    @commands.command()
+    async def blades(self, ctx, *, member: discord.Member = None):
+        """Shows a user's current Rare Blades."""
+
+        member = member or ctx.author
+
+        query = """
+                SELECT
+                    STRING_AGG(blade, E'\n')
+                FROM pulled_blades
+                WHERE user_id=$1
+                AND common IS FALSE;
+                """
+        blades = await ctx.pool.fetchval(query, member.id)
+        if blades is None:
+            return await ctx.send(f'{member.display_name} has no Rare Blades.')
+
+        await ctx.send(blades)
+
     async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
         gold = await self.pool.fetchval(query, user_id) or 0
