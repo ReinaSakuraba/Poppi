@@ -225,6 +225,94 @@ class Gold:
         except Exception as e:
             await ctx.send(e)
 
+    @commands.command()
+    async def pull(self, ctx, *, core: str):
+        """Pulls a blade with a Core Crystal."""
+
+        cores = {
+            'common core crystal': 'Common Core Crystal',
+            'common core': 'Common Core Crystal',
+            'common': 'Common Core Crystal',
+            'rare core crystal': 'Rare Core Crystal',
+            'rare core': 'Rare Core Crystal',
+            'rare': 'Rare Core Crystal',
+            'legendary core crystal': 'Legendary Core Crystal',
+            'legendary core': 'Legendary Core Crystal',
+            'legendary': 'Legendary Core Crystal'
+        }
+
+        try:
+            core = cores[core.lower()]
+        except KeyError:
+            return await ctx.send('Invalid Core.')
+
+        query = "SELECT amount FROM inventory WHERE item=$1 AND user_id=$2"
+        amount = await ctx.pool.fetchval(query, core, ctx.author.id)
+
+        if not amount:
+            return await ctx.send('You do not have that Core Crystal.')
+
+        query = """
+                SELECT
+                    ARRAY_AGG(blade),
+                    ARRAY_AGG(probability)
+                FROM xeno2.blade_chances
+                WHERE seed=$1
+                AND blade NOT IN ('Roc', 'Wulfric', 'Theory', 'Praxis', 'Sheba', 'Vess', 'Aegaeon', 'Herald', 'Kasandra')
+                AND blade NOT IN (
+                    SELECT blade
+                    FROM pulled_blades
+                    WHERE user_id=$2
+                    AND common IS FALSE
+                );
+                """
+        seed = (ctx.author.id >> 22) % 5  + 1
+        blades, weights = await ctx.pool.fetchrow(query, seed, ctx.author.id)
+
+        core_multipliers = {
+            'Common Core Crystal': 1,
+            'Rare Core Crystal': 1.5,
+            'Legendary Core Crystal': 3
+        }
+
+        rare_chance = sum(weights) * core_multipliers[core]
+        rand = random.random() * 100
+
+        if rand < rare_chance:
+            name = random.choices(blades, weights=map(float, weights))[0]
+            common = False
+            msg = f'You pulled {name}.'
+        else:
+            query = """
+                    SELECT name
+                    FROM xeno2.common_blade_names
+                    WHERE name NOT IN (
+                        SELECT blade
+                        FROM pulled_blades
+                        WHERE user_id=$1
+                        AND common IS TRUE
+                    )
+                    ORDER BY RANDOM()
+                    LIMIT 1;
+                    """
+            name = await ctx.pool.fetchval(query, ctx.author.id)
+            common = True
+            msg = f'You pulled a Common Blade named {name}.'
+
+        query = """
+                INSERT INTO pulled_blades (
+                    user_id,
+                    blade,
+                    common
+                ) VALUES ($1, $2, $3);
+                """
+        await ctx.pool.execute(query, ctx.author.id, name, common)
+
+        query = "UPDATE inventory SET amount=amount-1 WHERE user_id=$1 AND item=$2;"
+        await ctx.pool.execute(query, ctx.author.id, core)
+
+        await ctx.send(msg)
+
     async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
         gold = await self.pool.fetchval(query, user_id) or 0
