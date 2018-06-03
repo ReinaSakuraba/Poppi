@@ -190,6 +190,12 @@ class Gold:
 
         item, price = record
 
+        if item == 'Sheba\'s Core Crystal':
+            query = "SELECT amount FROM inventory WHERE user_id=$1 AND item='Sheba''s Core Crystal';"
+            sheba_amount = await ctx.pool.fetchval(query, ctx.author.id)
+            if int(sheba_amount) + amount > 1:
+                return await ctx.send('You can not buy more of that item.')
+
         try:
             await self.remove_gold(ctx.author.id, price * amount)
         except RuntimeError as e:
