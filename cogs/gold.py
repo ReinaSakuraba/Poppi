@@ -176,7 +176,7 @@ class Gold:
 
 
     @shop.command(name='buy')
-    async def shop_buy(self, ctx, *, item):
+    async def shop_buy(self, ctx, amount: int, *, item: str):
         """Buys an item from the shop."""
 
         query = "SELECT item, price FROM shop WHERE LOWER(item)=$1;"
@@ -188,7 +188,7 @@ class Gold:
         item, price = record
 
         try:
-            await self.remove_gold(ctx.author.id, price)
+            await self.remove_gold(ctx.author.id, price * amount)
         except RuntimeError as e:
             return await ctx.send('You do not have enough gold to buy this item.')
 
@@ -202,9 +202,9 @@ class Gold:
                 DO UPDATE
                 SET amount = inventory.amount + $3;
                 """
-        await ctx.pool.execute(query, ctx.author.id, item, 1)
+        await ctx.pool.execute(query, ctx.author.id, item, amount)
 
-        await ctx.send(f'Successfully bought {item}!')
+        await ctx.send(f'Successfully bought {utils.plural(item, amount)}!')
 
     @commands.command()
     async def inventory(self, ctx):
