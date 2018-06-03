@@ -122,6 +122,12 @@ async def create_db(pool):
                 amount INT NOT NULL,
                 PRIMARY KEY(user_id, item)
             );
+            CREATE TABLE IF NOT EXISTS pulled_blades (
+                user_id BIGINT,
+                blade TEXT,
+                common BOOL NOT NULL,
+                PRIMARY KEY(user_id, blade)
+            );
             """
     await pool.execute(query)
 
