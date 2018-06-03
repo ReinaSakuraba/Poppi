@@ -179,6 +179,9 @@ class Gold:
     async def shop_buy(self, ctx, amount: int, *, item: str):
         """Buys an item from the shop."""
 
+        if amount <= 0:
+            return await ctx.send('You can not buy a negative amount of items.')
+
         query = "SELECT item, price FROM shop WHERE LOWER(item)=$1;"
         record = await ctx.pool.fetchrow(query, item.lower())
 
