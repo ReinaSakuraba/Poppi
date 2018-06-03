@@ -94,6 +94,11 @@ async def create_db(pool):
                 message_id BIGINT REFERENCES starboard_entries(message_id) ON DELETE CASCADE,
                 PRIMARY KEY (author_id, message_id)
             );
+
+            CREATE TABLE IF NOT EXISTS bank (
+                user_id BIGINT PRIMARY KEY,
+                amount BIGINT DEFAULT 0
+            );
             """
     await pool.execute(query)
 
