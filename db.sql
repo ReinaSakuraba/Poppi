@@ -110,6 +110,20 @@ CREATE TABLE xeno2.arts (
 ALTER TABLE xeno2.arts OWNER TO poppi;
 
 --
+-- Name: blade_chances; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_chances (
+    blade text NOT NULL,
+    seed smallint NOT NULL,
+    probability numeric(3,2) NOT NULL,
+    assure boolean NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_chances OWNER TO poppi;
+
+--
 -- Name: chip_locations; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -1237,6 +1251,189 @@ Menacing Lariat	Zeke	Sword Tonfa	Physical	180/220/260/300/340/360	1	One Target	1
 Hurricane Dropkick	Zeke	Sword Tonfa	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt by [50/50/60/60/75/75]% when HP is 30% or less.	0/790/3560/7920/19800	Blowdown / Low HP↑	8	0	22	0	0
 Shuddering Tonfa	Zeke	Sword Tonfa	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	AOE / Aggroed↑	8	2	22	0	0
 Wind Dragon Chop	Zeke	Sword Tonfa	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/580/2590/5760/14400	AOE / Aggro up	8	2	22	0	0
+\.
+
+
+--
+-- Data for Name: blade_chances; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_chances (blade, seed, probability, assure) FROM stdin;
+Godfrey	1	0.63	t
+Godfrey	2	0.63	f
+Godfrey	3	1.25	f
+Godfrey	4	1.56	f
+Godfrey	5	2.19	f
+Perceval	1	1.50	f
+Perceval	2	0.25	t
+Perceval	3	0.50	f
+Perceval	4	1.00	f
+Perceval	5	1.75	f
+Vale	1	0.75	f
+Vale	2	0.25	f
+Vale	3	0.25	f
+Vale	4	0.25	f
+Vale	5	0.25	t
+Agate	1	0.25	t
+Agate	2	0.38	f
+Agate	3	0.75	f
+Agate	4	0.75	f
+Agate	5	0.13	f
+Gorg	1	1.00	f
+Gorg	2	1.00	f
+Gorg	3	0.50	t
+Gorg	4	1.50	f
+Gorg	5	1.00	f
+Boreas	1	0.25	t
+Boreas	2	2.13	f
+Boreas	3	2.13	f
+Boreas	4	0.56	f
+Boreas	5	1.19	f
+Dagas	1	0.50	f
+Dagas	2	0.75	f
+Dagas	3	0.50	f
+Dagas	4	1.25	f
+Dagas	5	0.50	f
+Perun	1	2.44	f
+Perun	2	0.25	f
+Perun	3	0.63	t
+Perun	4	1.88	f
+Perun	5	1.06	f
+Kora	1	0.63	f
+Kora	2	1.88	f
+Kora	3	1.88	f
+Kora	4	0.31	t
+Kora	5	1.56	f
+Azami	1	0.31	f
+Azami	2	1.88	t
+Azami	3	1.25	f
+Azami	4	0.63	f
+Azami	5	2.19	f
+Ursula	1	2.25	f
+Ursula	2	0.63	f
+Ursula	3	1.25	f
+Ursula	4	1.88	f
+Ursula	5	0.25	t
+Newt	1	0.25	f
+Newt	2	0.25	f
+Newt	3	0.25	f
+Newt	4	0.25	f
+Newt	5	0.75	f
+Nim	1	1.00	f
+Nim	2	1.00	f
+Nim	3	1.75	f
+Nim	4	0.25	t
+Nim	5	1.00	f
+Adenine	1	1.50	f
+Adenine	2	0.25	t
+Adenine	3	1.00	f
+Adenine	4	1.75	f
+Adenine	5	0.50	f
+Electra	1	1.88	f
+Electra	2	2.25	f
+Electra	3	0.63	t
+Electra	4	1.25	f
+Electra	5	0.25	f
+Zenobia	1	0.25	f
+Zenobia	2	0.75	f
+Zenobia	3	0.25	f
+Zenobia	4	0.25	f
+Zenobia	5	0.25	f
+Finch	1	0.50	f
+Finch	2	1.00	f
+Finch	3	1.75	f
+Finch	4	0.25	t
+Finch	5	1.50	f
+Floren	1	1.75	f
+Floren	2	1.50	f
+Floren	3	1.00	f
+Floren	4	0.50	f
+Floren	5	0.25	t
+KOS-MOS	1	0.10	f
+KOS-MOS	2	0.10	f
+KOS-MOS	3	0.10	f
+KOS-MOS	4	0.10	f
+KOS-MOS	5	0.10	f
+Dahlia	1	0.13	f
+Dahlia	2	0.50	f
+Dahlia	3	0.25	f
+Dahlia	4	0.88	f
+Dahlia	5	0.75	f
+Akhos	1	0.25	f
+Akhos	2	0.25	f
+Akhos	3	0.25	f
+Akhos	4	0.25	f
+Akhos	5	0.25	f
+Patroka	1	0.25	f
+Patroka	2	0.25	f
+Patroka	3	0.25	f
+Patroka	4	0.25	f
+Patroka	5	0.25	f
+Obrona	1	0.50	f
+Obrona	2	0.50	f
+Obrona	3	0.50	f
+Obrona	4	0.50	f
+Obrona	5	0.50	f
+Perdido	1	0.50	f
+Perdido	2	0.50	f
+Perdido	3	0.50	f
+Perdido	4	0.50	f
+Perdido	5	0.50	f
+Cressidus	1	0.50	f
+Cressidus	2	0.50	f
+Cressidus	3	0.50	f
+Cressidus	4	0.50	f
+Cressidus	5	0.50	f
+Sever	1	0.50	f
+Sever	2	0.50	f
+Sever	3	0.50	f
+Sever	4	0.50	f
+Sever	5	0.50	f
+Kasandra	1	1.00	f
+Kasandra	2	1.00	f
+Kasandra	3	1.00	f
+Kasandra	4	1.00	f
+Kasandra	5	1.00	f
+Sheba	1	1.00	f
+Sheba	2	1.00	f
+Sheba	3	1.00	f
+Sheba	4	1.00	f
+Sheba	5	1.00	f
+Herald	1	1.00	f
+Herald	2	1.00	f
+Herald	3	1.00	f
+Herald	4	1.00	f
+Herald	5	1.00	f
+Aegaeon	1	1.00	f
+Aegaeon	2	1.00	f
+Aegaeon	3	1.00	f
+Aegaeon	4	1.00	f
+Aegaeon	5	1.00	f
+Praxis	1	1.00	f
+Praxis	2	1.00	f
+Praxis	3	1.00	f
+Praxis	4	1.00	f
+Praxis	5	1.00	f
+Theory	1	1.00	f
+Theory	2	1.00	f
+Theory	3	1.00	f
+Theory	4	1.00	f
+Theory	5	1.00	f
+Vess	1	1.00	f
+Vess	2	1.00	f
+Vess	3	1.00	f
+Vess	4	1.00	f
+Vess	5	1.00	f
+Wulfric	1	1.00	f
+Wulfric	2	1.00	f
+Wulfric	3	1.00	f
+Wulfric	4	1.00	f
+Wulfric	5	1.00	f
+T-elos	1	5.00	f
+T-elos	2	5.00	f
+T-elos	3	5.00	f
+T-elos	4	5.00	f
+T-elos	5	5.00	f
 \.
 
 
@@ -37354,6 +37551,14 @@ ALTER TABLE ONLY xeno2.accessories
 
 ALTER TABLE ONLY xeno2.arts
     ADD CONSTRAINT arts_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: blade_chances_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_chances
+    ADD CONSTRAINT blade_chances_pkey PRIMARY KEY (blade, seed);
 
 
 --
