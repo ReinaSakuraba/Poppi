@@ -99,6 +99,29 @@ async def create_db(pool):
                 user_id BIGINT PRIMARY KEY,
                 amount BIGINT DEFAULT 0
             );
+
+            CREATE TABLE IF NOT EXISTS shop (
+                item TEXT PRIMARY KEY,
+                price INT NOT NULL
+            );
+
+            INSERT INTO shop (
+                item,
+                price
+            ) VALUES
+                ('Common Core Crystal', 500),
+                ('Rare Core Crystal', 5000),
+                ('Legendary Core Crystal'. 30000),
+                ('Sheba''s Core Crystal', 500000)
+            ON CONFLICT (item, price)
+            DO UPDATE SET price = excluded.price;
+
+            CREATE TABLE IF NOT EXISTS inventory (
+                user_id BIGINT,
+                item TEXT,
+                amount INT NOT NULL,
+                PRIMARY KEY(user_id, item)
+            );
             """
     await pool.execute(query)
 
