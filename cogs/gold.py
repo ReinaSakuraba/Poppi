@@ -47,6 +47,9 @@ class Gold:
     async def bet_rps(self, ctx, amount: int, choice: str):
         """Bets gold on a Rock Paper Scissors game."""
 
+        if amount < 0:
+            return await ctx.send('Amount can not be below 0.')
+
         original_amount = amount
 
         choices = ['rock', 'paper', 'scissors']
@@ -81,6 +84,9 @@ class Gold:
     async def bet_flip(self, ctx, amount: int, choice: str):
         """Bets gold on a coin flip."""
 
+        if amount < 0:
+            return await ctx.send('Amount can not be below 0.')
+
         original_amount = amount
 
         choices = {
@@ -112,6 +118,45 @@ class Gold:
             result = 'lost'
 
         msg = f'The coin landed on {cpu_choice}! You {result} {original_amount} gold!'
+
+        await self.add_gold(ctx.author.id, amount)
+        await ctx.send(msg)
+
+    @bet.command(name='roll')
+    async def bet_roll(self, ctx, amount: int):
+        """Bets gold on a 100 sided die."""
+
+        if amount < 0:
+            return await ctx.send('Amount can not be below 0.')
+
+        original_amount = amount
+
+        try:
+            await self.remove_gold(ctx.author.id, amount)
+        except RuntimeError as e:
+            return await ctx.send(e)
+
+        roll = random.randint(1, 100)
+
+        msg = f'You rolled a {roll}!'
+
+        if roll == 100:
+            amount *= 10
+            end = 'a 100'
+        elif roll >= 90:
+            amount *= 4
+            end = 'above 90'
+        elif roll >= 70:
+            amount *= 3
+            end = 'above 70'
+        else:
+            amount = 0
+            end = 'below 70'
+
+        amount_won = amount - original_amount
+        result = 'won' if amount_won > 0 else 'lost'
+
+        msg += f' You {result} {abs(amount_won)} gold for rolling {end}!'
 
         await self.add_gold(ctx.author.id, amount)
         await ctx.send(msg)
