@@ -206,6 +206,22 @@ class Gold:
 
         await ctx.send(f'Successfully bought {item}!')
 
+    @commands.command()
+    async def inventory(self, ctx):
+        """Shows your current inventory."""
+
+        query = "SELECT item, amount FROM inventory WHERE user_id=$1;"""
+        items = await ctx.pool.fetch(query, ctx.author.id)
+
+        if not items:
+            return await ctx.send('You do not own any items.')
+
+        try:
+            paginator = utils.FieldEmbedPaginator(ctx, entries=items)
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
+
     async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
         gold = await self.pool.fetchval(query, user_id) or 0
