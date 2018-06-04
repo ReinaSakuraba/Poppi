@@ -324,7 +324,7 @@ class Gold:
 
         query = """
                 SELECT
-                    STRING_AGG(blade, E'\n')
+                    ARRAY_AGG(blade)
                 FROM pulled_blades
                 WHERE user_id=$1
                 AND common IS FALSE;
@@ -333,7 +333,12 @@ class Gold:
         if blades is None:
             return await ctx.send(f'{member.display_name} has no Rare Blades.')
 
-        await ctx.send(blades)
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=blades, per_page=15)
+            paginator.embed.colour = 0x738bd7
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
 
     async def get_gold(self, user_id):
         query = "SELECT amount FROM bank WHERE user_id=$1;"
