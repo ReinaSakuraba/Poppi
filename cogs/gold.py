@@ -258,10 +258,14 @@ class Gold:
         if not amount:
             return await ctx.send('You do not have that Core Crystal.')
 
+        core_multipliers = {
+            'Common Core Crystal': 1,
+            'Rare Core Crystal': 1.5,
+            'Legendary Core Crystal': 3
+        }
+
         query = """
-                SELECT
-                    ARRAY_AGG(blade),
-                    ARRAY_AGG(probability)
+                SELECT blade
                 FROM xeno2.blade_chances
                 WHERE seed=$1
                 AND blade NOT IN ('Roc', 'Wulfric', 'Theory', 'Praxis', 'Sheba', 'Vess', 'Aegaeon', 'Herald', 'Kasandra')
@@ -270,24 +274,17 @@ class Gold:
                     FROM pulled_blades
                     WHERE user_id=$2
                     AND common IS FALSE
-                );
+                )
+                AND RANDOM() * 100 <= probability * $3
+                ORDER BY probability, RANDOM()
+                LIMIT 1;
                 """
         seed = (ctx.author.id >> 22) % 5  + 1
-        blades, weights = await ctx.pool.fetchrow(query, seed, ctx.author.id)
+        blade = await ctx.pool.fetchval(query, seed, ctx.author.id, core_multipliers[core])
 
-        core_multipliers = {
-            'Common Core Crystal': 1,
-            'Rare Core Crystal': 1.5,
-            'Legendary Core Crystal': 3
-        }
-
-        rare_chance = sum(weights) * core_multipliers[core]
-        rand = random.random() * 100
-
-        if rand < rare_chance:
-            name = random.choices(blades, weights=map(float, weights))[0]
+        if blade:
             common = False
-            msg = f'You pulled {name}.'
+            msg = f'You pulled {blade}.'
         else:
             query = """
                     SELECT name
@@ -301,9 +298,9 @@ class Gold:
                     ORDER BY RANDOM()
                     LIMIT 1;
                     """
-            name = await ctx.pool.fetchval(query, ctx.author.id)
+            blade = await ctx.pool.fetchval(query, ctx.author.id)
             common = True
-            msg = f'You pulled a Common Blade named {name}.'
+            msg = f'You pulled a Common Blade named {blade}.'
 
         query = """
                 INSERT INTO pulled_blades (
@@ -312,7 +309,7 @@ class Gold:
                     common
                 ) VALUES ($1, $2, $3);
                 """
-        await ctx.pool.execute(query, ctx.author.id, name, common)
+        await ctx.pool.execute(query, ctx.author.id, blade, common)
 
         query = "UPDATE inventory SET amount=amount-1 WHERE user_id=$1 AND item=$2;"
         await ctx.pool.execute(query, ctx.author.id, core)
