@@ -316,7 +316,7 @@ class Gold:
 
         await ctx.send(msg)
 
-    @commands.command()
+    @utils.group(invoke_without_command=True)
     async def blades(self, ctx, *, member: discord.Member = None):
         """Shows a user's current Rare Blades."""
 
@@ -332,6 +332,30 @@ class Gold:
         blades = await ctx.pool.fetchval(query, member.id)
         if blades is None:
             return await ctx.send(f'{member.display_name} has no Rare Blades.')
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=blades, per_page=15)
+            paginator.embed.colour = 0x738bd7
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
+
+    @blades.command(name='common')
+    async def blades_common(self, ctx, *, member: discord.Member = None):
+        """Shows a user's current Common Blades."""
+
+        member = member or ctx.author
+
+        query = """
+                SELECT
+                    ARRAY_AGG(blade)
+                FROM pulled_blades
+                WHERE user_id=$1
+                AND common IS TRUE;
+                """
+        blades = await ctx.pool.fetchval(query, member.id)
+        if blades is None:
+            return await ctx.send(f'{member.display_name} has no Common Blades.')
 
         try:
             paginator = utils.EmbedPaginator(ctx, entries=blades, per_page=15)
