@@ -220,11 +220,15 @@ class Xenoblade2:
                     '±' || stability,
                     crit_rate || '%',
                     block_rate || '%',
-                    effect,
+                    xeno2.format_caption(enhance_captions.caption, param, param_one, param_two),
                     chip
                 FROM xeno2.weapons
                 LEFT JOIN xeno2.chip_weapons
                 ON name=weapon
+                LEFT JOIN xeno2.enhance
+                ON weapons.caption=enhance.id
+                LEFT JOIN xeno2.enhance_captions
+                ON enhance.caption=enhance_captions.id
                 WHERE LOWER(name)=$1;
                 """
 
