@@ -64,6 +64,21 @@ END; $$;
 
 ALTER FUNCTION xeno2.format_caption(caption text, param smallint, param_one numeric, param_two numeric) OWNER TO poppi;
 
+--
+-- Name: format_caption(text, smallint, text, text); Type: FUNCTION; Schema: xeno2; Owner: poppi
+--
+
+CREATE FUNCTION xeno2.format_caption(caption text, param smallint, param_one text, param_two text) RETURNS text
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+    RETURN REPLACE(REPLACE(REPLACE(caption, '[ML:Enhance ]', param::text), '[ML:Enhance kind=Param1 ]', param_one), '[ML:Enhance kind=Param2 ]', param_two);
+END; $$;
+
+
+ALTER FUNCTION xeno2.format_caption(caption text, param smallint, param_one text, param_two text) OWNER TO poppi;
+
 SET default_tablespace = '';
 
 SET default_with_oids = false;
@@ -110,6 +125,17 @@ CREATE TABLE xeno2.arts (
 ALTER TABLE xeno2.arts OWNER TO poppi;
 
 --
+-- Name: blade_battle_skills; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_battle_skills (
+    name text NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_battle_skills OWNER TO poppi;
+
+--
 -- Name: blade_chances; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -122,6 +148,19 @@ CREATE TABLE xeno2.blade_chances (
 
 
 ALTER TABLE xeno2.blade_chances OWNER TO poppi;
+
+--
+-- Name: blade_skill_enhance; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_skill_enhance (
+    skill text NOT NULL,
+    level smallint NOT NULL,
+    caption smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_skill_enhance OWNER TO poppi;
 
 --
 -- Name: chip_locations; Type: TABLE; Schema: xeno2; Owner: poppi
@@ -190,6 +229,18 @@ CREATE TABLE xeno2.classes (
 
 
 ALTER TABLE xeno2.classes OWNER TO poppi;
+
+--
+-- Name: common_blade_battle_skills; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.common_blade_battle_skills (
+    skill text,
+    role text
+);
+
+
+ALTER TABLE xeno2.common_blade_battle_skills OWNER TO poppi;
 
 --
 -- Name: common_blade_names; Type: TABLE; Schema: xeno2; Owner: poppi
@@ -1266,6 +1317,244 @@ Wind Dragon Chop	Zeke	Sword Tonfa	Physical	160/200/240/280/320/340	1	Ahead	11/11
 
 
 --
+-- Data for Name: blade_battle_skills; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_battle_skills (name) FROM stdin;
+Purifying Flames
+Sanguine Steel
+Gravity Pinwheel
+Dimensional Fold
+Dimensional Wrinkle
+Swift Kitty
+Now You See Me...
+Quick Prep
+Doublestrike
+Stay True
+Bushido
+Senton
+Double Team
+Trespass
+Persevering Strength
+Mad Warrior
+Life Absorb
+Rage
+Resist Fire
+Resist Water
+Resist Wind
+Resist Earth
+Resist Electric
+Resist Ice
+Resist Light
+Resist Dark
+Elemental Mastery
+Acute Focus
+Streamlined Step
+Back Attack
+Healing Wind
+Challenger
+High-Speed Preparation
+Counter
+Pinpoint Weakness
+Unrelenting Spirit
+Vital Charge
+Damage Spike
+Into the Ground
+Treasure Sensor
+Accelerated Growth
+Beast Hunter
+Insect Hunter
+Aerial Hunter
+Aquatic Hunter
+Humanoid Hunter
+Machine Hunter
+Titan Hunter
+Beast Slayer
+Insect Slayer
+Aerial Slayer
+Aquatic Slayer
+Humanoid Slayer
+Machine Slayer
+Titan Slayer
+Front Attack
+Gold Rush
+Emergency Guard
+Pierce
+Smooth Action
+Gentle Touch
+Cloud Conceal
+Flash
+Insulting Flourish
+Attention Grabber
+Glittering Stars
+Prolonged Fight
+Rapid Regen
+Movement Recovery
+Potion Keeper
+Tight Space
+Natural Guard
+Encourage
+Evasion Aura
+Attack Aura
+Barrier Aura
+Precision Aura
+Into the Air
+Open Space
+Grandarbor's Roots
+Good Balance
+Never Fall
+Immovable
+Ultra Heavy
+Ukemi
+Avenger
+Side Attack
+Swift Strike
+Target Weakness
+Ether Barrier
+Solid
+Physical Barrier
+Silent Strike
+Vendetta (Common)
+Ultimate Combo
+Weaponsmaster
+Slamdown
+Orb Master
+Heaven's Tracker
+Heartbreaker
+Hardware Acceleration
+Hyperaffinity Circuit
+Reconstitute
+Resplendence
+Flaming Edge
+Foresight
+Lightspeed Flurry
+Glint
+A Dream of the Future
+The Chosen One
+The Aegis
+Celestial Gift
+River's Blessing
+Howl of Calm
+Noponic Iron
+Guard Shift
+Emergency Mode
+Velocity Gear
+Flash Counter
+Flash Boot
+Reflection
+Nanomachine Repair
+Overclock
+Sickle
+Storm and Stress
+Swoop
+War Pyre
+Firewalker
+Dance of the Flames
+Quickest Purple
+Thunderblast
+Sudden Spark
+Sea of Plenty
+Instant Regen
+Cellular Stimulus
+Serene Heart
+Like Water
+Enlightenment
+Got the Guts
+Fierce Fervor
+Light of Justice
+The Preternatural
+Power Unleashed
+Critical Strike
+Eater of Men
+Soulsucker
+Brandish
+Violence Machine
+Void Lance
+Overture of Blood
+Razor-Sharp Iolite
+Tanzanite Pursuer
+Tiger's Eye Wrecker
+FTL
+IMD
+FAS
+Tasty Snack
+Look Out!
+Twang!
+Kaiser Zone (Weak)
+Regal Presence (Weak)
+Gold Effect (Weak)
+Kaiser Zone
+Regal Presence
+Gold Effect
+Calamity
+Fortune
+Stability
+The Awakened (Power)
+The Awakened (Skill)
+Brimming Pep
+Aerial Flashdance
+Conviction
+Steadfast
+Defender
+Silent Spear
+Battle Plans
+Stop Thinking
+Walking Joy
+Potion Hoarder
+All For Love
+Pain of Longing
+Vendetta
+Snow Charm
+Beary Healing
+Hide and Seek
+Tranquil Guard
+Last Line of Defense
+Flowers of War
+Restorative Fusion
+Synthesis Lore
+Wild Familiars
+Economicanimal
+Entitled Entourage
+Financial Settlement
+Space-Tea-Time
+Sympathy
+Not Part of the Plan
+Element Wisdom
+Battle Wisdom
+Treasure Wisdom
+Sparky Girl
+Zappy Girl
+Clangy Girl
+Carnage
+The Indomitable
+Greatest Warrior
+Did I Do That?
+Doesn't Ring a Bell
+Surprise!
+The Coming of Spring
+Blossomfall
+White Lilies
+Phase Transition Tech
+Hyperclock
+Encephalon
+Dissolve Seal
+Taboo
+Unlimited Output
+Spotlight
+Fireworks
+Opportunist
+Armor Piercing
+Nullify Defense
+Heartless Kill
+Transmigration
+Dead Zone
+Endless Cycle
+Fatal Blow
+Fury
+\.
+
+
+--
 -- Data for Name: blade_chances; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
@@ -1445,6 +1734,1164 @@ T-elos	2	5.00	f
 T-elos	3	5.00	f
 T-elos	4	5.00	f
 T-elos	5	5.00	f
+\.
+
+
+--
+-- Data for Name: blade_skill_enhance; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_skill_enhance (skill, level, caption) FROM stdin;
+Purifying Flames	1	1413
+Purifying Flames	2	1414
+Purifying Flames	3	1415
+Purifying Flames	4	1416
+Purifying Flames	5	1417
+Resplendence	1	1418
+Resplendence	2	1419
+Resplendence	3	1420
+Resplendence	4	1421
+Resplendence	5	1422
+Flaming Edge	1	1423
+Flaming Edge	2	1424
+Flaming Edge	3	1425
+Flaming Edge	4	1426
+Flaming Edge	5	1427
+Foresight	1	1428
+Foresight	2	1429
+Foresight	3	1430
+Foresight	4	1431
+Foresight	5	1432
+Lightspeed Flurry	1	1433
+Lightspeed Flurry	2	1434
+Lightspeed Flurry	3	1435
+Lightspeed Flurry	4	1436
+Lightspeed Flurry	5	1437
+Glint	1	1438
+Glint	2	1439
+Glint	3	1440
+Glint	4	1441
+Glint	5	1442
+A Dream of the Future	1	1443
+A Dream of the Future	2	1444
+A Dream of the Future	3	1445
+A Dream of the Future	4	1446
+A Dream of the Future	5	1447
+The Chosen One	1	1448
+The Chosen One	2	1449
+The Chosen One	3	1450
+The Chosen One	4	1451
+The Chosen One	5	1452
+The Aegis	1	1453
+The Aegis	2	1454
+The Aegis	3	1455
+The Aegis	4	1456
+The Aegis	5	1457
+Celestial Gift	1	1458
+Celestial Gift	2	1459
+Celestial Gift	3	1460
+Celestial Gift	4	1461
+Celestial Gift	5	1462
+River's Blessing	1	1463
+River's Blessing	2	1464
+River's Blessing	3	1465
+River's Blessing	4	1466
+River's Blessing	5	1467
+Howl of Calm	1	1468
+Howl of Calm	2	1469
+Howl of Calm	3	1470
+Howl of Calm	4	1471
+Howl of Calm	5	1472
+Noponic Iron	1	1473
+Noponic Iron	2	1474
+Noponic Iron	3	1475
+Noponic Iron	4	1476
+Noponic Iron	5	1477
+Guard Shift	1	1478
+Guard Shift	2	1479
+Guard Shift	3	1480
+Guard Shift	4	1481
+Guard Shift	5	1482
+Emergency Mode	1	1483
+Emergency Mode	2	1484
+Emergency Mode	3	1485
+Emergency Mode	4	1486
+Emergency Mode	5	1487
+Velocity Gear	1	1488
+Velocity Gear	2	1489
+Velocity Gear	3	1490
+Velocity Gear	4	1491
+Velocity Gear	5	1492
+Flash Counter	1	1493
+Flash Counter	2	1494
+Flash Counter	3	1495
+Flash Counter	4	1496
+Flash Counter	5	1497
+Flash Boot	1	1498
+Flash Boot	2	1499
+Flash Boot	3	1500
+Flash Boot	4	1501
+Flash Boot	5	1502
+Reflection	1	1503
+Reflection	2	1504
+Reflection	3	1505
+Reflection	4	1506
+Reflection	5	1507
+Nanomachine Repair	1	1508
+Nanomachine Repair	2	1509
+Nanomachine Repair	3	1510
+Nanomachine Repair	4	1511
+Nanomachine Repair	5	1512
+Overclock	1	1513
+Overclock	2	1514
+Overclock	3	1515
+Overclock	4	1516
+Overclock	5	1517
+Sickle	1	1518
+Sickle	2	1519
+Sickle	3	1520
+Sickle	4	1521
+Sickle	5	1522
+Storm and Stress	1	1523
+Storm and Stress	2	1524
+Storm and Stress	3	1525
+Storm and Stress	4	1526
+Storm and Stress	5	1527
+Swoop	1	1528
+Swoop	2	1529
+Swoop	3	1530
+Swoop	4	1531
+Swoop	5	1532
+War Pyre	1	1533
+War Pyre	2	1534
+War Pyre	3	1535
+War Pyre	4	1536
+War Pyre	5	1537
+Firewalker	1	1538
+Firewalker	2	1539
+Firewalker	3	1540
+Firewalker	4	1541
+Firewalker	5	1542
+Dance of the Flames	1	1543
+Dance of the Flames	2	1544
+Dance of the Flames	3	1545
+Dance of the Flames	4	1546
+Dance of the Flames	5	1547
+Quickest Purple	1	1548
+Quickest Purple	2	1549
+Quickest Purple	3	1550
+Quickest Purple	4	1551
+Quickest Purple	5	1552
+Thunderblast	1	1553
+Thunderblast	2	1554
+Thunderblast	3	1555
+Thunderblast	4	1556
+Thunderblast	5	1557
+Sudden Spark	1	1558
+Sudden Spark	2	1559
+Sudden Spark	3	1560
+Sudden Spark	4	1561
+Sudden Spark	5	1562
+Sea of Plenty	1	1563
+Sea of Plenty	2	1564
+Sea of Plenty	3	1565
+Sea of Plenty	4	1566
+Sea of Plenty	5	1567
+Instant Regen	1	1568
+Instant Regen	2	1569
+Instant Regen	3	1570
+Instant Regen	4	1571
+Instant Regen	5	1572
+Cellular Stimulus	1	1573
+Cellular Stimulus	2	1574
+Cellular Stimulus	3	1575
+Cellular Stimulus	4	1576
+Cellular Stimulus	5	1577
+Serene Heart	1	1578
+Serene Heart	2	1579
+Serene Heart	3	1580
+Serene Heart	4	1581
+Serene Heart	5	1582
+Like Water	1	1583
+Like Water	2	1584
+Like Water	3	1585
+Like Water	4	1586
+Like Water	5	1587
+Enlightenment	1	1588
+Enlightenment	2	1589
+Enlightenment	3	1590
+Enlightenment	4	1591
+Enlightenment	5	1592
+Got the Guts	1	1593
+Got the Guts	2	1594
+Got the Guts	3	1595
+Got the Guts	4	1596
+Got the Guts	5	1597
+Fierce Fervor	1	1598
+Fierce Fervor	2	1599
+Fierce Fervor	3	1600
+Fierce Fervor	4	1601
+Fierce Fervor	5	1602
+Light of Justice	1	1603
+Light of Justice	2	1604
+Light of Justice	3	1605
+Light of Justice	4	1606
+Light of Justice	5	1607
+The Preternatural	1	1608
+The Preternatural	2	1609
+The Preternatural	3	1610
+The Preternatural	4	1611
+The Preternatural	5	1612
+Power Unleashed	1	1613
+Power Unleashed	2	1614
+Power Unleashed	3	1615
+Power Unleashed	4	1616
+Power Unleashed	5	1617
+Critical Strike	1	1618
+Critical Strike	2	1619
+Critical Strike	3	1620
+Critical Strike	4	1621
+Critical Strike	5	1622
+Eater of Men	1	1623
+Eater of Men	2	1624
+Eater of Men	3	1625
+Eater of Men	4	1626
+Eater of Men	5	1627
+Soulsucker	1	1628
+Soulsucker	2	1629
+Soulsucker	3	1630
+Soulsucker	4	1631
+Soulsucker	5	1632
+Brandish	1	1633
+Brandish	2	1634
+Brandish	3	1635
+Brandish	4	1636
+Brandish	5	1637
+Violence Machine	1	1638
+Violence Machine	2	1639
+Violence Machine	3	1640
+Violence Machine	4	1641
+Violence Machine	5	1642
+Void Lance	1	1643
+Void Lance	2	1644
+Void Lance	3	1645
+Void Lance	4	1646
+Void Lance	5	1647
+Overture of Blood	1	1648
+Overture of Blood	2	1649
+Overture of Blood	3	1650
+Overture of Blood	4	1651
+Overture of Blood	5	1652
+Razor-Sharp Iolite	1	1653
+Razor-Sharp Iolite	2	1654
+Razor-Sharp Iolite	3	1655
+Razor-Sharp Iolite	4	1656
+Razor-Sharp Iolite	5	1657
+Tanzanite Pursuer	1	1658
+Tanzanite Pursuer	2	1659
+Tanzanite Pursuer	3	1660
+Tanzanite Pursuer	4	1661
+Tanzanite Pursuer	5	1662
+Tiger's Eye Wrecker	1	1663
+Tiger's Eye Wrecker	2	1664
+Tiger's Eye Wrecker	3	1665
+Tiger's Eye Wrecker	4	1666
+Tiger's Eye Wrecker	5	1667
+FTL	1	1668
+FTL	2	1669
+FTL	3	1670
+FTL	4	1671
+FTL	5	1672
+IMD	1	1673
+IMD	2	1674
+IMD	3	1675
+IMD	4	1676
+IMD	5	1677
+FAS	1	1678
+FAS	2	1679
+FAS	3	1680
+FAS	4	1681
+FAS	5	1682
+Tasty Snack	1	1683
+Tasty Snack	2	1684
+Tasty Snack	3	1685
+Tasty Snack	4	1686
+Tasty Snack	5	1687
+Look Out!	1	1688
+Look Out!	2	1689
+Look Out!	3	1690
+Look Out!	4	1691
+Look Out!	5	1692
+Twang!	1	1693
+Twang!	2	1694
+Twang!	3	1695
+Twang!	4	1696
+Twang!	5	1697
+Kaiser Zone (Weak)	1	1698
+Kaiser Zone (Weak)	2	1699
+Kaiser Zone (Weak)	3	1700
+Kaiser Zone (Weak)	4	1701
+Kaiser Zone (Weak)	5	1702
+Regal Presence (Weak)	1	1703
+Regal Presence (Weak)	2	1704
+Regal Presence (Weak)	3	1705
+Regal Presence (Weak)	4	1706
+Regal Presence (Weak)	5	1707
+Gold Effect (Weak)	1	1708
+Gold Effect (Weak)	2	1709
+Gold Effect (Weak)	3	1710
+Gold Effect (Weak)	4	1711
+Gold Effect (Weak)	5	1712
+Kaiser Zone	1	1713
+Kaiser Zone	2	1714
+Kaiser Zone	3	1715
+Kaiser Zone	4	1716
+Kaiser Zone	5	1717
+Regal Presence	1	1718
+Regal Presence	2	1719
+Regal Presence	3	1720
+Regal Presence	4	1721
+Regal Presence	5	1722
+Gold Effect	1	1723
+Gold Effect	2	1724
+Gold Effect	3	1725
+Gold Effect	4	1726
+Gold Effect	5	1727
+Calamity	1	1728
+Calamity	2	1729
+Calamity	3	1730
+Calamity	4	1731
+Calamity	5	1732
+Fortune	1	1733
+Fortune	2	1734
+Fortune	3	1735
+Fortune	4	1736
+Fortune	5	1737
+Stability	1	1738
+Stability	2	1739
+Stability	3	1740
+Stability	4	1741
+Stability	5	1742
+The Awakened (Power)	1	1743
+The Awakened (Power)	2	1744
+The Awakened (Power)	3	1745
+The Awakened (Power)	4	1746
+The Awakened (Power)	5	1747
+The Awakened (Skill)	1	1748
+The Awakened (Skill)	2	1749
+The Awakened (Skill)	3	1750
+The Awakened (Skill)	4	1751
+The Awakened (Skill)	5	1752
+Brimming Pep	1	1753
+Brimming Pep	2	1754
+Brimming Pep	3	1755
+Brimming Pep	4	1756
+Brimming Pep	5	1757
+Aerial Flashdance	1	1758
+Aerial Flashdance	2	1759
+Aerial Flashdance	3	1760
+Aerial Flashdance	4	1761
+Aerial Flashdance	5	1762
+Conviction	1	1763
+Conviction	2	1764
+Conviction	3	1765
+Conviction	4	1766
+Conviction	5	1767
+Steadfast	1	1768
+Steadfast	2	1769
+Steadfast	3	1770
+Steadfast	4	1771
+Steadfast	5	1772
+Defender	1	1773
+Defender	2	1774
+Defender	3	1775
+Defender	4	1776
+Defender	5	1777
+Silent Spear	1	1778
+Silent Spear	2	1779
+Silent Spear	3	1780
+Silent Spear	4	1781
+Silent Spear	5	1782
+Battle Plans	1	1783
+Battle Plans	2	1784
+Battle Plans	3	1785
+Battle Plans	4	1786
+Battle Plans	5	1787
+Stop Thinking	1	1788
+Stop Thinking	2	1789
+Stop Thinking	3	1790
+Stop Thinking	4	1791
+Stop Thinking	5	1792
+Walking Joy	1	1793
+Walking Joy	2	1794
+Walking Joy	3	1795
+Walking Joy	4	1796
+Walking Joy	5	1797
+Potion Hoarder	1	1798
+Potion Hoarder	2	1799
+Potion Hoarder	3	1800
+Potion Hoarder	4	1801
+Potion Hoarder	5	1802
+All For Love	1	1803
+All For Love	2	1804
+All For Love	3	1805
+All For Love	4	1806
+All For Love	5	1807
+Pain of Longing	1	1808
+Pain of Longing	2	1809
+Pain of Longing	3	1810
+Pain of Longing	4	1811
+Pain of Longing	5	1812
+Vendetta	1	1813
+Vendetta	2	1814
+Vendetta	3	1815
+Vendetta	4	1816
+Vendetta	5	1817
+Snow Charm	1	1818
+Snow Charm	2	1819
+Snow Charm	3	1820
+Snow Charm	4	1821
+Snow Charm	5	1822
+Beary Healing	1	1823
+Beary Healing	2	1824
+Beary Healing	3	1825
+Beary Healing	4	1826
+Beary Healing	5	1827
+Hide and Seek	1	1828
+Hide and Seek	2	1829
+Hide and Seek	3	1830
+Hide and Seek	4	1831
+Hide and Seek	5	1832
+Tranquil Guard	1	1833
+Tranquil Guard	2	1834
+Tranquil Guard	3	1835
+Tranquil Guard	4	1836
+Tranquil Guard	5	1837
+Last Line of Defense	1	1838
+Last Line of Defense	2	1839
+Last Line of Defense	3	1840
+Last Line of Defense	4	1841
+Last Line of Defense	5	1842
+Flowers of War	1	1843
+Flowers of War	2	1844
+Flowers of War	3	1845
+Flowers of War	4	1846
+Flowers of War	5	1847
+Restorative Fusion	1	1848
+Restorative Fusion	2	1849
+Restorative Fusion	3	1850
+Restorative Fusion	4	1851
+Restorative Fusion	5	1852
+Synthesis Lore	1	1853
+Synthesis Lore	2	1854
+Synthesis Lore	3	1855
+Synthesis Lore	4	1856
+Synthesis Lore	5	1857
+Wild Familiars	1	1858
+Wild Familiars	2	1859
+Wild Familiars	3	1860
+Wild Familiars	4	1861
+Wild Familiars	5	1862
+Economicanimal	1	1863
+Economicanimal	2	1864
+Economicanimal	3	1865
+Economicanimal	4	1866
+Economicanimal	5	1867
+Entitled Entourage	1	1868
+Entitled Entourage	2	1869
+Entitled Entourage	3	1870
+Entitled Entourage	4	1871
+Entitled Entourage	5	1872
+Financial Settlement	1	1873
+Financial Settlement	2	1874
+Financial Settlement	3	1875
+Financial Settlement	4	1876
+Financial Settlement	5	1877
+Space-Tea-Time	1	1878
+Space-Tea-Time	2	1879
+Space-Tea-Time	3	1880
+Space-Tea-Time	4	1881
+Space-Tea-Time	5	1882
+Sympathy	1	1883
+Sympathy	2	1884
+Sympathy	3	1885
+Sympathy	4	1886
+Sympathy	5	1887
+Not Part of the Plan	1	1888
+Not Part of the Plan	2	1889
+Not Part of the Plan	3	1890
+Not Part of the Plan	4	1891
+Not Part of the Plan	5	1892
+Element Wisdom	1	1893
+Element Wisdom	2	1894
+Element Wisdom	3	1895
+Element Wisdom	4	1896
+Element Wisdom	5	1897
+Battle Wisdom	1	1898
+Battle Wisdom	2	1899
+Battle Wisdom	3	1900
+Battle Wisdom	4	1901
+Battle Wisdom	5	1902
+Treasure Wisdom	1	1903
+Treasure Wisdom	2	1904
+Treasure Wisdom	3	1905
+Treasure Wisdom	4	1906
+Treasure Wisdom	5	1907
+Sparky Girl	1	1908
+Sparky Girl	2	1909
+Sparky Girl	3	1910
+Sparky Girl	4	1911
+Sparky Girl	5	1912
+Zappy Girl	1	1913
+Zappy Girl	2	1914
+Zappy Girl	3	1915
+Zappy Girl	4	1916
+Zappy Girl	5	1917
+Clangy Girl	1	1918
+Clangy Girl	2	1919
+Clangy Girl	3	1920
+Clangy Girl	4	1921
+Clangy Girl	5	1922
+Carnage	1	1923
+Carnage	2	1924
+Carnage	3	1925
+Carnage	4	1926
+Carnage	5	1927
+The Indomitable	1	1928
+The Indomitable	2	1929
+The Indomitable	3	1930
+The Indomitable	4	1931
+The Indomitable	5	1932
+Greatest Warrior	1	1933
+Greatest Warrior	2	1934
+Greatest Warrior	3	1935
+Greatest Warrior	4	1936
+Greatest Warrior	5	1937
+Did I Do That?	1	1938
+Did I Do That?	2	1939
+Did I Do That?	3	1940
+Did I Do That?	4	1941
+Did I Do That?	5	1942
+Doesn't Ring a Bell	1	1943
+Doesn't Ring a Bell	2	1944
+Doesn't Ring a Bell	3	1945
+Doesn't Ring a Bell	4	1946
+Doesn't Ring a Bell	5	1947
+Surprise!	1	1948
+Surprise!	2	1949
+Surprise!	3	1950
+Surprise!	4	1951
+Surprise!	5	1952
+The Coming of Spring	1	1953
+The Coming of Spring	2	1954
+The Coming of Spring	3	1955
+The Coming of Spring	4	1956
+The Coming of Spring	5	1957
+Blossomfall	1	1958
+Blossomfall	2	1959
+Blossomfall	3	1960
+Blossomfall	4	1961
+Blossomfall	5	1962
+White Lilies	1	1963
+White Lilies	2	1964
+White Lilies	3	1965
+White Lilies	4	1966
+White Lilies	5	1967
+Phase Transition Tech	1	1968
+Phase Transition Tech	2	1969
+Phase Transition Tech	3	1970
+Phase Transition Tech	4	1971
+Phase Transition Tech	5	1972
+Hyperclock	1	1973
+Hyperclock	2	1974
+Hyperclock	3	1975
+Hyperclock	4	1976
+Hyperclock	5	1977
+Encephalon	1	1978
+Encephalon	2	1979
+Encephalon	3	1980
+Encephalon	4	1981
+Encephalon	5	1982
+Dissolve Seal	1	1983
+Dissolve Seal	2	1984
+Dissolve Seal	3	1985
+Dissolve Seal	4	1986
+Dissolve Seal	5	1987
+Taboo	1	1988
+Taboo	2	1989
+Taboo	3	1990
+Taboo	4	1991
+Taboo	5	1992
+Unlimited Output	1	1993
+Unlimited Output	2	1994
+Unlimited Output	3	1995
+Unlimited Output	4	1996
+Unlimited Output	5	1997
+Spotlight	1	1998
+Spotlight	2	1999
+Spotlight	3	2000
+Spotlight	4	2001
+Spotlight	5	2002
+Fireworks	1	2003
+Fireworks	2	2004
+Fireworks	3	2005
+Fireworks	4	2006
+Fireworks	5	2007
+Opportunist	1	2008
+Opportunist	2	2009
+Opportunist	3	2010
+Opportunist	4	2011
+Opportunist	5	2012
+Armor Piercing	1	2013
+Armor Piercing	2	2014
+Armor Piercing	3	2015
+Armor Piercing	4	2016
+Armor Piercing	5	2017
+Nullify Defense	1	2018
+Nullify Defense	2	2019
+Nullify Defense	3	2020
+Nullify Defense	4	2021
+Nullify Defense	5	2022
+Heartless Kill	1	2023
+Heartless Kill	2	2024
+Heartless Kill	3	2025
+Heartless Kill	4	2026
+Heartless Kill	5	2027
+Transmigration	1	2028
+Transmigration	2	2029
+Transmigration	3	2030
+Transmigration	4	2031
+Transmigration	5	2032
+Dead Zone	1	2033
+Dead Zone	2	2034
+Dead Zone	3	2035
+Dead Zone	4	2036
+Dead Zone	5	2037
+Endless Cycle	1	2038
+Endless Cycle	2	2039
+Endless Cycle	3	2040
+Endless Cycle	4	2041
+Endless Cycle	5	2042
+Fatal Blow	1	2043
+Fatal Blow	2	2044
+Fatal Blow	3	2045
+Fatal Blow	4	2046
+Fatal Blow	5	2047
+Fury	1	2048
+Fury	2	2049
+Fury	3	2050
+Fury	4	2051
+Fury	5	2052
+Sanguine Steel	1	2053
+Sanguine Steel	2	2054
+Sanguine Steel	3	2055
+Sanguine Steel	4	2056
+Sanguine Steel	5	2057
+Gravity Pinwheel	1	2058
+Gravity Pinwheel	2	2059
+Gravity Pinwheel	3	2060
+Gravity Pinwheel	4	2061
+Gravity Pinwheel	5	2062
+Dimensional Fold	1	2063
+Dimensional Fold	2	2064
+Dimensional Fold	3	2065
+Dimensional Fold	4	2066
+Dimensional Fold	5	2067
+Dimensional Wrinkle	1	2068
+Dimensional Wrinkle	2	2069
+Dimensional Wrinkle	3	2070
+Dimensional Wrinkle	4	2071
+Dimensional Wrinkle	5	2072
+Swift Kitty	1	2073
+Swift Kitty	2	2074
+Swift Kitty	3	2075
+Swift Kitty	4	2076
+Swift Kitty	5	2077
+Now You See Me...	1	2078
+Now You See Me...	2	2079
+Now You See Me...	3	2080
+Now You See Me...	4	2081
+Now You See Me...	5	2082
+Quick Prep	1	2083
+Quick Prep	2	2084
+Quick Prep	3	2085
+Quick Prep	4	2086
+Quick Prep	5	2087
+Doublestrike	1	2088
+Doublestrike	2	2089
+Doublestrike	3	2090
+Doublestrike	4	2091
+Doublestrike	5	2092
+Stay True	1	2093
+Stay True	2	2094
+Stay True	3	2095
+Stay True	4	2096
+Stay True	5	2097
+Bushido	1	2098
+Bushido	2	2099
+Bushido	3	2100
+Bushido	4	2101
+Bushido	5	2102
+Senton	1	2103
+Senton	2	2104
+Senton	3	2105
+Senton	4	2106
+Senton	5	2107
+Double Team	1	2108
+Double Team	2	2109
+Double Team	3	2110
+Double Team	4	2111
+Double Team	5	2112
+Trespass	1	2113
+Trespass	2	2114
+Trespass	3	2115
+Trespass	4	2116
+Trespass	5	2117
+Persevering Strength	1	2121
+Persevering Strength	2	2122
+Persevering Strength	3	2123
+Persevering Strength	4	2124
+Persevering Strength	5	2125
+Mad Warrior	1	2126
+Mad Warrior	2	2127
+Mad Warrior	3	2128
+Mad Warrior	4	2129
+Mad Warrior	5	2130
+Life Absorb	1	2131
+Life Absorb	2	2132
+Life Absorb	3	2133
+Life Absorb	4	2134
+Life Absorb	5	2135
+Rage	1	2136
+Rage	2	2137
+Rage	3	2138
+Rage	4	2139
+Rage	5	2140
+Resist Fire	1	2141
+Resist Fire	2	2142
+Resist Fire	3	2143
+Resist Fire	4	2144
+Resist Fire	5	2145
+Resist Water	1	2146
+Resist Water	2	2147
+Resist Water	3	2148
+Resist Water	4	2149
+Resist Water	5	2150
+Resist Wind	1	2151
+Resist Wind	2	2152
+Resist Wind	3	2153
+Resist Wind	4	2154
+Resist Wind	5	2155
+Resist Earth	1	2156
+Resist Earth	2	2157
+Resist Earth	3	2158
+Resist Earth	4	2159
+Resist Earth	5	2160
+Resist Electric	1	2161
+Resist Electric	2	2162
+Resist Electric	3	2163
+Resist Electric	4	2164
+Resist Electric	5	2165
+Resist Ice	1	2166
+Resist Ice	2	2167
+Resist Ice	3	2168
+Resist Ice	4	2169
+Resist Ice	5	2170
+Resist Light	1	2171
+Resist Light	2	2172
+Resist Light	3	2173
+Resist Light	4	2174
+Resist Light	5	2175
+Resist Dark	1	2176
+Resist Dark	2	2177
+Resist Dark	3	2178
+Resist Dark	4	2179
+Resist Dark	5	2180
+Elemental Mastery	1	2181
+Elemental Mastery	2	2182
+Elemental Mastery	3	2183
+Elemental Mastery	4	2184
+Elemental Mastery	5	2185
+Acute Focus	1	2186
+Acute Focus	2	2187
+Acute Focus	3	2188
+Acute Focus	4	2189
+Acute Focus	5	2190
+Streamlined Step	1	2191
+Streamlined Step	2	2192
+Streamlined Step	3	2193
+Streamlined Step	4	2194
+Streamlined Step	5	2195
+Back Attack	1	2196
+Back Attack	2	2197
+Back Attack	3	2198
+Back Attack	4	2199
+Back Attack	5	2200
+Healing Wind	1	2201
+Healing Wind	2	2202
+Healing Wind	3	2203
+Healing Wind	4	2204
+Healing Wind	5	2205
+Challenger	1	2206
+Challenger	2	2207
+Challenger	3	2208
+Challenger	4	2209
+Challenger	5	2210
+High-Speed Preparation	1	2211
+High-Speed Preparation	2	2212
+High-Speed Preparation	3	2213
+High-Speed Preparation	4	2214
+High-Speed Preparation	5	2215
+Counter	1	2216
+Counter	2	2217
+Counter	3	2218
+Counter	4	2219
+Counter	5	2220
+Pinpoint Weakness	1	2221
+Pinpoint Weakness	2	2222
+Pinpoint Weakness	3	2223
+Pinpoint Weakness	4	2224
+Pinpoint Weakness	5	2225
+Unrelenting Spirit	1	2226
+Unrelenting Spirit	2	2227
+Unrelenting Spirit	3	2228
+Unrelenting Spirit	4	2229
+Unrelenting Spirit	5	2230
+Vital Charge	1	2231
+Vital Charge	2	2232
+Vital Charge	3	2233
+Vital Charge	4	2234
+Vital Charge	5	2235
+Damage Spike	1	2236
+Damage Spike	2	2237
+Damage Spike	3	2238
+Damage Spike	4	2239
+Damage Spike	5	2240
+Into the Ground	1	2241
+Into the Ground	2	2242
+Into the Ground	3	2243
+Into the Ground	4	2244
+Into the Ground	5	2245
+Treasure Sensor	1	2246
+Treasure Sensor	2	2247
+Treasure Sensor	3	2248
+Treasure Sensor	4	2249
+Treasure Sensor	5	2250
+Accelerated Growth	1	2251
+Accelerated Growth	2	2252
+Accelerated Growth	3	2253
+Accelerated Growth	4	2254
+Accelerated Growth	5	2255
+Beast Hunter	1	2256
+Beast Hunter	2	2257
+Beast Hunter	3	2258
+Beast Hunter	4	2259
+Beast Hunter	5	2260
+Insect Hunter	1	2261
+Insect Hunter	2	2262
+Insect Hunter	3	2263
+Insect Hunter	4	2264
+Insect Hunter	5	2265
+Aerial Hunter	1	2266
+Aerial Hunter	2	2267
+Aerial Hunter	3	2268
+Aerial Hunter	4	2269
+Aerial Hunter	5	2270
+Aquatic Hunter	1	2271
+Aquatic Hunter	2	2272
+Aquatic Hunter	3	2273
+Aquatic Hunter	4	2274
+Aquatic Hunter	5	2275
+Humanoid Hunter	1	2276
+Humanoid Hunter	2	2277
+Humanoid Hunter	3	2278
+Humanoid Hunter	4	2279
+Humanoid Hunter	5	2280
+Machine Hunter	1	2281
+Machine Hunter	2	2282
+Machine Hunter	3	2283
+Machine Hunter	4	2284
+Machine Hunter	5	2285
+Titan Hunter	1	2286
+Titan Hunter	2	2287
+Titan Hunter	3	2288
+Titan Hunter	4	2289
+Titan Hunter	5	2290
+Beast Slayer	1	2291
+Beast Slayer	2	2292
+Beast Slayer	3	2293
+Beast Slayer	4	2294
+Beast Slayer	5	2295
+Insect Slayer	1	2296
+Insect Slayer	2	2297
+Insect Slayer	3	2298
+Insect Slayer	4	2299
+Insect Slayer	5	2300
+Aerial Slayer	1	2301
+Aerial Slayer	2	2302
+Aerial Slayer	3	2303
+Aerial Slayer	4	2304
+Aerial Slayer	5	2305
+Aquatic Slayer	1	2306
+Aquatic Slayer	2	2307
+Aquatic Slayer	3	2308
+Aquatic Slayer	4	2309
+Aquatic Slayer	5	2310
+Humanoid Slayer	1	2311
+Humanoid Slayer	2	2312
+Humanoid Slayer	3	2313
+Humanoid Slayer	4	2314
+Humanoid Slayer	5	2315
+Machine Slayer	1	2316
+Machine Slayer	2	2317
+Machine Slayer	3	2318
+Machine Slayer	4	2319
+Machine Slayer	5	2320
+Titan Slayer	1	2321
+Titan Slayer	2	2322
+Titan Slayer	3	2323
+Titan Slayer	4	2324
+Titan Slayer	5	2325
+Front Attack	1	2326
+Front Attack	2	2327
+Front Attack	3	2328
+Front Attack	4	2329
+Front Attack	5	2330
+Gold Rush	1	2331
+Gold Rush	2	2332
+Gold Rush	3	2333
+Gold Rush	4	2334
+Gold Rush	5	2335
+Emergency Guard	1	2336
+Emergency Guard	2	2337
+Emergency Guard	3	2338
+Emergency Guard	4	2339
+Emergency Guard	5	2340
+Pierce	1	2341
+Pierce	2	2342
+Pierce	3	2343
+Pierce	4	2344
+Pierce	5	2345
+Smooth Action	1	2346
+Smooth Action	2	2347
+Smooth Action	3	2348
+Smooth Action	4	2349
+Smooth Action	5	2350
+Gentle Touch	1	2351
+Gentle Touch	2	2352
+Gentle Touch	3	2353
+Gentle Touch	4	2354
+Gentle Touch	5	2355
+Cloud Conceal	1	2356
+Cloud Conceal	2	2357
+Cloud Conceal	3	2358
+Cloud Conceal	4	2359
+Cloud Conceal	5	2360
+Flash	1	2361
+Flash	2	2362
+Flash	3	2363
+Flash	4	2364
+Flash	5	2365
+Insulting Flourish	1	2366
+Insulting Flourish	2	2367
+Insulting Flourish	3	2368
+Insulting Flourish	4	2369
+Insulting Flourish	5	2370
+Attention Grabber	1	2371
+Attention Grabber	2	2372
+Attention Grabber	3	2373
+Attention Grabber	4	2374
+Attention Grabber	5	2375
+Glittering Stars	1	2376
+Glittering Stars	2	2377
+Glittering Stars	3	2378
+Glittering Stars	4	2379
+Glittering Stars	5	2380
+Prolonged Fight	1	2381
+Prolonged Fight	2	2382
+Prolonged Fight	3	2383
+Prolonged Fight	4	2384
+Prolonged Fight	5	2385
+Rapid Regen	1	2386
+Rapid Regen	2	2387
+Rapid Regen	3	2388
+Rapid Regen	4	2389
+Rapid Regen	5	2390
+Movement Recovery	1	2391
+Movement Recovery	2	2392
+Movement Recovery	3	2393
+Movement Recovery	4	2394
+Movement Recovery	5	2395
+Potion Keeper	1	2396
+Potion Keeper	2	2397
+Potion Keeper	3	2398
+Potion Keeper	4	2399
+Potion Keeper	5	2400
+Tight Space	1	2401
+Tight Space	2	2402
+Tight Space	3	2403
+Tight Space	4	2404
+Tight Space	5	2405
+Natural Guard	1	2406
+Natural Guard	2	2407
+Natural Guard	3	2408
+Natural Guard	4	2409
+Natural Guard	5	2410
+Encourage	1	2411
+Encourage	2	2412
+Encourage	3	2413
+Encourage	4	2414
+Encourage	5	2415
+Evasion Aura	1	2416
+Evasion Aura	2	2417
+Evasion Aura	3	2418
+Evasion Aura	4	2419
+Evasion Aura	5	2420
+Attack Aura	1	2421
+Attack Aura	2	2422
+Attack Aura	3	2423
+Attack Aura	4	2424
+Attack Aura	5	2425
+Barrier Aura	1	2426
+Barrier Aura	2	2427
+Barrier Aura	3	2428
+Barrier Aura	4	2429
+Barrier Aura	5	2430
+Precision Aura	1	2431
+Precision Aura	2	2432
+Precision Aura	3	2433
+Precision Aura	4	2434
+Precision Aura	5	2435
+Into the Air	1	2436
+Into the Air	2	2437
+Into the Air	3	2438
+Into the Air	4	2439
+Into the Air	5	2440
+Open Space	1	2441
+Open Space	2	2442
+Open Space	3	2443
+Open Space	4	2444
+Open Space	5	2445
+Grandarbor's Roots	1	2446
+Grandarbor's Roots	2	2447
+Grandarbor's Roots	3	2448
+Grandarbor's Roots	4	2449
+Grandarbor's Roots	5	2450
+Good Balance	1	2451
+Good Balance	2	2452
+Good Balance	3	2453
+Good Balance	4	2454
+Good Balance	5	2455
+Never Fall	1	2456
+Never Fall	2	2457
+Never Fall	3	2458
+Never Fall	4	2459
+Never Fall	5	2460
+Immovable	1	2461
+Immovable	2	2462
+Immovable	3	2463
+Immovable	4	2464
+Immovable	5	2465
+Ultra Heavy	1	2466
+Ultra Heavy	2	2467
+Ultra Heavy	3	2468
+Ultra Heavy	4	2469
+Ultra Heavy	5	2470
+Ukemi	1	2476
+Ukemi	2	2477
+Ukemi	3	2478
+Ukemi	4	2479
+Ukemi	5	2480
+Avenger	1	2481
+Avenger	2	2482
+Avenger	3	2483
+Avenger	4	2484
+Avenger	5	2485
+Side Attack	1	2486
+Side Attack	2	2487
+Side Attack	3	2488
+Side Attack	4	2489
+Side Attack	5	2490
+Swift Strike	1	2491
+Swift Strike	2	2492
+Swift Strike	3	2493
+Swift Strike	4	2494
+Swift Strike	5	2495
+Target Weakness	1	2496
+Target Weakness	2	2497
+Target Weakness	3	2498
+Target Weakness	4	2499
+Target Weakness	5	2500
+Ether Barrier	1	2501
+Ether Barrier	2	2502
+Ether Barrier	3	2503
+Ether Barrier	4	2504
+Ether Barrier	5	2505
+Solid	1	2506
+Solid	2	2507
+Solid	3	2508
+Solid	4	2509
+Solid	5	2510
+Physical Barrier	1	2511
+Physical Barrier	2	2512
+Physical Barrier	3	2513
+Physical Barrier	4	2514
+Physical Barrier	5	2515
+Silent Strike	1	2516
+Silent Strike	2	2517
+Silent Strike	3	2518
+Silent Strike	4	2519
+Silent Strike	5	2520
+Vendetta (Common)	1	2521
+Vendetta (Common)	2	2522
+Vendetta (Common)	3	2523
+Vendetta (Common)	4	2524
+Vendetta (Common)	5	2525
+Ultimate Combo	1	2526
+Ultimate Combo	2	2527
+Ultimate Combo	3	2528
+Ultimate Combo	4	2529
+Ultimate Combo	5	2530
+Weaponsmaster	1	2531
+Weaponsmaster	2	2532
+Weaponsmaster	3	2533
+Weaponsmaster	4	2534
+Weaponsmaster	5	2535
+Slamdown	1	2536
+Slamdown	2	2537
+Slamdown	3	2538
+Slamdown	4	2539
+Slamdown	5	2540
+Orb Master	1	2541
+Orb Master	2	2542
+Orb Master	3	2543
+Orb Master	4	2544
+Orb Master	5	2545
+Heaven's Tracker	1	3438
+Heaven's Tracker	2	3439
+Heaven's Tracker	3	3440
+Heaven's Tracker	4	3441
+Heaven's Tracker	5	3442
+Heartbreaker	1	3443
+Heartbreaker	2	3444
+Heartbreaker	3	3445
+Heartbreaker	4	3446
+Heartbreaker	5	3447
+Hardware Acceleration	1	3448
+Hardware Acceleration	2	3449
+Hardware Acceleration	3	3450
+Hardware Acceleration	4	3451
+Hardware Acceleration	5	3452
+Hyperaffinity Circuit	1	3453
+Hyperaffinity Circuit	2	3454
+Hyperaffinity Circuit	3	3455
+Hyperaffinity Circuit	4	3456
+Hyperaffinity Circuit	5	3457
+Reconstitute	1	3458
+Reconstitute	2	3459
+Reconstitute	3	3460
+Reconstitute	4	3461
+Reconstitute	5	3462
 \.
 
 
@@ -2635,6 +4082,193 @@ Master Healer	0	0	50	0	-12	t	t
 Holy Cavalier	10	0	40	0	-8	t	t
 Holy Knight	0	10	40	0	-4	t	t
 Jack-of-all-Trades	10	10	30	0	0	t	f
+\.
+
+
+--
+-- Data for Name: common_blade_battle_skills; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.common_blade_battle_skills (skill, role) FROM stdin;
+Persevering Strength	TNK
+Persevering Strength	ATK
+Persevering Strength	HLR
+Mad Warrior	ATK
+Life Absorb	ATK
+Rage	TNK
+Rage	ATK
+Rage	HLR
+Resist Fire	TNK
+Resist Fire	ATK
+Resist Fire	HLR
+Resist Water	TNK
+Resist Water	ATK
+Resist Water	HLR
+Resist Wind	TNK
+Resist Wind	ATK
+Resist Wind	HLR
+Resist Earth	TNK
+Resist Earth	ATK
+Resist Earth	HLR
+Resist Electric	TNK
+Resist Electric	ATK
+Resist Electric	HLR
+Resist Ice	TNK
+Resist Ice	ATK
+Resist Ice	HLR
+Resist Light	TNK
+Resist Light	ATK
+Resist Light	HLR
+Resist Dark	TNK
+Resist Dark	ATK
+Resist Dark	HLR
+Elemental Mastery	ATK
+Elemental Mastery	HLR
+Acute Focus	TNK
+Streamlined Step	TNK
+Streamlined Step	ATK
+Streamlined Step	HLR
+Back Attack	ATK
+Healing Wind	HLR
+Challenger	TNK
+Challenger	ATK
+Challenger	HLR
+High-Speed Preparation	TNK
+High-Speed Preparation	ATK
+High-Speed Preparation	HLR
+Counter	TNK
+Pinpoint Weakness	ATK
+Unrelenting Spirit	TNK
+Vital Charge	ATK
+Vital Charge	HLR
+Damage Spike	TNK
+Into the Ground	TNK
+Into the Ground	ATK
+Into the Ground	HLR
+Treasure Sensor	TNK
+Treasure Sensor	ATK
+Treasure Sensor	HLR
+Accelerated Growth	TNK
+Accelerated Growth	ATK
+Accelerated Growth	HLR
+Beast Hunter	TNK
+Beast Hunter	ATK
+Beast Hunter	HLR
+Insect Hunter	TNK
+Insect Hunter	ATK
+Insect Hunter	HLR
+Aerial Hunter	TNK
+Aerial Hunter	ATK
+Aerial Hunter	HLR
+Aquatic Hunter	TNK
+Aquatic Hunter	ATK
+Aquatic Hunter	HLR
+Humanoid Hunter	TNK
+Humanoid Hunter	ATK
+Humanoid Hunter	HLR
+Machine Hunter	TNK
+Machine Hunter	ATK
+Machine Hunter	HLR
+Titan Hunter	TNK
+Titan Hunter	ATK
+Titan Hunter	HLR
+Beast Slayer	ATK
+Insect Slayer	ATK
+Aerial Slayer	ATK
+Aquatic Slayer	ATK
+Humanoid Slayer	ATK
+Machine Slayer	ATK
+Titan Slayer	ATK
+Front Attack	TNK
+Front Attack	ATK
+Front Attack	HLR
+Gold Rush	TNK
+Gold Rush	ATK
+Gold Rush	HLR
+Emergency Guard	TNK
+Emergency Guard	ATK
+Emergency Guard	HLR
+Pierce	ATK
+Pierce	HLR
+Smooth Action	ATK
+Smooth Action	HLR
+Gentle Touch	ATK
+Gentle Touch	HLR
+Cloud Conceal	HLR
+Flash	TNK
+Insulting Flourish	TNK
+Attention Grabber	TNK
+Glittering Stars	TNK
+Prolonged Fight	TNK
+Prolonged Fight	ATK
+Prolonged Fight	HLR
+Rapid Regen	TNK
+Movement Recovery	TNK
+Movement Recovery	ATK
+Movement Recovery	HLR
+Potion Keeper	HLR
+Tight Space	TNK
+Tight Space	ATK
+Tight Space	HLR
+Natural Guard	TNK
+Encourage	TNK
+Encourage	ATK
+Encourage	HLR
+Evasion Aura	TNK
+Attack Aura	TNK
+Attack Aura	ATK
+Attack Aura	HLR
+Barrier Aura	HLR
+Precision Aura	TNK
+Precision Aura	ATK
+Precision Aura	HLR
+Into the Air	ATK
+Into the Air	HLR
+Open Space	TNK
+Open Space	ATK
+Open Space	HLR
+Grandarbor's Roots	TNK
+Grandarbor's Roots	ATK
+Grandarbor's Roots	HLR
+Good Balance	TNK
+Good Balance	ATK
+Good Balance	HLR
+Never Fall	TNK
+Never Fall	ATK
+Immovable	TNK
+Immovable	ATK
+Immovable	HLR
+Ultra Heavy	TNK
+Ukemi	TNK
+Ukemi	ATK
+Ukemi	HLR
+Avenger	TNK
+Avenger	ATK
+Avenger	HLR
+Side Attack	ATK
+Side Attack	HLR
+Swift Strike	TNK
+Swift Strike	ATK
+Swift Strike	HLR
+Target Weakness	ATK
+Target Weakness	HLR
+Ether Barrier	TNK
+Solid	TNK
+Physical Barrier	TNK
+Silent Strike	TNK
+Silent Strike	ATK
+Silent Strike	HLR
+Vendetta	TNK
+Ultimate Combo	ATK
+Weaponsmaster	TNK
+Weaponsmaster	ATK
+Weaponsmaster	HLR
+Slamdown	TNK
+Slamdown	ATK
+Slamdown	HLR
+Orb Master	TNK
+Orb Master	ATK
+Orb Master	HLR
 \.
 
 
@@ -37897,11 +39531,27 @@ ALTER TABLE ONLY xeno2.arts
 
 
 --
+-- Name: blade_battle_skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_battle_skills
+    ADD CONSTRAINT blade_battle_skills_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: blade_chances_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
 ALTER TABLE ONLY xeno2.blade_chances
     ADD CONSTRAINT blade_chances_pkey PRIMARY KEY (blade, seed);
+
+
+--
+-- Name: blade_skill_enhance_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_skill_enhance
+    ADD CONSTRAINT blade_skill_enhance_pkey PRIMARY KEY (skill, level);
 
 
 --
@@ -38121,6 +39771,22 @@ ALTER TABLE ONLY xeno2.accessories
 
 
 --
+-- Name: blade_skill_enhance_caption_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_skill_enhance
+    ADD CONSTRAINT blade_skill_enhance_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance(id);
+
+
+--
+-- Name: blade_skill_enhance_skill_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_skill_enhance
+    ADD CONSTRAINT blade_skill_enhance_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.blade_battle_skills(name);
+
+
+--
 -- Name: chip_locations_chip_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -38150,6 +39816,14 @@ ALTER TABLE ONLY xeno2.chip_weapons
 
 ALTER TABLE ONLY xeno2.class_roles
     ADD CONSTRAINT class_roles_class_fkey FOREIGN KEY (class) REFERENCES xeno2.classes(name);
+
+
+--
+-- Name: common_blade_battle_skills_skill_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.common_blade_battle_skills
+    ADD CONSTRAINT common_blade_battle_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.blade_battle_skills(name);
 
 
 --
