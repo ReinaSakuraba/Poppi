@@ -38,7 +38,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name.lower())
 
         if record is None:
-            return await self.show_possibilities(ctx, 'arts', name)
+            return await ctx.invoke(self.xc2art_search, name=name)
 
         name, driver, weapon, type_, damage_ratio, hits, range_, recharge, reaction, description, wp, caption, distance, radius, hate, accuracy_mod, crit_mod = record
 
@@ -82,7 +82,7 @@ class Xenoblade2:
     async def xc2art_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 art."""
 
-        await self.search_entries(ctx, 'arts', name)
+        await self.search_entries(ctx, name, 'arts', type_name='Art')
 
     @xc2art.error
     @xc2art_search.error
@@ -117,7 +117,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name.lower())
 
         if record is None:
-            return await self.show_possibilities(ctx, 'specials', name)
+            return await ctx.invoke(self.xc2special_search, name=name)
 
         name, level, type_, damage_ratio, hits, range_, reaction, description, caption, distance, radius, hate, accuracy_mod, crit_mod = record
 
@@ -148,7 +148,7 @@ class Xenoblade2:
     async def xc2special_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 special."""
 
-        await self.search_entries(ctx, 'specials', name)
+        await self.search_entries(ctx, name, 'specials', type_name='Special')
 
     @xc2special.error
     @xc2special_search.error
@@ -211,7 +211,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name.lower())
 
         if record is None:
-            return await self.show_possibilities(ctx, 'skills', name)
+            return await ctx.invoke(self.xc2skill_search, name=name)
 
         skill_type, name, caption, driver, chart, sp = record
 
@@ -230,13 +230,13 @@ class Xenoblade2:
     async def xc2skill_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 skills."""
 
-        await self.all_entries(ctx, 'skills')
+        await self.all_entries(ctx, 'skills', 'blade_battle_skills')
 
     @xc2skill.command(name='search')
     async def xc2skill_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 skill."""
 
-        await self.search_entries(ctx, 'skills', name)
+        await self.search_entries(ctx, name, 'skills', 'blade_battle_skills', type_name='Skill')
 
     @xc2skill.error
     @xc2skill_search.error
@@ -272,7 +272,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name.lower())
 
         if record is None:
-            return await self.show_possibilities(ctx, 'weapons', name)
+            return await ctx.invoke(self.xc2weapon_search, name=name)
 
         name, weapon_type, rank, damage, stability, crit_rate, block_rate, effect, chip = record
 
@@ -299,7 +299,7 @@ class Xenoblade2:
     async def xc2weapon_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 weapon."""
 
-        await self.search_entries(ctx, 'weapons', name)
+        await self.search_entries(ctx, name, 'weapons', type_name='Weapon')
 
     @xc2weapon.error
     @xc2weapon_search.error
@@ -331,7 +331,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name.lower().replace(' chip', ''))
 
         if record is None:
-            return await self.show_possibilities(ctx, 'chips', name)
+            return await ctx.invoke(self.xc2chip_search, name=name)
 
         name, rank, sell_price, rarity, weapons, locations = record
 
@@ -354,7 +354,7 @@ class Xenoblade2:
     async def xc2chip_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 core chip."""
 
-        await self.search_entries(ctx, 'chips', name)
+        await self.search_entries(ctx, name, 'chips', type_name='Chip')
 
     @xc2chip.error
     @xc2chip_search.error
@@ -387,7 +387,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name.lower())
 
         if record is None:
-            return await self.show_possibilities(ctx, 'cores', name)
+            return await ctx.invoke(self.xc2core_search, name=name)
 
         name, effect, sell_price, rarity, materials = record
 
@@ -408,7 +408,7 @@ class Xenoblade2:
     async def xc2core_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 aux core."""
 
-        await self.search_entries(ctx, 'cores', name)
+        await self.search_entries(ctx, name, 'cores', type_name='Core')
 
     @xc2core.error
     @xc2core_search.error
@@ -436,7 +436,7 @@ class Xenoblade2:
         records = await ctx.pool.fetch(query, name.lower())
 
         if not records:
-            return await self.show_possibilities(ctx, 'accessories', name)
+             return await ctx.invoke(self.xc2accessory_search, name=name)
 
         embed = discord.Embed(title=records[0]['name'])
 
@@ -455,7 +455,7 @@ class Xenoblade2:
     async def xc2accessory_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 accessory."""
 
-        await self.search_entries(ctx, 'accessories', name)
+        await self.search_entries(ctx, name, 'accessories', type_name='Accessory')
 
     @xc2accessory.error
     @xc2accessory_search.error
@@ -490,7 +490,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name.lower())
 
         if record is None:
-            return await self.show_possibilities(ctx, 'pouch_items', name)
+            return await ctx.invoke(self.xc2pouch_search, name=name)
 
         name, category, sell_price, rarity, location, max_carry, time, trust, effects = record
 
@@ -516,7 +516,7 @@ class Xenoblade2:
     async def xc2pouch_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 pouch item."""
 
-        await self.search_entries(ctx, 'pouch_items', name)
+        await self.search_entries(ctx, name, 'pouch_items', type_name='Pouch item')
 
     @xc2pouch.error
     @xc2pouch_search.error
@@ -549,7 +549,7 @@ class Xenoblade2:
         record = await ctx.pool.fetchrow(query, name.lower())
 
         if record is None:
-            return await self.show_possibilities(ctx, 'classes', name)
+            return await ctx.invoke(self.xc2class_search, name=name)
 
         name, roles, given, recieved, heal, auto, arts, potion, revive = record
 
@@ -575,7 +575,7 @@ class Xenoblade2:
     async def xc2class_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 class."""
 
-        await self.search_entries(ctx, 'classes', name)
+        await self.search_entries(ctx, name, 'classes', type_name='Class')
 
     @xc2class.error
     @xc2class_search.error
@@ -621,51 +621,26 @@ class Xenoblade2:
 
         await ctx.send(f'```\n{render}\n```')
 
-    async def show_possibilities(self, ctx: utils.Context, table_name: str, name: str):
+    async def search_entries(self, ctx: utils.Context, name: str, *table_names: str, type_name: str):
+        base_query = """
+                     SELECT name, SIMILARITY(name, $1)
+                     FROM xeno2.{0}
+                     WHERE name % $1
+                     """
+
+        formatted_query = "UNION".join(base_query.format(table_name) for table_name in table_names)
+
         query = f"""
-                SELECT
-                    STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
+                SELECT DISTINCT name, similarity
                 FROM (
-                    SELECT name
-                    FROM xeno2.{table_name}
-                    WHERE name % $1
-                    GROUP BY name
-                ) AS a;
+                    {formatted_query}
+                ) AS a
+                ORDER BY similarity DESC;
                 """
 
-        possibilities = await ctx.pool.fetchval(query, name)
-
-        if table_name == 'accessories':
-            type_name='Accessory'
-        else:
-            strip = 2 if table_name == 'classes' else 1
-            type_name = table_name[:-strip].replace('_', ' ').title()
-
-        if not possibilities:
-            return await ctx.send(f'{type_name} not found.')
-
-        await ctx.send(f'{type_name} not found. Did you mean...\n{possibilities}')
-
-    async def search_entries(self, ctx: utils.Context, table_name: str, name: str):
-        query = f"""
-                SELECT ARRAY(
-                    SELECT name
-                    FROM xeno2.{table_name}
-                    WHERE name % $1
-                    GROUP BY name
-                    ORDER BY SIMILARITY(name, $1) DESC
-                );
-                """
-
-        results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query, name), 1)]
+        results = [f'{index}: {name}' for index, (name, _) in enumerate(await ctx.pool.fetch(query, name), 1)]
 
         if not results:
-            if table_name == 'accessories':
-                type_name='Accessory'
-            else:
-                strip = 2 if table_name == 'classes' else 1
-                type_name = table_name[:-strip].replace('_', ' ').title()
-
             return await ctx.send(f'{type_name} not found.')
 
         try:
@@ -675,16 +650,23 @@ class Xenoblade2:
         except Exception as e:
             await ctx.send(e)
 
-    async def all_entries(self, ctx: utils.Context, table_name: str):
+    async def all_entries(self, ctx: utils.Context, *table_names: str):
+        base_query = """
+                     SELECT name
+                     FROM xeno2.{0}
+                     """
+
+        formatted_query = "UNION".join(base_query.format(table_name) for table_name in table_names)
+
         query = f"""
-                SELECT ARRAY(
-                    SELECT DISTINCT name
-                    FROM xeno2.{table_name}
-                    ORDER BY name
-                );
+                SELECT DISTINCT name
+                FROM (
+                    {formatted_query}
+                ) AS a
+                ORDER BY name;
                 """
 
-        results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query), 1)]
+        results = [f'{index}: {name}' for index, (name,) in enumerate(await ctx.pool.fetch(query), 1)]
 
         try:
             paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
