@@ -226,7 +226,7 @@ class Xenoblade2:
 
         await ctx.send(embed=embed)
 
-    @xc2skill.command(name='all')
+    @xc2skill.command(name='all', ignore_extra=False)
     async def xc2skill_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 skills."""
 
@@ -240,9 +240,12 @@ class Xenoblade2:
 
     @xc2skill.error
     @xc2skill_search.error
+    @xc2skill_all.error
     async def xc2skill_error(self, ctx: utils.Context, error: Exception):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing skill name.')
+        elif isinstance(error, commands.TooManyArguments):
+            await ctx.invoke(self.xc2skill, name=ctx.message.content[len(ctx.prefix) + 9:])
 
     @utils.group(invoke_without_command=True)
     async def xc2weapon(self, ctx: utils.Context, *, name: str):
