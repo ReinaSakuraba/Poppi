@@ -161,18 +161,51 @@ class Xenoblade2:
         """Gives information for a Xenoblade Chronicles 2 skill."""
 
         query = """
-                SELECT
-                    name,
-                    driver,
-                    xeno2.format_caption(enhance_captions.caption, param, param_one, param_two),
-                    chart,
-                    sp
-                FROM xeno2.skills
-                JOIN xeno2.enhance
-                ON skills.caption=enhance.id
-                JOIN xeno2.enhance_captions
-                ON enhance.caption=enhance_captions.id
-                WHERE LOWER(name)=$1;
+                (
+                    SELECT
+                        'driver skill' AS type,
+                        name,
+                        xeno2.format_caption(enhance_captions.caption, param, param_one, param_two) AS caption,
+                        driver AS user,
+                        chart,
+                        sp
+                    FROM xeno2.skills
+                    JOIN xeno2.enhance
+                    ON skills.caption=enhance.id
+                    JOIN xeno2.enhance_captions
+                    ON enhance.caption=enhance_captions.id
+                    WHERE LOWER(name)=$1
+                )
+                UNION
+                (
+                    SELECT
+                        'blade battle skill' AS type,
+                        captions.skill,
+                        caption,
+                        STRING_AGG(role, E'\n') AS user,
+                        '',
+                        0
+                    FROM (
+                        SELECT
+                            skill,
+                            xeno2.format_caption(
+                                enhance_captions.caption,
+                                param,
+                                '[' || STRING_AGG(param_one::float::text, '/' ORDER BY level) || ']',
+                                '[' || STRING_AGG(param_two::float::text, '/' ORDER BY level) || ']'
+                            ) AS caption
+                        FROM xeno2.blade_skill_enhance AS skills
+                        JOIN xeno2.enhance
+                        ON skills.caption=enhance.id
+                        JOIN xeno2.enhance_captions
+                        ON enhance.caption=enhance_captions.id
+                        WHERE LOWER(skill)=$1
+                        GROUP BY skill, enhance_captions.caption, param
+                    ) AS captions
+                    LEFT JOIN xeno2.common_blade_battle_skills AS common
+                    ON captions.skill=common.skill
+                    GROUP BY captions.skill, caption
+                );
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
@@ -180,12 +213,16 @@ class Xenoblade2:
         if record is None:
             return await self.show_possibilities(ctx, 'skills', name)
 
-        name, driver, description, chart, sp = record
+        skill_type, name, caption, driver, chart, sp = record
 
-        embed = discord.Embed(title=name, description=description)
-        embed.add_field(name='Driver', value=driver)
-        embed.add_field(name='Chart', value=chart)
-        embed.add_field(name='SP Needed', value=sp)
+        embed = discord.Embed(title=name, description=caption)
+
+        if skill_type == 'driver skill':
+            embed.add_field(name='Driver', value=driver)
+            embed.add_field(name='Chart', value=chart)
+            embed.add_field(name='SP Needed', value=sp)
+        elif skill_type == 'blade battle skill' and driver:
+            embed.add_field(name='Roles', value=driver)
 
         await ctx.send(embed=embed)
 
