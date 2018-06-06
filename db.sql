@@ -4258,7 +4258,7 @@ Physical Barrier	TNK
 Silent Strike	TNK
 Silent Strike	ATK
 Silent Strike	HLR
-Vendetta	TNK
+Vendetta (Common)	TNK
 Ultimate Combo	ATK
 Weaponsmaster	TNK
 Weaponsmaster	ATK
