@@ -150,6 +150,22 @@ CREATE TABLE xeno2.blade_chances (
 ALTER TABLE xeno2.blade_chances OWNER TO poppi;
 
 --
+-- Name: blade_field_skills; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_field_skills (
+    name text NOT NULL,
+    category text NOT NULL,
+    caption text NOT NULL,
+    rarity smallint NOT NULL,
+    min_level smallint NOT NULL,
+    max_level smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_field_skills OWNER TO poppi;
+
+--
 -- Name: blade_skill_enhance; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -1734,6 +1750,69 @@ T-elos	2	5.00	f
 T-elos	3	5.00	f
 T-elos	4	5.00	f
 T-elos	5	5.00	f
+\.
+
+
+--
+-- Data for Name: blade_field_skills; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_field_skills (name, category, caption, rarity, min_level, max_level) FROM stdin;
+Forestry	Collection	Knowledge related to trees.	1	1	3
+Botany	Collection	Knowledge related to plants.	1	1	5
+Agronomy	Collection	Knowledge related to vegetables.	1	1	3
+Entomology	Collection	Knowledge related to insects.	1	1	3
+Ichthyology	Collection	Knowledge related to fish.	1	1	3
+Mineralogy	Collection	Knowledge related to minerals.	1	1	3
+Salvaging Mastery	Collection	Knowledge related to salvaging.	2	1	3
+Fire Mastery	Elemental	The power of a Fire Blade.	1	1	3
+Water Mastery	Elemental	The power of a Water Blade.	1	1	3
+Earth Mastery	Elemental	The power of an Earth Blade.	1	1	5
+Wind Mastery	Elemental	The power of a Wind Blade.	1	1	5
+Electric Mastery	Elemental	The power of an Electric Blade.	1	1	5
+Ice Mastery	Elemental	The power of an Ice Blade.	1	1	3
+Dark Mastery	Elemental	The power of a Dark Blade.	2	1	5
+Light Mastery	Rare	The power of a Light Blade.	3	1	3
+Lockpicking	Rare	The power to open various things. Works on doors, treasure troves, etc.	3	1	3
+Keen Eye	Rare	The power to see things clearly. Used to notice small changes, etc.	3	1	3
+Leaping	Rare	The power to jump. Used to reach high places.	3	1	5
+Superstrength	Rare	Extraordinary physical strength. Used to break things, lift them up, etc.	3	1	5
+Focus	Rare	The power to focus on one thing. Also used to control one's power.	3	1	5
+Ancient Wisdom	Rare	Knowledge of ancient civilizations. Used to decode writing, etc.	3	1	3
+Nopon Wisdom	Rare	Knowledge related to Nopon. Decode writing, speak Nopon, etc.	3	1	3
+Fortitude	Rare	The power to endure hardships. It even helps cope with boring jobs.	3	1	3
+Cooking	Rare	The power to prepare delicious food. Skill exclusive to Pyra.	3	1	3
+Miasma Dispersal	Rare	Disperse poison gas emitted by Titans. Skill exclusive to Roc.	3	1	3
+Passionate Soul	Rare	A burning heart that crushes the strong. Skill exclusive to Godfrey.	3	1	3
+Justice-Loving Soul	Rare	A just heart that tolerates no evil. Skill exclusive to Godfrey.	3	1	3
+Kind Soul	Rare	A kind heart that helps the weak. Skill exclusive to Godfrey.	3	1	3
+Assassination	Rare	Judge and punish those who do evil. Skill exclusive to Perceval.	3	1	3
+Patissier	Rare	Enjoy making tasty sweet things. Skill exclusive to Gorg.	3	1	3
+Cavalier Attitude	Rare	The belief that kings should delegate work to subjects. Exclusive to Dagas?	3	1	5
+Fleet of Foot	Rare	Move faster than the eye can see. Skill exclusive to Boreas.	3	1	3
+Beguiling Charms	Rare	Captivate all with your charming appearance. Exclusive to Floren.	3	1	5
+One Lucky Gal	Rare	Chase luck, but find only misfortune. Curse exclusive to Kasandra.	3	1	3
+Chivalry	Rare	A knight's sense for meting out justice. Skill exclusive to Perun.	3	1	3
+Girls' Talk	Rare	Talk openly, girl-to-girl.	3	1	5
+Clairvoyant Eye	Rare	Her left eye lets her see through all obstructions. Exclusive to Azami.	3	1	3
+Harmony	Rare	Have fun playing beautiful music. Skill exclusive to Ursula.	3	1	5
+Titan Weapon Wisdom	Rare	Deep knowledge of Titan weapons. Skill exclusive to Newt.	3	1	3
+Phonex Linguistics	Rare	The power to speak with Phonexes. Skill exclusive to Nim.	3	1	3
+Dumpling Pro	Rare	Prepare tasty triangular dumplings. Skill exclusive to Vess.	3	1	5
+Extra-Ancient Wisdom	Rare	Knowledge about super-old culture lost to the Cloud Sea. Exclusive to Adenine.	3	1	5
+Mastery of Thunder	Rare	The power to control electricity. Electra's not exactly good at this...	3	1	5
+Birdbrain	Rare	The power to instantly forget anything. Skill exclusive to Finch.	3	1	3
+Mental Arithmetic	Rare	Perform complex calculations at speed. Skill exclusive to KOS-MOS.	3	1	3
+Rampage	Rare	A power so great, it had to be sealed. Releasing it causes Herald to rampage.	3	1	5
+Weaving	Rare	Use looms to weave gorgeous fabrics. Skill exclusive to Vale.	3	1	3
+Prospecting	Rare	Discover never-before-seen precious stones. Skill exclusive to Agate.	3	1	3
+Icecraft	Rare	Create intricately beautiful art from ice. Skill exclusive to Dahlia.	3	1	3
+Info Collector	Mercenary	Skillful at retrieving information. Exclusively for Merc Missions.	1	1	3
+Expeditionist	Mercenary	Can use full strength even away from Driver. Exclusively for Merc Missions.	1	1	3
+Transport Mastery	Mercenary	Skillful at moving lots of goods quickly. Exclusively for Merc Missions.	1	1	3
+Industry Mastery	Mercenary	Skillful at machine repairs and upkeep. Exclusively for Merc Missions.	1	1	3
+Production Mastery	Mercenary	Skillful at deftly making things. Exclusively for Merc Missions.	1	1	3
+Eye for Beauty	Rare	Looks for girls to add to her entourage. Skill exclusive to Sheba.	3	1	3
 \.
 
 
@@ -39544,6 +39623,14 @@ ALTER TABLE ONLY xeno2.blade_battle_skills
 
 ALTER TABLE ONLY xeno2.blade_chances
     ADD CONSTRAINT blade_chances_pkey PRIMARY KEY (blade, seed);
+
+
+--
+-- Name: blade_field_skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_field_skills
+    ADD CONSTRAINT blade_field_skills_pkey PRIMARY KEY (name);
 
 
 --
