@@ -1217,22 +1217,22 @@ Surprise Elbow	Zeke	Calamity Scythe	Physical	260/310/360/410/460/520	2	One Targe
 Careful Swing	Zeke	Calamity Scythe	Physical	220/260/300/340/380/440	3	Circle (User)	11/11/10/10/9/8	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/750/3370/7480/18700	Aggro down / AOE	8	2	14	0	0
 Standing Ovation	Zeke	Calamity Scythe	Physical	390/430/470/510/550/600	1	Ahead	14/14/13/13/12/11	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/610/2750/6120/15300	AOE / Heal party on attack	8	2	14	0	0
 Bewilder Slash	Zeke	Calamity Scythe	Physical	240/290/340/390/440/480	2	Ahead	12/12/11/11/10/9	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/540/2450/5440/13600	AOE / HP Potion	8	2	0	0	20
-Earth Splitter	Rex	Combra Bardiche	Physical	160/190/220/250/280/320	1	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/610/2750/6120/15300	Low HP↑	10	0	14	0	0
-Powerquake	Rex	Combra Bardiche	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/820/3670/8160/20400	Break / Side attack↑	10	0	14	0	0
-Final Stone	Rex	Combra Bardiche	Physical	375/430/480/530/580/625	1	One Target	10/10/9/9/8/7	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/750/3370/7480/18700	HP down / Evasion	10	0	14	0	0
-Dust Up	Rex	Combra Bardiche	Physical	300/340/380/420/460/500	3	Circle (User)	13/13/12/12/11/10	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/540/2450/5440/13600	AOE / Insects↑	10	3	14	0	0
-Condor's Beak	Nia	Combra Bardiche	Physical	160/190/220/250/280/320	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/840/3760/8360/20900	Low HP↑	10	0	14	0	0
-Sand Break	Nia	Combra Bardiche	Physical	300/340/380/420/460/500	2	Circle (User)	14/14/13/13/12/11	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/610/2740/6080/15200	AOE / Insects↑	10	3	14	0	0
-Cobra Raid	Nia	Combra Bardiche	Physical	130/160/190/220/250/264	2	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/910/4100/9120/22800	Back attack↑	10	0	14	0	0
-Merciless Twister	Nia	Combra Bardiche	Ether	375/430/480/530/580/625	3	Circle (User)	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down / Evasion	10	2	10	0	0
-Blunt Force	Mòrag	Combra Bardiche	Physical	240/290/340/390/440/500	1	One Target	11/11/10/10/9/8	Smash		0/860/3890/8640/21600	Smash	10	0	14	0	0
-Heaven's Valor	Mòrag	Combra Bardiche	Physical	130/160/190/220/250/264	1	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/790/3560/7920/19800	Back attack↑	10	0	14	0	0
-Lunar Salutation	Mòrag	Combra Bardiche	Physical	200/240/280/320/360/420	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/650/2920/6480/16200	Low HP↑	10	0	14	0	0
-Twisted Thistle	Mòrag	Combra Bardiche	Physical	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/580/2590/5760/14400	AOE / HP down / Evasion	10	2	14	0	0
-Grudge Blow	Zeke	Combra Bardiche	Physical	120/140/160/180/200/240	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [100/100/120/120/150/150]%.	0/610/2740/6080/15200	Side attack↑	10	0	14	0	0
-Heaven's Revenge	Zeke	Combra Bardiche	Ether	130/160/190/220/250/264	1	Ahead	12/12/11/11/10/9	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/840/3760/8360/20900	AOE / Back attack↑	10	2	14	0	0
-Takedown Smash	Zeke	Combra Bardiche	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	Smash		0/910/4100/9120/22800	Smash	10	0	14	0	0
-Whirlwind of Passion	Zeke	Combra Bardiche	Ether	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down / Evasion	10	2	10	0	0
+Earth Splitter	Rex	Cobra Bardiche	Physical	160/190/220/250/280/320	1	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/610/2750/6120/15300	Low HP↑	10	0	14	0	0
+Powerquake	Rex	Cobra Bardiche	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/820/3670/8160/20400	Break / Side attack↑	10	0	14	0	0
+Final Stone	Rex	Cobra Bardiche	Physical	375/430/480/530/580/625	1	One Target	10/10/9/9/8/7	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/750/3370/7480/18700	HP down / Evasion	10	0	14	0	0
+Dust Up	Rex	Cobra Bardiche	Physical	300/340/380/420/460/500	3	Circle (User)	13/13/12/12/11/10	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/540/2450/5440/13600	AOE / Insects↑	10	3	14	0	0
+Condor's Beak	Nia	Cobra Bardiche	Physical	160/190/220/250/280/320	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/840/3760/8360/20900	Low HP↑	10	0	14	0	0
+Sand Break	Nia	Cobra Bardiche	Physical	300/340/380/420/460/500	2	Circle (User)	14/14/13/13/12/11	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/610/2740/6080/15200	AOE / Insects↑	10	3	14	0	0
+Cobra Raid	Nia	Cobra Bardiche	Physical	130/160/190/220/250/264	2	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/910/4100/9120/22800	Back attack↑	10	0	14	0	0
+Merciless Twister	Nia	Cobra Bardiche	Ether	375/430/480/530/580/625	3	Circle (User)	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down / Evasion	10	2	10	0	0
+Blunt Force	Mòrag	Cobra Bardiche	Physical	240/290/340/390/440/500	1	One Target	11/11/10/10/9/8	Smash		0/860/3890/8640/21600	Smash	10	0	14	0	0
+Heaven's Valor	Mòrag	Cobra Bardiche	Physical	130/160/190/220/250/264	1	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/790/3560/7920/19800	Back attack↑	10	0	14	0	0
+Lunar Salutation	Mòrag	Cobra Bardiche	Physical	200/240/280/320/360/420	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/650/2920/6480/16200	Low HP↑	10	0	14	0	0
+Twisted Thistle	Mòrag	Cobra Bardiche	Physical	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/580/2590/5760/14400	AOE / HP down / Evasion	10	2	14	0	0
+Grudge Blow	Zeke	Cobra Bardiche	Physical	120/140/160/180/200/240	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [100/100/120/120/150/150]%.	0/610/2740/6080/15200	Side attack↑	10	0	14	0	0
+Heaven's Revenge	Zeke	Cobra Bardiche	Ether	130/160/190/220/250/264	1	Ahead	12/12/11/11/10/9	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/840/3760/8360/20900	AOE / Back attack↑	10	2	14	0	0
+Takedown Smash	Zeke	Cobra Bardiche	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	Smash		0/910/4100/9120/22800	Smash	10	0	14	0	0
+Whirlwind of Passion	Zeke	Cobra Bardiche	Ether	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down / Evasion	10	2	10	0	0
 Opened Fan	Rex	Infinity Fans	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/840/3760/8360/20900	Front attack↑	8	0	20	0	0
 Screw Cutter	Rex	Infinity Fans	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/910/4100/9120/22800	Aggroed↑	8	0	22	0	0
 Cross Edge	Rex	Infinity Fans	Physical	240/290/340/390/440/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/680/3080/6840/17100	Beasts↑	8	0	20	0	0
@@ -11402,7 +11402,7 @@ Purple Lightning Edge	Big Bang Edge	8	438	39	15	8	\N
 Storm Scythes	Dual Scythes	3	90	11	36	5	\N
 Tertiary Sword	Aegis Sword	20	1298	10	23	25	\N
 Doomquills	Calamity Scythe	20	773	15	20	10	2958
-Lance of Ages	Combra Bardiche	20	879	10	40	5	2959
+Lance of Ages	Cobra Bardiche	20	879	10	40	5	2959
 Divine Consorts	Infinity Fans	20	808	5	15	20	2957
 Twin Mirage	Brilliant Twinblades	20	738	10	25	5	2960
 Hearthaven	Decimation Cannon	20	879	15	15	10	2936
