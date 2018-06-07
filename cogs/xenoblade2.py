@@ -168,7 +168,8 @@ class Xenoblade2:
                         xeno2.format_caption(enhance_captions.caption, param, param_one, param_two) AS caption,
                         driver AS user,
                         chart,
-                        sp
+                        sp,
+                        0
                     FROM xeno2.skills
                     JOIN xeno2.enhance
                     ON skills.caption=enhance.id
@@ -184,6 +185,7 @@ class Xenoblade2:
                         caption,
                         STRING_AGG(role, E'\n') AS user,
                         '',
+                        0,
                         0
                     FROM (
                         SELECT
@@ -205,6 +207,19 @@ class Xenoblade2:
                     LEFT JOIN xeno2.common_blade_battle_skills AS common
                     ON captions.skill=common.skill
                     GROUP BY captions.skill, caption
+                )
+                UNION
+                (
+                    SELECT
+                        'blade field skill' AS type,
+                        name,
+                        caption,
+                        category,
+                        '',
+                        min_level,
+                        max_level
+                    FROM xeno2.blade_field_skills
+                    WHERE LOWER(name)=$1
                 );
                 """
 
@@ -213,7 +228,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2skill_search, name=name)
 
-        skill_type, name, caption, driver, chart, sp = record
+        skill_type, name, caption, driver, chart, sp, max_level = record
 
         embed = discord.Embed(title=name, description=caption)
 
@@ -223,6 +238,10 @@ class Xenoblade2:
             embed.add_field(name='SP Needed', value=sp)
         elif skill_type == 'blade battle skill' and driver:
             embed.add_field(name='Roles', value=driver)
+        elif skill_type == 'blade field skill':
+            embed.add_field(name='Category', value=driver)
+            embed.add_field(name='Min Level', value=sp)
+            embed.add_field(name='Max Level', value=max_level)
 
         await ctx.send(embed=embed)
 
@@ -230,13 +249,13 @@ class Xenoblade2:
     async def xc2skill_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 skills."""
 
-        await self.all_entries(ctx, 'skills', 'blade_battle_skills')
+        await self.all_entries(ctx, 'skills', 'blade_battle_skills', 'blade_field_skills')
 
     @xc2skill.command(name='search')
     async def xc2skill_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 skill."""
 
-        await self.search_entries(ctx, name, 'skills', 'blade_battle_skills', type_name='Skill')
+        await self.search_entries(ctx, name, 'skills', 'blade_battle_skills', 'blade_field_skills', type_name='Skill')
 
     @xc2skill.error
     @xc2skill_search.error
