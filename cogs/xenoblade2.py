@@ -184,7 +184,7 @@ class Xenoblade2:
                         captions.skill,
                         caption,
                         STRING_AGG(role, E'\n') AS user,
-                        '',
+                        STRING_AGG(blade, E'\n'),
                         0,
                         0
                     FROM (
@@ -204,6 +204,8 @@ class Xenoblade2:
                         WHERE LOWER(skill)=$1
                         GROUP BY skill, enhance_captions.caption, param
                     ) AS captions
+                    LEFT JOIN xeno2.blade_skills
+                    ON captions.skill=blade_skills.skill
                     LEFT JOIN xeno2.common_blade_battle_skills AS common
                     ON captions.skill=common.skill
                     GROUP BY captions.skill, caption
@@ -236,8 +238,11 @@ class Xenoblade2:
             embed.add_field(name='Driver', value=driver)
             embed.add_field(name='Chart', value=chart)
             embed.add_field(name='SP Needed', value=sp)
-        elif skill_type == 'blade battle skill' and driver:
-            embed.add_field(name='Roles', value=driver)
+        elif skill_type == 'blade battle skill':
+            if driver:
+                embed.add_field(name='Roles', value=driver)
+            elif chart:
+                embed.add_field(name='Blade', value=chart)
         elif skill_type == 'blade field skill':
             embed.add_field(name='Category', value=driver)
             embed.add_field(name='Min Level', value=sp)
