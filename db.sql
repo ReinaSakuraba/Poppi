@@ -179,6 +179,27 @@ CREATE TABLE xeno2.blade_skill_enhance (
 ALTER TABLE xeno2.blade_skill_enhance OWNER TO poppi;
 
 --
+-- Name: blades; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blades (
+    name text NOT NULL,
+    gender text NOT NULL,
+    race text NOT NULL,
+    weapon text NOT NULL,
+    element text NOT NULL,
+    aux_cores smallint NOT NULL,
+    phys_def smallint NOT NULL,
+    ether_def smallint NOT NULL,
+    voice_actor text NOT NULL,
+    illustrator text NOT NULL,
+    merc_name text NOT NULL
+);
+
+
+ALTER TABLE xeno2.blades OWNER TO poppi;
+
+--
 -- Name: chip_locations; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -2971,6 +2992,63 @@ Reconstitute	2	3459
 Reconstitute	3	3460
 Reconstitute	4	3461
 Reconstitute	5	3462
+\.
+
+
+--
+-- Data for Name: blades; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blades (name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name) FROM stdin;
+Pyra	Female	Humanoid	Aegis Sword	Fire	2	5	10	Skye Bennett\nShino Shimoji	Masatsugu Saito	Inflammables
+Mythra	Female	Humanoid	Aegis Sword	Light	2	5	10	Skye Bennett\nShino Shimoji	Masatsugu Saito	Mythra's Mynions
+Pneuma	Female	Humanoid	Aegis Sword	Light	0	60	60	Skye Bennett\nShino Shimoji	Masatsugu Saito	N/A
+Dromarch	Male	Animal	Twin Rings	Water	2	5	35	William Roberts\nTetsu Inada	Masatsugu Saito	Dromarch's Dragoons
+Poppi α	Female	Humanoid	Drill Shields	Earth	0	30	25	Arina Ii\nMisaki Kuno	Masatsugu Saito	Poppi Seeds
+Poppi QT	Female	Humanoid	Mech Arms	Earth	0	20	30	Arina Ii\nMisaki Kuno	Masatsugu Saito	QT Corps
+Poppi QTπ	Female	Humanoid	Variable Saber	Wind	0	20	30	Arina Ii\nMisaki Kuno	Masatsugu Saito	QT Pirates
+Roc	4	Humanoid	Dual Scythes	Wind	2	5	5	Todd Kramer\nTakahiro Fujimoto	Masatsugu Saito	Roc & the Roquettes
+Brighid	Female	Humanoid	Whipsword	Fire	2	25	30	Jules de Jongh\nShizuka Itoh	Masatsugu Saito	Firebrands
+Pandoria	Female	Humanoid	Big Bang Edge	Electric	3	5	10	Becca Stewart\nRyo Hirohashi	Masatsugu Saito	Team Zeke 4eva
+Nia	Female	Humanoid	Catalyst Scimitar	Water	3	10	35	Catrin-Mai Huw\nHitomi Ohwada	Masatsugu Saito	Katty Kompany
+Aegaeon	Male	Humanoid	Chroma Katana	Water	2	25	25	Chris Ragland\nShuichi Ikeda	Yusuke Kozaki	Hecatonics
+Godfrey	Male	Humanoid	Shield Hammer	Ice	2	30	25	Julian Kostov\nToru Furuya	Minoru Iwamoto	Bravest of the Brave
+Wolfric	Male	Humanoid	Megalance	Earth	2	5	5	Ronan Summers\nShunsuke Takeuchi	Ryosuke Aiba	Gungnir Wardens
+Perceval	Male	Humanoid	Chroma Katana	Dark	1	20	30	Kerry Shale\nKENN	Yasushi Suzuki	Banners of Flame
+Vale	Female	Humanoid	Megalance	Dark	3	5	10	Jessica Preddy\nSayaka Sembongi	UMETSU YASUOMI	Slayswords
+Agate	Female	Humanoid	Great Axe	Earth	2	20	20	Laila Pyne\nAtsumi Tanezaki	Yusuke Kozaki	Frontier Falcons
+Gorg	Male	Humanoid	Great Axe	Water	2	20	20	Mikey O'Connor\nTomoaki Maeno	Soraya Saga	Flying Merfolk
+Boreas	Male	Humanoid	Bitball	Wind	1	20	30	Jules de Jongh\nAya Hirano	I-Ⅳ	Voracious Vanguard
+Dagas	Male	Humanoid	Great Axe	Fire	3	15	15	Dar Dash\nMamoru Miyano	hakus	6th Royal Legion
+Dagas (Weak)	Male	Humanoid	Great Axe	Fire	1	5	5	Dar Dash\nMamoru Miyano	hakus	6th Royal Legion
+Kasandra	Female	Humanoid	Shield Hammer	Dark	2	30	25	Kosha Engler\nInori Minase	Shirabii	Arrowroot Company
+Praxis	Female	Humanoid	Megalance	Water	1	5	5	Rebecca Kiser\nAyane Sakura	MUGITANI KOICHI (CHOCO)	Gutsy Glaives
+Theory	Female	Humanoid	Chroma Katana	Ice	2	20	30	Sarah Borges\nAyako Kawasumi	MUGITANI KOICHI (CHOCO)	Purificators
+Perun	Female	Humanoid	Megalance	Ice	1	10	15	Ria Lina\nAmi Koshimizu	Takahiro Kimura & RICCA	Ardent Lancers
+Kora	Female	Humanoid	Knuckle Claws	Electric	2	10	30	Nikki Hartung\nChinatsu Akasaki	Shunya Yamashita	Breeze Shooters
+Azami	Female	Humanoid	Ether Cannon	Dark	2	0	15	Teresa Gallagher\nChiwa Saito	hakus	Shadow Puppets
+Ursula	Female	Humanoid	Knuckle Claws	Ice	1	10	30	Phillipa Alexander\nRina Hidaka	Risa Ebata	Ursula's New Groove
+Newt	Female	Humanoid	Chroma Katana	Fire	2	30	25	Janine Harouni\nYoko Hikasa	Takeshi Nogami	Battle Cruisers
+Nim	Female	Humanoid	Knuckle Claws	Earth	2	5	35	Caitlin Thorburn\nM・A・O	Nakaba Higurashi	Dandy Lions
+Sheba	Female	Humanoid	Ether Cannon	Water	3	5	15	Naomi McDonald\nAri Ozawa	PARSLEY	Royal Teas
+Vess	Female	Humanoid	Bitball	Electric	2	0	25	Lucy Newman-Williams\nMiki Takahashi	Kia Asamiya	Ting-a-Ling Troupe
+Adenine	Female	Humanoid	Knuckle Claws	Wind	2	10	30	Laurel Lefkow\nMamiko Noto	Kouji Ogata	Contrarians
+Electra	Female	Humanoid	Shield Hammer	Electric	1	30	25	Clare Corbett\nHimika Akaneya	mizu　asato	Zapmeisters
+Zenobia	Female	Humanoid	Great Axe	Wind	3	15	15	Jessica Preddy\nAyana Taketatsu	Minoru Iwamoto	Boss Buster Band
+Finch	Female	Humanoid	Shield Hammer	Wind	1	20	30	Jules de Jongh\nAoi Yuki	Kunihiko Tanaka	The Albatrojans
+Floren	Male	Humanoid	Bitball	Earth	2	5	35	Clare Corbett\nKaori Ishihara	Taiki	Florentrancers
+KOS-MOS	Female	Humanoid	Ether Cannon	Light	3	20	20	Caitlin Thorburn\nMariko Suzuki	Kunihiko Tanaka	Erde Kaiser
+Herald	Female	Humanoid	Ether Cannon	Electric	3	20	15	Laila Pyne\nAya Endo	Hideo Minaba	Valkyr Legion
+Dahlia	Female	Humanoid	Bitball	Ice	2	5	35	Kelly Burke\nNaomi Shindo	Risa Ebata	Perennial Beauties
+Sever	Male	Humanoid	Sword Tonfa	Wind	2	20	30	Eric Meyers\nAnri Katsu	MONOLITHSOFT	Severe Burns
+Akhos	Male	Humanoid	Calamity Scythe	Electric	3	10	35	Hugo Harold-Harrison\nNobunaga Shimazaki	Tetsuya Nomura	Akhos’s Akholytes
+Patroka	Female	Humanoid	Cobra Bardiche	Earth	3	10	10	Laila Pyne\nYuri Noguchi	Tetsuya Nomura	Whatever Brigade
+Mikhail	Male	Humanoid	Infinity Fans	Dark	3	25	30	Todd Kramer\nDaisuke Namikawa	Tetsuya Nomura	We Happy Few
+Obrona	Female	Humanoid	Brilliant Twinblades	Electric	2	5	5	Naomi McDonald\nYuri Yamaoka	MONOLITHSOFT	Team Nasty
+Perdido	Male	Humanoid	Decimation Cannon	Fire	2	5	5	Joseph May\nKeiji Hirai	MONOLITHSOFT	Indomitable Brigade
+Cressidus	Male	Humanoid	Rockrending Gauntlets	Earth	2	40	20	Kerry Shale\nKentaro Tone	MONOLITHSOFT	Atom Splitters
+T-elos	Female	Humanoid	Great Axe	Dark	3	20	20	Caitlin Thorburn\nMariko Suzuki	MUGITANI KOICHI (CHOCO)	Heaven's Trackers
+Poppibuster	4	Humanoid	Shield Hammer	Light	3	40	35	Arina Ii / Nicholas Rowe\nMisaki Kuno / Yasuyuki Kase	Masatsugu Saito	Buster Battalion
 \.
 
 
@@ -39639,6 +39717,14 @@ ALTER TABLE ONLY xeno2.blade_field_skills
 
 ALTER TABLE ONLY xeno2.blade_skill_enhance
     ADD CONSTRAINT blade_skill_enhance_pkey PRIMARY KEY (skill, level);
+
+
+--
+-- Name: blades_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blades
+    ADD CONSTRAINT blades_pkey PRIMARY KEY (name);
 
 
 --
