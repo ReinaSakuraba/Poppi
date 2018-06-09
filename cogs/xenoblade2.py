@@ -220,7 +220,7 @@ class Xenoblade2:
                         '',
                         min_level,
                         max_level
-                    FROM xeno2.blade_field_skills
+                    FROM xeno2.field_skills
                     WHERE LOWER(name)=$1
                 );
                 """
@@ -254,13 +254,13 @@ class Xenoblade2:
     async def xc2skill_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 skills."""
 
-        await self.all_entries(ctx, 'skills', 'blade_battle_skills', 'blade_field_skills')
+        await self.all_entries(ctx, 'skills', 'battle_skills', 'field_skills')
 
     @xc2skill.command(name='search')
     async def xc2skill_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 skill."""
 
-        await self.search_entries(ctx, name, 'skills', 'blade_battle_skills', 'blade_field_skills', type_name='Skill')
+        await self.search_entries(ctx, name, 'skills', 'battle_skills', 'field_skills', type_name='Skill')
 
     @xc2skill.error
     @xc2skill_search.error
