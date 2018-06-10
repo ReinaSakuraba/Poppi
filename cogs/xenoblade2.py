@@ -204,8 +204,8 @@ class Xenoblade2:
                         WHERE LOWER(skill)=$1
                         GROUP BY skill, enhance_captions.caption, param
                     ) AS captions
-                    LEFT JOIN xeno2.blade_skills
-                    ON captions.skill=blade_skills.skill
+                    LEFT JOIN xeno2.blade_battle_skills
+                    ON captions.skill=blade_battle_skills.skill
                     LEFT JOIN xeno2.common_blade_battle_skills AS common
                     ON captions.skill=common.skill
                     GROUP BY captions.skill, caption
