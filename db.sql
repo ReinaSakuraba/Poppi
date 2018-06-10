@@ -136,6 +136,18 @@ CREATE TABLE xeno2.battle_skills (
 ALTER TABLE xeno2.battle_skills OWNER TO poppi;
 
 --
+-- Name: blade_battle_skills; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_battle_skills (
+    blade text NOT NULL,
+    skill text NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_battle_skills OWNER TO poppi;
+
+--
 -- Name: blade_chances; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -161,18 +173,6 @@ CREATE TABLE xeno2.blade_skill_enhance (
 
 
 ALTER TABLE xeno2.blade_skill_enhance OWNER TO poppi;
-
---
--- Name: blade_skills; Type: TABLE; Schema: xeno2; Owner: poppi
---
-
-CREATE TABLE xeno2.blade_skills (
-    blade text NOT NULL,
-    skill text NOT NULL
-);
-
-
-ALTER TABLE xeno2.blade_skills OWNER TO poppi;
 
 --
 -- Name: blades; Type: TABLE; Schema: xeno2; Owner: poppi
@@ -1604,6 +1604,161 @@ Fury
 
 
 --
+-- Data for Name: blade_battle_skills; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_battle_skills (blade, skill) FROM stdin;
+Pyra	Purifying Flames
+Pyra	Resplendence
+Pyra	Flaming Edge
+Mythra	Foresight
+Mythra	Lightspeed Flurry
+Mythra	Glint
+Pneuma	A Dream of the Future
+Pneuma	The Chosen One
+Pneuma	The Aegis
+Dromarch	Celestial Gift
+Dromarch	River's Blessing
+Dromarch	Howl of Calm
+Poppi α	Noponic Iron
+Poppi α	Guard Shift
+Poppi α	Emergency Mode
+Poppi QT	Velocity Gear
+Poppi QT	Flash Counter
+Poppi QT	Flash Boot
+Poppi QTπ	Reflection
+Poppi QTπ	Nanomachine Repair
+Poppi QTπ	Overclock
+Roc	Sickle
+Roc	Storm and Stress
+Roc	Swoop
+Brighid	War Pyre
+Brighid	Firewalker
+Brighid	Dance of the Flames
+Pandoria	Quickest Purple
+Pandoria	Thunderblast
+Pandoria	Sudden Spark
+Nia	Sea of Plenty
+Nia	Instant Regen
+Nia	Cellular Stimulus
+Aegaeon	Serene Heart
+Aegaeon	Like Water
+Aegaeon	Enlightenment
+Godfrey	Got the Guts
+Godfrey	Fierce Fervor
+Godfrey	Light of Justice
+Wolfric	The Preternatural
+Wolfric	Power Unleashed
+Wolfric	Critical Strike
+Perceval	Eater of Men
+Perceval	Soulsucker
+Perceval	Brandish
+Vale	Violence Machine
+Vale	Void Lance
+Vale	Overture of Blood
+Agate	Razor-Sharp Iolite
+Agate	Tanzanite Pursuer
+Agate	Tiger's Eye Wrecker
+Gorg	FTL
+Gorg	IMD
+Gorg	FAS
+Boreas	Tasty Snack
+Boreas	Look Out!
+Boreas	Twang!
+Dagas	Kaiser Zone
+Dagas	Regal Presence
+Dagas	Gold Effect
+Dagas (Weak)	Kaiser Zone (Weak)
+Dagas (Weak)	Regal Presence (Weak)
+Dagas (Weak)	Gold Effect (Weak)
+Kasandra	Calamity
+Kasandra	Fortune
+Kasandra	Stability
+Praxis	The Awakened (Power)
+Praxis	The Awakened (Skill)
+Praxis	Brimming Pep
+Theory	Aerial Flashdance
+Theory	Conviction
+Theory	Steadfast
+Perun	Defender
+Perun	Silent Spear
+Perun	Battle Plans
+Kora	Stop Thinking
+Kora	Walking Joy
+Kora	Potion Hoarder
+Azami	All For Love
+Azami	Pain of Longing
+Azami	Vendetta
+Ursula	Snow Charm
+Ursula	Beary Healing
+Ursula	Hide and Seek
+Newt	Tranquil Guard
+Newt	Last Line of Defense
+Newt	Flowers of War
+Nim	Restorative Fusion
+Nim	Synthesis Lore
+Nim	Wild Familiars
+Sheba	Economicanimal
+Sheba	Entitled Entourage
+Sheba	Financial Settlement
+Vess	Space-Tea-Time
+Vess	Sympathy
+Vess	Not Part of the Plan
+Adenine	Element Wisdom
+Adenine	Battle Wisdom
+Adenine	Treasure Wisdom
+Electra	Sparky Girl
+Electra	Zappy Girl
+Electra	Clangy Girl
+Zenobia	Carnage
+Zenobia	The Indomitable
+Zenobia	Greatest Warrior
+Finch	Did I Do That?
+Finch	Doesn't Ring a Bell
+Finch	Surprise!
+Floren	The Coming of Spring
+Floren	Blossomfall
+Floren	White Lilies
+KOS-MOS	Phase Transition Tech
+KOS-MOS	Hyperclock
+KOS-MOS	Encephalon
+Herald	Dissolve Seal
+Herald	Taboo
+Herald	Unlimited Output
+Dahlia	Spotlight
+Dahlia	Fireworks
+Dahlia	Opportunist
+Sever	Armor Piercing
+Sever	Nullify Defense
+Sever	Heartless Kill
+Akhos	Transmigration
+Akhos	Dead Zone
+Akhos	Endless Cycle
+Patroka	Fatal Blow
+Patroka	Fury
+Patroka	Sanguine Steel
+Mikhail	Gravity Pinwheel
+Mikhail	Dimensional Fold
+Mikhail	Dimensional Wrinkle
+Obrona	Swift Kitty
+Obrona	Now You See Me...
+Obrona	Quick Prep
+Perdido	Doublestrike
+Perdido	Stay True
+Perdido	Bushido
+Cressidus	Senton
+Cressidus	Double Team
+Cressidus	Trespass
+T-elos	Phase Transition Tech
+T-elos	Heaven's Tracker
+T-elos	Heartbreaker
+Poppibuster	Hyperaffinity Circuit
+Poppibuster	Hardware Acceleration
+Poppibuster	Reconstitute
+\.
+
+
+--
 -- Data for Name: blade_chances; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
@@ -2941,161 +3096,6 @@ Reconstitute	2	3459
 Reconstitute	3	3460
 Reconstitute	4	3461
 Reconstitute	5	3462
-\.
-
-
---
--- Data for Name: blade_skills; Type: TABLE DATA; Schema: xeno2; Owner: poppi
---
-
-COPY xeno2.blade_skills (blade, skill) FROM stdin;
-Pyra	Purifying Flames
-Pyra	Resplendence
-Pyra	Flaming Edge
-Mythra	Foresight
-Mythra	Lightspeed Flurry
-Mythra	Glint
-Pneuma	A Dream of the Future
-Pneuma	The Chosen One
-Pneuma	The Aegis
-Dromarch	Celestial Gift
-Dromarch	River's Blessing
-Dromarch	Howl of Calm
-Poppi α	Noponic Iron
-Poppi α	Guard Shift
-Poppi α	Emergency Mode
-Poppi QT	Velocity Gear
-Poppi QT	Flash Counter
-Poppi QT	Flash Boot
-Poppi QTπ	Reflection
-Poppi QTπ	Nanomachine Repair
-Poppi QTπ	Overclock
-Roc	Sickle
-Roc	Storm and Stress
-Roc	Swoop
-Brighid	War Pyre
-Brighid	Firewalker
-Brighid	Dance of the Flames
-Pandoria	Quickest Purple
-Pandoria	Thunderblast
-Pandoria	Sudden Spark
-Nia	Sea of Plenty
-Nia	Instant Regen
-Nia	Cellular Stimulus
-Aegaeon	Serene Heart
-Aegaeon	Like Water
-Aegaeon	Enlightenment
-Godfrey	Got the Guts
-Godfrey	Fierce Fervor
-Godfrey	Light of Justice
-Wolfric	The Preternatural
-Wolfric	Power Unleashed
-Wolfric	Critical Strike
-Perceval	Eater of Men
-Perceval	Soulsucker
-Perceval	Brandish
-Vale	Violence Machine
-Vale	Void Lance
-Vale	Overture of Blood
-Agate	Razor-Sharp Iolite
-Agate	Tanzanite Pursuer
-Agate	Tiger's Eye Wrecker
-Gorg	FTL
-Gorg	IMD
-Gorg	FAS
-Boreas	Tasty Snack
-Boreas	Look Out!
-Boreas	Twang!
-Dagas	Kaiser Zone
-Dagas	Regal Presence
-Dagas	Gold Effect
-Dagas (Weak)	Kaiser Zone (Weak)
-Dagas (Weak)	Regal Presence (Weak)
-Dagas (Weak)	Gold Effect (Weak)
-Kasandra	Calamity
-Kasandra	Fortune
-Kasandra	Stability
-Praxis	The Awakened (Power)
-Praxis	The Awakened (Skill)
-Praxis	Brimming Pep
-Theory	Aerial Flashdance
-Theory	Conviction
-Theory	Steadfast
-Perun	Defender
-Perun	Silent Spear
-Perun	Battle Plans
-Kora	Stop Thinking
-Kora	Walking Joy
-Kora	Potion Hoarder
-Azami	All For Love
-Azami	Pain of Longing
-Azami	Vendetta
-Ursula	Snow Charm
-Ursula	Beary Healing
-Ursula	Hide and Seek
-Newt	Tranquil Guard
-Newt	Last Line of Defense
-Newt	Flowers of War
-Nim	Restorative Fusion
-Nim	Synthesis Lore
-Nim	Wild Familiars
-Sheba	Economicanimal
-Sheba	Entitled Entourage
-Sheba	Financial Settlement
-Vess	Space-Tea-Time
-Vess	Sympathy
-Vess	Not Part of the Plan
-Adenine	Element Wisdom
-Adenine	Battle Wisdom
-Adenine	Treasure Wisdom
-Electra	Sparky Girl
-Electra	Zappy Girl
-Electra	Clangy Girl
-Zenobia	Carnage
-Zenobia	The Indomitable
-Zenobia	Greatest Warrior
-Finch	Did I Do That?
-Finch	Doesn't Ring a Bell
-Finch	Surprise!
-Floren	The Coming of Spring
-Floren	Blossomfall
-Floren	White Lilies
-KOS-MOS	Phase Transition Tech
-KOS-MOS	Hyperclock
-KOS-MOS	Encephalon
-Herald	Dissolve Seal
-Herald	Taboo
-Herald	Unlimited Output
-Dahlia	Spotlight
-Dahlia	Fireworks
-Dahlia	Opportunist
-Sever	Armor Piercing
-Sever	Nullify Defense
-Sever	Heartless Kill
-Akhos	Transmigration
-Akhos	Dead Zone
-Akhos	Endless Cycle
-Patroka	Fatal Blow
-Patroka	Fury
-Patroka	Sanguine Steel
-Mikhail	Gravity Pinwheel
-Mikhail	Dimensional Fold
-Mikhail	Dimensional Wrinkle
-Obrona	Swift Kitty
-Obrona	Now You See Me...
-Obrona	Quick Prep
-Perdido	Doublestrike
-Perdido	Stay True
-Perdido	Bushido
-Cressidus	Senton
-Cressidus	Double Team
-Cressidus	Trespass
-T-elos	Phase Transition Tech
-T-elos	Heaven's Tracker
-T-elos	Heartbreaker
-Poppibuster	Hyperaffinity Circuit
-Poppibuster	Hardware Acceleration
-Poppibuster	Reconstitute
 \.
 
 
@@ -39890,7 +39890,7 @@ ALTER TABLE ONLY xeno2.blade_skill_enhance
 -- Name: blade_skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
-ALTER TABLE ONLY xeno2.blade_skills
+ALTER TABLE ONLY xeno2.blade_battle_skills
     ADD CONSTRAINT blade_skills_pkey PRIMARY KEY (blade, skill);
 
 
@@ -40138,7 +40138,7 @@ ALTER TABLE ONLY xeno2.blade_skill_enhance
 -- Name: blade_skills_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
-ALTER TABLE ONLY xeno2.blade_skills
+ALTER TABLE ONLY xeno2.blade_battle_skills
     ADD CONSTRAINT blade_skills_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
 
 
@@ -40146,7 +40146,7 @@ ALTER TABLE ONLY xeno2.blade_skills
 -- Name: blade_skills_skill_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
-ALTER TABLE ONLY xeno2.blade_skills
+ALTER TABLE ONLY xeno2.blade_battle_skills
     ADD CONSTRAINT blade_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
 
 
