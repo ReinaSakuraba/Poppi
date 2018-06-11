@@ -217,11 +217,14 @@ class Xenoblade2:
                         name,
                         caption,
                         category,
-                        '',
+                        STRING_AGG(blade, E'\n'),
                         min_level,
                         max_level
                     FROM xeno2.field_skills
+                    LEFT JOIN xeno2.blade_field_skills
+                    ON name=skill
                     WHERE LOWER(name)=$1
+                    GROUP BY name
                 );
                 """
 
@@ -247,6 +250,8 @@ class Xenoblade2:
             embed.add_field(name='Category', value=driver)
             embed.add_field(name='Min Level', value=sp)
             embed.add_field(name='Max Level', value=max_level)
+            if chart:
+                embed.add_field(name='Blade', value=chart)
 
         await ctx.send(embed=embed)
 
