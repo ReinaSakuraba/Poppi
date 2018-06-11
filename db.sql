@@ -162,6 +162,18 @@ CREATE TABLE xeno2.blade_chances (
 ALTER TABLE xeno2.blade_chances OWNER TO poppi;
 
 --
+-- Name: blade_field_skills; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_field_skills (
+    blade text NOT NULL,
+    skill text NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_field_skills OWNER TO poppi;
+
+--
 -- Name: blade_skill_enhance; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -1938,6 +1950,156 @@ T-elos	2	5.00	f
 T-elos	3	5.00	f
 T-elos	4	5.00	f
 T-elos	5	5.00	f
+\.
+
+
+--
+-- Data for Name: blade_field_skills; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_field_skills (blade, skill) FROM stdin;
+Pyra	Fire Mastery
+Pyra	Focus
+Pyra	Cooking
+Mythra	Light Mastery
+Mythra	Focus
+Mythra	Girls' Talk
+Dromarch	Water Mastery
+Dromarch	Botany
+Dromarch	Ancient Wisdom
+Poppi α	Leaping
+Poppi α	Nopon Wisdom
+Poppi α	Superstrength
+Poppi QT	Lockpicking
+Poppi QT	Fortitude
+Poppi QT	Agronomy
+Poppi QTπ	Keen Eye
+Poppi QTπ	Ancient Wisdom
+Poppi QTπ	Forestry
+Roc	Wind Mastery
+Roc	Miasma Dispersal
+Roc	Lockpicking
+Brighid	Fire Mastery
+Brighid	Keen Eye
+Brighid	Mineralogy
+Pandoria	Electric Mastery
+Pandoria	Lockpicking
+Pandoria	Ichthyology
+Nia	Water Mastery
+Nia	Forestry
+Nia	Fortitude
+Aegaeon	Water Mastery
+Aegaeon	Ancient Wisdom
+Aegaeon	Leaping
+Godfrey	Passionate Soul
+Godfrey	Justice-Loving Soul
+Godfrey	Kind Soul
+Wolfric	Superstrength
+Wolfric	Earth Mastery
+Wolfric	Focus
+Perceval	Dark Mastery
+Perceval	Leaping
+Perceval	Assassination
+Vale	Dark Mastery
+Vale	Weaving
+Vale	Girls' Talk
+Agate	Prospecting
+Agate	Mineralogy
+Agate	Keen Eye
+Gorg	Keen Eye
+Gorg	Fortitude
+Gorg	Patissier
+Boreas	Nopon Wisdom
+Boreas	Salvaging Mastery
+Boreas	Fleet of Foot
+Dagas	Nopon Wisdom
+Dagas	Mineralogy
+Dagas	Ancient Wisdom
+Dagas (Weak)	Cavalier Attitude
+Kasandra	Nopon Wisdom
+Kasandra	Agronomy
+Kasandra	One Lucky Gal
+Praxis	Girls' Talk
+Praxis	Water Mastery
+Praxis	Salvaging Mastery
+Theory	Ice Mastery
+Theory	Focus
+Theory	Nopon Wisdom
+Perun	Ice Mastery
+Perun	Ancient Wisdom
+Perun	Chivalry
+Kora	Girls' Talk
+Kora	Electric Mastery
+Kora	Lockpicking
+Azami	Dark Mastery
+Azami	Botany
+Azami	Clairvoyant Eye
+Ursula	Harmony
+Ursula	Ichthyology
+Ursula	Fortitude
+Newt	Superstrength
+Newt	Salvaging Mastery
+Newt	Titan Weapon Wisdom
+Nim	Earth Mastery
+Nim	Ichthyology
+Nim	Phonex Linguistics
+Sheba	Girls' Talk
+Sheba	Lockpicking
+Sheba	Eye for Beauty
+Vess	Forestry
+Vess	Fortitude
+Vess	Dumpling Pro
+Adenine	Wind Mastery
+Adenine	Keen Eye
+Adenine	Extra-Ancient Wisdom
+Electra	Electric Mastery
+Electra	Focus
+Electra	Mastery of Thunder
+Zenobia	Wind Mastery
+Zenobia	Superstrength
+Zenobia	Leaping
+Finch	Entomology
+Finch	Leaping
+Finch	Birdbrain
+Floren	Botany
+Floren	Earth Mastery
+Floren	Beguiling Charms
+KOS-MOS	Light Mastery
+KOS-MOS	Lockpicking
+KOS-MOS	Mental Arithmetic
+Herald	Electric Mastery
+Herald	Superstrength
+Herald	Rampage
+Dahlia	Forestry
+Dahlia	Ice Mastery
+Dahlia	Icecraft
+Sever	Wind Mastery
+Sever	Superstrength
+Sever	Entomology
+Akhos	Electric Mastery
+Akhos	Agronomy
+Akhos	Keen Eye
+Patroka	Earth Mastery
+Patroka	Lockpicking
+Patroka	Focus
+Mikhail	Dark Mastery
+Mikhail	Salvaging Mastery
+Mikhail	Ancient Wisdom
+Obrona	Electric Mastery
+Obrona	Leaping
+Obrona	Ichthyology
+Perdido	Fire Mastery
+Perdido	Mineralogy
+Perdido	Fortitude
+Cressidus	Earth Mastery
+Cressidus	Nopon Wisdom
+Cressidus	Botany
+T-elos	Dark Mastery
+T-elos	Salvaging Mastery
+T-elos	Leaping
+Poppibuster	Entomology
+Poppibuster	Salvaging Mastery
+Poppibuster	Superstrength
 \.
 
 
@@ -39879,6 +40041,14 @@ ALTER TABLE ONLY xeno2.field_skills
 
 
 --
+-- Name: blade_field_skills_pkey1; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_field_skills
+    ADD CONSTRAINT blade_field_skills_pkey1 PRIMARY KEY (blade, skill);
+
+
+--
 -- Name: blade_skill_enhance_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -40116,6 +40286,22 @@ ALTER TABLE ONLY xenox.skills
 
 ALTER TABLE ONLY xeno2.accessories
     ADD CONSTRAINT accessories_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance(id);
+
+
+--
+-- Name: blade_field_skills_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_field_skills
+    ADD CONSTRAINT blade_field_skills_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
+
+
+--
+-- Name: blade_field_skills_skill_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_field_skills
+    ADD CONSTRAINT blade_field_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.field_skills(name);
 
 
 --
