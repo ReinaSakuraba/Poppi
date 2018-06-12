@@ -290,7 +290,8 @@ class Xenoblade2:
                     crit_rate || '%',
                     block_rate || '%',
                     xeno2.format_caption(enhance_captions.caption, param, param_one, param_two),
-                    chip
+                    chip,
+                    weapon_filenames.filename
                 FROM xeno2.weapons
                 LEFT JOIN xeno2.chip_weapons
                 ON name=weapon
@@ -298,6 +299,8 @@ class Xenoblade2:
                 ON weapons.caption=enhance.id
                 LEFT JOIN xeno2.enhance_captions
                 ON enhance.caption=enhance_captions.id
+                LEFT JOIN xeno2.weapon_filenames
+                ON weapons.filename=weapon_filenames.id
                 WHERE LOWER(name)=$1;
                 """
 
@@ -306,7 +309,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2weapon_search, name=name)
 
-        name, weapon_type, rank, damage, stability, crit_rate, block_rate, effect, chip = record
+        name, weapon_type, rank, damage, stability, crit_rate, block_rate, effect, chip, filename = record
 
         embed = discord.Embed(title=name)
         embed.add_field(name='Weapon Type', value=weapon_type)
@@ -318,6 +321,10 @@ class Xenoblade2:
             embed.add_field(name='Chip', value=chip)
         if effect:
             embed.add_field(name='Effect', value=effect, inline=False)
+
+        if filename:
+            embed.set_thumbnail(url='attachment://weapon.png')
+            return await ctx.send(embed=embed, file=discord.File(f'xeno2/weapons/{filename}_0.png', 'weapon.png'))
 
         await ctx.send(embed=embed)
 
