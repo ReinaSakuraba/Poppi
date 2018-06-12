@@ -1659,9 +1659,9 @@ Aegaeon	Enlightenment
 Godfrey	Got the Guts
 Godfrey	Fierce Fervor
 Godfrey	Light of Justice
-Wolfric	The Preternatural
-Wolfric	Power Unleashed
-Wolfric	Critical Strike
+Wulfric	The Preternatural
+Wulfric	Power Unleashed
+Wulfric	Critical Strike
 Perceval	Eater of Men
 Perceval	Soulsucker
 Perceval	Brandish
@@ -1994,9 +1994,9 @@ Aegaeon	Leaping
 Godfrey	Passionate Soul
 Godfrey	Justice-Loving Soul
 Godfrey	Kind Soul
-Wolfric	Superstrength
-Wolfric	Earth Mastery
-Wolfric	Focus
+Wulfric	Superstrength
+Wulfric	Earth Mastery
+Wulfric	Focus
 Perceval	Dark Mastery
 Perceval	Leaping
 Perceval	Assassination
@@ -3279,7 +3279,7 @@ Pandoria	Female	Humanoid	Big Bang Edge	Electric	3	5	10	Becca Stewart\nRyo Hiroha
 Nia	Female	Humanoid	Catalyst Scimitar	Water	3	10	35	Catrin-Mai Huw\nHitomi Ohwada	Masatsugu Saito	Katty Kompany
 Aegaeon	Male	Humanoid	Chroma Katana	Water	2	25	25	Chris Ragland\nShuichi Ikeda	Yusuke Kozaki	Hecatonics
 Godfrey	Male	Humanoid	Shield Hammer	Ice	2	30	25	Julian Kostov\nToru Furuya	Minoru Iwamoto	Bravest of the Brave
-Wolfric	Male	Humanoid	Megalance	Earth	2	5	5	Ronan Summers\nShunsuke Takeuchi	Ryosuke Aiba	Gungnir Wardens
+Wulfric	Male	Humanoid	Megalance	Earth	2	5	5	Ronan Summers\nShunsuke Takeuchi	Ryosuke Aiba	Gungnir Wardens
 Perceval	Male	Humanoid	Chroma Katana	Dark	1	20	30	Kerry Shale\nKENN	Yasushi Suzuki	Banners of Flame
 Vale	Female	Humanoid	Megalance	Dark	3	5	10	Jessica Preddy\nSayaka Sembongi	UMETSU YASUOMI	Slayswords
 Agate	Female	Humanoid	Great Axe	Earth	2	20	20	Laila Pyne\nAtsumi Tanezaki	Yusuke Kozaki	Frontier Falcons
