@@ -328,6 +328,32 @@ class Xenoblade2:
 
         await ctx.send(embed=embed)
 
+    @xc2weapon.command(name='icon')
+    async def xc2weapon_icon(self, ctx: utils.Context, *, name: str):
+        """Posts the icon for a Xenoblade Chronicles 2 weapon."""
+
+        query = """
+                SELECT
+                    name,
+                    weapon_filenames.filename
+                FROM xeno2.weapons
+                LEFT JOIN xeno2.weapon_filenames
+                ON weapons.filename=weapon_filenames.id
+                WHERE LOWER(name)=$1;
+                """
+
+        record = await ctx.pool.fetchrow(query, name.lower())
+
+        if record is None:
+            return await ctx.invoke(self.xc2weapon_search, name=name)
+
+        name, filename = record
+
+        if filename is None:
+            return await ctx.send('Weapon does not have an icon.')
+
+        await ctx.send(file=discord.File(f'xeno2/weapons/{filename}_0.png', f'{name}.png'))
+
     @xc2weapon.command(name='all')
     async def xc2weapon_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 weapons."""
