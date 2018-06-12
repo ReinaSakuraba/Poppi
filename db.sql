@@ -454,6 +454,18 @@ CREATE TABLE xeno2.specials (
 ALTER TABLE xeno2.specials OWNER TO poppi;
 
 --
+-- Name: weapon_filenames; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.weapon_filenames (
+    id smallint NOT NULL,
+    filename text
+);
+
+
+ALTER TABLE xeno2.weapon_filenames OWNER TO poppi;
+
+--
 -- Name: weapons; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -10910,6 +10922,411 @@ Buster Mirage	3	Physical	500/570/640/710/780/850	7	Ahead	Knockback	Increases dam
 Buster Impact	4	Ether	975	9	Circle (Target)	Knockback	Adds a 100% chance of dealing a guard-annulling attack.	Initiate Poppibuster self-destruct mode.	10	12	50	100	20
 Union Sword	4	Ether	1500	5	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Beat the enemy to a pulp with a medley of fire and water.	10	0	10	100	40
 Nexus Force	4	Ether	1500	2	One Target	Blowdown	When landing a hit, restores 50% of damage dealt to the whole party.	Beat the enemy to a pulp with a medley of fire and water.	10	0	10	100	40
+\.
+
+
+--
+-- Data for Name: weapon_filenames; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.weapon_filenames (id, filename) FROM stdin;
+1	wi_wp010101
+2	wi_wp011101
+3	\N
+4	wi_wp020101
+5	wi_wp020102
+6	wi_wp020201
+7	wi_wp020202
+8	wi_wp020301
+9	wi_wp020302
+10	wi_wp020401
+11	wi_wp020402
+12	wi_wp020501
+13	wi_wp020502
+14	wi_wp020601
+15	wi_wp020602
+16	wi_wp020701
+17	wi_wp020702
+18	wi_wp020801
+19	wi_wp020802
+20	wi_wp030101
+21	wi_wp030101
+22	wi_wp030102
+23	wi_wp030102
+24	wi_wp030201
+25	wi_wp030201
+26	wi_wp030202
+27	wi_wp030202
+28	wi_wp030301
+29	wi_wp030301
+30	wi_wp030302
+31	wi_wp030302
+32	wi_wp030401
+33	wi_wp030401
+34	wi_wp030402
+35	wi_wp030402
+36	wi_wp030501
+37	wi_wp030501
+38	wi_wp030502
+39	wi_wp030502
+40	wi_wp030601
+41	wi_wp030601
+42	wi_wp030602
+43	wi_wp030602
+44	wi_wp030701
+45	wi_wp030701
+46	wi_wp030702
+47	wi_wp030702
+48	wi_wp030801
+49	wi_wp030801
+50	wi_wp030802
+51	wi_wp030802
+52	\N
+53	\N
+54	\N
+55	\N
+56	wi_wp040101
+57	wi_wp040102
+58	wi_wp040201
+59	wi_wp040202
+60	wi_wp040301
+61	wi_wp040302
+62	wi_wp040401
+63	wi_wp040402
+64	wi_wp040501
+65	wi_wp040502
+66	wi_wp040601
+67	wi_wp040602
+68	wi_wp040701
+69	wi_wp040702
+70	wi_wp040801
+71	wi_wp040802
+72	wi_wp050101
+73	wi_wp050101
+74	wi_wp050102
+75	wi_wp050102
+76	wi_wp050201
+77	wi_wp050201
+78	wi_wp050202
+79	wi_wp050202
+80	wi_wp050301
+81	wi_wp050301
+82	wi_wp050302
+83	wi_wp050302
+84	wi_wp050401
+85	wi_wp050401
+86	wi_wp050402
+87	wi_wp050402
+88	wi_wp050501
+89	wi_wp050501
+90	wi_wp050502
+91	wi_wp050502
+92	wi_wp050601
+93	wi_wp050601
+94	wi_wp050602
+95	wi_wp050602
+96	wi_wp050701
+97	wi_wp050701
+98	wi_wp050702
+99	wi_wp050702
+100	wi_wp050801
+101	wi_wp050801
+102	wi_wp050802
+103	wi_wp050802
+104	wi_wp060101
+105	wi_wp060102
+106	wi_wp060101
+107	wi_wp060101
+108	wi_wp060101
+109	wi_wp060101
+110	wi_wp060101
+111	wi_wp060101
+112	wi_wp060101
+113	wi_wp060101
+114	wi_wp060101
+115	wi_wp060101
+116	wi_wp060101
+117	wi_wp060101
+118	wi_wp060101
+119	wi_wp060101
+120	wi_wp070101
+121	wi_wp070101
+122	wi_wp070102
+123	wi_wp070102
+124	wi_wp070201
+125	wi_wp070201
+126	wi_wp070202
+127	wi_wp070202
+128	wi_wp070301
+129	wi_wp070301
+130	wi_wp070302
+131	wi_wp070302
+132	wi_wp070401
+133	wi_wp070401
+134	wi_wp070402
+135	wi_wp070402
+136	wi_wp070501
+137	wi_wp070501
+138	wi_wp070502
+139	wi_wp070502
+140	wi_wp070601
+141	wi_wp070601
+142	wi_wp070602
+143	wi_wp070602
+144	wi_wp070701
+145	wi_wp070701
+146	wi_wp070702
+147	wi_wp070702
+148	wi_wp070801
+149	wi_wp070801
+150	wi_wp070802
+151	wi_wp070802
+152	wi_wp080101
+153	wi_wp080102
+154	wi_wp080201
+155	wi_wp080202
+156	wi_wp080301
+157	wi_wp080302
+158	wi_wp080401
+159	wi_wp080402
+160	wi_wp080501
+161	wi_wp080502
+162	wi_wp080601
+163	wi_wp080602
+164	wi_wp080701
+165	wi_wp080702
+166	wi_wp080801
+167	wi_wp080802
+168	wi_wp090101
+169	wi_wp090101
+170	wi_wp090102
+171	wi_wp090102
+172	wi_wp090201
+173	wi_wp090201
+174	wi_wp090202
+175	wi_wp090202
+176	wi_wp090301
+177	wi_wp090301
+178	wi_wp090302
+179	wi_wp090302
+180	wi_wp090401
+181	wi_wp090401
+182	wi_wp090402
+183	wi_wp090402
+184	wi_wp090501
+185	wi_wp090501
+186	wi_wp090502
+187	wi_wp090502
+188	wi_wp090601
+189	wi_wp090601
+190	wi_wp090602
+191	wi_wp090602
+192	wi_wp090701
+193	wi_wp090701
+194	wi_wp090702
+195	wi_wp090702
+196	wi_wp090801
+197	wi_wp090801
+198	wi_wp090802
+199	wi_wp090802
+200	wi_wp100101
+201	wi_wp100102
+202	wi_wp100201
+203	wi_wp100202
+204	wi_wp100301
+205	wi_wp100302
+206	wi_wp100401
+207	wi_wp100402
+208	wi_wp100501
+209	wi_wp100502
+210	wi_wp100601
+211	wi_wp100602
+212	wi_wp100701
+213	wi_wp100702
+214	wi_wp100801
+215	wi_wp100802
+216	wi_wp100901
+217	\N
+218	wi_wp101001
+219	wi_wp101101
+220	wi_wp101201
+221	wi_wp110101
+222	wi_wp110102
+223	wi_wp110201
+224	wi_wp110202
+225	wi_wp110301
+226	wi_wp110302
+227	wi_wp110401
+228	wi_wp110402
+229	wi_wp110501
+230	wi_wp110502
+231	wi_wp110601
+232	wi_wp110602
+233	wi_wp110701
+234	wi_wp110702
+235	wi_wp110801
+236	wi_wp110802
+237	\N
+238	wi_wp110901
+239	wi_wp111001
+240	wi_wp111101
+241	wi_wp111201
+242	wi_wp120101
+243	wi_wp120102
+244	wi_wp120201
+245	wi_wp120202
+246	wi_wp120301
+247	wi_wp120302
+248	wi_wp120401
+249	wi_wp120402
+250	wi_wp120501
+251	wi_wp120502
+252	wi_wp120601
+253	wi_wp120602
+254	wi_wp120701
+255	wi_wp120702
+256	wi_wp120801
+257	wi_wp120802
+258	wi_wp120901
+259	wi_wp121001
+260	wi_wp121101
+261	wi_wp121201
+262	\N
+263	wi_wp130101
+264	wi_wp130102
+265	wi_wp130201
+266	wi_wp130202
+267	wi_wp130301
+268	wi_wp130302
+269	wi_wp130401
+270	wi_wp130402
+271	wi_wp130501
+272	wi_wp130502
+273	wi_wp130601
+274	wi_wp130602
+275	wi_wp130701
+276	wi_wp130702
+277	wi_wp130801
+278	wi_wp130802
+279	wi_wp130901
+280	wi_wp131001
+281	wi_wp131101
+282	wi_wp131201
+283	wi_wp140101
+284	wi_wp140102
+285	wi_wp140201
+286	wi_wp140202
+287	wi_wp140301
+288	wi_wp140302
+289	wi_wp140401
+290	wi_wp140402
+291	wi_wp140501
+292	wi_wp140502
+293	wi_wp140601
+294	wi_wp140602
+295	wi_wp140701
+296	wi_wp140702
+297	wi_wp140801
+298	wi_wp140802
+299	wi_wp140901
+300	wi_wp141001
+301	wi_wp141101
+302	wi_wp141201
+303	wi_wp150101
+304	wi_wp150102
+305	wi_wp150201
+306	wi_wp150202
+307	wi_wp150301
+308	wi_wp150302
+309	wi_wp150401
+310	wi_wp150402
+311	wi_wp150501
+312	wi_wp150502
+313	wi_wp150601
+314	wi_wp150602
+315	wi_wp150701
+316	wi_wp150702
+317	wi_wp150801
+318	wi_wp150802
+319	wi_wp150901
+320	wi_wp151001
+321	wi_wp151101
+322	wi_wp151201
+323	wi_wp160101
+324	wi_wp160101
+325	wi_wp160102
+326	wi_wp160102
+327	wi_wp160201
+328	wi_wp160201
+329	wi_wp160202
+330	wi_wp160202
+331	wi_wp160301
+332	wi_wp160301
+333	wi_wp160302
+334	wi_wp160302
+335	wi_wp160401
+336	wi_wp160401
+337	wi_wp160402
+338	wi_wp160402
+339	wi_wp160501
+340	wi_wp160501
+341	wi_wp160502
+342	wi_wp160502
+343	wi_wp160601
+344	wi_wp160601
+345	wi_wp160602
+346	wi_wp160602
+347	wi_wp160701
+348	wi_wp160701
+349	wi_wp160702
+350	wi_wp160702
+351	wi_wp160801
+352	wi_wp160801
+353	wi_wp160802
+354	wi_wp160802
+355	\N
+356	\N
+357	wi_wp160901
+358	wi_wp160901
+359	wi_wp161001
+360	wi_wp161001
+361	wi_wp161101
+362	wi_wp161101
+363	wi_wp161201
+364	wi_wp161201
+365	\N
+366	\N
+367	\N
+368	wi_wp101301
+369	wi_wp111301
+370	wi_wp030901
+371	wi_wp030901
+372	wi_wp031001
+373	wi_wp031001
+374	wi_wp121301
+375	wi_wp161301
+376	wi_wp161301
+377	wi_wp161401
+378	wi_wp161401
+379	wi_wp101401
+380	dlc21_wi_wp413101
+381	\N
+382	\N
+383	\N
+384	\N
+385	\N
+386	\N
+387	\N
+388	\N
+389	\N
+390	\N
+391	\N
+392	\N
+393	\N
+394	\N
+395	\N
+396	\N
+397	\N
 \.
 
 
@@ -40182,6 +40599,14 @@ ALTER TABLE ONLY xeno2.skills
 
 ALTER TABLE ONLY xeno2.specials
     ADD CONSTRAINT specials_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: weapon_filenames_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.weapon_filenames
+    ADD CONSTRAINT weapon_filenames_pkey PRIMARY KEY (id);
 
 
 --
