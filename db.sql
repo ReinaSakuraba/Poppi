@@ -401,6 +401,7 @@ ALTER TABLE xeno2.pouch_item_effects OWNER TO poppi;
 --
 
 CREATE TABLE xeno2.pouch_items (
+    id integer NOT NULL,
     name text NOT NULL,
     category text NOT NULL,
     sell_price integer NOT NULL,
@@ -10226,309 +10227,309 @@ Love Source	6	15.0
 -- Data for Name: pouch_items; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
-COPY xeno2.pouch_items (name, category, sell_price, rarity, location, max_carry, "time", trust) FROM stdin;
-Juicy Samod	Staple Foods	60	Common	Argentum Trade Guild	10	20	9
-Lightly Fried Rice	Staple Foods	120	Common	Argentum Trade Guild	10	20	9
-Argentum Noodle Soup	Staple Foods	240	Rare	Argentum Trade Guild	10	20	9
-Massive Mushroom Pie	Staple Foods	180	Rare	Argentum Trade Guild	10	20	9
-Bright Samod	Staple Foods	600	Rare	Argentum Trade Guild	10	40	12
-Tasty Kordeth Samod	Staple Foods	2520	Rare	Argentum Trade Guild	10	70	12
-Grilled Anchortail	Seafood	120	Common	Argentum Trade Guild	10	20	12
-Oyster Stir-Fry	Seafood	180	Rare	Argentum Trade Guild	10	20	12
-Marine Stir-Fry	Seafood	1080	Rare	Argentum Trade Guild	10	60	12
-Melodious Melon Parfait	Desserts	60	Common	Argentum Trade Guild	10	20	9
-Cinnopon Roll	Desserts	120	Common	Argentum Trade Guild	10	20	9
-Sparklesugar	Desserts	180	Rare	Argentum Trade Guild	10	20	9
-Fruity Rice Ball	Desserts	360	Rare	Argentum Trade Guild	10	30	12
-Narcipear Jelly	Desserts	2520	Legendary	Argentum Trade Guild	10	70	12
-Twinklejuice	Drinks	60	Common	Argentum Trade Guild	10	20	9
-Fizz Juice	Drinks	120	Common	Argentum Trade Guild	10	20	9
-Chunky Juice	Drinks	180	Common	Argentum Trade Guild	10	20	9
-Sappan Veg Juice	Drinks	720	Rare	Argentum Trade Guild	10	30	12
-Honey au Lait	Drinks	1080	Rare	Argentum Trade Guild	10	40	12
-Crispy Blendshake	Drinks	1650	Legendary	Argentum Trade Guild	10	50	12
-Roly-Poly Maracas	Instruments	360	Common	Argentum Trade Guild	3	120	12
-Nopolele	Instruments	720	Common	Argentum Trade Guild	3	120	12
-Funky Conga	Instruments	1080	Common	Argentum Trade Guild	3	120	12
-Whispercorder	Instruments	1440	Rare	Argentum Trade Guild	3	120	12
-Casta-Mutes	Instruments	3460	Rare	Argentum Trade Guild	3	192	15
-Clicky-Clacks	Instruments	6340	Legendary	Argentum Trade Guild	3	240	15
-Salvaging Made Easy	Literature	360	Common	Argentum Trade Guild	3	120	12
-Yumyum's Golden Gun	Literature	720	Common	Argentum Trade Guild	3	120	12
-The Millenarian Titan	Literature	1080	Rare	Argentum Trade Guild	3	120	12
-Adventures of Myram	Literature	1730	Rare	Argentum Trade Guild	3	144	15
-Mumuni the Littlepon	Literature	4610	Legendary	Argentum Trade Guild	3	192	15
-Clattertongue	Board Games	360	Common	Argentum Trade Guild	3	120	12
-Nopon Chess Set	Board Games	720	Common	Argentum Trade Guild	3	120	12
-Sneak-Thief King	Board Games	1080	Common	Argentum Trade Guild	3	120	12
-Tradeway 66	Board Games	1440	Rare	Argentum Trade Guild	3	120	12
-Coral Nopon Chess Set	Board Games	2520	Rare	Argentum Trade Guild	3	168	15
-Leftherian Life	Board Games	5840	Legendary	Argentum Trade Guild	3	216	15
-Eau de Doux	Cosmetics	360	Rare	Argentum Trade Guild	3	120	12
-Elastifying Tonic	Cosmetics	720	Rare	Argentum Trade Guild	3	120	12
-Freshening Gel	Cosmetics	1080	Rare	Argentum Trade Guild	3	120	12
-Curled Eyelashes	Cosmetics	1440	Rare	Argentum Trade Guild	3	120	12
-Bubbly Mani-Pedi Kit	Cosmetics	2520	Rare	Argentum Trade Guild	3	168	15
-Full Moon Eyeliner	Cosmetics	5840	Legendary	Argentum Trade Guild	3	216	15
-Ruska Dumplings	Staple Foods	60	Common	Gormott Province	10	20	9
-Ruska Noodle Goulash	Staple Foods	120	Common	Gormott Province	10	20	9
-Deluxe Ham Toastie	Staple Foods	180	Common	Gormott Province	10	20	9
-Ruska Noodle Soup	Staple Foods	360	Rare	Gormott Province	10	30	12
-Beat Paste Paratha	Staple Foods	1200	Legendary	Gormott Province	10	50	12
-Crispy Sauté	Vegetables	60	Common	Gormott Province	10	20	9
-Torigoth Marinade	Vegetables	120	Common	Gormott Province	10	20	9
-Stuffed Meaty Carrot	Vegetables	180	Common	Gormott Province	10	20	9
-Puri Leaf Salad	Vegetables	360	Rare	Gormott Province	10	30	12
-Snowy Dudleya Gelée	Vegetables	2520	Legendary	Kingdom of Tantal	10	70	12
-Estral Steak	Meat	120	Common	Gormott Province	10	20	9
-Tasty Sausage	Meat	60	Common	Gormott Province	10	20	9
-Mince & Lentil Stir-Fry	Meat	600	Rare	Gormott Province	10	40	12
-Mustard Kordeth	Meat	2520	Legendary	Gormott Province	10	70	12
-Gormotti Fish Flakes	Seafood	120	Common	Gormott Province	10	20	9
-Grass-Smoked Salmon	Seafood	180	Rare	Gormott Province	10	20	9
-Bipedal Crab Chili	Seafood	1620	Legendary	Gormott Province	10	60	12
-Lunana Smoothie	Drinks	60	Common	Gormott Province	10	20	9
-Gormotti Honeytea	Drinks	120	Common	Gormott Province	10	20	9
-Kukurel Springwater	Drinks	180	Common	Gormott Province	10	20	9
-Passion Fruit Shake	Drinks	600	Rare	Gormott Province	10	40	12
-Victory Smoothie	Drinks	1620	Legendary	Gormott Province	10	60	12
-Torigonda	Instruments	360	Common	Gormott Province	3	120	12
-Woodgrain Alphorn	Instruments	720	Common	Gormott Province	3	120	12
-Cedarwood Koto	Instruments	1080	Common	Gormott Province	3	120	12
-Woodboard	Instruments	2520	Rare	Gormott Province	3	168	15
-Coralline Marimba	Instruments	5840	Legendary	Gormott Province	3	216	15
-The Girl on the Hill	Arts	360	Common	Gormott Province	3	120	12
-Black Flower Field	Arts	720	Common	Gormott Province	3	120	12
-Woodcut Print of Bana	Arts	1730	Rare	Gormott Province	3	144	15
-Wood-Carven Queen	Arts	5840	Legendary	Gormott Province	3	216	15
-Puffoundation	Cosmetics	360	Common	Gormott Province	3	120	12
-Treesap Conditioner	Cosmetics	720	Common	Gormott Province	3	120	12
-Flurrycomb	Cosmetics	1080	Common	Gormott Province	3	120	12
-Conch Hairpin	Cosmetics	3460	Rare	Gormott Province	3	192	15
-Sparkly Snow Perfume	Cosmetics	6340	Legendary	Gormott Province	3	240	15
-Puzzletree Pouch	Textiles	360	Common	Gormott Province	3	120	12
-Torigoth-Weave Mat	Textiles	720	Common	Gormott Province	3	120	12
-Wood-Dye Waistcloth	Textiles	1080	Common	Gormott Province	3	120	12
-Sun-Dappled Curtains	Textiles	1440	Rare	Gormott Province	3	120	12
-Leaf-Weave Cape	Textiles	3460	Rare	Gormott Province	3	192	15
-Snowflake Scarf	Textiles	8640	Legendary	Gormott Province	3	240	15
-Wrapped Glarna Bake	Staple Foods	180	Common	Kingdom of Uraya	10	20	12
-Three-Cheese Puran	Staple Foods	270	Common	Kingdom of Uraya	10	20	12
-Glitterspud Puran	Staple Foods	540	Rare	Kingdom of Uraya	10	30	15
-Hearty Kordeth Puran	Staple Foods	2430	Legendary	Kingdom of Uraya	10	60	15
-Pomegranate Soup	Vegetables	120	Common	Kingdom of Uraya	10	20	12
-Sour-Spark-on-a-Stick	Vegetables	180	Common	Kingdom of Uraya	10	20	12
-Boiled Hustle Hyacinth	Vegetables	600	Rare	Kingdom of Uraya	10	40	15
-Pickled Ice Cabbage	Vegetables	1620	Legendary	Kingdom of Uraya	10	60	15
-Armu T-Bone Steak	Meat	180	Common	Kingdom of Uraya	10	20	12
-Mixed Meat Platter	Meat	270	Common	Kingdom of Uraya	10	20	12
-Hotplate Fry-Up	Meat	900	Rare	Kingdom of Uraya	10	40	15
-Char-Grilled Grumbird	Meat	3780	Legendary	Kingdom of Uraya	10	70	15
-Dried Sunfish	Seafood	180	Common	Kingdom of Uraya	10	20	12
-Bullybelly Carpaccio	Seafood	270	Common	Kingdom of Uraya	10	20	12
-Steamed Bluegill	Seafood	540	Rare	Kingdom of Uraya	10	30	15
-Whitebait With Seeds	Seafood	2430	Legendary	Kingdom of Uraya	10	60	15
-Rainbow Parfait	Desserts	90	Common	Kingdom of Uraya	10	20	12
-Blossom Custard	Desserts	270	Rare	Kingdom of Uraya	10	20	12
-Plumage Peach Jelly	Desserts	1800	Legendary	Kingdom of Uraya	10	50	15
-Champ's Churros	Desserts	180	Common	Kingdom of Uraya	10	20	12
-Snipe Flan	Desserts	240	Rare	Kingdom of Uraya	10	20	15
-Cherry Cheese Mousse	Desserts	840	Legendary	Kingdom of Uraya	10	40	15
-Neon Grape Flan	Desserts	1200	Legendary	Kingdom of Uraya	10	50	15
-Black Roast Coffee	Drinks	120	Common	Kingdom of Uraya	10	20	12
-Jenerossi Tea	Drinks	180	Common	Kingdom of Uraya	10	20	12
-Fizzy Lassi	Drinks	360	Rare	Kingdom of Uraya	10	30	15
-Lentil Milkshake	Drinks	2520	Legendary	Kingdom of Uraya	10	70	15
-Scarlet Shamisen	Instruments	360	Common	Kingdom of Uraya	3	120	15
-Fonsan Viola	Instruments	720	Common	Kingdom of Uraya	3	120	15
-Hero's Harp	Instruments	1080	Rare	Kingdom of Uraya	3	120	15
-Rumble Cello	Instruments	1730	Rare	Kingdom of Uraya	3	144	18
-Cloudsnail Arpeggione	Instruments	4610	Legendary	Kingdom of Uraya	3	192	18
-Patron King's Carving	Arts	720	Common	Kingdom of Uraya	3	120	15
-Final Chorus	Arts	1080	Common	Kingdom of Uraya	3	120	15
-Singing Maiden Statue	Arts	3460	Rare	Kingdom of Uraya	3	192	18
-Skywards by Titan	Arts	8640	Legendary	Kingdom of Uraya	3	240	18
-The Alrestogony	Literature	720	Common	Kingdom of Uraya	3	120	15
-The Legacy of Selosia	Literature	1080	Common	Kingdom of Uraya	3	120	15
-Masterpieces of Alrest	Literature	2520	Rare	Kingdom of Uraya	3	168	18
-Addam's Love and War	Literature	5840	Legendary	Kingdom of Uraya	3	216	18
-Castle Poker	Board Games	360	Common	Kingdom of Uraya	3	120	15
-Gladiator Wrestling	Board Games	720	Common	Kingdom of Uraya	3	120	15
-Coral Reversi	Board Games	1080	Common	Kingdom of Uraya	3	120	15
-Duel Line	Board Games	1440	Rare	Kingdom of Uraya	3	120	15
-Nopopo Yard	Board Games	1730	Rare	Kingdom of Uraya	3	144	18
-Coral Casino	Board Games	8640	Legendary	Kingdom of Uraya	3	240	18
-Red Opal Lipstick	Cosmetics	720	Common	Kingdom of Uraya	3	120	15
-Titan-Oil Hand Cream	Cosmetics	1080	Common	Kingdom of Uraya	3	120	15
-Golden Mascara	Cosmetics	1440	Common	Kingdom of Uraya	3	120	15
-Gorgeous Blusher	Cosmetics	1730	Rare	Kingdom of Uraya	3	144	18
-Fonsett-Rouge Lipgloss	Cosmetics	4610	Legendary	Kingdom of Uraya	3	192	18
-Sanar-Knit Headband	Textiles	360	Common	Kingdom of Uraya	3	120	15
-Armu-Skin Gladiator	Textiles	720	Common	Kingdom of Uraya	3	120	15
-Coralweave Towel	Textiles	1080	Common	Kingdom of Uraya	3	120	15
-Dazzling Handkerchief	Textiles	1440	Rare	Kingdom of Uraya	3	120	15
-Gormotti Woodwing	Textiles	2520	Rare	Kingdom of Uraya	3	168	18
-Sanar-Knit Blanket	Textiles	5840	Legendary	Kingdom of Uraya	3	216	18
-Dolphin Carrot Sliders	Vegetables	120	Common	Empire of Mor Ardain	10	20	12
-Campfire Skewers	Vegetables	180	Common	Empire of Mor Ardain	10	20	12
-Crispy Vegetable Salad	Vegetables	360	Rare	Empire of Mor Ardain	10	30	15
-Steamflake Tabbouleh	Vegetables	1620	Legendary	Empire of Mor Ardain	10	60	15
-Meat & Lentil Skewer	Meat	120	Common	Empire of Mor Ardain	10	20	12
-Herbal Tartare Kascha	Meat	180	Common	Empire of Mor Ardain	10	20	12
-Grumbird Casserole	Meat	240	Common	Empire of Mor Ardain	10	20	12
-Estral Quotelettas	Meat	360	Rare	Empire of Mor Ardain	10	30	15
-Armu & Bean Stew	Meat	1200	Legendary	Empire of Mor Ardain	10	50	15
-Grilled Salmon in Herbs	Seafood	180	Common	Empire of Mor Ardain	10	20	12
-Cloud Sea Crab Sticks	Seafood	240	Common	Empire of Mor Ardain	10	20	12
-Sand Salmon Ceviche	Seafood	600	Rare	Empire of Mor Ardain	10	40	15
-Fish and Herb Broth	Seafood	2520	Legendary	Empire of Mor Ardain	10	70	15
-Steamed Milk Brioche	Desserts	120	Common	Empire of Mor Ardain	10	20	12
-Steam-Gel Ice Cream	Desserts	180	Common	Empire of Mor Ardain	10	20	12
-Sweet Lentil Bun	Desserts	240	Common	Empire of Mor Ardain	10	20	12
-Sky-Jewel Tart	Desserts	240	Rare	Empire of Mor Ardain	10	20	12
-Odifa Gelée Tart	Desserts	900	Rare	Empire of Mor Ardain	10	50	15
-Hot Ruby Steamed Bun	Desserts	2520	Legendary	Empire of Mor Ardain	10	70	15
-Pipe Trumpet	Instruments	720	Common	Empire of Mor Ardain	3	120	15
-Steamwork Organ	Instruments	1080	Common	Empire of Mor Ardain	3	120	15
-Army-Issue Violin	Instruments	1440	Common	Empire of Mor Ardain	3	120	15
-Hammerplate Snare	Instruments	1800	Rare	Empire of Mor Ardain	3	120	15
-Tube Xylophone	Instruments	1730	Rare	Empire of Mor Ardain	3	144	18
-Icicle Marimba	Instruments	5840	Legendary	Empire of Mor Ardain	3	216	18
-Punk Doll	Arts	720	Common	Empire of Mor Ardain	3	120	15
-Copper Ephem Statue	Arts	1080	Common	Empire of Mor Ardain	3	120	15
-Felmeri Fairy Statue	Arts	1730	Rare	Empire of Mor Ardain	3	144	18
-Conch Music Box	Arts	4610	Legendary	Empire of Mor Ardain	3	192	18
-Ardainian Arms Album	Literature	720	Common	Empire of Mor Ardain	3	120	15
-Emperor Ephem's War	Literature	1080	Common	Empire of Mor Ardain	3	120	15
-Imperial Secret Escapes	Literature	1440	Common	Empire of Mor Ardain	3	120	15
-Les Awfuls	Literature	1440	Rare	Empire of Mor Ardain	3	120	15
-How Wars Profit Nopon	Literature	2520	Rare	Empire of Mor Ardain	3	168	18
-Love Beyond the Clouds	Literature	5840	Legendary	Empire of Mor Ardain	3	216	18
-Army Field Manual	Board Games	720	Common	Empire of Mor Ardain	3	120	15
-Chooby Tubes	Board Games	1080	Common	Empire of Mor Ardain	3	120	15
-Secret Trials	Board Games	1440	Common	Empire of Mor Ardain	3	120	15
-Dueling Kingdoms	Board Games	1800	Rare	Empire of Mor Ardain	3	120	15
-Dealing Kingdoms	Board Games	2520	Rare	Empire of Mor Ardain	3	168	18
-Plumber Escape Game	Board Games	6340	Legendary	Empire of Mor Ardain	3	240	18
-Lybarian Chowder	Vegetables	120	Common	Leftherian Archipelago	10	20	15
-Green Cheese Salad	Vegetables	180	Common	Leftherian Archipelago	10	20	15
-Vegetable Mille-Feuille	Vegetables	240	Common	Leftherian Archipelago	10	20	15
-Veg & Oyster Aspic	Vegetables	360	Rare	Leftherian Archipelago	10	30	18
-Snowbaby Potato Salad	Vegetables	2520	Legendary	Leftherian Archipelago	10	70	18
-Pastel Camill	Meat	60	Common	Leftherian Archipelago	10	20	15
-Albacon Frystack	Meat	120	Common	Leftherian Archipelago	10	20	15
-Sweet Armu Belly Stew	Meat	180	Common	Leftherian Archipelago	10	20	15
-Zaproast Power Bowl	Meat	240	Rare	Leftherian Archipelago	10	20	15
-Fragrant Samod Stralu	Meat	360	Rare	Leftherian Archipelago	10	30	18
-Glarna Stir-Fry	Meat	1200	Legendary	Leftherian Archipelago	10	50	18
-Broiled Pinfin	Seafood	180	Common	Leftherian Archipelago	10	20	15
-Sautéed Beat Shrimps	Seafood	240	Common	Leftherian Archipelago	10	20	15
-Braised Cloud Sea Shark	Seafood	480	Common	Leftherian Archipelago	10	20	15
-Smoke-Braised Killifish	Seafood	600	Rare	Leftherian Archipelago	10	40	18
-Seared Whitebait	Seafood	2520	Legendary	Leftherian Archipelago	10	70	18
-Odifa	Drinks	120	Common	Indoline Praetorium	10	20	15
-Indoline Tea	Drinks	180	Common	Indoline Praetorium	10	20	15
-Frozen Odifa	Drinks	240	Common	Indoline Praetorium	10	20	15
-Pipestraw Smoothie	Drinks	600	Rare	Leftherian Archipelago	10	40	18
-Armu Milk Earl Grey	Drinks	1620	Legendary	Leftherian Archipelago	10	60	18
-Luna Lizard Wreath	Arts	1080	Common	Leftherian Archipelago	3	120	18
-Montecoran Doll	Arts	1440	Common	Leftherian Archipelago	3	120	18
-Steel Pipe Lexos	Arts	2520	Rare	Leftherian Archipelago	3	168	21
-Lush Moonbeam Mask	Arts	5840	Legendary	Leftherian Archipelago	3	216	21
-Jellyfish Balsam Rug	Textiles	720	Common	Leftherian Archipelago	3	120	18
-Codweave Shop Curtain	Textiles	1080	Common	Leftherian Archipelago	3	120	18
-Codweave Safety Blanky	Textiles	1440	Common	Leftherian Archipelago	3	120	18
-Silken Stool	Textiles	1800	Rare	Leftherian Archipelago	3	120	18
-Noponcho	Textiles	1730	Rare	Leftherian Archipelago	3	144	21
-Prismatic Headband	Textiles	4610	Legendary	Leftherian Archipelago	3	192	21
-Fondant Rice Cake	Staple Foods	900	Common	Kingdom of Tantal	10	20	15
-Tantalese Porridge	Staple Foods	1200	Common	Kingdom of Tantal	10	20	15
-Poached Fruit Samod	Staple Foods	1800	Rare	Kingdom of Tantal	10	30	18
-Grumbird Rice Bowl	Staple Foods	8100	Legendary	Kingdom of Tantal	10	60	18
-Steamed Veg Stralu	Vegetables	1200	Common	Kingdom of Tantal	10	20	15
-Addam's Embercakes	Vegetables	1500	Common	Kingdom of Tantal	10	20	15
-Vinaigrette Ice Cabbage	Vegetables	3000	Rare	Kingdom of Tantal	10	40	18
-Prickly Snowpickle	Vegetables	8250	Legendary	Kingdom of Tantal	10	70	18
-Aromalocaris Sauté	Seafood	1200	Common	Kingdom of Tantal	10	20	15
-Abyssturgeon Medallion	Seafood	1500	Common	Kingdom of Tantal	10	20	18
-Bagna Oyster Roll	Seafood	1800	Rare	Kingdom of Tantal	10	30	18
-Whitebait-Samod Hotpot	Seafood	6000	Legendary	Kingdom of Tantal	10	50	18
-Airy Snowflake Sherbet	Desserts	600	Common	Kingdom of Tantal	10	20	15
-Thawing Mille-Feuille	Desserts	900	Common	Kingdom of Tantal	10	20	15
-Baked Narcipear	Desserts	1200	Common	Kingdom of Tantal	10	20	15
-Sno-Bake Cheesecake	Desserts	1500	Rare	Kingdom of Tantal	10	20	15
-Odifa Punch	Desserts	3000	Rare	Kingdom of Tantal	10	40	18
-Snow Dumplings	Desserts	8100	Legendary	Kingdom of Tantal	10	60	18
-Ancient King’s Portrait	Arts	5400	Legendary	Kingdom of Tantal	3	120	18
-Snow-Crystal Vase	Arts	7200	Legendary	Kingdom of Tantal	3	120	18
-Portrait of Ger the Hero	Arts	9000	Legendary	Kingdom of Tantal	3	120	18
-Prideful Walking	Literature	3600	Common	Kingdom of Tantal	3	120	18
-The Armu Who Loved	Literature	5400	Common	Kingdom of Tantal	3	120	18
-Witness the Crustip	Literature	7200	Common	Kingdom of Tantal	3	120	18
-The Annals of Addam	Literature	9000	Rare	Kingdom of Tantal	3	120	18
-The Blizzard Choir	Literature	12600	Rare	Kingdom of Tantal	3	168	21
-Astrology Made Simple	Literature	31680	Legendary	Kingdom of Tantal	3	240	21
-Don't Feed the Armu	Board Games	5400	Common	Kingdom of Tantal	3	120	18
-Bluff Knight	Board Games	7200	Common	Kingdom of Tantal	3	120	18
-Money-Bye-Bye	Board Games	9000	Common	Kingdom of Tantal	3	120	18
-Smack-A-Nopon	Board Games	8640	Rare	Kingdom of Tantal	3	144	21
-Jeweled Billiard Balls	Board Games	23040	Legendary	Kingdom of Tantal	3	192	21
-Steamy Oil	Cosmetics	5400	Common	Kingdom of Tantal	3	120	18
-Chocolate Shadow	Cosmetics	7200	Common	Kingdom of Tantal	3	120	18
-Moonstar Lipstick	Cosmetics	9000	Common	Kingdom of Tantal	3	120	18
-Noponic Nails	Cosmetics	8640	Rare	Kingdom of Tantal	3	144	21
-Steam Powder	Cosmetics	29160	Legendary	Kingdom of Tantal	3	216	21
-Tantalese Velvet	Textiles	3600	Common	Kingdom of Tantal	3	120	18
-Snowflake-Weave Sole	Textiles	5400	Common	Kingdom of Tantal	3	120	18
-Genbu-Weave Cloth	Textiles	7200	Common	Kingdom of Tantal	3	120	18
-Heatstripe	Textiles	9000	Rare	Kingdom of Tantal	3	120	18
-Musical Hair Clasp	Textiles	17280	Rare	Kingdom of Tantal	3	192	21
-Torigoth Snowpouch	Textiles	43200	Legendary	Kingdom of Tantal	3	240	21
-Glitterbake	Staple Foods	180	Common	Gormott Province	10	20	12
-Tricolor Bowl	Staple Foods	720	Rare	Gormott Province	10	30	12
-Hot Moonbeam Salad	Vegetables	180	Common	Gormott Province	10	20	12
-Addam's Supercakes	Vegetables	1080	Rare	Gormott Province	10	40	12
-Meatball Pot-au-Feu	Meat	180	Common	Gormott Province	10	20	12
-Pan-Fried Tartari	Meat	1500	Rare	Gormott Province	10	50	12
-Roast Meat Tagliata	Meat	2160	Rare	Gormott Province	10	60	12
-Sunshine Pie	Meat	1650	Legendary	Gormott Province	10	70	12
-Acqua Pearl Pazza	Meat	1650	Legendary	Gormott Province	10	20	12
-Vess’s Dumplings	Staple Foods	180	Common	Gormott Province	10	20	6
-Rainbow Dumplings	Staple Foods	360	Common	Gormott Province	10	30	9
-Gromrice Dumplings	Staple Foods	840	Rare	Gormott Province	10	40	12
-Puri Leaf Dumplings	Staple Foods	1500	Rare	Gormott Province	10	50	15
-Spicy Stralu	Meat	300	Legendary	Argentum Trade Guild	10	20	12
-Lovemerry Cake	Desserts	1650	Legendary	Kingdom of Uraya	10	70	15
-Neon Cookies	Desserts	2160	Rare	Kingdom of Uraya	10	60	15
-Bitter Choclit	Desserts	180	Common	Kingdom of Uraya	10	20	12
-Bitlip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
-Pucklip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
-Tinglip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
-Sourlip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
-Tricolor Ice Floe	Arts	1300	Common	Argentum Trade Guild	10	144	9
-Sparkling Snowglobe	Arts	3530	Rare	Argentum Trade Guild	10	168	12
-Rainbow Scope	Arts	3530	Rare	Argentum Trade Guild	10	168	12
-Tantal Icecube	Arts	5760	Rare	Argentum Trade Guild	10	192	15
-Titan Illuminations	Arts	6340	Legendary	Argentum Trade Guild	10	192	15
-Salted Brog Sauté	Meat	840	Rare	Gormott Province	10	40	15
-Cream Orange Paratha	Staple Foods	180	Rare	Gormott Province	10	20	9
-The Flora of Alrest	Literature	5400	Common	Kingdom of Tantal	10	120	21
-Gentlemen: A Study	Literature	10800	Legendary	Kingdom of Tantal	10	120	21
-Quoteletta	Meat	300	Rare	Empire of Mor Ardain	10	20	12
-Fried Octomayo	Staple Foods	1300	Rare	Kingdom of Tantal	10	20	15
-Ardainian Bear Carving	Arts	1440	Rare	Empire of Mor Ardain	10	120	15
-Master's Curry	Staple Foods	600	Rare	Kingdom of Uraya	10	20	9
-Lucky Dawn Bread	Staple Foods	240	Rare	Gormott Province	10	20	12
-Choclit Dumplings	Staple Foods	1650	Rare	Gormott Province	10	60	18
-Heart Cookies	Desserts	120	Rare	Indoline Praetorium	10	20	9
-Rizzente Mantle	Textiles	1520	Common	Leftherian Archipelago	10	120	9
-Felt Cushioning	Textiles	2520	Common	Leftherian Archipelago	10	120	12
-Brut Silk	Textiles	3530	Rare	Leftherian Archipelago	10	120	12
-Shelton Broadcloth	Textiles	4540	Rare	Leftherian Archipelago	10	120	15
-Crinkly Wool	Textiles	6340	Legendary	Leftherian Archipelago	10	120	15
-Pyra's Baked Redfish	Seafood	6340	Legendary	Gormott Province	10	60	18
-Fabulously Fierce Hat	Textiles	6340	Legendary	Leftherian Archipelago	10	60	18
-Love Source	Drinks	6340	Legendary	None	10	60	3000
+COPY xeno2.pouch_items (id, name, category, sell_price, rarity, location, max_carry, "time", trust) FROM stdin;
+40001	Juicy Samod	Staple Foods	60	Common	Argentum Trade Guild	10	20	9
+40002	Lightly Fried Rice	Staple Foods	120	Common	Argentum Trade Guild	10	20	9
+40003	Argentum Noodle Soup	Staple Foods	240	Rare	Argentum Trade Guild	10	20	9
+40004	Massive Mushroom Pie	Staple Foods	180	Rare	Argentum Trade Guild	10	20	9
+40005	Bright Samod	Staple Foods	600	Rare	Argentum Trade Guild	10	40	12
+40006	Tasty Kordeth Samod	Staple Foods	2520	Rare	Argentum Trade Guild	10	70	12
+40007	Grilled Anchortail	Seafood	120	Common	Argentum Trade Guild	10	20	12
+40008	Oyster Stir-Fry	Seafood	180	Rare	Argentum Trade Guild	10	20	12
+40009	Marine Stir-Fry	Seafood	1080	Rare	Argentum Trade Guild	10	60	12
+40010	Melodious Melon Parfait	Desserts	60	Common	Argentum Trade Guild	10	20	9
+40011	Cinnopon Roll	Desserts	120	Common	Argentum Trade Guild	10	20	9
+40012	Sparklesugar	Desserts	180	Rare	Argentum Trade Guild	10	20	9
+40013	Fruity Rice Ball	Desserts	360	Rare	Argentum Trade Guild	10	30	12
+40014	Narcipear Jelly	Desserts	2520	Legendary	Argentum Trade Guild	10	70	12
+40015	Twinklejuice	Drinks	60	Common	Argentum Trade Guild	10	20	9
+40016	Fizz Juice	Drinks	120	Common	Argentum Trade Guild	10	20	9
+40017	Chunky Juice	Drinks	180	Common	Argentum Trade Guild	10	20	9
+40018	Sappan Veg Juice	Drinks	720	Rare	Argentum Trade Guild	10	30	12
+40019	Honey au Lait	Drinks	1080	Rare	Argentum Trade Guild	10	40	12
+40020	Crispy Blendshake	Drinks	1650	Legendary	Argentum Trade Guild	10	50	12
+40021	Roly-Poly Maracas	Instruments	360	Common	Argentum Trade Guild	3	120	12
+40022	Nopolele	Instruments	720	Common	Argentum Trade Guild	3	120	12
+40023	Funky Conga	Instruments	1080	Common	Argentum Trade Guild	3	120	12
+40024	Whispercorder	Instruments	1440	Rare	Argentum Trade Guild	3	120	12
+40025	Casta-Mutes	Instruments	3460	Rare	Argentum Trade Guild	3	192	15
+40026	Clicky-Clacks	Instruments	6340	Legendary	Argentum Trade Guild	3	240	15
+40027	Salvaging Made Easy	Literature	360	Common	Argentum Trade Guild	3	120	12
+40028	Yumyum's Golden Gun	Literature	720	Common	Argentum Trade Guild	3	120	12
+40029	The Millenarian Titan	Literature	1080	Rare	Argentum Trade Guild	3	120	12
+40030	Adventures of Myram	Literature	1730	Rare	Argentum Trade Guild	3	144	15
+40031	Mumuni the Littlepon	Literature	4610	Legendary	Argentum Trade Guild	3	192	15
+40032	Clattertongue	Board Games	360	Common	Argentum Trade Guild	3	120	12
+40033	Nopon Chess Set	Board Games	720	Common	Argentum Trade Guild	3	120	12
+40034	Sneak-Thief King	Board Games	1080	Common	Argentum Trade Guild	3	120	12
+40035	Tradeway 66	Board Games	1440	Rare	Argentum Trade Guild	3	120	12
+40036	Coral Nopon Chess Set	Board Games	2520	Rare	Argentum Trade Guild	3	168	15
+40037	Leftherian Life	Board Games	5840	Legendary	Argentum Trade Guild	3	216	15
+40038	Eau de Doux	Cosmetics	360	Rare	Argentum Trade Guild	3	120	12
+40039	Elastifying Tonic	Cosmetics	720	Rare	Argentum Trade Guild	3	120	12
+40040	Freshening Gel	Cosmetics	1080	Rare	Argentum Trade Guild	3	120	12
+40041	Curled Eyelashes	Cosmetics	1440	Rare	Argentum Trade Guild	3	120	12
+40042	Bubbly Mani-Pedi Kit	Cosmetics	2520	Rare	Argentum Trade Guild	3	168	15
+40043	Full Moon Eyeliner	Cosmetics	5840	Legendary	Argentum Trade Guild	3	216	15
+40044	Ruska Dumplings	Staple Foods	60	Common	Gormott Province	10	20	9
+40045	Ruska Noodle Goulash	Staple Foods	120	Common	Gormott Province	10	20	9
+40046	Deluxe Ham Toastie	Staple Foods	180	Common	Gormott Province	10	20	9
+40047	Ruska Noodle Soup	Staple Foods	360	Rare	Gormott Province	10	30	12
+40048	Beat Paste Paratha	Staple Foods	1200	Legendary	Gormott Province	10	50	12
+40049	Crispy Sauté	Vegetables	60	Common	Gormott Province	10	20	9
+40050	Torigoth Marinade	Vegetables	120	Common	Gormott Province	10	20	9
+40051	Stuffed Meaty Carrot	Vegetables	180	Common	Gormott Province	10	20	9
+40052	Puri Leaf Salad	Vegetables	360	Rare	Gormott Province	10	30	12
+40053	Snowy Dudleya Gelée	Vegetables	2520	Legendary	Kingdom of Tantal	10	70	12
+40054	Estral Steak	Meat	120	Common	Gormott Province	10	20	9
+40055	Tasty Sausage	Meat	60	Common	Gormott Province	10	20	9
+40056	Mince & Lentil Stir-Fry	Meat	600	Rare	Gormott Province	10	40	12
+40057	Mustard Kordeth	Meat	2520	Legendary	Gormott Province	10	70	12
+40058	Gormotti Fish Flakes	Seafood	120	Common	Gormott Province	10	20	9
+40059	Grass-Smoked Salmon	Seafood	180	Rare	Gormott Province	10	20	9
+40060	Bipedal Crab Chili	Seafood	1620	Legendary	Gormott Province	10	60	12
+40061	Lunana Smoothie	Drinks	60	Common	Gormott Province	10	20	9
+40062	Gormotti Honeytea	Drinks	120	Common	Gormott Province	10	20	9
+40063	Kukurel Springwater	Drinks	180	Common	Gormott Province	10	20	9
+40064	Passion Fruit Shake	Drinks	600	Rare	Gormott Province	10	40	12
+40065	Victory Smoothie	Drinks	1620	Legendary	Gormott Province	10	60	12
+40066	Torigonda	Instruments	360	Common	Gormott Province	3	120	12
+40067	Woodgrain Alphorn	Instruments	720	Common	Gormott Province	3	120	12
+40068	Cedarwood Koto	Instruments	1080	Common	Gormott Province	3	120	12
+40069	Woodboard	Instruments	2520	Rare	Gormott Province	3	168	15
+40070	Coralline Marimba	Instruments	5840	Legendary	Gormott Province	3	216	15
+40071	The Girl on the Hill	Arts	360	Common	Gormott Province	3	120	12
+40072	Black Flower Field	Arts	720	Common	Gormott Province	3	120	12
+40073	Woodcut Print of Bana	Arts	1730	Rare	Gormott Province	3	144	15
+40074	Wood-Carven Queen	Arts	5840	Legendary	Gormott Province	3	216	15
+40075	Puffoundation	Cosmetics	360	Common	Gormott Province	3	120	12
+40076	Treesap Conditioner	Cosmetics	720	Common	Gormott Province	3	120	12
+40077	Flurrycomb	Cosmetics	1080	Common	Gormott Province	3	120	12
+40078	Conch Hairpin	Cosmetics	3460	Rare	Gormott Province	3	192	15
+40079	Sparkly Snow Perfume	Cosmetics	6340	Legendary	Gormott Province	3	240	15
+40080	Puzzletree Pouch	Textiles	360	Common	Gormott Province	3	120	12
+40081	Torigoth-Weave Mat	Textiles	720	Common	Gormott Province	3	120	12
+40082	Wood-Dye Waistcloth	Textiles	1080	Common	Gormott Province	3	120	12
+40083	Sun-Dappled Curtains	Textiles	1440	Rare	Gormott Province	3	120	12
+40084	Leaf-Weave Cape	Textiles	3460	Rare	Gormott Province	3	192	15
+40085	Snowflake Scarf	Textiles	8640	Legendary	Gormott Province	3	240	15
+40086	Wrapped Glarna Bake	Staple Foods	180	Common	Kingdom of Uraya	10	20	12
+40087	Three-Cheese Puran	Staple Foods	270	Common	Kingdom of Uraya	10	20	12
+40088	Glitterspud Puran	Staple Foods	540	Rare	Kingdom of Uraya	10	30	15
+40089	Hearty Kordeth Puran	Staple Foods	2430	Legendary	Kingdom of Uraya	10	60	15
+40090	Pomegranate Soup	Vegetables	120	Common	Kingdom of Uraya	10	20	12
+40091	Sour-Spark-on-a-Stick	Vegetables	180	Common	Kingdom of Uraya	10	20	12
+40092	Boiled Hustle Hyacinth	Vegetables	600	Rare	Kingdom of Uraya	10	40	15
+40093	Pickled Ice Cabbage	Vegetables	1620	Legendary	Kingdom of Uraya	10	60	15
+40094	Armu T-Bone Steak	Meat	180	Common	Kingdom of Uraya	10	20	12
+40095	Mixed Meat Platter	Meat	270	Common	Kingdom of Uraya	10	20	12
+40096	Hotplate Fry-Up	Meat	900	Rare	Kingdom of Uraya	10	40	15
+40097	Char-Grilled Grumbird	Meat	3780	Legendary	Kingdom of Uraya	10	70	15
+40098	Dried Sunfish	Seafood	180	Common	Kingdom of Uraya	10	20	12
+40099	Bullybelly Carpaccio	Seafood	270	Common	Kingdom of Uraya	10	20	12
+40100	Steamed Bluegill	Seafood	540	Rare	Kingdom of Uraya	10	30	15
+40101	Whitebait With Seeds	Seafood	2430	Legendary	Kingdom of Uraya	10	60	15
+40102	Rainbow Parfait	Desserts	90	Common	Kingdom of Uraya	10	20	12
+40103	Blossom Custard	Desserts	270	Rare	Kingdom of Uraya	10	20	12
+40267	Sunshine Pie	Meat	1650	Legendary	Gormott Province	10	70	12
+40104	Plumage Peach Jelly	Desserts	1800	Legendary	Kingdom of Uraya	10	50	15
+40105	Champ's Churros	Desserts	180	Common	Kingdom of Uraya	10	20	12
+40108	Snipe Flan	Desserts	240	Rare	Kingdom of Uraya	10	20	15
+40109	Cherry Cheese Mousse	Desserts	840	Legendary	Kingdom of Uraya	10	40	15
+40110	Neon Grape Flan	Desserts	1200	Legendary	Kingdom of Uraya	10	50	15
+40111	Black Roast Coffee	Drinks	120	Common	Kingdom of Uraya	10	20	12
+40112	Jenerossi Tea	Drinks	180	Common	Kingdom of Uraya	10	20	12
+40113	Fizzy Lassi	Drinks	360	Rare	Kingdom of Uraya	10	30	15
+40114	Lentil Milkshake	Drinks	2520	Legendary	Kingdom of Uraya	10	70	15
+40115	Scarlet Shamisen	Instruments	360	Common	Kingdom of Uraya	3	120	15
+40116	Fonsan Viola	Instruments	720	Common	Kingdom of Uraya	3	120	15
+40117	Hero's Harp	Instruments	1080	Rare	Kingdom of Uraya	3	120	15
+40118	Rumble Cello	Instruments	1730	Rare	Kingdom of Uraya	3	144	18
+40119	Cloudsnail Arpeggione	Instruments	4610	Legendary	Kingdom of Uraya	3	192	18
+40120	Patron King's Carving	Arts	720	Common	Kingdom of Uraya	3	120	15
+40121	Final Chorus	Arts	1080	Common	Kingdom of Uraya	3	120	15
+40122	Singing Maiden Statue	Arts	3460	Rare	Kingdom of Uraya	3	192	18
+40123	Skywards by Titan	Arts	8640	Legendary	Kingdom of Uraya	3	240	18
+40124	The Alrestogony	Literature	720	Common	Kingdom of Uraya	3	120	15
+40125	The Legacy of Selosia	Literature	1080	Common	Kingdom of Uraya	3	120	15
+40126	Masterpieces of Alrest	Literature	2520	Rare	Kingdom of Uraya	3	168	18
+40127	Addam's Love and War	Literature	5840	Legendary	Kingdom of Uraya	3	216	18
+40128	Castle Poker	Board Games	360	Common	Kingdom of Uraya	3	120	15
+40129	Gladiator Wrestling	Board Games	720	Common	Kingdom of Uraya	3	120	15
+40130	Coral Reversi	Board Games	1080	Common	Kingdom of Uraya	3	120	15
+40131	Duel Line	Board Games	1440	Rare	Kingdom of Uraya	3	120	15
+40132	Nopopo Yard	Board Games	1730	Rare	Kingdom of Uraya	3	144	18
+40133	Coral Casino	Board Games	8640	Legendary	Kingdom of Uraya	3	240	18
+40134	Red Opal Lipstick	Cosmetics	720	Common	Kingdom of Uraya	3	120	15
+40135	Titan-Oil Hand Cream	Cosmetics	1080	Common	Kingdom of Uraya	3	120	15
+40136	Golden Mascara	Cosmetics	1440	Common	Kingdom of Uraya	3	120	15
+40137	Gorgeous Blusher	Cosmetics	1730	Rare	Kingdom of Uraya	3	144	18
+40138	Fonsett-Rouge Lipgloss	Cosmetics	4610	Legendary	Kingdom of Uraya	3	192	18
+40139	Sanar-Knit Headband	Textiles	360	Common	Kingdom of Uraya	3	120	15
+40140	Armu-Skin Gladiator	Textiles	720	Common	Kingdom of Uraya	3	120	15
+40141	Coralweave Towel	Textiles	1080	Common	Kingdom of Uraya	3	120	15
+40142	Dazzling Handkerchief	Textiles	1440	Rare	Kingdom of Uraya	3	120	15
+40143	Gormotti Woodwing	Textiles	2520	Rare	Kingdom of Uraya	3	168	18
+40144	Sanar-Knit Blanket	Textiles	5840	Legendary	Kingdom of Uraya	3	216	18
+40145	Dolphin Carrot Sliders	Vegetables	120	Common	Empire of Mor Ardain	10	20	12
+40146	Campfire Skewers	Vegetables	180	Common	Empire of Mor Ardain	10	20	12
+40147	Crispy Vegetable Salad	Vegetables	360	Rare	Empire of Mor Ardain	10	30	15
+40148	Steamflake Tabbouleh	Vegetables	1620	Legendary	Empire of Mor Ardain	10	60	15
+40149	Meat & Lentil Skewer	Meat	120	Common	Empire of Mor Ardain	10	20	12
+40150	Herbal Tartare Kascha	Meat	180	Common	Empire of Mor Ardain	10	20	12
+40151	Grumbird Casserole	Meat	240	Common	Empire of Mor Ardain	10	20	12
+40152	Estral Quotelettas	Meat	360	Rare	Empire of Mor Ardain	10	30	15
+40153	Armu & Bean Stew	Meat	1200	Legendary	Empire of Mor Ardain	10	50	15
+40154	Grilled Salmon in Herbs	Seafood	180	Common	Empire of Mor Ardain	10	20	12
+40155	Cloud Sea Crab Sticks	Seafood	240	Common	Empire of Mor Ardain	10	20	12
+40156	Sand Salmon Ceviche	Seafood	600	Rare	Empire of Mor Ardain	10	40	15
+40157	Fish and Herb Broth	Seafood	2520	Legendary	Empire of Mor Ardain	10	70	15
+40158	Steamed Milk Brioche	Desserts	120	Common	Empire of Mor Ardain	10	20	12
+40159	Steam-Gel Ice Cream	Desserts	180	Common	Empire of Mor Ardain	10	20	12
+40160	Sweet Lentil Bun	Desserts	240	Common	Empire of Mor Ardain	10	20	12
+40161	Sky-Jewel Tart	Desserts	240	Rare	Empire of Mor Ardain	10	20	12
+40162	Odifa Gelée Tart	Desserts	900	Rare	Empire of Mor Ardain	10	50	15
+40163	Hot Ruby Steamed Bun	Desserts	2520	Legendary	Empire of Mor Ardain	10	70	15
+40164	Pipe Trumpet	Instruments	720	Common	Empire of Mor Ardain	3	120	15
+40165	Steamwork Organ	Instruments	1080	Common	Empire of Mor Ardain	3	120	15
+40166	Army-Issue Violin	Instruments	1440	Common	Empire of Mor Ardain	3	120	15
+40167	Hammerplate Snare	Instruments	1800	Rare	Empire of Mor Ardain	3	120	15
+40168	Tube Xylophone	Instruments	1730	Rare	Empire of Mor Ardain	3	144	18
+40169	Icicle Marimba	Instruments	5840	Legendary	Empire of Mor Ardain	3	216	18
+40170	Punk Doll	Arts	720	Common	Empire of Mor Ardain	3	120	15
+40171	Copper Ephem Statue	Arts	1080	Common	Empire of Mor Ardain	3	120	15
+40172	Felmeri Fairy Statue	Arts	1730	Rare	Empire of Mor Ardain	3	144	18
+40173	Conch Music Box	Arts	4610	Legendary	Empire of Mor Ardain	3	192	18
+40174	Ardainian Arms Album	Literature	720	Common	Empire of Mor Ardain	3	120	15
+40175	Emperor Ephem's War	Literature	1080	Common	Empire of Mor Ardain	3	120	15
+40176	Imperial Secret Escapes	Literature	1440	Common	Empire of Mor Ardain	3	120	15
+40177	Les Awfuls	Literature	1440	Rare	Empire of Mor Ardain	3	120	15
+40178	How Wars Profit Nopon	Literature	2520	Rare	Empire of Mor Ardain	3	168	18
+40179	Love Beyond the Clouds	Literature	5840	Legendary	Empire of Mor Ardain	3	216	18
+40180	Army Field Manual	Board Games	720	Common	Empire of Mor Ardain	3	120	15
+40181	Chooby Tubes	Board Games	1080	Common	Empire of Mor Ardain	3	120	15
+40182	Secret Trials	Board Games	1440	Common	Empire of Mor Ardain	3	120	15
+40183	Dueling Kingdoms	Board Games	1800	Rare	Empire of Mor Ardain	3	120	15
+40184	Dealing Kingdoms	Board Games	2520	Rare	Empire of Mor Ardain	3	168	18
+40185	Plumber Escape Game	Board Games	6340	Legendary	Empire of Mor Ardain	3	240	18
+40186	Lybarian Chowder	Vegetables	120	Common	Leftherian Archipelago	10	20	15
+40187	Green Cheese Salad	Vegetables	180	Common	Leftherian Archipelago	10	20	15
+40188	Vegetable Mille-Feuille	Vegetables	240	Common	Leftherian Archipelago	10	20	15
+40189	Veg & Oyster Aspic	Vegetables	360	Rare	Leftherian Archipelago	10	30	18
+40190	Snowbaby Potato Salad	Vegetables	2520	Legendary	Leftherian Archipelago	10	70	18
+40191	Pastel Camill	Meat	60	Common	Leftherian Archipelago	10	20	15
+40192	Albacon Frystack	Meat	120	Common	Leftherian Archipelago	10	20	15
+40193	Sweet Armu Belly Stew	Meat	180	Common	Leftherian Archipelago	10	20	15
+40194	Zaproast Power Bowl	Meat	240	Rare	Leftherian Archipelago	10	20	15
+40195	Fragrant Samod Stralu	Meat	360	Rare	Leftherian Archipelago	10	30	18
+40196	Glarna Stir-Fry	Meat	1200	Legendary	Leftherian Archipelago	10	50	18
+40197	Broiled Pinfin	Seafood	180	Common	Leftherian Archipelago	10	20	15
+40198	Sautéed Beat Shrimps	Seafood	240	Common	Leftherian Archipelago	10	20	15
+40199	Braised Cloud Sea Shark	Seafood	480	Common	Leftherian Archipelago	10	20	15
+40200	Smoke-Braised Killifish	Seafood	600	Rare	Leftherian Archipelago	10	40	18
+40201	Seared Whitebait	Seafood	2520	Legendary	Leftherian Archipelago	10	70	18
+40202	Odifa	Drinks	120	Common	Indoline Praetorium	10	20	15
+40203	Indoline Tea	Drinks	180	Common	Indoline Praetorium	10	20	15
+40204	Frozen Odifa	Drinks	240	Common	Indoline Praetorium	10	20	15
+40205	Pipestraw Smoothie	Drinks	600	Rare	Leftherian Archipelago	10	40	18
+40206	Armu Milk Earl Grey	Drinks	1620	Legendary	Leftherian Archipelago	10	60	18
+40207	Luna Lizard Wreath	Arts	1080	Common	Leftherian Archipelago	3	120	18
+40208	Montecoran Doll	Arts	1440	Common	Leftherian Archipelago	3	120	18
+40209	Steel Pipe Lexos	Arts	2520	Rare	Leftherian Archipelago	3	168	21
+40210	Lush Moonbeam Mask	Arts	5840	Legendary	Leftherian Archipelago	3	216	21
+40211	Jellyfish Balsam Rug	Textiles	720	Common	Leftherian Archipelago	3	120	18
+40212	Codweave Shop Curtain	Textiles	1080	Common	Leftherian Archipelago	3	120	18
+40213	Codweave Safety Blanky	Textiles	1440	Common	Leftherian Archipelago	3	120	18
+40214	Silken Stool	Textiles	1800	Rare	Leftherian Archipelago	3	120	18
+40215	Noponcho	Textiles	1730	Rare	Leftherian Archipelago	3	144	21
+40216	Prismatic Headband	Textiles	4610	Legendary	Leftherian Archipelago	3	192	21
+40217	Fondant Rice Cake	Staple Foods	900	Common	Kingdom of Tantal	10	20	15
+40218	Tantalese Porridge	Staple Foods	1200	Common	Kingdom of Tantal	10	20	15
+40219	Poached Fruit Samod	Staple Foods	1800	Rare	Kingdom of Tantal	10	30	18
+40220	Grumbird Rice Bowl	Staple Foods	8100	Legendary	Kingdom of Tantal	10	60	18
+40221	Steamed Veg Stralu	Vegetables	1200	Common	Kingdom of Tantal	10	20	15
+40222	Addam's Embercakes	Vegetables	1500	Common	Kingdom of Tantal	10	20	15
+40223	Vinaigrette Ice Cabbage	Vegetables	3000	Rare	Kingdom of Tantal	10	40	18
+40224	Prickly Snowpickle	Vegetables	8250	Legendary	Kingdom of Tantal	10	70	18
+40225	Aromalocaris Sauté	Seafood	1200	Common	Kingdom of Tantal	10	20	15
+40226	Abyssturgeon Medallion	Seafood	1500	Common	Kingdom of Tantal	10	20	18
+40227	Bagna Oyster Roll	Seafood	1800	Rare	Kingdom of Tantal	10	30	18
+40228	Whitebait-Samod Hotpot	Seafood	6000	Legendary	Kingdom of Tantal	10	50	18
+40229	Airy Snowflake Sherbet	Desserts	600	Common	Kingdom of Tantal	10	20	15
+40230	Thawing Mille-Feuille	Desserts	900	Common	Kingdom of Tantal	10	20	15
+40231	Baked Narcipear	Desserts	1200	Common	Kingdom of Tantal	10	20	15
+40232	Sno-Bake Cheesecake	Desserts	1500	Rare	Kingdom of Tantal	10	20	15
+40233	Odifa Punch	Desserts	3000	Rare	Kingdom of Tantal	10	40	18
+40234	Snow Dumplings	Desserts	8100	Legendary	Kingdom of Tantal	10	60	18
+40235	Ancient King’s Portrait	Arts	5400	Legendary	Kingdom of Tantal	3	120	18
+40236	Snow-Crystal Vase	Arts	7200	Legendary	Kingdom of Tantal	3	120	18
+40237	Portrait of Ger the Hero	Arts	9000	Legendary	Kingdom of Tantal	3	120	18
+40238	Prideful Walking	Literature	3600	Common	Kingdom of Tantal	3	120	18
+40239	The Armu Who Loved	Literature	5400	Common	Kingdom of Tantal	3	120	18
+40240	Witness the Crustip	Literature	7200	Common	Kingdom of Tantal	3	120	18
+40241	The Annals of Addam	Literature	9000	Rare	Kingdom of Tantal	3	120	18
+40242	The Blizzard Choir	Literature	12600	Rare	Kingdom of Tantal	3	168	21
+40243	Astrology Made Simple	Literature	31680	Legendary	Kingdom of Tantal	3	240	21
+40244	Don't Feed the Armu	Board Games	5400	Common	Kingdom of Tantal	3	120	18
+40245	Bluff Knight	Board Games	7200	Common	Kingdom of Tantal	3	120	18
+40246	Money-Bye-Bye	Board Games	9000	Common	Kingdom of Tantal	3	120	18
+40247	Smack-A-Nopon	Board Games	8640	Rare	Kingdom of Tantal	3	144	21
+40248	Jeweled Billiard Balls	Board Games	23040	Legendary	Kingdom of Tantal	3	192	21
+40249	Steamy Oil	Cosmetics	5400	Common	Kingdom of Tantal	3	120	18
+40250	Chocolate Shadow	Cosmetics	7200	Common	Kingdom of Tantal	3	120	18
+40251	Moonstar Lipstick	Cosmetics	9000	Common	Kingdom of Tantal	3	120	18
+40252	Noponic Nails	Cosmetics	8640	Rare	Kingdom of Tantal	3	144	21
+40253	Steam Powder	Cosmetics	29160	Legendary	Kingdom of Tantal	3	216	21
+40254	Tantalese Velvet	Textiles	3600	Common	Kingdom of Tantal	3	120	18
+40255	Snowflake-Weave Sole	Textiles	5400	Common	Kingdom of Tantal	3	120	18
+40256	Genbu-Weave Cloth	Textiles	7200	Common	Kingdom of Tantal	3	120	18
+40257	Heatstripe	Textiles	9000	Rare	Kingdom of Tantal	3	120	18
+40258	Musical Hair Clasp	Textiles	17280	Rare	Kingdom of Tantal	3	192	21
+40259	Torigoth Snowpouch	Textiles	43200	Legendary	Kingdom of Tantal	3	240	21
+40260	Glitterbake	Staple Foods	180	Common	Gormott Province	10	20	12
+40261	Tricolor Bowl	Staple Foods	720	Rare	Gormott Province	10	30	12
+40262	Hot Moonbeam Salad	Vegetables	180	Common	Gormott Province	10	20	12
+40263	Addam's Supercakes	Vegetables	1080	Rare	Gormott Province	10	40	12
+40264	Meatball Pot-au-Feu	Meat	180	Common	Gormott Province	10	20	12
+40265	Pan-Fried Tartari	Meat	1500	Rare	Gormott Province	10	50	12
+40266	Roast Meat Tagliata	Meat	2160	Rare	Gormott Province	10	60	12
+40268	Acqua Pearl Pazza	Meat	1650	Legendary	Gormott Province	10	20	12
+40269	Vess’s Dumplings	Staple Foods	180	Common	Gormott Province	10	20	6
+40270	Rainbow Dumplings	Staple Foods	360	Common	Gormott Province	10	30	9
+40271	Gromrice Dumplings	Staple Foods	840	Rare	Gormott Province	10	40	12
+40272	Puri Leaf Dumplings	Staple Foods	1500	Rare	Gormott Province	10	50	15
+40273	Spicy Stralu	Meat	300	Legendary	Argentum Trade Guild	10	20	12
+40278	Lovemerry Cake	Desserts	1650	Legendary	Kingdom of Uraya	10	70	15
+40281	Neon Cookies	Desserts	2160	Rare	Kingdom of Uraya	10	60	15
+40283	Bitter Choclit	Desserts	180	Common	Kingdom of Uraya	10	20	12
+40286	Bitlip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
+40287	Pucklip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
+40288	Tinglip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
+40289	Sourlip Drink	Drinks	60	Common	Argentum Trade Guild	10	20	12
+40290	Tricolor Ice Floe	Arts	1300	Common	Argentum Trade Guild	10	144	9
+40291	Sparkling Snowglobe	Arts	3530	Rare	Argentum Trade Guild	10	168	12
+40292	Rainbow Scope	Arts	3530	Rare	Argentum Trade Guild	10	168	12
+40293	Tantal Icecube	Arts	5760	Rare	Argentum Trade Guild	10	192	15
+40294	Titan Illuminations	Arts	6340	Legendary	Argentum Trade Guild	10	192	15
+40295	Salted Brog Sauté	Meat	840	Rare	Gormott Province	10	40	15
+40296	Cream Orange Paratha	Staple Foods	180	Rare	Gormott Province	10	20	9
+40297	The Flora of Alrest	Literature	5400	Common	Kingdom of Tantal	10	120	21
+40298	Gentlemen: A Study	Literature	10800	Legendary	Kingdom of Tantal	10	120	21
+40299	Quoteletta	Meat	300	Rare	Empire of Mor Ardain	10	20	12
+40301	Fried Octomayo	Staple Foods	1300	Rare	Kingdom of Tantal	10	20	15
+40302	Ardainian Bear Carving	Arts	1440	Rare	Empire of Mor Ardain	10	120	15
+40303	Master's Curry	Staple Foods	600	Rare	Kingdom of Uraya	10	20	9
+40304	Lucky Dawn Bread	Staple Foods	240	Rare	Gormott Province	10	20	12
+40305	Choclit Dumplings	Staple Foods	1650	Rare	Gormott Province	10	60	18
+40306	Heart Cookies	Desserts	120	Rare	Indoline Praetorium	10	20	9
+40307	Rizzente Mantle	Textiles	1520	Common	Leftherian Archipelago	10	120	9
+40308	Felt Cushioning	Textiles	2520	Common	Leftherian Archipelago	10	120	12
+40309	Brut Silk	Textiles	3530	Rare	Leftherian Archipelago	10	120	12
+40310	Shelton Broadcloth	Textiles	4540	Rare	Leftherian Archipelago	10	120	15
+40311	Crinkly Wool	Textiles	6340	Legendary	Leftherian Archipelago	10	120	15
+40312	Pyra's Baked Redfish	Seafood	6340	Legendary	Gormott Province	10	60	18
+40313	Fabulously Fierce Hat	Textiles	6340	Legendary	Leftherian Archipelago	10	60	18
+40314	Love Source	Drinks	6340	Legendary	None	10	60	3000
 \.
 
 
