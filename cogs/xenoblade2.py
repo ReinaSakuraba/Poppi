@@ -233,8 +233,8 @@ class Xenoblade2:
                     SELECT
                         'driver skill' AS type,
                         name,
-                        xeno2.format_caption(enhance_captions.caption, param, param_one, param_two) AS caption,
-                        driver AS user,
+                        xeno2.format_caption(enhance_captions.caption, param, param_one, param_two),
+                        driver,
                         chart,
                         sp,
                         0
@@ -251,7 +251,7 @@ class Xenoblade2:
                         'blade battle skill' AS type,
                         captions.skill,
                         caption,
-                        STRING_AGG(role, E'\n') AS user,
+                        STRING_AGG(role, E'\n'),
                         STRING_AGG(blade, E'\n'),
                         0,
                         0
@@ -301,25 +301,31 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2skill_search, name=name)
 
-        skill_type, name, caption, driver, chart, sp, max_level = record
+        skill_type, name, caption, *_ = record
 
         embed = discord.Embed(title=name, description=caption)
 
         if skill_type == 'driver skill':
+            driver, chart, sp, max_level = _
+
             embed.add_field(name='Driver', value=driver)
             embed.add_field(name='Chart', value=chart)
             embed.add_field(name='SP Needed', value=sp)
         elif skill_type == 'blade battle skill':
-            if driver:
-                embed.add_field(name='Roles', value=driver)
-            elif chart:
-                embed.add_field(name='Blade', value=chart)
+            roles, blades, *_ = _
+
+            if roles:
+                embed.add_field(name='Roles', value=roles)
+            elif blades:
+                embed.add_field(name='Blade', value=blades)
         elif skill_type == 'blade field skill':
-            embed.add_field(name='Category', value=driver)
-            embed.add_field(name='Min Level', value=sp)
+            category, blades, min_level, max_level = _
+
+            embed.add_field(name='Category', value=category)
+            embed.add_field(name='Min Level', value=min_level)
             embed.add_field(name='Max Level', value=max_level)
-            if chart:
-                embed.add_field(name='Blade', value=chart)
+            if blades:
+                embed.add_field(name='Blade', value=blades)
 
         await ctx.send(embed=embed)
 
