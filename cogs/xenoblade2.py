@@ -157,6 +157,74 @@ class Xenoblade2:
             await ctx.send('Missing special name.')
 
     @utils.group(invoke_without_command=True)
+    async def xc2blade(self, ctx: utils.Context, *, name: str):
+        """Gives information for a Xenoblade Chronicles 2 blade."""
+
+        query = """
+                SELECT
+                    name,
+                    gender,
+                    race,
+                    weapon,
+                    element,
+                    aux_cores,
+                    phys_def,
+                    ether_def,
+                    voice_actor,
+                    illustrator,
+                    merc_name,
+                    STRING_AGG(DISTINCT blade_battle_skills.skill, E'\n'),
+                    STRING_AGG(DISTINCT blade_field_skills.skill, E'\n')
+                FROM xeno2.blades
+                JOIN xeno2.blade_battle_skills
+                ON name=blade_battle_skills.blade
+                LEFT JOIN xeno2.blade_field_skills
+                ON name=blade_field_skills.blade
+                WHERE LOWER(name)=$1
+                GROUP BY name;
+                """
+
+        record = await ctx.pool.fetchrow(query, name.lower())
+
+        if record is None:
+            return await ctx.invoke(self.xc2blade_search, name=name)
+
+        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, battle_skills, field_skills = record
+
+        embed = discord.Embed(title=name)
+        embed.add_field(name='Gender', value=gender)
+        embed.add_field(name='Race', value=race)
+        embed.add_field(name='Weapon', value=weapon)
+        embed.add_field(name='Element', value=element)
+        embed.add_field(name='Aux Core Slots', value=aux_cores)
+        embed.add_field(name='Defenses', value=f'Physical Defense: {phys_def}%\nEther Defense: {ether_def}%')
+        embed.add_field(name='Voice Actors', value=voice_actor)
+        embed.add_field(name='Illustrator', value=illustrator)
+        embed.add_field(name='Mercenary Name', value=merc_name)
+        embed.add_field(name='Battle Skills', value=battle_skills, inline=False)
+        embed.add_field(name='Field Skills', value=field_skills or 'None', inline=False)
+
+        await ctx.send(embed=embed)
+
+    @xc2blade.command(name='all')
+    async def xc2blade_all(self, ctx: utils.Context):
+        """Lists all Xenoblade Chronicles 2 blades."""
+
+        await self.all_entries(ctx, 'blades')
+
+    @xc2blade.command(name='search')
+    async def xc2blade_search(self, ctx: utils.Context, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 blade."""
+
+        await self.search_entries(ctx, name, 'blades', type_name='Blade')
+
+    @xc2blade.error
+    @xc2blade_search.error
+    async def xc2blade_error(self, ctx: utils.Context, error: Exception):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing blade name.')
+
+    @utils.group(invoke_without_command=True)
     async def xc2skill(self, ctx: utils.Context, *, name: str):
         """Gives information for a Xenoblade Chronicles 2 skill."""
 
