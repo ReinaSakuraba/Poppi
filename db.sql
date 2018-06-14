@@ -372,6 +372,28 @@ CREATE TABLE xeno2.field_skills (
 ALTER TABLE xeno2.field_skills OWNER TO poppi;
 
 --
+-- Name: maps; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.maps (
+    map text NOT NULL,
+    map_name text NOT NULL,
+    map_display_name text NOT NULL,
+    priority integer NOT NULL,
+    width smallint NOT NULL,
+    height smallint NOT NULL,
+    lower_x numeric NOT NULL,
+    lower_y numeric NOT NULL,
+    lower_z numeric NOT NULL,
+    upper_x numeric NOT NULL,
+    upper_y numeric NOT NULL,
+    upper_z numeric NOT NULL
+);
+
+
+ALTER TABLE xeno2.maps OWNER TO poppi;
+
+--
 -- Name: pouch_captions; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -9723,6 +9745,95 @@ Transport Mastery	Mercenary	Skillful at moving lots of goods quickly. Exclusivel
 Industry Mastery	Mercenary	Skillful at machine repairs and upkeep. Exclusively for Merc Missions.	1	1	3
 Production Mastery	Mercenary	Skillful at deftly making things. Exclusively for Merc Missions.	1	1	3
 Eye for Beauty	Rare	Looks for girls to add to her entourage. Skill exclusive to Sheba.	3	1	3
+\.
+
+
+--
+-- Data for Name: maps; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.maps (map, map_name, map_display_name, priority, width, height, lower_x, lower_y, lower_z, upper_x, upper_y, upper_z) FROM stdin;
+ma02a	ma02a_f01	Argentum Guild, 1F	20	440	481	-91.5	-24.30369	-121.4843	128.5	5.696314	118.5157
+ma02a	ma02a_f03	Argentum Guild, 2F	10	304	160	-57	4.263106	-38.78085	95	20.86311	40.57231
+ma02a	ma02a_f05	Argentum Guild, 4F	30	512	277	-120.5	19.79682	-70.30455	135.5	32.39682	67.65265
+ma02a	ma02a_f06	Argentum Guild, 5F	40	176	105	-2	32.27697	-25.62831	86	41.27697	26.37169
+ma02a	ma02a_f07	Argentum Guild, 6F	50	104	66	5	40.7	-14.9633	57	52.7	14.0367
+ma02a	ma02a_f08	Argentum Guild, Roof	60	192	84	-8	40.2697	-19.96267	88	57.2697	20.11966
+ma03a	ma03a_floor_01	Maelstrom, 1F	0	160	100	-35.5	26.09678	-25	44.5	35.09678	25
+ma03a	ma03a_floor_03	Maelstrom, 3F	0	160	100	-35.5	34.96618	-25	44.5	74.96618	25
+ma04a	ma04a_f02	Ancient Ship, 1F	30	440	296	-84.5	-43.47514	-72.64357	135.5	36.52486	74.78842
+ma04a	ma04a_f03	Ancient Ship, B1F	10	392	76	-30.5	-38.78593	-18.20118	165.5	-6.785934	19.29882
+ma04a	ma04a_f06	Ancient Ship, B4F	20	392	180	-21.5	-61.97401	-43.67316	174.5	-34.30513	45.818
+ma05a	ma05a_f01	Gormott - Lower	5	1464	1092	-628	-159.721	-287.9462	104	-55.95835	257.9187
+ma05a	ma05a_f02	Gormott - Top	50	3176	2122	-680.5	-56.30568	-552.8474	907.5	144.3127	507.7294
+ma05a	ma05a_f05	ma05a_f05	60	2360	1128	-892	-66.84681	-1052.665	288	133.7716	-488.9182
+ma05a	ma05a_f02_shipoff	Gormott - Top	2147483647	3176	2122	-680.5	-56.30568	-552.8474	907.5	144.3127	507.7294
+ma05a	ma05a_ship_f01	Titan Battleship, 1F	19	120	170	546.5	-67.6499	379.4141	606.5	-38.71747	464.4447
+ma05a	ma05a_ship_f02	Titan Battleship, 2F	28	336	534	472	-39.30075	287.0416	640	-17.76864	554.2673
+ma05a	ma05a_ship_f03	Titan Battleship, 3F	27	584	356	495.5	-20.25945	330.4557	787.5	-2.931158	508.1782
+ma05a	ma05a_ship_f04	Titan Battleship, 4F	26	520	270	473	-6.602793	351.1312	733	10.7255	486.2259
+ma05a	ma05a_c_01	Living Quarters - Lower	10	296	407	298.5	-52	181.1646	446.5	-22	384.9143
+ma05a	ma05a_c_02	ma05a_c_02	20	296	461	436.5	-146.493	174.72	584.5	-56.493	405.1484
+ma05a	ma05a_c_03	ma05a_c_03	30	1240	730	135	-58.4	123.6898	755	41.6	488.6898
+ma05a	ma05a_c_03_shipoff	ma05a_c_03_shipoff	2147483647	1240	730	135	-58.4	123.6898	755	41.6	488.6898
+ma07a	ma07a_a_floor_01	Uraya Head	30	488	1460	-123.5	-16.94671	-155.702	120.5	111.1959	573.6713
+ma07a	ma07a_a_floor_03	Blowhole, 1F	20	968	435	-185.5	58.46631	156.254	298.5	123.4663	373.8963
+ma07a	ma07a_a_floor_04	Blowhole, 2F	15	728	503	-163.5	121.3525	74.17117	200.5	211.5485	325.8233
+ma07a	ma07a_a_floor_05	Dragon's Stomach	10	184	654	-46	-64.44917	220.2746	46	-14.48679	547.2471
+ma07a	ma07a_a_floor_06	Garfont	10	400	432	-270	40	344.5	-70	72	559.5
+ma07a	ma07a_b_floor_01	Uraya Stomach - Lower	100	1968	2649	-489	-73.44154	545.224	495	218.5992	1869.646
+ma07a	ma07a_b_floor_B01	Raqura Aquagardens	5	200	789	-50	-221.3191	1002.425	50	-71.31914	1396.958
+ma07a	ma07a_c_floor_01	Uraya Stomach - Top	90	1712	911	-380.5	181.1994	1668.14	475.5	378.2238	2123.843
+ma07a	ma07a_d_floor_01	Uraya Back	0	344	1440	-86	293.1832	2047.444	86	577.433	2767.444
+ma07a	ma07a_d_floor_01lodoff	Uraya Back	2147483647	344	1440	-86	293.1832	2047.444	86	577.433	2767.444
+ma08a	ma08a_rowf_1	Mor Ardain - Lower	25	1632	1979	-512	-215.0289	-541.2264	304	-65.02885	447.5938
+ma08a	ma08a_upf_1	Mor Ardain - Top	30	1664	1213	-363	-72.24203	-477.5023	469	128.089	128.4448
+ma08a	ma08a_city_f_1	Hardhaigh - Lower	10	120	540	48	-13.48588	358.7662	108	-0.4858818	628.7662
+ma08a	ma08a_city_f_3	ma08a_city_f_3	20	832	560	-157	-60	71.67824	259	45	351.6782
+ma08a	ma08a_city_f_4	ma08a_city_f_4	30	1000	600	-155	-12.5	350	345	112.5	650
+ma08a	ma08a_newplant_out	ma08a_newplant_out	15	968	809	-432.5	-219.6876	-945.2585	51.5	-131.6428	-540.7715
+ma10a	ma10a_f01	Temperantia	10	1240	970	-239.5	-34.4712	5.745361	380.5	86.55999	490.511
+ma10a	ma10a_f02	ma10a_f02	20	2104	3435	-1234	-98.57533	-360.7211	-182	89.50192	1356.118
+ma10a	ma10a_f03	ma10a_f03	15	1144	699	-341.5	-42.26419	738.4295	230.5	72.27357	1087.704
+ma11a	ma11a_a_floor_01	Indol	10	600	920	-325	-109	42.69861	-25	41	502.6986
+ma11a	ma11a_a_floor_02	ma11a_a_floor_02	20	1600	600	-150	-100	-155	650	50	145
+ma11a	ma11a_b_floor_01	Titan Battleship	30	224	501	-431.5	-72.26661	309.5948	-319.5	-62.26661	560.4053
+ma13a	ma13a_a_floor_01	Tantal - Top	65	2720	3400	-395.5	-283.9432	-550	964.5	56.05679	1150
+ma13a	ma13a_a_floor_06	Tantal - Lower	60	2960	2840	-317	-530	-760.8391	1163	-280	658.5623
+ma13a	ma13a_a_floor_07	Memorial Ruins	55	1800	440	-1199.5	-650	-110	-299.5	-450	110
+ma13a	ma13a_b_floor_01	Theosoir - Top	50	464	456	210	-27.5	-114	442	62.5	114
+ma13a	ma13a_b_floor_02	Theosoir - Lower	30	400	240	420	-28.87596	-60	620	-8.875957	60
+ma13a	ma13a_b_floor_03	Palace - Mid	10	264	240	488	-57.84887	-60	620	-27.84887	60
+ma13a	ma13a_b_floor_04	Palace - Lower	20	680	240	280	-100	-60	620	-50	60
+ma13a	ma13a_b_floor_05	ma13a_b_floor_05	40	400	240	420	-9.671335	-60	620	17.32866	60
+ma15a	ma15a_f01	Leftherian Archipelago	20	2528	2015	-670	-85.64931	-332.633	594	459.9557	674.4122
+ma15a	ma15a_f02	Cloudway	30	1840	1751	-517.5	4.45694	-1135.557	402.5	311.1658	-260.4552
+ma15a	ma15a_f04	ma15a_f04	25	2528	2091	-670	-114.8307	-2011.745	594	324.4843	-966.1076
+ma15a	ma15a_f03	ma15a_f03	10	664	800	-554	-42.17758	-1961.837	-222	57.82242	-1561.837
+ma16a	ma16a_floor_01	Elpys - Top	5	360	758	-95	-124.1293	-313.9239	85	71.40686	64.95607
+ma16a	ma16a_floor_01b	ma16a_floor_01b	10	360	1775	-95	-184.4918	59.64578	85	11.04434	947.4779
+ma16a	ma16a_floor_02	River Lavi - Lower	15	688	857	-269	-237.4213	925.4365	75	-83.34119	1353.927
+ma16a	ma16a_floor_08	Elpys - Lower	20	992	1475	-381.5	-348.4587	1139.35	114.5	-244.6807	1876.512
+ma16a	ma16a_floor_11	ma16a_floor_11	25	472	1098	-435	-327.3002	1875.403	-199	-263.7174	2424.126
+ma17a	ma17a_f01	Cliffs of Morytha	5	768	1347	-234	-44.1188	-322.7668	150	42.84833	350.3212
+ma17a	ma17a_f03	Lower - Outer Wall	15	696	484	32.5	-130.3466	261.8256	380.5	-33.63198	503.7892
+ma17a	ma17a_f03b	ma17a_f03b	10	248	197	177	-42.52724	277.4588	301	-19.59436	375.6281
+ma17a	ma17a_f03_lodoff	Lower - Outer Wall	2147483647	696	484	32.5	-130.3466	261.8256	380.5	-33.63198	503.7892
+ma18a	ma18a_f01	Land of Morytha	5	520	1243	-83	-110.215	-536.2922	177	110.4126	84.83372
+ma18a	ma18a_f07	Torna Titan, 1F	10	768	1015	-55	-47.02317	-1013.015	329	85.18299	-505.5183
+ma18a	ma18a_f11	ma18a_f11	15	872	1130	170.5	43.72728	-1569.392	606.5	143.2164	-1004.245
+ma20a	ma20a_f01	Low Orbit Station	5	560	367	-529	-331.3277	58.30628	-249	-303.7562	241.9005
+ma20a	ma20a_f02	Low Orbit Sector, 1F	10	296	260	-293.5	-212.2191	123.4227	-145.5	-192.2191	253.2498
+ma20a	ma20a_f03	Low Orbit Sector, 2F	15	552	657	-176.5	-191.727	51.58057	99.5	-72.83536	380.1805
+ma20a	ma20a_f05	Sky Bridge	20	632	1020	-55.5	-63.23713	-103.4429	260.5	22.55663	406.2031
+ma20a	ma20a_f09	Mid Level, 2F	25	680	561	-176	235.0696	-43.13621	164	297.6402	236.6292
+ma20a	ma20a_f10	Geostationary Station	30	816	218	-522	494.4989	43.32129	-114	577.8959	152.0587
+ma20a	ma20a_f08_1	ma20a_f08_1	35	1944	841	164.5	109.0265	-11.87524	1136.5	317.2876	408.1248
+ma21a	ma21a_a_floor_01	Elevator	20	240	860	-60	-374.4888	-380	60	25.51125	50
+ma21a	ma21a_a_floor_02	Elysium	10	904	1400	-150	-50.09645	-1050	302	19.90355	-350
+ma21a	ma21a_b_floor_02	Architect's Room	30	904	800	-13.5	-155.3697	-1390.514	438.5	-5.369675	-990.5143
+ma21a	ma21a_b_floor_03	Lower Level	40	1240	1300	-25	-400	-1709.762	595	-300	-1059.762
+ma30a	ma30a_area	Entire Area	0	1232	1262	-344	-62.85911	-203.8312	272	54.16752	426.6193
 \.
 
 
@@ -40561,6 +40672,14 @@ ALTER TABLE ONLY xeno2.enhance_captions
 
 ALTER TABLE ONLY xeno2.enhance
     ADD CONSTRAINT enhance_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: maps_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.maps
+    ADD CONSTRAINT maps_pkey PRIMARY KEY (map_name);
 
 
 --
