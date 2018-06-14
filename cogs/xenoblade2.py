@@ -379,7 +379,7 @@ class Xenoblade2:
                 OR LOWER(type || ' ' || REPLACE(chip, ' Chip', '')) = $1;
                 """
 
-        record = await ctx.pool.fetchrow(query, name.lower())
+        record = await ctx.pool.fetchrow(query, name.lower().replace(' chip', ''))
 
         if record is None:
             return await ctx.invoke(self.xc2weapon_search, name=name)
@@ -420,7 +420,7 @@ class Xenoblade2:
                 OR LOWER(type || ' ' || REPLACE(chip, ' Chip', '')) = $1;
                 """
 
-        record = await ctx.pool.fetchrow(query, name.lower())
+        record = await ctx.pool.fetchrow(query, name.lower().replace(' chip', ''))
 
         if record is None:
             return await ctx.invoke(self.xc2weapon_search, name=name)
