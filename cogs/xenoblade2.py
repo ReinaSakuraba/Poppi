@@ -375,7 +375,8 @@ class Xenoblade2:
                 ON enhance.caption=enhance_captions.id
                 LEFT JOIN xeno2.weapon_filenames
                 ON weapons.filename=weapon_filenames.id
-                WHERE LOWER(name)=$1;
+                WHERE LOWER(name)=$1
+                OR LOWER(type || ' ' || REPLACE(chip, ' Chip', '')) = $1;
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
