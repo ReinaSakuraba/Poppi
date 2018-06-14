@@ -276,6 +276,37 @@ CREATE TABLE xeno2.classes (
 ALTER TABLE xeno2.classes OWNER TO poppi;
 
 --
+-- Name: collection_point_drops; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.collection_point_drops (
+    collection_point text NOT NULL,
+    item text NOT NULL,
+    probability smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.collection_point_drops OWNER TO poppi;
+
+--
+-- Name: collection_points; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.collection_points (
+    name text NOT NULL,
+    map text NOT NULL,
+    type text NOT NULL,
+    min smallint NOT NULL,
+    max smallint NOT NULL,
+    x numeric NOT NULL,
+    y numeric NOT NULL,
+    z numeric NOT NULL
+);
+
+
+ALTER TABLE xeno2.collection_points OWNER TO poppi;
+
+--
 -- Name: common_blade_battle_skills; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -4541,6 +4572,5187 @@ Master Healer	0	0	50	0	-12	t	t
 Holy Cavalier	10	0	40	0	-8	t	t
 Holy Knight	0	10	40	0	-4	t	t
 Jack-of-all-Trades	10	10	30	0	0	t	f
+\.
+
+
+--
+-- Data for Name: collection_point_drops; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.collection_point_drops (collection_point, item, probability) FROM stdin;
+colle_ma02a_c001	Sweet Wasabi	35
+colle_ma02a_c001	Argentum Monkfish	35
+colle_ma02a_c001	Wet Rat	20
+colle_ma02a_c001	Anchortail	10
+colle_ma02a_c002	Glitterspud	35
+colle_ma02a_c002	Tartan Ladybird	35
+colle_ma02a_c002	Oil Oyster	20
+colle_ma02a_c002	Hexafly	10
+colle_ma02a_c003	Sweet Wasabi	35
+colle_ma02a_c003	Argentum Monkfish	35
+colle_ma02a_c003	Puri Leaf Cabbage	20
+colle_ma02a_c003	Hexafly	10
+colle_ma02a_c004	Glitterspud	35
+colle_ma02a_c004	Tartan Ladybird	35
+colle_ma02a_c004	Oil Oyster	20
+colle_ma02a_c004	Melodious Melon	10
+colle_ma05a_f001	Puzzletree Wood	40
+colle_ma05a_f001	Vinegar Leaf	40
+colle_ma05a_f001	Confusion Ivy	15
+colle_ma05a_f001	Muscle Branch	5
+colle_ma05a_f002	Tree Crab	40
+colle_ma05a_f002	Hustle Hyacinth	40
+colle_ma05a_f002	Clarity Moss	15
+colle_ma05a_f002	Soft Sea Cucumber	5
+colle_ma05a_f004	Puzzletree Wood	40
+colle_ma05a_f004	Vinegar Leaf	40
+colle_ma05a_f004	Confusion Ivy	15
+colle_ma05a_f004	Muscle Branch	5
+colle_ma05a_f005	Tree Crab	45
+colle_ma05a_f005	Mint Fish	45
+colle_ma05a_f005	Steel Salmon	9
+colle_ma05a_f005	Soft Sea Cucumber	1
+colle_ma05a_f006	Forrestone	45
+colle_ma05a_f006	Binding Roots	30
+colle_ma05a_f006	Armored Centipede	20
+colle_ma05a_f006	Dicy Stone	5
+colle_ma05a_f007	Puzzletree Wood	40
+colle_ma05a_f007	Vinegar Leaf	40
+colle_ma05a_f007	Confusion Ivy	15
+colle_ma05a_f007	Muscle Branch	5
+colle_ma05a_f008	Puzzletree Wood	35
+colle_ma05a_f008	Deer Wood	35
+colle_ma05a_f008	Confusion Ivy	20
+colle_ma05a_f008	Muscle Branch	10
+colle_ma05a_f009	Vinegar Leaf	30
+colle_ma05a_f009	Confusion Ivy	25
+colle_ma05a_f009	Dawn Hydrangea	25
+colle_ma05a_f009	Muscle Branch	20
+colle_ma05a_f010	Tree Crab	45
+colle_ma05a_f010	Mint Fish	45
+colle_ma05a_f010	Steel Salmon	9
+colle_ma05a_f010	Soft Sea Cucumber	1
+colle_ma05a_f011	Deer Wood	43
+colle_ma05a_f011	Binding Roots	43
+colle_ma05a_f011	Clarity Moss	9
+colle_ma05a_f011	Muscle Branch	5
+colle_ma05a_f012	Tree Crab	45
+colle_ma05a_f012	Mint Fish	45
+colle_ma05a_f012	Steel Salmon	9
+colle_ma05a_f012	Soft Sea Cucumber	1
+colle_ma05a_f013	Panda Pansy	60
+colle_ma05a_f013	Sumpkin	30
+colle_ma05a_f013	Giant Stag Beetle	5
+colle_ma05a_f013	Dawn Hydrangea	5
+colle_ma05a_f014	Sunflower Rogue	20
+colle_ma05a_f014	Sumpkin	30
+colle_ma05a_f014	Moonbeam Banana	25
+colle_ma05a_f014	Dawn Hydrangea	25
+colle_ma05a_f015	Panda Pansy	30
+colle_ma05a_f015	Shepherd's Purse	30
+colle_ma05a_f015	Sunflower Rogue	30
+colle_ma05a_f015	Prairie Dragonfly	10
+colle_ma05a_f016	Tree Crab	45
+colle_ma05a_f016	Mint Fish	45
+colle_ma05a_f016	Steel Salmon	9
+colle_ma05a_f016	Soft Sea Cucumber	1
+colle_ma05a_f017	Prairie Dragonfly	45
+colle_ma05a_f017	Armored Centipede	45
+colle_ma05a_f017	Jet Snake	9
+colle_ma05a_f017	Giant Stag Beetle	1
+colle_ma05a_f018	Forrestone	45
+colle_ma05a_f018	Armored Centipede	30
+colle_ma05a_f018	Dicy Stone	20
+colle_ma05a_f018	Dilemma Rock	5
+colle_ma05a_f019	Puzzletree Wood	40
+colle_ma05a_f019	Vinegar Leaf	40
+colle_ma05a_f019	Confusion Ivy	15
+colle_ma05a_f019	Muscle Branch	5
+colle_ma05a_f020	Shepherd's Purse	40
+colle_ma05a_f020	Cranberry Bell	40
+colle_ma05a_f020	Sumpkin	10
+colle_ma05a_f020	Jet Snake	10
+colle_ma05a_f021	Armored Centipede	40
+colle_ma05a_f021	Sunflower Rogue	40
+colle_ma05a_f021	Jet Snake	15
+colle_ma05a_f021	Giant Stag Beetle	5
+colle_ma05a_f022	Tree Crab	40
+colle_ma05a_f022	Hustle Hyacinth	40
+colle_ma05a_f022	Clarity Moss	15
+colle_ma05a_f022	Soft Sea Cucumber	5
+colle_ma05a_f023	Tree Crab	45
+colle_ma05a_f023	Mint Fish	45
+colle_ma05a_f023	Steel Salmon	9
+colle_ma05a_f023	Soft Sea Cucumber	1
+colle_ma05a_f024	Panda Pansy	30
+colle_ma05a_f024	Shepherd's Purse	30
+colle_ma05a_f024	Sunflower Rogue	30
+colle_ma05a_f024	Prairie Dragonfly	10
+colle_ma05a_f026	Armored Centipede	40
+colle_ma05a_f026	Sunflower Rogue	40
+colle_ma05a_f026	Jet Snake	15
+colle_ma05a_f026	Giant Stag Beetle	5
+colle_ma05a_f027	Panda Pansy	30
+colle_ma05a_f027	Shepherd's Purse	30
+colle_ma05a_f027	Sunflower Rogue	30
+colle_ma05a_f027	Prairie Dragonfly	10
+colle_ma05a_f028	Panda Pansy	30
+colle_ma05a_f028	Shepherd's Purse	30
+colle_ma05a_f028	Sunflower Rogue	30
+colle_ma05a_f028	Prairie Dragonfly	10
+colle_ma05a_f029	Hot Orange	55
+colle_ma05a_f029	Moonbeam Banana	20
+colle_ma05a_f029	Sumpkin	20
+colle_ma05a_f029	Dawn Hydrangea	5
+colle_ma05a_f030	Hot Orange	30
+colle_ma05a_f030	Meaty Carrot	30
+colle_ma05a_f030	Cranberry Bell	30
+colle_ma05a_f030	Forrestone	10
+colle_ma05a_f032	Hot Orange	30
+colle_ma05a_f032	Meaty Carrot	30
+colle_ma05a_f032	Cranberry Bell	30
+colle_ma05a_f032	Forrestone	10
+colle_ma05a_f033	Cranberry Bell	35
+colle_ma05a_f033	Meaty Carrot	35
+colle_ma05a_f033	Sumpkin	15
+colle_ma05a_f033	Moonbeam Banana	15
+colle_ma05a_f034	Armored Centipede	40
+colle_ma05a_f034	Sunflower Rogue	40
+colle_ma05a_f034	Jet Snake	15
+colle_ma05a_f034	Giant Stag Beetle	5
+colle_ma05a_f035	Prairie Dragonfly	45
+colle_ma05a_f035	Armored Centipede	45
+colle_ma05a_f035	Jet Snake	9
+colle_ma05a_f035	Giant Stag Beetle	1
+colle_ma05a_f036	Armored Centipede	40
+colle_ma05a_f036	Sunflower Rogue	40
+colle_ma05a_f036	Jet Snake	15
+colle_ma05a_f036	Giant Stag Beetle	5
+colle_ma05a_f037	Tree Crab	45
+colle_ma05a_f037	Mint Fish	45
+colle_ma05a_f037	Steel Salmon	9
+colle_ma05a_f037	Soft Sea Cucumber	1
+colle_ma05a_f038	Panda Pansy	30
+colle_ma05a_f038	Shepherd's Purse	30
+colle_ma05a_f038	Sunflower Rogue	30
+colle_ma05a_f038	Prairie Dragonfly	10
+colle_ma05a_f039	Puzzletree Wood	40
+colle_ma05a_f039	Vinegar Leaf	40
+colle_ma05a_f039	Confusion Ivy	15
+colle_ma05a_f039	Muscle Branch	5
+colle_ma05a_f040	Prairie Dragonfly	45
+colle_ma05a_f040	Armored Centipede	45
+colle_ma05a_f040	Jet Snake	9
+colle_ma05a_f040	Giant Stag Beetle	1
+colle_ma05a_f041	Puzzletree Wood	40
+colle_ma05a_f041	Vinegar Leaf	40
+colle_ma05a_f041	Confusion Ivy	15
+colle_ma05a_f041	Muscle Branch	5
+colle_ma05a_f043	Hot Orange	30
+colle_ma05a_f043	Meaty Carrot	30
+colle_ma05a_f043	Cranberry Bell	30
+colle_ma05a_f043	Forrestone	10
+colle_ma05a_f044	Prairie Dragonfly	45
+colle_ma05a_f044	Armored Centipede	45
+colle_ma05a_f044	Jet Snake	9
+colle_ma05a_f044	Giant Stag Beetle	1
+colle_ma05a_f045	Tree Crab	45
+colle_ma05a_f045	Mint Fish	45
+colle_ma05a_f045	Steel Salmon	9
+colle_ma05a_f045	Soft Sea Cucumber	1
+colle_ma05a_f047	Cranberry Bell	35
+colle_ma05a_f047	Meaty Carrot	35
+colle_ma05a_f047	Sumpkin	15
+colle_ma05a_f047	Moonbeam Banana	15
+colle_ma05a_f048	Forrestone	45
+colle_ma05a_f048	Binding Roots	30
+colle_ma05a_f048	Armored Centipede	20
+colle_ma05a_f048	Dicy Stone	5
+colle_ma05a_f051	Forrestone	45
+colle_ma05a_f051	Binding Roots	30
+colle_ma05a_f051	Armored Centipede	20
+colle_ma05a_f051	Dicy Stone	5
+colle_ma05a_f052	Hot Orange	55
+colle_ma05a_f052	Moonbeam Banana	20
+colle_ma05a_f052	Sumpkin	20
+colle_ma05a_f052	Dawn Hydrangea	5
+colle_ma05a_f055	Cranberry Bell	35
+colle_ma05a_f055	Meaty Carrot	35
+colle_ma05a_f055	Sumpkin	15
+colle_ma05a_f055	Moonbeam Banana	15
+colle_ma05a_f056	Cranberry Bell	35
+colle_ma05a_f056	Meaty Carrot	35
+colle_ma05a_f056	Sumpkin	15
+colle_ma05a_f056	Moonbeam Banana	15
+colle_ma05a_f058	Hustle Hyacinth	59
+colle_ma05a_f058	Clarity Moss	20
+colle_ma05a_f058	Steel Salmon	20
+colle_ma05a_f058	Soft Sea Cucumber	1
+colle_ma05a_f059	Hot Orange	30
+colle_ma05a_f059	Meaty Carrot	30
+colle_ma05a_f059	Cranberry Bell	30
+colle_ma05a_f059	Forrestone	10
+colle_ma05a_f060	Prairie Dragonfly	45
+colle_ma05a_f060	Armored Centipede	45
+colle_ma05a_f060	Jet Snake	9
+colle_ma05a_f060	Giant Stag Beetle	1
+colle_ma05a_f061	Deer Wood	43
+colle_ma05a_f061	Binding Roots	43
+colle_ma05a_f061	Clarity Moss	9
+colle_ma05a_f061	Muscle Branch	5
+colle_ma05a_f062	Shepherd's Purse	40
+colle_ma05a_f062	Cranberry Bell	40
+colle_ma05a_f062	Sumpkin	10
+colle_ma05a_f062	Jet Snake	10
+colle_ma05a_f063	Forrestone	45
+colle_ma05a_f063	Armored Centipede	30
+colle_ma05a_f063	Dicy Stone	20
+colle_ma05a_f063	Dilemma Rock	5
+colle_ma05a_f064	Tree Crab	45
+colle_ma05a_f064	Mint Fish	45
+colle_ma05a_f064	Steel Salmon	9
+colle_ma05a_f064	Soft Sea Cucumber	1
+colle_ma05a_f065	Hot Orange	30
+colle_ma05a_f065	Meaty Carrot	30
+colle_ma05a_f065	Cranberry Bell	30
+colle_ma05a_f065	Forrestone	10
+colle_ma05a_f066	Prairie Dragonfly	45
+colle_ma05a_f066	Armored Centipede	45
+colle_ma05a_f066	Jet Snake	9
+colle_ma05a_f066	Giant Stag Beetle	1
+colle_ma05a_f067	Forrestone	45
+colle_ma05a_f067	Binding Roots	30
+colle_ma05a_f067	Armored Centipede	20
+colle_ma05a_f067	Dicy Stone	5
+colle_ma05a_f069	Cranberry Bell	35
+colle_ma05a_f069	Meaty Carrot	35
+colle_ma05a_f069	Sumpkin	15
+colle_ma05a_f069	Moonbeam Banana	15
+colle_ma05a_f070	Hot Orange	30
+colle_ma05a_f070	Meaty Carrot	30
+colle_ma05a_f070	Cranberry Bell	30
+colle_ma05a_f070	Forrestone	10
+colle_ma05a_f071	Forrestone	45
+colle_ma05a_f071	Binding Roots	30
+colle_ma05a_f071	Armored Centipede	20
+colle_ma05a_f071	Dicy Stone	5
+colle_ma05a_f072	Panda Pansy	30
+colle_ma05a_f072	Shepherd's Purse	30
+colle_ma05a_f072	Sunflower Rogue	30
+colle_ma05a_f072	Prairie Dragonfly	10
+colle_ma05a_f073	Forrestone	45
+colle_ma05a_f073	Binding Roots	30
+colle_ma05a_f073	Armored Centipede	20
+colle_ma05a_f073	Dicy Stone	5
+colle_ma05a_f076	Puzzletree Wood	40
+colle_ma05a_f076	Vinegar Leaf	40
+colle_ma05a_f076	Confusion Ivy	15
+colle_ma05a_f076	Muscle Branch	5
+colle_ma05a_f077	Cranberry Bell	35
+colle_ma05a_f077	Meaty Carrot	35
+colle_ma05a_f077	Sumpkin	15
+colle_ma05a_f077	Moonbeam Banana	15
+colle_ma05a_f078	Forrestone	55
+colle_ma05a_f078	Jet Snake	20
+colle_ma05a_f078	Dicy Stone	20
+colle_ma05a_f078	Dilemma Rock	5
+colle_ma05a_f079	Panda Pansy	30
+colle_ma05a_f079	Shepherd's Purse	30
+colle_ma05a_f079	Sunflower Rogue	30
+colle_ma05a_f079	Prairie Dragonfly	10
+colle_ma05a_f081	Forrestone	45
+colle_ma05a_f081	Armored Centipede	30
+colle_ma05a_f081	Dicy Stone	20
+colle_ma05a_f081	Dilemma Rock	5
+colle_ma05a_f082	Deer Wood	43
+colle_ma05a_f082	Binding Roots	43
+colle_ma05a_f082	Clarity Moss	9
+colle_ma05a_f082	Muscle Branch	5
+colle_ma05a_f083	Puzzletree Wood	40
+colle_ma05a_f083	Vinegar Leaf	40
+colle_ma05a_f083	Confusion Ivy	15
+colle_ma05a_f083	Muscle Branch	5
+colle_ma05a_f085	Forrestone	55
+colle_ma05a_f085	Jet Snake	20
+colle_ma05a_f085	Dicy Stone	20
+colle_ma05a_f085	Dilemma Rock	5
+colle_ma05a_f086	Meaty Carrot	20
+colle_ma05a_f086	Hot Orange	60
+colle_ma05a_f086	Moonbeam Banana	10
+colle_ma05a_f086	Sumpkin	10
+colle_ma05a_f087	Forrestone	45
+colle_ma05a_f087	Binding Roots	30
+colle_ma05a_f087	Armored Centipede	20
+colle_ma05a_f087	Dicy Stone	5
+colle_ma05a_f088	Panda Pansy	30
+colle_ma05a_f088	Shepherd's Purse	30
+colle_ma05a_f088	Sunflower Rogue	30
+colle_ma05a_f088	Prairie Dragonfly	10
+colle_ma05a_f089	Tree Crab	45
+colle_ma05a_f089	Mint Fish	45
+colle_ma05a_f089	Steel Salmon	9
+colle_ma05a_f089	Soft Sea Cucumber	1
+colle_ma05a_f090	Forrestone	45
+colle_ma05a_f090	Binding Roots	30
+colle_ma05a_f090	Armored Centipede	20
+colle_ma05a_f090	Dicy Stone	5
+colle_ma05a_f091	Prairie Dragonfly	45
+colle_ma05a_f091	Armored Centipede	45
+colle_ma05a_f091	Jet Snake	9
+colle_ma05a_f091	Giant Stag Beetle	1
+colle_ma05a_f092	Forrestone	45
+colle_ma05a_f092	Armored Centipede	30
+colle_ma05a_f092	Dicy Stone	20
+colle_ma05a_f092	Dilemma Rock	5
+colle_ma05a_f093	Prairie Dragonfly	45
+colle_ma05a_f093	Armored Centipede	45
+colle_ma05a_f093	Jet Snake	9
+colle_ma05a_f093	Giant Stag Beetle	1
+colle_ma05a_f094	Shepherd's Purse	40
+colle_ma05a_f094	Cranberry Bell	40
+colle_ma05a_f094	Sumpkin	10
+colle_ma05a_f094	Jet Snake	10
+colle_ma05a_f095	Binding Roots	50
+colle_ma05a_f095	Confusion Ivy	25
+colle_ma05a_f095	Clarity Moss	20
+colle_ma05a_f095	Dawn Hydrangea	5
+colle_ma05a_f096	Puzzletree Wood	35
+colle_ma05a_f096	Deer Wood	35
+colle_ma05a_f096	Confusion Ivy	20
+colle_ma05a_f096	Muscle Branch	10
+colle_ma05a_f097	Forrestone	45
+colle_ma05a_f097	Armored Centipede	30
+colle_ma05a_f097	Dicy Stone	20
+colle_ma05a_f097	Dilemma Rock	5
+colle_ma05a_f098	Tree Crab	45
+colle_ma05a_f098	Mint Fish	45
+colle_ma05a_f098	Steel Salmon	9
+colle_ma05a_f098	Soft Sea Cucumber	1
+colle_ma05a_f099	Prairie Dragonfly	35
+colle_ma05a_f099	Cranberry Bell	35
+colle_ma05a_f099	Jet Snake	20
+colle_ma05a_f099	Giant Stag Beetle	10
+colle_ma05a_f100	Cranberry Bell	35
+colle_ma05a_f100	Meaty Carrot	35
+colle_ma05a_f100	Sumpkin	15
+colle_ma05a_f100	Moonbeam Banana	15
+colle_ma05a_f101	Prairie Dragonfly	45
+colle_ma05a_f101	Armored Centipede	45
+colle_ma05a_f101	Jet Snake	9
+colle_ma05a_f101	Giant Stag Beetle	1
+colle_ma05a_f102	Forrestone	45
+colle_ma05a_f102	Binding Roots	30
+colle_ma05a_f102	Armored Centipede	20
+colle_ma05a_f102	Dicy Stone	25
+colle_ma05a_f104	Forrestone	45
+colle_ma05a_f104	Binding Roots	30
+colle_ma05a_f104	Armored Centipede	20
+colle_ma05a_f104	Dicy Stone	5
+colle_ma05a_f106	Armored Centipede	40
+colle_ma05a_f106	Sunflower Rogue	40
+colle_ma05a_f106	Jet Snake	15
+colle_ma05a_f106	Giant Stag Beetle	5
+colle_ma05a_f107	Binding Roots	50
+colle_ma05a_f107	Confusion Ivy	25
+colle_ma05a_f107	Clarity Moss	20
+colle_ma05a_f107	Dawn Hydrangea	5
+colle_ma05a_f109	Panda Pansy	30
+colle_ma05a_f109	Shepherd's Purse	30
+colle_ma05a_f109	Sunflower Rogue	30
+colle_ma05a_f109	Prairie Dragonfly	10
+colle_ma05a_f110	Shepherd's Purse	40
+colle_ma05a_f110	Cranberry Bell	40
+colle_ma05a_f110	Sumpkin	10
+colle_ma05a_f110	Jet Snake	10
+colle_ma05a_f111	Forrestone	45
+colle_ma05a_f111	Binding Roots	30
+colle_ma05a_f111	Armored Centipede	20
+colle_ma05a_f111	Dicy Stone	5
+colle_ma05a_f112	Deer Wood	43
+colle_ma05a_f112	Binding Roots	43
+colle_ma05a_f112	Clarity Moss	9
+colle_ma05a_f112	Muscle Branch	5
+colle_ma05a_f113	Forrestone	45
+colle_ma05a_f113	Armored Centipede	30
+colle_ma05a_f113	Dicy Stone	20
+colle_ma05a_f113	Dilemma Rock	5
+colle_ma05a_f114	Panda Pansy	30
+colle_ma05a_f114	Shepherd's Purse	30
+colle_ma05a_f114	Sunflower Rogue	30
+colle_ma05a_f114	Prairie Dragonfly	10
+colle_ma05a_f115	Cranberry Bell	35
+colle_ma05a_f115	Meaty Carrot	35
+colle_ma05a_f115	Sumpkin	15
+colle_ma05a_f115	Moonbeam Banana	15
+colle_ma05a_f116	Puzzletree Wood	35
+colle_ma05a_f116	Deer Wood	35
+colle_ma05a_f116	Confusion Ivy	20
+colle_ma05a_f116	Muscle Branch	10
+colle_ma05a_f117	Vinegar Leaf	30
+colle_ma05a_f117	Confusion Ivy	25
+colle_ma05a_f117	Dawn Hydrangea	25
+colle_ma05a_f117	Muscle Branch	20
+colle_ma05a_f118	Cranberry Bell	35
+colle_ma05a_f118	Meaty Carrot	35
+colle_ma05a_f118	Sumpkin	15
+colle_ma05a_f118	Moonbeam Banana	15
+colle_ma05a_f119	Tree Crab	45
+colle_ma05a_f119	Mint Fish	45
+colle_ma05a_f119	Steel Salmon	9
+colle_ma05a_f119	Soft Sea Cucumber	1
+colle_ma05a_f120	Tree Crab	45
+colle_ma05a_f120	Mint Fish	45
+colle_ma05a_f120	Steel Salmon	9
+colle_ma05a_f120	Soft Sea Cucumber	1
+colle_ma05a_f121	Tree Crab	40
+colle_ma05a_f121	Hustle Hyacinth	40
+colle_ma05a_f121	Clarity Moss	15
+colle_ma05a_f121	Soft Sea Cucumber	5
+colle_ma05a_f122	Panda Pansy	60
+colle_ma05a_f122	Sumpkin	30
+colle_ma05a_f122	Giant Stag Beetle	5
+colle_ma05a_f122	Dawn Hydrangea	5
+colle_ma05a_f123	Armored Centipede	40
+colle_ma05a_f123	Sunflower Rogue	40
+colle_ma05a_f123	Jet Snake	15
+colle_ma05a_f123	Giant Stag Beetle	5
+colle_ma05a_f124	Hot Orange	30
+colle_ma05a_f124	Meaty Carrot	30
+colle_ma05a_f124	Cranberry Bell	30
+colle_ma05a_f124	Forrestone	10
+colle_ma05a_f125	Hot Orange	30
+colle_ma05a_f125	Meaty Carrot	30
+colle_ma05a_f125	Cranberry Bell	30
+colle_ma05a_f125	Forrestone	10
+colle_ma05a_f127	Forrestone	45
+colle_ma05a_f127	Armored Centipede	30
+colle_ma05a_f127	Dicy Stone	20
+colle_ma05a_f127	Dilemma Rock	5
+colle_ma05a_f128	Panda Pansy	30
+colle_ma05a_f128	Shepherd's Purse	30
+colle_ma05a_f128	Sunflower Rogue	30
+colle_ma05a_f128	Prairie Dragonfly	10
+colle_ma05a_f129	Deer Wood	43
+colle_ma05a_f129	Binding Roots	43
+colle_ma05a_f129	Clarity Moss	9
+colle_ma05a_f129	Muscle Branch	5
+colle_ma05a_f130	Panda Pansy	30
+colle_ma05a_f130	Shepherd's Purse	30
+colle_ma05a_f130	Sunflower Rogue	30
+colle_ma05a_f130	Prairie Dragonfly	10
+colle_ma05a_f131	Puzzletree Wood	40
+colle_ma05a_f131	Vinegar Leaf	40
+colle_ma05a_f131	Confusion Ivy	15
+colle_ma05a_f131	Muscle Branch	5
+colle_ma05a_f132	Deer Wood	43
+colle_ma05a_f132	Binding Roots	43
+colle_ma05a_f132	Clarity Moss	9
+colle_ma05a_f132	Muscle Branch	5
+colle_ma05a_f133	Panda Pansy	30
+colle_ma05a_f133	Shepherd's Purse	30
+colle_ma05a_f133	Sunflower Rogue	30
+colle_ma05a_f133	Prairie Dragonfly	10
+colle_ma05a_f134	Panda Pansy	30
+colle_ma05a_f134	Shepherd's Purse	30
+colle_ma05a_f134	Sunflower Rogue	30
+colle_ma05a_f134	Prairie Dragonfly	10
+colle_ma05a_f135	Deer Wood	5
+colle_ma05a_f135	Shepherd's Purse	5
+colle_ma05a_f135	Armored Centipede	5
+colle_ma05a_f135	Melosian Honey	85
+colle_ma05a_f136	Deer Wood	5
+colle_ma05a_f136	Shepherd's Purse	5
+colle_ma05a_f136	Armored Centipede	5
+colle_ma05a_f136	Melosian Honey	85
+colle_ma05a_f137	Prairie Dragonfly	35
+colle_ma05a_f137	Cranberry Bell	35
+colle_ma05a_f137	Jet Snake	20
+colle_ma05a_f137	Giant Stag Beetle	10
+colle_ma05a_f138	Hustle Hyacinth	59
+colle_ma05a_f138	Clarity Moss	20
+colle_ma05a_f138	Steel Salmon	20
+colle_ma05a_f138	Soft Sea Cucumber	1
+colle_ma05a_f139	Forrestone	45
+colle_ma05a_f139	Armored Centipede	30
+colle_ma05a_f139	Dicy Stone	20
+colle_ma05a_f139	Dilemma Rock	5
+colle_ma05a_f140	Prairie Dragonfly	45
+colle_ma05a_f140	Armored Centipede	45
+colle_ma05a_f140	Jet Snake	9
+colle_ma05a_f140	Giant Stag Beetle	1
+colle_ma05a_f142	Forrestone	45
+colle_ma05a_f142	Binding Roots	30
+colle_ma05a_f142	Armored Centipede	20
+colle_ma05a_f142	Dicy Stone	5
+colle_ma05a_f143	Panda Pansy	60
+colle_ma05a_f143	Sumpkin	30
+colle_ma05a_f143	Giant Stag Beetle	5
+colle_ma05a_f143	Dawn Hydrangea	5
+colle_ma05a_f144	Panda Pansy	60
+colle_ma05a_f144	Sumpkin	30
+colle_ma05a_f144	Giant Stag Beetle	5
+colle_ma05a_f144	Dawn Hydrangea	5
+colle_ma05a_f145	Forrestone	45
+colle_ma05a_f145	Binding Roots	30
+colle_ma05a_f145	Armored Centipede	20
+colle_ma05a_f145	Dicy Stone	5
+colle_ma05a_f146	Prairie Dragonfly	45
+colle_ma05a_f146	Armored Centipede	45
+colle_ma05a_f146	Jet Snake	9
+colle_ma05a_f146	Giant Stag Beetle	1
+colle_ma05a_f147	Meaty Carrot	60
+colle_ma05a_f147	Hot Orange	20
+colle_ma05a_f147	Moonbeam Banana	10
+colle_ma05a_f147	Sumpkin	10
+colle_ma05a_f148	Panda Pansy	30
+colle_ma05a_f148	Shepherd's Purse	30
+colle_ma05a_f148	Sunflower Rogue	30
+colle_ma05a_f148	Prairie Dragonfly	10
+colle_ma05a_f149	Puzzletree Wood	40
+colle_ma05a_f149	Vinegar Leaf	40
+colle_ma05a_f149	Confusion Ivy	15
+colle_ma05a_f149	Muscle Branch	5
+colle_ma05a_f150	Forrestone	45
+colle_ma05a_f150	Binding Roots	30
+colle_ma05a_f150	Armored Centipede	20
+colle_ma05a_f150	Dicy Stone	5
+colle_ma05a_f151	Puzzletree Wood	35
+colle_ma05a_f151	Deer Wood	35
+colle_ma05a_f151	Confusion Ivy	20
+colle_ma05a_f151	Muscle Branch	10
+colle_ma05a_f152	Sunflower Rogue	20
+colle_ma05a_f152	Sumpkin	30
+colle_ma05a_f152	Moonbeam Banana	25
+colle_ma05a_f152	Dawn Hydrangea	25
+colle_ma05a_f153	Panda Pansy	30
+colle_ma05a_f153	Shepherd's Purse	30
+colle_ma05a_f153	Sunflower Rogue	30
+colle_ma05a_f153	Prairie Dragonfly	10
+colle_ma05a_f154	Panda Pansy	30
+colle_ma05a_f154	Shepherd's Purse	30
+colle_ma05a_f154	Sunflower Rogue	30
+colle_ma05a_f154	Prairie Dragonfly	10
+colle_ma05a_f155	Prairie Dragonfly	45
+colle_ma05a_f155	Armored Centipede	45
+colle_ma05a_f155	Jet Snake	9
+colle_ma05a_f155	Giant Stag Beetle	1
+colle_ma05a_f156	Prairie Dragonfly	35
+colle_ma05a_f156	Cranberry Bell	35
+colle_ma05a_f156	Jet Snake	20
+colle_ma05a_f156	Giant Stag Beetle	10
+colle_ma05a_f157	Mint Fish	40
+colle_ma05a_f157	Clarity Moss	25
+colle_ma05a_f157	Steel Salmon	25
+colle_ma05a_f157	Soft Sea Cucumber	10
+colle_ma05a_f159	Puzzletree Wood	35
+colle_ma05a_f159	Deer Wood	35
+colle_ma05a_f159	Confusion Ivy	20
+colle_ma05a_f159	Muscle Branch	25
+colle_ma05a_f160	Vinegar Leaf	30
+colle_ma05a_f160	Confusion Ivy	25
+colle_ma05a_f160	Dawn Hydrangea	25
+colle_ma05a_f160	Muscle Branch	20
+colle_ma05a_f161	Puzzletree Wood	35
+colle_ma05a_f161	Deer Wood	35
+colle_ma05a_f161	Confusion Ivy	20
+colle_ma05a_f161	Muscle Branch	10
+colle_ma05a_f162	Forrestone	55
+colle_ma05a_f162	Jet Snake	20
+colle_ma05a_f162	Dicy Stone	20
+colle_ma05a_f162	Dilemma Rock	5
+colle_ma05a_f163	Shepherd's Purse	40
+colle_ma05a_f163	Cranberry Bell	40
+colle_ma05a_f163	Sumpkin	10
+colle_ma05a_f163	Jet Snake	10
+colle_ma05a_f164	Armored Centipede	40
+colle_ma05a_f164	Sunflower Rogue	40
+colle_ma05a_f164	Jet Snake	15
+colle_ma05a_f164	Giant Stag Beetle	5
+colle_ma05a_f166	Hot Orange	30
+colle_ma05a_f166	Meaty Carrot	30
+colle_ma05a_f166	Cranberry Bell	30
+colle_ma05a_f166	Forrestone	10
+colle_ma05a_f167	Puzzletree Wood	40
+colle_ma05a_f167	Vinegar Leaf	40
+colle_ma05a_f167	Confusion Ivy	15
+colle_ma05a_f167	Muscle Branch	5
+colle_ma05a_f168	Forrestone	45
+colle_ma05a_f168	Armored Centipede	30
+colle_ma05a_f168	Dicy Stone	20
+colle_ma05a_f168	Dilemma Rock	5
+colle_ma05a_f169	Prairie Dragonfly	45
+colle_ma05a_f169	Armored Centipede	45
+colle_ma05a_f169	Jet Snake	9
+colle_ma05a_f169	Giant Stag Beetle	1
+colle_ma05a_f170	Puzzletree Wood	35
+colle_ma05a_f170	Deer Wood	35
+colle_ma05a_f170	Confusion Ivy	20
+colle_ma05a_f170	Muscle Branch	10
+colle_ma05a_f171	Forrestone	45
+colle_ma05a_f171	Binding Roots	30
+colle_ma05a_f171	Armored Centipede	20
+colle_ma05a_f171	Dicy Stone	5
+colle_ma05a_f172	Puzzletree Wood	35
+colle_ma05a_f172	Deer Wood	35
+colle_ma05a_f172	Confusion Ivy	20
+colle_ma05a_f172	Muscle Branch	10
+colle_ma05a_f173	Deer Wood	43
+colle_ma05a_f173	Binding Roots	43
+colle_ma05a_f173	Clarity Moss	9
+colle_ma05a_f173	Muscle Branch	5
+colle_ma05a_f174	Puzzletree Wood	40
+colle_ma05a_f174	Vinegar Leaf	40
+colle_ma05a_f174	Confusion Ivy	15
+colle_ma05a_f174	Muscle Branch	5
+colle_ma05a_f175	Puzzletree Wood	35
+colle_ma05a_f175	Deer Wood	35
+colle_ma05a_f175	Confusion Ivy	20
+colle_ma05a_f175	Muscle Branch	10
+colle_ma05a_f176	Hot Orange	30
+colle_ma05a_f176	Meaty Carrot	30
+colle_ma05a_f176	Cranberry Bell	30
+colle_ma05a_f176	Forrestone	10
+colle_ma05a_f177	Forrestone	45
+colle_ma05a_f177	Binding Roots	30
+colle_ma05a_f177	Armored Centipede	20
+colle_ma05a_f177	Dicy Stone	5
+colle_ma05a_f178	Hot Orange	30
+colle_ma05a_f178	Meaty Carrot	30
+colle_ma05a_f178	Cranberry Bell	30
+colle_ma05a_f178	Forrestone	10
+colle_ma05a_f179	Hot Orange	30
+colle_ma05a_f179	Meaty Carrot	30
+colle_ma05a_f179	Cranberry Bell	30
+colle_ma05a_f179	Forrestone	10
+colle_ma05a_f180	Panda Pansy	30
+colle_ma05a_f180	Shepherd's Purse	30
+colle_ma05a_f180	Sunflower Rogue	30
+colle_ma05a_f180	Prairie Dragonfly	10
+colle_ma05a_f181	Prairie Dragonfly	45
+colle_ma05a_f181	Armored Centipede	45
+colle_ma05a_f181	Jet Snake	9
+colle_ma05a_f181	Giant Stag Beetle	1
+colle_ma05a_f182	Hot Orange	30
+colle_ma05a_f182	Meaty Carrot	30
+colle_ma05a_f182	Cranberry Bell	30
+colle_ma05a_f182	Forrestone	10
+colle_ma05a_f183	Hot Orange	30
+colle_ma05a_f183	Meaty Carrot	30
+colle_ma05a_f183	Cranberry Bell	30
+colle_ma05a_f183	Forrestone	10
+colle_ma05a_f184	Hot Orange	30
+colle_ma05a_f184	Meaty Carrot	30
+colle_ma05a_f184	Cranberry Bell	30
+colle_ma05a_f184	Forrestone	10
+colle_ma05a_f185	Binding Roots	50
+colle_ma05a_f185	Confusion Ivy	25
+colle_ma05a_f185	Clarity Moss	20
+colle_ma05a_f185	Dawn Hydrangea	5
+colle_ma05a_f186	Hot Orange	30
+colle_ma05a_f186	Meaty Carrot	30
+colle_ma05a_f186	Cranberry Bell	30
+colle_ma05a_f186	Forrestone	10
+colle_ma05a_f187	Prairie Dragonfly	45
+colle_ma05a_f187	Armored Centipede	45
+colle_ma05a_f187	Jet Snake	9
+colle_ma05a_f187	Giant Stag Beetle	1
+colle_ma05a_f188	Prairie Dragonfly	45
+colle_ma05a_f188	Armored Centipede	45
+colle_ma05a_f188	Jet Snake	9
+colle_ma05a_f188	Giant Stag Beetle	1
+colle_ma05a_f189	Puzzletree Wood	40
+colle_ma05a_f189	Vinegar Leaf	40
+colle_ma05a_f189	Confusion Ivy	15
+colle_ma05a_f189	Muscle Branch	5
+colle_ma05a_f190	Binding Roots	50
+colle_ma05a_f190	Confusion Ivy	25
+colle_ma05a_f190	Clarity Moss	20
+colle_ma05a_f190	Dawn Hydrangea	5
+colle_ma05a_f191	Hot Orange	30
+colle_ma05a_f191	Meaty Carrot	30
+colle_ma05a_f191	Cranberry Bell	30
+colle_ma05a_f191	Forrestone	10
+colle_ma05a_f192	Deer Wood	5
+colle_ma05a_f192	Shepherd's Purse	5
+colle_ma05a_f192	Armored Centipede	5
+colle_ma05a_f192	Melosian Honey	85
+colle_ma05a_f193	Panda Pansy	30
+colle_ma05a_f193	Shepherd's Purse	30
+colle_ma05a_f193	Sunflower Rogue	30
+colle_ma05a_f193	Prairie Dragonfly	10
+colle_ma05a_f194	Binding Roots	45
+colle_ma05a_f194	Sumpkin	20
+colle_ma05a_f194	Clarity Moss	20
+colle_ma05a_f194	Dawn Hydrangea	15
+colle_ma05a_f195	Panda Pansy	30
+colle_ma05a_f195	Shepherd's Purse	30
+colle_ma05a_f195	Sunflower Rogue	30
+colle_ma05a_f195	Prairie Dragonfly	10
+colle_ma05a_f196	Puzzletree Wood	40
+colle_ma05a_f196	Vinegar Leaf	40
+colle_ma05a_f196	Confusion Ivy	15
+colle_ma05a_f196	Muscle Branch	5
+colle_ma05a_f197	Prairie Dragonfly	35
+colle_ma05a_f197	Cranberry Bell	35
+colle_ma05a_f197	Jet Snake	20
+colle_ma05a_f197	Giant Stag Beetle	10
+colle_ma05a_f198	Tree Crab	40
+colle_ma05a_f198	Hustle Hyacinth	40
+colle_ma05a_f198	Clarity Moss	15
+colle_ma05a_f198	Soft Sea Cucumber	5
+colle_ma05a_c001	Shepherd's Purse	40
+colle_ma05a_c001	Cranberry Bell	40
+colle_ma05a_c001	Sumpkin	10
+colle_ma05a_c001	Jet Snake	10
+colle_ma05a_c002	Deer Wood	45
+colle_ma05a_c002	Binding Roots	45
+colle_ma05a_c002	Clarity Moss	9
+colle_ma05a_c002	Muscle Branch	1
+colle_ma05a_c003	Meaty Carrot	60
+colle_ma05a_c003	Hot Orange	20
+colle_ma05a_c003	Moonbeam Banana	10
+colle_ma05a_c003	Sumpkin	10
+colle_ma05a_c004	Meaty Carrot	60
+colle_ma05a_c004	Hot Orange	20
+colle_ma05a_c004	Moonbeam Banana	10
+colle_ma05a_c004	Sumpkin	10
+colle_ma05a_c005	Meaty Carrot	20
+colle_ma05a_c005	Hot Orange	60
+colle_ma05a_c005	Moonbeam Banana	10
+colle_ma05a_c005	Sumpkin	10
+colle_ma05a_d001	Tree Crab	45
+colle_ma05a_d001	Mint Fish	45
+colle_ma05a_d001	Steel Salmon	9
+colle_ma05a_d001	Soft Sea Cucumber	1
+colle_ma05a_d002	Tree Crab	40
+colle_ma05a_d002	Hustle Hyacinth	40
+colle_ma05a_d002	Clarity Moss	15
+colle_ma05a_d002	Soft Sea Cucumber	5
+colle_ma05a_f199	Binding Roots	50
+colle_ma05a_f199	Confusion Ivy	25
+colle_ma05a_f199	Clarity Moss	20
+colle_ma05a_f199	Dawn Hydrangea	5
+colle_ma05a_f200	Prairie Dragonfly	35
+colle_ma05a_f200	Cranberry Bell	35
+colle_ma05a_f200	Jet Snake	20
+colle_ma05a_f200	Giant Stag Beetle	10
+colle_ma05a_f201	Tree Crab	40
+colle_ma05a_f201	Hustle Hyacinth	40
+colle_ma05a_f201	Clarity Moss	15
+colle_ma05a_f201	Soft Sea Cucumber	5
+colle_ma05a_f202	Hustle Hyacinth	59
+colle_ma05a_f202	Clarity Moss	20
+colle_ma05a_f202	Steel Salmon	20
+colle_ma05a_f202	Soft Sea Cucumber	1
+colle_ma05a_f203	Hustle Hyacinth	59
+colle_ma05a_f203	Clarity Moss	20
+colle_ma05a_f203	Steel Salmon	20
+colle_ma05a_f203	Soft Sea Cucumber	1
+colle_ma07a_c001	Doomsday Poppy	40
+colle_ma07a_c001	Blue Ladybird	35
+colle_ma07a_c001	Bright Fig	15
+colle_ma07a_c001	Victory Loquat	10
+colle_ma07a_c002	Sickle Cricket	40
+colle_ma07a_c002	Fusty Fungus	40
+colle_ma07a_c002	Shark Gecko	15
+colle_ma07a_c002	Rainbow Bug	5
+colle_ma07a_c003	Missing Tree	45
+colle_ma07a_c003	Spark Cucumber	45
+colle_ma07a_c003	Bright Fig	9
+colle_ma07a_c003	Victory Loquat	1
+colle_ma07a_c004	Gromrice	40
+colle_ma07a_c004	Blue Ladybird	30
+colle_ma07a_c004	Sirius Anemone	20
+colle_ma07a_c004	Crystal Camellia	10
+colle_ma07a_c011	Gromrice	40
+colle_ma07a_c011	Blue Ladybird	30
+colle_ma07a_c011	Sirius Anemone	20
+colle_ma07a_c011	Crystal Camellia	10
+colle_ma07a_c012	Gromrice	40
+colle_ma07a_c012	Blue Ladybird	30
+colle_ma07a_c012	Sirius Anemone	20
+colle_ma07a_c012	Crystal Camellia	10
+colle_ma07a_c013	Bamboo Seed	30
+colle_ma07a_c013	Mossplash	30
+colle_ma07a_c013	Bamboo Seed	30
+colle_ma07a_c013	Bright Fig	10
+colle_ma07a_c014	Spark Cucumber	33
+colle_ma07a_c014	Marriage Bluegill	33
+colle_ma07a_c014	Tricolor Rock	33
+colle_ma07a_c014	Victory Loquat	1
+colle_ma07a_c015	Doomsday Poppy	40
+colle_ma07a_c015	Blue Ladybird	35
+colle_ma07a_c015	Bright Fig	15
+colle_ma07a_c015	Victory Loquat	10
+colle_ma07a_f021	Spark Cucumber	31
+colle_ma07a_f021	Marriage Bluegill	31
+colle_ma07a_f021	Tricolor Rock	33
+colle_ma07a_f021	Victory Loquat	5
+colle_ma07a_f022	Black Pomegranate	30
+colle_ma07a_f022	Space Cardoon	30
+colle_ma07a_f022	Ruby Mangosteen	30
+colle_ma07a_f022	Ruby Mangosteen	10
+colle_ma07a_f023	Sickle Cricket	40
+colle_ma07a_f023	Space Cardoon	35
+colle_ma07a_f023	Sirius Anemone	15
+colle_ma07a_f023	Rainbow Bug	10
+colle_ma07a_f024	Pearl Lobster	40
+colle_ma07a_f024	Sickle Cricket	40
+colle_ma07a_f024	Cobalt Eel	15
+colle_ma07a_f024	Rainbow Bug	5
+colle_ma07a_f025	Pearl Lobster	40
+colle_ma07a_f025	Sickle Cricket	40
+colle_ma07a_f025	Cobalt Eel	15
+colle_ma07a_f025	Rainbow Bug	5
+colle_ma07a_f026	Doomsday Poppy	30
+colle_ma07a_f026	Blue Ladybird	30
+colle_ma07a_f026	Bamboo Seed	30
+colle_ma07a_f026	Shark Gecko	10
+colle_ma07a_f027	Black Pomegranate	30
+colle_ma07a_f027	Space Cardoon	30
+colle_ma07a_f027	Ruby Mangosteen	30
+colle_ma07a_f027	Ruby Mangosteen	10
+colle_ma07a_f028	Black Pomegranate	30
+colle_ma07a_f028	Space Cardoon	30
+colle_ma07a_f028	Ruby Mangosteen	30
+colle_ma07a_f028	Ruby Mangosteen	10
+colle_ma07a_f029	Doomsday Poppy	30
+colle_ma07a_f029	Blue Ladybird	30
+colle_ma07a_f029	Bamboo Seed	30
+colle_ma07a_f029	Shark Gecko	10
+colle_ma07a_f030	Doomsday Poppy	35
+colle_ma07a_f030	Blue Ladybird	35
+colle_ma07a_f030	Bright Fig	15
+colle_ma07a_f030	Victory Loquat	15
+colle_ma07a_f031	Doomsday Poppy	30
+colle_ma07a_f031	Blue Ladybird	30
+colle_ma07a_f031	Bamboo Seed	30
+colle_ma07a_f031	Shark Gecko	10
+colle_ma07a_f032	Doomsday Poppy	30
+colle_ma07a_f032	Blue Ladybird	30
+colle_ma07a_f032	Bamboo Seed	30
+colle_ma07a_f032	Shark Gecko	10
+colle_ma07a_f033	Black Pomegranate	30
+colle_ma07a_f033	Space Cardoon	30
+colle_ma07a_f033	Ruby Mangosteen	30
+colle_ma07a_f033	Ruby Mangosteen	10
+colle_ma07a_f034	Black Pomegranate	30
+colle_ma07a_f034	Space Cardoon	30
+colle_ma07a_f034	Ruby Mangosteen	30
+colle_ma07a_f034	Ruby Mangosteen	10
+colle_ma07a_f035	Rainbow Slug	22
+colle_ma07a_f035	Bipedal Crab	23
+colle_ma07a_f035	Pearl Lobster	25
+colle_ma07a_f035	Cobalt Eel	30
+colle_ma07a_f036	Bipedal Crab	45
+colle_ma07a_f036	Rainbow Slug	45
+colle_ma07a_f036	Bully Tuna	9
+colle_ma07a_f036	Speckled Whalefish	1
+colle_ma07a_f037	Doomsday Poppy	30
+colle_ma07a_f037	Blue Ladybird	30
+colle_ma07a_f037	Bamboo Seed	30
+colle_ma07a_f037	Shark Gecko	10
+colle_ma07a_f038	Black Pomegranate	30
+colle_ma07a_f038	Space Cardoon	30
+colle_ma07a_f038	Ruby Mangosteen	30
+colle_ma07a_f038	Ruby Mangosteen	10
+colle_ma07a_f039	Bipedal Crab	45
+colle_ma07a_f039	Rainbow Slug	45
+colle_ma07a_f039	Bully Tuna	9
+colle_ma07a_f039	Speckled Whalefish	1
+colle_ma07a_f040	Rainbow Slug	22
+colle_ma07a_f040	Bipedal Crab	23
+colle_ma07a_f040	Pearl Lobster	25
+colle_ma07a_f040	Cobalt Eel	30
+colle_ma07a_f041	Black Pomegranate	30
+colle_ma07a_f041	Space Cardoon	30
+colle_ma07a_f041	Ruby Mangosteen	30
+colle_ma07a_f041	Ruby Mangosteen	10
+colle_ma07a_f042	Spark Cucumber	31
+colle_ma07a_f042	Marriage Bluegill	31
+colle_ma07a_f042	Tricolor Rock	33
+colle_ma07a_f042	Victory Loquat	5
+colle_ma07a_f043	Mille-Feuille Rock	45
+colle_ma07a_f043	Soap Coral	45
+colle_ma07a_f043	Digidigite	9
+colle_ma07a_f043	Vermilion Bark	1
+colle_ma07a_f044	Salty Soil	30
+colle_ma07a_f044	Tricolor Rock	30
+colle_ma07a_f044	Mille-Feuille Rock	30
+colle_ma07a_f044	Pione Stone	10
+colle_ma07a_f045	Doomsday Poppy	35
+colle_ma07a_f045	Blue Ladybird	35
+colle_ma07a_f045	Bright Fig	15
+colle_ma07a_f045	Victory Loquat	15
+colle_ma07a_f046	Bipedal Crab	45
+colle_ma07a_f046	Rainbow Slug	45
+colle_ma07a_f046	Bully Tuna	9
+colle_ma07a_f046	Speckled Whalefish	1
+colle_ma07a_f047	Missing Tree	43
+colle_ma07a_f047	Spark Cucumber	43
+colle_ma07a_f047	Bright Fig	9
+colle_ma07a_f047	Victory Loquat	5
+colle_ma07a_f048	Spark Cucumber	31
+colle_ma07a_f048	Marriage Bluegill	31
+colle_ma07a_f048	Tricolor Rock	33
+colle_ma07a_f048	Victory Loquat	5
+colle_ma07a_f049	Doomsday Poppy	30
+colle_ma07a_f049	Blue Ladybird	30
+colle_ma07a_f049	Bamboo Seed	30
+colle_ma07a_f049	Shark Gecko	10
+colle_ma07a_f050	Rainbow Slug	40
+colle_ma07a_f050	Bully Tuna	25
+colle_ma07a_f050	Shark Gecko	25
+colle_ma07a_f050	Dragon Incense	10
+colle_ma07a_f051	Rainbow Slug	40
+colle_ma07a_f051	Bully Tuna	25
+colle_ma07a_f051	Shark Gecko	25
+colle_ma07a_f051	Dragon Incense	10
+colle_ma07a_f052	Rainbow Slug	40
+colle_ma07a_f052	Bully Tuna	25
+colle_ma07a_f052	Shark Gecko	25
+colle_ma07a_f052	Dragon Incense	10
+colle_ma07a_f053	Doomsday Poppy	30
+colle_ma07a_f053	Blue Ladybird	30
+colle_ma07a_f053	Bamboo Seed	30
+colle_ma07a_f053	Shark Gecko	10
+colle_ma07a_f054	Space Cardoon	38
+colle_ma07a_f054	Black Pomegranate	37
+colle_ma07a_f054	Ruby Mangosteen	15
+colle_ma07a_f054	Victory Loquat	10
+colle_ma07a_f055	Bamboo Seed	30
+colle_ma07a_f055	Mossplash	30
+colle_ma07a_f055	Bamboo Seed	30
+colle_ma07a_f055	Bright Fig	10
+colle_ma07a_f056	Bamboo Seed	30
+colle_ma07a_f056	Mossplash	30
+colle_ma07a_f056	Bamboo Seed	30
+colle_ma07a_f056	Bright Fig	10
+colle_ma07a_f057	Bamboo Seed	30
+colle_ma07a_f057	Mossplash	30
+colle_ma07a_f057	Bamboo Seed	30
+colle_ma07a_f057	Bright Fig	10
+colle_ma07a_f058	Spark Cucumber	45
+colle_ma07a_f058	Black Pomegranate	45
+colle_ma07a_f058	Twinkle Leaf	9
+colle_ma07a_f058	Vermilion Bark	1
+colle_ma07a_f059	Pearl Lobster	60
+colle_ma07a_f059	Cobalt Eel	15
+colle_ma07a_f059	Bully Tuna	15
+colle_ma07a_f059	Speckled Whalefish	10
+colle_ma07a_f060	Bipedal Crab	45
+colle_ma07a_f060	Rainbow Slug	45
+colle_ma07a_f060	Bully Tuna	9
+colle_ma07a_f060	Speckled Whalefish	1
+colle_ma07a_f061	Black Pomegranate	30
+colle_ma07a_f061	Space Cardoon	30
+colle_ma07a_f061	Ruby Mangosteen	30
+colle_ma07a_f061	Ruby Mangosteen	10
+colle_ma07a_f062	Doomsday Poppy	35
+colle_ma07a_f062	Blue Ladybird	35
+colle_ma07a_f062	Bright Fig	15
+colle_ma07a_f062	Victory Loquat	15
+colle_ma07a_f063	Doomsday Poppy	30
+colle_ma07a_f063	Blue Ladybird	30
+colle_ma07a_f063	Bamboo Seed	30
+colle_ma07a_f063	Shark Gecko	10
+colle_ma07a_f064	Mossplash	30
+colle_ma07a_f064	Missing Tree	30
+colle_ma07a_f064	Mille-Feuille Rock	30
+colle_ma07a_f064	Twinkle Leaf	10
+colle_ma07a_f065	Mossplash	30
+colle_ma07a_f065	Missing Tree	30
+colle_ma07a_f065	Mille-Feuille Rock	30
+colle_ma07a_f065	Twinkle Leaf	10
+colle_ma07a_f066	Doomsday Poppy	30
+colle_ma07a_f066	Blue Ladybird	30
+colle_ma07a_f066	Bamboo Seed	30
+colle_ma07a_f066	Shark Gecko	10
+colle_ma07a_f067	Black Pomegranate	30
+colle_ma07a_f067	Space Cardoon	30
+colle_ma07a_f067	Ruby Mangosteen	30
+colle_ma07a_f067	Ruby Mangosteen	10
+colle_ma07a_f068	Pearl Lobster	60
+colle_ma07a_f068	Cobalt Eel	15
+colle_ma07a_f068	Bully Tuna	15
+colle_ma07a_f068	Speckled Whalefish	10
+colle_ma07a_f069	Mille-Feuille Rock	45
+colle_ma07a_f069	Soap Coral	45
+colle_ma07a_f069	Digidigite	9
+colle_ma07a_f069	Vermilion Bark	1
+colle_ma07a_f070	Black Pomegranate	30
+colle_ma07a_f070	Space Cardoon	30
+colle_ma07a_f070	Ruby Mangosteen	30
+colle_ma07a_f070	Ruby Mangosteen	10
+colle_ma07a_f071	Salty Soil	40
+colle_ma07a_f071	Digidigite	40
+colle_ma07a_f071	Pione Stone	15
+colle_ma07a_f071	Crystal Camellia	5
+colle_ma07a_f072	Salty Soil	30
+colle_ma07a_f072	Tricolor Rock	30
+colle_ma07a_f072	Mille-Feuille Rock	30
+colle_ma07a_f072	Pione Stone	10
+colle_ma07a_f073	Soap Coral	55
+colle_ma07a_f073	Twinkle Leaf	20
+colle_ma07a_f073	Shark Gecko	20
+colle_ma07a_f073	Speckled Whalefish	5
+colle_ma07a_f074	Soap Coral	55
+colle_ma07a_f074	Twinkle Leaf	20
+colle_ma07a_f074	Shark Gecko	20
+colle_ma07a_f074	Speckled Whalefish	5
+colle_ma07a_f075	Soap Coral	55
+colle_ma07a_f075	Twinkle Leaf	20
+colle_ma07a_f075	Shark Gecko	20
+colle_ma07a_f075	Speckled Whalefish	5
+colle_ma07a_f076	Soap Coral	55
+colle_ma07a_f076	Twinkle Leaf	20
+colle_ma07a_f076	Shark Gecko	20
+colle_ma07a_f076	Speckled Whalefish	5
+colle_ma07a_f077	Soap Coral	55
+colle_ma07a_f077	Twinkle Leaf	20
+colle_ma07a_f077	Shark Gecko	20
+colle_ma07a_f077	Speckled Whalefish	5
+colle_ma07a_f078	Soap Coral	55
+colle_ma07a_f078	Twinkle Leaf	20
+colle_ma07a_f078	Shark Gecko	20
+colle_ma07a_f078	Speckled Whalefish	5
+colle_ma07a_f079	Doomsday Poppy	40
+colle_ma07a_f079	Marriage Bluegill	35
+colle_ma07a_f079	Bright Fig	15
+colle_ma07a_f079	Vermilion Bark	10
+colle_ma07a_f080	Sickle Cricket	40
+colle_ma07a_f080	Space Cardoon	35
+colle_ma07a_f080	Sirius Anemone	15
+colle_ma07a_f080	Rainbow Bug	10
+colle_ma07a_f081	Mossplash	35
+colle_ma07a_f081	Missing Tree	35
+colle_ma07a_f081	Twinkle Leaf	20
+colle_ma07a_f081	Vermilion Bark	10
+colle_ma07a_f082	Salty Soil	40
+colle_ma07a_f082	Digidigite	40
+colle_ma07a_f082	Pione Stone	15
+colle_ma07a_f082	Crystal Camellia	5
+colle_ma07a_f083	Salty Soil	30
+colle_ma07a_f083	Tricolor Rock	30
+colle_ma07a_f083	Mille-Feuille Rock	30
+colle_ma07a_f083	Pione Stone	10
+colle_ma07a_f084	Mille-Feuille Rock	45
+colle_ma07a_f084	Soap Coral	45
+colle_ma07a_f084	Digidigite	9
+colle_ma07a_f084	Vermilion Bark	1
+colle_ma07a_f085	Salty Soil	30
+colle_ma07a_f085	Tricolor Rock	30
+colle_ma07a_f085	Mille-Feuille Rock	30
+colle_ma07a_f085	Pione Stone	10
+colle_ma07a_f086	Salty Soil	30
+colle_ma07a_f086	Tricolor Rock	30
+colle_ma07a_f086	Mille-Feuille Rock	30
+colle_ma07a_f086	Pione Stone	10
+colle_ma07a_f087	Salty Soil	30
+colle_ma07a_f087	Tricolor Rock	30
+colle_ma07a_f087	Mille-Feuille Rock	30
+colle_ma07a_f087	Pione Stone	10
+colle_ma07a_f088	Mille-Feuille Rock	45
+colle_ma07a_f088	Soap Coral	45
+colle_ma07a_f088	Digidigite	9
+colle_ma07a_f088	Vermilion Bark	1
+colle_ma07a_f089	Mille-Feuille Rock	45
+colle_ma07a_f089	Soap Coral	45
+colle_ma07a_f089	Digidigite	9
+colle_ma07a_f089	Vermilion Bark	1
+colle_ma07a_f090	Sirius Anemone	30
+colle_ma07a_f090	Digidigite	30
+colle_ma07a_f090	Pione Stone	30
+colle_ma07a_f090	Crystal Camellia	10
+colle_ma07a_f091	Sirius Anemone	30
+colle_ma07a_f091	Digidigite	30
+colle_ma07a_f091	Pione Stone	30
+colle_ma07a_f091	Crystal Camellia	10
+colle_ma07a_f092	Sirius Anemone	30
+colle_ma07a_f092	Digidigite	30
+colle_ma07a_f092	Pione Stone	30
+colle_ma07a_f092	Crystal Camellia	10
+colle_ma07a_f093	Rainbow Slug	22
+colle_ma07a_f093	Bipedal Crab	23
+colle_ma07a_f093	Pearl Lobster	25
+colle_ma07a_f093	Cobalt Eel	30
+colle_ma07a_f094	Marriage Bluegill	45
+colle_ma07a_f094	Cobalt Eel	20
+colle_ma07a_f094	Bully Tuna	20
+colle_ma07a_f094	Speckled Whalefish	15
+colle_ma07a_f095	Sickle Cricket	40
+colle_ma07a_f095	Space Cardoon	35
+colle_ma07a_f095	Sirius Anemone	15
+colle_ma07a_f095	Rainbow Bug	10
+colle_ma07a_f096	Salty Soil	30
+colle_ma07a_f096	Tricolor Rock	30
+colle_ma07a_f096	Mille-Feuille Rock	30
+colle_ma07a_f096	Pione Stone	10
+colle_ma07a_f097	Salty Soil	30
+colle_ma07a_f097	Tricolor Rock	30
+colle_ma07a_f097	Mille-Feuille Rock	30
+colle_ma07a_f097	Pione Stone	10
+colle_ma07a_f098	Salty Soil	40
+colle_ma07a_f098	Digidigite	40
+colle_ma07a_f098	Pione Stone	15
+colle_ma07a_f098	Crystal Camellia	5
+colle_ma07a_f099	Soap Coral	40
+colle_ma07a_f099	Digidigite	25
+colle_ma07a_f099	Pione Stone	25
+colle_ma07a_f099	Crystal Camellia	10
+colle_ma07a_f100	Bipedal Crab	30
+colle_ma07a_f100	Tricolor Rock	30
+colle_ma07a_f100	Salty Soil	30
+colle_ma07a_f100	Pione Stone	10
+colle_ma07a_f101	Mossplash	30
+colle_ma07a_f101	Missing Tree	30
+colle_ma07a_f101	Mille-Feuille Rock	30
+colle_ma07a_f101	Twinkle Leaf	10
+colle_ma07a_f102	Rainbow Slug	22
+colle_ma07a_f102	Bipedal Crab	23
+colle_ma07a_f102	Pearl Lobster	25
+colle_ma07a_f102	Cobalt Eel	30
+colle_ma07a_f103	Black Pomegranate	30
+colle_ma07a_f103	Space Cardoon	30
+colle_ma07a_f103	Ruby Mangosteen	30
+colle_ma07a_f103	Ruby Mangosteen	10
+colle_ma07a_f104	Salty Soil	40
+colle_ma07a_f104	Digidigite	40
+colle_ma07a_f104	Pione Stone	15
+colle_ma07a_f104	Crystal Camellia	5
+colle_ma07a_f105	Soap Coral	40
+colle_ma07a_f105	Digidigite	25
+colle_ma07a_f105	Pione Stone	25
+colle_ma07a_f105	Crystal Camellia	10
+colle_ma07a_f106	Doomsday Poppy	35
+colle_ma07a_f106	Blue Ladybird	35
+colle_ma07a_f106	Bright Fig	15
+colle_ma07a_f106	Victory Loquat	15
+colle_ma07a_f107	Sirius Anemone	30
+colle_ma07a_f107	Digidigite	30
+colle_ma07a_f107	Pione Stone	30
+colle_ma07a_f107	Crystal Camellia	10
+colle_ma07a_f108	Pearl Lobster	40
+colle_ma07a_f108	Sickle Cricket	40
+colle_ma07a_f108	Cobalt Eel	15
+colle_ma07a_f108	Rainbow Bug	5
+colle_ma07a_f109	Pearl Lobster	40
+colle_ma07a_f109	Sickle Cricket	40
+colle_ma07a_f109	Cobalt Eel	15
+colle_ma07a_f109	Rainbow Bug	5
+colle_ma07a_f110	Rainbow Slug	40
+colle_ma07a_f110	Bully Tuna	25
+colle_ma07a_f110	Shark Gecko	25
+colle_ma07a_f110	Dragon Incense	10
+colle_ma07a_f111	Rainbow Slug	40
+colle_ma07a_f111	Bully Tuna	25
+colle_ma07a_f111	Shark Gecko	25
+colle_ma07a_f111	Dragon Incense	10
+colle_ma07a_f112	Rainbow Slug	40
+colle_ma07a_f112	Bully Tuna	25
+colle_ma07a_f112	Shark Gecko	25
+colle_ma07a_f112	Dragon Incense	10
+colle_ma07a_f113	Rainbow Slug	22
+colle_ma07a_f113	Bipedal Crab	23
+colle_ma07a_f113	Pearl Lobster	25
+colle_ma07a_f113	Cobalt Eel	30
+colle_ma07a_f114	Space Cardoon	38
+colle_ma07a_f114	Black Pomegranate	37
+colle_ma07a_f114	Ruby Mangosteen	15
+colle_ma07a_f114	Victory Loquat	10
+colle_ma07a_f115	Bipedal Crab	45
+colle_ma07a_f115	Rainbow Slug	45
+colle_ma07a_f115	Bully Tuna	9
+colle_ma07a_f115	Speckled Whalefish	1
+colle_ma07a_f116	Black Pomegranate	30
+colle_ma07a_f116	Space Cardoon	30
+colle_ma07a_f116	Ruby Mangosteen	30
+colle_ma07a_f116	Ruby Mangosteen	10
+colle_ma07a_f117	Doomsday Poppy	35
+colle_ma07a_f117	Blue Ladybird	35
+colle_ma07a_f117	Bright Fig	15
+colle_ma07a_f117	Victory Loquat	15
+colle_ma07a_f118	Missing Tree	43
+colle_ma07a_f118	Spark Cucumber	43
+colle_ma07a_f118	Bright Fig	9
+colle_ma07a_f118	Victory Loquat	5
+colle_ma07a_f119	Bipedal Crab	45
+colle_ma07a_f119	Rainbow Slug	45
+colle_ma07a_f119	Bully Tuna	9
+colle_ma07a_f119	Speckled Whalefish	1
+colle_ma07a_f120	Rainbow Slug	22
+colle_ma07a_f120	Bipedal Crab	23
+colle_ma07a_f120	Pearl Lobster	25
+colle_ma07a_f120	Cobalt Eel	30
+colle_ma07a_f121	Missing Tree	43
+colle_ma07a_f121	Spark Cucumber	43
+colle_ma07a_f121	Bright Fig	9
+colle_ma07a_f121	Victory Loquat	5
+colle_ma07a_f122	Spark Cucumber	45
+colle_ma07a_f122	Black Pomegranate	45
+colle_ma07a_f122	Twinkle Leaf	9
+colle_ma07a_f122	Vermilion Bark	1
+colle_ma07a_f123	Mille-Feuille Rock	45
+colle_ma07a_f123	Soap Coral	45
+colle_ma07a_f123	Digidigite	9
+colle_ma07a_f123	Vermilion Bark	1
+colle_ma07a_f124	Marriage Bluegill	45
+colle_ma07a_f124	Cobalt Eel	20
+colle_ma07a_f124	Bully Tuna	20
+colle_ma07a_f124	Speckled Whalefish	15
+colle_ma07a_f125	Sirius Anemone	35
+colle_ma07a_f125	Bright Fig	35
+colle_ma07a_f125	Ruby Mangosteen	20
+colle_ma07a_f125	Rainbow Bug	10
+colle_ma07a_f126	Doomsday Poppy	40
+colle_ma07a_f126	Marriage Bluegill	35
+colle_ma07a_f126	Bright Fig	15
+colle_ma07a_f126	Vermilion Bark	10
+colle_ma07a_f127	Sirius Anemone	35
+colle_ma07a_f127	Bright Fig	35
+colle_ma07a_f127	Ruby Mangosteen	20
+colle_ma07a_f127	Rainbow Bug	10
+colle_ma07a_f128	Bipedal Crab	30
+colle_ma07a_f128	Tricolor Rock	30
+colle_ma07a_f128	Salty Soil	30
+colle_ma07a_f128	Pione Stone	10
+colle_ma07a_f129	Salty Soil	30
+colle_ma07a_f129	Tricolor Rock	30
+colle_ma07a_f129	Mille-Feuille Rock	30
+colle_ma07a_f129	Pione Stone	10
+colle_ma07a_f130	Sickle Cricket	40
+colle_ma07a_f130	Space Cardoon	35
+colle_ma07a_f130	Sirius Anemone	15
+colle_ma07a_f130	Rainbow Bug	10
+colle_ma07a_f131	Black Pomegranate	30
+colle_ma07a_f131	Space Cardoon	30
+colle_ma07a_f131	Ruby Mangosteen	30
+colle_ma07a_f131	Ruby Mangosteen	10
+colle_ma07a_f132	Black Pomegranate	30
+colle_ma07a_f132	Space Cardoon	30
+colle_ma07a_f132	Ruby Mangosteen	30
+colle_ma07a_f132	Ruby Mangosteen	10
+colle_ma07a_f133	Doomsday Poppy	30
+colle_ma07a_f133	Blue Ladybird	30
+colle_ma07a_f133	Bamboo Seed	30
+colle_ma07a_f133	Shark Gecko	10
+colle_ma07a_f134	Salty Soil	30
+colle_ma07a_f134	Tricolor Rock	30
+colle_ma07a_f134	Mille-Feuille Rock	30
+colle_ma07a_f134	Pione Stone	10
+colle_ma09a_d001	Shield Bug	55
+colle_ma09a_d001	Pilehorn Rhino Beetle	20
+colle_ma09a_d001	Maple Bite	20
+colle_ma09a_d001	Love Raspberry	5
+colle_ma09a_d004	Dusk Bamboo	40
+colle_ma09a_d004	Dolphin Carrot	40
+colle_ma09a_d004	Fan Skink	15
+colle_ma09a_d004	Pilehorn Rhino Beetle	5
+colle_ma09a_d005	Glutinous Sand	45
+colle_ma09a_d005	Propeller Poppy	45
+colle_ma09a_d005	Sunset Clover	9
+colle_ma09a_d005	Pilehorn Rhino Beetle	1
+colle_ma09a_d007	Devilmask Cricket	40
+colle_ma09a_d007	Shield Bug	40
+colle_ma09a_d007	Empress Beetle	15
+colle_ma09a_d007	Love Raspberry	5
+colle_ma09a_d008	Sand Salmon	45
+colle_ma09a_d008	Welcome Cactus	45
+colle_ma09a_d008	Flying Flounder	9
+colle_ma09a_d008	Tender Shark	1
+colle_ma09a_d011	Scent Stone	40
+colle_ma09a_d011	Propeller Poppy	40
+colle_ma09a_d011	Maple Bite	9
+colle_ma09a_d011	Cubic Diamond	1
+colle_ma09a_d012	Glutinous Sand	40
+colle_ma09a_d012	Welcome Cactus	40
+colle_ma09a_d012	Charcoal Leg	15
+colle_ma09a_d012	Amber Leaf	5
+colle_ma09a_d014	Glutinous Sand	45
+colle_ma09a_d014	Propeller Poppy	45
+colle_ma09a_d014	Sunset Clover	9
+colle_ma09a_d014	Pilehorn Rhino Beetle	1
+colle_ma09a_d016	Dusk Bamboo	40
+colle_ma09a_d016	Dolphin Carrot	40
+colle_ma09a_d016	Fan Skink	15
+colle_ma09a_d016	Pilehorn Rhino Beetle	5
+colle_ma09a_d017	Dusk Bamboo	40
+colle_ma09a_d017	Dolphin Carrot	40
+colle_ma09a_d017	Fan Skink	15
+colle_ma09a_d017	Pilehorn Rhino Beetle	5
+colle_ma09a_d018	Dusk Bamboo	40
+colle_ma09a_d018	Dolphin Carrot	40
+colle_ma09a_d018	Fan Skink	15
+colle_ma09a_d018	Pilehorn Rhino Beetle	5
+colle_ma09a_d019	Dusk Bamboo	40
+colle_ma09a_d019	Dolphin Carrot	40
+colle_ma09a_d019	Fan Skink	15
+colle_ma09a_d019	Pilehorn Rhino Beetle	5
+colle_ma09a_d020	Dusk Bamboo	40
+colle_ma09a_d020	Dolphin Carrot	40
+colle_ma09a_d020	Fan Skink	15
+colle_ma09a_d020	Pilehorn Rhino Beetle	5
+colle_ma09a_d021	Scent Stone	40
+colle_ma09a_d021	Propeller Poppy	40
+colle_ma09a_d021	Maple Bite	9
+colle_ma09a_d021	Cubic Diamond	1
+colle_ma09a_d023	Dusk Bamboo	40
+colle_ma09a_d023	Dolphin Carrot	40
+colle_ma09a_d023	Fan Skink	15
+colle_ma09a_d023	Pilehorn Rhino Beetle	5
+colle_ma09a_d024	Dusk Bamboo	40
+colle_ma09a_d024	Dolphin Carrot	40
+colle_ma09a_d024	Fan Skink	15
+colle_ma09a_d024	Pilehorn Rhino Beetle	5
+colle_ma09a_d027	Devilmask Cricket	40
+colle_ma09a_d027	Shield Bug	40
+colle_ma09a_d027	Empress Beetle	15
+colle_ma09a_d027	Love Raspberry	5
+colle_ma09a_d029	Black Ash	30
+colle_ma09a_d029	Emperor Beetle	30
+colle_ma09a_d029	Breath Charcoal	30
+colle_ma09a_d029	Nitrotoluite	10
+colle_ma09a_d030	Dusk Bamboo	40
+colle_ma09a_d030	Dolphin Carrot	40
+colle_ma09a_d030	Fan Skink	15
+colle_ma09a_d030	Pilehorn Rhino Beetle	5
+colle_ma09a_d032	Fatal Belladonna	40
+colle_ma09a_d032	Sunset Clover	25
+colle_ma09a_d032	Fan Skink	25
+colle_ma09a_d032	Mookah Flour	10
+colle_ma09a_d033	Glutinous Sand	45
+colle_ma09a_d033	Propeller Poppy	45
+colle_ma09a_d033	Sunset Clover	9
+colle_ma09a_d033	Pilehorn Rhino Beetle	1
+colle_ma09a_d034	Dusk Bamboo	40
+colle_ma09a_d034	Dolphin Carrot	40
+colle_ma09a_d034	Fan Skink	15
+colle_ma09a_d034	Pilehorn Rhino Beetle	5
+colle_ma09a_d035	Scent Stone	40
+colle_ma09a_d035	Fatal Belladonna	40
+colle_ma09a_d035	Nitrotoluite	15
+colle_ma09a_d035	Cubic Diamond	5
+colle_ma09a_d036	Dusk Bamboo	40
+colle_ma09a_d036	Dolphin Carrot	40
+colle_ma09a_d036	Fan Skink	15
+colle_ma09a_d036	Pilehorn Rhino Beetle	5
+colle_ma09a_d037	Fatal Belladonna	40
+colle_ma09a_d037	Sunset Clover	25
+colle_ma09a_d037	Fan Skink	25
+colle_ma09a_d037	Mookah Flour	10
+colle_ma08a_f001	Scent Stone	38
+colle_ma08a_f001	Fatal Belladonna	37
+colle_ma08a_f001	Nitrotoluite	15
+colle_ma08a_f001	Cubic Diamond	10
+colle_ma08a_f002	Dolphin Carrot	43
+colle_ma08a_f002	Black Ash	43
+colle_ma08a_f002	Crunchy Passion Fruit	9
+colle_ma08a_f002	Love Raspberry	5
+colle_ma08a_f003	Dolphin Carrot	43
+colle_ma08a_f003	Black Ash	43
+colle_ma08a_f003	Crunchy Passion Fruit	9
+colle_ma08a_f003	Love Raspberry	5
+colle_ma08a_f004	Dolphin Carrot	43
+colle_ma08a_f004	Black Ash	43
+colle_ma08a_f004	Crunchy Passion Fruit	9
+colle_ma08a_f004	Love Raspberry	5
+colle_ma08a_f005	Dusk Bamboo	43
+colle_ma08a_f005	Welcome Cactus	43
+colle_ma08a_f005	Sunset Clover	9
+colle_ma08a_f005	Amber Leaf	5
+colle_ma08a_f006	Glutinous Sand	40
+colle_ma08a_f006	Welcome Cactus	40
+colle_ma08a_f006	Charcoal Leg	15
+colle_ma08a_f006	Amber Leaf	5
+colle_ma08a_f007	Scent Stone	43
+colle_ma08a_f007	Propeller Poppy	43
+colle_ma08a_f007	Maple Bite	9
+colle_ma08a_f007	Cubic Diamond	5
+colle_ma08a_f008	Sand Salmon	45
+colle_ma08a_f008	Welcome Cactus	45
+colle_ma08a_f008	Flying Flounder	9
+colle_ma08a_f008	Tender Shark	1
+colle_ma08a_f009	Black Ash	30
+colle_ma08a_f009	Emperor Beetle	30
+colle_ma08a_f009	Breath Charcoal	30
+colle_ma08a_f009	Nitrotoluite	10
+colle_ma08a_f010	Scent Stone	43
+colle_ma08a_f010	Propeller Poppy	43
+colle_ma08a_f010	Maple Bite	9
+colle_ma08a_f010	Cubic Diamond	5
+colle_ma08a_f011	Black Ash	50
+colle_ma08a_f011	Nitrotoluite	20
+colle_ma08a_f011	Crunchy Passion Fruit	20
+colle_ma08a_f011	Mookah Flour	10
+colle_ma08a_f012	Scent Stone	43
+colle_ma08a_f012	Propeller Poppy	43
+colle_ma08a_f012	Maple Bite	9
+colle_ma08a_f012	Cubic Diamond	5
+colle_ma08a_f013	Shield Bug	50
+colle_ma08a_f013	Pilehorn Rhino Beetle	20
+colle_ma08a_f013	Maple Bite	20
+colle_ma08a_f013	Love Raspberry	10
+colle_ma08a_f014	Dolphin Carrot	43
+colle_ma08a_f014	Black Ash	43
+colle_ma08a_f014	Crunchy Passion Fruit	9
+colle_ma08a_f014	Love Raspberry	5
+colle_ma08a_f015	Dusk Bamboo	43
+colle_ma08a_f015	Welcome Cactus	43
+colle_ma08a_f015	Sunset Clover	9
+colle_ma08a_f015	Amber Leaf	5
+colle_ma08a_f016	Black Ash	30
+colle_ma08a_f016	Emperor Beetle	30
+colle_ma08a_f016	Breath Charcoal	30
+colle_ma08a_f016	Nitrotoluite	10
+colle_ma08a_f017	Scent Stone	43
+colle_ma08a_f017	Propeller Poppy	43
+colle_ma08a_f017	Maple Bite	9
+colle_ma08a_f017	Cubic Diamond	5
+colle_ma08a_f018	Black Ash	50
+colle_ma08a_f018	Nitrotoluite	20
+colle_ma08a_f018	Crunchy Passion Fruit	20
+colle_ma08a_f018	Mookah Flour	10
+colle_ma08a_f019	Glutinous Sand	45
+colle_ma08a_f019	Propeller Poppy	45
+colle_ma08a_f019	Sunset Clover	9
+colle_ma08a_f019	Pilehorn Rhino Beetle	1
+colle_ma08a_f020	Glutinous Sand	40
+colle_ma08a_f020	Welcome Cactus	40
+colle_ma08a_f020	Charcoal Leg	15
+colle_ma08a_f020	Amber Leaf	5
+colle_ma08a_f021	Dolphin Carrot	43
+colle_ma08a_f021	Black Ash	43
+colle_ma08a_f021	Crunchy Passion Fruit	9
+colle_ma08a_f021	Love Raspberry	5
+colle_ma08a_f022	Dusk Bamboo	43
+colle_ma08a_f022	Welcome Cactus	43
+colle_ma08a_f022	Sunset Clover	9
+colle_ma08a_f022	Amber Leaf	5
+colle_ma08a_f023	Dolphin Carrot	43
+colle_ma08a_f023	Black Ash	43
+colle_ma08a_f023	Crunchy Passion Fruit	9
+colle_ma08a_f023	Love Raspberry	5
+colle_ma08a_f024	Black Ash	30
+colle_ma08a_f024	Emperor Beetle	30
+colle_ma08a_f024	Breath Charcoal	30
+colle_ma08a_f024	Nitrotoluite	10
+colle_ma08a_f025	Dolphin Carrot	43
+colle_ma08a_f025	Black Ash	43
+colle_ma08a_f025	Crunchy Passion Fruit	9
+colle_ma08a_f025	Love Raspberry	5
+colle_ma08a_f026	Dusk Bamboo	43
+colle_ma08a_f026	Welcome Cactus	43
+colle_ma08a_f026	Sunset Clover	9
+colle_ma08a_f026	Amber Leaf	5
+colle_ma08a_f027	Glutinous Sand	40
+colle_ma08a_f027	Welcome Cactus	40
+colle_ma08a_f027	Charcoal Leg	15
+colle_ma08a_f027	Amber Leaf	5
+colle_ma08a_f028	Propeller Poppy	35
+colle_ma08a_f028	Fatal Belladonna	35
+colle_ma08a_f028	Nitrotoluite	20
+colle_ma08a_f028	Mookah Flour	10
+colle_ma08a_f029	Dusk Bamboo	43
+colle_ma08a_f029	Welcome Cactus	43
+colle_ma08a_f029	Sunset Clover	9
+colle_ma08a_f029	Amber Leaf	5
+colle_ma08a_f030	Shield Bug	50
+colle_ma08a_f030	Pilehorn Rhino Beetle	20
+colle_ma08a_f030	Maple Bite	20
+colle_ma08a_f030	Love Raspberry	10
+colle_ma08a_f031	Black Ash	50
+colle_ma08a_f031	Nitrotoluite	20
+colle_ma08a_f031	Crunchy Passion Fruit	20
+colle_ma08a_f031	Mookah Flour	10
+colle_ma08a_f032	Glutinous Sand	45
+colle_ma08a_f032	Propeller Poppy	45
+colle_ma08a_f032	Sunset Clover	9
+colle_ma08a_f032	Pilehorn Rhino Beetle	1
+colle_ma08a_f033	Dolphin Carrot	43
+colle_ma08a_f033	Black Ash	43
+colle_ma08a_f033	Crunchy Passion Fruit	9
+colle_ma08a_f033	Love Raspberry	5
+colle_ma08a_f034	Scent Stone	43
+colle_ma08a_f034	Propeller Poppy	43
+colle_ma08a_f034	Maple Bite	9
+colle_ma08a_f034	Cubic Diamond	5
+colle_ma08a_f035	Dolphin Carrot	43
+colle_ma08a_f035	Black Ash	43
+colle_ma08a_f035	Crunchy Passion Fruit	9
+colle_ma08a_f035	Love Raspberry	5
+colle_ma08a_f036	Black Ash	30
+colle_ma08a_f036	Emperor Beetle	30
+colle_ma08a_f036	Breath Charcoal	30
+colle_ma08a_f036	Nitrotoluite	10
+colle_ma08a_f037	Scent Stone	43
+colle_ma08a_f037	Propeller Poppy	43
+colle_ma08a_f037	Maple Bite	9
+colle_ma08a_f037	Cubic Diamond	5
+colle_ma08a_f038	Glutinous Sand	45
+colle_ma08a_f038	Propeller Poppy	45
+colle_ma08a_f038	Sunset Clover	9
+colle_ma08a_f038	Pilehorn Rhino Beetle	1
+colle_ma08a_f039	Glutinous Sand	45
+colle_ma08a_f039	Propeller Poppy	45
+colle_ma08a_f039	Sunset Clover	9
+colle_ma08a_f039	Pilehorn Rhino Beetle	1
+colle_ma08a_f040	Devilmask Cricket	28
+colle_ma08a_f040	Emperor Beetle	28
+colle_ma08a_f040	Dusk Bamboo	29
+colle_ma08a_f040	Love Raspberry	15
+colle_ma08a_f041	Scent Stone	38
+colle_ma08a_f041	Fatal Belladonna	37
+colle_ma08a_f041	Nitrotoluite	15
+colle_ma08a_f041	Cubic Diamond	10
+colle_ma08a_f042	Dolphin Carrot	30
+colle_ma08a_f042	Glutinous Sand	30
+colle_ma08a_f042	Crunchy Passion Fruit	20
+colle_ma08a_f042	Amber Leaf	20
+colle_ma08a_f043	Glutinous Sand	45
+colle_ma08a_f043	Propeller Poppy	45
+colle_ma08a_f043	Sunset Clover	9
+colle_ma08a_f043	Pilehorn Rhino Beetle	1
+colle_ma08a_f044	Black Ash	30
+colle_ma08a_f044	Emperor Beetle	30
+colle_ma08a_f044	Breath Charcoal	30
+colle_ma08a_f044	Nitrotoluite	10
+colle_ma08a_f045	Dusk Bamboo	43
+colle_ma08a_f045	Welcome Cactus	43
+colle_ma08a_f045	Sunset Clover	9
+colle_ma08a_f045	Amber Leaf	5
+colle_ma08a_f046	Glutinous Sand	45
+colle_ma08a_f046	Propeller Poppy	45
+colle_ma08a_f046	Sunset Clover	9
+colle_ma08a_f046	Pilehorn Rhino Beetle	1
+colle_ma08a_f047	Glutinous Sand	40
+colle_ma08a_f047	Welcome Cactus	40
+colle_ma08a_f047	Charcoal Leg	15
+colle_ma08a_f047	Amber Leaf	5
+colle_ma08a_f048	Glutinous Sand	40
+colle_ma08a_f048	Maple Bite	20
+colle_ma08a_f048	Charcoal Leg	20
+colle_ma08a_f048	Cubic Diamond	20
+colle_ma08a_f049	Propeller Poppy	35
+colle_ma08a_f049	Fatal Belladonna	35
+colle_ma08a_f049	Nitrotoluite	20
+colle_ma08a_f049	Mookah Flour	10
+colle_ma08a_f050	Scent Stone	38
+colle_ma08a_f050	Fatal Belladonna	37
+colle_ma08a_f050	Nitrotoluite	15
+colle_ma08a_f050	Cubic Diamond	10
+colle_ma08a_f051	Black Ash	30
+colle_ma08a_f051	Emperor Beetle	30
+colle_ma08a_f051	Breath Charcoal	30
+colle_ma08a_f051	Nitrotoluite	10
+colle_ma08a_f052	Glutinous Sand	45
+colle_ma08a_f052	Propeller Poppy	45
+colle_ma08a_f052	Sunset Clover	9
+colle_ma08a_f052	Pilehorn Rhino Beetle	1
+colle_ma08a_f053	Sand Salmon	45
+colle_ma08a_f053	Welcome Cactus	45
+colle_ma08a_f053	Flying Flounder	9
+colle_ma08a_f053	Tender Shark	1
+colle_ma08a_f054	Dolphin Carrot	30
+colle_ma08a_f054	Glutinous Sand	30
+colle_ma08a_f054	Crunchy Passion Fruit	20
+colle_ma08a_f054	Amber Leaf	20
+colle_ma08a_f055	Glutinous Sand	45
+colle_ma08a_f055	Propeller Poppy	45
+colle_ma08a_f055	Sunset Clover	9
+colle_ma08a_f055	Pilehorn Rhino Beetle	1
+colle_ma08a_f056	Glutinous Sand	45
+colle_ma08a_f056	Propeller Poppy	45
+colle_ma08a_f056	Sunset Clover	9
+colle_ma08a_f056	Pilehorn Rhino Beetle	1
+colle_ma08a_f057	Dusk Bamboo	43
+colle_ma08a_f057	Welcome Cactus	43
+colle_ma08a_f057	Sunset Clover	9
+colle_ma08a_f057	Amber Leaf	5
+colle_ma08a_f058	Lazy Crayfish	45
+colle_ma08a_f058	Breath Charcoal	45
+colle_ma08a_f058	Flying Flounder	9
+colle_ma08a_f058	Tender Shark	1
+colle_ma08a_f059	Glutinous Sand	45
+colle_ma08a_f059	Propeller Poppy	45
+colle_ma08a_f059	Sunset Clover	9
+colle_ma08a_f059	Pilehorn Rhino Beetle	1
+colle_ma08a_f060	Dusk Bamboo	43
+colle_ma08a_f060	Welcome Cactus	43
+colle_ma08a_f060	Sunset Clover	9
+colle_ma08a_f060	Amber Leaf	5
+colle_ma08a_f061	Dolphin Carrot	43
+colle_ma08a_f061	Black Ash	43
+colle_ma08a_f061	Crunchy Passion Fruit	9
+colle_ma08a_f061	Love Raspberry	5
+colle_ma08a_f062	Shield Bug	50
+colle_ma08a_f062	Pilehorn Rhino Beetle	20
+colle_ma08a_f062	Maple Bite	20
+colle_ma08a_f062	Love Raspberry	10
+colle_ma08a_f063	Lazy Crayfish	45
+colle_ma08a_f063	Breath Charcoal	45
+colle_ma08a_f063	Flying Flounder	9
+colle_ma08a_f063	Tender Shark	1
+colle_ma08a_f064	Dusk Bamboo	43
+colle_ma08a_f064	Welcome Cactus	43
+colle_ma08a_f064	Sunset Clover	9
+colle_ma08a_f064	Amber Leaf	5
+colle_ma08a_f065	Sand Salmon	45
+colle_ma08a_f065	Welcome Cactus	45
+colle_ma08a_f065	Flying Flounder	9
+colle_ma08a_f065	Tender Shark	1
+colle_ma08a_f066	Devilmask Cricket	40
+colle_ma08a_f066	Lazy Crayfish	30
+colle_ma08a_f066	Flying Flounder	20
+colle_ma08a_f066	Tender Shark	10
+colle_ma08a_f067	Dusk Bamboo	40
+colle_ma08a_f067	Dolphin Carrot	40
+colle_ma08a_f067	Fan Skink	15
+colle_ma08a_f067	Pilehorn Rhino Beetle	5
+colle_ma08a_f068	Dusk Bamboo	40
+colle_ma08a_f068	Dolphin Carrot	40
+colle_ma08a_f068	Fan Skink	15
+colle_ma08a_f068	Pilehorn Rhino Beetle	5
+colle_ma08a_f069	Devilmask Cricket	38
+colle_ma08a_f069	Shield Bug	37
+colle_ma08a_f069	Empress Beetle	15
+colle_ma08a_f069	Love Raspberry	10
+colle_ma08a_f070	Dusk Bamboo	40
+colle_ma08a_f070	Dolphin Carrot	40
+colle_ma08a_f070	Fan Skink	15
+colle_ma08a_f070	Pilehorn Rhino Beetle	5
+colle_ma08a_f071	Fatal Belladonna	40
+colle_ma08a_f071	Sunset Clover	25
+colle_ma08a_f071	Fan Skink	25
+colle_ma08a_f071	Mookah Flour	10
+colle_ma08a_f072	Devilmask Cricket	38
+colle_ma08a_f072	Shield Bug	37
+colle_ma08a_f072	Empress Beetle	15
+colle_ma08a_f072	Love Raspberry	10
+colle_ma08a_f073	Dusk Bamboo	40
+colle_ma08a_f073	Dolphin Carrot	40
+colle_ma08a_f073	Fan Skink	15
+colle_ma08a_f073	Pilehorn Rhino Beetle	5
+colle_ma08a_f074	Scent Stone	20
+colle_ma08a_f074	Charcoal Leg	30
+colle_ma08a_f074	Empress Beetle	30
+colle_ma08a_f074	Cubic Diamond	20
+colle_ma08a_f075	Black Ash	30
+colle_ma08a_f075	Emperor Beetle	30
+colle_ma08a_f075	Breath Charcoal	30
+colle_ma08a_f075	Nitrotoluite	10
+colle_ma08a_f076	Dusk Bamboo	40
+colle_ma08a_f076	Dolphin Carrot	40
+colle_ma08a_f076	Fan Skink	15
+colle_ma08a_f076	Pilehorn Rhino Beetle	5
+colle_ma08a_f077	Devilmask Cricket	38
+colle_ma08a_f077	Shield Bug	37
+colle_ma08a_f077	Empress Beetle	15
+colle_ma08a_f077	Love Raspberry	10
+colle_ma08a_f078	Devilmask Cricket	28
+colle_ma08a_f078	Emperor Beetle	28
+colle_ma08a_f078	Dusk Bamboo	29
+colle_ma08a_f078	Love Raspberry	15
+colle_ma08a_f079	Emperor Beetle	40
+colle_ma08a_f079	Breath Charcoal	40
+colle_ma08a_f079	Fan Skink	15
+colle_ma08a_f079	Amber Leaf	5
+colle_ma08a_f080	Emperor Beetle	40
+colle_ma08a_f080	Breath Charcoal	40
+colle_ma08a_f080	Fan Skink	15
+colle_ma08a_f080	Amber Leaf	5
+colle_ma08a_f081	Emperor Beetle	40
+colle_ma08a_f081	Breath Charcoal	40
+colle_ma08a_f081	Fan Skink	15
+colle_ma08a_f081	Amber Leaf	5
+colle_ma08a_f082	Devilmask Cricket	28
+colle_ma08a_f082	Emperor Beetle	28
+colle_ma08a_f082	Dusk Bamboo	29
+colle_ma08a_f082	Love Raspberry	15
+colle_ma08a_f083	Emperor Beetle	40
+colle_ma08a_f083	Breath Charcoal	40
+colle_ma08a_f083	Fan Skink	15
+colle_ma08a_f083	Amber Leaf	5
+colle_ma08a_f084	Emperor Beetle	40
+colle_ma08a_f084	Breath Charcoal	40
+colle_ma08a_f084	Fan Skink	15
+colle_ma08a_f084	Amber Leaf	5
+colle_ma08a_f085	Emperor Beetle	40
+colle_ma08a_f085	Breath Charcoal	40
+colle_ma08a_f085	Fan Skink	15
+colle_ma08a_f085	Amber Leaf	5
+colle_ma08a_f086	Glutinous Sand	40
+colle_ma08a_f086	Welcome Cactus	40
+colle_ma08a_f086	Charcoal Leg	15
+colle_ma08a_f086	Amber Leaf	5
+colle_ma08a_f087	Black Ash	30
+colle_ma08a_f087	Emperor Beetle	30
+colle_ma08a_f087	Breath Charcoal	30
+colle_ma08a_f087	Nitrotoluite	10
+colle_ma08a_f088	Shield Bug	50
+colle_ma08a_f088	Pilehorn Rhino Beetle	20
+colle_ma08a_f088	Maple Bite	20
+colle_ma08a_f088	Love Raspberry	10
+colle_ma08a_f089	Scent Stone	43
+colle_ma08a_f089	Propeller Poppy	43
+colle_ma08a_f089	Maple Bite	9
+colle_ma08a_f089	Cubic Diamond	5
+colle_ma08a_f090	Sand Salmon	45
+colle_ma08a_f090	Welcome Cactus	45
+colle_ma08a_f090	Flying Flounder	9
+colle_ma08a_f090	Tender Shark	1
+colle_ma08a_f091	Sand Salmon	45
+colle_ma08a_f091	Welcome Cactus	45
+colle_ma08a_f091	Flying Flounder	9
+colle_ma08a_f091	Tender Shark	1
+colle_ma08a_f092	Sand Salmon	35
+colle_ma08a_f092	Maple Bite	25
+colle_ma08a_f092	Flying Flounder	25
+colle_ma08a_f092	Tender Shark	15
+colle_ma08a_f093	Propeller Poppy	35
+colle_ma08a_f093	Fatal Belladonna	35
+colle_ma08a_f093	Nitrotoluite	20
+colle_ma08a_f093	Mookah Flour	10
+colle_ma08a_f094	Glutinous Sand	40
+colle_ma08a_f094	Maple Bite	20
+colle_ma08a_f094	Charcoal Leg	20
+colle_ma08a_f094	Cubic Diamond	20
+colle_ma08a_c001	Scent Stone	40
+colle_ma08a_c001	Fatal Belladonna	40
+colle_ma08a_c001	Nitrotoluite	15
+colle_ma08a_c001	Cubic Diamond	5
+colle_ma08a_c002	Scent Stone	40
+colle_ma08a_c002	Propeller Poppy	40
+colle_ma08a_c002	Maple Bite	9
+colle_ma08a_c002	Cubic Diamond	1
+colle_ma08a_c003	Propeller Poppy	88
+colle_ma08a_c003	Amber Leaf	4
+colle_ma08a_c003	Love Raspberry	4
+colle_ma08a_c003	Pilehorn Rhino Beetle	4
+colle_ma10a_001	Ripper Ant	35
+colle_ma10a_001	Metallipede	35
+colle_ma10a_001	Fire Tarantula	25
+colle_ma10a_001	Quadriga Darner	5
+colle_ma10a_002	Heroic Starsand	45
+colle_ma10a_002	Wraithwood	45
+colle_ma10a_002	Wibbleweed	9
+colle_ma10a_002	Lightning Stump	1
+colle_ma10a_003	Ripper Ant	70
+colle_ma10a_003	Metallipede	10
+colle_ma10a_003	Scimitar Grass	15
+colle_ma10a_003	Quadriga Darner	5
+colle_ma10a_004	Ripper Ant	70
+colle_ma10a_004	Metallipede	10
+colle_ma10a_004	Scimitar Grass	15
+colle_ma10a_004	Quadriga Darner	5
+colle_ma10a_005	Ripper Ant	70
+colle_ma10a_005	Metallipede	10
+colle_ma10a_005	Scimitar Grass	15
+colle_ma10a_005	Quadriga Darner	5
+colle_ma10a_006	Scimitar Grass	45
+colle_ma10a_006	Walnut Grape	45
+colle_ma10a_006	Acid Tomato	9
+colle_ma10a_006	Death Mushroom	1
+colle_ma10a_007	Ripper Ant	35
+colle_ma10a_007	Metallipede	35
+colle_ma10a_007	Fire Tarantula	25
+colle_ma10a_007	Quadriga Darner	5
+colle_ma10a_008	Heroic Starsand	30
+colle_ma10a_008	Abyss Heather	30
+colle_ma10a_008	Fire Tarantula	30
+colle_ma10a_008	Hezodron Petra	10
+colle_ma10a_009	Ripper Ant	30
+colle_ma10a_009	Metallipede	30
+colle_ma10a_009	Walnut Grape	30
+colle_ma10a_009	Lightning Stump	10
+colle_ma10a_010	Insanity Moss	35
+colle_ma10a_010	Rising Dragon Rock	35
+colle_ma10a_010	Ripple Stone	25
+colle_ma10a_010	Hezodron Petra	5
+colle_ma10a_012	Poison Flash	35
+colle_ma10a_012	Olsteprinium	35
+colle_ma10a_012	Hedron Stonefish	25
+colle_ma10a_012	Secret Turf	5
+colle_ma10a_013	Poison Flash	35
+colle_ma10a_013	Olsteprinium	35
+colle_ma10a_013	Hedron Stonefish	25
+colle_ma10a_013	Secret Turf	5
+colle_ma10a_014	Trippy Catfish	30
+colle_ma10a_014	Heroic Starsand	30
+colle_ma10a_014	Insanity Moss	30
+colle_ma10a_014	Glory Angler	10
+colle_ma10a_016	Heroic Starsand	45
+colle_ma10a_016	Wraithwood	45
+colle_ma10a_016	Wibbleweed	9
+colle_ma10a_016	Lightning Stump	1
+colle_ma10a_017	Night Lily	40
+colle_ma10a_017	Wibbleweed	25
+colle_ma10a_017	Olsteprinium	25
+colle_ma10a_017	Death Mushroom	10
+colle_ma10a_018	Trippy Catfish	45
+colle_ma10a_018	Poison Flash	45
+colle_ma10a_018	Hedron Stonefish	9
+colle_ma10a_018	Glory Angler	1
+colle_ma10a_019	Trippy Catfish	30
+colle_ma10a_019	Heroic Starsand	30
+colle_ma10a_019	Insanity Moss	30
+colle_ma10a_019	Glory Angler	10
+colle_ma10a_020	Poison Flash	35
+colle_ma10a_020	Olsteprinium	35
+colle_ma10a_020	Hedron Stonefish	25
+colle_ma10a_020	Secret Turf	5
+colle_ma10a_021	Scimitar Grass	45
+colle_ma10a_021	Walnut Grape	45
+colle_ma10a_021	Acid Tomato	9
+colle_ma10a_021	Death Mushroom	1
+colle_ma10a_022	Night Lily	30
+colle_ma10a_022	Abyss Heather	30
+colle_ma10a_022	Scimitar Grass	30
+colle_ma10a_022	Secret Turf	10
+colle_ma10a_024	Ripper Ant	30
+colle_ma10a_024	Metallipede	30
+colle_ma10a_024	Walnut Grape	30
+colle_ma10a_024	Lightning Stump	10
+colle_ma10a_025	Night Lily	40
+colle_ma10a_025	Wibbleweed	25
+colle_ma10a_025	Olsteprinium	25
+colle_ma10a_025	Death Mushroom	10
+colle_ma10a_027	Abyss Heather	30
+colle_ma10a_027	Insanity Moss	30
+colle_ma10a_027	Wraithwood	30
+colle_ma10a_027	Quadriga Darner	10
+colle_ma10a_028	Night Lily	45
+colle_ma10a_028	Scimitar Grass	45
+colle_ma10a_028	Olsteprinium	9
+colle_ma10a_028	Secret Turf	1
+colle_ma10a_029	Night Lily	45
+colle_ma10a_029	Scimitar Grass	45
+colle_ma10a_029	Olsteprinium	9
+colle_ma10a_029	Secret Turf	1
+colle_ma10a_030	Night Lily	45
+colle_ma10a_030	Scimitar Grass	45
+colle_ma10a_030	Olsteprinium	9
+colle_ma10a_030	Secret Turf	1
+colle_ma10a_031	Ripper Ant	30
+colle_ma10a_031	Metallipede	30
+colle_ma10a_031	Walnut Grape	30
+colle_ma10a_031	Lightning Stump	10
+colle_ma10a_032	Heroic Starsand	45
+colle_ma10a_032	Wraithwood	45
+colle_ma10a_032	Wibbleweed	9
+colle_ma10a_032	Lightning Stump	1
+colle_ma10a_033	Heroic Starsand	45
+colle_ma10a_033	Rising Dragon Rock	45
+colle_ma10a_033	Ripple Stone	9
+colle_ma10a_033	Hezodron Petra	1
+colle_ma10a_034	Walnut Grape	45
+colle_ma10a_034	Rising Dragon Rock	45
+colle_ma10a_034	Ripple Stone	9
+colle_ma10a_034	Hezodron Petra	1
+colle_ma10a_036	Walnut Grape	45
+colle_ma10a_036	Rising Dragon Rock	45
+colle_ma10a_036	Ripple Stone	9
+colle_ma10a_036	Hezodron Petra	1
+colle_ma10a_037	Heroic Starsand	45
+colle_ma10a_037	Rising Dragon Rock	45
+colle_ma10a_037	Ripple Stone	9
+colle_ma10a_037	Hezodron Petra	1
+colle_ma10a_038	Ripper Ant	35
+colle_ma10a_038	Metallipede	35
+colle_ma10a_038	Fire Tarantula	25
+colle_ma10a_038	Quadriga Darner	5
+colle_ma10a_039	Insanity Moss	35
+colle_ma10a_039	Rising Dragon Rock	35
+colle_ma10a_039	Ripple Stone	25
+colle_ma10a_039	Hezodron Petra	5
+colle_ma10a_040	Trippy Catfish	45
+colle_ma10a_040	Poison Flash	45
+colle_ma10a_040	Hedron Stonefish	9
+colle_ma10a_040	Glory Angler	1
+colle_ma10a_041	Scimitar Grass	45
+colle_ma10a_041	Walnut Grape	45
+colle_ma10a_041	Acid Tomato	9
+colle_ma10a_041	Death Mushroom	1
+colle_ma10a_042	Insanity Moss	35
+colle_ma10a_042	Rising Dragon Rock	35
+colle_ma10a_042	Ripple Stone	25
+colle_ma10a_042	Hezodron Petra	5
+colle_ma10a_044	Rising Dragon Rock	35
+colle_ma10a_044	Wraithwood	35
+colle_ma10a_044	Olsteprinium	25
+colle_ma10a_044	Lightning Stump	5
+colle_ma10a_046	Trippy Catfish	45
+colle_ma10a_046	Poison Flash	45
+colle_ma10a_046	Hedron Stonefish	9
+colle_ma10a_046	Glory Angler	1
+colle_ma10a_047	Poison Flash	35
+colle_ma10a_047	Olsteprinium	35
+colle_ma10a_047	Hedron Stonefish	25
+colle_ma10a_047	Secret Turf	5
+colle_ma10a_048	Walnut Grape	45
+colle_ma10a_048	Rising Dragon Rock	45
+colle_ma10a_048	Ripple Stone	9
+colle_ma10a_048	Hezodron Petra	1
+colle_ma10a_049	Walnut Grape	45
+colle_ma10a_049	Rising Dragon Rock	45
+colle_ma10a_049	Ripple Stone	9
+colle_ma10a_049	Hezodron Petra	1
+colle_ma10a_050	Heroic Starsand	45
+colle_ma10a_050	Wraithwood	45
+colle_ma10a_050	Wibbleweed	9
+colle_ma10a_050	Lightning Stump	1
+colle_ma10a_051	Insanity Moss	35
+colle_ma10a_051	Rising Dragon Rock	35
+colle_ma10a_051	Ripple Stone	25
+colle_ma10a_051	Hezodron Petra	5
+colle_ma10a_052	Heroic Starsand	45
+colle_ma10a_052	Wraithwood	45
+colle_ma10a_052	Wibbleweed	9
+colle_ma10a_052	Lightning Stump	1
+colle_ma10a_053	Abyss Heather	30
+colle_ma10a_053	Insanity Moss	30
+colle_ma10a_053	Wraithwood	30
+colle_ma10a_053	Quadriga Darner	10
+colle_ma10a_054	Heroic Starsand	45
+colle_ma10a_054	Rising Dragon Rock	45
+colle_ma10a_054	Ripple Stone	9
+colle_ma10a_054	Hezodron Petra	1
+colle_ma10a_055	Walnut Grape	45
+colle_ma10a_055	Rising Dragon Rock	45
+colle_ma10a_055	Ripple Stone	9
+colle_ma10a_055	Hezodron Petra	1
+colle_ma10a_056	Ripper Ant	30
+colle_ma10a_056	Metallipede	30
+colle_ma10a_056	Walnut Grape	30
+colle_ma10a_056	Lightning Stump	10
+colle_ma10a_058	Heroic Starsand	45
+colle_ma10a_058	Wraithwood	45
+colle_ma10a_058	Wibbleweed	9
+colle_ma10a_058	Lightning Stump	1
+colle_ma10a_061	Scimitar Grass	45
+colle_ma10a_061	Wibbleweed	25
+colle_ma10a_061	Acid Tomato	25
+colle_ma10a_061	Death Mushroom	5
+colle_ma10a_063	Night Lily	45
+colle_ma10a_063	Scimitar Grass	45
+colle_ma10a_063	Olsteprinium	9
+colle_ma10a_063	Secret Turf	1
+colle_ma10a_064	Scimitar Grass	45
+colle_ma10a_064	Walnut Grape	45
+colle_ma10a_064	Acid Tomato	9
+colle_ma10a_064	Death Mushroom	1
+colle_ma10a_065	Night Lily	30
+colle_ma10a_065	Abyss Heather	30
+colle_ma10a_065	Scimitar Grass	30
+colle_ma10a_065	Secret Turf	10
+colle_ma10a_067	Night Lily	30
+colle_ma10a_067	Abyss Heather	30
+colle_ma10a_067	Scimitar Grass	30
+colle_ma10a_067	Secret Turf	10
+colle_ma10a_069	Night Lily	30
+colle_ma10a_069	Abyss Heather	30
+colle_ma10a_069	Scimitar Grass	30
+colle_ma10a_069	Secret Turf	10
+colle_ma10a_070	Abyss Heather	30
+colle_ma10a_070	Insanity Moss	30
+colle_ma10a_070	Wraithwood	30
+colle_ma10a_070	Quadriga Darner	10
+colle_ma10a_071	Ripper Ant	30
+colle_ma10a_071	Metallipede	30
+colle_ma10a_071	Walnut Grape	30
+colle_ma10a_071	Lightning Stump	10
+colle_ma10a_072	Night Lily	45
+colle_ma10a_072	Scimitar Grass	45
+colle_ma10a_072	Olsteprinium	9
+colle_ma10a_072	Secret Turf	1
+colle_ma10a_075	Night Lily	30
+colle_ma10a_075	Abyss Heather	30
+colle_ma10a_075	Scimitar Grass	30
+colle_ma10a_075	Secret Turf	10
+colle_ma10a_076	Night Lily	45
+colle_ma10a_076	Scimitar Grass	45
+colle_ma10a_076	Olsteprinium	9
+colle_ma10a_076	Secret Turf	1
+colle_ma10a_077	Abyss Heather	30
+colle_ma10a_077	Insanity Moss	30
+colle_ma10a_077	Wraithwood	30
+colle_ma10a_077	Quadriga Darner	10
+colle_ma10a_078	Scimitar Grass	45
+colle_ma10a_078	Walnut Grape	45
+colle_ma10a_078	Acid Tomato	9
+colle_ma10a_078	Death Mushroom	1
+colle_ma10a_079	Heroic Starsand	45
+colle_ma10a_079	Wraithwood	45
+colle_ma10a_079	Wibbleweed	9
+colle_ma10a_079	Lightning Stump	1
+colle_ma10a_080	Ripper Ant	30
+colle_ma10a_080	Metallipede	30
+colle_ma10a_080	Walnut Grape	30
+colle_ma10a_080	Lightning Stump	10
+colle_ma10a_081	Heroic Starsand	30
+colle_ma10a_081	Abyss Heather	30
+colle_ma10a_081	Fire Tarantula	30
+colle_ma10a_081	Hezodron Petra	10
+colle_ma10a_082	Walnut Grape	45
+colle_ma10a_082	Rising Dragon Rock	45
+colle_ma10a_082	Ripple Stone	9
+colle_ma10a_082	Hezodron Petra	1
+colle_ma10a_083	Ripper Ant	30
+colle_ma10a_083	Metallipede	30
+colle_ma10a_083	Walnut Grape	30
+colle_ma10a_083	Lightning Stump	10
+colle_ma10a_084	Ripper Ant	30
+colle_ma10a_084	Metallipede	30
+colle_ma10a_084	Walnut Grape	30
+colle_ma10a_084	Lightning Stump	10
+colle_ma10a_085	Night Lily	30
+colle_ma10a_085	Abyss Heather	30
+colle_ma10a_085	Scimitar Grass	30
+colle_ma10a_085	Secret Turf	10
+colle_ma10a_086	Scimitar Grass	45
+colle_ma10a_086	Wibbleweed	25
+colle_ma10a_086	Acid Tomato	25
+colle_ma10a_086	Death Mushroom	5
+colle_ma10a_087	Heroic Starsand	45
+colle_ma10a_087	Rising Dragon Rock	45
+colle_ma10a_087	Ripple Stone	9
+colle_ma10a_087	Hezodron Petra	1
+colle_ma10a_088	Walnut Grape	45
+colle_ma10a_088	Rising Dragon Rock	45
+colle_ma10a_088	Ripple Stone	9
+colle_ma10a_088	Hezodron Petra	1
+colle_ma10a_089	Heroic Starsand	30
+colle_ma10a_089	Abyss Heather	30
+colle_ma10a_089	Fire Tarantula	30
+colle_ma10a_089	Hezodron Petra	10
+colle_ma10a_090	Abyss Heather	30
+colle_ma10a_090	Insanity Moss	30
+colle_ma10a_090	Wraithwood	30
+colle_ma10a_090	Quadriga Darner	10
+colle_ma10a_091	Night Lily	30
+colle_ma10a_091	Abyss Heather	30
+colle_ma10a_091	Scimitar Grass	30
+colle_ma10a_091	Secret Turf	10
+colle_ma10a_092	Heroic Starsand	45
+colle_ma10a_092	Wraithwood	45
+colle_ma10a_092	Wibbleweed	9
+colle_ma10a_092	Lightning Stump	1
+colle_ma10a_093	Insanity Moss	35
+colle_ma10a_093	Rising Dragon Rock	35
+colle_ma10a_093	Ripple Stone	25
+colle_ma10a_093	Hezodron Petra	5
+colle_ma10a_094	Walnut Grape	45
+colle_ma10a_094	Rising Dragon Rock	45
+colle_ma10a_094	Ripple Stone	9
+colle_ma10a_094	Hezodron Petra	1
+colle_ma10a_095	Walnut Grape	45
+colle_ma10a_095	Rising Dragon Rock	45
+colle_ma10a_095	Ripple Stone	9
+colle_ma10a_095	Hezodron Petra	1
+colle_ma10a_096	Ripper Ant	35
+colle_ma10a_096	Metallipede	35
+colle_ma10a_096	Fire Tarantula	25
+colle_ma10a_096	Quadriga Darner	5
+colle_ma10a_097	Ripper Ant	30
+colle_ma10a_097	Metallipede	30
+colle_ma10a_097	Walnut Grape	30
+colle_ma10a_097	Lightning Stump	10
+colle_ma10a_098	Scimitar Grass	45
+colle_ma10a_098	Walnut Grape	45
+colle_ma10a_098	Acid Tomato	9
+colle_ma10a_098	Death Mushroom	1
+colle_ma10a_099	Heroic Starsand	45
+colle_ma10a_099	Rising Dragon Rock	45
+colle_ma10a_099	Ripple Stone	9
+colle_ma10a_099	Hezodron Petra	1
+colle_ma10a_101	Heroic Starsand	45
+colle_ma10a_101	Rising Dragon Rock	45
+colle_ma10a_101	Ripple Stone	9
+colle_ma10a_101	Hezodron Petra	1
+colle_ma10a_102	Scimitar Grass	45
+colle_ma10a_102	Walnut Grape	45
+colle_ma10a_102	Acid Tomato	9
+colle_ma10a_102	Death Mushroom	1
+colle_ma10a_103	Rising Dragon Rock	35
+colle_ma10a_103	Wraithwood	35
+colle_ma10a_103	Olsteprinium	25
+colle_ma10a_103	Lightning Stump	5
+colle_ma10a_106	Ripper Ant	35
+colle_ma10a_106	Metallipede	35
+colle_ma10a_106	Fire Tarantula	25
+colle_ma10a_106	Quadriga Darner	5
+colle_ma10a_107	Ripper Ant	30
+colle_ma10a_107	Metallipede	30
+colle_ma10a_107	Walnut Grape	30
+colle_ma10a_107	Lightning Stump	10
+colle_ma10a_109	Heroic Starsand	45
+colle_ma10a_109	Rising Dragon Rock	45
+colle_ma10a_109	Ripple Stone	9
+colle_ma10a_109	Hezodron Petra	1
+colle_ma10a_110	Abyss Heather	30
+colle_ma10a_110	Insanity Moss	30
+colle_ma10a_110	Wraithwood	30
+colle_ma10a_110	Quadriga Darner	10
+colle_ma10a_111	Night Lily	45
+colle_ma10a_111	Scimitar Grass	45
+colle_ma10a_111	Olsteprinium	9
+colle_ma10a_111	Secret Turf	1
+colle_ma10a_112	Ripper Ant	30
+colle_ma10a_112	Metallipede	30
+colle_ma10a_112	Walnut Grape	30
+colle_ma10a_112	Lightning Stump	10
+colle_ma10a_113	Scimitar Grass	45
+colle_ma10a_113	Walnut Grape	45
+colle_ma10a_113	Acid Tomato	9
+colle_ma10a_113	Death Mushroom	1
+colle_ma10a_114	Heroic Starsand	45
+colle_ma10a_114	Rising Dragon Rock	45
+colle_ma10a_114	Ripple Stone	9
+colle_ma10a_114	Hezodron Petra	1
+colle_ma10a_115	Walnut Grape	45
+colle_ma10a_115	Rising Dragon Rock	45
+colle_ma10a_115	Ripple Stone	9
+colle_ma10a_115	Hezodron Petra	1
+colle_ma10a_116	Walnut Grape	45
+colle_ma10a_116	Rising Dragon Rock	45
+colle_ma10a_116	Ripple Stone	9
+colle_ma10a_116	Hezodron Petra	1
+colle_ma10a_117	Heroic Starsand	30
+colle_ma10a_117	Abyss Heather	30
+colle_ma10a_117	Fire Tarantula	30
+colle_ma10a_117	Hezodron Petra	10
+colle_ma10a_118	Trippy Catfish	30
+colle_ma10a_118	Heroic Starsand	30
+colle_ma10a_118	Insanity Moss	30
+colle_ma10a_118	Glory Angler	10
+colle_ma10a_120	Heroic Starsand	45
+colle_ma10a_120	Wraithwood	45
+colle_ma10a_120	Wibbleweed	9
+colle_ma10a_120	Lightning Stump	1
+colle_ma10a_121	Rising Dragon Rock	35
+colle_ma10a_121	Wraithwood	35
+colle_ma10a_121	Olsteprinium	25
+colle_ma10a_121	Lightning Stump	5
+colle_ma10a_122	Insanity Moss	35
+colle_ma10a_122	Rising Dragon Rock	35
+colle_ma10a_122	Ripple Stone	25
+colle_ma10a_122	Hezodron Petra	5
+colle_ma10a_123	Walnut Grape	45
+colle_ma10a_123	Rising Dragon Rock	45
+colle_ma10a_123	Ripple Stone	9
+colle_ma10a_123	Hezodron Petra	1
+colle_ma10a_125	Trippy Catfish	45
+colle_ma10a_125	Poison Flash	45
+colle_ma10a_125	Hedron Stonefish	9
+colle_ma10a_125	Glory Angler	1
+colle_ma10a_127	Heroic Starsand	45
+colle_ma10a_127	Rising Dragon Rock	45
+colle_ma10a_127	Ripple Stone	9
+colle_ma10a_127	Hezodron Petra	1
+colle_ma10a_128	Heroic Starsand	45
+colle_ma10a_128	Wraithwood	45
+colle_ma10a_128	Wibbleweed	9
+colle_ma10a_128	Lightning Stump	1
+colle_ma10a_129	Insanity Moss	35
+colle_ma10a_129	Rising Dragon Rock	35
+colle_ma10a_129	Ripple Stone	25
+colle_ma10a_129	Hezodron Petra	5
+colle_ma10a_130	Abyss Heather	30
+colle_ma10a_130	Insanity Moss	30
+colle_ma10a_130	Wraithwood	30
+colle_ma10a_130	Quadriga Darner	10
+colle_ma10a_131	Scimitar Grass	45
+colle_ma10a_131	Walnut Grape	45
+colle_ma10a_131	Acid Tomato	9
+colle_ma10a_131	Death Mushroom	1
+colle_ma10a_132	Night Lily	45
+colle_ma10a_132	Scimitar Grass	45
+colle_ma10a_132	Olsteprinium	9
+colle_ma10a_132	Secret Turf	1
+colle_ma10a_133	Ripper Ant	30
+colle_ma10a_133	Metallipede	30
+colle_ma10a_133	Walnut Grape	30
+colle_ma10a_133	Lightning Stump	10
+colle_ma10a_134	Trippy Catfish	45
+colle_ma10a_134	Poison Flash	45
+colle_ma10a_134	Hedron Stonefish	9
+colle_ma10a_134	Glory Angler	1
+colle_ma10a_135	Trippy Catfish	45
+colle_ma10a_135	Poison Flash	45
+colle_ma10a_135	Hedron Stonefish	9
+colle_ma10a_135	Glory Angler	1
+colle_ma10a_136	Scimitar Grass	45
+colle_ma10a_136	Wibbleweed	25
+colle_ma10a_136	Acid Tomato	25
+colle_ma10a_136	Death Mushroom	5
+colle_ma10a_137	Night Lily	40
+colle_ma10a_137	Wibbleweed	25
+colle_ma10a_137	Olsteprinium	25
+colle_ma10a_137	Death Mushroom	10
+colle_ma10a_138	Rising Dragon Rock	35
+colle_ma10a_138	Wraithwood	35
+colle_ma10a_138	Olsteprinium	25
+colle_ma10a_138	Lightning Stump	5
+colle_ma10a_139	Heroic Starsand	45
+colle_ma10a_139	Wraithwood	45
+colle_ma10a_139	Wibbleweed	9
+colle_ma10a_139	Lightning Stump	1
+colle_ma10a_141	Heroic Starsand	30
+colle_ma10a_141	Abyss Heather	30
+colle_ma10a_141	Fire Tarantula	30
+colle_ma10a_141	Hezodron Petra	10
+colle_ma10a_142	Insanity Moss	35
+colle_ma10a_142	Rising Dragon Rock	35
+colle_ma10a_142	Ripple Stone	25
+colle_ma10a_142	Hezodron Petra	5
+colle_ma10a_143	Trippy Catfish	30
+colle_ma10a_143	Heroic Starsand	30
+colle_ma10a_143	Insanity Moss	30
+colle_ma10a_143	Glory Angler	10
+colle_ma10a_144	Heroic Starsand	30
+colle_ma10a_144	Abyss Heather	30
+colle_ma10a_144	Fire Tarantula	30
+colle_ma10a_144	Hezodron Petra	10
+colle_ma10a_145	Scimitar Grass	45
+colle_ma10a_145	Wibbleweed	25
+colle_ma10a_145	Acid Tomato	25
+colle_ma10a_145	Death Mushroom	5
+colle_ma10a_146	Insanity Moss	35
+colle_ma10a_146	Rising Dragon Rock	35
+colle_ma10a_146	Ripple Stone	25
+colle_ma10a_146	Hezodron Petra	5
+colle_ma10a_148	Heroic Starsand	45
+colle_ma10a_148	Rising Dragon Rock	45
+colle_ma10a_148	Ripple Stone	9
+colle_ma10a_148	Hezodron Petra	1
+colle_ma10a_149	Night Lily	45
+colle_ma10a_149	Scimitar Grass	45
+colle_ma10a_149	Olsteprinium	9
+colle_ma10a_149	Secret Turf	1
+colle_ma10a_153	Ripper Ant	30
+colle_ma10a_153	Metallipede	30
+colle_ma10a_153	Walnut Grape	30
+colle_ma10a_153	Lightning Stump	10
+colle_ma10a_154	Abyss Heather	30
+colle_ma10a_154	Insanity Moss	30
+colle_ma10a_154	Wraithwood	30
+colle_ma10a_154	Quadriga Darner	10
+colle_ma10a_156	Heroic Starsand	45
+colle_ma10a_156	Rising Dragon Rock	45
+colle_ma10a_156	Ripple Stone	9
+colle_ma10a_156	Hezodron Petra	1
+colle_ma10a_157	Abyss Heather	30
+colle_ma10a_157	Insanity Moss	30
+colle_ma10a_157	Wraithwood	30
+colle_ma10a_157	Quadriga Darner	10
+colle_ma10a_159	Trippy Catfish	30
+colle_ma10a_159	Heroic Starsand	30
+colle_ma10a_159	Insanity Moss	30
+colle_ma10a_159	Glory Angler	10
+colle_ma10a_160	Ripper Ant	35
+colle_ma10a_160	Metallipede	35
+colle_ma10a_160	Fire Tarantula	25
+colle_ma10a_160	Quadriga Darner	5
+colle_ma10a_161	Night Lily	30
+colle_ma10a_161	Abyss Heather	30
+colle_ma10a_161	Scimitar Grass	30
+colle_ma10a_161	Secret Turf	10
+colle_ma10a_162	Night Lily	30
+colle_ma10a_162	Abyss Heather	30
+colle_ma10a_162	Scimitar Grass	30
+colle_ma10a_162	Secret Turf	10
+colle_ma10a_164	Abyss Heather	30
+colle_ma10a_164	Insanity Moss	30
+colle_ma10a_164	Wraithwood	30
+colle_ma10a_164	Quadriga Darner	10
+colle_ma10a_165	Walnut Grape	45
+colle_ma10a_165	Rising Dragon Rock	45
+colle_ma10a_165	Ripple Stone	9
+colle_ma10a_165	Hezodron Petra	1
+colle_ma10a_166	Rising Dragon Rock	35
+colle_ma10a_166	Wraithwood	35
+colle_ma10a_166	Olsteprinium	25
+colle_ma10a_166	Lightning Stump	5
+colle_ma10a_167	Heroic Starsand	45
+colle_ma10a_167	Wraithwood	45
+colle_ma10a_167	Wibbleweed	9
+colle_ma10a_167	Lightning Stump	1
+colle_ma10a_168	Heroic Starsand	45
+colle_ma10a_168	Rising Dragon Rock	45
+colle_ma10a_168	Ripple Stone	9
+colle_ma10a_168	Hezodron Petra	1
+colle_ma10a_169	Heroic Starsand	45
+colle_ma10a_169	Rising Dragon Rock	45
+colle_ma10a_169	Ripple Stone	9
+colle_ma10a_169	Hezodron Petra	1
+colle_ma10a_170	Trippy Catfish	45
+colle_ma10a_170	Poison Flash	45
+colle_ma10a_170	Hedron Stonefish	9
+colle_ma10a_170	Glory Angler	1
+colle_ma10a_171	Night Lily	45
+colle_ma10a_171	Scimitar Grass	45
+colle_ma10a_171	Olsteprinium	9
+colle_ma10a_171	Secret Turf	1
+colle_ma10a_173	Night Lily	40
+colle_ma10a_173	Wibbleweed	25
+colle_ma10a_173	Olsteprinium	25
+colle_ma10a_173	Death Mushroom	10
+colle_ma11a_c001	Glutinous Sand	35
+colle_ma11a_c001	Charged Elbaite	35
+colle_ma11a_c001	Lemon Stone	25
+colle_ma11a_c001	Border Sapphire	5
+colle_ma11a_c002	Forrestone	55
+colle_ma11a_c002	Maple Bite	20
+colle_ma11a_c002	Dicy Stone	20
+colle_ma11a_c002	Dilemma Rock	5
+colle_ma13a_f001	Melancholy Leaf	45
+colle_ma13a_f001	Emerald Snow	25
+colle_ma13a_f001	Gypsum Branch	25
+colle_ma13a_f001	Foolin' Ivy	5
+colle_ma13a_f003	Love Beetle	45
+colle_ma13a_f003	Fluffy Snow Bug	45
+colle_ma13a_f003	Freezing Chameleon	9
+colle_ma13a_f003	Luckroach	1
+colle_ma13a_f005	Lewisia Silver	35
+colle_ma13a_f005	Love Lemon	35
+colle_ma13a_f005	Ice Cabbage	20
+colle_ma13a_f005	Amethyst Vanilla	10
+colle_ma13a_f006	Fluffy Snow Bug	45
+colle_ma13a_f006	Love Lemon	45
+colle_ma13a_f006	Ice Cabbage	9
+colle_ma13a_f006	Amethyst Vanilla	1
+colle_ma13a_f007	Melancholy Leaf	45
+colle_ma13a_f007	Emerald Snow	25
+colle_ma13a_f007	Gypsum Branch	25
+colle_ma13a_f007	Foolin' Ivy	5
+colle_ma13a_f008	Wavelet Stone	35
+colle_ma13a_f008	Lacquer Stone	35
+colle_ma13a_f008	Shell Rock	25
+colle_ma13a_f008	Icicle Marine	5
+colle_ma13a_f009	Lewisia Silver	35
+colle_ma13a_f009	Melancholy Rose	35
+colle_ma13a_f009	Ghost Dudleya	25
+colle_ma13a_f009	Bellflower Crystal	5
+colle_ma13a_f010	Wavelet Stone	35
+colle_ma13a_f010	Lacquer Stone	35
+colle_ma13a_f010	Shell Rock	25
+colle_ma13a_f010	Icicle Marine	5
+colle_ma13a_f011	Vinenut	45
+colle_ma13a_f011	Melancholy Leaf	45
+colle_ma13a_f011	Love Beetle	9
+colle_ma13a_f011	Foolin' Ivy	1
+colle_ma13a_f012	Fluffy Snow Bug	45
+colle_ma13a_f012	Love Lemon	45
+colle_ma13a_f012	Ice Cabbage	9
+colle_ma13a_f012	Amethyst Vanilla	1
+colle_ma13a_f013	Love Beetle	45
+colle_ma13a_f013	Fluffy Snow Bug	45
+colle_ma13a_f013	Freezing Chameleon	9
+colle_ma13a_f013	Luckroach	1
+colle_ma13a_f014	Lacquer Stone	40
+colle_ma13a_f014	Shell Rock	25
+colle_ma13a_f014	Emerald Snow	25
+colle_ma13a_f014	Icicle Marine	10
+colle_ma13a_f015	Wavelet Stone	35
+colle_ma13a_f015	Lacquer Stone	35
+colle_ma13a_f015	Shell Rock	25
+colle_ma13a_f015	Icicle Marine	5
+colle_ma13a_f016	Lacquer Stone	40
+colle_ma13a_f016	Shell Rock	25
+colle_ma13a_f016	Emerald Snow	25
+colle_ma13a_f016	Icicle Marine	10
+colle_ma13a_f017	Love Beetle	45
+colle_ma13a_f017	Fluffy Snow Bug	45
+colle_ma13a_f017	Freezing Chameleon	9
+colle_ma13a_f017	Luckroach	1
+colle_ma13a_f018	Lewisia Silver	35
+colle_ma13a_f018	Melancholy Rose	35
+colle_ma13a_f018	Ghost Dudleya	25
+colle_ma13a_f018	Bellflower Crystal	5
+colle_ma13a_f019	Lacquer Stone	40
+colle_ma13a_f019	Shell Rock	25
+colle_ma13a_f019	Emerald Snow	25
+colle_ma13a_f019	Icicle Marine	10
+colle_ma13a_f020	Lacquer Stone	45
+colle_ma13a_f020	Silvermound Clam	45
+colle_ma13a_f020	Fragrant Shrimp	9
+colle_ma13a_f020	Abyssturgeon	1
+colle_ma13a_f021	Lewisia Silver	35
+colle_ma13a_f021	Sea Berry	35
+colle_ma13a_f021	Gravity Rock	29
+colle_ma13a_f021	Bellflower Crystal	1
+colle_ma13a_f022	Melancholy Leaf	45
+colle_ma13a_f022	Emerald Snow	25
+colle_ma13a_f022	Gypsum Branch	25
+colle_ma13a_f022	Foolin' Ivy	5
+colle_ma13a_f023	Love Beetle	45
+colle_ma13a_f023	Fluffy Snow Bug	45
+colle_ma13a_f023	Freezing Chameleon	9
+colle_ma13a_f023	Luckroach	1
+colle_ma13a_f024	Wavelet Stone	35
+colle_ma13a_f024	Lacquer Stone	35
+colle_ma13a_f024	Shell Rock	25
+colle_ma13a_f024	Icicle Marine	5
+colle_ma13a_f025	Fluffy Snow Bug	45
+colle_ma13a_f025	Love Lemon	45
+colle_ma13a_f025	Ice Cabbage	9
+colle_ma13a_f025	Amethyst Vanilla	1
+colle_ma13a_f026	Love Beetle	45
+colle_ma13a_f026	Fluffy Snow Bug	45
+colle_ma13a_f026	Freezing Chameleon	9
+colle_ma13a_f026	Luckroach	1
+colle_ma13a_f027	Lacquer Stone	45
+colle_ma13a_f027	Silvermound Clam	45
+colle_ma13a_f027	Fragrant Shrimp	9
+colle_ma13a_f027	Abyssturgeon	1
+colle_ma13a_f028	Silvermound Clam	40
+colle_ma13a_f028	Ghost Dudleya	25
+colle_ma13a_f028	Fragrant Shrimp	25
+colle_ma13a_f028	Abyssturgeon	10
+colle_ma13a_f029	Love Beetle	45
+colle_ma13a_f029	Fluffy Snow Bug	45
+colle_ma13a_f029	Freezing Chameleon	9
+colle_ma13a_f029	Luckroach	1
+colle_ma13a_f030	Fluffy Snow Bug	45
+colle_ma13a_f030	Love Lemon	45
+colle_ma13a_f030	Ice Cabbage	9
+colle_ma13a_f030	Amethyst Vanilla	1
+colle_ma13a_f031	Wavelet Stone	35
+colle_ma13a_f031	Silvermound Clam	35
+colle_ma13a_f031	Emerald Snow	25
+colle_ma13a_f031	Abyssturgeon	5
+colle_ma13a_f032	Fluffy Snow Bug	45
+colle_ma13a_f032	Love Lemon	45
+colle_ma13a_f032	Ice Cabbage	9
+colle_ma13a_f032	Amethyst Vanilla	1
+colle_ma13a_f033	Lewisia Silver	35
+colle_ma13a_f033	Sea Berry	35
+colle_ma13a_f033	Gravity Rock	29
+colle_ma13a_f033	Bellflower Crystal	1
+colle_ma13a_f034	Wavelet Stone	35
+colle_ma13a_f034	Lacquer Stone	35
+colle_ma13a_f034	Shell Rock	25
+colle_ma13a_f034	Icicle Marine	5
+colle_ma13a_f036	Sea Berry	35
+colle_ma13a_f036	Broom Icicle	35
+colle_ma13a_f036	Gypsum Branch	25
+colle_ma13a_f036	Melancholy Leaf	5
+colle_ma13a_f037	Fluffy Snow Bug	45
+colle_ma13a_f037	Love Lemon	45
+colle_ma13a_f037	Ice Cabbage	9
+colle_ma13a_f037	Amethyst Vanilla	1
+colle_ma13a_f038	Wavelet Stone	35
+colle_ma13a_f038	Lacquer Stone	35
+colle_ma13a_f038	Emerald Snow	25
+colle_ma13a_f038	Icicle Marine	5
+colle_ma13a_f039	Wavelet Stone	35
+colle_ma13a_f039	Lacquer Stone	35
+colle_ma13a_f039	Shell Rock	25
+colle_ma13a_f039	Icicle Marine	5
+colle_ma13a_f040	Vinenut	45
+colle_ma13a_f040	Melancholy Leaf	45
+colle_ma13a_f040	Love Beetle	9
+colle_ma13a_f040	Foolin' Ivy	1
+colle_ma13a_f041	Broom Icicle	45
+colle_ma13a_f041	Melancholy Leaf	45
+colle_ma13a_f041	Gypsum Branch	9
+colle_ma13a_f041	Foolin' Ivy	1
+colle_ma13a_f042	Broom Icicle	45
+colle_ma13a_f042	Melancholy Leaf	45
+colle_ma13a_f042	Gypsum Branch	9
+colle_ma13a_f042	Foolin' Ivy	1
+colle_ma13a_f043	Sea Berry	35
+colle_ma13a_f043	Broom Icicle	35
+colle_ma13a_f043	Gypsum Branch	25
+colle_ma13a_f043	Melancholy Leaf	5
+colle_ma13a_f044	Love Beetle	45
+colle_ma13a_f044	Fluffy Snow Bug	45
+colle_ma13a_f044	Freezing Chameleon	9
+colle_ma13a_f044	Luckroach	1
+colle_ma13a_f045	Fluffy Snow Bug	45
+colle_ma13a_f045	Love Lemon	45
+colle_ma13a_f045	Ice Cabbage	9
+colle_ma13a_f045	Amethyst Vanilla	1
+colle_ma13a_f046	Love Beetle	45
+colle_ma13a_f046	Fluffy Snow Bug	45
+colle_ma13a_f046	Freezing Chameleon	9
+colle_ma13a_f046	Luckroach	1
+colle_ma13a_f047	Vinenut	30
+colle_ma13a_f047	Love Lemon	30
+colle_ma13a_f047	Freezing Chameleon	30
+colle_ma13a_f047	Amethyst Vanilla	10
+colle_ma13a_f049	Fluffy Snow Bug	45
+colle_ma13a_f049	Love Lemon	45
+colle_ma13a_f049	Ice Cabbage	9
+colle_ma13a_f049	Amethyst Vanilla	1
+colle_ma13a_f050	Wavelet Stone	35
+colle_ma13a_f050	Lacquer Stone	35
+colle_ma13a_f050	Emerald Snow	25
+colle_ma13a_f050	Icicle Marine	5
+colle_ma13a_f051	Love Beetle	45
+colle_ma13a_f051	Ice Cabbage	25
+colle_ma13a_f051	Freezing Chameleon	25
+colle_ma13a_f051	Luckroach	5
+colle_ma13a_f052	Wavelet Stone	35
+colle_ma13a_f052	Lacquer Stone	35
+colle_ma13a_f052	Emerald Snow	25
+colle_ma13a_f052	Icicle Marine	5
+colle_ma13a_f053	Fluffy Snow Bug	45
+colle_ma13a_f053	Love Lemon	45
+colle_ma13a_f053	Ice Cabbage	9
+colle_ma13a_f053	Amethyst Vanilla	1
+colle_ma13a_f054	Sea Berry	30
+colle_ma13a_f054	Lewisia Silver	30
+colle_ma13a_f054	Melancholy Rose	30
+colle_ma13a_f054	Bellflower Crystal	10
+colle_ma13a_f055	Love Beetle	45
+colle_ma13a_f055	Ice Cabbage	25
+colle_ma13a_f055	Freezing Chameleon	25
+colle_ma13a_f055	Luckroach	5
+colle_ma13a_f057	Wavelet Stone	35
+colle_ma13a_f057	Lacquer Stone	35
+colle_ma13a_f057	Emerald Snow	25
+colle_ma13a_f057	Icicle Marine	5
+colle_ma13a_f058	Wavelet Stone	35
+colle_ma13a_f058	Lacquer Stone	35
+colle_ma13a_f058	Emerald Snow	25
+colle_ma13a_f058	Icicle Marine	5
+colle_ma13a_f059	Love Beetle	45
+colle_ma13a_f059	Ice Cabbage	25
+colle_ma13a_f059	Freezing Chameleon	25
+colle_ma13a_f059	Luckroach	5
+colle_ma13a_f060	Love Beetle	45
+colle_ma13a_f060	Fluffy Snow Bug	45
+colle_ma13a_f060	Freezing Chameleon	9
+colle_ma13a_f060	Luckroach	1
+colle_ma13a_f061	Wavelet Stone	35
+colle_ma13a_f061	Silvermound Clam	35
+colle_ma13a_f061	Emerald Snow	25
+colle_ma13a_f061	Abyssturgeon	5
+colle_ma13a_f062	Wavelet Stone	35
+colle_ma13a_f062	Silvermound Clam	35
+colle_ma13a_f062	Emerald Snow	25
+colle_ma13a_f062	Abyssturgeon	5
+colle_ma13a_f063	Lewisia Silver	35
+colle_ma13a_f063	Love Lemon	35
+colle_ma13a_f063	Ice Cabbage	20
+colle_ma13a_f063	Amethyst Vanilla	10
+colle_ma13a_f064	Wavelet Stone	35
+colle_ma13a_f064	Lacquer Stone	35
+colle_ma13a_f064	Shell Rock	25
+colle_ma13a_f064	Icicle Marine	5
+colle_ma13a_f065	Lewisia Silver	35
+colle_ma13a_f065	Sea Berry	35
+colle_ma13a_f065	Gravity Rock	29
+colle_ma13a_f065	Bellflower Crystal	1
+colle_ma13a_f068	Lewisia Silver	35
+colle_ma13a_f068	Sea Berry	35
+colle_ma13a_f068	Gravity Rock	29
+colle_ma13a_f068	Bellflower Crystal	1
+colle_ma13a_f069	Wavelet Stone	35
+colle_ma13a_f069	Silvermound Clam	35
+colle_ma13a_f069	Emerald Snow	25
+colle_ma13a_f069	Abyssturgeon	5
+colle_ma13a_f070	Fluffy Snow Bug	45
+colle_ma13a_f070	Love Lemon	45
+colle_ma13a_f070	Ice Cabbage	9
+colle_ma13a_f070	Amethyst Vanilla	1
+colle_ma13a_f071	Broom Icicle	45
+colle_ma13a_f071	Melancholy Leaf	45
+colle_ma13a_f071	Gypsum Branch	9
+colle_ma13a_f071	Foolin' Ivy	1
+colle_ma13a_f072	Wavelet Stone	35
+colle_ma13a_f072	Lacquer Stone	35
+colle_ma13a_f072	Emerald Snow	25
+colle_ma13a_f072	Icicle Marine	5
+colle_ma13a_f073	Love Beetle	45
+colle_ma13a_f073	Fluffy Snow Bug	45
+colle_ma13a_f073	Freezing Chameleon	9
+colle_ma13a_f073	Luckroach	1
+colle_ma13a_f074	Fluffy Snow Bug	45
+colle_ma13a_f074	Love Lemon	45
+colle_ma13a_f074	Ice Cabbage	9
+colle_ma13a_f074	Amethyst Vanilla	1
+colle_ma13a_f075	Fluffy Snow Bug	45
+colle_ma13a_f075	Love Lemon	45
+colle_ma13a_f075	Ice Cabbage	9
+colle_ma13a_f075	Amethyst Vanilla	1
+colle_ma13a_f077	Fluffy Snow Bug	45
+colle_ma13a_f077	Love Lemon	45
+colle_ma13a_f077	Ice Cabbage	9
+colle_ma13a_f077	Amethyst Vanilla	1
+colle_ma13a_f078	Vinenut	30
+colle_ma13a_f078	Love Lemon	30
+colle_ma13a_f078	Freezing Chameleon	30
+colle_ma13a_f078	Amethyst Vanilla	10
+colle_ma13a_f079	Wavelet Stone	35
+colle_ma13a_f079	Lacquer Stone	35
+colle_ma13a_f079	Emerald Snow	25
+colle_ma13a_f079	Icicle Marine	5
+colle_ma13a_f080	Wavelet Stone	35
+colle_ma13a_f080	Lacquer Stone	35
+colle_ma13a_f080	Shell Rock	25
+colle_ma13a_f080	Icicle Marine	5
+colle_ma13a_f081	Sea Berry	35
+colle_ma13a_f081	Broom Icicle	35
+colle_ma13a_f081	Gypsum Branch	25
+colle_ma13a_f081	Melancholy Leaf	5
+colle_ma13a_f082	Fluffy Snow Bug	45
+colle_ma13a_f082	Love Lemon	45
+colle_ma13a_f082	Ice Cabbage	9
+colle_ma13a_f082	Amethyst Vanilla	1
+colle_ma13a_f083	Wavelet Stone	35
+colle_ma13a_f083	Silvermound Clam	35
+colle_ma13a_f083	Emerald Snow	25
+colle_ma13a_f083	Abyssturgeon	5
+colle_ma13a_f084	Vinenut	45
+colle_ma13a_f084	Melancholy Leaf	45
+colle_ma13a_f084	Love Beetle	9
+colle_ma13a_f084	Foolin' Ivy	1
+colle_ma13a_f085	Broom Icicle	45
+colle_ma13a_f085	Melancholy Leaf	45
+colle_ma13a_f085	Gypsum Branch	9
+colle_ma13a_f085	Foolin' Ivy	1
+colle_ma13a_f086	Love Beetle	45
+colle_ma13a_f086	Fluffy Snow Bug	45
+colle_ma13a_f086	Freezing Chameleon	9
+colle_ma13a_f086	Luckroach	1
+colle_ma13a_f087	Vinenut	30
+colle_ma13a_f087	Love Lemon	30
+colle_ma13a_f087	Freezing Chameleon	30
+colle_ma13a_f087	Amethyst Vanilla	10
+colle_ma13a_f088	Lewisia Silver	35
+colle_ma13a_f088	Sea Berry	35
+colle_ma13a_f088	Gravity Rock	29
+colle_ma13a_f088	Bellflower Crystal	1
+colle_ma13a_f089	Lewisia Silver	35
+colle_ma13a_f089	Sea Berry	35
+colle_ma13a_f089	Gravity Rock	29
+colle_ma13a_f089	Bellflower Crystal	1
+colle_ma13a_f090	Fluffy Snow Bug	45
+colle_ma13a_f090	Love Lemon	45
+colle_ma13a_f090	Ice Cabbage	9
+colle_ma13a_f090	Amethyst Vanilla	1
+colle_ma13a_f091	Love Beetle	45
+colle_ma13a_f091	Fluffy Snow Bug	45
+colle_ma13a_f091	Freezing Chameleon	9
+colle_ma13a_f091	Luckroach	1
+colle_ma13a_f092	Love Beetle	45
+colle_ma13a_f092	Fluffy Snow Bug	45
+colle_ma13a_f092	Freezing Chameleon	9
+colle_ma13a_f092	Luckroach	1
+colle_ma13a_f093	Lewisia Silver	35
+colle_ma13a_f093	Sea Berry	35
+colle_ma13a_f093	Gravity Rock	29
+colle_ma13a_f093	Bellflower Crystal	1
+colle_ma13a_f094	Melancholy Leaf	45
+colle_ma13a_f094	Emerald Snow	25
+colle_ma13a_f094	Gypsum Branch	25
+colle_ma13a_f094	Foolin' Ivy	5
+colle_ma13a_f095	Lewisia Silver	35
+colle_ma13a_f095	Sea Berry	35
+colle_ma13a_f095	Gravity Rock	29
+colle_ma13a_f095	Bellflower Crystal	1
+colle_ma13a_f096	Fluffy Snow Bug	45
+colle_ma13a_f096	Love Lemon	45
+colle_ma13a_f096	Ice Cabbage	9
+colle_ma13a_f096	Amethyst Vanilla	1
+colle_ma13a_f097	Wavelet Stone	35
+colle_ma13a_f097	Lacquer Stone	35
+colle_ma13a_f097	Emerald Snow	25
+colle_ma13a_f097	Icicle Marine	5
+colle_ma13a_f098	Lewisia Silver	35
+colle_ma13a_f098	Melancholy Rose	35
+colle_ma13a_f098	Ghost Dudleya	25
+colle_ma13a_f098	Bellflower Crystal	5
+colle_ma13a_f099	Vinenut	45
+colle_ma13a_f099	Melancholy Leaf	45
+colle_ma13a_f099	Love Beetle	9
+colle_ma13a_f099	Foolin' Ivy	1
+colle_ma13a_f100	Lewisia Silver	35
+colle_ma13a_f100	Sea Berry	35
+colle_ma13a_f100	Gravity Rock	29
+colle_ma13a_f100	Bellflower Crystal	1
+colle_ma13a_f101	Fluffy Snow Bug	45
+colle_ma13a_f101	Love Lemon	45
+colle_ma13a_f101	Ice Cabbage	9
+colle_ma13a_f101	Amethyst Vanilla	1
+colle_ma13a_f102	Broom Icicle	45
+colle_ma13a_f102	Melancholy Leaf	45
+colle_ma13a_f102	Gypsum Branch	9
+colle_ma13a_f102	Foolin' Ivy	1
+colle_ma13a_f103	Vinenut	45
+colle_ma13a_f103	Melancholy Leaf	45
+colle_ma13a_f103	Love Beetle	9
+colle_ma13a_f103	Foolin' Ivy	1
+colle_ma13a_f104	Broom Icicle	45
+colle_ma13a_f104	Melancholy Leaf	45
+colle_ma13a_f104	Gypsum Branch	9
+colle_ma13a_f104	Foolin' Ivy	1
+colle_ma13a_f105	Wavelet Stone	35
+colle_ma13a_f105	Lacquer Stone	35
+colle_ma13a_f105	Shell Rock	25
+colle_ma13a_f105	Icicle Marine	5
+colle_ma13a_f106	Wavelet Stone	35
+colle_ma13a_f106	Lacquer Stone	35
+colle_ma13a_f106	Shell Rock	25
+colle_ma13a_f106	Icicle Marine	5
+colle_ma13a_f107	Vinenut	45
+colle_ma13a_f107	Melancholy Leaf	45
+colle_ma13a_f107	Love Beetle	9
+colle_ma13a_f107	Foolin' Ivy	1
+colle_ma13a_f108	Lewisia Silver	35
+colle_ma13a_f108	Sea Berry	35
+colle_ma13a_f108	Gravity Rock	29
+colle_ma13a_f108	Bellflower Crystal	1
+colle_ma13a_f109	Sea Berry	35
+colle_ma13a_f109	Broom Icicle	35
+colle_ma13a_f109	Gypsum Branch	25
+colle_ma13a_f109	Melancholy Leaf	5
+colle_ma13a_f110	Love Beetle	45
+colle_ma13a_f110	Fluffy Snow Bug	45
+colle_ma13a_f110	Freezing Chameleon	9
+colle_ma13a_f110	Luckroach	1
+colle_ma13a_f111	Wavelet Stone	35
+colle_ma13a_f111	Lacquer Stone	35
+colle_ma13a_f111	Emerald Snow	25
+colle_ma13a_f111	Icicle Marine	5
+colle_ma13a_f112	Lacquer Stone	40
+colle_ma13a_f112	Shell Rock	25
+colle_ma13a_f112	Emerald Snow	25
+colle_ma13a_f112	Icicle Marine	10
+colle_ma13a_f113	Love Beetle	45
+colle_ma13a_f113	Ice Cabbage	25
+colle_ma13a_f113	Freezing Chameleon	25
+colle_ma13a_f113	Luckroach	5
+colle_ma13a_f114	Wavelet Stone	35
+colle_ma13a_f114	Lacquer Stone	35
+colle_ma13a_f114	Shell Rock	25
+colle_ma13a_f114	Icicle Marine	5
+colle_ma13a_f115	Love Beetle	45
+colle_ma13a_f115	Fluffy Snow Bug	45
+colle_ma13a_f115	Freezing Chameleon	9
+colle_ma13a_f115	Luckroach	1
+colle_ma13a_f116	Gravity Rock	30
+colle_ma13a_f116	Wavelet Stone	30
+colle_ma13a_f116	Lacquer Stone	30
+colle_ma13a_f116	Icicle Marine	10
+colle_ma13a_f117	Gravity Rock	30
+colle_ma13a_f117	Wavelet Stone	30
+colle_ma13a_f117	Lacquer Stone	30
+colle_ma13a_f117	Icicle Marine	10
+colle_ma13a_f118	Lewisia Silver	35
+colle_ma13a_f118	Sea Berry	35
+colle_ma13a_f118	Gravity Rock	29
+colle_ma13a_f118	Bellflower Crystal	1
+colle_ma13a_f119	Lewisia Silver	35
+colle_ma13a_f119	Melancholy Rose	35
+colle_ma13a_f119	Ghost Dudleya	25
+colle_ma13a_f119	Bellflower Crystal	5
+colle_ma13a_f120	Lewisia Silver	35
+colle_ma13a_f120	Melancholy Rose	35
+colle_ma13a_f120	Ghost Dudleya	25
+colle_ma13a_f120	Bellflower Crystal	5
+colle_ma13a_f121	Gravity Rock	30
+colle_ma13a_f121	Wavelet Stone	30
+colle_ma13a_f121	Lacquer Stone	30
+colle_ma13a_f121	Icicle Marine	10
+colle_ma13a_f122	Love Beetle	45
+colle_ma13a_f122	Fluffy Snow Bug	45
+colle_ma13a_f122	Freezing Chameleon	9
+colle_ma13a_f122	Luckroach	1
+colle_ma13a_f123	Gravity Rock	30
+colle_ma13a_f123	Wavelet Stone	30
+colle_ma13a_f123	Lacquer Stone	30
+colle_ma13a_f123	Icicle Marine	10
+colle_ma13a_f124	Love Beetle	45
+colle_ma13a_f124	Fluffy Snow Bug	45
+colle_ma13a_f124	Freezing Chameleon	9
+colle_ma13a_f124	Luckroach	1
+colle_ma13a_f125	Gravity Rock	30
+colle_ma13a_f125	Wavelet Stone	30
+colle_ma13a_f125	Lacquer Stone	30
+colle_ma13a_f125	Icicle Marine	10
+colle_ma13a_f126	Melancholy Rose	35
+colle_ma13a_f126	Sea Berry	35
+colle_ma13a_f126	Ghost Dudleya	25
+colle_ma13a_f126	Bellflower Crystal	5
+colle_ma13a_f127	Gravity Rock	30
+colle_ma13a_f127	Wavelet Stone	30
+colle_ma13a_f127	Lacquer Stone	30
+colle_ma13a_f127	Icicle Marine	10
+colle_ma13a_f128	Gravity Rock	45
+colle_ma13a_f128	Shell Rock	25
+colle_ma13a_f128	Emerald Snow	25
+colle_ma13a_f128	Icicle Marine	5
+colle_ma13a_f129	Melancholy Rose	35
+colle_ma13a_f129	Sea Berry	35
+colle_ma13a_f129	Ghost Dudleya	25
+colle_ma13a_f129	Bellflower Crystal	5
+colle_ma13a_f130	Gravity Rock	30
+colle_ma13a_f130	Wavelet Stone	30
+colle_ma13a_f130	Lacquer Stone	30
+colle_ma13a_f130	Icicle Marine	10
+colle_ma13a_f131	Lewisia Silver	35
+colle_ma13a_f131	Sea Berry	35
+colle_ma13a_f131	Gravity Rock	29
+colle_ma13a_f131	Bellflower Crystal	1
+colle_ma13a_f132	Gravity Rock	45
+colle_ma13a_f132	Shell Rock	25
+colle_ma13a_f132	Emerald Snow	25
+colle_ma13a_f132	Icicle Marine	5
+colle_ma13a_f133	Gravity Rock	30
+colle_ma13a_f133	Wavelet Stone	30
+colle_ma13a_f133	Lacquer Stone	30
+colle_ma13a_f133	Icicle Marine	10
+colle_ma13a_f134	Gravity Rock	30
+colle_ma13a_f134	Wavelet Stone	30
+colle_ma13a_f134	Lacquer Stone	30
+colle_ma13a_f134	Icicle Marine	10
+colle_ma13a_f135	Gravity Rock	30
+colle_ma13a_f135	Wavelet Stone	30
+colle_ma13a_f135	Lacquer Stone	30
+colle_ma13a_f135	Icicle Marine	10
+colle_ma13a_f136	Lacquer Stone	40
+colle_ma13a_f136	Shell Rock	25
+colle_ma13a_f136	Emerald Snow	25
+colle_ma13a_f136	Icicle Marine	10
+colle_ma13a_f137	Wavelet Stone	35
+colle_ma13a_f137	Lacquer Stone	35
+colle_ma13a_f137	Emerald Snow	25
+colle_ma13a_f137	Icicle Marine	5
+colle_ma13a_f138	Lacquer Stone	40
+colle_ma13a_f138	Shell Rock	25
+colle_ma13a_f138	Emerald Snow	25
+colle_ma13a_f138	Icicle Marine	10
+colle_ma13a_f140	Melancholy Rose	35
+colle_ma13a_f140	Sea Berry	35
+colle_ma13a_f140	Ghost Dudleya	25
+colle_ma13a_f140	Bellflower Crystal	5
+colle_ma13a_f141	Fluffy Snow Bug	50
+colle_ma13a_f141	Freezing Chameleon	20
+colle_ma13a_f141	Gypsum Branch	20
+colle_ma13a_f141	Luckroach	10
+colle_ma13a_f142	Lewisia Silver	50
+colle_ma13a_f142	Ghost Dudleya	20
+colle_ma13a_f142	Gypsum Branch	20
+colle_ma13a_f142	Foolin' Ivy	10
+colle_ma13a_f143	Lewisia Silver	35
+colle_ma13a_f143	Sea Berry	35
+colle_ma13a_f143	Gravity Rock	29
+colle_ma13a_f143	Bellflower Crystal	1
+colle_ma13a_f144	Wavelet Stone	35
+colle_ma13a_f144	Lacquer Stone	35
+colle_ma13a_f144	Emerald Snow	25
+colle_ma13a_f144	Icicle Marine	5
+colle_ma13a_f145	Sea Berry	30
+colle_ma13a_f145	Lewisia Silver	30
+colle_ma13a_f145	Melancholy Rose	30
+colle_ma13a_f145	Bellflower Crystal	10
+colle_ma13a_f147	Gravity Rock	30
+colle_ma13a_f147	Wavelet Stone	30
+colle_ma13a_f147	Lacquer Stone	30
+colle_ma13a_f147	Icicle Marine	10
+colle_ma13a_f148	Gravity Rock	45
+colle_ma13a_f148	Shell Rock	25
+colle_ma13a_f148	Emerald Snow	25
+colle_ma13a_f148	Icicle Marine	5
+colle_ma13a_f149	Melancholy Rose	35
+colle_ma13a_f149	Sea Berry	35
+colle_ma13a_f149	Ghost Dudleya	25
+colle_ma13a_f149	Bellflower Crystal	5
+colle_ma13a_f150	Gravity Rock	30
+colle_ma13a_f150	Wavelet Stone	30
+colle_ma13a_f150	Lacquer Stone	30
+colle_ma13a_f150	Icicle Marine	10
+colle_ma13a_f151	Gravity Rock	30
+colle_ma13a_f151	Wavelet Stone	30
+colle_ma13a_f151	Lacquer Stone	30
+colle_ma13a_f151	Icicle Marine	10
+colle_ma13a_f152	Gravity Rock	45
+colle_ma13a_f152	Shell Rock	25
+colle_ma13a_f152	Emerald Snow	25
+colle_ma13a_f152	Icicle Marine	5
+colle_ma13a_f153	Fluffy Snow Bug	45
+colle_ma13a_f153	Love Lemon	45
+colle_ma13a_f153	Ice Cabbage	9
+colle_ma13a_f153	Amethyst Vanilla	1
+colle_ma13a_f154	Gravity Rock	30
+colle_ma13a_f154	Wavelet Stone	30
+colle_ma13a_f154	Lacquer Stone	30
+colle_ma13a_f154	Icicle Marine	10
+colle_ma13a_f156	Wavelet Stone	35
+colle_ma13a_f156	Lacquer Stone	35
+colle_ma13a_f156	Emerald Snow	25
+colle_ma13a_f156	Icicle Marine	5
+colle_ma13a_f158	Gravity Rock	45
+colle_ma13a_f158	Shell Rock	25
+colle_ma13a_f158	Emerald Snow	25
+colle_ma13a_f158	Icicle Marine	5
+colle_ma13a_f159	Wavelet Stone	35
+colle_ma13a_f159	Silvermound Clam	35
+colle_ma13a_f159	Emerald Snow	25
+colle_ma13a_f159	Abyssturgeon	5
+colle_ma13a_f160	Lewisia Silver	35
+colle_ma13a_f160	Sea Berry	35
+colle_ma13a_f160	Gravity Rock	29
+colle_ma13a_f160	Bellflower Crystal	1
+colle_ma13a_f161	Fluffy Snow Bug	50
+colle_ma13a_f161	Freezing Chameleon	20
+colle_ma13a_f161	Gypsum Branch	20
+colle_ma13a_f161	Luckroach	10
+colle_ma13a_f162	Vinenut	45
+colle_ma13a_f162	Melancholy Leaf	45
+colle_ma13a_f162	Love Beetle	9
+colle_ma13a_f162	Foolin' Ivy	1
+colle_ma13a_f163	Broom Icicle	45
+colle_ma13a_f163	Melancholy Leaf	45
+colle_ma13a_f163	Gypsum Branch	9
+colle_ma13a_f163	Foolin' Ivy	1
+colle_ma13a_f164	Love Beetle	45
+colle_ma13a_f164	Fluffy Snow Bug	45
+colle_ma13a_f164	Freezing Chameleon	9
+colle_ma13a_f164	Luckroach	1
+colle_ma13a_f165	Broom Icicle	45
+colle_ma13a_f165	Melancholy Leaf	45
+colle_ma13a_f165	Gypsum Branch	9
+colle_ma13a_f165	Foolin' Ivy	1
+colle_ma13a_f168	Broom Icicle	45
+colle_ma13a_f168	Melancholy Leaf	45
+colle_ma13a_f168	Gypsum Branch	9
+colle_ma13a_f168	Foolin' Ivy	1
+colle_ma13a_f169	Fluffy Snow Bug	45
+colle_ma13a_f169	Love Lemon	45
+colle_ma13a_f169	Ice Cabbage	9
+colle_ma13a_f169	Amethyst Vanilla	1
+colle_ma13a_f170	Vinenut	45
+colle_ma13a_f170	Melancholy Leaf	45
+colle_ma13a_f170	Love Beetle	9
+colle_ma13a_f170	Foolin' Ivy	1
+colle_ma13a_f174	Lewisia Silver	35
+colle_ma13a_f174	Love Lemon	35
+colle_ma13a_f174	Ice Cabbage	20
+colle_ma13a_f174	Amethyst Vanilla	10
+colle_ma13a_f175	Love Beetle	45
+colle_ma13a_f175	Fluffy Snow Bug	45
+colle_ma13a_f175	Freezing Chameleon	9
+colle_ma13a_f175	Luckroach	1
+colle_ma13a_f176	Fluffy Snow Bug	45
+colle_ma13a_f176	Love Lemon	45
+colle_ma13a_f176	Ice Cabbage	9
+colle_ma13a_f176	Amethyst Vanilla	1
+colle_ma13a_f177	Love Beetle	45
+colle_ma13a_f177	Fluffy Snow Bug	45
+colle_ma13a_f177	Freezing Chameleon	9
+colle_ma13a_f177	Luckroach	1
+colle_ma13a_f178	Lewisia Silver	50
+colle_ma13a_f178	Ghost Dudleya	20
+colle_ma13a_f178	Gypsum Branch	20
+colle_ma13a_f178	Foolin' Ivy	10
+colle_ma13a_f179	Lewisia Silver	35
+colle_ma13a_f179	Love Lemon	35
+colle_ma13a_f179	Ice Cabbage	20
+colle_ma13a_f179	Amethyst Vanilla	10
+colle_ma13a_f180	Wavelet Stone	35
+colle_ma13a_f180	Silvermound Clam	35
+colle_ma13a_f180	Emerald Snow	25
+colle_ma13a_f180	Abyssturgeon	5
+colle_ma13a_f181	Lewisia Silver	35
+colle_ma13a_f181	Love Lemon	35
+colle_ma13a_f181	Ice Cabbage	20
+colle_ma13a_f181	Amethyst Vanilla	10
+colle_ma13a_f182	Wavelet Stone	35
+colle_ma13a_f182	Lacquer Stone	35
+colle_ma13a_f182	Emerald Snow	25
+colle_ma13a_f182	Icicle Marine	5
+colle_ma13a_f183	Wavelet Stone	35
+colle_ma13a_f183	Lacquer Stone	35
+colle_ma13a_f183	Emerald Snow	25
+colle_ma13a_f183	Icicle Marine	5
+colle_ma13a_f184	Melancholy Leaf	45
+colle_ma13a_f184	Emerald Snow	25
+colle_ma13a_f184	Gypsum Branch	25
+colle_ma13a_f184	Foolin' Ivy	5
+colle_ma13a_f185	Melancholy Leaf	45
+colle_ma13a_f185	Emerald Snow	25
+colle_ma13a_f185	Gypsum Branch	25
+colle_ma13a_f185	Foolin' Ivy	5
+colle_ma13a_f186	Fluffy Snow Bug	50
+colle_ma13a_f186	Ice Cabbage	20
+colle_ma13a_f186	Ghost Dudleya	20
+colle_ma13a_f186	Amethyst Vanilla	10
+colle_ma13a_f187	Lewisia Silver	50
+colle_ma13a_f187	Ghost Dudleya	20
+colle_ma13a_f187	Gypsum Branch	20
+colle_ma13a_f187	Foolin' Ivy	10
+colle_ma13a_f188	Lacquer Stone	40
+colle_ma13a_f188	Shell Rock	25
+colle_ma13a_f188	Emerald Snow	25
+colle_ma13a_f188	Icicle Marine	10
+colle_ma13a_f189	Silvermound Clam	40
+colle_ma13a_f189	Ghost Dudleya	25
+colle_ma13a_f189	Fragrant Shrimp	25
+colle_ma13a_f189	Abyssturgeon	10
+colle_ma13a_f190	Lacquer Stone	45
+colle_ma13a_f190	Silvermound Clam	45
+colle_ma13a_f190	Fragrant Shrimp	9
+colle_ma13a_f190	Abyssturgeon	1
+colle_ma13a_f191	Lacquer Stone	45
+colle_ma13a_f191	Silvermound Clam	45
+colle_ma13a_f191	Fragrant Shrimp	9
+colle_ma13a_f191	Abyssturgeon	1
+colle_ma13a_f192	Silvermound Clam	40
+colle_ma13a_f192	Ghost Dudleya	25
+colle_ma13a_f192	Fragrant Shrimp	25
+colle_ma13a_f192	Abyssturgeon	10
+colle_ma13a_f193	Silvermound Clam	40
+colle_ma13a_f193	Ghost Dudleya	25
+colle_ma13a_f193	Fragrant Shrimp	25
+colle_ma13a_f193	Abyssturgeon	10
+colle_ma13a_f194	Lacquer Stone	45
+colle_ma13a_f194	Silvermound Clam	45
+colle_ma13a_f194	Fragrant Shrimp	9
+colle_ma13a_f194	Abyssturgeon	1
+colle_ma13a_c001	Love Beetle	45
+colle_ma13a_c001	Fluffy Snow Bug	45
+colle_ma13a_c001	Freezing Chameleon	9
+colle_ma13a_c001	Luckroach	1
+colle_ma13a_f195	Lewisia Silver	50
+colle_ma13a_f195	Ghost Dudleya	20
+colle_ma13a_f195	Gypsum Branch	20
+colle_ma13a_f195	Foolin' Ivy	10
+colle_ma13a_f196	Fluffy Snow Bug	50
+colle_ma13a_f196	Ice Cabbage	20
+colle_ma13a_f196	Ghost Dudleya	20
+colle_ma13a_f196	Amethyst Vanilla	10
+colle_ma15a_f001	Choice Cherry	45
+colle_ma15a_f001	Beautiful Shoot	45
+colle_ma15a_f001	Belloat Grass	9
+colle_ma15a_f001	Jellyfish Balsam	1
+colle_ma15a_f002	Stream Navy	35
+colle_ma15a_f002	Lemon Stone	25
+colle_ma15a_f002	Pinfin	30
+colle_ma15a_f002	Killi-Killi Killifish	10
+colle_ma15a_f003	Marine Chowfish	45
+colle_ma15a_f003	Beat Shrimp	45
+colle_ma15a_f003	Emblazoned Ray	9
+colle_ma15a_f003	Killi-Killi Killifish	1
+colle_ma15a_f004	Marine Chowfish	42
+colle_ma15a_f004	Stream Navy	42
+colle_ma15a_f004	Pinfin	15
+colle_ma15a_f004	Killi-Killi Killifish	1
+colle_ma15a_f005	Energy Aubergine	43
+colle_ma15a_f005	Charged Elbaite	43
+colle_ma15a_f005	Lemon Stone	9
+colle_ma15a_f005	Border Sapphire	5
+colle_ma15a_f006	Belloat Grass	45
+colle_ma15a_f006	Feather Leaf	45
+colle_ma15a_f006	Groove Wood	9
+colle_ma15a_f006	Hide 'n' Creeper	1
+colle_ma15a_f007	Spirit Clematis	45
+colle_ma15a_f007	Silent Wood	45
+colle_ma15a_f007	Groove Wood	9
+colle_ma15a_f007	Hide 'n' Creeper	1
+colle_ma15a_f008	Charged Elbaite	45
+colle_ma15a_f008	Plumage Peach	20
+colle_ma15a_f008	Lemon Stone	20
+colle_ma15a_f008	Border Sapphire	15
+colle_ma15a_f009	Beautiful Shoot	35
+colle_ma15a_f009	Feather Leaf	35
+colle_ma15a_f009	Groove Wood	25
+colle_ma15a_f009	Hide 'n' Creeper	5
+colle_ma15a_f010	Energy Aubergine	43
+colle_ma15a_f010	Charged Elbaite	43
+colle_ma15a_f010	Lemon Stone	9
+colle_ma15a_f010	Border Sapphire	5
+colle_ma15a_f011	Spirit Clematis	35
+colle_ma15a_f011	Beautiful Shoot	35
+colle_ma15a_f011	Belloat Grass	20
+colle_ma15a_f011	Jellyfish Balsam	10
+colle_ma15a_f012	Spirit Clematis	45
+colle_ma15a_f012	Silent Wood	45
+colle_ma15a_f012	Groove Wood	9
+colle_ma15a_f012	Hide 'n' Creeper	1
+colle_ma15a_f013	Choice Cherry	45
+colle_ma15a_f013	Beautiful Shoot	45
+colle_ma15a_f013	Belloat Grass	9
+colle_ma15a_f013	Jellyfish Balsam	1
+colle_ma15a_f014	Choice Cherry	30
+colle_ma15a_f014	Groove Wood	25
+colle_ma15a_f014	Pinfin	25
+colle_ma15a_f014	Whisper Tomato	20
+colle_ma15a_f018	Energy Aubergine	43
+colle_ma15a_f018	Charged Elbaite	43
+colle_ma15a_f018	Lemon Stone	9
+colle_ma15a_f018	Border Sapphire	5
+colle_ma15a_f019	Mysteroe	30
+colle_ma15a_f019	Marine Chowfish	30
+colle_ma15a_f019	Beat Shrimp	30
+colle_ma15a_f019	Killi-Killi Killifish	10
+colle_ma15a_f020	Mysteroe	30
+colle_ma15a_f020	Marine Chowfish	30
+colle_ma15a_f020	Beat Shrimp	30
+colle_ma15a_f020	Killi-Killi Killifish	10
+colle_ma15a_f021	Feather Leaf	30
+colle_ma15a_f021	Stream Navy	30
+colle_ma15a_f021	Beat Shrimp	30
+colle_ma15a_f021	Killi-Killi Killifish	10
+colle_ma15a_f022	Stream Navy	35
+colle_ma15a_f022	Lemon Stone	25
+colle_ma15a_f022	Pinfin	30
+colle_ma15a_f022	Killi-Killi Killifish	10
+colle_ma15a_f023	Feather Leaf	30
+colle_ma15a_f023	Stream Navy	30
+colle_ma15a_f023	Beat Shrimp	30
+colle_ma15a_f023	Killi-Killi Killifish	10
+colle_ma15a_f024	Digging Sandfly	32
+colle_ma15a_f024	Energy Aubergine	33
+colle_ma15a_f024	Lemon Stone	25
+colle_ma15a_f024	Border Sapphire	10
+colle_ma15a_f025	Mysteroe	30
+colle_ma15a_f025	Marine Chowfish	30
+colle_ma15a_f025	Beat Shrimp	30
+colle_ma15a_f025	Killi-Killi Killifish	10
+colle_ma15a_f026	Choice Cherry	25
+colle_ma15a_f026	Silent Wood	25
+colle_ma15a_f026	Groove Wood	30
+colle_ma15a_f026	Hide 'n' Creeper	20
+colle_ma15a_f027	Charged Elbaite	10
+colle_ma15a_f027	Silent Wood	40
+colle_ma15a_f027	Mystery Firefly	40
+colle_ma15a_f027	Benign Cricket	10
+colle_ma15a_f028	Beautiful Shoot	45
+colle_ma15a_f028	Belloat Grass	25
+colle_ma15a_f028	Mystery Firefly	25
+colle_ma15a_f028	Benign Cricket	5
+colle_ma15a_f029	Beautiful Shoot	35
+colle_ma15a_f029	Digging Sandfly	35
+colle_ma15a_f029	Mystery Firefly	20
+colle_ma15a_f029	Benign Cricket	10
+colle_ma15a_f030	Marine Chowfish	45
+colle_ma15a_f030	Beat Shrimp	45
+colle_ma15a_f030	Emblazoned Ray	9
+colle_ma15a_f030	Killi-Killi Killifish	1
+colle_ma15a_f031	Marine Chowfish	42
+colle_ma15a_f031	Stream Navy	42
+colle_ma15a_f031	Pinfin	15
+colle_ma15a_f031	Killi-Killi Killifish	1
+colle_ma15a_f032	Silent Wood	43
+colle_ma15a_f032	Charged Elbaite	43
+colle_ma15a_f032	Lemon Stone	9
+colle_ma15a_f032	Border Sapphire	5
+colle_ma15a_f033	Choice Cherry	45
+colle_ma15a_f033	Beautiful Shoot	45
+colle_ma15a_f033	Belloat Grass	9
+colle_ma15a_f033	Jellyfish Balsam	1
+colle_ma15a_f034	Digging Sandfly	35
+colle_ma15a_f034	Energy Aubergine	35
+colle_ma15a_f034	Jellyfish Balsam	10
+colle_ma15a_f034	Whisper Tomato	20
+colle_ma15a_f035	Charged Elbaite	30
+colle_ma15a_f035	Groove Wood	20
+colle_ma15a_f035	Lemon Stone	20
+colle_ma15a_f035	Border Sapphire	30
+colle_ma15a_f036	Beautiful Shoot	35
+colle_ma15a_f036	Feather Leaf	35
+colle_ma15a_f036	Groove Wood	25
+colle_ma15a_f036	Hide 'n' Creeper	5
+colle_ma15a_f037	Spirit Clematis	45
+colle_ma15a_f037	Silent Wood	45
+colle_ma15a_f037	Groove Wood	9
+colle_ma15a_f037	Hide 'n' Creeper	1
+colle_ma15a_f038	Belloat Grass	45
+colle_ma15a_f038	Feather Leaf	45
+colle_ma15a_f038	Groove Wood	9
+colle_ma15a_f038	Hide 'n' Creeper	1
+colle_ma15a_f039	Belloat Grass	45
+colle_ma15a_f039	Feather Leaf	45
+colle_ma15a_f039	Groove Wood	9
+colle_ma15a_f039	Hide 'n' Creeper	1
+colle_ma15a_f040	Energy Aubergine	43
+colle_ma15a_f040	Charged Elbaite	43
+colle_ma15a_f040	Lemon Stone	9
+colle_ma15a_f040	Border Sapphire	5
+colle_ma15a_f041	Feather Leaf	45
+colle_ma15a_f041	Spirit Clematis	45
+colle_ma15a_f041	Belloat Grass	9
+colle_ma15a_f041	Jellyfish Balsam	1
+colle_ma15a_f042	Silent Wood	43
+colle_ma15a_f042	Charged Elbaite	43
+colle_ma15a_f042	Lemon Stone	9
+colle_ma15a_f042	Border Sapphire	5
+colle_ma15a_f043	Energy Aubergine	43
+colle_ma15a_f043	Charged Elbaite	43
+colle_ma15a_f043	Lemon Stone	9
+colle_ma15a_f043	Border Sapphire	5
+colle_ma15a_f044	Silent Wood	43
+colle_ma15a_f044	Charged Elbaite	43
+colle_ma15a_f044	Lemon Stone	9
+colle_ma15a_f044	Border Sapphire	5
+colle_ma15a_f045	Beat Shrimp	40
+colle_ma15a_f045	Mystery Firefly	25
+colle_ma15a_f045	Emblazoned Ray	25
+colle_ma15a_f045	Killi-Killi Killifish	10
+colle_ma15a_f046	Choice Cherry	30
+colle_ma15a_f046	Groove Wood	25
+colle_ma15a_f046	Pinfin	25
+colle_ma15a_f046	Whisper Tomato	20
+colle_ma15a_f047	Energy Aubergine	43
+colle_ma15a_f047	Charged Elbaite	43
+colle_ma15a_f047	Lemon Stone	9
+colle_ma15a_f047	Border Sapphire	5
+colle_ma15a_f048	Charged Elbaite	10
+colle_ma15a_f048	Silent Wood	40
+colle_ma15a_f048	Mystery Firefly	40
+colle_ma15a_f048	Benign Cricket	10
+colle_ma15a_f049	Belloat Grass	45
+colle_ma15a_f049	Feather Leaf	45
+colle_ma15a_f049	Groove Wood	9
+colle_ma15a_f049	Hide 'n' Creeper	1
+colle_ma15a_f050	Charged Elbaite	10
+colle_ma15a_f050	Silent Wood	40
+colle_ma15a_f050	Mystery Firefly	40
+colle_ma15a_f050	Benign Cricket	10
+colle_ma15a_f051	Digging Sandfly	32
+colle_ma15a_f051	Energy Aubergine	33
+colle_ma15a_f051	Lemon Stone	25
+colle_ma15a_f051	Border Sapphire	10
+colle_ma15a_f052	Digging Sandfly	30
+colle_ma15a_f052	Energy Aubergine	30
+colle_ma15a_f052	Choice Cherry	30
+colle_ma15a_f052	Benign Cricket	10
+colle_ma15a_f053	Energy Aubergine	43
+colle_ma15a_f053	Charged Elbaite	43
+colle_ma15a_f053	Lemon Stone	9
+colle_ma15a_f053	Border Sapphire	5
+colle_ma15a_f054	Digging Sandfly	32
+colle_ma15a_f054	Energy Aubergine	33
+colle_ma15a_f054	Lemon Stone	25
+colle_ma15a_f054	Border Sapphire	10
+colle_ma15a_f055	Stream Navy	35
+colle_ma15a_f055	Lemon Stone	25
+colle_ma15a_f055	Pinfin	30
+colle_ma15a_f055	Killi-Killi Killifish	10
+colle_ma15a_f056	Choice Cherry	45
+colle_ma15a_f056	Beautiful Shoot	45
+colle_ma15a_f056	Belloat Grass	9
+colle_ma15a_f056	Jellyfish Balsam	1
+colle_ma15a_f057	Feather Leaf	45
+colle_ma15a_f057	Spirit Clematis	45
+colle_ma15a_f057	Belloat Grass	9
+colle_ma15a_f057	Jellyfish Balsam	1
+colle_ma15a_f058	Feather Leaf	55
+colle_ma15a_f058	Plumage Peach	20
+colle_ma15a_f058	Belloat Grass	20
+colle_ma15a_f058	Jellyfish Balsam	5
+colle_ma15a_f059	Silent Wood	43
+colle_ma15a_f059	Charged Elbaite	43
+colle_ma15a_f059	Lemon Stone	9
+colle_ma15a_f059	Border Sapphire	5
+colle_ma15a_f060	Beautiful Shoot	35
+colle_ma15a_f060	Digging Sandfly	35
+colle_ma15a_f060	Mystery Firefly	20
+colle_ma15a_f060	Benign Cricket	10
+colle_ma15a_f061	Spirit Clematis	45
+colle_ma15a_f061	Silent Wood	45
+colle_ma15a_f061	Groove Wood	9
+colle_ma15a_f061	Hide 'n' Creeper	1
+colle_ma15a_f062	Marine Chowfish	42
+colle_ma15a_f062	Stream Navy	42
+colle_ma15a_f062	Pinfin	15
+colle_ma15a_f062	Killi-Killi Killifish	1
+colle_ma15a_f063	Choice Cherry	25
+colle_ma15a_f063	Silent Wood	25
+colle_ma15a_f063	Groove Wood	30
+colle_ma15a_f063	Hide 'n' Creeper	20
+colle_ma15a_f064	Choice Cherry	30
+colle_ma15a_f064	Groove Wood	25
+colle_ma15a_f064	Pinfin	25
+colle_ma15a_f064	Whisper Tomato	20
+colle_ma15a_f065	Mysteroe	45
+colle_ma15a_f065	Spirit Clematis	20
+colle_ma15a_f065	Emblazoned Ray	15
+colle_ma15a_f065	Pinfin	20
+colle_ma15a_c001	Beautiful Shoot	35
+colle_ma15a_c001	Choice Cherry	35
+colle_ma15a_c001	Plumage Peach	25
+colle_ma15a_c001	Whisper Tomato	5
+colle_ma15a_c002	Digging Sandfly	35
+colle_ma15a_c002	Energy Aubergine	35
+colle_ma15a_c002	Plumage Peach	25
+colle_ma15a_c002	Whisper Tomato	5
+colle_ma15a_c003	Digging Sandfly	30
+colle_ma15a_c003	Energy Aubergine	30
+colle_ma15a_c003	Choice Cherry	30
+colle_ma15a_c003	Benign Cricket	10
+colle_ma15a_f066	Choice Cherry	45
+colle_ma15a_f066	Beautiful Shoot	45
+colle_ma15a_f066	Belloat Grass	9
+colle_ma15a_f066	Jellyfish Balsam	1
+colle_ma15a_f067	Spirit Clematis	35
+colle_ma15a_f067	Beautiful Shoot	35
+colle_ma15a_f067	Belloat Grass	20
+colle_ma15a_f067	Jellyfish Balsam	10
+colle_ma16a_d002	Noise Bite	45
+colle_ma16a_d002	Libra Stone	45
+colle_ma16a_d002	Deep Fellstone	9
+colle_ma16a_d002	Addam's Tear	1
+colle_ma16a_d003	Noise Bite	45
+colle_ma16a_d003	Rainbow Crystal	45
+colle_ma16a_d003	Frozen Sapphire	9
+colle_ma16a_d003	Addam's Tear	1
+colle_ma16a_d004	Shade Trout	45
+colle_ma16a_d004	Horned Bonytongue	45
+colle_ma16a_d004	Chandelier Monkfish	9
+colle_ma16a_d004	Necromanta Ray	1
+colle_ma16a_d006	Chain Grass	35
+colle_ma16a_d006	Sporefruit	35
+colle_ma16a_d006	Deep Fellstone	20
+colle_ma16a_d006	Mystic Dahlia	10
+colle_ma16a_d007	Noise Bite	45
+colle_ma16a_d007	Libra Stone	45
+colle_ma16a_d007	Deep Fellstone	9
+colle_ma16a_d007	Addam's Tear	1
+colle_ma16a_d008	Gleambug	45
+colle_ma16a_d008	Sporefruit	45
+colle_ma16a_d008	Frozen Sapphire	9
+colle_ma16a_d008	Mystic Dahlia	1
+colle_ma16a_d009	Hammer Fern	45
+colle_ma16a_d009	Sporefruit	45
+colle_ma16a_d009	Deep Fellstone	9
+colle_ma16a_d009	Tarnish Apple	1
+colle_ma16a_d012	Noise Bite	45
+colle_ma16a_d012	Hammer Fern	45
+colle_ma16a_d012	Deadly Kiwi	9
+colle_ma16a_d012	Tarnish Apple	1
+colle_ma16a_d013	Libra Stone	40
+colle_ma16a_d013	Wisteria Bud	25
+colle_ma16a_d013	Deadly Kiwi	25
+colle_ma16a_d013	Tarnish Apple	10
+colle_ma16a_d014	Noise Bite	45
+colle_ma16a_d014	Rainbow Crystal	45
+colle_ma16a_d014	Frozen Sapphire	9
+colle_ma16a_d014	Addam's Tear	1
+colle_ma16a_d015	Noise Bite	45
+colle_ma16a_d015	Hammer Fern	45
+colle_ma16a_d015	Deadly Kiwi	9
+colle_ma16a_d015	Tarnish Apple	1
+colle_ma16a_d016	Gleambug	45
+colle_ma16a_d016	Sporefruit	45
+colle_ma16a_d016	Frozen Sapphire	9
+colle_ma16a_d016	Mystic Dahlia	1
+colle_ma16a_d017	Noise Bite	45
+colle_ma16a_d017	Hammer Fern	45
+colle_ma16a_d017	Deadly Kiwi	9
+colle_ma16a_d017	Tarnish Apple	1
+colle_ma16a_d018	Horned Bonytongue	40
+colle_ma16a_d018	Frozen Sapphire	25
+colle_ma16a_d018	Chandelier Monkfish	25
+colle_ma16a_d018	Necromanta Ray	10
+colle_ma16a_d019	Horned Bonytongue	40
+colle_ma16a_d019	Frozen Sapphire	25
+colle_ma16a_d019	Chandelier Monkfish	25
+colle_ma16a_d019	Necromanta Ray	10
+colle_ma16a_d020	Shade Trout	30
+colle_ma16a_d020	Dark Firefly	30
+colle_ma16a_d020	Rainbow Crystal	30
+colle_ma16a_d020	Necromanta Ray	10
+colle_ma16a_d021	Fortune Mallow	45
+colle_ma16a_d021	Chain Grass	45
+colle_ma16a_d021	Wisteria Bud	9
+colle_ma16a_d021	Mystic Dahlia	1
+colle_ma16a_d022	Hammer Fern	40
+colle_ma16a_d022	Deadly Kiwi	25
+colle_ma16a_d022	Wisteria Bud	25
+colle_ma16a_d022	Mystic Dahlia	10
+colle_ma16a_d023	Fortune Mallow	45
+colle_ma16a_d023	Chain Grass	45
+colle_ma16a_d023	Wisteria Bud	9
+colle_ma16a_d023	Mystic Dahlia	1
+colle_ma16a_d024	Hammer Fern	45
+colle_ma16a_d024	Sporefruit	45
+colle_ma16a_d024	Deep Fellstone	9
+colle_ma16a_d024	Tarnish Apple	1
+colle_ma16a_d025	Noise Bite	45
+colle_ma16a_d025	Hammer Fern	45
+colle_ma16a_d025	Deadly Kiwi	9
+colle_ma16a_d025	Tarnish Apple	1
+colle_ma16a_d026	Chain Grass	25
+colle_ma16a_d026	Watering Spider	25
+colle_ma16a_d026	Hades Beetle	30
+colle_ma16a_d026	Sworlbug	20
+colle_ma16a_d027	Watering Spider	45
+colle_ma16a_d027	Gleambug	45
+colle_ma16a_d027	Hades Beetle	9
+colle_ma16a_d027	Sworlbug	1
+colle_ma16a_d028	Noise Bite	45
+colle_ma16a_d028	Libra Stone	45
+colle_ma16a_d028	Deep Fellstone	9
+colle_ma16a_d028	Addam's Tear	1
+colle_ma16a_d029	Noise Bite	45
+colle_ma16a_d029	Libra Stone	45
+colle_ma16a_d029	Deep Fellstone	9
+colle_ma16a_d029	Addam's Tear	1
+colle_ma16a_d030	Shade Trout	45
+colle_ma16a_d030	Horned Bonytongue	45
+colle_ma16a_d030	Chandelier Monkfish	9
+colle_ma16a_d030	Necromanta Ray	1
+colle_ma16a_d031	Gleambug	40
+colle_ma16a_d031	Frozen Sapphire	25
+colle_ma16a_d031	Deep Fellstone	25
+colle_ma16a_d031	Addam's Tear	10
+colle_ma16a_d032	Noise Bite	45
+colle_ma16a_d032	Rainbow Crystal	45
+colle_ma16a_d032	Frozen Sapphire	9
+colle_ma16a_d032	Addam's Tear	1
+colle_ma16a_d033	Noise Bite	45
+colle_ma16a_d033	Hammer Fern	45
+colle_ma16a_d033	Deadly Kiwi	9
+colle_ma16a_d033	Tarnish Apple	1
+colle_ma16a_d034	Noise Bite	45
+colle_ma16a_d034	Hammer Fern	45
+colle_ma16a_d034	Deadly Kiwi	9
+colle_ma16a_d034	Tarnish Apple	1
+colle_ma16a_d035	Libra Stone	40
+colle_ma16a_d035	Wisteria Bud	25
+colle_ma16a_d035	Deadly Kiwi	25
+colle_ma16a_d035	Tarnish Apple	10
+colle_ma16a_d036	Fortune Mallow	45
+colle_ma16a_d036	Hades Beetle	25
+colle_ma16a_d036	Chandelier Monkfish	25
+colle_ma16a_d036	Necromanta Ray	5
+colle_ma16a_d037	Fortune Mallow	45
+colle_ma16a_d037	Chain Grass	45
+colle_ma16a_d037	Wisteria Bud	9
+colle_ma16a_d037	Mystic Dahlia	1
+colle_ma16a_d038	Shade Trout	30
+colle_ma16a_d038	Dark Firefly	30
+colle_ma16a_d038	Rainbow Crystal	30
+colle_ma16a_d038	Necromanta Ray	10
+colle_ma16a_d039	Shade Trout	45
+colle_ma16a_d039	Horned Bonytongue	45
+colle_ma16a_d039	Chandelier Monkfish	9
+colle_ma16a_d039	Necromanta Ray	1
+colle_ma16a_d041	Gleambug	45
+colle_ma16a_d041	Sporefruit	45
+colle_ma16a_d041	Frozen Sapphire	9
+colle_ma16a_d041	Mystic Dahlia	1
+colle_ma16a_d042	Gleambug	45
+colle_ma16a_d042	Sporefruit	45
+colle_ma16a_d042	Frozen Sapphire	9
+colle_ma16a_d042	Mystic Dahlia	1
+colle_ma16a_d045	Chain Grass	35
+colle_ma16a_d045	Sporefruit	35
+colle_ma16a_d045	Deep Fellstone	20
+colle_ma16a_d045	Mystic Dahlia	10
+colle_ma16a_d046	Fortune Mallow	45
+colle_ma16a_d046	Hades Beetle	25
+colle_ma16a_d046	Chandelier Monkfish	25
+colle_ma16a_d046	Necromanta Ray	5
+colle_ma16a_d047	Fortune Mallow	40
+colle_ma16a_d047	Wisteria Bud	25
+colle_ma16a_d047	Deadly Kiwi	25
+colle_ma16a_d047	Tarnish Apple	10
+colle_ma16a_d048	Fortune Mallow	45
+colle_ma16a_d048	Chain Grass	45
+colle_ma16a_d048	Wisteria Bud	9
+colle_ma16a_d048	Mystic Dahlia	1
+colle_ma16a_d049	Hammer Fern	45
+colle_ma16a_d049	Sporefruit	45
+colle_ma16a_d049	Deep Fellstone	9
+colle_ma16a_d049	Tarnish Apple	1
+colle_ma16a_d051	Hammer Fern	40
+colle_ma16a_d051	Deadly Kiwi	25
+colle_ma16a_d051	Wisteria Bud	25
+colle_ma16a_d051	Mystic Dahlia	10
+colle_ma16a_d052	Hammer Fern	45
+colle_ma16a_d052	Sporefruit	45
+colle_ma16a_d052	Deep Fellstone	9
+colle_ma16a_d052	Tarnish Apple	1
+colle_ma16a_d053	Hammer Fern	45
+colle_ma16a_d053	Sporefruit	45
+colle_ma16a_d053	Deep Fellstone	9
+colle_ma16a_d053	Tarnish Apple	1
+colle_ma16a_d055	Noise Bite	45
+colle_ma16a_d055	Rainbow Crystal	45
+colle_ma16a_d055	Frozen Sapphire	9
+colle_ma16a_d055	Addam's Tear	1
+colle_ma16a_d056	Fortune Mallow	40
+colle_ma16a_d056	Wisteria Bud	25
+colle_ma16a_d056	Deadly Kiwi	25
+colle_ma16a_d056	Tarnish Apple	10
+colle_ma16a_d058	Fortune Mallow	40
+colle_ma16a_d058	Wisteria Bud	25
+colle_ma16a_d058	Deadly Kiwi	25
+colle_ma16a_d058	Tarnish Apple	10
+colle_ma16a_d059	Hammer Fern	45
+colle_ma16a_d059	Sporefruit	45
+colle_ma16a_d059	Deep Fellstone	9
+colle_ma16a_d059	Tarnish Apple	1
+colle_ma16a_d060	Gleambug	45
+colle_ma16a_d060	Sporefruit	45
+colle_ma16a_d060	Frozen Sapphire	9
+colle_ma16a_d060	Mystic Dahlia	1
+colle_ma16a_d061	Noise Bite	45
+colle_ma16a_d061	Rainbow Crystal	45
+colle_ma16a_d061	Frozen Sapphire	9
+colle_ma16a_d061	Addam's Tear	1
+colle_ma16a_d063	Noise Bite	45
+colle_ma16a_d063	Libra Stone	45
+colle_ma16a_d063	Deep Fellstone	9
+colle_ma16a_d063	Addam's Tear	1
+colle_ma16a_d065	Gleambug	45
+colle_ma16a_d065	Sporefruit	45
+colle_ma16a_d065	Frozen Sapphire	9
+colle_ma16a_d065	Mystic Dahlia	1
+colle_ma16a_d066	Gleambug	40
+colle_ma16a_d066	Frozen Sapphire	25
+colle_ma16a_d066	Deep Fellstone	25
+colle_ma16a_d066	Addam's Tear	10
+colle_ma16a_d067	Chain Grass	35
+colle_ma16a_d067	Sporefruit	35
+colle_ma16a_d067	Deep Fellstone	20
+colle_ma16a_d067	Mystic Dahlia	10
+colle_ma16a_d069	Gleambug	45
+colle_ma16a_d069	Sporefruit	45
+colle_ma16a_d069	Frozen Sapphire	9
+colle_ma16a_d069	Mystic Dahlia	1
+colle_ma16a_d071	Watering Spider	45
+colle_ma16a_d071	Gleambug	45
+colle_ma16a_d071	Hades Beetle	9
+colle_ma16a_d071	Sworlbug	1
+colle_ma16a_d073	Watering Spider	45
+colle_ma16a_d073	Gleambug	45
+colle_ma16a_d073	Hades Beetle	9
+colle_ma16a_d073	Sworlbug	1
+colle_ma16a_d074	Watering Spider	45
+colle_ma16a_d074	Gleambug	45
+colle_ma16a_d074	Hades Beetle	9
+colle_ma16a_d074	Sworlbug	1
+colle_ma16a_d075	Watering Spider	45
+colle_ma16a_d075	Dark Firefly	45
+colle_ma16a_d075	Hades Beetle	9
+colle_ma16a_d075	Sworlbug	1
+colle_ma16a_d076	Noise Bite	45
+colle_ma16a_d076	Libra Stone	45
+colle_ma16a_d076	Deep Fellstone	9
+colle_ma16a_d076	Addam's Tear	1
+colle_ma16a_d077	Watering Spider	45
+colle_ma16a_d077	Gleambug	45
+colle_ma16a_d077	Hades Beetle	9
+colle_ma16a_d077	Sworlbug	1
+colle_ma16a_d078	Watering Spider	45
+colle_ma16a_d078	Dark Firefly	45
+colle_ma16a_d078	Hades Beetle	9
+colle_ma16a_d078	Sworlbug	1
+colle_ma16a_d079	Chain Grass	25
+colle_ma16a_d079	Watering Spider	25
+colle_ma16a_d079	Hades Beetle	30
+colle_ma16a_d079	Sworlbug	20
+colle_ma16a_d080	Watering Spider	45
+colle_ma16a_d080	Dark Firefly	45
+colle_ma16a_d080	Hades Beetle	9
+colle_ma16a_d080	Sworlbug	1
+colle_ma16a_d081	Noise Bite	45
+colle_ma16a_d081	Hammer Fern	45
+colle_ma16a_d081	Deadly Kiwi	9
+colle_ma16a_d081	Tarnish Apple	1
+colle_ma16a_d082	Gleambug	45
+colle_ma16a_d082	Sporefruit	45
+colle_ma16a_d082	Frozen Sapphire	9
+colle_ma16a_d082	Mystic Dahlia	1
+colle_ma16a_d083	Noise Bite	45
+colle_ma16a_d083	Libra Stone	45
+colle_ma16a_d083	Deep Fellstone	9
+colle_ma16a_d083	Addam's Tear	1
+colle_ma16a_d084	Noise Bite	45
+colle_ma16a_d084	Libra Stone	45
+colle_ma16a_d084	Deep Fellstone	9
+colle_ma16a_d084	Addam's Tear	1
+colle_ma16a_d085	Gleambug	40
+colle_ma16a_d085	Frozen Sapphire	25
+colle_ma16a_d085	Deep Fellstone	25
+colle_ma16a_d085	Addam's Tear	10
+colle_ma16a_d086	Noise Bite	45
+colle_ma16a_d086	Libra Stone	45
+colle_ma16a_d086	Deep Fellstone	9
+colle_ma16a_d086	Addam's Tear	1
+colle_ma16a_d087	Noise Bite	45
+colle_ma16a_d087	Rainbow Crystal	45
+colle_ma16a_d087	Frozen Sapphire	9
+colle_ma16a_d087	Addam's Tear	1
+colle_ma16a_d088	Libra Stone	40
+colle_ma16a_d088	Wisteria Bud	25
+colle_ma16a_d088	Deadly Kiwi	25
+colle_ma16a_d088	Tarnish Apple	10
+colle_ma17a_f001	Wool Rock	60
+colle_ma17a_f001	Snipe Pea	15
+colle_ma17a_f001	Nail Stone	15
+colle_ma17a_f001	Magnet Clay	20
+colle_ma17a_f002	King Marigold	43
+colle_ma17a_f002	Yehu Fish	43
+colle_ma17a_f002	Snipe Pea	9
+colle_ma17a_f002	Frozen Flan	5
+colle_ma17a_f003	Firering Radish	43
+colle_ma17a_f003	King Marigold	43
+colle_ma17a_f003	Snipe Pea	9
+colle_ma17a_f003	Neon Grape	5
+colle_ma17a_f004	Moon Flower	55
+colle_ma17a_f004	Oil Branch	15
+colle_ma17a_f004	Snipe Pea	15
+colle_ma17a_f004	Frozen Flan	15
+colle_ma17a_f005	Firering Radish	45
+colle_ma17a_f005	Oil Branch	15
+colle_ma17a_f005	Neon Grape	10
+colle_ma17a_f005	Linka Honey	30
+colle_ma17a_f006	Firering Radish	45
+colle_ma17a_f006	Oil Branch	15
+colle_ma17a_f006	Neon Grape	10
+colle_ma17a_f006	Linka Honey	30
+colle_ma17a_f007	Firering Radish	45
+colle_ma17a_f007	Oil Branch	15
+colle_ma17a_f007	Neon Grape	10
+colle_ma17a_f007	Linka Honey	30
+colle_ma17a_f008	Firering Radish	43
+colle_ma17a_f008	King Marigold	43
+colle_ma17a_f008	Snipe Pea	9
+colle_ma17a_f008	Neon Grape	5
+colle_ma17a_f009	Yehu Fish	50
+colle_ma17a_f009	Hill Firefly	15
+colle_ma17a_f009	Horsecrab	15
+colle_ma17a_f009	Bonito Sailfish	20
+colle_ma17a_f010	Rib Grasshopper	43
+colle_ma17a_f010	Giant Pine Cone	42
+colle_ma17a_f010	Hill Firefly	10
+colle_ma17a_f010	Beelze Mosquito	5
+colle_ma17a_f011	Wool Rock	45
+colle_ma17a_f011	Moon Flower	45
+colle_ma17a_f011	Nail Stone	9
+colle_ma17a_f011	Magnet Clay	5
+colle_ma17a_f012	Moon Flower	55
+colle_ma17a_f012	Oil Branch	15
+colle_ma17a_f012	Snipe Pea	15
+colle_ma17a_f012	Frozen Flan	15
+colle_ma17a_f013	Wool Rock	60
+colle_ma17a_f013	Snipe Pea	15
+colle_ma17a_f013	Nail Stone	15
+colle_ma17a_f013	Magnet Clay	20
+colle_ma17a_f014	Rib Grasshopper	43
+colle_ma17a_f014	Giant Pine Cone	42
+colle_ma17a_f014	Hill Firefly	10
+colle_ma17a_f014	Beelze Mosquito	5
+colle_ma17a_f015	Climbing Goby	43
+colle_ma17a_f015	Wool Rock	43
+colle_ma17a_f015	Horsecrab	9
+colle_ma17a_f015	Bonito Sailfish	5
+colle_ma17a_f016	Rib Grasshopper	43
+colle_ma17a_f016	Firering Radish	42
+colle_ma17a_f016	Hill Firefly	10
+colle_ma17a_f016	Beelze Mosquito	5
+colle_ma17a_f017	Rib Grasshopper	43
+colle_ma17a_f017	Giant Pine Cone	42
+colle_ma17a_f017	Hill Firefly	10
+colle_ma17a_f017	Beelze Mosquito	5
+colle_ma17a_f018	Wool Rock	45
+colle_ma17a_f018	Moon Flower	45
+colle_ma17a_f018	Nail Stone	9
+colle_ma17a_f018	Magnet Clay	5
+colle_ma17a_f019	Rib Grasshopper	43
+colle_ma17a_f019	Firering Radish	42
+colle_ma17a_f019	Hill Firefly	10
+colle_ma17a_f019	Beelze Mosquito	5
+colle_ma17a_f020	Climbing Goby	43
+colle_ma17a_f020	Wool Rock	43
+colle_ma17a_f020	Horsecrab	9
+colle_ma17a_f020	Bonito Sailfish	5
+colle_ma17a_f021	King Marigold	43
+colle_ma17a_f021	Yehu Fish	43
+colle_ma17a_f021	Snipe Pea	9
+colle_ma17a_f021	Frozen Flan	5
+colle_ma17a_f022	King Marigold	43
+colle_ma17a_f022	Yehu Fish	43
+colle_ma17a_f022	Snipe Pea	9
+colle_ma17a_f022	Frozen Flan	5
+colle_ma17a_f023	Giant Pine Cone	60
+colle_ma17a_f023	Nail Stone	15
+colle_ma17a_f023	Oil Branch	15
+colle_ma17a_f023	Millewire Pine	10
+colle_ma17a_f024	Giant Pine Cone	45
+colle_ma17a_f024	Climbing Goby	45
+colle_ma17a_f024	Horsecrab	9
+colle_ma17a_f024	Millewire Pine	1
+colle_ma17a_f025	Climbing Goby	43
+colle_ma17a_f025	Wool Rock	43
+colle_ma17a_f025	Horsecrab	9
+colle_ma17a_f025	Bonito Sailfish	5
+colle_ma17a_f026	Giant Pine Cone	45
+colle_ma17a_f026	Climbing Goby	45
+colle_ma17a_f026	Horsecrab	9
+colle_ma17a_f026	Millewire Pine	1
+colle_ma17a_f027	King Marigold	43
+colle_ma17a_f027	Yehu Fish	43
+colle_ma17a_f027	Snipe Pea	9
+colle_ma17a_f027	Frozen Flan	5
+colle_ma17a_f028	Wool Rock	45
+colle_ma17a_f028	Moon Flower	45
+colle_ma17a_f028	Nail Stone	9
+colle_ma17a_f028	Magnet Clay	5
+colle_ma17a_f029	Rib Grasshopper	43
+colle_ma17a_f029	Firering Radish	42
+colle_ma17a_f029	Hill Firefly	10
+colle_ma17a_f029	Beelze Mosquito	5
+colle_ma18a_f001	Abyss Metal	40
+colle_ma18a_f001	Rubble Gem	40
+colle_ma18a_f001	Ambler Stigma	19
+colle_ma18a_f001	Platinatriumarine	1
+colle_ma18a_f002	Dark Sprout	30
+colle_ma18a_f002	Charcoal Cube	30
+colle_ma18a_f002	Curse Branch	30
+colle_ma18a_f002	Gloomy Pitcher Plant	10
+colle_ma18a_f003	Abyss Metal	40
+colle_ma18a_f003	Rubble Gem	40
+colle_ma18a_f003	Ambler Stigma	19
+colle_ma18a_f003	Platinatriumarine	1
+colle_ma18a_f004	Abyss Metal	40
+colle_ma18a_f004	Rubble Gem	40
+colle_ma18a_f004	Ambler Stigma	19
+colle_ma18a_f004	Platinatriumarine	1
+colle_ma18a_f005	Charcoal Cube	35
+colle_ma18a_f005	Rubble Gem	35
+colle_ma18a_f005	Electric Cricket	25
+colle_ma18a_f005	Platinatriumarine	5
+colle_ma18a_f006	Abyss Metal	35
+colle_ma18a_f006	Charcoal Cube	35
+colle_ma18a_f006	Ambler Stigma	25
+colle_ma18a_f006	Platinatriumarine	5
+colle_ma18a_f007	Abyss Metal	40
+colle_ma18a_f007	Rubble Gem	40
+colle_ma18a_f007	Ambler Stigma	19
+colle_ma18a_f007	Platinatriumarine	1
+colle_ma18a_f008	Delerium Foxglove	45
+colle_ma18a_f008	Bronze Wood	45
+colle_ma18a_f008	Curse Branch	9
+colle_ma18a_f008	Soapberry Box	1
+colle_ma18a_f009	Dark Sprout	30
+colle_ma18a_f009	Charcoal Cube	30
+colle_ma18a_f009	Curse Branch	30
+colle_ma18a_f009	Gloomy Pitcher Plant	10
+colle_ma18a_f010	Bronze Wood	40
+colle_ma18a_f010	Ambler Stigma	25
+colle_ma18a_f010	Blood Walnut	25
+colle_ma18a_f010	Grim Olive	10
+colle_ma18a_f011	Dark Sprout	30
+colle_ma18a_f011	Charcoal Cube	30
+colle_ma18a_f011	Curse Branch	30
+colle_ma18a_f011	Gloomy Pitcher Plant	10
+colle_ma18a_f012	Bronze Wood	40
+colle_ma18a_f012	Ambler Stigma	25
+colle_ma18a_f012	Blood Walnut	25
+colle_ma18a_f012	Grim Olive	10
+colle_ma18a_f013	Charcoal Cube	35
+colle_ma18a_f013	Rubble Gem	35
+colle_ma18a_f013	Electric Cricket	25
+colle_ma18a_f013	Platinatriumarine	5
+colle_ma18a_f014	Charcoal Cube	35
+colle_ma18a_f014	Rubble Gem	35
+colle_ma18a_f014	Electric Cricket	25
+colle_ma18a_f014	Platinatriumarine	5
+colle_ma18a_f015	Delerium Foxglove	45
+colle_ma18a_f015	Bronze Wood	45
+colle_ma18a_f015	Curse Branch	9
+colle_ma18a_f015	Soapberry Box	1
+colle_ma18a_f016	Abyss Metal	35
+colle_ma18a_f016	Charcoal Cube	35
+colle_ma18a_f016	Ambler Stigma	25
+colle_ma18a_f016	Platinatriumarine	5
+colle_ma18a_f017	Sore Worm	45
+colle_ma18a_f017	Dark Sprout	45
+colle_ma18a_f017	Blood Walnut	9
+colle_ma18a_f017	Grim Olive	1
+colle_ma18a_f018	Sore Worm	45
+colle_ma18a_f018	Dark Sprout	45
+colle_ma18a_f018	Electric Cricket	9
+colle_ma18a_f018	Pound Viper	1
+colle_ma18a_f019	Magmalachite	40
+colle_ma18a_f019	Soapberry Box	25
+colle_ma18a_f019	Electric Cricket	25
+colle_ma18a_f019	Pound Viper	10
+colle_ma18a_f020	Sore Worm	45
+colle_ma18a_f020	Dark Sprout	45
+colle_ma18a_f020	Electric Cricket	9
+colle_ma18a_f020	Pound Viper	1
+colle_ma18a_f021	Delerium Foxglove	45
+colle_ma18a_f021	Magmalachite	25
+colle_ma18a_f021	Electric Cricket	25
+colle_ma18a_f021	Pound Viper	5
+colle_ma18a_f022	Delerium Foxglove	45
+colle_ma18a_f022	Magmalachite	25
+colle_ma18a_f022	Electric Cricket	25
+colle_ma18a_f022	Pound Viper	5
+colle_ma18a_f023	Bronze Wood	45
+colle_ma18a_f023	Delerium Foxglove	45
+colle_ma18a_f023	Curse Branch	9
+colle_ma18a_f023	Gloomy Pitcher Plant	1
+colle_ma18a_f024	Sore Worm	45
+colle_ma18a_f024	Dark Sprout	45
+colle_ma18a_f024	Blood Walnut	9
+colle_ma18a_f024	Grim Olive	1
+colle_ma18a_f025	Delerium Foxglove	45
+colle_ma18a_f025	Bronze Wood	45
+colle_ma18a_f025	Curse Branch	9
+colle_ma18a_f025	Soapberry Box	1
+colle_ma18a_f026	Rubble Gem	40
+colle_ma18a_f026	Abyss Metal	25
+colle_ma18a_f026	Magmalachite	25
+colle_ma18a_f026	Platinatriumarine	10
+colle_ma18a_f027	Abyss Metal	40
+colle_ma18a_f027	Rubble Gem	40
+colle_ma18a_f027	Ambler Stigma	19
+colle_ma18a_f027	Platinatriumarine	1
+colle_ma18a_f028	Abyss Metal	40
+colle_ma18a_f028	Rubble Gem	40
+colle_ma18a_f028	Ambler Stigma	19
+colle_ma18a_f028	Platinatriumarine	1
+colle_ma18a_f029	Delerium Foxglove	45
+colle_ma18a_f029	Bronze Wood	45
+colle_ma18a_f029	Curse Branch	9
+colle_ma18a_f029	Soapberry Box	1
+colle_ma18a_f030	Charcoal Cube	35
+colle_ma18a_f030	Rubble Gem	35
+colle_ma18a_f030	Electric Cricket	25
+colle_ma18a_f030	Platinatriumarine	5
+colle_ma18a_f031	Abyss Metal	40
+colle_ma18a_f031	Rubble Gem	40
+colle_ma18a_f031	Ambler Stigma	19
+colle_ma18a_f031	Platinatriumarine	1
+colle_ma18a_f032	Sore Worm	45
+colle_ma18a_f032	Dark Sprout	45
+colle_ma18a_f032	Electric Cricket	9
+colle_ma18a_f032	Pound Viper	1
+colle_ma18a_f033	Dark Sprout	35
+colle_ma18a_f033	Sore Worm	35
+colle_ma18a_f033	Curse Branch	25
+colle_ma18a_f033	Soapberry Box	5
+colle_ma18a_f034	Sore Worm	35
+colle_ma18a_f034	Ambler Stigma	30
+colle_ma18a_f034	Blood Walnut	25
+colle_ma18a_f034	Grim Olive	10
+colle_ma20a_d001	Throwing Star Rock	43
+colle_ma20a_d001	Jujube Silver	43
+colle_ma20a_d001	Mossy Panel	9
+colle_ma20a_d001	Slime Rock	5
+colle_ma20a_d002	Throwing Star Rock	55
+colle_ma20a_d002	Screw Coil	20
+colle_ma20a_d002	Mossy Panel	15
+colle_ma20a_d002	Slime Rock	10
+colle_ma20a_d003	Jabara Bug	40
+colle_ma20a_d003	Mechanical Branch	40
+colle_ma20a_d003	Benign Butterfly	10
+colle_ma20a_d003	Leaf Coil	10
+colle_ma20a_d004	Throwing Star Rock	43
+colle_ma20a_d004	Jujube Silver	43
+colle_ma20a_d004	Mossy Panel	9
+colle_ma20a_d004	Slime Rock	5
+colle_ma20a_d005	Throwing Star Rock	43
+colle_ma20a_d005	Jujube Silver	43
+colle_ma20a_d005	Mossy Panel	9
+colle_ma20a_d005	Slime Rock	5
+colle_ma20a_d006	Numbing Clownfish	45
+colle_ma20a_d006	Black Liver Bean	45
+colle_ma20a_d006	Noughtilus	9
+colle_ma20a_d006	Robotic Placoderm	1
+colle_ma20a_d007	Jabara Bug	40
+colle_ma20a_d007	Split-Hop Gizmo	40
+colle_ma20a_d007	Benign Butterfly	10
+colle_ma20a_d007	Modern Resistor	10
+colle_ma20a_d008	Mechanical Branch	50
+colle_ma20a_d008	Elima Leaf	20
+colle_ma20a_d008	Hollow Lantern	20
+colle_ma20a_d008	World Supplement	10
+colle_ma20a_d009	Jabara Bug	45
+colle_ma20a_d009	Elima Leaf	25
+colle_ma20a_d009	Art Core Coil	20
+colle_ma20a_d009	Minute Mantis	10
+colle_ma20a_d010	Throwing Star Rock	55
+colle_ma20a_d010	Screw Coil	20
+colle_ma20a_d010	Mossy Panel	15
+colle_ma20a_d010	Slime Rock	10
+colle_ma20a_d011	Jabara Bug	40
+colle_ma20a_d011	Mechanical Branch	40
+colle_ma20a_d011	Benign Butterfly	10
+colle_ma20a_d011	Leaf Coil	10
+colle_ma20a_d012	Jujube Silver	60
+colle_ma20a_d012	Art Core Coil	25
+colle_ma20a_d012	Vortex Panel	5
+colle_ma20a_d012	Limitless Rose	10
+colle_ma20a_d013	Black Liver Bean	65
+colle_ma20a_d013	Screw Coil	20
+colle_ma20a_d013	Vortex Panel	5
+colle_ma20a_d013	Minute Mantis	10
+colle_ma20a_d014	Jabara Bug	45
+colle_ma20a_d014	Elima Leaf	25
+colle_ma20a_d014	Art Core Coil	20
+colle_ma20a_d014	Minute Mantis	10
+colle_ma20a_d015	Throwing Star Rock	55
+colle_ma20a_d015	Screw Coil	20
+colle_ma20a_d015	Mossy Panel	15
+colle_ma20a_d015	Slime Rock	10
+colle_ma20a_d016	Throwing Star Rock	43
+colle_ma20a_d016	Jujube Silver	43
+colle_ma20a_d016	Mossy Panel	9
+colle_ma20a_d016	Slime Rock	5
+colle_ma20a_d017	Throwing Star Rock	50
+colle_ma20a_d017	Benign Butterfly	20
+colle_ma20a_d017	Hollow Lantern	20
+colle_ma20a_d017	Slime Rock	10
+colle_ma20a_d018	Jabara Bug	40
+colle_ma20a_d018	Split-Hop Gizmo	40
+colle_ma20a_d018	Benign Butterfly	10
+colle_ma20a_d018	Modern Resistor	10
+colle_ma20a_d019	Jabara Bug	40
+colle_ma20a_d019	Mechanical Branch	40
+colle_ma20a_d019	Benign Butterfly	10
+colle_ma20a_d019	Leaf Coil	10
+colle_ma20a_d020	Mechanical Branch	50
+colle_ma20a_d020	Elima Leaf	20
+colle_ma20a_d020	Hollow Lantern	20
+colle_ma20a_d020	World Supplement	10
+colle_ma20a_d021	Jabara Bug	45
+colle_ma20a_d021	Elima Leaf	25
+colle_ma20a_d021	Art Core Coil	20
+colle_ma20a_d021	Minute Mantis	10
+colle_ma20a_d022	Throwing Star Rock	55
+colle_ma20a_d022	Screw Coil	20
+colle_ma20a_d022	Mossy Panel	15
+colle_ma20a_d022	Slime Rock	10
+colle_ma20a_d023	Throwing Star Rock	43
+colle_ma20a_d023	Jujube Silver	43
+colle_ma20a_d023	Mossy Panel	9
+colle_ma20a_d023	Slime Rock	5
+colle_ma20a_d024	Jabara Bug	40
+colle_ma20a_d024	Split-Hop Gizmo	40
+colle_ma20a_d024	Benign Butterfly	10
+colle_ma20a_d024	Modern Resistor	10
+colle_ma20a_d025	Jujube Silver	60
+colle_ma20a_d025	Art Core Coil	25
+colle_ma20a_d025	Vortex Panel	5
+colle_ma20a_d025	Limitless Rose	10
+colle_ma20a_d026	Throwing Star Rock	55
+colle_ma20a_d026	Screw Coil	20
+colle_ma20a_d026	Mossy Panel	15
+colle_ma20a_d026	Slime Rock	10
+colle_ma20a_d027	Throwing Star Rock	43
+colle_ma20a_d027	Jujube Silver	43
+colle_ma20a_d027	Mossy Panel	9
+colle_ma20a_d027	Slime Rock	5
+colle_ma20a_d028	Mechanical Branch	45
+colle_ma20a_d028	Split-Hop Gizmo	45
+colle_ma20a_d028	Elima Leaf	9
+colle_ma20a_d028	World Supplement	1
+colle_ma20a_d029	Jujube Silver	45
+colle_ma20a_d029	Split-Hop Gizmo	45
+colle_ma20a_d029	Rosary Moss	9
+colle_ma20a_d029	Limitless Rose	1
+colle_ma20a_d030	Modern Resistor	20
+colle_ma20a_d030	Black Liver Bean	45
+colle_ma20a_d030	Starry Persimmon	30
+colle_ma20a_d030	Nameko Gem	5
+colle_ma20a_d031	Black Liver Bean	65
+colle_ma20a_d031	Screw Coil	20
+colle_ma20a_d031	Vortex Panel	5
+colle_ma20a_d031	Minute Mantis	10
+colle_ma20a_d032	Mechanical Branch	45
+colle_ma20a_d032	Black Liver Bean	45
+colle_ma20a_d032	Starry Persimmon	9
+colle_ma20a_d032	Nameko Gem	1
+colle_ma20a_d033	Mechanical Branch	50
+colle_ma20a_d033	Elima Leaf	20
+colle_ma20a_d033	Hollow Lantern	20
+colle_ma20a_d033	World Supplement	10
+colle_ma20a_d034	Jujube Silver	60
+colle_ma20a_d034	Art Core Coil	25
+colle_ma20a_d034	Vortex Panel	5
+colle_ma20a_d034	Limitless Rose	10
+colle_ma20a_d035	Jujube Silver	45
+colle_ma20a_d035	Rosary Moss	25
+colle_ma20a_d035	Elima Leaf	25
+colle_ma20a_d035	World Supplement	5
+colle_ma20a_d036	Jujube Silver	45
+colle_ma20a_d036	Split-Hop Gizmo	45
+colle_ma20a_d036	Rosary Moss	9
+colle_ma20a_d036	Limitless Rose	1
+colle_ma20a_d037	Mechanical Branch	45
+colle_ma20a_d037	Black Liver Bean	45
+colle_ma20a_d037	Starry Persimmon	9
+colle_ma20a_d037	Nameko Gem	1
+colle_ma20a_d038	Mechanical Branch	45
+colle_ma20a_d038	Split-Hop Gizmo	45
+colle_ma20a_d038	Elima Leaf	9
+colle_ma20a_d038	World Supplement	1
+colle_ma20a_d039	Throwing Star Rock	50
+colle_ma20a_d039	Benign Butterfly	20
+colle_ma20a_d039	Hollow Lantern	20
+colle_ma20a_d039	Slime Rock	10
+colle_ma20a_d040	Black Liver Bean	65
+colle_ma20a_d040	Screw Coil	20
+colle_ma20a_d040	Vortex Panel	5
+colle_ma20a_d040	Minute Mantis	10
+colle_ma20a_d041	Throwing Star Rock	50
+colle_ma20a_d041	Benign Butterfly	20
+colle_ma20a_d041	Hollow Lantern	20
+colle_ma20a_d041	Slime Rock	10
+colle_ma20a_d042	Throwing Star Rock	55
+colle_ma20a_d042	Screw Coil	20
+colle_ma20a_d042	Mossy Panel	15
+colle_ma20a_d042	Slime Rock	10
+colle_ma20a_d043	Throwing Star Rock	43
+colle_ma20a_d043	Jujube Silver	43
+colle_ma20a_d043	Mossy Panel	9
+colle_ma20a_d043	Slime Rock	5
+colle_ma20a_d044	Black Liver Bean	65
+colle_ma20a_d044	Screw Coil	20
+colle_ma20a_d044	Vortex Panel	5
+colle_ma20a_d044	Minute Mantis	10
+colle_ma20a_d045	Throwing Star Rock	43
+colle_ma20a_d045	Jujube Silver	43
+colle_ma20a_d045	Mossy Panel	9
+colle_ma20a_d045	Slime Rock	5
+colle_ma20a_d046	Jujube Silver	60
+colle_ma20a_d046	Art Core Coil	25
+colle_ma20a_d046	Vortex Panel	5
+colle_ma20a_d046	Limitless Rose	10
+colle_ma20a_d047	Throwing Star Rock	43
+colle_ma20a_d047	Jujube Silver	43
+colle_ma20a_d047	Mossy Panel	9
+colle_ma20a_d047	Slime Rock	5
+colle_ma20a_d048	Throwing Star Rock	50
+colle_ma20a_d048	Benign Butterfly	20
+colle_ma20a_d048	Hollow Lantern	20
+colle_ma20a_d048	Slime Rock	10
+colle_ma20a_d049	Numbing Clownfish	45
+colle_ma20a_d049	Black Liver Bean	45
+colle_ma20a_d049	Noughtilus	9
+colle_ma20a_d049	Robotic Placoderm	1
+colle_ma20a_d050	Numbing Clownfish	55
+colle_ma20a_d050	Rosary Moss	20
+colle_ma20a_d050	Noughtilus	20
+colle_ma20a_d050	Robotic Placoderm	5
+colle_ma20a_d051	Numbing Clownfish	45
+colle_ma20a_d051	Black Liver Bean	45
+colle_ma20a_d051	Noughtilus	9
+colle_ma20a_d051	Robotic Placoderm	1
+colle_ma20a_d052	Throwing Star Rock	43
+colle_ma20a_d052	Jujube Silver	43
+colle_ma20a_d052	Mossy Panel	9
+colle_ma20a_d052	Slime Rock	5
+colle_ma20a_d053	Numbing Clownfish	55
+colle_ma20a_d053	Rosary Moss	20
+colle_ma20a_d053	Noughtilus	20
+colle_ma20a_d053	Robotic Placoderm	5
+colle_ma20a_d054	Numbing Clownfish	40
+colle_ma20a_d054	Mossy Panel	25
+colle_ma20a_d054	Noughtilus	25
+colle_ma20a_d054	Robotic Placoderm	10
+colle_ma20a_d055	Throwing Star Rock	43
+colle_ma20a_d055	Jujube Silver	43
+colle_ma20a_d055	Mossy Panel	9
+colle_ma20a_d055	Slime Rock	5
+colle_ma20a_d056	Jabara Bug	40
+colle_ma20a_d056	Mechanical Branch	40
+colle_ma20a_d056	Benign Butterfly	10
+colle_ma20a_d056	Leaf Coil	10
+colle_ma20a_d057	Jabara Bug	45
+colle_ma20a_d057	Elima Leaf	25
+colle_ma20a_d057	Art Core Coil	20
+colle_ma20a_d057	Minute Mantis	10
+colle_ma20a_d058	Mechanical Branch	50
+colle_ma20a_d058	Elima Leaf	20
+colle_ma20a_d058	Hollow Lantern	20
+colle_ma20a_d058	World Supplement	10
+colle_ma20a_d059	Jabara Bug	40
+colle_ma20a_d059	Split-Hop Gizmo	40
+colle_ma20a_d059	Benign Butterfly	10
+colle_ma20a_d059	Modern Resistor	10
+colle_ma20a_d060	Jabara Bug	45
+colle_ma20a_d060	Leaf Coil	20
+colle_ma20a_d060	Starry Persimmon	30
+colle_ma20a_d060	Limitless Rose	5
+colle_ma21a_f001	Zero Bark	50
+colle_ma21a_f001	Rootless Sandwort	20
+colle_ma21a_f001	Styrene Woodblock	20
+colle_ma21a_f001	Blinding Dream	10
+colle_ma21a_f002	Crowbell Fruit	50
+colle_ma21a_f002	Rootless Sandwort	20
+colle_ma21a_f002	Pain Cone	20
+colle_ma21a_f002	Blinding Dream	10
+colle_ma21a_f003	Zero Bark	50
+colle_ma21a_f003	Rootless Sandwort	20
+colle_ma21a_f003	Styrene Woodblock	20
+colle_ma21a_f003	Blinding Dream	10
+colle_ma21a_f004	Crowbell Fruit	50
+colle_ma21a_f004	Rootless Sandwort	20
+colle_ma21a_f004	Pain Cone	20
+colle_ma21a_f004	Blinding Dream	10
+colle_ma21a_f005	Zero Bark	35
+colle_ma21a_f005	Smoke Chipper	35
+colle_ma21a_f005	Rootless Sandwort	20
+colle_ma21a_f005	Cosmo Pepper	10
+colle_ma21a_f006	Crowbell Fruit	35
+colle_ma21a_f006	Smoke Chipper	35
+colle_ma21a_f006	Rootless Sandwort	20
+colle_ma21a_f006	Monochrome Muscari	10
+colle_ma21a_f007	Zero Bark	35
+colle_ma21a_f007	Smoke Chipper	35
+colle_ma21a_f007	Rootless Sandwort	20
+colle_ma21a_f007	Cosmo Pepper	10
+colle_ma21a_f008	Zero Bark	50
+colle_ma21a_f008	Rootless Sandwort	20
+colle_ma21a_f008	Styrene Woodblock	20
+colle_ma21a_f008	Blinding Dream	10
+colle_ma21a_f009	Crowbell Fruit	35
+colle_ma21a_f009	Smoke Chipper	35
+colle_ma21a_f009	Rootless Sandwort	20
+colle_ma21a_f009	Monochrome Muscari	10
+\.
+
+
+--
+-- Data for Name: collection_points; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.collection_points (name, map, type, min, max, x, y, z) FROM stdin;
+colle_ma02a_c001	ma02a	Botany	3	4	64.93218	13.9812	-20.58251
+colle_ma02a_c002	ma02a	Agronomy	3	4	63.82279	13.99024	20.64492
+colle_ma02a_c003	ma02a	Botany	3	4	-2.707455	27.52834	-29.09085
+colle_ma02a_c004	ma02a	Agronomy	3	4	-17.16218	27.58661	-21.67926
+colle_ma05a_f001	ma05a	Forestry	2	4	-5.565381	-151.4429	-50.33937
+colle_ma05a_f002	ma05a	Ichthyology	3	5	-320.1846	-94.83616	172.8459
+colle_ma05a_f004	ma05a	Forestry	2	4	-450.0085	25.80581	268.5592
+colle_ma05a_f005	ma05a	Ichthyology	2	4	-338.1658	3.731279	151.9629
+colle_ma05a_f006	ma05a	Mineralogy	2	4	251.1512	-13.88823	89.03074
+colle_ma05a_f007	ma05a	Forestry	2	4	152.795	-14.79526	134.4212
+colle_ma05a_f008	ma05a	Forestry	3	5	412.0849	-30.42548	-31.84107
+colle_ma05a_f009	ma05a	Forestry	3	6	380.7488	-30.67472	94.73438
+colle_ma05a_f010	ma05a	Ichthyology	2	4	482.3365	-32.55119	10.90312
+colle_ma05a_f011	ma05a	Forestry	3	5	648.6951	-21.73382	-39.88066
+colle_ma05a_f012	ma05a	Ichthyology	2	4	580.6573	-32.66352	91.89453
+colle_ma05a_f013	ma05a	Botany	3	5	642.5269	-30.64592	157.2786
+colle_ma05a_f014	ma05a	Botany	3	6	558.7312	99.48083	-144.0848
+colle_ma05a_f015	ma05a	Botany	2	4	268.1752	-31.47495	0.3203702
+colle_ma05a_f016	ma05a	Ichthyology	2	4	350.9411	-31.81091	-29.39103
+colle_ma05a_f017	ma05a	Entomology	2	4	585.5283	-31.36258	8.90348
+colle_ma05a_f018	ma05a	Mineralogy	3	5	-215.4032	-2.48431	100.1916
+colle_ma05a_f019	ma05a	Forestry	2	4	-275.9186	-8.64522	-1.125041
+colle_ma05a_f020	ma05a	Botany	3	5	-399.263	-10.07185	108.7743
+colle_ma05a_f021	ma05a	Entomology	3	5	-416.661	-11.23789	95.59718
+colle_ma05a_f022	ma05a	Ichthyology	3	5	-334.6098	-10.0941	-87.82172
+colle_ma05a_f023	ma05a	Ichthyology	2	4	-260.9107	-8.795243	-64.05733
+colle_ma05a_f024	ma05a	Botany	2	4	-402.1894	20.11342	-118.6516
+colle_ma05a_f026	ma05a	Entomology	3	5	-298.4464	-5.578804	101.5471
+colle_ma05a_f027	ma05a	Botany	2	4	-288.2496	-7.814298	228.5411
+colle_ma05a_f028	ma05a	Botany	2	4	-416.1654	3.849757	86.97313
+colle_ma05a_f029	ma05a	Agronomy	4	7	-319.0805	4.693313	-156.3884
+colle_ma05a_f030	ma05a	Botany	2	4	-132.5123	1.606771	-142.2461
+colle_ma05a_f032	ma05a	Botany	2	4	-164.5576	-7.163546	59.08669
+colle_ma05a_f033	ma05a	Agronomy	2	4	-61.41503	5.482123	-186.6721
+colle_ma05a_f034	ma05a	Entomology	3	5	34.8715	33.96753	-231.7286
+colle_ma05a_f035	ma05a	Entomology	2	4	37.52277	15.71954	15.97288
+colle_ma05a_f036	ma05a	Entomology	3	5	-189.5632	18.12216	-239.2062
+colle_ma05a_f037	ma05a	Ichthyology	2	4	-155.585	-9.935449	-72.92459
+colle_ma05a_f038	ma05a	Botany	2	4	-265.3719	-5.732394	56.2062
+colle_ma05a_f039	ma05a	Forestry	2	4	-268.8255	-5.731776	132.0655
+colle_ma05a_f040	ma05a	Entomology	2	4	-193.4877	-1.292266	146.5767
+colle_ma05a_f041	ma05a	Forestry	2	4	-284.6128	-8.0127	-72.57072
+colle_ma05a_f043	ma05a	Botany	2	4	-434.7979	2.715143	-54.88582
+colle_ma05a_f044	ma05a	Entomology	2	4	-242.153	-5.790854	185.4719
+colle_ma05a_f045	ma05a	Ichthyology	2	4	-232.4171	-9.961158	-29.63926
+colle_ma05a_f047	ma05a	Agronomy	2	4	-196.8072	-6.235257	-104.9807
+colle_ma05a_f048	ma05a	Mineralogy	2	4	-152.3374	-6.344817	20.99314
+colle_ma05a_f051	ma05a	Mineralogy	2	4	-392.0012	6.862822	-149.9426
+colle_ma05a_f052	ma05a	Agronomy	4	7	-321.2923	1.923076	-101.7307
+colle_ma05a_f055	ma05a	Agronomy	2	4	-14.12308	7.930548	-127.5281
+colle_ma05a_f056	ma05a	Agronomy	2	4	-318.3353	-0.6361206	87.92982
+colle_ma05a_f058	ma05a	Botany	2	4	-231.3736	-8.87219	-101.8513
+colle_ma05a_f059	ma05a	Botany	2	4	-14.31563	-6.714778	-53.07381
+colle_ma05a_f060	ma05a	Entomology	2	4	-20.21461	25.52707	-236.0741
+colle_ma05a_f061	ma05a	Forestry	3	5	-458.3604	17.90083	-94.25068
+colle_ma05a_f062	ma05a	Botany	3	5	-547.5778	22.02717	140.5471
+colle_ma05a_f063	ma05a	Mineralogy	3	5	-537.5074	-14.48229	129.7024
+colle_ma05a_f064	ma05a	Ichthyology	2	4	-354.4756	-2.054701	-106.3694
+colle_ma05a_f065	ma05a	Botany	2	4	-325.8688	-4.42969	15.08614
+colle_ma05a_f066	ma05a	Entomology	2	4	-254.1074	12.25517	-152.9832
+colle_ma05a_f067	ma05a	Mineralogy	2	4	-144.9803	10.3851	-287.0548
+colle_ma05a_f069	ma05a	Agronomy	2	4	23.30008	21.98642	-199.9165
+colle_ma05a_f070	ma05a	Botany	2	4	-121.1221	-1.972249	63.31199
+colle_ma05a_f071	ma05a	Mineralogy	2	4	-118.1941	-6.96772	151.641
+colle_ma05a_f072	ma05a	Botany	2	4	-54.43063	-0.9938666	51.39325
+colle_ma05a_f073	ma05a	Mineralogy	2	4	-300.0592	-5.055441	152.8492
+colle_ma05a_f076	ma05a	Forestry	2	4	-283.675	42.17235	-172.5475
+colle_ma05a_f077	ma05a	Agronomy	2	4	-199.8045	46.6936	-224.3604
+colle_ma05a_f078	ma05a	Mineralogy	3	6	-236.0493	28.33311	-183.4769
+colle_ma05a_f079	ma05a	Botany	2	4	-193.0876	52.87721	-329.0882
+colle_ma05a_f081	ma05a	Mineralogy	3	5	-244.445	68.83688	-445.0618
+colle_ma05a_f082	ma05a	Forestry	3	5	-295.6686	73.80216	-205.5156
+colle_ma05a_f083	ma05a	Forestry	2	4	-292.6184	116.678	-189.1754
+colle_ma05a_f085	ma05a	Mineralogy	3	6	-350.8376	126.8954	-171.6232
+colle_ma05a_f086	ma05a	Agronomy	4	8	-337.2473	127.1383	-166.7963
+colle_ma05a_f087	ma05a	Mineralogy	2	4	-142.953	-20.25507	-448.2146
+colle_ma05a_f088	ma05a	Botany	2	4	-49.45772	5.602553	-290.3589
+colle_ma05a_f089	ma05a	Ichthyology	2	4	57.32727	-29.79502	-416.4475
+colle_ma05a_f090	ma05a	Mineralogy	2	4	21.1127	19.44065	-162.9579
+colle_ma05a_f091	ma05a	Entomology	2	4	37.70398	19.38386	-298.3641
+colle_ma05a_f092	ma05a	Mineralogy	3	5	95.30234	-9.903622	-309.3407
+colle_ma05a_f093	ma05a	Entomology	2	4	-245.0565	35.5173	-155.3607
+colle_ma05a_f094	ma05a	Botany	3	5	-165.3877	69.57273	-402.1869
+colle_ma05a_f095	ma05a	Forestry	3	6	-172.238	75.5294	-213.3637
+colle_ma05a_f096	ma05a	Forestry	3	5	-161.4031	112.346	-216.5327
+colle_ma05a_f097	ma05a	Mineralogy	3	5	-98.58652	1.407948	19.7626
+colle_ma05a_f098	ma05a	Ichthyology	2	4	19.5853	-29.99697	-338.2226
+colle_ma05a_f099	ma05a	Entomology	3	6	55.81288	-24.82379	-288.8293
+colle_ma05a_f100	ma05a	Agronomy	2	4	53.79675	42.12647	-272.0406
+colle_ma05a_f101	ma05a	Entomology	2	4	-119.6463	-6.686904	-35.71631
+colle_ma05a_f102	ma05a	Mineralogy	2	4	-61.76964	-6.466596	131.348
+colle_ma05a_f104	ma05a	Mineralogy	2	4	-39.9178	-3.386497	182.3553
+colle_ma05a_f106	ma05a	Entomology	3	5	-147.1649	-27.84628	205.4488
+colle_ma05a_f107	ma05a	Forestry	3	6	-143.9352	-6.586922	211.1427
+colle_ma05a_f109	ma05a	Botany	2	4	-127.5394	-30.4127	341.6167
+colle_ma05a_f110	ma05a	Botany	3	5	-52.67525	-9.992343	372.3946
+colle_ma05a_f111	ma05a	Mineralogy	2	4	31.06601	-27.1385	203.1257
+colle_ma05a_f112	ma05a	Forestry	3	5	12.53794	13.25857	-15.931
+colle_ma05a_f113	ma05a	Mineralogy	3	5	29.74854	-2.58783	87.62422
+colle_ma05a_f114	ma05a	Botany	2	4	87.16491	-11.00538	136.1625
+colle_ma05a_f115	ma05a	Agronomy	2	4	137.8307	-4.314153	56.01221
+colle_ma05a_f116	ma05a	Forestry	3	5	114.1905	-5.375027	-38.78954
+colle_ma05a_f117	ma05a	Forestry	3	6	138.3427	15.71688	-65.80632
+colle_ma05a_f118	ma05a	Agronomy	2	4	291.5311	-27.98163	-79.74797
+colle_ma05a_f119	ma05a	Ichthyology	2	4	437.2855	-31.57589	-62.86695
+colle_ma05a_f120	ma05a	Ichthyology	2	4	609.3085	-31.83342	-137.2804
+colle_ma05a_f121	ma05a	Ichthyology	3	5	510.2691	-31.7003	146.3295
+colle_ma05a_f122	ma05a	Botany	3	5	658.2121	-32.77122	174.37
+colle_ma05a_f123	ma05a	Entomology	3	5	607.1583	-34.39091	206.321
+colle_ma05a_f124	ma05a	Botany	2	4	45.9534	19.44084	-28.50045
+colle_ma05a_f125	ma05a	Botany	2	4	111.5901	27.15525	-88.37242
+colle_ma05a_f127	ma05a	Mineralogy	3	5	177.132	7.867487	-143.6441
+colle_ma05a_f128	ma05a	Botany	2	4	167.835	39.77589	-105.2338
+colle_ma05a_f129	ma05a	Forestry	3	5	246.5941	64.70841	-207.1369
+colle_ma05a_f130	ma05a	Botany	2	4	127.3268	81.50677	-250.0158
+colle_ma05a_f131	ma05a	Forestry	2	4	199.5906	77.66924	-230.1389
+colle_ma05a_f132	ma05a	Forestry	3	5	34.38028	46.36203	-135.7695
+colle_ma05a_f133	ma05a	Botany	2	4	67.13969	57.15055	-240.9159
+colle_ma05a_f134	ma05a	Botany	2	4	41.44391	91.86438	-441.2384
+colle_ma05a_f135	ma05a	Entomology	3	5	239.3821	86.35394	-421.1194
+colle_ma05a_f136	ma05a	Entomology	3	5	276.9831	87.16087	-445.5248
+colle_ma05a_f137	ma05a	Entomology	3	6	214.0082	110.9276	-380.6747
+colle_ma05a_f138	ma05a	Botany	2	4	204.2297	38.51235	-287.8218
+colle_ma05a_f139	ma05a	Mineralogy	3	5	136.0087	37.83301	-348.2186
+colle_ma05a_f140	ma05a	Entomology	2	4	58.72086	39.84711	-370.1027
+colle_ma05a_f142	ma05a	Mineralogy	2	4	-48.26455	29.6618	-439.4189
+colle_ma05a_f143	ma05a	Botany	3	5	-72.52999	83.11519	-456.5605
+colle_ma05a_f144	ma05a	Botany	3	5	-58.09171	95.57326	-506.2981
+colle_ma05a_f145	ma05a	Mineralogy	2	4	89.72411	89.9442	-569.5023
+colle_ma05a_f146	ma05a	Entomology	2	4	58.35455	86.37587	-714.0656
+colle_ma05a_f147	ma05a	Agronomy	4	8	-83.22189	95.49191	-621.5071
+colle_ma05a_f148	ma05a	Botany	2	4	-50.50649	54.20448	-714.2888
+colle_ma05a_f149	ma05a	Forestry	2	4	-158.6245	39.77347	-664.148
+colle_ma05a_f150	ma05a	Mineralogy	2	4	-180.8445	74.06832	-647.3831
+colle_ma05a_f151	ma05a	Forestry	3	5	-195.6106	79.15738	-796.5925
+colle_ma05a_f152	ma05a	Botany	3	6	-147.941	69.82224	-806.4888
+colle_ma05a_f153	ma05a	Botany	2	4	-181.4861	33.66988	-772.3948
+colle_ma05a_f154	ma05a	Botany	2	4	-285.6995	17.2987	-697.5923
+colle_ma05a_f155	ma05a	Entomology	2	4	-544.2149	-39.99139	-815.2438
+colle_ma05a_f156	ma05a	Entomology	3	6	97.0976	-23.91129	-212.4104
+colle_ma05a_f157	ma05a	Ichthyology	3	6	204.9751	-32.12032	-193.6766
+colle_ma05a_f159	ma05a	Forestry	3	5	6.804287	-23.74184	-247.5659
+colle_ma05a_f160	ma05a	Forestry	3	6	38.19077	-112.1422	-225.677
+colle_ma05a_f161	ma05a	Forestry	3	5	-6.430035	-37.52551	-307.239
+colle_ma05a_f162	ma05a	Mineralogy	3	6	-11.11021	-19.27714	-290.1534
+colle_ma05a_f163	ma05a	Botany	3	5	56.25166	-156.0228	-182.1841
+colle_ma05a_f164	ma05a	Entomology	3	5	54.1898	-155.7096	-173.4621
+colle_ma05a_f166	ma05a	Botany	2	4	47.14043	-157.9047	-108.1172
+colle_ma05a_f167	ma05a	Forestry	2	4	-0.7941318	-157.4613	-218.7034
+colle_ma05a_f168	ma05a	Mineralogy	3	5	-148.9825	-151.5111	-198.104
+colle_ma05a_f169	ma05a	Entomology	2	4	-54.20401	-157.7928	-195.5048
+colle_ma05a_f170	ma05a	Forestry	3	5	-88.48905	-147.2031	-231.8765
+colle_ma05a_f171	ma05a	Mineralogy	2	4	-199.9062	-116.1212	68.09646
+colle_ma05a_f172	ma05a	Forestry	3	5	-299.9864	-91.21445	71.18716
+colle_ma05a_f173	ma05a	Forestry	3	5	-453.3243	-85.79342	160.4207
+colle_ma05a_f174	ma05a	Forestry	2	4	-443.4595	-72.09796	209.2505
+colle_ma05a_f175	ma05a	Forestry	3	5	-418.2618	-86.06539	230.3017
+colle_ma05a_f176	ma05a	Botany	2	4	-569.1353	-11.48806	218.1336
+colle_ma05a_f177	ma05a	Mineralogy	2	4	-501.1326	16.52867	296.4999
+colle_ma05a_f178	ma05a	Botany	2	4	1.380064	19.04199	-48.52045
+colle_ma05a_f179	ma05a	Botany	2	4	-33.82948	-157.1271	-176.8267
+colle_ma05a_f180	ma05a	Botany	2	4	34.58881	-2.744853	-53.92402
+colle_ma05a_f181	ma05a	Entomology	2	4	46.67843	-5.41508	37.29071
+colle_ma05a_f182	ma05a	Botany	2	4	167.0167	4.597055	-23.87066
+colle_ma05a_f183	ma05a	Botany	2	4	215.7115	-4.569443	29.17566
+colle_ma05a_f184	ma05a	Botany	2	4	226.8241	10.42229	-98.9185
+colle_ma05a_f185	ma05a	Forestry	3	6	326.0991	44.31992	-156.7073
+colle_ma05a_f186	ma05a	Botany	2	4	679.3033	-0.6215846	-105.7555
+colle_ma05a_f187	ma05a	Entomology	2	4	683.1404	-27.70359	46.96027
+colle_ma05a_f188	ma05a	Entomology	2	4	450.0387	-77.61756	240.0817
+colle_ma05a_f189	ma05a	Forestry	2	4	509.6593	-20.12682	257.6935
+colle_ma05a_f190	ma05a	Forestry	3	6	530.2635	-96.30661	185.5907
+colle_ma05a_f191	ma05a	Botany	2	4	135.5968	61.89191	-152.585
+colle_ma05a_f192	ma05a	Entomology	3	5	184.7692	83.18288	-427.405
+colle_ma05a_f193	ma05a	Botany	2	4	147.7022	76.80318	-303.1808
+colle_ma05a_f194	ma05a	Agronomy	3	6	183.4905	113.7056	-363.7226
+colle_ma05a_f195	ma05a	Botany	2	4	-385.9052	-11.50784	-752.9034
+colle_ma05a_f196	ma05a	Forestry	2	4	-238.145	64.5303	-708.5718
+colle_ma05a_f197	ma05a	Entomology	3	6	-198.8441	-39.58796	-793.5268
+colle_ma05a_f198	ma05a	Ichthyology	3	5	21.47015	68.01574	-501.1503
+colle_ma05a_c001	ma05a	Botany	2	4	418.3449	-10.47983	328.3537
+colle_ma05a_c002	ma05a	Forestry	4	6	311.2361	-29.46163	267.4802
+colle_ma05a_c003	ma05a	Agronomy	2	4	521.5941	-13.09747	176.5359
+colle_ma05a_c004	ma05a	Agronomy	2	4	569.9061	-16.00338	205.913
+colle_ma05a_c005	ma05a	Agronomy	2	4	563.1792	-16.0551	173.8512
+colle_ma05a_d001	ma05a	Ichthyology	2	4	581.0426	-50.27477	422.7
+colle_ma05a_d002	ma05a	Ichthyology	3	5	570.0399	-50.27477	442.4799
+colle_ma05a_f199	ma05a	Forestry	3	6	-401.1887	-43.8395	157.0198
+colle_ma05a_f200	ma05a	Entomology	3	6	-424.7713	-43.27713	152.2435
+colle_ma05a_f201	ma05a	Ichthyology	3	5	287.1793	-31.4113	19.89175
+colle_ma05a_f202	ma05a	Botany	2	4	326.1825	-31.64899	-85.63702
+colle_ma05a_f203	ma05a	Botany	2	4	-288.6685	-9.275866	-18.32676
+colle_ma07a_c001	ma07a	Botany	2	4	-222.6946	62	518.1681
+colle_ma07a_c002	ma07a	Agronomy	6	8	-212.2495	48.5488	521.8179
+colle_ma07a_c003	ma07a	Agronomy	2	4	-94.23708	51.4	409.6008
+colle_ma07a_c004	ma07a	Agronomy	2	4	-197.403	52.9	451.4557
+colle_ma07a_c011	ma07a	Agronomy	6	8	-258.7537	223.3	1773.797
+colle_ma07a_c012	ma07a	Agronomy	6	8	-275.9188	224.9	1723.708
+colle_ma07a_c013	ma07a	Forestry	2	4	160.7533	261.8046	1841.107
+colle_ma07a_c014	ma07a	Agronomy	2	4	286.5237	293.1	1808.24
+colle_ma07a_c015	ma07a	Botany	2	4	319.1233	294.298	1788.73
+colle_ma07a_f021	ma07a	Agronomy	2	4	10.66629	-0.3415276	-75.93616
+colle_ma07a_f022	ma07a	Botany	2	4	15.96407	6.364237	-16.90061
+colle_ma07a_f023	ma07a	Entomology	3	6	-23.47187	17.0913	91.32982
+colle_ma07a_f024	ma07a	Mineralogy	4	6	13.67393	6.283255	137.3493
+colle_ma07a_f025	ma07a	Mineralogy	4	6	6.437754	2.168818	200.2926
+colle_ma07a_f026	ma07a	Entomology	2	4	-18.73011	11.43036	234.1661
+colle_ma07a_f027	ma07a	Botany	2	4	-32.81906	29.84032	222.9293
+colle_ma07a_f028	ma07a	Botany	2	4	35.71989	30.75071	207.8465
+colle_ma07a_f029	ma07a	Entomology	2	4	19.11725	11.78159	272.0913
+colle_ma07a_f030	ma07a	Botany	3	6	15.53265	37.60418	283.2993
+colle_ma07a_f031	ma07a	Entomology	2	4	-17.87089	36.92351	395.8861
+colle_ma07a_f032	ma07a	Entomology	2	4	24.2285	36.93169	424.5637
+colle_ma07a_f033	ma07a	Botany	2	4	-50.78624	44.06844	432.4023
+colle_ma07a_f034	ma07a	Botany	2	4	37.69408	50.26898	398.8504
+colle_ma07a_f035	ma07a	Ichthyology	2	4	-102.088	76.01336	238.4452
+colle_ma07a_f036	ma07a	Ichthyology	3	5	-49.27675	82.19006	260.6807
+colle_ma07a_f037	ma07a	Entomology	2	4	27.22093	87.79215	344.7166
+colle_ma07a_f038	ma07a	Botany	2	4	26.49471	80.81319	250.505
+colle_ma07a_f039	ma07a	Ichthyology	3	5	108.6274	68	323.6823
+colle_ma07a_f040	ma07a	Ichthyology	2	4	193.3255	68.10464	307.4922
+colle_ma07a_f041	ma07a	Botany	2	4	132.4657	96.37912	228.1432
+colle_ma07a_f042	ma07a	Agronomy	2	4	33.95845	145.4736	253.3144
+colle_ma07a_f043	ma07a	Mineralogy	3	5	-103.9393	145.6833	276.7863
+colle_ma07a_f044	ma07a	Mineralogy	2	4	13.86499	172.1212	142.4699
+colle_ma07a_f045	ma07a	Botany	3	6	150.7231	167.9036	137.254
+colle_ma07a_f046	ma07a	Ichthyology	3	5	-147.1917	2.4	760.4546
+colle_ma07a_f047	ma07a	Agronomy	3	5	-109.436	7.900001	786.8497
+colle_ma07a_f048	ma07a	Agronomy	2	4	-70.75701	-5.1	711.2656
+colle_ma07a_f049	ma07a	Entomology	2	4	-36.67962	-46.00002	442.8716
+colle_ma07a_f050	ma07a	Mineralogy	4	6	-22.59905	-40.58313	279.4826
+colle_ma07a_f051	ma07a	Mineralogy	4	6	25.90838	-40.95549	267.1098
+colle_ma07a_f052	ma07a	Mineralogy	4	6	-20.35872	-40.62142	241.2893
+colle_ma07a_f053	ma07a	Entomology	2	4	-23.41463	-44.89545	593.241
+colle_ma07a_f054	ma07a	Botany	3	5	71.502	-43.1	611.3963
+colle_ma07a_f055	ma07a	Forestry	2	4	24.54633	-43.6	746.8305
+colle_ma07a_f056	ma07a	Forestry	2	4	140.5214	-44.60001	645.6107
+colle_ma07a_f057	ma07a	Forestry	2	4	56.61421	-43.1	866.613
+colle_ma07a_f058	ma07a	Forestry	3	6	132.4523	-43.1	792.2161
+colle_ma07a_f059	ma07a	Ichthyology	3	6	222.502	-46.6	873.6211
+colle_ma07a_f060	ma07a	Ichthyology	3	5	30.33109	-46.13616	945.889
+colle_ma07a_f061	ma07a	Botany	2	4	200.7422	-41.00001	1012.556
+colle_ma07a_f062	ma07a	Botany	3	6	285.5344	4.963728	1094.617
+colle_ma07a_f063	ma07a	Entomology	2	4	-16.21207	-22.70986	1102.383
+colle_ma07a_f064	ma07a	Agronomy	2	4	6.256395	1.167561	806.2012
+colle_ma07a_f065	ma07a	Agronomy	2	4	4.14748	27.6144	974.1459
+colle_ma07a_f066	ma07a	Entomology	2	4	-11.35182	24.24582	860.2638
+colle_ma07a_f067	ma07a	Botany	2	4	278.8396	13.97216	1153.271
+colle_ma07a_f068	ma07a	Ichthyology	3	6	211.0093	-11.65842	1152.361
+colle_ma07a_f069	ma07a	Mineralogy	3	5	223.0952	37.06304	1425.5
+colle_ma07a_f070	ma07a	Botany	2	4	356.5413	33.61983	1353.687
+colle_ma07a_f071	ma07a	Mineralogy	3	5	311.3896	26.44652	1326.372
+colle_ma07a_f072	ma07a	Mineralogy	2	4	301.2538	32.54321	1341.508
+colle_ma07a_f073	ma07a	Mineralogy	3	6	375.3986	42.28513	1530.62
+colle_ma07a_f074	ma07a	Mineralogy	3	6	423.3138	75.97054	1759.173
+colle_ma07a_f075	ma07a	Mineralogy	3	6	369.9085	1.336815	1740.384
+colle_ma07a_f076	ma07a	Mineralogy	3	6	377.6808	-26.27632	1776.315
+colle_ma07a_f077	ma07a	Mineralogy	3	6	456.7824	-11.77618	1724.108
+colle_ma07a_f078	ma07a	Mineralogy	3	6	472.86	-22.57136	1694.349
+colle_ma07a_f079	ma07a	Botany	3	6	82.96192	-45.1	1500.826
+colle_ma07a_f080	ma07a	Entomology	3	6	115.9975	-45.6	1355.394
+colle_ma07a_f081	ma07a	Agronomy	3	6	-118.9896	-43.6	1373.151
+colle_ma07a_f082	ma07a	Mineralogy	3	5	-69.90028	48.0957	1163.958
+colle_ma07a_f083	ma07a	Mineralogy	2	4	-202.1277	58.43883	1356.902
+colle_ma07a_f084	ma07a	Mineralogy	3	5	-240.603	61.95336	1285.372
+colle_ma07a_f085	ma07a	Mineralogy	2	4	-254.7065	63.35368	1009.202
+colle_ma07a_f086	ma07a	Mineralogy	2	4	-54.91133	2.593079	1227.834
+colle_ma07a_f087	ma07a	Mineralogy	2	4	-236.9225	111.8837	1512.568
+colle_ma07a_f088	ma07a	Mineralogy	3	5	-280.2851	150.6385	1642.583
+colle_ma07a_f089	ma07a	Mineralogy	3	5	-387.3452	199.8345	1714.883
+colle_ma07a_f090	ma07a	Mineralogy	3	5	-10.74466	-202	1045.606
+colle_ma07a_f091	ma07a	Mineralogy	3	5	10.45209	-202	1035.11
+colle_ma07a_f092	ma07a	Mineralogy	3	5	11.83835	-202	1062.618
+colle_ma07a_f093	ma07a	Ichthyology	2	4	13.9111	403.2	2278.517
+colle_ma07a_f094	ma07a	Ichthyology	3	6	-14.4827	475.5	2428.639
+colle_ma07a_f095	ma07a	Entomology	3	6	-15.83695	515	2583.832
+colle_ma07a_f096	ma07a	Mineralogy	2	4	-26.87081	515	2529.913
+colle_ma07a_f097	ma07a	Mineralogy	2	4	47.02452	522	2635.794
+colle_ma07a_f098	ma07a	Mineralogy	3	5	-53.70726	531	2704.02
+colle_ma07a_f099	ma07a	Mineralogy	3	6	72.37592	535	2719.33
+colle_ma07a_f100	ma07a	Mineralogy	2	4	122.6902	-46.1	1105.201
+colle_ma07a_f101	ma07a	Agronomy	2	4	75.26598	-43.6556	1154.935
+colle_ma07a_f102	ma07a	Ichthyology	2	4	247.0469	-43.6	1137.144
+colle_ma07a_f103	ma07a	Botany	2	4	172.2492	21.14019	1333.937
+colle_ma07a_f104	ma07a	Mineralogy	3	5	-162.1688	159.7825	1725.859
+colle_ma07a_f105	ma07a	Mineralogy	3	6	-176.3214	-45.86451	1670.199
+colle_ma07a_f106	ma07a	Botany	3	6	-20.07773	-28.00315	1751.204
+colle_ma07a_f107	ma07a	Mineralogy	3	5	-11.9568	-202	1061.365
+colle_ma07a_f108	ma07a	Mineralogy	4	6	-9.266413	4.5	94.8535
+colle_ma07a_f109	ma07a	Mineralogy	4	6	-9.432629	2.490179	166.7327
+colle_ma07a_f110	ma07a	Mineralogy	4	6	-21.50988	-44.09444	339.1476
+colle_ma07a_f111	ma07a	Mineralogy	4	6	17.5295	-44.83453	357.9925
+colle_ma07a_f112	ma07a	Mineralogy	4	6	-0.1361481	-36.44455	271.3158
+colle_ma07a_f113	ma07a	Ichthyology	2	4	-139.6993	143	212.2983
+colle_ma07a_f114	ma07a	Botany	3	5	30.12652	143	197.2317
+colle_ma07a_f115	ma07a	Ichthyology	3	5	-67.26582	143	180.8278
+colle_ma07a_f116	ma07a	Botany	2	4	88.48804	55.11116	424.972
+colle_ma07a_f117	ma07a	Botany	3	6	92.71976	42.89522	565.5406
+colle_ma07a_f118	ma07a	Agronomy	3	5	-116.177	-3.111009	695.9048
+colle_ma07a_f119	ma07a	Ichthyology	3	5	-43.22469	-46	634.7535
+colle_ma07a_f120	ma07a	Ichthyology	2	4	135.1973	-46	729.2397
+colle_ma07a_f121	ma07a	Agronomy	3	5	139.4902	-43.6	943.7299
+colle_ma07a_f122	ma07a	Forestry	3	6	190.328	-41.00001	994.22
+colle_ma07a_f123	ma07a	Mineralogy	3	5	-37.42044	-47.99999	1224.005
+colle_ma07a_f124	ma07a	Ichthyology	3	6	-99.23389	-44.1	1563.245
+colle_ma07a_f125	ma07a	Entomology	3	6	-110.3193	-43.6	1556.577
+colle_ma07a_f126	ma07a	Botany	3	6	-47.52489	-47.99999	1486.367
+colle_ma07a_f127	ma07a	Entomology	3	6	184.2872	-44.35847	1848.062
+colle_ma07a_f128	ma07a	Mineralogy	2	4	316.7932	-47.99	1725.193
+colle_ma07a_f129	ma07a	Mineralogy	2	4	370.679	-47.99	1581.795
+colle_ma07a_f130	ma07a	Entomology	3	6	-305.7003	55.25334	1009.522
+colle_ma07a_f131	ma07a	Botany	2	4	-309.8382	52.83249	1049.341
+colle_ma07a_f132	ma07a	Botany	2	4	-172.1869	7.529269	692.1294
+colle_ma07a_f133	ma07a	Entomology	2	4	-97.73271	19.06422	631.8096
+colle_ma07a_f134	ma07a	Mineralogy	2	4	-71.06712	32.21138	566.0874
+colle_ma09a_d001	ma08a	Agronomy	3	5	-266.9854	-164.037	-591.7515
+colle_ma09a_d004	ma08a	Forestry	2	4	-86.4953	-168	-826.9893
+colle_ma09a_d005	ma08a	Entomology	2	4	-194.4925	-141.9842	-713.4314
+colle_ma09a_d007	ma08a	Entomology	3	5	-188.3896	-170	-727.9644
+colle_ma09a_d008	ma08a	Ichthyology	2	4	-153.2496	-168	-840.9505
+colle_ma09a_d011	ma08a	Mineralogy	2	4	20.76945	-148.9101	-635.7275
+colle_ma09a_d012	ma08a	Forestry	2	4	-23.16253	-147.95	-561.3722
+colle_ma09a_d014	ma08a	Entomology	2	4	-266.8706	-154.9498	-592.3668
+colle_ma09a_d016	ma08a	Forestry	2	4	-240.305	-164	-588.838
+colle_ma09a_d017	ma08a	Forestry	2	4	-234.6043	-158.0339	-618.6897
+colle_ma09a_d018	ma08a	Forestry	2	4	-114.7638	-157.8	-560.0502
+colle_ma09a_d019	ma08a	Forestry	2	4	-139.7482	-158	-569.5269
+colle_ma09a_d020	ma08a	Forestry	2	4	-93.79514	-148	-656.6698
+colle_ma09a_d021	ma08a	Mineralogy	2	4	-8.263081	-149	-657.9336
+colle_ma09a_d023	ma08a	Forestry	2	4	3.105844	-173	-654.9493
+colle_ma09a_d024	ma08a	Forestry	2	4	-185.9742	-182.5067	-638.4624
+colle_ma09a_d027	ma08a	Entomology	3	5	-38.4823	-167.92	-657.4272
+colle_ma09a_d029	ma08a	Mineralogy	3	5	2.68646	-175	-598.5272
+colle_ma09a_d030	ma08a	Forestry	2	4	-70.0562	-166.0339	-621.9816
+colle_ma09a_d032	ma08a	Botany	3	6	-168.3778	-182.0334	-639.2632
+colle_ma09a_d033	ma08a	Entomology	2	4	-182.4868	-183.0002	-653.9316
+colle_ma09a_d034	ma08a	Entomology	2	4	-12.24591	-175	-560.3668
+colle_ma09a_d035	ma08a	Mineralogy	3	5	-37.66502	-168	-864.0022
+colle_ma09a_d036	ma08a	Forestry	2	4	-122.6609	-162.2	-751.5263
+colle_ma09a_d037	ma08a	Botany	3	6	-128.7162	-152.9715	-738.6879
+colle_ma08a_f001	ma08a	Mineralogy	3	5	-136.4096	-124.6597	60.00073
+colle_ma08a_f002	ma08a	Agronomy	2	4	-65.59778	-119.0672	112.9979
+colle_ma08a_f003	ma08a	Agronomy	2	4	-91.2087	-123.3236	69.92987
+colle_ma08a_f004	ma08a	Agronomy	2	4	-18.7017	-117.0206	86.49211
+colle_ma08a_f005	ma08a	Forestry	3	5	-135.7114	-13.33507	-42.74186
+colle_ma08a_f006	ma08a	Forestry	2	4	-71.43993	-17.70167	-41.54455
+colle_ma08a_f007	ma08a	Mineralogy	2	4	60.50831	-112.0537	80.42179
+colle_ma08a_f008	ma08a	Ichthyology	2	4	-13.78554	-113.2092	201.7473
+colle_ma08a_f009	ma08a	Mineralogy	3	5	111.5716	-33.66083	140.4161
+colle_ma08a_f010	ma08a	Mineralogy	2	4	77.79176	-72.63358	60.47014
+colle_ma08a_f011	ma08a	Botany	3	6	95.58069	-69.50192	156.5895
+colle_ma08a_f012	ma08a	Mineralogy	2	4	113.4823	-93.90218	103.7995
+colle_ma08a_f013	ma08a	Agronomy	3	5	150.1366	-95.5462	135.6245
+colle_ma08a_f014	ma08a	Agronomy	2	4	24.0729	-115.6029	165.5643
+colle_ma08a_f015	ma08a	Forestry	3	5	93.37586	-6.793142	-23.03131
+colle_ma08a_f016	ma08a	Mineralogy	3	5	156.3804	-8.999806	-94.87737
+colle_ma08a_f017	ma08a	Mineralogy	2	4	244.2176	10.92094	-69.70541
+colle_ma08a_f018	ma08a	Botany	3	6	312.4948	6.257833	-157.6145
+colle_ma08a_f019	ma08a	Entomology	2	4	169.3169	-9.244184	-15.7228
+colle_ma08a_f020	ma08a	Forestry	2	4	231.1701	-32.29151	-116.249
+colle_ma08a_f021	ma08a	Agronomy	2	4	198.5121	-16.59829	8.394599
+colle_ma08a_f022	ma08a	Forestry	3	5	-217.4637	-99.36475	-250.3853
+colle_ma08a_f023	ma08a	Agronomy	2	4	279.4507	-36.72157	-177.792
+colle_ma08a_f024	ma08a	Mineralogy	3	5	307.492	-35.0681	-259.8026
+colle_ma08a_f025	ma08a	Agronomy	2	4	-331.2001	-125.3603	-168.8874
+colle_ma08a_f026	ma08a	Forestry	3	5	206.2856	-20.53399	-395.6838
+colle_ma08a_f027	ma08a	Forestry	2	4	-313.6993	-136.6037	-25.36735
+colle_ma08a_f028	ma08a	Botany	3	6	-236.4756	-116.0949	-179.9599
+colle_ma08a_f029	ma08a	Forestry	3	5	270.9477	-36.0772	-356.6798
+colle_ma08a_f030	ma08a	Agronomy	3	5	219.0502	-35.50661	-276.3718
+colle_ma08a_f031	ma08a	Botany	3	6	162.1543	34.94694	-411.0002
+colle_ma08a_f032	ma08a	Entomology	2	4	159.9542	34.81979	-310.228
+colle_ma08a_f033	ma08a	Agronomy	2	4	159.659	11.73375	-140.3896
+colle_ma08a_f034	ma08a	Mineralogy	2	4	44.41626	6.330134	-118.0083
+colle_ma08a_f035	ma08a	Agronomy	2	4	112.8043	19.67056	-169.0577
+colle_ma08a_f036	ma08a	Mineralogy	3	5	-44.70745	17.52823	-136.2514
+colle_ma08a_f037	ma08a	Mineralogy	2	4	40.21973	-12.18298	-30.98931
+colle_ma08a_f038	ma08a	Entomology	2	4	369.084	-36.3733	-225.5426
+colle_ma08a_f039	ma08a	Entomology	2	4	15.30728	-53.54134	24.01945
+colle_ma08a_f040	ma08a	Botany	3	5	-59.02375	-71.73194	27.71764
+colle_ma08a_f041	ma08a	Mineralogy	3	5	-38.90365	-42.29182	-13.144
+colle_ma08a_f042	ma08a	Agronomy	3	6	-22.67866	-43.91918	0.4424774
+colle_ma08a_f043	ma08a	Entomology	2	4	-43.50368	10.3449	-86.63068
+colle_ma08a_f044	ma08a	Mineralogy	3	5	120.3614	34.9684	-338.6084
+colle_ma08a_f045	ma08a	Forestry	3	5	113.4993	30.93445	-253.138
+colle_ma08a_f046	ma08a	Entomology	2	4	-1.341506	34.94691	-305.446
+colle_ma08a_f047	ma08a	Forestry	2	4	-218.3447	-69.83041	-331.4707
+colle_ma08a_f048	ma08a	Mineralogy	3	6	50.14051	49.01772	-350.2862
+colle_ma08a_f049	ma08a	Botany	3	6	-197.6	-14.93674	-23.78014
+colle_ma08a_f050	ma08a	Mineralogy	3	5	-140.6461	-8.555037	-98.8148
+colle_ma08a_f051	ma08a	Mineralogy	3	5	-171.1174	-15	-188.0639
+colle_ma08a_f052	ma08a	Entomology	2	4	-199.3076	-11	-115.1304
+colle_ma08a_f053	ma08a	Ichthyology	2	4	-285.7406	-142.6663	57.28754
+colle_ma08a_f054	ma08a	Agronomy	3	6	-194.5871	-42.70924	-345.326
+colle_ma08a_f055	ma08a	Entomology	2	4	-298.9112	-126.9995	-303.9385
+colle_ma08a_f056	ma08a	Entomology	2	4	389.7924	-36.07721	-345.3794
+colle_ma08a_f057	ma08a	Forestry	3	5	180.6871	-22.45351	-58.17741
+colle_ma08a_f058	ma08a	Ichthyology	3	5	-233.7904	-143.3973	-8.967985
+colle_ma08a_f059	ma08a	Entomology	2	4	-210.7029	-104.292	-51.80619
+colle_ma08a_f060	ma08a	Forestry	3	5	-223.9717	-128.4885	-351.1277
+colle_ma08a_f061	ma08a	Agronomy	2	4	-207.7865	-42.98313	-306.502
+colle_ma08a_f062	ma08a	Agronomy	3	5	-169.9157	-98.05025	-278.7668
+colle_ma08a_f063	ma08a	Ichthyology	3	5	-364.2238	-145.0207	-363.3871
+colle_ma08a_f064	ma08a	Forestry	3	5	-288.2981	-124.2396	-97.65957
+colle_ma08a_f065	ma08a	Ichthyology	2	4	101.662	-192.3064	415.7968
+colle_ma08a_f066	ma08a	Ichthyology	3	6	46.7356	-187.1371	324.456
+colle_ma08a_f067	ma08a	Forestry	2	4	-220.8329	-27.23371	-156.9461
+colle_ma08a_f068	ma08a	Forestry	2	4	-220.5609	-27.23371	-110.1021
+colle_ma08a_f069	ma08a	Entomology	3	5	-202.8658	-27.23372	-194.3684
+colle_ma08a_f070	ma08a	Forestry	2	4	-183.3784	-27.23371	-142.4188
+colle_ma08a_f071	ma08a	Botany	3	6	-218.5029	-42.97511	-48.76826
+colle_ma08a_f072	ma08a	Entomology	3	5	-161.094	-42.97503	-98.07948
+colle_ma08a_f073	ma08a	Forestry	2	4	-157.8298	-42.97503	-162.0639
+colle_ma08a_f074	ma08a	Mineralogy	3	6	-205.2334	-80	-212.154
+colle_ma08a_f075	ma08a	Mineralogy	3	5	-159.614	-80	-217.8789
+colle_ma08a_f076	ma08a	Forestry	2	4	-157.84	-75.5	-100.5773
+colle_ma08a_f077	ma08a	Entomology	3	5	-209.0941	-75.5	-95.94817
+colle_ma08a_f078	ma08a	Botany	3	5	108.5041	-70.60451	-25.75055
+colle_ma08a_f079	ma08a	Entomology	2	4	-1.895859	-70.78784	-60.27705
+colle_ma08a_f080	ma08a	Entomology	2	4	-11.30777	-69.40927	-148.9081
+colle_ma08a_f081	ma08a	Entomology	2	4	-16.96045	-69.78059	-20.5477
+colle_ma08a_f082	ma08a	Botany	3	5	88.3247	-13.35609	-257.1228
+colle_ma08a_f083	ma08a	Entomology	2	4	151.7166	-6.592548	-341.3979
+colle_ma08a_f084	ma08a	Entomology	2	4	141.5896	-70.58997	62.08659
+colle_ma08a_f085	ma08a	Entomology	2	4	84.58003	-70.10291	-44.72445
+colle_ma08a_f086	ma08a	Forestry	2	4	-302.6911	-140.9024	-384.63
+colle_ma08a_f087	ma08a	Mineralogy	3	5	-287.5037	-117.138	-239.5759
+colle_ma08a_f088	ma08a	Agronomy	3	5	-359.0943	-132.378	-217.0536
+colle_ma08a_f089	ma08a	Mineralogy	2	4	-257.5115	-161.2269	-516.1873
+colle_ma08a_f090	ma08a	Ichthyology	2	4	-366.917	-161.249	-468.3987
+colle_ma08a_f091	ma08a	Ichthyology	2	4	-320.9072	9.859777	-436.6397
+colle_ma08a_f092	ma08a	Ichthyology	3	6	-299.3355	9.727579	-453.7339
+colle_ma08a_f093	ma08a	Botany	3	6	-189.2956	-26.79531	-348.0927
+colle_ma08a_f094	ma08a	Mineralogy	3	6	-159.9016	-14.74403	-262.9143
+colle_ma08a_c001	ma08a	Mineralogy	5	7	183.9187	-11.70078	273.9931
+colle_ma08a_c002	ma08a	Mineralogy	2	4	156.9504	-31.09012	134.7661
+colle_ma08a_c003	ma08a	Entomology	6	8	237.2449	-31.96615	152.2309
+colle_ma10a_001	ma10a	Entomology	3	5	-137.6412	57.20234	86.44282
+colle_ma10a_002	ma10a	Forestry	2	4	-826.4131	28.93463	600.1794
+colle_ma10a_003	ma10a	Entomology	3	5	-764.9311	-3.215322	540.8199
+colle_ma10a_004	ma10a	Entomology	3	5	-759.7479	-7.352484	462.1237
+colle_ma10a_005	ma10a	Entomology	3	5	-770.2029	1.199943	365.5633
+colle_ma10a_006	ma10a	Agronomy	2	4	-515.0001	-5.244365	428.7181
+colle_ma10a_007	ma10a	Entomology	3	5	-916.1163	8.01957	345.8256
+colle_ma10a_008	ma10a	Mineralogy	3	6	-932.7424	10.20957	290.8822
+colle_ma10a_009	ma10a	Entomology	2	4	-1097.583	61.72569	702.8513
+colle_ma10a_010	ma10a	Mineralogy	3	5	-1145.286	63.7756	676.6359
+colle_ma10a_012	ma10a	Botany	3	6	-731.7994	-4	138.7465
+colle_ma10a_013	ma10a	Botany	3	6	-902.1976	-4.013491	-145.0863
+colle_ma10a_014	ma10a	Ichthyology	3	5	-840.5766	7.700617	21.95193
+colle_ma10a_016	ma10a	Forestry	2	4	-261.901	7.621111	41.84758
+colle_ma10a_017	ma10a	Botany	3	6	-416.4672	-9.277918	-197.4555
+colle_ma10a_018	ma10a	Ichthyology	2	4	-390.5875	-8.520946	-145.0177
+colle_ma10a_019	ma10a	Ichthyology	3	5	-344.7726	-2.108855	527.6093
+colle_ma10a_020	ma10a	Botany	3	6	-351.2901	-2.3	554.8568
+colle_ma10a_021	ma10a	Agronomy	2	4	-346.4745	9.724741	996.91
+colle_ma10a_022	ma10a	Botany	3	5	-632.6163	1.4	772.6022
+colle_ma10a_024	ma10a	Entomology	2	4	75.09378	-5.802889	826.2751
+colle_ma10a_025	ma10a	Botany	3	6	-480.8117	-6.763851	1070.343
+colle_ma10a_027	ma10a	Forestry	2	4	-678.6721	0.3712463	841.577
+colle_ma10a_028	ma10a	Botany	2	4	-574.1922	2.459473	609.1011
+colle_ma10a_029	ma10a	Botany	2	4	-669.4261	-5.426966	250.1162
+colle_ma10a_030	ma10a	Botany	2	4	-669.5934	0.9175053	-87.4567
+colle_ma10a_031	ma10a	Entomology	2	4	145.4436	13.17775	177.1018
+colle_ma10a_032	ma10a	Forestry	2	4	118.7641	15.62303	197.6995
+colle_ma10a_033	ma10a	Mineralogy	2	4	17.96735	50.10313	123.1788
+colle_ma10a_034	ma10a	Mineralogy	2	4	-61.20477	51.51789	63.1708
+colle_ma10a_036	ma10a	Mineralogy	2	4	-740.2484	17.79115	538.6141
+colle_ma10a_037	ma10a	Mineralogy	2	4	-185.1721	57.50806	150.66
+colle_ma10a_038	ma10a	Entomology	3	5	-240.2331	60.30114	58.11806
+colle_ma10a_039	ma10a	Mineralogy	3	5	-270.8029	63.5858	223.3311
+colle_ma10a_040	ma10a	Ichthyology	2	4	186.7044	-10.87833	226.6608
+colle_ma10a_041	ma10a	Agronomy	2	4	-873.7179	8.306909	815.394
+colle_ma10a_042	ma10a	Mineralogy	3	5	-851.048	52.30267	725.342
+colle_ma10a_044	ma10a	Forestry	3	5	-955.0282	4.154112	339.3788
+colle_ma10a_046	ma10a	Ichthyology	2	4	-722.9509	-2.557132	162.7137
+colle_ma10a_047	ma10a	Botany	3	6	-943.6107	-4	-164.3167
+colle_ma10a_048	ma10a	Mineralogy	2	4	-703.5499	11.15145	-39.1592
+colle_ma10a_049	ma10a	Mineralogy	2	4	-829.4443	2.756969	-9.752451
+colle_ma10a_050	ma10a	Forestry	2	4	-904.4187	6.504864	-12.57838
+colle_ma10a_051	ma10a	Mineralogy	3	5	-587.1793	-8	-292.8708
+colle_ma10a_052	ma10a	Forestry	2	4	-875.6509	4.228621	305.463
+colle_ma10a_053	ma10a	Forestry	2	4	-945.1698	43.85529	680.017
+colle_ma10a_054	ma10a	Mineralogy	2	4	-868.5686	60.04955	593.2553
+colle_ma10a_055	ma10a	Mineralogy	2	4	-836.6832	-9.849767	954.567
+colle_ma10a_056	ma10a	Entomology	2	4	-862.5595	27.44166	199.7429
+colle_ma10a_058	ma10a	Forestry	2	4	-962.5682	36.94467	132.9307
+colle_ma10a_061	ma10a	Agronomy	3	6	-929.1214	29.49857	43.28347
+colle_ma10a_063	ma10a	Botany	2	4	-680.9708	9.373465	-162.3695
+colle_ma10a_064	ma10a	Agronomy	2	4	-809.5052	1.399158	112.8523
+colle_ma10a_065	ma10a	Botany	3	5	-774.9675	13.09429	98.74217
+colle_ma10a_067	ma10a	Botany	3	5	-803.4682	2.984533	-106.0326
+colle_ma10a_069	ma10a	Botany	3	5	-761.9421	8.506481	817.103
+colle_ma10a_070	ma10a	Forestry	2	4	-637.0999	-4.78738	128.5984
+colle_ma10a_071	ma10a	Entomology	2	4	-640.4235	1.400002	786.1478
+colle_ma10a_072	ma10a	Botany	2	4	-687.0895	3.975148	731.608
+colle_ma10a_075	ma10a	Botany	3	5	-364.7142	-4.170752	328.8556
+colle_ma10a_076	ma10a	Botany	2	4	-433.5891	-2.656187	502.3759
+colle_ma10a_077	ma10a	Forestry	2	4	-379.3954	-2.494106	428.4442
+colle_ma10a_078	ma10a	Agronomy	2	4	-398.7182	-2.283184	557.683
+colle_ma10a_079	ma10a	Forestry	2	4	-404.0724	7.065974	1004.305
+colle_ma10a_080	ma10a	Entomology	2	4	-587.33	-4.673076	441.99
+colle_ma10a_081	ma10a	Mineralogy	3	6	-955.8314	64.05648	626.8359
+colle_ma10a_082	ma10a	Mineralogy	2	4	-748.5146	-1.999619	502.1198
+colle_ma10a_083	ma10a	Entomology	2	4	-799.2357	20.21944	478.3925
+colle_ma10a_084	ma10a	Entomology	2	4	-784.6991	26.15458	427.9697
+colle_ma10a_085	ma10a	Botany	3	5	-777.7579	-0.9210119	395.3393
+colle_ma10a_086	ma10a	Agronomy	3	6	-581.778	-3.690441	8.374443
+colle_ma10a_087	ma10a	Mineralogy	2	4	-822.5188	14.10903	186.5318
+colle_ma10a_088	ma10a	Mineralogy	2	4	-754.2354	20.51763	414.0193
+colle_ma10a_089	ma10a	Mineralogy	3	6	-742.2966	19.47664	566.7632
+colle_ma10a_090	ma10a	Forestry	2	4	-565.0325	-5.402237	330.6004
+colle_ma10a_091	ma10a	Botany	3	5	-753.8768	4.856742	334.7192
+colle_ma10a_092	ma10a	Forestry	2	4	-810.6664	22.17867	391.5625
+colle_ma10a_093	ma10a	Mineralogy	3	5	-820.625	44.80397	614.757
+colle_ma10a_094	ma10a	Mineralogy	2	4	-787.8994	13.70615	701.1315
+colle_ma10a_095	ma10a	Mineralogy	2	4	-1023.188	50.48286	681.6282
+colle_ma10a_096	ma10a	Entomology	3	5	-1139.652	63.34489	688.5795
+colle_ma10a_097	ma10a	Entomology	2	4	-1091.351	61.04527	657.8999
+colle_ma10a_098	ma10a	Agronomy	2	4	-806.5756	25.33723	149.7545
+colle_ma10a_099	ma10a	Mineralogy	2	4	-1116.791	61.86543	688.0721
+colle_ma10a_101	ma10a	Mineralogy	2	4	-827.3508	1.803691	-236.8021
+colle_ma10a_102	ma10a	Agronomy	2	4	-57.98167	-9	918.7497
+colle_ma10a_103	ma10a	Forestry	3	5	-760.9763	3.311579	-261.7675
+colle_ma10a_106	ma10a	Entomology	3	5	-782.4841	3.055009	-194.2637
+colle_ma10a_107	ma10a	Entomology	2	4	-786.6396	13.25296	-230.2022
+colle_ma10a_109	ma10a	Mineralogy	2	4	-525.3094	-8	-290.9965
+colle_ma10a_110	ma10a	Forestry	2	4	-462.9746	6.995251	-192.7858
+colle_ma10a_111	ma10a	Botany	2	4	-425.8551	10.97333	-270.0772
+colle_ma10a_112	ma10a	Entomology	2	4	-385.519	7.170478	-57.3053
+colle_ma10a_113	ma10a	Agronomy	2	4	-316.2728	0.5998935	1.708885
+colle_ma10a_114	ma10a	Mineralogy	2	4	-256.515	10.71961	-161.5459
+colle_ma10a_115	ma10a	Mineralogy	2	4	-303.285	17.22825	-104.2036
+colle_ma10a_116	ma10a	Mineralogy	2	4	-331.4854	-6.684755	-196.3611
+colle_ma10a_117	ma10a	Mineralogy	3	6	-375.3219	-5.20646	-232.6574
+colle_ma10a_118	ma10a	Ichthyology	3	5	-359.8106	-8.534124	-138.3437
+colle_ma10a_120	ma10a	Forestry	2	4	-319.7057	-3.224786	172.1154
+colle_ma10a_121	ma10a	Forestry	3	5	-532.0284	-3.270462	250.4199
+colle_ma10a_122	ma10a	Mineralogy	3	5	-253.763	10.77621	351.1433
+colle_ma10a_123	ma10a	Mineralogy	2	4	-307.0072	2.57398	277.9787
+colle_ma10a_125	ma10a	Ichthyology	2	4	-329.9577	-0.732648	483.9215
+colle_ma10a_127	ma10a	Mineralogy	2	4	-245.3513	-9.678428	840.8632
+colle_ma10a_128	ma10a	Forestry	2	4	-328.9633	-1.187561	610.4179
+colle_ma10a_129	ma10a	Mineralogy	3	5	-308.0431	-2.12041	562.5257
+colle_ma10a_130	ma10a	Forestry	2	4	-381.9007	1.560525	639.7853
+colle_ma10a_131	ma10a	Agronomy	2	4	-580.5175	1.400005	738.6316
+colle_ma10a_132	ma10a	Botany	2	4	-444.026	4.450367	723.9417
+colle_ma10a_133	ma10a	Entomology	2	4	-445.0037	4.14355	929.7603
+colle_ma10a_134	ma10a	Ichthyology	2	4	-568.1725	-9.499498	1023.708
+colle_ma10a_135	ma10a	Ichthyology	2	4	-779.16	-9.94	916.28
+colle_ma10a_136	ma10a	Agronomy	3	6	-434.3924	-3.378427	1095.381
+colle_ma10a_137	ma10a	Botany	3	6	-210.5861	-0.1036309	1008.685
+colle_ma10a_138	ma10a	Forestry	3	5	-179.9755	2.4	795.4288
+colle_ma10a_139	ma10a	Forestry	2	4	-32.84645	-1.971019	812.4
+colle_ma10a_141	ma10a	Mineralogy	3	6	22.1825	5.370698	788.8388
+colle_ma10a_142	ma10a	Mineralogy	3	5	134.9407	1.911777	819.7096
+colle_ma10a_143	ma10a	Ichthyology	3	5	-738.47	-9.43	945.85
+colle_ma10a_144	ma10a	Mineralogy	3	6	153.1324	-1.007725	887.7982
+colle_ma10a_145	ma10a	Agronomy	3	6	-595.9611	1.400002	785.1255
+colle_ma10a_146	ma10a	Mineralogy	3	5	75.97356	-5.66728	1035.808
+colle_ma10a_148	ma10a	Mineralogy	2	4	-145.445	-8.3574	1033.415
+colle_ma10a_149	ma10a	Botany	2	4	-375.5165	3.396235	865.9128
+colle_ma10a_153	ma10a	Entomology	2	4	-487.6722	1.583836	-141.9201
+colle_ma10a_154	ma10a	Forestry	2	4	-288.6606	-6.234066	928.1506
+colle_ma10a_156	ma10a	Mineralogy	2	4	-296.2809	17.75664	-236.2273
+colle_ma10a_157	ma10a	Forestry	2	4	-376.6673	-5.192225	57.71622
+colle_ma10a_159	ma10a	Ichthyology	3	5	-407.99	-11.08289	1162.2
+colle_ma10a_160	ma10a	Entomology	3	5	-179.836	55.0609	907.9828
+colle_ma10a_161	ma10a	Botany	3	5	-108.7299	-8.066036	837.1896
+colle_ma10a_162	ma10a	Botany	3	5	-184.5028	-9	913.3524
+colle_ma10a_164	ma10a	Forestry	2	4	-82.65842	-9	1013.764
+colle_ma10a_165	ma10a	Mineralogy	2	4	8.757862	-4.487017	860.8101
+colle_ma10a_166	ma10a	Forestry	3	5	-405.8736	9.100705	784.7501
+colle_ma10a_167	ma10a	Forestry	2	4	-299.5306	-2.013466	830.3702
+colle_ma10a_168	ma10a	Mineralogy	2	4	-457.6466	48.66971	1206.463
+colle_ma10a_169	ma10a	Mineralogy	2	4	-434.2466	20.05626	1263.722
+colle_ma10a_170	ma10a	Ichthyology	2	4	-684.669	-8.656657	961.5652
+colle_ma10a_171	ma10a	Botany	2	4	18.01694	-5.999999	926.5264
+colle_ma10a_173	ma10a	Botany	3	6	-12.33584	-6.000001	977.4077
+colle_ma11a_c001	ma11a	Mineralogy	5	7	-234.4066	-65.50557	136.889
+colle_ma11a_c002	ma11a	Mineralogy	6	8	-221.7241	-65.50557	125.3014
+colle_ma13a_f001	ma13a	Botany	3	5	111.8126	-343.1851	611.7512
+colle_ma13a_f003	ma13a	Entomology	2	4	-75.57124	-357.2769	556.9771
+colle_ma13a_f005	ma13a	Agronomy	3	6	-275.1603	-371.8159	399.8917
+colle_ma13a_f006	ma13a	Agronomy	2	4	-160.1905	-388.8994	355.0254
+colle_ma13a_f007	ma13a	Botany	3	5	10.91951	-375.9547	449.734
+colle_ma13a_f008	ma13a	Mineralogy	3	5	97.67226	-377.7769	466.565
+colle_ma13a_f009	ma13a	Botany	3	5	118.5864	-407.5181	299.4343
+colle_ma13a_f010	ma13a	Mineralogy	3	5	50.60603	-417.6175	180.5983
+colle_ma13a_f011	ma13a	Forestry	2	4	542.4122	-386.1944	-202.1632
+colle_ma13a_f012	ma13a	Agronomy	2	4	37.85534	-391.4459	409.5637
+colle_ma13a_f013	ma13a	Entomology	2	4	-73.0125	-415.6951	280.287
+colle_ma13a_f014	ma13a	Mineralogy	3	5	-115.8732	-411.3965	167.3327
+colle_ma13a_f015	ma13a	Mineralogy	3	5	136.6564	-426.1852	33.62114
+colle_ma13a_f016	ma13a	Mineralogy	3	5	-308.4741	-422.1275	65.49158
+colle_ma13a_f017	ma13a	Entomology	2	4	-305.9873	-422.446	-70.40921
+colle_ma13a_f018	ma13a	Botany	3	5	-21.35534	-428.9718	96.36465
+colle_ma13a_f019	ma13a	Mineralogy	3	5	510.0426	-429.1152	134.7664
+colle_ma13a_f020	ma13a	Ichthyology	2	4	198.8437	-384.8819	485.2512
+colle_ma13a_f021	ma13a	Botany	2	4	243.2577	-380.4858	357.3025
+colle_ma13a_f022	ma13a	Botany	3	5	359.8607	-439.2782	34.01074
+colle_ma13a_f023	ma13a	Entomology	2	4	591.9511	-401.5526	222.1189
+colle_ma13a_f024	ma13a	Mineralogy	3	5	453.6299	-415.5907	230.9493
+colle_ma13a_f025	ma13a	Agronomy	2	4	532.9136	-357.0466	441.3484
+colle_ma13a_f026	ma13a	Entomology	2	4	720.9418	-358.211	414.8605
+colle_ma13a_f027	ma13a	Ichthyology	2	4	642.1123	-414.6212	409.3092
+colle_ma13a_f028	ma13a	Ichthyology	3	6	525.6526	-420.8482	408.9115
+colle_ma13a_f029	ma13a	Entomology	2	4	181.4542	-417.8095	-234.8916
+colle_ma13a_f030	ma13a	Agronomy	2	4	920.3793	-350.5084	188.0666
+colle_ma13a_f031	ma13a	Ichthyology	2	4	748.822	-379.6727	114.8902
+colle_ma13a_f032	ma13a	Agronomy	2	4	521.6124	-431.7736	-87.61395
+colle_ma13a_f033	ma13a	Botany	2	4	717.2709	-355.9348	-218.9439
+colle_ma13a_f034	ma13a	Mineralogy	3	5	821.9266	-350.0495	-88.34505
+colle_ma13a_f036	ma13a	Forestry	3	5	904.2521	-344.6815	-159.6702
+colle_ma13a_f037	ma13a	Agronomy	2	4	-17.1698	-430.7558	-141.435
+colle_ma13a_f038	ma13a	Mineralogy	2	4	-116.1589	-425.6284	-67.90118
+colle_ma13a_f039	ma13a	Mineralogy	3	5	-138.1192	-410.9591	-252.3906
+colle_ma13a_f040	ma13a	Forestry	2	4	987.416	-351.8222	41.21006
+colle_ma13a_f041	ma13a	Forestry	3	5	1000.809	-349.3891	-37.93741
+colle_ma13a_f042	ma13a	Forestry	3	5	924.1136	-364.3625	-33.24546
+colle_ma13a_f043	ma13a	Forestry	3	5	670.5425	-325.7731	-441.5775
+colle_ma13a_f044	ma13a	Entomology	2	4	543.6526	-338.0575	-482.3804
+colle_ma13a_f045	ma13a	Agronomy	2	4	681.7939	-404.2189	21.27176
+colle_ma13a_f046	ma13a	Entomology	2	4	565.2263	-314.1519	-620.2996
+colle_ma13a_f047	ma13a	Forestry	3	6	454.9066	-325.9396	-572.6399
+colle_ma13a_f049	ma13a	Agronomy	2	4	243.2719	-342.4403	-556.0524
+colle_ma13a_f050	ma13a	Mineralogy	2	4	100.4811	-405.3867	-249.6565
+colle_ma13a_f051	ma13a	Entomology	3	6	104.0223	-380.5593	-468.3465
+colle_ma13a_f052	ma13a	Mineralogy	2	4	239.4084	-434.5818	-148.1801
+colle_ma13a_f053	ma13a	Agronomy	2	4	-38.60815	-413.7122	-297.1009
+colle_ma13a_f054	ma13a	Botany	3	6	88.70974	-425.0589	-25.62193
+colle_ma13a_f055	ma13a	Entomology	3	6	-702.6153	-528.6534	-58.62908
+colle_ma13a_f057	ma13a	Mineralogy	2	4	302.0442	-388.1222	-326.4502
+colle_ma13a_f058	ma13a	Mineralogy	2	4	414.6216	-376.8805	378.7938
+colle_ma13a_f059	ma13a	Entomology	3	6	432.4309	-349.4511	-511.1973
+colle_ma13a_f060	ma13a	Entomology	2	4	348.6561	-424.5502	-205.9245
+colle_ma13a_f061	ma13a	Ichthyology	2	4	827.5071	-339.1896	69.58775
+colle_ma13a_f062	ma13a	Ichthyology	2	4	501.3013	-439.2786	24.30387
+colle_ma13a_f063	ma13a	Agronomy	3	6	642.6635	-370.9567	369.3803
+colle_ma13a_f064	ma13a	Mineralogy	3	5	678.1812	-374.0252	245.0134
+colle_ma13a_f065	ma13a	Botany	2	4	260.1673	-414.7805	243.6973
+colle_ma13a_f068	ma13a	Botany	2	4	344.1201	-398.4143	-280.4241
+colle_ma13a_f069	ma13a	Ichthyology	2	4	359.8016	-438.7795	155.8829
+colle_ma13a_f070	ma13a	Agronomy	2	4	132.3882	-424.9873	184.7218
+colle_ma13a_f071	ma13a	Forestry	3	5	774.3644	-374.7608	173.4132
+colle_ma13a_f072	ma13a	Mineralogy	2	4	177.1657	-408.1628	-328.9895
+colle_ma13a_f073	ma13a	Entomology	2	4	343.6565	-403.3051	315.4451
+colle_ma13a_f074	ma13a	Agronomy	2	4	319.8816	-382.5934	467.9027
+colle_ma13a_f075	ma13a	Agronomy	2	4	579.5402	-345.315	-313.3801
+colle_ma13a_f077	ma13a	Agronomy	2	4	591.5582	-419.9332	74.12836
+colle_ma13a_f078	ma13a	Forestry	3	6	793.6353	-372.9236	-67.6163
+colle_ma13a_f079	ma13a	Mineralogy	2	4	704.603	-383.6957	-113.9964
+colle_ma13a_f080	ma13a	Mineralogy	3	5	587.5071	-398.3693	229.7313
+colle_ma13a_f081	ma13a	Forestry	3	5	508.6504	-388.6409	301.9181
+colle_ma13a_f082	ma13a	Agronomy	2	4	162.902	-372.3726	368.5453
+colle_ma13a_f083	ma13a	Ichthyology	2	4	214.2176	-439.2786	-25.99465
+colle_ma13a_f084	ma13a	Forestry	2	4	628.3661	-399.7973	-90.77478
+colle_ma13a_f085	ma13a	Forestry	3	5	587.9496	-390.1677	296.8192
+colle_ma13a_f086	ma13a	Entomology	2	4	527.0377	-386.6297	378.6511
+colle_ma13a_f087	ma13a	Forestry	3	6	617.1101	-380.9759	-176.5307
+colle_ma13a_f088	ma13a	Botany	2	4	375.1483	-382.4195	-341.4724
+colle_ma13a_f089	ma13a	Botany	2	4	-82.04404	-464.8446	-23.60962
+colle_ma13a_f090	ma13a	Agronomy	2	4	-293.8465	-59.92197	560.2375
+colle_ma13a_f091	ma13a	Entomology	2	4	-340.9952	-25.85702	393.1795
+colle_ma13a_f092	ma13a	Entomology	2	4	-94.66487	-34.57527	117.2896
+colle_ma13a_f093	ma13a	Botany	2	4	-217.5973	-64.96966	350.364
+colle_ma13a_f094	ma13a	Botany	3	5	-178.8475	-66.64113	315.1003
+colle_ma13a_f095	ma13a	Botany	2	4	-248.9138	-33.2292	290.3777
+colle_ma13a_f096	ma13a	Agronomy	2	4	-284.3434	-40.36037	348.0501
+colle_ma13a_f097	ma13a	Mineralogy	2	4	-103.1127	-72.38786	253.9521
+colle_ma13a_f098	ma13a	Botany	3	5	-201.4709	-26.5204	169.2834
+colle_ma13a_f099	ma13a	Forestry	2	4	-114.3098	-41.2421	201.615
+colle_ma13a_f100	ma13a	Botany	2	4	-152.4901	-41.13307	254.0291
+colle_ma13a_f101	ma13a	Agronomy	2	4	-110.5513	-12.66045	24.5364
+colle_ma13a_f102	ma13a	Forestry	3	5	-69.13042	-12.39128	-43.54447
+colle_ma13a_f103	ma13a	Forestry	2	4	-101.8898	-37.37076	-122.1998
+colle_ma13a_f104	ma13a	Forestry	3	5	-120.4146	-35.78112	-109.3007
+colle_ma13a_f105	ma13a	Mineralogy	3	5	155.5578	11.17785	21.20228
+colle_ma13a_f106	ma13a	Mineralogy	3	5	-161.3568	-26.79091	-204.9037
+colle_ma13a_f107	ma13a	Forestry	2	4	-203.054	-23.52282	-256.3981
+colle_ma13a_f108	ma13a	Botany	2	4	-234.8802	-4.935606	-352.622
+colle_ma13a_f109	ma13a	Forestry	3	5	-232.1006	-7.231091	-218.9216
+colle_ma13a_f110	ma13a	Entomology	2	4	-181.9323	-8.799003	-464.4683
+colle_ma13a_f111	ma13a	Mineralogy	2	4	-248.8863	-90.37886	626.5328
+colle_ma13a_f112	ma13a	Mineralogy	3	5	-187.095	-4.956412	-406.3593
+colle_ma13a_f113	ma13a	Entomology	3	6	-206.7871	-8.95443	-489.9648
+colle_ma13a_f114	ma13a	Mineralogy	3	5	231.713	-66.27455	295.895
+colle_ma13a_f115	ma13a	Entomology	2	4	263.7017	-64.07027	255.1097
+colle_ma13a_f116	ma13a	Mineralogy	2	4	189.9561	-72.09402	205.8525
+colle_ma13a_f117	ma13a	Mineralogy	2	4	221.4427	-62.92294	204.1073
+colle_ma13a_f118	ma13a	Botany	2	4	156.0079	-94.73614	323.7914
+colle_ma13a_f119	ma13a	Botany	3	5	144.6818	-119.86	331.2847
+colle_ma13a_f120	ma13a	Botany	3	5	131.2971	-119.86	370.3164
+colle_ma13a_f121	ma13a	Mineralogy	2	4	156.1875	-60.88857	381.157
+colle_ma13a_f122	ma13a	Entomology	2	4	236.1638	-75.86316	392.0813
+colle_ma13a_f123	ma13a	Mineralogy	2	4	248.2552	-48.4666	315.6387
+colle_ma13a_f124	ma13a	Entomology	2	4	436.4371	-121.7164	382.4555
+colle_ma13a_f125	ma13a	Mineralogy	2	4	440.0018	-110.6154	408.3561
+colle_ma13a_f126	ma13a	Botany	3	6	460.7865	-120.822	326.6161
+colle_ma13a_f127	ma13a	Mineralogy	2	4	743.1307	-136.0591	245.6233
+colle_ma13a_f128	ma13a	Mineralogy	3	5	662.1136	-136.8073	281.6797
+colle_ma13a_f129	ma13a	Botany	3	6	707.7644	-150.8679	207.6803
+colle_ma13a_f130	ma13a	Mineralogy	2	4	771.3765	-129.2714	81.81059
+colle_ma13a_f131	ma13a	Botany	2	4	788.1732	-149.2295	123.9003
+colle_ma13a_f132	ma13a	Mineralogy	3	5	869.0582	-159.0379	129.4999
+colle_ma13a_f133	ma13a	Mineralogy	2	4	872.0679	-147.3098	-39.36404
+colle_ma13a_f134	ma13a	Mineralogy	2	4	895.6575	-153.8275	71.70873
+colle_ma13a_f135	ma13a	Mineralogy	2	4	894.8717	-135.4843	56.06165
+colle_ma13a_f136	ma13a	Mineralogy	3	5	816.2716	-240.1363	31.73656
+colle_ma13a_f137	ma13a	Mineralogy	2	4	883.5733	-329.0152	115.826
+colle_ma13a_f138	ma13a	Mineralogy	3	5	827.5886	-109.7744	-100.6308
+colle_ma13a_f140	ma13a	Botany	3	6	639.7019	-3.838542	-292.0509
+colle_ma13a_f141	ma13a	Entomology	3	6	673.6846	-28.07311	-294.3828
+colle_ma13a_f142	ma13a	Forestry	3	6	602.3484	-170.7192	-304.502
+colle_ma13a_f143	ma13a	Botany	2	4	635.3698	-312.2263	-241.5979
+colle_ma13a_f144	ma13a	Mineralogy	2	4	-13.63896	-138.7822	812.376
+colle_ma13a_f145	ma13a	Botany	3	6	797.8954	-107.9234	-96.20377
+colle_ma13a_f147	ma13a	Mineralogy	2	4	654.2473	-38.62865	-277.1241
+colle_ma13a_f148	ma13a	Mineralogy	3	5	656.9601	-24.54959	-331.2716
+colle_ma13a_f149	ma13a	Botany	3	6	641.7673	32.26593	-265.5608
+colle_ma13a_f150	ma13a	Mineralogy	2	4	656.7607	-102.2923	-271.1723
+colle_ma13a_f151	ma13a	Mineralogy	2	4	645.3207	-69.08046	-256.4541
+colle_ma13a_f152	ma13a	Mineralogy	3	5	690.0162	-123.4431	-326.5168
+colle_ma13a_f153	ma13a	Agronomy	2	4	638.981	-249.615	-347.0021
+colle_ma13a_f154	ma13a	Mineralogy	2	4	626.7815	-247.2249	-322.6123
+colle_ma13a_f156	ma13a	Mineralogy	2	4	744.372	-307.6972	-237.296
+colle_ma13a_f158	ma13a	Mineralogy	3	5	817.9865	-188.0786	45.80049
+colle_ma13a_f159	ma13a	Ichthyology	2	4	823.5955	-318.7623	119.5827
+colle_ma13a_f160	ma13a	Botany	2	4	709.522	-328.498	-339.2017
+colle_ma13a_f161	ma13a	Entomology	3	6	986.1155	-352.4619	-6.153519
+colle_ma13a_f162	ma13a	Forestry	2	4	972.9528	-353.3452	-48.20407
+colle_ma13a_f163	ma13a	Forestry	3	5	972.867	-358.2194	4.996524
+colle_ma13a_f164	ma13a	Entomology	2	4	878.5823	-317.9019	-259.9432
+colle_ma13a_f165	ma13a	Forestry	3	5	797.9296	-314.1858	-392.1984
+colle_ma13a_f168	ma13a	Forestry	3	5	495.7141	-418.597	-160.9611
+colle_ma13a_f169	ma13a	Agronomy	2	4	431.2201	-411.2584	-229.0447
+colle_ma13a_f170	ma13a	Forestry	2	4	740.4476	-314.8807	-499.0575
+colle_ma13a_f174	ma13a	Agronomy	3	6	-13.58091	-322.1036	-539.4269
+colle_ma13a_f175	ma13a	Entomology	2	4	48.83448	-338.5071	-461.3861
+colle_ma13a_f176	ma13a	Agronomy	2	4	245.0142	-390.3275	-460.5865
+colle_ma13a_f177	ma13a	Entomology	2	4	72.73853	-395.0126	-405.0056
+colle_ma13a_f178	ma13a	Forestry	3	6	-258.373	-425.6075	-15.69192
+colle_ma13a_f179	ma13a	Agronomy	3	6	-543.0152	-515.4708	46.19482
+colle_ma13a_f180	ma13a	Ichthyology	2	4	-0.2005265	-428.3643	216.1514
+colle_ma13a_f181	ma13a	Agronomy	3	6	90.62222	-424.2296	120.5337
+colle_ma13a_f182	ma13a	Mineralogy	2	4	386.046	-439.2786	-5.417558
+colle_ma13a_f183	ma13a	Mineralogy	2	4	336.1068	-439.2782	-16.84441
+colle_ma13a_f184	ma13a	Botany	3	5	-245.047	-359.1411	602.9894
+colle_ma13a_f185	ma13a	Botany	3	5	-257.4152	-350.0751	592.1217
+colle_ma13a_f186	ma13a	Agronomy	3	6	-240.5644	-359.1411	570.5134
+colle_ma13a_f187	ma13a	Forestry	3	6	589.2728	-317.3488	-719.6452
+colle_ma13a_f188	ma13a	Mineralogy	3	5	542.1108	-317.3776	-712.6977
+colle_ma13a_f189	ma13a	Ichthyology	3	6	-85.86309	-439.7837	324.0666
+colle_ma13a_f190	ma13a	Ichthyology	2	4	-85.94199	-427.0273	428.1271
+colle_ma13a_f191	ma13a	Ichthyology	2	4	28.31996	-431.5023	467.581
+colle_ma13a_f192	ma13a	Ichthyology	3	6	15.80092	-444.6466	399.1194
+colle_ma13a_f193	ma13a	Ichthyology	3	6	517.5847	-386.9918	-382.1302
+colle_ma13a_f194	ma13a	Ichthyology	2	4	522.1378	-370.3919	-482.914
+colle_ma13a_c001	ma13a	Entomology	2	4	270.7809	-4.500836	-11.51671
+colle_ma13a_f195	ma13a	Forestry	3	6	357.1637	-314.6343	-370.0667
+colle_ma13a_f196	ma13a	Agronomy	3	6	369.0287	-314.6343	-360.0473
+colle_ma15a_f001	ma15a	Botany	2	4	-167.5997	127.8744	285.8026
+colle_ma15a_f002	ma15a	Ichthyology	3	6	-129.9944	124.8526	447.0684
+colle_ma15a_f003	ma15a	Ichthyology	3	5	-174.899	129.4382	517.2729
+colle_ma15a_f004	ma15a	Ichthyology	2	4	-281.6596	124.6849	346.8312
+colle_ma15a_f005	ma15a	Mineralogy	2	4	-308.9857	46.72119	-1256.463
+colle_ma15a_f006	ma15a	Forestry	2	4	-487.9316	118.8071	27.33545
+colle_ma15a_f007	ma15a	Forestry	3	5	-551.4716	118.6306	30.33574
+colle_ma15a_f008	ma15a	Mineralogy	3	6	-524.6677	119.3974	76.37935
+colle_ma15a_f009	ma15a	Forestry	3	6	-451.3533	118.771	-21.97455
+colle_ma15a_f010	ma15a	Mineralogy	2	4	-577.4917	118.8082	-26.96347
+colle_ma15a_f011	ma15a	Botany	3	6	-474.9353	118.6685	-78.23938
+colle_ma15a_f012	ma15a	Forestry	3	5	168.0759	187.1079	107.2214
+colle_ma15a_f013	ma15a	Botany	2	4	123.2125	187.277	151.2182
+colle_ma15a_f014	ma15a	Agronomy	2	4	434.2697	267.6191	-42.32391
+colle_ma15a_f018	ma15a	Mineralogy	2	4	523.1235	270.4533	29.28731
+colle_ma15a_f019	ma15a	Ichthyology	2	4	-405.9925	105.0379	-689.9681
+colle_ma15a_f020	ma15a	Ichthyology	2	4	-404.3965	105.0379	-878.3405
+colle_ma15a_f021	ma15a	Ichthyology	3	5	-406.823	104.5928	-987.7286
+colle_ma15a_f022	ma15a	Ichthyology	3	6	237.8161	283.2941	-890.1964
+colle_ma15a_f023	ma15a	Ichthyology	3	5	231.8393	288.3197	-783.9524
+colle_ma15a_f024	ma15a	Mineralogy	2	4	274.9331	295.105	-884.3759
+colle_ma15a_f025	ma15a	Ichthyology	2	4	278.6563	295.1874	-570.44
+colle_ma15a_f026	ma15a	Forestry	3	6	-328.0073	15.20035	-1739.966
+colle_ma15a_f027	ma15a	Entomology	2	4	295.7798	288.372	-744.2575
+colle_ma15a_f028	ma15a	Entomology	3	5	228.129	222.1264	-1459.893
+colle_ma15a_f029	ma15a	Entomology	3	6	316.3949	223.4489	-1451.598
+colle_ma15a_f030	ma15a	Ichthyology	3	5	298.5418	221.6288	-1392.587
+colle_ma15a_f031	ma15a	Ichthyology	2	4	224.2949	221.6288	-1362.992
+colle_ma15a_f032	ma15a	Mineralogy	3	5	-76.03023	139.934	-1605.452
+colle_ma15a_f033	ma15a	Botany	2	4	-123.7949	140.5598	-1593.294
+colle_ma15a_f034	ma15a	Botany	3	6	56.49471	5.55021	-1452.955
+colle_ma15a_f035	ma15a	Mineralogy	3	6	219.6627	183.1503	-1757.464
+colle_ma15a_f036	ma15a	Forestry	3	6	205.1447	186.6132	-1788.627
+colle_ma15a_f037	ma15a	Forestry	3	5	179.8629	182.1938	-1736.825
+colle_ma15a_f038	ma15a	Forestry	2	4	333.8734	-0.6649535	457.8455
+colle_ma15a_f039	ma15a	Forestry	2	4	336.5789	-1.298389	504.0417
+colle_ma15a_f040	ma15a	Mineralogy	2	4	309.5997	-0.3064975	482.419
+colle_ma15a_f041	ma15a	Botany	3	5	-115.1359	125.9756	339.8795
+colle_ma15a_f042	ma15a	Mineralogy	3	5	-229.473	126.0496	494.7467
+colle_ma15a_f043	ma15a	Mineralogy	2	4	-259.8836	126.0212	447.9146
+colle_ma15a_f044	ma15a	Mineralogy	3	5	-332.0664	130.5257	429.6226
+colle_ma15a_f045	ma15a	Ichthyology	3	6	423.9193	246.8007	-36.14901
+colle_ma15a_f046	ma15a	Agronomy	2	4	426.4058	269.0779	40.57421
+colle_ma15a_f047	ma15a	Mineralogy	2	4	521.8293	269.6859	-71.0395
+colle_ma15a_f048	ma15a	Entomology	2	4	-393.557	104.906	-1077.598
+colle_ma15a_f049	ma15a	Forestry	2	4	-435.981	-1.559421	-1712.93
+colle_ma15a_f050	ma15a	Entomology	2	4	-387.8401	104.9112	-516.8278
+colle_ma15a_f051	ma15a	Mineralogy	2	4	-374.5977	104.5387	-457.7432
+colle_ma15a_f052	ma15a	Entomology	3	6	-363.3031	105.0379	-738.5776
+colle_ma15a_f053	ma15a	Mineralogy	2	4	276.0948	294.5513	-429.7732
+colle_ma15a_f054	ma15a	Mineralogy	2	4	280.4785	295.105	-1039.793
+colle_ma15a_f055	ma15a	Ichthyology	3	6	167.8972	221.6288	-1377.572
+colle_ma15a_f056	ma15a	Botany	2	4	-174.9471	50.84985	-1903.591
+colle_ma15a_f057	ma15a	Botany	3	5	-108.2611	48.99694	-1914.159
+colle_ma15a_f058	ma15a	Botany	3	5	-135.047	51.48729	-1967.158
+colle_ma15a_f059	ma15a	Mineralogy	3	5	-283.9014	5.361993	-1888.859
+colle_ma15a_f060	ma15a	Entomology	3	6	-344.3378	29.94271	-1615.78
+colle_ma15a_f061	ma15a	Forestry	3	5	-360.1831	7.703745	-1695.891
+colle_ma15a_f062	ma15a	Ichthyology	2	4	-426.4006	-9.667842	-1595.893
+colle_ma15a_f063	ma15a	Forestry	3	6	-244.1163	46.86555	-1291.038
+colle_ma15a_f064	ma15a	Agronomy	2	4	-263.759	45.458	-1270.82
+colle_ma15a_f065	ma15a	Ichthyology	3	5	-277.5124	45.08506	-1308.037
+colle_ma15a_c001	ma15a	Agronomy	4	6	-463.6672	15.31999	-1826.557
+colle_ma15a_c002	ma15a	Agronomy	4	6	-464.0245	5.437777	-1758.512
+colle_ma15a_c003	ma15a	Entomology	6	8	-417.0544	15.34806	-1829.287
+colle_ma15a_f066	ma15a	Botany	2	4	2.427056	141.9242	38.1929
+colle_ma15a_f067	ma15a	Botany	3	6	-455.6268	46.89139	-1165.297
+colle_ma16a_d002	ma16a	Mineralogy	2	4	-26.3464	7.995512	-87.18248
+colle_ma16a_d003	ma16a	Mineralogy	3	5	-43.53255	-53.88893	606.9173
+colle_ma16a_d004	ma16a	Ichthyology	2	4	-18.75206	-59.1027	696.3651
+colle_ma16a_d006	ma16a	Botany	3	6	-26.05489	-41.65566	744.4282
+colle_ma16a_d007	ma16a	Mineralogy	2	4	55.99953	-123.7935	1061.034
+colle_ma16a_d008	ma16a	Botany	2	4	-35.61037	-116.1383	1137.633
+colle_ma16a_d009	ma16a	Agronomy	2	4	-22.21122	-96.33643	1020.259
+colle_ma16a_d012	ma16a	Agronomy	2	4	-218.205	-137.3764	1204.069
+colle_ma16a_d013	ma16a	Agronomy	3	6	-158.2135	-186.9726	1149.921
+colle_ma16a_d014	ma16a	Mineralogy	3	5	-239.0186	-197.8989	1156.042
+colle_ma16a_d015	ma16a	Agronomy	2	4	-131.9101	-137.58	1216.658
+colle_ma16a_d016	ma16a	Botany	2	4	-139.776	-172.3167	1252.98
+colle_ma16a_d017	ma16a	Agronomy	2	4	-81.67618	-161.0998	1249.988
+colle_ma16a_d018	ma16a	Ichthyology	3	6	47.46549	-317.0449	1218.94
+colle_ma16a_d019	ma16a	Ichthyology	3	6	50.61886	-317.3578	1241.826
+colle_ma16a_d020	ma16a	Ichthyology	3	6	49.53913	-317.361	1252.266
+colle_ma16a_d021	ma16a	Botany	2	4	-216.0086	-274.0349	1400.617
+colle_ma16a_d022	ma16a	Botany	3	6	-227.54	-278.5351	1531.293
+colle_ma16a_d023	ma16a	Botany	2	4	-248.7197	-276.271	1471.9
+colle_ma16a_d024	ma16a	Agronomy	2	4	-271.0624	-264.1758	1490.423
+colle_ma16a_d025	ma16a	Agronomy	2	4	-327.4698	-277.3213	1563.882
+colle_ma16a_d026	ma16a	Entomology	3	6	-331.6532	-252.4061	1614.104
+colle_ma16a_d027	ma16a	Entomology	2	4	-353.0825	-252.417	1722.843
+colle_ma16a_d028	ma16a	Mineralogy	2	4	-321.0358	-252.417	1804.333
+colle_ma16a_d029	ma16a	Mineralogy	2	4	-38.60413	27.13497	-154.019
+colle_ma16a_d030	ma16a	Ichthyology	2	4	5.925009	-0.00579834	16.7902
+colle_ma16a_d031	ma16a	Mineralogy	3	6	13.12509	3.561504	126.0773
+colle_ma16a_d032	ma16a	Mineralogy	3	5	-18.41632	-13.32043	262.7985
+colle_ma16a_d033	ma16a	Agronomy	2	4	-24.29793	-26.4316	281.3675
+colle_ma16a_d034	ma16a	Agronomy	2	4	1.652908	-26.64191	323.4033
+colle_ma16a_d035	ma16a	Agronomy	3	6	0.144874	-29.95417	464.1679
+colle_ma16a_d036	ma16a	Ichthyology	3	5	-0.3345742	-64.17947	656.2087
+colle_ma16a_d037	ma16a	Botany	2	4	30.55566	-89.41884	1095.411
+colle_ma16a_d038	ma16a	Ichthyology	3	6	32.19543	-58.62395	712.2791
+colle_ma16a_d039	ma16a	Ichthyology	2	4	31.18683	-62.18265	610.0743
+colle_ma16a_d041	ma16a	Botany	2	4	-19.375	-36.74536	615.5635
+colle_ma16a_d042	ma16a	Botany	2	4	-10.83538	-36.75759	592.6433
+colle_ma16a_d045	ma16a	Botany	3	6	28.43172	-75.95522	799.4608
+colle_ma16a_d046	ma16a	Ichthyology	3	5	8.417482	-114.697	885.7423
+colle_ma16a_d047	ma16a	Agronomy	3	6	43.49235	-123.6393	1023.782
+colle_ma16a_d048	ma16a	Botany	2	4	38.14027	-123.6393	1096.449
+colle_ma16a_d049	ma16a	Agronomy	2	4	-16.70619	-123.5098	1094.405
+colle_ma16a_d051	ma16a	Botany	3	6	50.48842	-123.0605	1128.668
+colle_ma16a_d052	ma16a	Agronomy	2	4	13.14706	-90.8985	1173.321
+colle_ma16a_d053	ma16a	Agronomy	2	4	49.60643	-102.7965	1123.164
+colle_ma16a_d055	ma16a	Mineralogy	3	5	0.9758153	-105.9632	1069.31
+colle_ma16a_d056	ma16a	Agronomy	3	6	32.1025	-97.15249	985.9001
+colle_ma16a_d058	ma16a	Agronomy	3	6	-29.52168	-95.86333	1148.798
+colle_ma16a_d059	ma16a	Agronomy	2	4	-34.56147	-94.90125	1049.015
+colle_ma16a_d060	ma16a	Botany	2	4	-147.2491	-128.5643	1261.224
+colle_ma16a_d061	ma16a	Mineralogy	3	5	-188.2016	-166.4679	1256.794
+colle_ma16a_d063	ma16a	Mineralogy	2	4	-179.1608	-154.3404	1163.375
+colle_ma16a_d065	ma16a	Botany	2	4	-94.89137	-301.1168	1206.486
+colle_ma16a_d066	ma16a	Mineralogy	3	6	-147.214	-300.6615	1297.148
+colle_ma16a_d067	ma16a	Botany	3	6	-184.8827	-293.5001	1405.673
+colle_ma16a_d069	ma16a	Botany	2	4	-279.2941	-264.208	1431.227
+colle_ma16a_d071	ma16a	Entomology	2	4	-345.156	-278.6361	1491.574
+colle_ma16a_d073	ma16a	Entomology	2	4	-325.9731	-278.8541	1636.741
+colle_ma16a_d074	ma16a	Entomology	2	4	-271.2462	-278.626	1685.444
+colle_ma16a_d075	ma16a	Entomology	3	5	-282.6652	-272.8266	1797.551
+colle_ma16a_d076	ma16a	Mineralogy	2	4	-302.1822	-252.4061	1663.378
+colle_ma16a_d077	ma16a	Entomology	2	4	-331.6687	-252.417	1763.001
+colle_ma16a_d078	ma16a	Entomology	3	5	-364.4709	-252.417	1663.835
+colle_ma16a_d079	ma16a	Entomology	3	6	-297.4445	-252.4061	1728.126
+colle_ma16a_d080	ma16a	Entomology	3	5	-250.5974	-252.417	1695.839
+colle_ma16a_d081	ma16a	Agronomy	2	4	-364.1616	-290.684	1958.908
+colle_ma16a_d082	ma16a	Botany	2	4	-359.7662	-298.429	2067.165
+colle_ma16a_d083	ma16a	Mineralogy	2	4	-288.006	-313.2742	2122.721
+colle_ma16a_d084	ma16a	Mineralogy	2	4	-314.6722	-319.1308	2285.847
+colle_ma16a_d085	ma16a	Mineralogy	3	6	-279.9425	-319.1305	2396.098
+colle_ma16a_d086	ma16a	Mineralogy	2	4	-334.3698	-319.1308	2315.384
+colle_ma16a_d087	ma16a	Mineralogy	3	5	-289.147	-318.9749	2331.822
+colle_ma16a_d088	ma16a	Agronomy	3	6	-349.7155	-319.1308	2393.274
+colle_ma17a_f001	ma17a	Mineralogy	6	8	-51.42218	21.58313	-147.4745
+colle_ma17a_f002	ma17a	Botany	6	8	-158.1189	7.864962	59.20805
+colle_ma17a_f003	ma17a	Agronomy	4	6	-97.10428	-0.461171	123.1782
+colle_ma17a_f004	ma17a	Botany	4	6	-103.8252	-10.38955	126.3352
+colle_ma17a_f005	ma17a	Entomology	9	10	59.74713	-19.46989	299.9352
+colle_ma17a_f006	ma17a	Entomology	9	10	-42.98236	-15.90088	67.10345
+colle_ma17a_f007	ma17a	Entomology	9	10	-142.3036	-16.50527	136.4796
+colle_ma17a_f008	ma17a	Agronomy	4	6	1.142009	-0.3458633	133.4088
+colle_ma17a_f009	ma17a	Ichthyology	6	8	-2.394331	-13.59956	196.4409
+colle_ma17a_f010	ma17a	Entomology	2	4	-23.70254	-5.853133	-12.64537
+colle_ma17a_f011	ma17a	Mineralogy	2	4	-76.54113	12.07181	-0.02882156
+colle_ma17a_f012	ma17a	Botany	4	6	-67.83337	9.386181	46.55713
+colle_ma17a_f013	ma17a	Mineralogy	6	8	0.9256849	-23.8391	227.9566
+colle_ma17a_f014	ma17a	Entomology	2	4	10.58836	-23.77678	249.2422
+colle_ma17a_f015	ma17a	Ichthyology	9	10	106.1478	-47.23444	372.0846
+colle_ma17a_f016	ma17a	Entomology	2	4	176.7431	-79.17527	344.0222
+colle_ma17a_f017	ma17a	Entomology	2	4	355.9064	-97.68597	356.1385
+colle_ma17a_f018	ma17a	Mineralogy	2	4	256.5461	-74.05969	283.1166
+colle_ma17a_f019	ma17a	Entomology	2	4	279.6491	-33.39983	329.7177
+colle_ma17a_f020	ma17a	Ichthyology	9	10	56.44538	-10.777	-211.9021
+colle_ma17a_f021	ma17a	Botany	6	8	-103.7055	9.484066	113.2014
+colle_ma17a_f022	ma17a	Botany	6	8	-23.8926	23.98069	119.7301
+colle_ma17a_f023	ma17a	Forestry	6	8	245.179	-63.55117	322.0847
+colle_ma17a_f024	ma17a	Forestry	4	6	-38.91618	34.22083	-54.4561
+colle_ma17a_f025	ma17a	Ichthyology	9	10	-183.765	9.703695	-19.72477
+colle_ma17a_f026	ma17a	Forestry	4	6	265.15	-94.23808	336.2259
+colle_ma17a_f027	ma17a	Botany	6	8	229.0723	-45.68747	330.5118
+colle_ma17a_f028	ma17a	Mineralogy	2	4	-83.42073	22.23587	-89.67148
+colle_ma17a_f029	ma17a	Entomology	2	4	-50.0388	24.56441	129.9833
+colle_ma18a_f001	ma18a	Mineralogy	2	4	58.54949	-4.955787	-0.7433884
+colle_ma18a_f002	ma18a	Botany	2	4	74.22328	-4.932499	-57.08626
+colle_ma18a_f003	ma18a	Mineralogy	2	4	-32.51302	-4.955787	-72.36384
+colle_ma18a_f004	ma18a	Mineralogy	2	4	27.2761	-4.932499	-144.0579
+colle_ma18a_f005	ma18a	Mineralogy	2	4	56.36343	1.185879	-161.2916
+colle_ma18a_f006	ma18a	Mineralogy	2	4	64.63792	28.53288	-178.6584
+colle_ma18a_f007	ma18a	Mineralogy	2	4	82.78828	22.34604	-214.4313
+colle_ma18a_f008	ma18a	Forestry	4	6	76.02784	22.396	-77.60297
+colle_ma18a_f009	ma18a	Botany	2	4	77.33936	22.34604	45.27673
+colle_ma18a_f010	ma18a	Agronomy	6	8	41.62557	87.30542	14.65945
+colle_ma18a_f011	ma18a	Botany	2	4	153.5391	-4.95579	-203.6146
+colle_ma18a_f012	ma18a	Agronomy	6	8	118.7059	-4.95579	-284.5646
+colle_ma18a_f013	ma18a	Mineralogy	2	4	78.55457	22.34604	-292.3392
+colle_ma18a_f014	ma18a	Mineralogy	2	4	76.96796	22.346	-374.1268
+colle_ma18a_f015	ma18a	Forestry	4	6	1.294044	25.54486	-419.9478
+colle_ma18a_f016	ma18a	Mineralogy	2	4	100.8658	22.34604	-424.537
+colle_ma18a_f017	ma18a	Agronomy	2	4	88.99171	18.12551	-597.4119
+colle_ma18a_f018	ma18a	Entomology	2	4	210.7022	40.65934	-714.1832
+colle_ma18a_f019	ma18a	Entomology	2	4	154.0905	43.26624	-772.1046
+colle_ma18a_f020	ma18a	Entomology	2	4	206.9769	40.57064	-776.1212
+colle_ma18a_f021	ma18a	Entomology	2	4	218.2042	55.96999	-697.529
+colle_ma18a_f022	ma18a	Entomology	2	4	195.155	60.79105	-815.7864
+colle_ma18a_f023	ma18a	Botany	4	6	190.6445	81.71629	-1055.718
+colle_ma18a_f024	ma18a	Agronomy	2	4	544.4697	122.331	-1377.371
+colle_ma18a_f025	ma18a	Forestry	4	6	-30.18624	-4.932499	-24.87545
+colle_ma18a_f026	ma18a	Mineralogy	6	8	73.76749	-4.955788	-165.5924
+colle_ma18a_f027	ma18a	Mineralogy	2	4	100.6658	22.346	-173.1995
+colle_ma18a_f028	ma18a	Mineralogy	2	4	82.73073	22.346	-21.22079
+colle_ma18a_f029	ma18a	Forestry	4	6	31.2155	-4.932499	-208.362
+colle_ma18a_f030	ma18a	Mineralogy	2	4	32.91607	-4.932499	-315.246
+colle_ma18a_f031	ma18a	Mineralogy	2	4	65.40137	-4.95579	-262.864
+colle_ma18a_f032	ma18a	Entomology	2	4	183.2076	72.98743	-727.7996
+colle_ma18a_f033	ma18a	Entomology	2	4	170.2325	76.42076	-813.0113
+colle_ma18a_f034	ma18a	Agronomy	6	8	501.0964	122.331	-1393.013
+colle_ma20a_d001	ma20a	Mineralogy	2	4	-385.3675	-319.5999	71.91292
+colle_ma20a_d002	ma20a	Mineralogy	3	5	-377.556	-321.6436	226.1449
+colle_ma20a_d003	ma20a	Entomology	2	4	-153.2241	-207.2645	180.9761
+colle_ma20a_d004	ma20a	Mineralogy	2	4	-153.1158	-207.2645	225.9994
+colle_ma20a_d005	ma20a	Mineralogy	2	4	-152.7229	-167.1923	226.196
+colle_ma20a_d006	ma20a	Ichthyology	2	4	-79.21104	-167.1923	188.8818
+colle_ma20a_d007	ma20a	Entomology	3	5	-117.1909	-168.0922	182.4515
+colle_ma20a_d008	ma20a	Forestry	3	6	-66.38483	-141.5138	134.7376
+colle_ma20a_d009	ma20a	Entomology	3	6	-28.99936	-141.5138	96.12657
+colle_ma20a_d010	ma20a	Mineralogy	3	5	55.79799	-136.4874	66.7437
+colle_ma20a_d011	ma20a	Entomology	2	4	-3.9336	-114.6874	105.8802
+colle_ma20a_d012	ma20a	Botany	3	6	52.23144	-114.6874	105.6715
+colle_ma20a_d013	ma20a	Agronomy	3	6	48.71821	-102.0729	202.4197
+colle_ma20a_d014	ma20a	Entomology	3	6	-3.233539	-90.46307	172.6735
+colle_ma20a_d015	ma20a	Mineralogy	3	5	-36.23983	-101.8063	369.0981
+colle_ma20a_d016	ma20a	Mineralogy	2	4	42.56963	-42.00393	213.0175
+colle_ma20a_d017	ma20a	Mineralogy	3	6	-126.3906	-146.5138	77.41531
+colle_ma20a_d018	ma20a	Entomology	3	5	86.41927	-42.00394	51.89394
+colle_ma20a_d019	ma20a	Entomology	2	4	66.65296	-42.00394	34.36837
+colle_ma20a_d020	ma20a	Forestry	3	6	54.93999	-17.00393	7.800035
+colle_ma20a_d021	ma20a	Entomology	3	6	62.48718	-17.00294	13.56879
+colle_ma20a_d022	ma20a	Mineralogy	3	5	78.62775	-17.00394	84.9389
+colle_ma20a_d023	ma20a	Mineralogy	2	4	179.3305	17.97505	181.4384
+colle_ma20a_d024	ma20a	Entomology	3	5	100.8274	9.528442	287.2019
+colle_ma20a_d025	ma20a	Botany	3	6	108.5395	9.528442	254.966
+colle_ma20a_d026	ma20a	Mineralogy	3	5	168.5066	11.28419	298.7486
+colle_ma20a_d027	ma20a	Mineralogy	2	4	242.7642	121.2842	405.6278
+colle_ma20a_d028	ma20a	Forestry	2	4	394.4241	126.2842	346.3954
+colle_ma20a_d029	ma20a	Botany	2	4	413.5004	153.0951	317.1925
+colle_ma20a_d030	ma20a	Agronomy	3	5	413.0648	162.6283	225.5286
+colle_ma20a_d031	ma20a	Agronomy	3	6	318.6494	178.4941	170.4496
+colle_ma20a_d032	ma20a	Agronomy	2	4	414.0638	249.1491	32.45778
+colle_ma20a_d033	ma20a	Forestry	3	6	608.9911	256.4863	45.67871
+colle_ma20a_d034	ma20a	Botany	3	6	519.1292	249.149	58.60705
+colle_ma20a_d035	ma20a	Forestry	3	5	664.7792	256.4863	38.73018
+colle_ma20a_d036	ma20a	Botany	2	4	693.5204	256.4863	37.14978
+colle_ma20a_d037	ma20a	Agronomy	2	4	895.6216	264.4863	27.38194
+colle_ma20a_d038	ma20a	Forestry	2	4	954.7512	256.4863	59.90093
+colle_ma20a_d039	ma20a	Mineralogy	3	6	318.557	249.149	152.3332
+colle_ma20a_d040	ma20a	Agronomy	3	6	993.2935	244.5315	44.47649
+colle_ma20a_d041	ma20a	Mineralogy	3	6	344.0731	249.149	121.8315
+colle_ma20a_d042	ma20a	Mineralogy	3	5	130.901	265.0708	96.23524
+colle_ma20a_d043	ma20a	Mineralogy	2	4	36.09205	259.5091	6.116234
+colle_ma20a_d044	ma20a	Agronomy	3	6	-37.43903	270.1491	-6.027337
+colle_ma20a_d045	ma20a	Mineralogy	2	4	59.71614	259.5091	162.9227
+colle_ma20a_d046	ma20a	Botany	3	6	-487.4828	514.0818	58.08881
+colle_ma20a_d047	ma20a	Mineralogy	2	4	-488.1048	514.0818	132.391
+colle_ma20a_d048	ma20a	Mineralogy	3	6	-226.3981	513.2169	93.01357
+colle_ma20a_d049	ma20a	Ichthyology	2	4	35.83676	-130.0779	260.1476
+colle_ma20a_d050	ma20a	Ichthyology	3	5	-22.22011	-130.0779	281.2175
+colle_ma20a_d051	ma20a	Ichthyology	2	4	2.440413	-130.0779	200.6717
+colle_ma20a_d052	ma20a	Mineralogy	2	4	-344.3008	-321.698	186.0147
+colle_ma20a_d053	ma20a	Ichthyology	3	5	-50.20286	-167.1922	207.1757
+colle_ma20a_d054	ma20a	Ichthyology	3	6	-61.86801	-167.1922	240.8795
+colle_ma20a_d055	ma20a	Mineralogy	2	4	350.0329	178.4861	144.663
+colle_ma20a_d056	ma20a	Entomology	2	4	272.3021	170.1325	121.1661
+colle_ma20a_d057	ma20a	Entomology	3	6	211.4868	178.5068	137.5444
+colle_ma20a_d058	ma20a	Forestry	3	6	299.6498	249.149	128.7418
+colle_ma20a_d059	ma20a	Entomology	3	5	264.2124	249.149	149.5308
+colle_ma20a_d060	ma20a	Botany	3	5	377.5763	272.4861	130.0645
+colle_ma21a_f001	ma21a	Forestry	5	6	-31.19032	-37.96982	-498.4538
+colle_ma21a_f002	ma21a	Forestry	5	6	-81.37274	-35.67755	-595.0247
+colle_ma21a_f003	ma21a	Forestry	5	6	-111.1726	-28.85663	-733.8743
+colle_ma21a_f004	ma21a	Forestry	5	6	188.966	-12.79986	-907.981
+colle_ma21a_f005	ma21a	Forestry	5	6	21.61831	-18.15049	-905.9102
+colle_ma21a_f006	ma21a	Forestry	5	6	-33.78973	-20.87394	-854.564
+colle_ma21a_f007	ma21a	Forestry	5	6	231.9399	-41.87	-798.4176
+colle_ma21a_f008	ma21a	Forestry	5	6	79.69092	-34.85734	-523.4773
+colle_ma21a_f009	ma21a	Forestry	5	6	130.0751	-36.85805	-522.4558
 \.
 
 
@@ -40635,6 +45847,14 @@ ALTER TABLE ONLY xeno2.classes
 
 
 --
+-- Name: collection_points_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.collection_points
+    ADD CONSTRAINT collection_points_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: common_blade_names_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -40912,6 +46132,14 @@ ALTER TABLE ONLY xeno2.chip_weapons
 
 ALTER TABLE ONLY xeno2.class_roles
     ADD CONSTRAINT class_roles_class_fkey FOREIGN KEY (class) REFERENCES xeno2.classes(name);
+
+
+--
+-- Name: collection_point_drops_collection_point_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.collection_point_drops
+    ADD CONSTRAINT collection_point_drops_collection_point_fkey FOREIGN KEY (collection_point) REFERENCES xeno2.collection_points(name);
 
 
 --
