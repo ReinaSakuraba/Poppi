@@ -412,9 +412,12 @@ class Xenoblade2:
                     name,
                     weapon_filenames.filename
                 FROM xeno2.weapons
+                LEFT JOIN xeno2.chip_weapons
+                ON name=weapon
                 LEFT JOIN xeno2.weapon_filenames
                 ON weapons.filename=weapon_filenames.id
-                WHERE LOWER(name)=$1;
+                WHERE LOWER(name)=$1
+                OR LOWER(type || ' ' || REPLACE(chip, ' Chip', '')) = $1;
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
