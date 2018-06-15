@@ -14732,7 +14732,7 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 136	Reduces the cooldown time for a Blade Switch by [ML:Enhance kind=Param1 ]%.
 137	Heals [ML:Enhance kind=Param1 ]% of party's HP upon performing a Blade Switch.
 138	Extends the range of Driver-Blade Affinity by [ML:Enhance kind=Param1 ]cm.
-139	Increases Blade's Lv [ML:Enhance kind=Param1 ] Special damage by [ML:Enhance kind=Param2 ]%.
+139	Increases Lv [ML:Enhance kind=Param1 ] Special damage by [ML:Enhance kind=Param2 ]%.
 140	Adds a [ML:Enhance kind=Param1 ]% chance to create a small HP Potion for each connecting hit.
 141	Boosts the effect of HP Potions by [ML:Enhance kind=Param1 ]%.
 142	Special has [ML:Enhance kind=Param2 ]% chance to defeat non-boss foes with up to [ML:Enhance kind=Param1 ]% HP.
@@ -14878,7 +14878,7 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 282	Increases dmg a Driver deals by [ML:Enhance kind=Param1 ]% (max: [ML:Enhance ]%) each time they fall.
 283	Increases auto-attack speed by [ML:Enhance kind=Param1 ]% and Arts speed by [ML:Enhance kind=Param2 ]%.
 284	Increases dmg of lv4 Special by [ML:Enhance kind=Param1 ]% each time it's used (max: [ML:Enhance ]%).
-285	スキル効果
+285	Can negate powerful enemy attack via button challenge ([ML:Enhance kind=Param1 ] sec cooldown).
 286	[ML:Enhance kind=Param1 ]% chance to remove awakened status from enemy when using Special.
 287	Increases party critical hit rate by [ML:Enhance kind=Param1 ]% at max Affinity.
 288	Increases damage dealt by [ML:Enhance kind=Param1 ]% each time a critical hit is dealt (max: [ML:Enhance ]%).
@@ -14894,6 +14894,25 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 298	Boosts resistance to Party-Gauge- draining attacks by [ML:Enhance kind=Param1 ]%.
 299	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% more damage.
 300	Take [ML:Enhance kind=Param1 ]% less and deal [ML:Enhance kind=Param2 ]% less damage.
+301	スキル効果
+302	スキル効果
+303	スキル効果
+304	スキル効果
+305	スキル効果
+306	スキル効果
+307	スキル効果
+308	スキル効果
+309	スキル効果
+310	スキル効果
+311	スキル効果
+312	スキル効果
+313	スキル効果
+314	スキル効果
+315	スキル効果
+316	スキル効果
+317	スキル効果
+318	スキル効果
+319	スキル効果
 \.
 
 
