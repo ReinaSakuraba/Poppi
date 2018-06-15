@@ -726,6 +726,63 @@ class Xenoblade2:
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing class name.')
 
+    @utils.group(invoke_without_command=True)
+    async def xc2collection(self, ctx: utils.Context, *, name: str):
+        """Gives information for a Xenoblade Chronicles 2 collection point."""
+
+        query = """
+                SELECT
+                    name,
+                    type,
+                    CASE WHEN min != max
+                         THEN min || '-' || max
+                         ELSE min::text
+                    END AS amount,
+                    STRING_AGG(item || ': ' || prob || '%', E'\n') AS items
+                FROM (
+                    SELECT collection_point, item, SUM(probability) AS prob
+                    FROM xeno2.collection_point_drops
+                    WHERE collection_point=$1
+                    GROUP BY collection_point, item
+                    ORDER BY prob DESC
+                ) AS drops
+                JOIN xeno2.collection_points
+                ON collection_point=name
+                GROUP BY name;
+                """
+
+        record = await ctx.pool.fetchrow(query, name.lower())
+
+        if record is None:
+             return await ctx.invoke(self.xc2collection_search, name=name)
+
+        name, field_skill, amount, items = record
+
+        embed = discord.Embed(title=name)
+        embed.add_field(name='Field Skill', value=field_skill)
+        embed.add_field(name='Amount', value=amount)
+        embed.add_field(name='Items', value=items)
+
+        await ctx.send(embed=embed)
+
+    @xc2collection.command(name='all')
+    async def xc2collection_all(self, ctx: utils.Context):
+        """Lists all Xenoblade Chronicles 2 collection points."""
+
+        await self.all_entries(ctx, 'collection_points')
+
+    @xc2collection.command(name='search')
+    async def xc2collection_search(self, ctx: utils.Context, *, name: str):
+        """Searches for a Xenoblade Chronicles 2 collection point."""
+
+        await self.search_entries(ctx, name, 'collection_points', type_name='Collection point')
+
+    @xc2collection.error
+    @xc2collection_search.error
+    async def xc2collection_error(self, ctx: utils.Context, error: Exception):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing collection point name.')
+
     @commands.command()
     async def xc2pull(self, ctx, blade: str, luck: int, idea_level: int, core: str = 'Common'):
         """Shows chances for pulling a blade in Xenoblade Chronicles 2."""
