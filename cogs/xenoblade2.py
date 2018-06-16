@@ -512,7 +512,7 @@ class Xenoblade2:
         query = """
                 SELECT
                     name,
-                    effect,
+                    xeno2.format_caption(enhance_captions.caption, param, param_one, param_two),
                     'Unrefined: ' || unrefined_sell_price || E'\n'
                     'Refined: ' || refined_sell_price AS sell_price,
                     rarity,
@@ -523,8 +523,12 @@ class Xenoblade2:
                 FROM xeno2.cores
                 LEFT JOIN xeno2.core_materials
                 ON name=core
+                JOIN xeno2.enhance
+                ON cores.caption=enhance.id
+                JOIN xeno2.enhance_captions
+                ON enhance.caption=enhance_captions.id
                 WHERE LOWER(name)=$1
-                GROUP BY name
+                GROUP BY name, enhance_captions.caption, param, param_one, param_two
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
