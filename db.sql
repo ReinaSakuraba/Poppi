@@ -1974,6 +1974,12 @@ T-elos	Heartbreaker
 Poppibuster	Hyperaffinity Circuit
 Poppibuster	Hardware Acceleration
 Poppibuster	Reconstitute
+Shulk	Vision
+Shulk	Monado Enchant
+Shulk	Monado Speed
+Fiora	Warrior Valkyrie
+Fiora	Explosion of Energy
+Fiora	Unwavering Courage
 \.
 
 
@@ -2307,6 +2313,12 @@ T-elos	Leaping
 Poppibuster	Entomology
 Poppibuster	Salvaging Mastery
 Poppibuster	Superstrength
+Shulk	Salvaging Mastery
+Shulk	Keen Eye
+Shulk	Ancient Wisdom
+Fiora	Ichthyology
+Fiora	Fortitude
+Fiora	Nopon Wisdom
 \.
 
 
@@ -3519,11 +3531,11 @@ Godfrey	Male	Humanoid	Shield Hammer	Ice	2	30	25	Julian Kostov\nToru Furuya	Minor
 Wulfric	Male	Humanoid	Megalance	Earth	2	5	5	Ronan Summers\nShunsuke Takeuchi	Ryosuke Aiba	Gungnir Wardens
 Perceval	Male	Humanoid	Chroma Katana	Dark	1	20	30	Kerry Shale\nKENN	Yasushi Suzuki	Banners of Flame
 Vale	Female	Humanoid	Megalance	Dark	3	5	10	Jessica Preddy\nSayaka Sembongi	UMETSU YASUOMI	Slayswords
-Agate	Female	Humanoid	Great Axe	Earth	2	20	20	Laila Pyne\nAtsumi Tanezaki	Yusuke Kozaki	Frontier Falcons
-Gorg	Male	Humanoid	Great Axe	Water	2	20	20	Mikey O'Connor\nTomoaki Maeno	Soraya Saga	Flying Merfolk
+Agate	Female	Humanoid	Greataxe	Earth	2	20	20	Laila Pyne\nAtsumi Tanezaki	Yusuke Kozaki	Frontier Falcons
+Gorg	Male	Humanoid	Greataxe	Water	2	20	20	Mikey O'Connor\nTomoaki Maeno	Soraya Saga	Flying Merfolk
 Boreas	Male	Humanoid	Bitball	Wind	1	20	30	Jules de Jongh\nAya Hirano	I-Ⅳ	Voracious Vanguard
-Dagas	Male	Humanoid	Great Axe	Fire	3	15	15	Dar Dash\nMamoru Miyano	hakus	6th Royal Legion
-Dagas (Weak)	Male	Humanoid	Great Axe	Fire	1	5	5	Dar Dash\nMamoru Miyano	hakus	6th Royal Legion
+Dagas	Male	Humanoid	Greataxe	Fire	3	15	15	Dar Dash\nMamoru Miyano	hakus	6th Royal Legion
+Dagas (Weak)	Male	Humanoid	Greataxe	Fire	1	5	5	Dar Dash\nMamoru Miyano	hakus	6th Royal Legion
 Kasandra	Female	Humanoid	Shield Hammer	Dark	2	30	25	Kosha Engler\nInori Minase	Shirabii	Arrowroot Company
 Praxis	Female	Humanoid	Megalance	Water	1	5	5	Rebecca Kiser\nAyane Sakura	MUGITANI KOICHI (CHOCO)	Gutsy Glaives
 Theory	Female	Humanoid	Chroma Katana	Ice	2	20	30	Sarah Borges\nAyako Kawasumi	MUGITANI KOICHI (CHOCO)	Purificators
@@ -3537,7 +3549,7 @@ Sheba	Female	Humanoid	Ether Cannon	Water	3	5	15	Naomi McDonald\nAri Ozawa	PARSLE
 Vess	Female	Humanoid	Bitball	Electric	2	0	25	Lucy Newman-Williams\nMiki Takahashi	Kia Asamiya	Ting-a-Ling Troupe
 Adenine	Female	Humanoid	Knuckle Claws	Wind	2	10	30	Laurel Lefkow\nMamiko Noto	Kouji Ogata	Contrarians
 Electra	Female	Humanoid	Shield Hammer	Electric	1	30	25	Clare Corbett\nHimika Akaneya	mizu　asato	Zapmeisters
-Zenobia	Female	Humanoid	Great Axe	Wind	3	15	15	Jessica Preddy\nAyana Taketatsu	Minoru Iwamoto	Boss Buster Band
+Zenobia	Female	Humanoid	Greataxe	Wind	3	15	15	Jessica Preddy\nAyana Taketatsu	Minoru Iwamoto	Boss Buster Band
 Finch	Female	Humanoid	Shield Hammer	Wind	1	20	30	Jules de Jongh\nAoi Yuki	Kunihiko Tanaka	The Albatrojans
 Floren	Male	Humanoid	Bitball	Earth	2	5	35	Clare Corbett\nKaori Ishihara	Taiki	Florentrancers
 KOS-MOS	Female	Humanoid	Ether Cannon	Light	3	20	20	Caitlin Thorburn\nMariko Suzuki	Kunihiko Tanaka	Erde Kaiser
@@ -3550,8 +3562,10 @@ Mikhail	Male	Humanoid	Infinity Fans	Dark	3	25	30	Todd Kramer\nDaisuke Namikawa	T
 Obrona	Female	Humanoid	Brilliant Twinblades	Electric	2	5	5	Naomi McDonald\nYuri Yamaoka	MONOLITHSOFT	Team Nasty
 Perdido	Male	Humanoid	Decimation Cannon	Fire	2	5	5	Joseph May\nKeiji Hirai	MONOLITHSOFT	Indomitable Brigade
 Cressidus	Male	Humanoid	Rockrending Gauntlets	Earth	2	40	20	Kerry Shale\nKentaro Tone	MONOLITHSOFT	Atom Splitters
-T-elos	Female	Humanoid	Great Axe	Dark	3	20	20	Caitlin Thorburn\nMariko Suzuki	MUGITANI KOICHI (CHOCO)	Heaven's Trackers
+T-elos	Female	Humanoid	Greataxe	Dark	3	20	20	Caitlin Thorburn\nMariko Suzuki	MUGITANI KOICHI (CHOCO)	Heaven's Trackers
 Poppibuster	4	Humanoid	Shield Hammer	Light	3	40	35	Arina Ii / Nicholas Rowe\nMisaki Kuno / Yasuyuki Kase	Masatsugu Saito	Buster Battalion
+Shulk	Male	Humanoid	Monado	Light	3	20	20	Adam Howden\nShintaro Asanuma	Kunihiko Tanaka	Monado Busters
+Fiora	Female	Humanoid	Knives	Wind	3	10	15	Carina Reeves\nEri Nakao	Kunihiko Tanaka	Colony Nine Irregulars
 \.
 
 
@@ -46456,6 +46470,14 @@ ALTER TABLE ONLY xeno2.battle_skills
 
 
 --
+-- Name: blade_battle_skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_battle_skills
+    ADD CONSTRAINT blade_battle_skills_pkey PRIMARY KEY (blade, skill);
+
+
+--
 -- Name: blade_chances_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -46485,14 +46507,6 @@ ALTER TABLE ONLY xeno2.blade_field_skills
 
 ALTER TABLE ONLY xeno2.blade_skill_enhance
     ADD CONSTRAINT blade_skill_enhance_pkey PRIMARY KEY (skill, level);
-
-
---
--- Name: blade_skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
---
-
-ALTER TABLE ONLY xeno2.blade_battle_skills
-    ADD CONSTRAINT blade_skills_pkey PRIMARY KEY (blade, skill);
 
 
 --
@@ -46744,6 +46758,22 @@ ALTER TABLE ONLY xeno2.accessories
 
 
 --
+-- Name: blade_battle_skills_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_battle_skills
+    ADD CONSTRAINT blade_battle_skills_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
+
+
+--
+-- Name: blade_battle_skills_skill_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_battle_skills
+    ADD CONSTRAINT blade_battle_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
+
+
+--
 -- Name: blade_field_skills_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -46773,22 +46803,6 @@ ALTER TABLE ONLY xeno2.blade_skill_enhance
 
 ALTER TABLE ONLY xeno2.blade_skill_enhance
     ADD CONSTRAINT blade_skill_enhance_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
-
-
---
--- Name: blade_skills_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
---
-
-ALTER TABLE ONLY xeno2.blade_battle_skills
-    ADD CONSTRAINT blade_skills_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
-
-
---
--- Name: blade_skills_skill_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
---
-
-ALTER TABLE ONLY xeno2.blade_battle_skills
-    ADD CONSTRAINT blade_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
 
 
 --
