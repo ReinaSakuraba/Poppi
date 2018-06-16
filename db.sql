@@ -3480,6 +3480,8 @@ Lead Chip	Primitive Hammer
 Lead Chip	Nameless Katana
 Lead Chip	Primitive Ball
 Lead Chip	Primitive Knuckles
+Lead Chip	Monado (Lead)
+Lead Chip	Well-Used Blades (Lead)
 Tin Chip	Plain Sword
 Tin Chip	Plain Scimitar
 Tin Chip	Plain Rings
@@ -3496,6 +3498,8 @@ Tin Chip	Plain Hammer
 Tin Chip	Eastern Tachi
 Tin Chip	Plain Ball
 Tin Chip	Plain Knuckles
+Tin Chip	Monado (Tin)
+Tin Chip	Well-Used Blades (Tin)
 Bronze Chip	Flatform Sword
 Bronze Chip	Flatform Scimitar
 Bronze Chip	Flatform Rings
@@ -3512,6 +3516,8 @@ Bronze Chip	Flatform Hammer
 Bronze Chip	Vagrant Tachi
 Bronze Chip	Flatform Ball
 Bronze Chip	Flatform Knuckles
+Bronze Chip	Monado (Bronze)
+Bronze Chip	Well-Used Blades (Bronze)
 Silver Chip	Ornate Sword
 Silver Chip	Ornate Scimitar
 Silver Chip	Rings of Plenty
@@ -3528,6 +3534,8 @@ Silver Chip	Ornate Hammer
 Silver Chip	Katana of Plenty
 Silver Chip	Ornate Ball
 Silver Chip	Ornate Knuckles
+Silver Chip	Monado (Silver)
+Silver Chip	Well-Used Blades (Silver)
 Iron Chip	Breaker Sword
 Iron Chip	Breaker Scimitar
 Iron Chip	Breaker Rings
@@ -3544,6 +3552,8 @@ Iron Chip	Breaker Hammer
 Iron Chip	Breaker Tachi
 Iron Chip	Breaker Ball
 Iron Chip	Breaker Knuckles
+Iron Chip	Monado (Iron)
+Iron Chip	Well-Used Blades (Iron)
 Cobalt Chip	Duelist's Sword
 Cobalt Chip	Duelist's Scimitar
 Cobalt Chip	Duelist's Rings
@@ -3560,6 +3570,8 @@ Cobalt Chip	Duelist's Hammer
 Cobalt Chip	Duelist's Tachi
 Cobalt Chip	Duelist's Ball
 Cobalt Chip	Duelist's Knuckles
+Cobalt Chip	Monado (Cobalt)
+Cobalt Chip	Well-Used Blades (Cobalt)
 Steel Chip	Battle Sword
 Steel Chip	Battle Scimitar
 Steel Chip	Battle Rings
@@ -3576,6 +3588,8 @@ Steel Chip	Battle Hammer
 Steel Chip	War Tachi
 Steel Chip	Battle Ball
 Steel Chip	Battle Knuckles
+Steel Chip	Monado (Steel)
+Steel Chip	Well-Used Blades (Steel)
 Gold Chip	Snare Sword
 Gold Chip	Snare Scimitar
 Gold Chip	Plunder Rings
@@ -3592,6 +3606,8 @@ Gold Chip	Snare Hammer
 Gold Chip	Plunder Katana
 Gold Chip	Snare Ball
 Gold Chip	Snare Knuckles
+Gold Chip	Monado (Gold)
+Gold Chip	Well-Used Blades (Gold)
 Fang Chip	Sword of the Fox
 Fang Chip	Scimitar of Shores
 Fang Chip	Wild Rings
@@ -3608,6 +3624,8 @@ Fang Chip	Horn Hammer
 Fang Chip	Wildflower Tachi
 Fang Chip	Wooden Ball
 Fang Chip	Knuckles of the Crow
+Fang Chip	Monado (Fang)
+Fang Chip	Well-Used Blades (Fang)
 Wing Chip	Sword of the Dingo
 Wing Chip	Scimitar of Waves
 Wing Chip	Howling Rings
@@ -3624,6 +3642,8 @@ Wing Chip	Beastly Hammer
 Wing Chip	Meadow Katana
 Wing Chip	Maple Ball
 Wing Chip	Peak Knuckles
+Wing Chip	Monado (Wing)
+Wing Chip	Well-Used Blades (Wing)
 Scale Chip	Sword of the Lycaon
 Scale Chip	Scimitar of Calm
 Scale Chip	Shell Rings
@@ -3640,6 +3660,8 @@ Scale Chip	Raider's Hammer
 Scale Chip	Herbalist's Katana
 Scale Chip	Birch Ball
 Scale Chip	Crested Knuckles
+Scale Chip	Monado (Scale)
+Scale Chip	Well-Used Blades (Scale)
 Horn Chip	Sword of the Jackal
 Horn Chip	Scimitar of Affection
 Horn Chip	Rings of the Earth
@@ -3656,6 +3678,8 @@ Horn Chip	Crushing Hammer
 Horn Chip	Katana of Springtime
 Horn Chip	Pine Ball
 Horn Chip	Titan Knuckles
+Horn Chip	Monado (Horn)
+Horn Chip	Well-Used Blades (Horn)
 Wood Chip	Sword of the Jaguar
 Wood Chip	Scimitar of Purity
 Wood Chip	Ripper Rings
@@ -3672,6 +3696,8 @@ Wood Chip	Druid's Hammer
 Wood Chip	Shadeleaf Tachi
 Wood Chip	Linden Ball
 Wood Chip	Raider's Knuckles
+Wood Chip	Monado (Wood)
+Wood Chip	Well-Used Blades (Wood)
 Flower Chip	Sword of the Lynx
 Flower Chip	Scimitar of Splendor
 Flower Chip	Dicer Rings
@@ -3688,6 +3714,8 @@ Flower Chip	Forest Hammer
 Flower Chip	Budding Katana
 Flower Chip	Camellia Ball
 Flower Chip	Jawbone Knuckles
+Flower Chip	Monado (Flower)
+Flower Chip	Well-Used Blades (Flower)
 Glass Chip	Sword of the Puma
 Glass Chip	Scimitar of Integrity
 Glass Chip	Slicer Rings
@@ -3704,6 +3732,8 @@ Glass Chip	Highland Hammer
 Glass Chip	Greenbough Tachi
 Glass Chip	Magnolia Ball
 Glass Chip	Bear Knuckles
+Glass Chip	Monado (Glass)
+Glass Chip	Well-Used Blades (Glass)
 Forest Chip	Insect Slayer
 Forest Chip	Scimitar of Grace
 Forest Chip	Slasher Rings
@@ -3720,6 +3750,8 @@ Forest Chip	Gaia Hammer
 Forest Chip	Aesthete's Katana
 Forest Chip	Ivy Ball
 Forest Chip	Chimaera Knuckles
+Forest Chip	Monado (Forest)
+Forest Chip	Well-Used Blades (Forest)
 Turquoise Chip	Knight's Sword
 Turquoise Chip	Knight's Scimitar
 Turquoise Chip	Knight's Rings
@@ -3736,6 +3768,8 @@ Turquoise Chip	Knight's Hammer
 Turquoise Chip	Warrior's Tachi
 Turquoise Chip	Knight's Ball
 Turquoise Chip	Knight's Knuckles
+Turquoise Chip	Monado (Turquoise)
+Turquoise Chip	Well-Used Blades (Turquoise)
 Spinel Chip	Guardian's Sword
 Spinel Chip	Guardian's Scimitar
 Spinel Chip	Guardian's Rings
@@ -3752,6 +3786,8 @@ Spinel Chip	Guardian's Hammer
 Spinel Chip	Yojimbo
 Spinel Chip	Guardian's Ball
 Spinel Chip	Guardian's Knuckles
+Spinel Chip	Monado (Spinel)
+Spinel Chip	Well-Used Blades (Spinel)
 Amethyst Chip	Cavalry Sword
 Amethyst Chip	Scimitar of Prayer
 Amethyst Chip	Rings of the Maiden
@@ -3768,6 +3804,8 @@ Amethyst Chip	Concert Hammer
 Amethyst Chip	Fencer's Tachi
 Amethyst Chip	Chancy Ball
 Amethyst Chip	Face Punchers
+Amethyst Chip	Monado (Amethyst)
+Amethyst Chip	Well-Used Blades (Amethyst)
 Fluorite Chip	Valkyrie's Sword
 Fluorite Chip	Valkyrie's Scimitar
 Fluorite Chip	Valkyrie's Rings
@@ -3784,6 +3822,8 @@ Fluorite Chip	Valkyrie's Hammer
 Fluorite Chip	Flowing Tachi
 Fluorite Chip	Valkyrie's Ball
 Fluorite Chip	Valkyrie's Knuckles
+Fluorite Chip	Monado (Fluorite)
+Fluorite Chip	Well-Used Blades (Fluorite)
 Garnet Chip	Paladin's Sword
 Garnet Chip	Paladin's Scimitar
 Garnet Chip	Paladin's Rings
@@ -3800,6 +3840,8 @@ Garnet Chip	Paladin's Hammer
 Garnet Chip	Flagbearer's Tachi
 Garnet Chip	Paladin's Ball
 Garnet Chip	Paladin's Knuckles
+Garnet Chip	Monado (Garnet)
+Garnet Chip	Well-Used Blades (Garnet)
 Aquamarine Chip	Holy Sword
 Aquamarine Chip	Holy Scimitar
 Aquamarine Chip	Holy Rings
@@ -3816,6 +3858,8 @@ Aquamarine Chip	Holy Hammer
 Aquamarine Chip	Lifeline Katana
 Aquamarine Chip	Holy Ball
 Aquamarine Chip	Holy Knuckles
+Aquamarine Chip	Monado (Aquamarine)
+Aquamarine Chip	Well-Used Blades (Aquamarine)
 Opal Chip	Sword of Valor
 Opal Chip	Scimitar of Valor
 Opal Chip	Rings of Valor
@@ -3832,6 +3876,8 @@ Opal Chip	Hammer of Valor
 Opal Chip	Brave Katana
 Opal Chip	Ball of Valor
 Opal Chip	Knuckles of Valor
+Opal Chip	Monado (Opal)
+Opal Chip	Well-Used Blades (Opal)
 Zircon Chip	Zephyr Sword
 Zircon Chip	Winged Scimitar
 Zircon Chip	Airslash Rings
@@ -3848,6 +3894,8 @@ Zircon Chip	The Maestro
 Zircon Chip	Clearglass Katana
 Zircon Chip	Homing Ball
 Zircon Chip	Kaiser Knuckles
+Zircon Chip	Monado (Zircon)
+Zircon Chip	Well-Used Blades (Zircon)
 Coil Chip	Custom Sword
 Coil Chip	Custom Scimitar
 Coil Chip	Custom Rings
@@ -3864,6 +3912,8 @@ Coil Chip	Custom Hammer
 Coil Chip	Trick Katana
 Coil Chip	Custom Ball
 Coil Chip	Custom Knuckles
+Coil Chip	Monado (Coil)
+Coil Chip	Well-Used Blades (Coil)
 Chain Chip	Clockwork Sword
 Chain Chip	Clockwork Scimitar
 Chain Chip	Clockwork Rings
@@ -3880,6 +3930,8 @@ Chain Chip	Clockwork Hammer
 Chain Chip	Blackiron Tachi
 Chain Chip	Clockwork Ball
 Chain Chip	Clockwork Knuckles
+Chain Chip	Monado (Chain)
+Chain Chip	Well-Used Blades (Chain)
 Magnet Chip	Technical Sword
 Magnet Chip	Scimitar of the Owl
 Magnet Chip	Rings of Revival
@@ -3896,6 +3948,8 @@ Magnet Chip	Sonic Hammer
 Magnet Chip	Eightfold Tachi
 Magnet Chip	Stealth Ball
 Magnet Chip	Brawler Knuckles
+Magnet Chip	Monado (Magnet)
+Magnet Chip	Well-Used Blades (Magnet)
 Shaft Chip	Accelerator Sword
 Shaft Chip	Accelerator Scimitar
 Shaft Chip	Accelerator Rings
@@ -3912,6 +3966,8 @@ Shaft Chip	Accelerator Hammer
 Shaft Chip	Armored Tachi
 Shaft Chip	Accelerator Ball
 Shaft Chip	Accelerator Knuckles
+Shaft Chip	Monado (Shaft)
+Shaft Chip	Well-Used Blades (Shaft)
 Battery Chip	Turbine Sword
 Battery Chip	Turbine Scimitar
 Battery Chip	Turbine Rings
@@ -3928,6 +3984,8 @@ Battery Chip	Turbine Hammer
 Battery Chip	Mechatronic Tachi
 Battery Chip	Turbine Ball
 Battery Chip	Turbine Knuckles
+Battery Chip	Monado (Battery)
+Battery Chip	Well-Used Blades (Battery)
 Engine Chip	Ceramic Sword
 Engine Chip	Ceramic Scimitar
 Engine Chip	Ceramic Rings
@@ -3944,6 +4002,8 @@ Engine Chip	Ceramic Hammer
 Engine Chip	Steamdrive Tachi
 Engine Chip	Ceramic Ball
 Engine Chip	Ceramic Knuckles
+Engine Chip	Monado (Engine)
+Engine Chip	Well-Used Blades (Engine)
 Motor Chip	Mechanized Sword
 Motor Chip	Mechanized Scimitar
 Motor Chip	Mechanized Rings
@@ -3960,6 +4020,8 @@ Motor Chip	Mechanized Hammer
 Motor Chip	Galvanic Katana
 Motor Chip	Mechanized Ball
 Motor Chip	Mechanized Knuckles
+Motor Chip	Monado (Motor)
+Motor Chip	Well-Used Blades (Motor)
 Booster Chip	Machine Slayer
 Booster Chip	Machine Cleaver
 Booster Chip	Ferrous Rings
@@ -3976,6 +4038,8 @@ Booster Chip	The Flattener
 Booster Chip	Deus Ex Tachi
 Booster Chip	Advanced Ball
 Booster Chip	Thunderstrikers
+Booster Chip	Monado (Booster)
+Booster Chip	Well-Used Blades (Booster)
 Tri-Chip	Ancient Sword
 Tri-Chip	Ancient Scimitar
 Tri-Chip	Ancient Rings
@@ -3992,6 +4056,8 @@ Tri-Chip	Ancient Hammer
 Tri-Chip	Antique Tachi
 Tri-Chip	Ancient Ball
 Tri-Chip	Ancient Knuckles
+Tri-Chip	Monado (Tri-Chip)
+Tri-Chip	Well-Used Blades (Tri-Chip)
 Rhombus Chip	Elder Sword
 Rhombus Chip	Elder Scimitar
 Rhombus Chip	Elder Rings
@@ -4008,6 +4074,8 @@ Rhombus Chip	Elder Hammer
 Rhombus Chip	Eternal Tachi
 Rhombus Chip	Elder Ball
 Rhombus Chip	Elder Knuckles
+Rhombus Chip	Monado (Rhombus)
+Rhombus Chip	Well-Used Blades (Rhombus)
 Pentagon Chip	Blessed Sword
 Pentagon Chip	Furtive Scimitar
 Pentagon Chip	Rage of the Oceans
@@ -4024,6 +4092,8 @@ Pentagon Chip	Faultless
 Pentagon Chip	Mysterious Tachi
 Pentagon Chip	Spirit Ball
 Pentagon Chip	Mirage Knuckles
+Pentagon Chip	Monado (Pentagon)
+Pentagon Chip	Well-Used Blades (Pentagon)
 Hexagon Chip	Legendary Sword
 Hexagon Chip	Legendary Scimitar
 Hexagon Chip	Legendary Rings
@@ -4040,6 +4110,8 @@ Hexagon Chip	Legendary Hammer
 Hexagon Chip	Legendary Tachi
 Hexagon Chip	Legendary Ball
 Hexagon Chip	Legendary Knuckles
+Hexagon Chip	Monado (Hexagon)
+Hexagon Chip	Well-Used Blades (Hexagon)
 Sphere Chip	Agarthan Sword
 Sphere Chip	Agarthan Scimitar
 Sphere Chip	Agarthan Rings
@@ -4056,6 +4128,8 @@ Sphere Chip	Agarthan Hammer
 Sphere Chip	Tectonic Katana
 Sphere Chip	Agarthan Ball
 Sphere Chip	Agarthan Knuckles
+Sphere Chip	Monado (Sphere)
+Sphere Chip	Well-Used Blades (Sphere)
 Cube Chip	Sword of El Dorado
 Cube Chip	Scimitar of El Dorado
 Cube Chip	Rings of El Dorado
@@ -4072,6 +4146,8 @@ Cube Chip	Hammer of El Dorado
 Cube Chip	24-Carat Tachi
 Cube Chip	Ball of El Dorado
 Cube Chip	Knuckles of El Dorado
+Cube Chip	Monado (Cube)
+Cube Chip	Well-Used Blades (Cube)
 Polygon Chip	Sword of Eden
 Polygon Chip	Scimitar of Eden
 Polygon Chip	Rings of Eden
@@ -4088,6 +4164,8 @@ Polygon Chip	Hammer of Eden
 Polygon Chip	Neverdull Tachi
 Polygon Chip	Ball of Eden
 Polygon Chip	Knuckles of Eden
+Polygon Chip	Monado (Polygon)
+Polygon Chip	Well-Used Blades (Polygon)
 Spiral Chip	King of Sharks
 Spiral Chip	The Kraken
 Spiral Chip	Marine Slayers
@@ -4104,6 +4182,8 @@ Spiral Chip	Nautilus Hammer
 Spiral Chip	Illusive Tachi
 Spiral Chip	Jewel of Yore
 Spiral Chip	Fists of the Advent
+Spiral Chip	Monado (Spiral)
+Spiral Chip	Well-Used Blades (Spiral)
 Lodranite Chip	Adamant Sword
 Lodranite Chip	Adamant Scimitar
 Lodranite Chip	Adamant Rings
@@ -4120,6 +4200,8 @@ Lodranite Chip	Adamant Hammer
 Lodranite Chip	Tempered Katana
 Lodranite Chip	Adamant Ball
 Lodranite Chip	Adamant Knuckles
+Lodranite Chip	Monado (Lodranite)
+Lodranite Chip	Well-Used Blades (Lodranite)
 Brachinite Chip	Wootz Sword
 Brachinite Chip	Wootz Scimitar
 Brachinite Chip	Wootz Rings
@@ -4136,6 +4218,8 @@ Brachinite Chip	Wootz Hammer
 Brachinite Chip	Darksilver Tachi
 Brachinite Chip	Wootz Ball
 Brachinite Chip	Wootz Knuckles
+Brachinite Chip	Monado (Brachinite)
+Brachinite Chip	Well-Used Blades (Brachinite)
 Ureilite Chip	Energy Edge
 Ureilite Chip	Assassin's Scimitar
 Ureilite Chip	Rings of Serendipity
@@ -4152,6 +4236,8 @@ Ureilite Chip	Infallible
 Ureilite Chip	Rippling Tachi
 Ureilite Chip	The Peacemaker
 Ureilite Chip	Fists of Healing
+Ureilite Chip	Monado (Ureilite)
+Ureilite Chip	Well-Used Blades (Ureilite)
 Winonaite Chip	Orichalcum Sword
 Winonaite Chip	Orichalcum Scimitar
 Winonaite Chip	Orichalcum Rings
@@ -4168,6 +4254,8 @@ Winonaite Chip	Orichalcum Hammer
 Winonaite Chip	Unbreakable Katana
 Winonaite Chip	Orichalcum Ball
 Winonaite Chip	Orichalcum Knuckles
+Winonaite Chip	Monado (Winonaite)
+Winonaite Chip	Well-Used Blades (Winonaite)
 Nakhlite Chip	Sigma Sword
 Nakhlite Chip	Sigma Scimitar
 Nakhlite Chip	Sigma Rings
@@ -4184,6 +4272,8 @@ Nakhlite Chip	Sigma Hammer
 Nakhlite Chip	Zero Tachi
 Nakhlite Chip	Sigma Ball
 Nakhlite Chip	Sigma Knuckles
+Nakhlite Chip	Monado (Nakhlite)
+Nakhlite Chip	Well-Used Blades (Nakhlite)
 Howardite Chip	Delta Sword
 Howardite Chip	Delta Scimitar
 Howardite Chip	Delta Rings
@@ -4200,6 +4290,8 @@ Howardite Chip	Delta Hammer
 Howardite Chip	Zetsu
 Howardite Chip	Delta Ball
 Howardite Chip	Delta Knuckles
+Howardite Chip	Monado (Howardite)
+Howardite Chip	Well-Used Blades (Howardite)
 Aubrite Chip	Godspeed Sword
 Aubrite Chip	Energy Scimitar
 Aubrite Chip	Invisible Rings
@@ -4216,6 +4308,8 @@ Aubrite Chip	Growler Half-Full
 Aubrite Chip	Dimensional Katana
 Aubrite Chip	Cypher
 Aubrite Chip	Lambda Knuckles
+Aubrite Chip	Monado (Aubrite)
+Aubrite Chip	Well-Used Blades (Aubrite)
 Angrite Chip	Saintslayer Brand
 Angrite Chip	Seraphsbane
 Angrite Chip	Deity Erasers
@@ -4232,6 +4326,8 @@ Angrite Chip	Traitor to the Cause
 Angrite Chip	The Empty Sky
 Angrite Chip	Omega Ball
 Angrite Chip	Spirits of the Knife
+Angrite Chip	Monado (Angrite)
+Angrite Chip	Well-Used Blades (Angrite)
 Dark Matter Chip	Sword of Despair
 Dark Matter Chip	Scimitar of Despair
 Dark Matter Chip	Rings of Despair
@@ -4248,6 +4344,8 @@ Dark Matter Chip	Hammer of Despair
 Dark Matter Chip	Katana of Lost Hopes
 Dark Matter Chip	Ball of Despair
 Dark Matter Chip	Knuckles of Despair
+Dark Matter Chip	Monado (Dark Matter)
+Dark Matter Chip	Well-Used Blades (Dark Matter)
 Axion Chip	Sword of Chaos
 Axion Chip	Scimitar of Chaos
 Axion Chip	Rings of Chaos
@@ -4264,6 +4362,8 @@ Axion Chip	Hammer of Chaos
 Axion Chip	Katana of Chaos
 Axion Chip	Ball of Chaos
 Axion Chip	Knuckles of Chaos
+Axion Chip	Monado (Axion)
+Axion Chip	Well-Used Blades (Axion)
 Mirror Matter Chip	Mutinous Sword
 Mirror Matter Chip	Supersonic Scimitar
 Mirror Matter Chip	Rings of the Kingslayer
@@ -4280,6 +4380,8 @@ Mirror Matter Chip	Demon's Hoof
 Mirror Matter Chip	Katana of Demise
 Mirror Matter Chip	Public Enemy No. 1
 Mirror Matter Chip	Hands of Ruin
+Mirror Matter Chip	Monado (Mirror Matter)
+Mirror Matter Chip	Well-Used Blades (Mirror Matter)
 Shining Star Chip	Sword of Thanatos
 Shining Star Chip	Scimitar of Thanatos
 Shining Star Chip	Rings of Thanatos
@@ -4296,6 +4398,8 @@ Shining Star Chip	Hammer of Thanatos
 Shining Star Chip	Katana of Slaughter
 Shining Star Chip	Ball of Thanatos
 Shining Star Chip	Knuckles of Thanatos
+Shining Star Chip	Monado (Shining Star)
+Shining Star Chip	Well-Used Blades (Shining Star)
 Moon Matter Chip	Sword of Banishing
 Moon Matter Chip	Scimitar of Banishing
 Moon Matter Chip	Rings of Banishing
@@ -4312,6 +4416,8 @@ Moon Matter Chip	Hammer of Banishing
 Moon Matter Chip	Exorcist's Katana
 Moon Matter Chip	Ball of Banishing
 Moon Matter Chip	Knuckles of Banishing
+Moon Matter Chip	Monado (Moon Matter)
+Moon Matter Chip	Well-Used Blades (Moon Matter)
 Sunlight Chip	Eater of Souls
 Sunlight Chip	The Trickster
 Sunlight Chip	Specters
@@ -4328,6 +4434,8 @@ Sunlight Chip	The Lidless Eye
 Sunlight Chip	Wisdom's Cradle
 Sunlight Chip	Morningstar Ascending
 Sunlight Chip	Sacrifice
+Sunlight Chip	Monado (Sunlight)
+Sunlight Chip	Well-Used Blades (Sunlight)
 Photon Chip	Sword of Origin
 Photon Chip	Scimitar of Origin
 Photon Chip	Rings of Origin
@@ -4344,6 +4452,8 @@ Photon Chip	Hammer of Origin
 Photon Chip	Original Tachi
 Photon Chip	Ball of Origin
 Photon Chip	Knuckles of Origin
+Photon Chip	Monado (Photon)
+Photon Chip	Well-Used Blades (Photon)
 Positron Chip	Eternal Sword
 Positron Chip	Eternal Scimitar
 Positron Chip	Eternal Rings
@@ -4360,6 +4470,8 @@ Positron Chip	Eternal Hammer
 Positron Chip	Tachi of Forever
 Positron Chip	Eternal Ball
 Positron Chip	Eternal Knuckles
+Positron Chip	Monado (Positron)
+Positron Chip	Well-Used Blades (Positron)
 Hadron Chip	Final Sword
 Hadron Chip	Final Scimitar
 Hadron Chip	Final Rings
@@ -4376,6 +4488,8 @@ Hadron Chip	Final Hammer
 Hadron Chip	All That Is
 Hadron Chip	Final Ball
 Hadron Chip	Final Knuckles
+Hadron Chip	Monado (Hadron)
+Hadron Chip	Well-Used Blades (Hadron)
 Dilaton Chip	Satellite Sword
 Dilaton Chip	Satellite Scimitar
 Dilaton Chip	Satellite Rings
@@ -4392,6 +4506,8 @@ Dilaton Chip	Satellite Hammer
 Dilaton Chip	Celestial Tachi
 Dilaton Chip	Satellite Ball
 Dilaton Chip	Satellite Knuckles
+Dilaton Chip	Monado (Dilaton)
+Dilaton Chip	Well-Used Blades (Dilaton)
 Preon Chip	Meteorite Sword
 Preon Chip	Meteorite Scimitar
 Preon Chip	Meteorite Rings
@@ -4408,6 +4524,8 @@ Preon Chip	Meteorite Hammer
 Preon Chip	Shooting Star Katana
 Preon Chip	Meteorite Ball
 Preon Chip	Meteorite Knuckles
+Preon Chip	Monado (Preon)
+Preon Chip	Well-Used Blades (Preon)
 Tachyon Chip	Shooting Star
 Tachyon Chip	Scimitar of Creation
 Tachyon Chip	Transmigration
@@ -4424,6 +4542,8 @@ Tachyon Chip	Graviton Smasher
 Tachyon Chip	Andromeda
 Tachyon Chip	Eclipse of Reason
 Tachyon Chip	The First Principle
+Tachyon Chip	Monado (Tachyon)
+Tachyon Chip	Well-Used Blades (Tachyon)
 \.
 
 
@@ -16910,23 +17030,25 @@ COPY xeno2.weapon_filenames (id, filename) FROM stdin;
 378	wi_wp161401
 379	wi_wp101401
 380	dlc21_wi_wp413101
-381	\N
-382	\N
-383	\N
-384	\N
-385	\N
+381	dlc1_wi_wp513011
+382	dlc1_wi_wp503011
+383	dlc1_wi_wp503011
+384	dlc22_wi_wp414011
+385	dlc23_wi_wp415011
 386	\N
 387	\N
 388	\N
 389	\N
-390	\N
-391	\N
-392	\N
-393	\N
-394	\N
-395	\N
-396	\N
-397	\N
+390	dlc3_wi_wp718011
+391	dlc3_wi_wp730011
+392	wi_wp011101
+393	dlc3_wi_wp731011
+394	dlc3_wi_wp731011
+395	wi_wp070101
+396	wi_wp070101
+397	wi_wp140901
+398	\N
+399	\N
 \.
 
 
@@ -16938,11 +17060,11 @@ COPY xeno2.weapons (name, type, rank, damage, stability, crit_rate, block_rate, 
 Primitive Sword	Aegis Sword	1	20	8	11	10	\N	1
 Plain Sword	Aegis Sword	1	26	8	11	10	\N	1
 Flatform Sword	Aegis Sword	3	71	8	11	10	\N	1
-Ornate Sword	Aegis Sword	15	714	10	15	8	2969	1
+Ornate Sword	Aegis Sword	15	714	10	15	8	3084	1
 Breaker Sword	Aegis Sword	5	188	8	16	8	\N	1
 Duelist's Sword	Aegis Sword	5	204	11	12	10	\N	1
 Battle Sword	Aegis Sword	5	179	6	6	15	\N	1
-Snare Sword	Aegis Sword	15	680	5	8	22	2970	1
+Snare Sword	Aegis Sword	15	680	5	8	22	3085	1
 Sword of the Fox	Aegis Sword	2	38	13	19	8	\N	1
 Sword of the Dingo	Aegis Sword	2	49	13	19	8	\N	1
 Sword of the Lycaon	Aegis Sword	3	96	13	19	8	\N	1
@@ -16950,59 +17072,59 @@ Sword of the Jackal	Aegis Sword	16	753	15	19	5	\N	1
 Sword of the Jaguar	Aegis Sword	7	335	11	16	6	\N	1
 Sword of the Lynx	Aegis Sword	7	284	9	12	12	\N	1
 Sword of the Puma	Aegis Sword	7	305	15	23	3	\N	1
-Insect Slayer	Aegis Sword	16	724	10	14	11	2943	1
+Insect Slayer	Aegis Sword	16	724	10	14	11	3058	1
 Knight's Sword	Aegis Sword	4	124	10	15	10	\N	1
 Guardian's Sword	Aegis Sword	4	136	12	12	8	\N	1
-Cavalry Sword	Aegis Sword	4	150	11	14	9	2937	1
+Cavalry Sword	Aegis Sword	4	150	11	14	9	3052	1
 Valkyrie's Sword	Aegis Sword	17	794	12	17	8	\N	1
 Paladin's Sword	Aegis Sword	10	482	9	12	7	\N	1
 Holy Sword	Aegis Sword	10	445	7	8	14	\N	1
 Sword of Valor	Aegis Sword	10	454	13	19	5	\N	1
-Zephyr Sword	Aegis Sword	17	763	9	12	20	2944	1
+Zephyr Sword	Aegis Sword	17	763	9	12	20	3059	1
 Custom Sword	Aegis Sword	6	231	8	8	19	\N	1
 Clockwork Sword	Aegis Sword	6	266	6	11	10	\N	1
-Technical Sword	Aegis Sword	6	240	12	18	8	2936	1
+Technical Sword	Aegis Sword	6	240	12	18	8	3051	1
 Accelerator Sword	Aegis Sword	18	811	10	15	9	\N	1
 Turbine Sword	Aegis Sword	9	424	8	11	13	\N	1
 Ceramic Sword	Aegis Sword	9	416	10	17	13	\N	1
 Mechanized Sword	Aegis Sword	9	399	5	6	16	\N	1
-Machine Slayer	Aegis Sword	18	795	8	8	18	2947	1
+Machine Slayer	Aegis Sword	18	795	8	8	18	3062	1
 Ancient Sword	Aegis Sword	8	370	11	11	10	\N	1
 Elder Sword	Aegis Sword	8	352	8	6	18	\N	1
-Blessed Sword	Aegis Sword	8	394	16	9	8	2938	1
+Blessed Sword	Aegis Sword	8	394	16	9	8	3053	1
 Legendary Sword	Aegis Sword	19	833	15	11	9	\N	1
 Agarthan Sword	Aegis Sword	11	524	11	11	10	\N	1
 Sword of El Dorado	Aegis Sword	11	479	9	6	18	\N	1
 Sword of Eden	Aegis Sword	11	489	15	14	8	\N	1
-King of Sharks	Aegis Sword	19	800	10	4	21	2945	1
+King of Sharks	Aegis Sword	19	800	10	4	21	3060	1
 Adamant Sword	Aegis Sword	9	424	13	24	3	\N	1
 Wootz Sword	Aegis Sword	9	411	8	11	11	\N	1
-Energy Edge	Aegis Sword	9	445	10	15	7	2934	1
+Energy Edge	Aegis Sword	9	445	10	15	7	3049	1
 Orichalcum Sword	Aegis Sword	19	850	12	14	8	\N	1
 Sigma Sword	Aegis Sword	12	538	14	25	3	\N	1
 Delta Sword	Aegis Sword	12	522	8	11	12	\N	1
-Godspeed Sword	Aegis Sword	12	570	10	14	7	2960	1
-Saintslayer Brand	Aegis Sword	19	825	20	24	3	2948	1
+Godspeed Sword	Aegis Sword	12	570	10	14	7	3075	1
+Saintslayer Brand	Aegis Sword	19	825	20	24	3	3063	1
 Sword of Despair	Aegis Sword	13	560	10	14	8	\N	1
 Sword of Chaos	Aegis Sword	13	612	13	17	4	\N	1
-Mutinous Sword	Aegis Sword	13	577	18	29	2	2957	1
+Mutinous Sword	Aegis Sword	13	577	18	29	2	3072	1
 Sword of Thanatos	Aegis Sword	20	856	10	15	22	\N	1
 Sword of Banishing	Aegis Sword	20	874	18	30	2	\N	1
-Eater of Souls	Aegis Sword	20	891	15	23	5	2958	1
+Eater of Souls	Aegis Sword	20	891	15	23	5	3073	1
 Sword of Origin	Aegis Sword	14	627	9	21	8	\N	1
 Eternal Sword	Aegis Sword	14	665	5	14	10	\N	1
 Final Sword	Aegis Sword	14	608	3	9	16	\N	1
 Satellite Sword	Aegis Sword	20	865	3	15	23	\N	1
 Meteorite Sword	Aegis Sword	20	908	10	19	8	\N	1
-Shooting Star	Aegis Sword	20	900	2	20	15	2956	1
+Shooting Star	Aegis Sword	20	900	2	20	15	3071	1
 Primitive Scimitar	Catalyst Scimitar	1	18	4	8	20	\N	4
 Plain Scimitar	Catalyst Scimitar	1	23	4	8	20	\N	4
 Flatform Scimitar	Catalyst Scimitar	3	64	4	8	20	\N	4
-Ornate Scimitar	Catalyst Scimitar	15	638	5	10	15	2969	4
+Ornate Scimitar	Catalyst Scimitar	15	638	5	10	15	3084	4
 Breaker Scimitar	Catalyst Scimitar	5	167	4	11	16	\N	5
 Duelist's Scimitar	Catalyst Scimitar	5	182	6	8	20	\N	5
 Battle Scimitar	Catalyst Scimitar	5	160	3	4	30	\N	5
-Snare Scimitar	Catalyst Scimitar	15	608	3	5	44	2970	5
+Snare Scimitar	Catalyst Scimitar	15	608	3	5	44	3085	5
 Scimitar of Shores	Catalyst Scimitar	2	34	6	13	15	\N	6
 Scimitar of Waves	Catalyst Scimitar	2	44	6	13	15	\N	6
 Scimitar of Calm	Catalyst Scimitar	3	86	6	13	15	\N	6
@@ -17010,59 +17132,59 @@ Scimitar of Affection	Catalyst Scimitar	16	674	8	13	10	\N	6
 Scimitar of Purity	Catalyst Scimitar	7	299	6	11	11	\N	7
 Scimitar of Splendor	Catalyst Scimitar	7	254	5	8	23	\N	7
 Scimitar of Integrity	Catalyst Scimitar	7	272	8	15	6	\N	7
-Scimitar of Grace	Catalyst Scimitar	16	648	5	9	22	2943	7
+Scimitar of Grace	Catalyst Scimitar	16	648	5	9	22	3058	7
 Knight's Scimitar	Catalyst Scimitar	4	111	5	10	20	\N	8
 Guardian's Scimitar	Catalyst Scimitar	4	122	6	8	16	\N	8
-Scimitar of Prayer	Catalyst Scimitar	4	134	6	9	18	2938	8
+Scimitar of Prayer	Catalyst Scimitar	4	134	6	9	18	3053	8
 Valkyrie's Scimitar	Catalyst Scimitar	17	709	6	11	15	\N	8
 Paladin's Scimitar	Catalyst Scimitar	10	431	5	8	14	\N	9
 Holy Scimitar	Catalyst Scimitar	10	398	4	5	28	\N	9
 Scimitar of Valor	Catalyst Scimitar	10	406	7	13	10	\N	9
-Winged Scimitar	Catalyst Scimitar	17	682	5	8	40	2944	9
+Winged Scimitar	Catalyst Scimitar	17	682	5	8	40	3059	9
 Custom Scimitar	Catalyst Scimitar	6	207	4	5	38	\N	10
 Clockwork Scimitar	Catalyst Scimitar	6	238	3	7	20	\N	10
-Scimitar of the Owl	Catalyst Scimitar	6	215	6	12	16	2966	10
+Scimitar of the Owl	Catalyst Scimitar	6	215	6	12	16	3081	10
 Accelerator Scimitar	Catalyst Scimitar	18	725	5	10	18	\N	10
 Turbine Scimitar	Catalyst Scimitar	9	380	4	8	25	\N	11
 Ceramic Scimitar	Catalyst Scimitar	9	372	5	11	25	\N	11
 Mechanized Scimitar	Catalyst Scimitar	9	357	3	4	32	\N	11
-Machine Cleaver	Catalyst Scimitar	18	711	4	5	36	2947	11
+Machine Cleaver	Catalyst Scimitar	18	711	4	5	36	3062	11
 Ancient Scimitar	Catalyst Scimitar	8	331	6	7	20	\N	12
 Elder Scimitar	Catalyst Scimitar	8	315	4	4	36	\N	12
-Furtive Scimitar	Catalyst Scimitar	8	353	8	6	16	2963	12
+Furtive Scimitar	Catalyst Scimitar	8	353	8	6	16	3078	12
 Legendary Scimitar	Catalyst Scimitar	19	745	8	8	18	\N	12
 Agarthan Scimitar	Catalyst Scimitar	11	469	6	7	20	\N	13
 Scimitar of El Dorado	Catalyst Scimitar	11	429	5	4	36	\N	13
 Scimitar of Eden	Catalyst Scimitar	11	438	8	9	16	\N	13
-The Kraken	Catalyst Scimitar	19	716	5	3	42	2945	13
+The Kraken	Catalyst Scimitar	19	716	5	3	42	3060	13
 Adamant Scimitar	Catalyst Scimitar	9	380	6	16	6	\N	14
 Wootz Scimitar	Catalyst Scimitar	9	369	4	8	22	\N	14
-Assassin's Scimitar	Catalyst Scimitar	9	399	5	10	14	2963	14
+Assassin's Scimitar	Catalyst Scimitar	9	399	5	10	14	3078	14
 Orichalcum Scimitar	Catalyst Scimitar	19	760	6	9	15	\N	14
 Sigma Scimitar	Catalyst Scimitar	12	481	7	17	6	\N	15
 Delta Scimitar	Catalyst Scimitar	12	467	4	8	24	\N	15
-Energy Scimitar	Catalyst Scimitar	12	510	5	9	14	2935	15
-Seraphsbane	Catalyst Scimitar	19	738	10	16	5	2948	15
+Energy Scimitar	Catalyst Scimitar	12	510	5	9	14	3050	15
+Seraphsbane	Catalyst Scimitar	19	738	10	16	5	3063	15
 Scimitar of Despair	Catalyst Scimitar	13	501	5	9	16	\N	16
 Scimitar of Chaos	Catalyst Scimitar	13	547	6	11	8	\N	16
-Supersonic Scimitar	Catalyst Scimitar	13	516	9	19	4	2937	16
+Supersonic Scimitar	Catalyst Scimitar	13	516	9	19	4	3052	16
 Scimitar of Thanatos	Catalyst Scimitar	20	765	5	10	44	\N	17
 Scimitar of Banishing	Catalyst Scimitar	20	781	9	20	4	\N	17
-The Trickster	Catalyst Scimitar	20	796	8	15	10	2960	17
+The Trickster	Catalyst Scimitar	20	796	8	15	10	3075	17
 Scimitar of Origin	Catalyst Scimitar	14	561	5	14	15	\N	18
 Eternal Scimitar	Catalyst Scimitar	14	595	3	9	20	\N	18
 Final Scimitar	Catalyst Scimitar	14	544	2	6	32	\N	18
 Satellite Scimitar	Catalyst Scimitar	20	773	1	10	46	\N	19
 Meteorite Scimitar	Catalyst Scimitar	20	812	5	13	16	\N	19
-Scimitar of Creation	Catalyst Scimitar	20	804	1	14	30	2965	19
+Scimitar of Creation	Catalyst Scimitar	20	804	1	14	30	3080	19
 Primitive Rings	Twin Rings	1	14	4	4	10	\N	21
 Plain Rings	Twin Rings	1	18	4	4	10	\N	21
 Flatform Rings	Twin Rings	3	52	4	4	10	\N	21
-Rings of Plenty	Twin Rings	15	523	5	5	8	2969	21
+Rings of Plenty	Twin Rings	15	523	5	5	8	3084	21
 Breaker Rings	Twin Rings	5	138	4	5	8	\N	23
 Duelist's Rings	Twin Rings	5	150	6	4	10	\N	23
 Battle Rings	Twin Rings	5	131	3	2	15	\N	23
-Plunder Rings	Twin Rings	15	498	3	3	22	2970	23
+Plunder Rings	Twin Rings	15	498	3	3	22	3085	23
 Wild Rings	Twin Rings	2	28	6	6	8	\N	25
 Howling Rings	Twin Rings	2	36	6	6	8	\N	25
 Shell Rings	Twin Rings	3	70	6	6	8	\N	25
@@ -17070,59 +17192,59 @@ Rings of the Earth	Twin Rings	16	551	8	6	5	\N	25
 Ripper Rings	Twin Rings	7	245	6	5	6	\N	27
 Dicer Rings	Twin Rings	7	208	5	4	12	\N	27
 Slicer Rings	Twin Rings	7	223	8	8	3	\N	27
-Slasher Rings	Twin Rings	16	530	5	5	11	2942	27
+Slasher Rings	Twin Rings	16	530	5	5	11	3057	27
 Knight's Rings	Twin Rings	4	91	5	5	10	\N	29
 Guardian's Rings	Twin Rings	4	100	6	4	8	\N	29
-Rings of the Maiden	Twin Rings	4	110	6	5	9	2961	29
+Rings of the Maiden	Twin Rings	4	110	6	5	9	3076	29
 Valkyrie's Rings	Twin Rings	17	580	6	6	8	\N	29
 Paladin's Rings	Twin Rings	10	353	5	4	7	\N	31
 Holy Rings	Twin Rings	10	326	4	3	14	\N	31
 Rings of Valor	Twin Rings	10	333	7	6	5	\N	31
-Airslash Rings	Twin Rings	17	558	5	4	20	2944	31
+Airslash Rings	Twin Rings	17	558	5	4	20	3059	31
 Custom Rings	Twin Rings	6	169	4	3	19	\N	33
 Clockwork Rings	Twin Rings	6	194	3	4	10	\N	33
-Rings of Revival	Twin Rings	6	176	6	6	8	2965	33
+Rings of Revival	Twin Rings	6	176	6	6	8	3080	33
 Accelerator Rings	Twin Rings	18	594	5	5	9	\N	33
 Turbine Rings	Twin Rings	9	311	4	4	13	\N	35
 Ceramic Rings	Twin Rings	9	305	5	6	13	\N	35
 Mechanized Rings	Twin Rings	9	292	3	2	16	\N	35
-Ferrous Rings	Twin Rings	18	582	4	3	18	2947	35
+Ferrous Rings	Twin Rings	18	582	4	3	18	3062	35
 Ancient Rings	Twin Rings	8	270	6	4	10	\N	37
 Elder Rings	Twin Rings	8	257	4	2	18	\N	37
-Rage of the Oceans	Twin Rings	8	288	8	3	8	2952	37
+Rage of the Oceans	Twin Rings	8	288	8	3	8	3067	37
 Legendary Rings	Twin Rings	19	610	8	4	9	\N	37
 Agarthan Rings	Twin Rings	11	384	6	4	10	\N	39
 Rings of El Dorado	Twin Rings	11	351	5	2	18	\N	39
 Rings of Eden	Twin Rings	11	358	8	5	8	\N	39
-Marine Slayers	Twin Rings	19	586	5	1	21	2945	39
+Marine Slayers	Twin Rings	19	586	5	1	21	3060	39
 Adamant Rings	Twin Rings	9	311	6	8	3	\N	41
 Wootz Rings	Twin Rings	9	302	4	4	11	\N	41
-Rings of Serendipity	Twin Rings	9	327	5	5	7	2938	41
+Rings of Serendipity	Twin Rings	9	327	5	5	7	3053	41
 Orichalcum Rings	Twin Rings	19	622	6	5	8	\N	41
 Sigma Rings	Twin Rings	12	393	7	8	3	\N	43
 Delta Rings	Twin Rings	12	381	4	4	12	\N	43
-Invisible Rings	Twin Rings	12	417	5	5	7	2961	43
-Deity Erasers	Twin Rings	19	604	10	8	3	2948	43
+Invisible Rings	Twin Rings	12	417	5	5	7	3076	43
+Deity Erasers	Twin Rings	19	604	10	8	3	3063	43
 Rings of Despair	Twin Rings	13	409	5	5	8	\N	45
 Rings of Chaos	Twin Rings	13	447	6	6	4	\N	45
-Rings of the Kingslayer	Twin Rings	13	422	9	10	2	2936	45
+Rings of the Kingslayer	Twin Rings	13	422	9	10	2	3051	45
 Rings of Thanatos	Twin Rings	20	627	5	5	22	\N	47
 Rings of Banishing	Twin Rings	20	639	9	10	2	\N	47
-Specters	Twin Rings	20	652	8	8	5	2963	47
+Specters	Twin Rings	20	652	8	8	5	3078	47
 Rings of Origin	Twin Rings	14	459	5	7	8	\N	49
 Eternal Rings	Twin Rings	14	487	3	5	10	\N	49
 Final Rings	Twin Rings	14	445	2	3	16	\N	49
 Satellite Rings	Twin Rings	20	633	1	5	23	\N	51
 Meteorite Rings	Twin Rings	20	665	5	6	8	\N	51
-Transmigration	Twin Rings	20	658	1	7	15	2958	51
+Transmigration	Twin Rings	20	658	1	7	15	3073	51
 Primitive Shield	Drill Shields	1	15	15	4	25	\N	56
 Plain Shield	Drill Shields	1	20	15	4	25	\N	56
 Flatform Shield	Drill Shields	3	55	15	4	25	\N	56
-Shield of Plenty	Drill Shields	15	551	20	5	19	2969	56
+Shield of Plenty	Drill Shields	15	551	20	5	19	3084	56
 Breaker Shield	Drill Shields	5	145	15	5	20	\N	57
 Duelist's Shield	Drill Shields	5	158	22	4	25	\N	57
 Battle Shield	Drill Shields	5	138	12	2	30	\N	57
-Plunder Shield	Drill Shields	15	525	10	3	35	2970	57
+Plunder Shield	Drill Shields	15	525	10	3	35	3085	57
 Bitey Bitey Shield	Drill Shields	2	29	25	6	19	\N	58
 Gnashy Gnashy Shield	Drill Shields	2	38	25	6	19	\N	58
 Nibbly Nibbly Shield	Drill Shields	3	74	25	6	19	\N	58
@@ -17130,59 +17252,59 @@ Pokey Pokey Shield	Drill Shields	16	582	30	6	13	\N	58
 Blasty Blasty Shield	Drill Shields	7	259	22	5	14	\N	59
 Cheery Cheery Shield	Drill Shields	7	219	18	4	20	\N	59
 Rippy Rippy Shield	Drill Shields	7	236	30	8	8	\N	59
-Carnivore's Shield	Drill Shields	16	560	20	5	18	2942	59
+Carnivore's Shield	Drill Shields	16	560	20	5	18	3057	59
 Knight's Shield	Drill Shields	4	96	20	5	25	\N	60
 Guardian's Shield	Drill Shields	4	106	24	4	20	\N	60
-Daring Shield	Drill Shields	4	116	22	5	23	2962	60
+Daring Shield	Drill Shields	4	116	22	5	23	3077	60
 Valkyrie's Shield	Drill Shields	17	613	24	6	19	\N	60
 Paladin's Shield	Drill Shields	10	372	18	4	18	\N	61
 Holy Shield	Drill Shields	10	343	14	3	25	\N	61
 Shield of Valor	Drill Shields	10	350	26	6	13	\N	61
-Birdivore Shield	Drill Shields	17	589	18	4	33	2944	61
+Birdivore Shield	Drill Shields	17	589	18	4	33	3059	61
 Custom Shield	Drill Shields	6	179	15	3	33	\N	62
 Clockwork Shield	Drill Shields	6	206	12	4	25	\N	62
-Loud Shield	Drill Shields	6	186	24	6	20	2964	62
+Loud Shield	Drill Shields	6	186	24	6	20	3079	62
 Accelerator Shield	Drill Shields	18	626	20	5	23	\N	62
 Turbine Shield	Drill Shields	9	328	15	4	31	\N	63
 Ceramic Shield	Drill Shields	9	321	20	6	31	\N	63
 Mechanized Shield	Drill Shields	9	308	10	2	34	\N	63
-Supreme Destroyer	Drill Shields	18	614	15	3	36	2947	63
+Supreme Destroyer	Drill Shields	18	614	15	3	36	3062	63
 Ancient Shield	Drill Shields	8	286	22	4	25	\N	64
 Elder Shield	Drill Shields	8	272	16	2	30	\N	64
-Escutcheon of Athena	Drill Shields	8	305	32	3	20	2941	64
+Escutcheon of Athena	Drill Shields	8	305	32	3	20	3056	64
 Legendary Shield	Drill Shields	19	643	30	4	23	\N	64
 Agarthan Shield	Drill Shields	11	405	22	4	25	\N	65
 Shield of El Dorado	Drill Shields	11	371	18	2	30	\N	65
 Shield of Eden	Drill Shields	11	378	30	5	20	\N	65
-Maelstrom Plate	Drill Shields	19	618	20	1	38	2945	65
+Maelstrom Plate	Drill Shields	19	618	20	1	38	3060	65
 Adamant Shield	Drill Shields	9	328	25	8	8	\N	66
 Wootz Shield	Drill Shields	9	318	15	4	23	\N	66
-Damascene Shield	Drill Shields	9	344	20	5	18	2939	66
+Damascene Shield	Drill Shields	9	344	20	5	18	3054	66
 Orichalcum Shield	Drill Shields	19	656	24	5	19	\N	66
 Sigma Shield	Drill Shields	12	415	27	8	8	\N	67
 Delta Shield	Drill Shields	12	403	15	4	21	\N	67
-Legionnaire's Shield	Drill Shields	12	440	20	5	18	2941	67
-Saintslayer Pavise	Drill Shields	19	637	40	8	6	2948	67
+Legionnaire's Shield	Drill Shields	12	440	20	5	18	3056	67
+Saintslayer Pavise	Drill Shields	19	637	40	8	6	3063	67
 Shield of Despair	Drill Shields	13	433	20	5	17	\N	68
 Shield of Chaos	Drill Shields	13	473	25	6	10	\N	68
-Thundercrash Shield	Drill Shields	13	446	36	10	5	2964	68
+Thundercrash Shield	Drill Shields	13	446	36	10	5	3079	68
 Shield of Thanatos	Drill Shields	20	661	20	5	38	\N	69
 Shield of Banishing	Drill Shields	20	675	36	10	5	\N	69
-Nemesis Shield	Drill Shields	20	688	30	8	13	2939	69
+Nemesis Shield	Drill Shields	20	688	30	8	13	3054	69
 Shield of Origin	Drill Shields	14	485	18	7	19	\N	70
 Eternal Shield	Drill Shields	14	514	10	5	25	\N	70
 Final Shield	Drill Shields	14	470	6	3	28	\N	70
 Satellite Shield	Drill Shields	20	668	5	5	58	\N	71
 Meteorite Shield	Drill Shields	20	701	20	6	20	\N	71
-Cosmic Impact	Drill Shields	20	695	4	7	38	2964	71
+Cosmic Impact	Drill Shields	20	695	4	7	38	3079	71
 Primitive Arms	Mech Arms	1	17	11	8	20	\N	73
 Plain Arms	Mech Arms	1	22	11	8	20	\N	73
 Flatform Arms	Mech Arms	3	61	11	8	20	\N	73
-Ornate Arms	Mech Arms	15	610	15	10	15	2969	73
+Ornate Arms	Mech Arms	15	610	15	10	15	3084	73
 Breaker Arms	Mech Arms	5	160	11	11	16	\N	75
 Duelist's Arms	Mech Arms	5	174	17	8	20	\N	75
 Battle Arms	Mech Arms	5	153	9	4	30	\N	75
-Snare Arms	Mech Arms	15	581	8	5	44	2970	75
+Snare Arms	Mech Arms	15	581	8	5	44	3085	75
 Studded Arms	Mech Arms	2	33	19	13	15	\N	77
 Rash Arms	Mech Arms	2	43	19	13	15	\N	77
 Battering Arms	Mech Arms	3	82	19	13	15	\N	77
@@ -17190,120 +17312,120 @@ Pounding Arms	Mech Arms	16	643	23	13	10	\N	77
 Crushing Arms	Mech Arms	7	286	17	11	11	\N	79
 Thumping Arms	Mech Arms	7	242	14	8	23	\N	79
 Pummeling Arms	Mech Arms	7	260	23	15	6	\N	79
-Strongjaw Gauntlets	Mech Arms	16	618	15	9	22	2942	79
+Strongjaw Gauntlets	Mech Arms	16	618	15	9	22	3057	79
 Knight's Arms	Mech Arms	4	106	15	10	20	\N	81
 Guardian's Arms	Mech Arms	4	117	18	8	16	\N	81
-Temptation Gauntlets	Mech Arms	4	128	17	9	18	2962	81
+Temptation Gauntlets	Mech Arms	4	128	17	9	18	3077	81
 Valkyrie's Arms	Mech Arms	17	677	18	11	15	\N	81
 Paladin's Arms	Mech Arms	10	412	14	8	14	\N	83
 Holy Arms	Mech Arms	10	380	11	5	28	\N	83
 Arms of Valor	Mech Arms	10	388	20	13	10	\N	83
-Hunter's Arms	Mech Arms	17	651	14	8	40	2944	83
+Hunter's Arms	Mech Arms	17	651	14	8	40	3059	83
 Custom Arms	Mech Arms	6	197	11	5	38	\N	85
 Clockwork Arms	Mech Arms	6	227	9	7	20	\N	85
-Turbojet Arms	Mech Arms	6	205	18	12	16	2937	85
+Turbojet Arms	Mech Arms	6	205	18	12	16	3052	85
 Accelerator Arms	Mech Arms	18	693	15	10	18	\N	85
 Turbine Arms	Mech Arms	9	362	11	8	25	\N	87
 Ceramic Arms	Mech Arms	9	355	15	11	25	\N	87
 Mechanized Arms	Mech Arms	9	340	8	4	32	\N	87
-Machine Busters	Mech Arms	18	679	11	5	36	2947	87
+Machine Busters	Mech Arms	18	679	11	5	36	3062	87
 Ancient Arms	Mech Arms	8	315	17	7	20	\N	89
 Elder Arms	Mech Arms	8	300	12	4	36	\N	89
-Gauntlets of Lament	Mech Arms	8	336	24	6	16	2964	89
+Gauntlets of Lament	Mech Arms	8	336	24	6	16	3079	89
 Legendary Arms	Mech Arms	19	712	23	8	18	\N	89
 Agarthan Arms	Mech Arms	11	447	17	7	20	\N	91
 Arms of El Dorado	Mech Arms	11	409	14	4	36	\N	91
 Arms of Eden	Mech Arms	11	418	23	9	16	\N	91
-Doom of Atlantis	Mech Arms	19	684	15	3	42	2945	91
+Doom of Atlantis	Mech Arms	19	684	15	3	42	3060	91
 Adamant Arms	Mech Arms	9	362	19	16	6	\N	93
 Wootz Arms	Mech Arms	9	351	11	8	22	\N	93
-Most Wanted	Mech Arms	9	380	15	10	14	2964	93
+Most Wanted	Mech Arms	9	380	15	10	14	3079	93
 Orichalcum Arms	Mech Arms	19	726	18	9	15	\N	93
 Sigma Arms	Mech Arms	12	459	20	17	6	\N	95
 Delta Arms	Mech Arms	12	445	11	8	24	\N	95
-Terminal Velocity	Mech Arms	12	487	15	9	14	2937	95
-Deserved Retribution	Mech Arms	19	705	30	16	5	2948	95
+Terminal Velocity	Mech Arms	12	487	15	9	14	3052	95
+Deserved Retribution	Mech Arms	19	705	30	16	5	3063	95
 Arms of Despair	Mech Arms	13	477	15	9	16	\N	97
 Arms of Chaos	Mech Arms	13	522	19	11	8	\N	97
-Insatiable Gauntlets	Mech Arms	13	492	27	19	4	2958	97
+Insatiable Gauntlets	Mech Arms	13	492	27	19	4	3073	97
 Arms of Thanatos	Mech Arms	20	731	15	10	44	\N	99
 Arms of Banishing	Mech Arms	20	745	27	20	4	\N	99
-Arms of Hermes	Mech Arms	20	760	23	15	10	2937	99
+Arms of Hermes	Mech Arms	20	760	23	15	10	3052	99
 Arms of Origin	Mech Arms	14	536	14	14	15	\N	101
 Eternal Arms	Mech Arms	14	568	8	9	20	\N	101
 Final Arms	Mech Arms	14	520	5	6	32	\N	101
 Satellite Arms	Mech Arms	20	738	4	10	46	\N	103
 Meteorite Arms	Mech Arms	20	775	15	13	16	\N	103
-Gigantomachy	Mech Arms	20	768	3	14	30	2964	103
+Gigantomachy	Mech Arms	20	768	3	14	30	3079	103
 Primitive Saber	Variable Saber	1	21	4	15	10	\N	104
 Plain Saber	Variable Saber	1	27	4	15	10	\N	104
 Flatform Saber	Variable Saber	3	77	4	15	10	\N	104
-Ornate Saber	Variable Saber	15	772	5	20	8	2969	104
+Ornate Saber	Variable Saber	15	772	5	20	8	3084	104
 Breaker Saber	Variable Saber	5	204	4	21	8	\N	104
 Duelist's Saber	Variable Saber	5	221	6	16	10	\N	104
 Battle Saber	Variable Saber	5	194	3	8	15	\N	104
-Snare Saber	Variable Saber	15	735	3	10	22	2970	104
+Snare Saber	Variable Saber	15	735	3	10	22	3085	104
 Deadly Saber	Variable Saber	2	41	6	25	8	\N	104
-Dominion	Whipsword	20	782	15	30	13	2960	147
+Dominion	Whipsword	20	782	15	30	13	3075	147
 Razorgraze Saber	Variable Saber	2	53	6	25	8	\N	104
 Whirlchip Saber	Variable Saber	3	104	6	25	8	\N	104
 Songslice Saber	Variable Saber	16	814	8	25	5	\N	104
 Chopcuff Saber	Variable Saber	7	362	6	21	6	\N	104
 Swishslash Saber	Variable Saber	7	307	5	16	12	\N	104
 Twirlslip Saber	Variable Saber	7	329	8	30	3	\N	104
-Insect Slicer	Variable Saber	16	783	5	18	11	2943	104
+Insect Slicer	Variable Saber	16	783	5	18	11	3058	104
 Knight's Saber	Variable Saber	4	134	5	20	10	\N	104
 Guardian's Saber	Variable Saber	4	147	6	16	8	\N	104
-Saint's Saber	Variable Saber	4	162	6	18	9	2933	104
+Saint's Saber	Variable Saber	4	162	6	18	9	3048	104
 Valkyrie's Saber	Variable Saber	17	858	6	22	8	\N	104
 Paladin's Saber	Variable Saber	10	521	5	16	7	\N	104
 Holy Saber	Variable Saber	10	481	4	10	14	\N	104
 Saber of Valor	Variable Saber	10	491	7	25	5	\N	104
-Regal Saber	Variable Saber	17	825	5	16	20	2944	104
+Regal Saber	Variable Saber	17	825	5	16	20	3059	104
 Custom Saber	Variable Saber	6	250	4	10	19	\N	104
 Clockwork Saber	Variable Saber	6	288	3	14	10	\N	104
-Ranger's Saber	Variable Saber	6	260	6	24	8	2937	104
+Ranger's Saber	Variable Saber	6	260	6	24	8	3052	104
 Accelerator Saber	Variable Saber	18	877	5	20	9	\N	104
 Turbine Saber	Variable Saber	9	459	4	15	13	\N	104
 Ceramic Saber	Variable Saber	9	450	5	22	13	\N	104
 Mechanized Saber	Variable Saber	9	431	3	8	16	\N	104
-Commando's Saber	Variable Saber	18	859	4	10	18	2947	104
+Commando's Saber	Variable Saber	18	859	4	10	18	3062	104
 Ancient Saber	Variable Saber	8	399	6	14	10	\N	104
 Elder Saber	Variable Saber	8	380	4	8	18	\N	104
-Mystical Saber	Variable Saber	8	426	8	12	8	2938	104
+Mystical Saber	Variable Saber	8	426	8	12	8	3053	104
 Legendary Saber	Variable Saber	19	901	8	15	9	\N	104
 Agarthan Saber	Variable Saber	11	567	6	14	10	\N	104
 Saber of El Dorado	Variable Saber	11	519	5	8	18	\N	104
 Saber of Eden	Variable Saber	11	530	8	18	8	\N	104
-Rifled Saber	Variable Saber	19	865	5	5	21	2945	104
+Rifled Saber	Variable Saber	19	865	5	5	21	3060	104
 Adamant Saber	Variable Saber	9	459	6	32	3	\N	104
 Wootz Saber	Variable Saber	9	445	4	15	11	\N	104
-Ether Saber	Variable Saber	9	482	5	20	7	2935	104
+Ether Saber	Variable Saber	9	482	5	20	7	3050	104
 Orichalcum Saber	Variable Saber	19	919	6	18	8	\N	104
 Sigma Saber	Variable Saber	12	581	7	33	3	\N	104
 Delta Saber	Variable Saber	12	564	4	15	12	\N	104
-Sanguine Saber	Variable Saber	12	616	5	18	7	2958	104
-Creation Eater	Variable Saber	19	892	10	32	3	2948	104
+Sanguine Saber	Variable Saber	12	616	5	18	7	3073	104
+Creation Eater	Variable Saber	19	892	10	32	3	3063	104
 Saber of Despair	Variable Saber	13	605	5	18	8	\N	104
 Saber of Chaos	Variable Saber	13	661	6	22	4	\N	104
-Barbatos, the Durable	Variable Saber	13	624	9	38	2	2939	104
+Barbatos, the Durable	Variable Saber	13	624	9	38	2	3054	104
 Saber of Thanatos	Variable Saber	20	926	5	20	22	\N	104
 Saber of Banishing	Variable Saber	20	944	9	40	2	\N	104
-Metatron's Saber	Variable Saber	20	963	8	30	5	2933	104
+Metatron's Saber	Variable Saber	20	963	8	30	5	3048	104
 Saber of Origin	Variable Saber	14	678	5	28	8	\N	104
 Eternal Saber	Variable Saber	14	719	3	18	10	\N	104
 Final Saber	Variable Saber	14	658	2	12	16	\N	104
 Satellite Saber	Variable Saber	20	935	1	20	23	\N	104
 Meteorite Saber	Variable Saber	20	982	5	25	8	\N	104
-Ultima Ratio	Variable Saber	20	972	1	27	15	2955	104
+Ultima Ratio	Variable Saber	20	972	1	27	15	3070	104
 Primitive Whips	Whipsword	1	17	8	15	25	\N	121
 Plain Whips	Whipsword	1	22	8	15	25	\N	121
 Flatform Whips	Whipsword	3	63	8	15	25	\N	121
-Whips of Plenty	Whipsword	15	627	10	20	19	2969	121
+Whips of Plenty	Whipsword	15	627	10	20	19	3084	121
 Breaker Whips	Whipsword	5	165	8	21	20	\N	123
 Duelist's Whips	Whipsword	5	179	11	16	25	\N	123
 Battle Whips	Whipsword	5	158	6	8	38	\N	123
-Plunder Whips	Whipsword	15	597	5	10	55	2970	123
+Plunder Whips	Whipsword	15	597	5	10	55	3085	123
 Whips of the Sparrow	Whipsword	2	33	13	25	19	\N	125
 Whips of the Robin	Whipsword	2	43	13	25	19	\N	125
 Whips of the Lark	Whipsword	3	85	13	25	19	\N	125
@@ -17311,42 +17433,42 @@ Whips of the Swift	Whipsword	16	661	15	25	13	\N	125
 Whips of the Crane	Whipsword	7	293	11	21	14	\N	127
 Whips of the Ibis	Whipsword	7	249	9	16	29	\N	127
 Whips of the Shrike	Whipsword	7	267	15	30	8	\N	127
-The Cormorants	Whipsword	16	636	10	18	28	2943	127
+The Cormorants	Whipsword	16	636	10	18	28	3058	127
 Knight's Whips	Whipsword	4	109	10	20	25	\N	129
 Guardian's Whips	Whipsword	4	120	12	16	20	\N	129
-Whips of the Sun	Whipsword	4	132	11	18	23	2967	129
+Whips of the Sun	Whipsword	4	132	11	18	23	3082	129
 Valkyrie's Whips	Whipsword	17	697	12	22	19	\N	129
 Paladin's Whips	Whipsword	10	423	9	16	18	\N	131
 Holy Whips	Whipsword	10	391	7	10	35	\N	131
 Whips of Valor	Whipsword	10	399	13	25	13	\N	131
-Soaring Swallows	Whipsword	17	670	9	16	50	2944	131
+Soaring Swallows	Whipsword	17	670	9	16	50	3059	131
 Custom Whips	Whipsword	6	203	8	10	47	\N	133
 Clockwork Whips	Whipsword	6	233	6	14	25	\N	133
-Muscle Whips	Whipsword	6	211	12	24	20	2934	133
+Muscle Whips	Whipsword	6	211	12	24	20	3049	133
 Accelerator Whips	Whipsword	18	712	10	20	23	\N	133
 Turbine Whips	Whipsword	9	373	8	15	31	\N	135
 Ceramic Whips	Whipsword	9	366	10	22	31	\N	135
 Mechanized Whips	Whipsword	9	351	5	8	40	\N	135
-Nitro Whips	Whipsword	18	698	8	10	45	2947	135
+Nitro Whips	Whipsword	18	698	8	10	45	3062	135
 Ancient Whips	Whipsword	8	324	11	14	25	\N	137
 Elder Whips	Whipsword	8	309	8	8	45	\N	137
-Whips of the Chariot	Whipsword	8	346	16	12	20	2937	137
+Whips of the Chariot	Whipsword	8	346	16	12	20	3052	137
 Legendary Whips	Whipsword	19	732	15	15	23	\N	137
 Agarthan Whips	Whipsword	11	460	11	14	25	\N	139
 Whips of El Dorado	Whipsword	11	421	9	8	45	\N	139
 Whips of Eden	Whipsword	11	430	15	18	20	\N	139
-Avalon	Whipsword	19	703	10	5	53	2945	139
+Avalon	Whipsword	19	703	10	5	53	3060	139
 Adamant Whips	Whipsword	9	373	13	32	8	\N	141
 Wootz Whips	Whipsword	9	362	8	15	28	\N	141
-The Assessors	Whipsword	9	392	10	20	18	2947	141
+The Assessors	Whipsword	9	392	10	20	18	3062	141
 Orichalcum Whips	Whipsword	19	747	12	18	19	\N	141
 Sigma Whips	Whipsword	12	472	14	33	8	\N	143
 Delta Whips	Whipsword	12	458	8	15	30	\N	143
-Whips of Celerity	Whipsword	12	500	10	18	18	2960	143
-Ascension Denied	Whipsword	19	725	20	32	6	2948	143
+Whips of Celerity	Whipsword	12	500	10	18	18	3075	143
+Ascension Denied	Whipsword	19	725	20	32	6	3063	143
 Whips of Despair	Whipsword	13	492	10	18	20	\N	145
 Whips of Chaos	Whipsword	13	537	13	22	10	\N	145
-Belial's Whips	Whipsword	13	507	18	38	5	2957	145
+Belial's Whips	Whipsword	13	507	18	38	5	3072	145
 Whips of Thanatos	Whipsword	20	751	10	20	55	\N	147
 Whips of Banishing	Whipsword	20	767	18	40	5	\N	147
 Whips of Origin	Whipsword	14	551	9	28	19	\N	149
@@ -17354,15 +17476,15 @@ Eternal Whips	Whipsword	14	584	5	18	25	\N	149
 Final Whips	Whipsword	14	534	3	12	40	\N	149
 Satellite Whips	Whipsword	20	759	3	20	58	\N	151
 Meteorite Whips	Whipsword	20	797	10	25	20	\N	151
-The Dreadnoughts	Whipsword	20	789	2	27	38	2959	151
+The Dreadnoughts	Whipsword	20	789	2	27	38	3074	151
 Primitive Edge	Big Bang Edge	1	22	23	11	10	\N	152
 Plain Edge	Big Bang Edge	1	29	23	11	10	\N	152
 Flatform Edge	Big Bang Edge	3	81	23	11	10	\N	152
-Edge of Plenty	Big Bang Edge	15	807	30	15	8	2969	152
+Edge of Plenty	Big Bang Edge	15	807	30	15	8	3084	152
 Breaker Edge	Big Bang Edge	5	212	23	16	8	\N	153
 Duelist's Edge	Big Bang Edge	5	230	33	12	10	\N	153
 Battle Edge	Big Bang Edge	5	202	18	6	15	\N	153
-Plunder Edge	Big Bang Edge	15	769	15	8	22	2970	153
+Plunder Edge	Big Bang Edge	15	769	15	8	22	3085	153
 Flighty Edge	Big Bang Edge	2	43	38	19	8	\N	154
 Feathered Edge	Big Bang Edge	2	56	38	19	8	\N	154
 Winged Edge	Big Bang Edge	3	109	38	19	8	\N	154
@@ -17370,59 +17492,59 @@ Triumph Edge	Big Bang Edge	16	852	45	19	5	\N	154
 Avian Edge	Big Bang Edge	7	379	33	16	6	\N	155
 Edge of the Raptor	Big Bang Edge	7	321	27	12	12	\N	155
 Edge of the Vulture	Big Bang Edge	7	345	45	23	3	\N	155
-Predator's Edge	Big Bang Edge	16	819	30	14	11	2942	155
+Predator's Edge	Big Bang Edge	16	819	30	14	11	3057	155
 Knight's Edge	Big Bang Edge	4	140	30	15	10	\N	156
 Guardian's Edge	Big Bang Edge	4	154	36	12	8	\N	156
-Orion's Rise	Big Bang Edge	4	169	33	14	9	2966	156
+Orion's Rise	Big Bang Edge	4	169	33	14	9	3081	156
 Valkyrie's Edge	Big Bang Edge	17	896	36	17	8	\N	156
 Paladin's Edge	Big Bang Edge	10	544	27	12	7	\N	157
 Holy Edge	Big Bang Edge	10	502	21	8	14	\N	157
 Edge of Valor	Big Bang Edge	10	513	39	19	5	\N	157
-Arbiter's Brand	Big Bang Edge	17	862	27	12	20	2944	157
+Arbiter's Brand	Big Bang Edge	17	862	27	12	20	3059	157
 Custom Edge	Big Bang Edge	6	261	23	8	19	\N	158
 Clockwork Edge	Big Bang Edge	6	300	18	11	10	\N	158
-Fearful Symmetry	Big Bang Edge	6	271	36	18	8	2943	158
+Fearful Symmetry	Big Bang Edge	6	271	36	18	8	3058	158
 Accelerator Edge	Big Bang Edge	18	917	30	15	9	\N	158
 Turbine Edge	Big Bang Edge	9	480	23	11	13	\N	159
 Ceramic Edge	Big Bang Edge	9	470	30	17	13	\N	159
 Mechanized Edge	Big Bang Edge	9	451	15	6	16	\N	159
-The Ingot	Big Bang Edge	18	899	23	8	18	2947	159
+The Ingot	Big Bang Edge	18	899	23	8	18	3062	159
 Ancient Edge	Big Bang Edge	8	418	33	11	10	\N	160
 Elder Edge	Big Bang Edge	8	398	24	6	18	\N	160
-Edge of the Mother	Big Bang Edge	8	446	48	9	8	2959	160
+Edge of the Mother	Big Bang Edge	8	446	48	9	8	3074	160
 Legendary Edge	Big Bang Edge	19	942	45	11	9	\N	160
 Agarthan Edge	Big Bang Edge	11	593	33	11	10	\N	161
 Edge of El Dorado	Big Bang Edge	11	542	27	6	18	\N	161
 Edge of Eden	Big Bang Edge	11	553	45	14	8	\N	161
-Just Oceanus	Big Bang Edge	19	905	30	4	21	2945	161
+Just Oceanus	Big Bang Edge	19	905	30	4	21	3060	161
 Adamant Edge	Big Bang Edge	9	480	38	24	3	\N	162
 Wootz Edge	Big Bang Edge	9	466	23	11	11	\N	162
-Black Chronos	Big Bang Edge	9	504	30	15	7	2934	162
+Black Chronos	Big Bang Edge	9	504	30	15	7	3049	162
 Orichalcum Edge	Big Bang Edge	19	961	36	14	8	\N	162
 Sigma Edge	Big Bang Edge	12	607	41	25	3	\N	163
 Delta Edge	Big Bang Edge	12	589	23	11	12	\N	163
-Barghest's Claw	Big Bang Edge	12	643	30	14	7	2942	163
-Sainthunter	Big Bang Edge	19	933	60	24	3	2948	163
+Barghest's Claw	Big Bang Edge	12	643	30	14	7	3057	163
+Sainthunter	Big Bang Edge	19	933	60	24	3	3063	163
 Edge of Despair	Big Bang Edge	13	632	30	14	8	\N	164
 Edge of Chaos	Big Bang Edge	13	691	38	17	4	\N	164
-Apocalypse	Big Bang Edge	13	652	54	29	2	2936	164
+Apocalypse	Big Bang Edge	13	652	54	29	2	3051	164
 Edge of Thanatos	Big Bang Edge	20	967	30	15	22	\N	165
 Edge of Banishing	Big Bang Edge	20	987	54	30	2	\N	165
-Rightful Payback	Big Bang Edge	20	997	45	23	5	2957	165
+Rightful Payback	Big Bang Edge	20	997	45	23	5	3072	165
 Edge of Origin	Big Bang Edge	14	709	27	21	8	\N	166
 Eternal Edge	Big Bang Edge	14	752	15	14	10	\N	166
 Final Edge	Big Bang Edge	14	688	9	9	16	\N	166
 Satellite Edge	Big Bang Edge	20	977	8	15	23	\N	167
 Meteorite Edge	Big Bang Edge	20	997	30	19	8	\N	167
-Bigger Bang	Big Bang Edge	20	997	6	20	15	2959	167
+Bigger Bang	Big Bang Edge	20	997	6	20	15	3074	167
 Primitive Scythes	Dual Scythes	1	18	8	23	5	\N	169
 Plain Scythes	Dual Scythes	1	23	8	23	5	\N	169
 Flatform Scythes	Dual Scythes	3	64	8	23	5	\N	169
-Sickles of Plenty	Dual Scythes	15	645	10	30	4	2969	169
+Sickles of Plenty	Dual Scythes	15	645	10	30	4	3084	169
 Breaker Scythes	Dual Scythes	5	170	8	32	4	\N	171
 Duelist's Scythes	Dual Scythes	5	184	11	24	5	\N	171
 Battle Scythes	Dual Scythes	5	162	6	12	8	\N	171
-Plunder Sickles	Dual Scythes	15	614	5	15	11	2970	171
+Plunder Sickles	Dual Scythes	15	614	5	15	11	3085	171
 Pixie Scythes	Dual Scythes	2	34	13	38	4	\N	173
 Sylph's Scythes	Dual Scythes	2	44	13	38	4	\N	173
 Faerie Scythes	Dual Scythes	3	86	13	38	4	\N	173
@@ -17430,119 +17552,119 @@ Titania's Scythes	Dual Scythes	16	680	15	38	3	\N	173
 Spriggan's Scythes	Dual Scythes	7	302	11	32	3	\N	175
 Banshee Scythes	Dual Scythes	7	257	9	24	6	\N	175
 Ainsel's Scythes	Dual Scythes	7	275	15	45	2	\N	175
-Elf King's Scythes	Dual Scythes	16	654	10	27	6	2943	175
+Elf King's Scythes	Dual Scythes	16	654	10	27	6	3058	175
 Knight's Scythes	Dual Scythes	4	112	10	30	5	\N	177
 Guardian's Scythes	Dual Scythes	4	123	12	24	4	\N	177
-Augur's Scythes	Dual Scythes	4	136	11	27	5	2938	177
+Augur's Scythes	Dual Scythes	4	136	11	27	5	3053	177
 Valkyrie's Scythes	Dual Scythes	17	716	12	33	4	\N	177
 Paladin's Scythes	Dual Scythes	10	435	9	24	4	\N	179
 Holy Scythes	Dual Scythes	10	402	7	15	7	\N	179
 Scythes of Valor	Dual Scythes	10	410	13	38	3	\N	179
-Executioner's Sickles	Dual Scythes	17	688	9	24	10	2944	179
+Executioner's Sickles	Dual Scythes	17	688	9	24	10	3059	179
 Custom Scythes	Dual Scythes	6	209	8	15	9	\N	181
 Clockwork Scythes	Dual Scythes	6	240	6	21	5	\N	181
-Tenacious Sickles	Dual Scythes	6	217	12	36	4	2934	181
+Tenacious Sickles	Dual Scythes	6	217	12	36	4	3049	181
 Accelerator Scythes	Dual Scythes	18	732	10	30	5	\N	181
 Turbine Scythes	Dual Scythes	9	383	8	23	6	\N	183
 Ceramic Scythes	Dual Scythes	9	375	10	33	6	\N	183
 Mechanized Scythes	Dual Scythes	9	360	5	12	8	\N	183
-Optimized Scythes	Dual Scythes	18	718	8	15	9	2947	183
+Optimized Scythes	Dual Scythes	18	718	8	15	9	3062	183
 Ancient Scythes	Dual Scythes	8	333	11	21	5	\N	185
 Elder Scythes	Dual Scythes	8	317	8	12	9	\N	185
-Emperor Scythes	Dual Scythes	8	355	16	18	4	2937	185
+Emperor Scythes	Dual Scythes	8	355	16	18	4	3052	185
 Legendary Scythes	Dual Scythes	19	752	15	23	5	\N	185
 Agarthan Scythes	Dual Scythes	11	473	11	21	5	\N	187
 Scythes of El Dorado	Dual Scythes	11	433	9	12	9	\N	187
 Scythes of Eden	Dual Scythes	11	442	15	27	4	\N	187
-Amazon's Scythes	Dual Scythes	19	723	10	8	11	2945	187
+Amazon's Scythes	Dual Scythes	19	723	10	8	11	3060	187
 Adamant Scythes	Dual Scythes	9	383	13	48	2	\N	189
 Wootz Scythes	Dual Scythes	9	372	8	23	6	\N	189
-Enigma Scythes	Dual Scythes	9	402	10	30	4	2938	189
+Enigma Scythes	Dual Scythes	9	402	10	30	4	3053	189
 Orichalcum Scythes	Dual Scythes	19	767	12	27	4	\N	189
 Sigma Scythes	Dual Scythes	12	485	14	50	2	\N	191
 Delta Scythes	Dual Scythes	12	470	8	23	6	\N	191
-Dark Order	Dual Scythes	12	514	10	27	4	2950	191
-Titan Gutters	Dual Scythes	19	745	20	48	1	2948	191
+Dark Order	Dual Scythes	12	514	10	27	4	3065	191
+Titan Gutters	Dual Scythes	19	745	20	48	1	3063	191
 Scythes of Despair	Dual Scythes	13	505	10	27	4	\N	193
 Scythes of Chaos	Dual Scythes	13	552	13	33	2	\N	193
-Inferno	Dual Scythes	13	521	18	57	1	2960	193
+Inferno	Dual Scythes	13	521	18	57	1	3075	193
 Scythes of Thanatos	Dual Scythes	20	772	10	30	11	\N	195
 Scythes of Banishing	Dual Scythes	20	788	18	60	1	\N	195
-The Grim Reapers	Dual Scythes	20	803	15	45	3	2952	195
+The Grim Reapers	Dual Scythes	20	803	15	45	3	3067	195
 Scythes of Origin	Dual Scythes	14	566	9	42	4	\N	197
 Eternal Scythes	Dual Scythes	14	600	5	27	5	\N	197
 Final Scythes	Dual Scythes	14	549	3	18	8	\N	197
 Satellite Scythes	Dual Scythes	20	780	3	30	12	\N	199
 Meteorite Scythes	Dual Scythes	20	819	10	38	4	\N	199
-Spendthrift Knight	Dual Scythes	20	811	2	41	8	2951	199
-Primitive Axe	Great Axe	1	21	23	15	10	\N	200
-Plain Axe	Great Axe	1	27	23	15	10	\N	200
-Flatform Axe	Great Axe	3	75	23	15	10	\N	200
-Hatchet of Plenty	Great Axe	15	749	30	20	8	2969	200
-Breaker Axe	Great Axe	5	197	23	21	8	\N	201
-Duelist's Axe	Great Axe	5	214	33	16	10	\N	201
-Battle Axe	Great Axe	5	188	18	8	15	\N	201
-Plunder Hatchet	Great Axe	15	713	15	10	22	2970	201
-Large Axe	Great Axe	2	40	38	25	8	\N	202
-Grand Axe	Great Axe	2	52	38	25	8	\N	202
-Huge Axe	Great Axe	3	101	38	25	8	\N	202
-Enormous Axe	Great Axe	16	790	45	25	5	\N	202
-Gargantuan Axe	Great Axe	7	351	33	21	6	\N	203
-Violent Axe	Great Axe	7	297	27	16	12	\N	203
-Berserker's Axe	Great Axe	7	319	45	30	3	\N	203
-Axe of Wrath	Great Axe	16	760	30	18	11	2942	203
-Knight's Axe	Great Axe	4	130	30	20	10	\N	204
-Guardian's Axe	Great Axe	4	143	36	16	8	\N	204
-Hatchet of the Round	Great Axe	4	157	33	18	9	2967	204
-Valkyrie's Axe	Great Axe	17	832	36	22	8	\N	204
-Paladin's Axe	Great Axe	10	505	27	16	7	\N	205
-Holy Axe	Great Axe	10	467	21	10	14	\N	205
-Axe of Valor	Great Axe	10	476	39	25	5	\N	205
-Axe of Order	Great Axe	17	800	27	16	20	2944	205
-Custom Axe	Great Axe	6	243	23	10	19	\N	206
-Clockwork Axe	Great Axe	6	279	18	14	10	\N	206
-General's Axe	Great Axe	6	253	36	24	8	2933	206
-Accelerator Axe	Great Axe	18	850	30	20	9	\N	206
-Turbine Axe	Great Axe	9	445	23	15	13	\N	207
-Ceramic Axe	Great Axe	9	436	30	22	13	\N	207
-Mechanized Axe	Great Axe	9	418	15	8	16	\N	207
-Admiral's Axe	Great Axe	18	834	23	10	18	2947	207
-Ancient Axe	Great Axe	8	387	33	14	10	\N	208
-Elder Axe	Great Axe	8	369	24	8	18	\N	208
-Antique Greataxe	Great Axe	8	413	48	12	8	2934	208
-Legendary Axe	Great Axe	19	875	45	15	9	\N	208
-Agarthan Axe	Great Axe	11	550	33	14	10	\N	209
-Axe of El Dorado	Great Axe	11	503	27	8	18	\N	209
-Axe of Eden	Great Axe	11	514	45	18	8	\N	209
-Sealed Hatchet	Great Axe	19	840	30	5	21	2945	209
-Adamant Axe	Great Axe	9	445	38	32	3	\N	210
-Wootz Axe	Great Axe	9	432	23	15	11	\N	210
-Axe of Fortune	Great Axe	9	467	30	20	7	2938	210
-Orichalcum Axe	Great Axe	19	892	36	18	8	\N	210
-Sigma Axe	Great Axe	12	564	41	33	3	\N	211
-Delta Axe	Great Axe	12	547	23	15	12	\N	211
-Truestrike Axe	Great Axe	12	598	30	18	7	2959	211
-Mythical Greataxe	Great Axe	19	866	60	32	3	2948	211
-Axe of Despair	Great Axe	13	587	30	18	8	\N	212
-Axe of Chaos	Great Axe	13	641	38	22	4	\N	212
-Reactionary Axe	Great Axe	13	605	54	38	2	2957	212
-Axe of Thanatos	Great Axe	20	898	30	20	22	\N	213
-Axe of Banishing	Great Axe	20	916	54	40	2	\N	213
-Ruinous Hatchet	Great Axe	20	934	45	30	5	2933	213
-Axe of Origin	Great Axe	14	658	27	28	8	\N	214
-Eternal Axe	Great Axe	14	697	15	18	10	\N	214
-Final Axe	Great Axe	14	638	9	12	16	\N	214
-Satellite Axe	Great Axe	20	907	8	20	23	\N	215
-Meteorite Axe	Great Axe	20	952	30	25	8	\N	215
-Galaxy Dusking	Great Axe	20	943	6	27	15	2959	215
+Spendthrift Knight	Dual Scythes	20	811	2	41	8	3066	199
+Primitive Axe	Greataxe	1	21	23	15	10	\N	200
+Plain Axe	Greataxe	1	27	23	15	10	\N	200
+Flatform Axe	Greataxe	3	75	23	15	10	\N	200
+Hatchet of Plenty	Greataxe	15	749	30	20	8	3084	200
+Breaker Axe	Greataxe	5	197	23	21	8	\N	201
+Duelist's Axe	Greataxe	5	214	33	16	10	\N	201
+Battle Axe	Greataxe	5	188	18	8	15	\N	201
+Plunder Hatchet	Greataxe	15	713	15	10	22	3085	201
+Large Axe	Greataxe	2	40	38	25	8	\N	202
+Grand Axe	Greataxe	2	52	38	25	8	\N	202
+Huge Axe	Greataxe	3	101	38	25	8	\N	202
+Enormous Axe	Greataxe	16	790	45	25	5	\N	202
+Gargantuan Axe	Greataxe	7	351	33	21	6	\N	203
+Violent Axe	Greataxe	7	297	27	16	12	\N	203
+Berserker's Axe	Greataxe	7	319	45	30	3	\N	203
+Axe of Wrath	Greataxe	16	760	30	18	11	3057	203
+Knight's Axe	Greataxe	4	130	30	20	10	\N	204
+Guardian's Axe	Greataxe	4	143	36	16	8	\N	204
+Hatchet of the Round	Greataxe	4	157	33	18	9	3082	204
+Valkyrie's Axe	Greataxe	17	832	36	22	8	\N	204
+Paladin's Axe	Greataxe	10	505	27	16	7	\N	205
+Holy Axe	Greataxe	10	467	21	10	14	\N	205
+Axe of Valor	Greataxe	10	476	39	25	5	\N	205
+Axe of Order	Greataxe	17	800	27	16	20	3059	205
+Custom Axe	Greataxe	6	243	23	10	19	\N	206
+Clockwork Axe	Greataxe	6	279	18	14	10	\N	206
+General's Axe	Greataxe	6	253	36	24	8	3048	206
+Accelerator Axe	Greataxe	18	850	30	20	9	\N	206
+Turbine Axe	Greataxe	9	445	23	15	13	\N	207
+Ceramic Axe	Greataxe	9	436	30	22	13	\N	207
+Mechanized Axe	Greataxe	9	418	15	8	16	\N	207
+Admiral's Axe	Greataxe	18	834	23	10	18	3062	207
+Ancient Axe	Greataxe	8	387	33	14	10	\N	208
+Elder Axe	Greataxe	8	369	24	8	18	\N	208
+Antique Greataxe	Greataxe	8	413	48	12	8	3049	208
+Legendary Axe	Greataxe	19	875	45	15	9	\N	208
+Agarthan Axe	Greataxe	11	550	33	14	10	\N	209
+Axe of El Dorado	Greataxe	11	503	27	8	18	\N	209
+Axe of Eden	Greataxe	11	514	45	18	8	\N	209
+Sealed Hatchet	Greataxe	19	840	30	5	21	3060	209
+Adamant Axe	Greataxe	9	445	38	32	3	\N	210
+Wootz Axe	Greataxe	9	432	23	15	11	\N	210
+Axe of Fortune	Greataxe	9	467	30	20	7	3053	210
+Orichalcum Axe	Greataxe	19	892	36	18	8	\N	210
+Sigma Axe	Greataxe	12	564	41	33	3	\N	211
+Delta Axe	Greataxe	12	547	23	15	12	\N	211
+Truestrike Axe	Greataxe	12	598	30	18	7	3074	211
+Mythical Greataxe	Greataxe	19	866	60	32	3	3063	211
+Axe of Despair	Greataxe	13	587	30	18	8	\N	212
+Axe of Chaos	Greataxe	13	641	38	22	4	\N	212
+Reactionary Axe	Greataxe	13	605	54	38	2	3072	212
+Axe of Thanatos	Greataxe	20	898	30	20	22	\N	213
+Axe of Banishing	Greataxe	20	916	54	40	2	\N	213
+Ruinous Hatchet	Greataxe	20	934	45	30	5	3048	213
+Axe of Origin	Greataxe	14	658	27	28	8	\N	214
+Eternal Axe	Greataxe	14	697	15	18	10	\N	214
+Final Axe	Greataxe	14	638	9	12	16	\N	214
+Satellite Axe	Greataxe	20	907	8	20	23	\N	215
+Meteorite Axe	Greataxe	20	952	30	25	8	\N	215
+Galaxy Dusking	Greataxe	20	943	6	27	15	3074	215
 Primitive Lance	Megalance	1	18	4	19	5	\N	221
 Plain Lance	Megalance	1	23	4	19	5	\N	221
 Flatform Lance	Megalance	3	67	4	19	5	\N	221
-Ornate Lance	Megalance	15	668	5	25	4	2969	221
+Ornate Lance	Megalance	15	668	5	25	4	3084	221
 Breaker Lance	Megalance	5	176	4	26	4	\N	222
 Duelist's Lance	Megalance	5	191	6	20	5	\N	222
 Battle Lance	Megalance	5	168	3	10	8	\N	222
-Snare Lance	Megalance	15	636	3	13	11	2970	222
+Snare Lance	Megalance	15	636	3	13	11	3085	222
 Spike Lance	Megalance	2	36	6	31	4	\N	223
 Needle Lance	Megalance	2	47	6	31	4	\N	223
 Sharp Lance	Megalance	3	90	6	31	4	\N	223
@@ -17550,59 +17672,59 @@ Stinger Lance	Megalance	16	704	8	31	3	\N	223
 Lance of Harm	Megalance	7	312	6	26	3	\N	224
 Lance of Torment	Megalance	7	265	5	20	6	\N	224
 Plague Lance	Megalance	7	285	8	38	2	\N	224
-Dread Lance	Megalance	16	677	5	23	6	2942	224
+Dread Lance	Megalance	16	677	5	23	6	3057	224
 Knight's Lance	Megalance	4	116	5	25	5	\N	225
 Guardian's Lance	Megalance	4	128	6	20	4	\N	225
-Cleric's Lance	Megalance	4	140	6	23	5	2936	225
+Cleric's Lance	Megalance	4	140	6	23	5	3051	225
 Valkyrie's Lance	Megalance	17	742	6	28	4	\N	225
 Paladin's Lance	Megalance	10	450	5	20	4	\N	226
 Holy Lance	Megalance	10	416	4	13	7	\N	226
 Lance of Valor	Megalance	10	425	7	31	3	\N	226
-Lance of Longinus	Megalance	17	713	5	20	10	2944	226
+Lance of Longinus	Megalance	17	713	5	20	10	3059	226
 Custom Lance	Megalance	6	216	4	13	9	\N	227
 Clockwork Lance	Megalance	6	248	3	18	5	\N	227
-Charged Lance	Megalance	6	225	6	30	4	2938	227
+Charged Lance	Megalance	6	225	6	30	4	3053	227
 Accelerator Lance	Megalance	18	759	5	25	5	\N	227
 Turbine Lance	Megalance	9	397	4	19	6	\N	228
 Ceramic Lance	Megalance	9	389	5	28	6	\N	228
 Mechanized Lance	Megalance	9	373	3	10	8	\N	228
-Stalk, Mecha-Spear	Megalance	18	743	4	13	9	2947	228
+Stalk, Mecha-Spear	Megalance	18	743	4	13	9	3062	228
 Ancient Lance	Megalance	8	345	6	18	5	\N	229
 Elder Lance	Megalance	8	329	4	10	9	\N	229
-Ancestral Lance	Megalance	8	368	8	15	4	2933	229
+Ancestral Lance	Megalance	8	368	8	15	4	3048	229
 Legendary Lance	Megalance	19	780	8	19	5	\N	229
 Agarthan Lance	Megalance	11	490	6	18	5	\N	230
 Lance of El Dorado	Megalance	11	448	5	10	9	\N	230
 Lance of Eden	Megalance	11	457	8	23	4	\N	230
-Empress' Lance	Megalance	19	749	5	6	11	2945	230
+Empress' Lance	Megalance	19	749	5	6	11	3060	230
 Adamant Lance	Megalance	9	397	6	40	2	\N	231
 Wootz Lance	Megalance	9	385	4	19	6	\N	231
-The Phalanx	Megalance	9	417	5	25	4	2934	231
+The Phalanx	Megalance	9	417	5	25	4	3049	231
 Orichalcum Lance	Megalance	19	795	6	23	4	\N	231
 Sigma Lance	Megalance	12	503	7	41	2	\N	232
 Delta Lance	Megalance	12	488	4	19	6	\N	232
-Nuclear Lance	Megalance	12	533	5	23	4	2959	232
-Vindicator	Megalance	19	772	10	40	1	2948	232
+Nuclear Lance	Megalance	12	533	5	23	4	3074	232
+Vindicator	Megalance	19	772	10	40	1	3063	232
 Lance of Despair	Megalance	13	523	5	23	4	\N	233
 Lance of Chaos	Megalance	13	571	6	28	2	\N	233
-Vampiric Lance	Megalance	13	539	9	48	1	2958	233
+Vampiric Lance	Megalance	13	539	9	48	1	3073	233
 Lance of Thanatos	Megalance	20	800	5	25	11	\N	234
 Lance of Banishing	Megalance	20	816	9	50	1	\N	234
-Warhead	Megalance	20	832	8	38	3	2950	234
+Warhead	Megalance	20	832	8	38	3	3065	234
 Lance of Origin	Megalance	14	587	5	35	4	\N	235
 Eternal Lance	Megalance	14	622	3	23	5	\N	235
 Final Lance	Megalance	14	569	2	15	8	\N	235
 Satellite Lance	Megalance	20	808	1	25	12	\N	236
 Meteorite Lance	Megalance	20	848	5	31	4	\N	236
-Extinction Event	Megalance	20	840	1	34	8	2949	236
+Extinction Event	Megalance	20	840	1	34	8	3064	236
 Primitive Cannon	Ether Cannon	1	19	4	8	5	\N	242
 Plain Cannon	Ether Cannon	1	25	4	8	5	\N	242
 Flatform Cannon	Ether Cannon	3	70	4	8	5	\N	242
-Ornate Cannon	Ether Cannon	15	697	5	10	4	2969	242
+Ornate Cannon	Ether Cannon	15	697	5	10	4	3084	242
 Breaker Cannon	Ether Cannon	5	183	4	11	4	\N	243
 Duelist's Cannon	Ether Cannon	5	199	6	8	5	\N	243
 Battle Cannon	Ether Cannon	5	175	3	4	8	\N	243
-Snare Cannon	Ether Cannon	15	664	3	5	11	2970	243
+Snare Cannon	Ether Cannon	15	664	3	5	11	3085	243
 Osseous Cannon	Ether Cannon	2	37	6	13	4	\N	244
 Roaring Cannon	Ether Cannon	2	48	6	13	4	\N	244
 Loud Cannon	Ether Cannon	3	95	6	13	4	\N	244
@@ -17610,59 +17732,59 @@ Skull Cannon	Ether Cannon	16	735	8	13	3	\N	244
 Gourmand's Cannon	Ether Cannon	7	327	6	11	3	\N	245
 Monstrous Cannon	Ether Cannon	7	277	5	8	6	\N	245
 Brutal Cannon	Ether Cannon	7	298	8	15	2	\N	245
-Glutton's Cannon	Ether Cannon	16	707	5	9	6	2942	245
+Glutton's Cannon	Ether Cannon	16	707	5	9	6	3057	245
 Knight's Cannon	Ether Cannon	4	121	5	10	5	\N	246
 Guardian's Cannon	Ether Cannon	4	133	6	8	4	\N	246
-Sniper Cannon	Ether Cannon	4	146	6	9	5	2968	246
+Sniper Cannon	Ether Cannon	4	146	6	9	5	3083	246
 Valkyrie's Cannon	Ether Cannon	17	774	6	11	4	\N	246
 Paladin's Cannon	Ether Cannon	10	470	5	8	4	\N	247
 Holy Cannon	Ether Cannon	10	435	4	5	7	\N	247
 Cannon of Valor	Ether Cannon	10	444	7	13	3	\N	247
-Buzzard Cannon	Ether Cannon	17	744	5	8	10	2944	247
+Buzzard Cannon	Ether Cannon	17	744	5	8	10	3059	247
 Custom Cannon	Ether Cannon	6	226	4	5	9	\N	248
 Clockwork Cannon	Ether Cannon	6	260	3	7	5	\N	248
-Darkseeker	Ether Cannon	6	235	6	12	4	2966	248
+Darkseeker	Ether Cannon	6	235	6	12	4	3081	248
 Accelerator Cannon	Ether Cannon	18	792	5	10	5	\N	248
 Turbine Cannon	Ether Cannon	9	414	4	8	6	\N	249
 Ceramic Cannon	Ether Cannon	9	406	5	11	6	\N	249
 Mechanized Cannon	Ether Cannon	9	389	3	4	8	\N	249
-Full Metal Cannon	Ether Cannon	18	776	4	5	9	2947	249
+Full Metal Cannon	Ether Cannon	18	776	4	5	9	3062	249
 Ancient Cannon	Ether Cannon	8	360	6	7	5	\N	250
 Elder Cannon	Ether Cannon	8	343	4	4	9	\N	250
-Arcanum Cannon	Ether Cannon	8	384	8	6	4	2936	250
+Arcanum Cannon	Ether Cannon	8	384	8	6	4	3051	250
 Legendary Cannon	Ether Cannon	19	813	8	8	5	\N	250
 Agarthan Cannon	Ether Cannon	11	511	6	7	5	\N	251
 Cannon of El Dorado	Ether Cannon	11	468	5	4	9	\N	251
 Cannon of Eden	Ether Cannon	11	477	8	9	4	\N	251
-Gordian Cannon	Ether Cannon	19	781	5	3	11	2945	251
+Gordian Cannon	Ether Cannon	19	781	5	3	11	3060	251
 Adamant Cannon	Ether Cannon	9	414	6	16	2	\N	252
 Wootz Cannon	Ether Cannon	9	402	4	8	6	\N	252
-Silent Gunner	Ether Cannon	9	435	5	10	4	2963	252
+Silent Gunner	Ether Cannon	9	435	5	10	4	3078	252
 Orichalcum Cannon	Ether Cannon	19	829	6	9	4	\N	252
 Sigma Cannon	Ether Cannon	12	524	7	17	2	\N	253
 Delta Cannon	Ether Cannon	12	508	4	8	6	\N	253
-The Longstone	Ether Cannon	12	555	5	9	4	2968	253
-Cannon of Babel	Ether Cannon	19	805	10	16	1	2948	253
+The Longstone	Ether Cannon	12	555	5	9	4	3083	253
+Cannon of Babel	Ether Cannon	19	805	10	16	1	3063	253
 Cannon of Despair	Ether Cannon	13	546	5	9	4	\N	254
 Cannon of Chaos	Ether Cannon	13	597	6	11	2	\N	254
-Spectral Cannon	Ether Cannon	13	563	9	19	1	2963	254
+Spectral Cannon	Ether Cannon	13	563	9	19	1	3078	254
 Cannon of Thanatos	Ether Cannon	20	836	5	10	11	\N	255
 Cannon of Banishing	Ether Cannon	20	852	9	20	1	\N	255
-The Ashen Horse	Ether Cannon	20	869	8	15	3	2963	255
+The Ashen Horse	Ether Cannon	20	869	8	15	3	3078	255
 Cannon of Origin	Ether Cannon	14	612	5	14	4	\N	256
 Eternal Cannon	Ether Cannon	14	649	3	9	5	\N	256
 Final Cannon	Ether Cannon	14	594	2	6	8	\N	256
 Satellite Cannon	Ether Cannon	20	844	1	10	12	\N	257
 Meteorite Cannon	Ether Cannon	20	886	5	13	4	\N	257
-Regurgitator	Ether Cannon	20	878	1	14	8	2954	257
+Regurgitator	Ether Cannon	20	878	1	14	8	3069	257
 Primitive Hammer	Shield Hammer	1	16	15	4	25	\N	263
 Plain Hammer	Shield Hammer	1	21	15	4	25	\N	263
 Flatform Hammer	Shield Hammer	3	58	15	4	25	\N	263
-Ornate Hammer	Shield Hammer	15	581	20	5	19	2969	263
+Ornate Hammer	Shield Hammer	15	581	20	5	19	3084	263
 Breaker Hammer	Shield Hammer	5	153	15	5	20	\N	264
 Duelist's Hammer	Shield Hammer	5	166	22	4	25	\N	264
 Battle Hammer	Shield Hammer	5	145	12	2	38	\N	264
-Snare Hammer	Shield Hammer	15	553	10	3	55	2970	264
+Snare Hammer	Shield Hammer	15	553	10	3	55	3085	264
 Horn Hammer	Shield Hammer	2	31	25	6	19	\N	265
 Beastly Hammer	Shield Hammer	2	40	25	6	19	\N	265
 Raider's Hammer	Shield Hammer	3	78	25	6	19	\N	265
@@ -17670,59 +17792,59 @@ Crushing Hammer	Shield Hammer	16	613	30	6	13	\N	265
 Druid's Hammer	Shield Hammer	7	272	22	5	14	\N	266
 Forest Hammer	Shield Hammer	7	231	18	4	29	\N	266
 Highland Hammer	Shield Hammer	7	248	30	8	8	\N	266
-Gaia Hammer	Shield Hammer	16	589	20	5	28	2942	266
+Gaia Hammer	Shield Hammer	16	589	20	5	28	3057	266
 Knight's Hammer	Shield Hammer	4	101	20	5	25	\N	267
 Guardian's Hammer	Shield Hammer	4	111	24	4	20	\N	267
-Concert Hammer	Shield Hammer	4	122	22	5	23	2962	267
+Concert Hammer	Shield Hammer	4	122	22	5	23	3077	267
 Valkyrie's Hammer	Shield Hammer	17	645	24	6	19	\N	267
 Paladin's Hammer	Shield Hammer	10	392	18	4	18	\N	268
 Holy Hammer	Shield Hammer	10	362	14	3	35	\N	268
 Hammer of Valor	Shield Hammer	10	369	26	6	13	\N	268
-The Maestro	Shield Hammer	17	620	18	4	50	2944	268
+The Maestro	Shield Hammer	17	620	18	4	50	3059	268
 Custom Hammer	Shield Hammer	6	188	15	3	47	\N	269
 Clockwork Hammer	Shield Hammer	6	216	12	4	25	\N	269
-Sonic Hammer	Shield Hammer	6	196	24	6	20	2962	269
+Sonic Hammer	Shield Hammer	6	196	24	6	20	3077	269
 Accelerator Hammer	Shield Hammer	18	660	20	5	23	\N	269
 Turbine Hammer	Shield Hammer	9	345	15	4	31	\N	270
 Ceramic Hammer	Shield Hammer	9	338	20	6	31	\N	270
 Mechanized Hammer	Shield Hammer	9	324	10	2	40	\N	270
-The Flattener	Shield Hammer	18	646	15	3	45	2947	270
+The Flattener	Shield Hammer	18	646	15	3	45	3062	270
 Ancient Hammer	Shield Hammer	8	300	22	4	25	\N	271
 Elder Hammer	Shield Hammer	8	286	16	2	45	\N	271
-Faultless	Shield Hammer	8	320	32	3	20	2941	271
+Faultless	Shield Hammer	8	320	32	3	20	3056	271
 Legendary Hammer	Shield Hammer	19	678	30	4	23	\N	271
 Agarthan Hammer	Shield Hammer	11	426	22	4	25	\N	272
 Hammer of El Dorado	Shield Hammer	11	390	18	2	45	\N	272
 Hammer of Eden	Shield Hammer	11	398	30	5	20	\N	272
-Nautilus Hammer	Shield Hammer	19	651	20	1	53	2945	272
+Nautilus Hammer	Shield Hammer	19	651	20	1	53	3060	272
 Adamant Hammer	Shield Hammer	9	345	25	8	8	\N	273
 Wootz Hammer	Shield Hammer	9	335	15	4	28	\N	273
-Infallible	Shield Hammer	9	362	20	5	18	2939	273
+Infallible	Shield Hammer	9	362	20	5	18	3054	273
 Orichalcum Hammer	Shield Hammer	19	691	24	5	19	\N	273
 Sigma Hammer	Shield Hammer	12	437	27	8	8	\N	274
 Delta Hammer	Shield Hammer	12	424	15	4	30	\N	274
-Growler Half-Full	Shield Hammer	12	463	20	5	18	2964	274
-Traitor to the Cause	Shield Hammer	19	671	40	8	6	2948	274
+Growler Half-Full	Shield Hammer	12	463	20	5	18	3079	274
+Traitor to the Cause	Shield Hammer	19	671	40	8	6	3063	274
 Hammer of Despair	Shield Hammer	13	455	20	5	20	\N	275
 Hammer of Chaos	Shield Hammer	13	497	25	6	10	\N	275
-Demon's Hoof	Shield Hammer	13	469	36	10	5	2964	275
+Demon's Hoof	Shield Hammer	13	469	36	10	5	3079	275
 Hammer of Thanatos	Shield Hammer	20	696	20	5	55	\N	276
 Hammer of Banishing	Shield Hammer	20	710	36	10	5	\N	276
-The Lidless Eye	Shield Hammer	20	724	30	8	13	2933	276
+The Lidless Eye	Shield Hammer	20	724	30	8	13	3048	276
 Hammer of Origin	Shield Hammer	14	510	18	7	19	\N	277
 Eternal Hammer	Shield Hammer	14	541	10	5	25	\N	277
 Final Hammer	Shield Hammer	14	495	6	3	40	\N	277
 Satellite Hammer	Shield Hammer	20	703	5	5	58	\N	278
 Meteorite Hammer	Shield Hammer	20	738	20	6	20	\N	278
-Graviton Smasher	Shield Hammer	20	731	4	7	38	2964	278
+Graviton Smasher	Shield Hammer	20	731	4	7	38	3079	278
 Nameless Katana	Chroma Katana	1	17	4	19	20	\N	283
 Eastern Tachi	Chroma Katana	1	22	4	19	20	\N	283
 Vagrant Tachi	Chroma Katana	3	61	4	19	20	\N	283
-Katana of Plenty	Chroma Katana	15	610	5	25	15	2969	283
+Katana of Plenty	Chroma Katana	15	610	5	25	15	3084	283
 Breaker Tachi	Chroma Katana	5	160	4	26	16	\N	284
 Duelist's Tachi	Chroma Katana	5	174	6	20	20	\N	284
 War Tachi	Chroma Katana	5	153	3	10	30	\N	284
-Plunder Katana	Chroma Katana	15	581	3	13	44	2970	284
+Plunder Katana	Chroma Katana	15	581	3	13	44	3085	284
 Wildflower Tachi	Chroma Katana	2	33	6	31	15	\N	285
 Meadow Katana	Chroma Katana	2	43	6	31	15	\N	285
 Herbalist's Katana	Chroma Katana	3	82	6	31	15	\N	285
@@ -17730,59 +17852,59 @@ Katana of Springtime	Chroma Katana	16	643	8	31	10	\N	285
 Shadeleaf Tachi	Chroma Katana	7	286	6	26	11	\N	286
 Budding Katana	Chroma Katana	7	242	5	20	23	\N	286
 Greenbough Tachi	Chroma Katana	7	260	8	38	6	\N	286
-Aesthete's Katana	Chroma Katana	16	618	5	23	22	2943	286
+Aesthete's Katana	Chroma Katana	16	618	5	23	22	3058	286
 Warrior's Tachi	Chroma Katana	4	106	5	25	20	\N	287
 Yojimbo	Chroma Katana	4	117	6	20	16	\N	287
-Fencer's Tachi	Chroma Katana	4	128	6	23	18	2966	287
+Fencer's Tachi	Chroma Katana	4	128	6	23	18	3081	287
 Flowing Tachi	Chroma Katana	17	677	6	28	15	\N	287
 Flagbearer's Tachi	Chroma Katana	10	412	5	20	14	\N	288
 Lifeline Katana	Chroma Katana	10	380	4	13	28	\N	288
 Brave Katana	Chroma Katana	10	388	7	31	10	\N	288
-Clearglass Katana	Chroma Katana	17	651	5	20	40	2944	288
+Clearglass Katana	Chroma Katana	17	651	5	20	40	3059	288
 Trick Katana	Chroma Katana	6	197	4	13	38	\N	289
 Blackiron Tachi	Chroma Katana	6	227	3	18	20	\N	289
-Eightfold Tachi	Chroma Katana	6	205	6	30	16	2936	289
+Eightfold Tachi	Chroma Katana	6	205	6	30	16	3051	289
 Armored Tachi	Chroma Katana	18	693	5	25	18	\N	289
 Mechatronic Tachi	Chroma Katana	9	362	4	19	25	\N	290
 Steamdrive Tachi	Chroma Katana	9	355	5	28	25	\N	290
 Galvanic Katana	Chroma Katana	9	340	3	10	32	\N	290
-Deus Ex Tachi	Chroma Katana	18	679	4	13	36	2947	290
+Deus Ex Tachi	Chroma Katana	18	679	4	13	36	3062	290
 Antique Tachi	Chroma Katana	8	315	6	18	20	\N	291
 Eternal Tachi	Chroma Katana	8	300	4	10	36	\N	291
-Mysterious Tachi	Chroma Katana	8	336	8	15	16	2937	291
+Mysterious Tachi	Chroma Katana	8	336	8	15	16	3052	291
 Legendary Tachi	Chroma Katana	19	712	8	19	18	\N	291
 Tectonic Katana	Chroma Katana	11	447	6	18	20	\N	292
 24-Carat Tachi	Chroma Katana	11	409	5	10	36	\N	292
 Neverdull Tachi	Chroma Katana	11	418	8	23	16	\N	292
-Illusive Tachi	Chroma Katana	19	684	5	6	42	2945	292
+Illusive Tachi	Chroma Katana	19	684	5	6	42	3060	292
 Tempered Katana	Chroma Katana	9	362	6	40	6	\N	293
 Darksilver Tachi	Chroma Katana	9	351	4	19	22	\N	293
-Rippling Tachi	Chroma Katana	9	380	5	25	14	2934	293
+Rippling Tachi	Chroma Katana	9	380	5	25	14	3049	293
 Unbreakable Katana	Chroma Katana	19	726	6	23	15	\N	293
 Zero Tachi	Chroma Katana	12	459	7	41	6	\N	294
 Zetsu	Chroma Katana	12	445	4	19	24	\N	294
-Dimensional Katana	Chroma Katana	12	487	5	23	14	2946	294
-The Empty Sky	Chroma Katana	19	705	10	40	5	2948	294
+Dimensional Katana	Chroma Katana	12	487	5	23	14	3061	294
+The Empty Sky	Chroma Katana	19	705	10	40	5	3063	294
 Katana of Lost Hopes	Chroma Katana	13	477	5	23	16	\N	295
 Katana of Chaos	Chroma Katana	13	522	6	28	8	\N	295
-Katana of Demise	Chroma Katana	13	492	9	48	4	2960	295
+Katana of Demise	Chroma Katana	13	492	9	48	4	3075	295
 Katana of Slaughter	Chroma Katana	20	731	5	25	44	\N	296
 Exorcist's Katana	Chroma Katana	20	745	9	50	4	\N	296
-Wisdom's Cradle	Chroma Katana	20	760	8	38	10	2958	296
+Wisdom's Cradle	Chroma Katana	20	760	8	38	10	3073	296
 Original Tachi	Chroma Katana	14	536	5	35	15	\N	297
 Tachi of Forever	Chroma Katana	14	568	3	23	20	\N	297
 All That Is	Chroma Katana	14	520	2	15	32	\N	297
 Celestial Tachi	Chroma Katana	20	738	1	25	46	\N	298
 Shooting Star Katana	Chroma Katana	20	775	5	31	16	\N	298
-Andromeda	Chroma Katana	20	768	1	34	30	2957	298
+Andromeda	Chroma Katana	20	768	1	34	30	3072	298
 Primitive Ball	Bitball	1	14	19	11	10	\N	303
 Plain Ball	Bitball	1	18	19	11	10	\N	303
 Flatform Ball	Bitball	3	49	19	11	10	\N	303
-Ornate Ball	Bitball	15	494	25	15	8	2969	303
+Ornate Ball	Bitball	15	494	25	15	8	3084	303
 Breaker Ball	Bitball	5	129	19	16	8	\N	304
 Duelist's Ball	Bitball	5	140	28	12	10	\N	304
 Battle Ball	Bitball	5	123	15	6	15	\N	304
-Snare Ball	Bitball	15	470	13	8	22	2970	304
+Snare Ball	Bitball	15	470	13	8	22	3085	304
 Wooden Ball	Bitball	2	26	31	19	8	\N	305
 Maple Ball	Bitball	2	34	31	19	8	\N	305
 Birch Ball	Bitball	3	66	31	19	8	\N	305
@@ -17790,59 +17912,59 @@ Pine Ball	Bitball	16	521	38	19	5	\N	305
 Linden Ball	Bitball	7	232	28	16	6	\N	306
 Camellia Ball	Bitball	7	197	23	12	12	\N	306
 Magnolia Ball	Bitball	7	211	38	23	3	\N	306
-Ivy Ball	Bitball	16	501	25	14	11	2943	306
+Ivy Ball	Bitball	16	501	25	14	11	3058	306
 Knight's Ball	Bitball	4	86	25	15	10	\N	307
 Guardian's Ball	Bitball	4	95	30	12	8	\N	307
-Chancy Ball	Bitball	4	104	28	14	9	2938	307
+Chancy Ball	Bitball	4	104	28	14	9	3053	307
 Valkyrie's Ball	Bitball	17	548	30	17	8	\N	307
 Paladin's Ball	Bitball	10	333	23	12	7	\N	308
 Holy Ball	Bitball	10	307	18	8	14	\N	308
 Ball of Valor	Bitball	10	314	33	19	5	\N	308
-Homing Ball	Bitball	17	527	23	12	20	2944	308
+Homing Ball	Bitball	17	527	23	12	20	3059	308
 Custom Ball	Bitball	6	160	19	8	19	\N	309
 Clockwork Ball	Bitball	6	184	15	11	10	\N	309
-Stealth Ball	Bitball	6	166	30	18	8	2961	309
+Stealth Ball	Bitball	6	166	30	18	8	3076	309
 Accelerator Ball	Bitball	18	561	25	15	9	\N	309
 Turbine Ball	Bitball	9	293	19	11	13	\N	310
 Ceramic Ball	Bitball	9	287	25	17	13	\N	310
 Mechanized Ball	Bitball	9	275	13	6	16	\N	310
-Advanced Ball	Bitball	18	549	19	8	18	2947	310
+Advanced Ball	Bitball	18	549	19	8	18	3062	310
 Ancient Ball	Bitball	8	255	28	11	10	\N	311
 Elder Ball	Bitball	8	243	20	6	18	\N	311
-Spirit Ball	Bitball	8	272	40	9	8	2936	311
+Spirit Ball	Bitball	8	272	40	9	8	3051	311
 Legendary Ball	Bitball	19	576	38	11	9	\N	311
 Agarthan Ball	Bitball	11	363	28	11	10	\N	312
 Ball of El Dorado	Bitball	11	332	23	6	18	\N	312
 Ball of Eden	Bitball	11	339	38	14	8	\N	312
-Jewel of Yore	Bitball	19	553	25	4	21	2945	312
+Jewel of Yore	Bitball	19	553	25	4	21	3060	312
 Adamant Ball	Bitball	9	293	31	24	3	\N	313
 Wootz Ball	Bitball	9	284	19	11	11	\N	313
-The Peacemaker	Bitball	9	308	25	15	7	2965	313
+The Peacemaker	Bitball	9	308	25	15	7	3080	313
 Orichalcum Ball	Bitball	19	587	30	14	8	\N	313
 Sigma Ball	Bitball	12	371	34	25	3	\N	314
 Delta Ball	Bitball	12	360	19	11	12	\N	314
-Cypher	Bitball	12	393	25	14	7	2940	314
-Omega Ball	Bitball	19	570	50	24	3	2948	314
+Cypher	Bitball	12	393	25	14	7	3055	314
+Omega Ball	Bitball	19	570	50	24	3	3063	314
 Ball of Despair	Bitball	13	387	25	14	8	\N	315
 Ball of Chaos	Bitball	13	423	31	17	4	\N	315
-Public Enemy No. 1	Bitball	13	399	45	29	2	2961	315
+Public Enemy No. 1	Bitball	13	399	45	29	2	3076	315
 Ball of Thanatos	Bitball	20	592	25	15	22	\N	316
 Ball of Banishing	Bitball	20	604	45	30	2	\N	316
-Morningstar Ascending	Bitball	20	616	38	23	5	2965	316
+Morningstar Ascending	Bitball	20	616	38	23	5	3080	316
 Ball of Origin	Bitball	14	434	23	21	8	\N	317
 Eternal Ball	Bitball	14	460	13	14	10	\N	317
 Final Ball	Bitball	14	421	8	9	16	\N	317
 Satellite Ball	Bitball	20	598	6	15	23	\N	318
 Meteorite Ball	Bitball	20	628	25	19	8	\N	318
-Eclipse of Reason	Bitball	20	622	5	20	15	2963	318
+Eclipse of Reason	Bitball	20	622	5	20	15	3078	318
 Primitive Knuckles	Knuckle Claws	1	16	4	15	10	\N	324
 Plain Knuckles	Knuckle Claws	1	21	4	15	10	\N	324
 Flatform Knuckles	Knuckle Claws	3	59	4	15	10	\N	324
-Ornate Knuckles	Knuckle Claws	15	592	5	20	8	2969	324
+Ornate Knuckles	Knuckle Claws	15	592	5	20	8	3084	324
 Breaker Knuckles	Knuckle Claws	5	156	4	21	8	\N	326
 Duelist's Knuckles	Knuckle Claws	5	169	6	16	10	\N	326
 Battle Knuckles	Knuckle Claws	5	148	3	8	15	\N	326
-Snare Knuckles	Knuckle Claws	15	564	3	10	22	2970	326
+Snare Knuckles	Knuckle Claws	15	564	3	10	22	3085	326
 Knuckles of the Crow	Knuckle Claws	2	32	6	25	8	\N	328
 Peak Knuckles	Knuckle Claws	2	42	6	25	8	\N	328
 Crested Knuckles	Knuckle Claws	3	80	6	25	8	\N	328
@@ -17850,53 +17972,54 @@ Titan Knuckles	Knuckle Claws	16	625	8	25	5	\N	328
 Raider's Knuckles	Knuckle Claws	7	278	6	21	6	\N	330
 Jawbone Knuckles	Knuckle Claws	7	236	5	16	12	\N	330
 Bear Knuckles	Knuckle Claws	7	253	8	30	3	\N	330
-Chimaera Knuckles	Knuckle Claws	16	601	5	18	11	2943	330
+Chimaera Knuckles	Knuckle Claws	16	601	5	18	11	3058	330
 Knight's Knuckles	Knuckle Claws	4	103	5	20	10	\N	332
 Guardian's Knuckles	Knuckle Claws	4	113	6	16	8	\N	332
-Face Punchers	Knuckle Claws	4	125	6	18	9	2933	332
+Face Punchers	Knuckle Claws	4	125	6	18	9	3048	332
 Valkyrie's Knuckles	Knuckle Claws	17	657	6	22	8	\N	332
 Paladin's Knuckles	Knuckle Claws	10	399	5	16	7	\N	334
 Holy Knuckles	Knuckle Claws	10	369	4	10	14	\N	334
 Knuckles of Valor	Knuckle Claws	10	376	7	25	5	\N	334
-Kaiser Knuckles	Knuckle Claws	17	632	5	16	20	2944	334
+Kaiser Knuckles	Knuckle Claws	17	632	5	16	20	3059	334
 Custom Knuckles	Knuckle Claws	6	192	4	10	19	\N	336
 Clockwork Knuckles	Knuckle Claws	6	221	3	14	10	\N	336
-Brawler Knuckles	Knuckle Claws	6	200	6	24	8	2938	336
+Brawler Knuckles	Knuckle Claws	6	200	6	24	8	3053	336
 Accelerator Knuckles	Knuckle Claws	18	673	5	20	9	\N	336
 Turbine Knuckles	Knuckle Claws	9	352	4	15	13	\N	338
 Ceramic Knuckles	Knuckle Claws	9	345	5	22	13	\N	338
 Mechanized Knuckles	Knuckle Claws	9	331	3	8	16	\N	338
-Thunderstrikers	Knuckle Claws	18	659	4	10	18	2947	338
+Thunderstrikers	Knuckle Claws	18	659	4	10	18	3062	338
 Ancient Knuckles	Knuckle Claws	8	307	6	14	10	\N	340
 Elder Knuckles	Knuckle Claws	8	292	4	8	18	\N	340
-Mirage Knuckles	Knuckle Claws	8	327	8	12	8	2961	340
+Mirage Knuckles	Knuckle Claws	8	327	8	12	8	3076	340
 Legendary Knuckles	Knuckle Claws	19	691	8	15	9	\N	340
 Agarthan Knuckles	Knuckle Claws	11	435	6	14	10	\N	342
 Knuckles of El Dorado	Knuckle Claws	11	398	5	8	18	\N	342
 Knuckles of Eden	Knuckle Claws	11	406	8	18	8	\N	342
-Fists of the Advent	Knuckle Claws	19	663	5	5	21	2945	342
+Fists of the Advent	Knuckle Claws	19	663	5	5	21	3060	342
 Adamant Knuckles	Knuckle Claws	9	352	6	32	3	\N	344
 Wootz Knuckles	Knuckle Claws	9	341	4	15	11	\N	344
-Fists of Healing	Knuckle Claws	9	370	5	20	7	2958	344
+Fists of Healing	Knuckle Claws	9	370	5	20	7	3073	344
 Orichalcum Knuckles	Knuckle Claws	19	705	6	18	8	\N	344
 Sigma Knuckles	Knuckle Claws	12	446	7	33	3	\N	346
 Delta Knuckles	Knuckle Claws	12	433	4	15	12	\N	346
-Lambda Knuckles	Knuckle Claws	12	473	5	18	7	2937	346
-Spirits of the Knife	Knuckle Claws	19	684	10	32	3	2948	346
+Lambda Knuckles	Knuckle Claws	12	473	5	18	7	3052	346
+Spirits of the Knife	Knuckle Claws	19	684	10	32	3	3063	346
 Knuckles of Despair	Knuckle Claws	13	464	5	18	8	\N	348
 Knuckles of Chaos	Knuckle Claws	13	507	6	22	4	\N	348
-Hands of Ruin	Knuckle Claws	13	478	9	38	2	2934	348
+Hands of Ruin	Knuckle Claws	13	478	9	38	2	3049	348
 Knuckles of Thanatos	Knuckle Claws	20	710	5	20	22	\N	350
 Knuckles of Banishing	Knuckle Claws	20	724	9	40	2	\N	350
-Sacrifice	Knuckle Claws	20	739	8	30	5	2958	350
+Sacrifice	Knuckle Claws	20	739	8	30	5	3073	350
 Knuckles of Origin	Knuckle Claws	14	520	5	28	8	\N	352
 Eternal Knuckles	Knuckle Claws	14	551	3	18	10	\N	352
 Final Knuckles	Knuckle Claws	14	504	2	12	16	\N	352
 Satellite Knuckles	Knuckle Claws	20	717	1	20	23	\N	354
 Meteorite Knuckles	Knuckle Claws	20	753	5	25	8	\N	354
-The First Principle	Knuckle Claws	20	746	1	27	15	2960	354
+The First Principle	Knuckle Claws	20	746	1	27	15	3075	354
 Junk Sword	Broadsword	1	15	10	5	0	\N	365
-Masamune	Nodachi	12	656	1	35	0	\N	366
+Masamune (Chapter 1)	Nodachi	2	47	1	25	0	\N	366
+Masamune (Chapter 8)	Nodachi	12	656	1	35	0	\N	366
 Thanatos	Sword Tonfa	2	43	15	15	20	\N	367
 Aqua Scimitar	Catalyst Scimitar	10	451	5	10	20	\N	4
 Basic Arms	Mech Arms	6	217	12	8	38	\N	73
@@ -17904,13 +18027,134 @@ Imperial Whips	Whipsword	6	203	8	10	47	\N	121
 Purple Lightning Edge	Big Bang Edge	8	438	39	15	8	\N	152
 Storm Scythes	Dual Scythes	3	90	11	36	5	\N	169
 Tertiary Sword	Aegis Sword	20	1298	10	23	25	\N	1
-Doomquills	Calamity Scythe	20	773	15	20	10	2958	368
-Lance of Ages	Combra Bardiche	20	879	10	40	5	2959	369
-Divine Consorts	Infinity Fans	20	808	5	15	20	2957	371
-Twin Mirage	Brilliant Twinblades	20	738	10	25	5	2960	373
-Hearthaven	Decimation Cannon	20	879	15	15	10	2936	374
-Royal Guard	Rockrending Gauntlets	20	738	10	10	35	2933	376
-Bringer of the Winds	Sword Tonfa	20	773	15	15	25	2934	378
+Doomquills	Calamity Scythe	20	773	15	20	10	3073	368
+Lance of Ages	Combra Bardiche	20	879	10	40	5	3074	369
+Divine Consorts	Infinity Fans	20	808	5	15	20	3072	371
+Twin Mirage	Brilliant Twinblades	20	738	10	25	5	3075	373
+Hearthaven	Decimation Cannon	20	879	15	15	10	3051	374
+Royal Guard	Rockrending Gauntlets	20	738	10	10	35	3048	376
+Bringer of the Winds	Sword Tonfa	20	773	15	15	25	3049	378
+Masamune (Challenge Mode)	Nodachi	12	656	1	35	0	1246	366
+Monado (Lead)	Monado	1	24	8	15	15	\N	381
+Monado (Tin)	Monado	1	31	8	15	15	\N	381
+Monado (Bronze)	Monado	3	87	8	15	15	\N	381
+Monado (Silver)	Monado	15	872	10	20	11	3084	381
+Monado (Iron)	Monado	5	229	8	21	12	\N	381
+Monado (Cobalt)	Monado	5	248	11	16	15	\N	381
+Monado (Steel)	Monado	5	218	6	8	23	\N	381
+Monado (Gold)	Monado	15	830	5	10	33	3085	381
+Monado (Fang)	Monado	2	47	13	25	11	\N	381
+Monado (Wing)	Monado	2	61	13	25	11	\N	381
+Monado (Scale)	Monado	3	117	13	25	11	\N	381
+Monado (Horn)	Monado	16	919	15	25	8	\N	381
+Monado (Wood)	Monado	7	409	11	21	8	\N	381
+Monado (Flower)	Monado	7	347	9	16	17	\N	381
+Monado (Glass)	Monado	7	372	15	30	5	\N	381
+Monado (Forest)	Monado	16	884	10	18	17	3058	381
+Monado (Turquoise)	Monado	4	152	10	20	15	\N	381
+Monado (Spinel)	Monado	4	167	12	16	12	\N	381
+Monado (Amethyst)	Monado	4	184	11	18	14	3051	381
+Monado (Fluorite)	Monado	17	967	12	22	11	\N	381
+Monado (Garnet)	Monado	10	588	9	16	11	\N	381
+Monado (Aquamarine)	Monado	10	543	7	10	21	\N	381
+Monado (Opal)	Monado	10	554	13	25	8	\N	381
+Monado (Zircon)	Monado	17	930	9	16	30	3059	381
+Monado (Coil)	Monado	6	282	8	10	28	\N	381
+Monado (Chain)	Monado	6	324	6	14	15	\N	381
+Monado (Magnet)	Monado	6	293	12	24	12	3051	381
+Monado (Shaft)	Monado	18	990	10	20	14	\N	381
+Monado (Battery)	Monado	9	518	8	15	19	\N	381
+Monado (Engine)	Monado	9	508	10	22	19	\N	381
+Monado (Motor)	Monado	9	487	5	8	24	\N	381
+Monado (Booster)	Monado	18	970	8	10	27	3062	381
+Monado (Tri-Chip)	Monado	8	450	11	14	15	\N	381
+Monado (Rhombus)	Monado	8	429	8	8	27	\N	381
+Monado (Pentagon)	Monado	8	480	16	12	12	3053	381
+Monado (Hexagon)	Monado	19	1017	15	15	14	\N	381
+Monado (Sphere)	Monado	11	639	11	14	15	\N	381
+Monado (Cube)	Monado	11	585	9	8	27	\N	381
+Monado (Polygon)	Monado	11	597	15	18	12	\N	381
+Monado (Spiral)	Monado	19	977	10	5	32	3060	381
+Monado (Lodranite)	Monado	9	518	13	32	5	\N	381
+Monado (Brachinite)	Monado	9	502	8	15	17	\N	381
+Monado (Ureilite)	Monado	9	544	10	20	11	3049	381
+Monado (Winonaite)	Monado	19	1037	12	18	11	\N	381
+Monado (Nakhlite)	Monado	12	656	14	33	5	\N	381
+Monado (Howardite)	Monado	12	636	8	15	18	\N	381
+Monado (Aubrite)	Monado	12	695	10	18	11	3075	381
+Monado (Angrite)	Monado	19	1007	20	32	4	3063	381
+Monado (Dark Matter)	Monado	13	683	10	18	12	\N	381
+Monado (Axion)	Monado	13	746	13	22	6	\N	381
+Monado (Mirror Matter)	Monado	13	704	18	38	3	3072	381
+Monado (Shining Star)	Monado	20	1044	10	20	33	\N	381
+Monado (Moon Matter)	Monado	20	1066	18	40	3	\N	381
+Monado (Sunlight)	Monado	20	1087	15	30	8	3073	381
+Monado (Photon)	Monado	14	765	9	28	11	\N	381
+Monado (Positron)	Monado	14	811	5	18	15	\N	381
+Monado (Hadron)	Monado	14	742	3	12	24	\N	381
+Monado (Dilaton)	Monado	20	1055	3	20	35	\N	381
+Monado (Preon)	Monado	20	1108	10	25	12	\N	381
+Monado (Tachyon)	Monado	20	1097	2	27	23	3074	381
+Well-Used Blades (Lead)	Knives	1	18	15	23	5	\N	383
+Well-Used Blades (Tin)	Knives	1	23	15	23	5	\N	383
+Well-Used Blades (Bronze)	Knives	3	65	15	23	5	\N	383
+Well-Used Blades (Silver)	Knives	15	650	20	30	4	3084	383
+Well-Used Blades (Iron)	Knives	5	171	15	32	4	\N	383
+Well-Used Blades (Cobalt)	Knives	5	185	22	24	5	\N	383
+Well-Used Blades (Steel)	Knives	5	163	12	12	8	\N	383
+Well-Used Blades (Gold)	Knives	15	619	10	15	11	3085	383
+Well-Used Blades (Fang)	Knives	2	35	25	38	4	\N	383
+Well-Used Blades (Wing)	Knives	2	46	25	38	4	\N	383
+Well-Used Blades (Scale)	Knives	3	88	25	38	4	\N	383
+Well-Used Blades (Horn)	Knives	16	686	30	38	3	\N	383
+Well-Used Blades (Wood)	Knives	7	305	22	32	3	\N	383
+Well-Used Blades (Flower)	Knives	7	258	18	24	6	\N	383
+Well-Used Blades (Glass)	Knives	7	277	30	45	2	\N	383
+Well-Used Blades (Forest)	Knives	16	660	20	27	6	3058	383
+Well-Used Blades (Turquoise)	Knives	4	113	20	30	5	\N	383
+Well-Used Blades (Spinel)	Knives	4	124	24	24	4	\N	383
+Well-Used Blades (Amethyst)	Knives	4	137	22	27	5	3053	383
+Well-Used Blades (Fluorite)	Knives	17	722	24	33	4	\N	383
+Well-Used Blades (Garnet)	Knives	10	439	18	24	4	\N	383
+Well-Used Blades (Aquamarine)	Knives	10	405	14	15	7	\N	383
+Well-Used Blades (Opal)	Knives	10	414	26	38	3	\N	383
+Well-Used Blades (Zircon)	Knives	17	694	18	24	10	3059	383
+Well-Used Blades (Coil)	Knives	6	211	15	15	9	\N	383
+Well-Used Blades (Chain)	Knives	6	243	12	21	5	\N	383
+Well-Used Blades (Magnet)	Knives	6	219	24	36	4	3081	383
+Well-Used Blades (Shaft)	Knives	18	738	20	30	5	\N	383
+Well-Used Blades (Battery)	Knives	9	386	15	23	6	\N	383
+Well-Used Blades (Engine)	Knives	9	378	20	33	6	\N	383
+Well-Used Blades (Motor)	Knives	9	363	10	12	8	\N	383
+Well-Used Blades (Booster)	Knives	18	724	15	15	9	3062	383
+Well-Used Blades (Tri-Chip)	Knives	8	336	22	21	5	\N	383
+Well-Used Blades (Rhombus)	Knives	8	320	16	12	9	\N	383
+Well-Used Blades (Pentagon)	Knives	8	358	32	18	4	3078	383
+Well-Used Blades (Hexagon)	Knives	19	760	30	23	5	\N	383
+Well-Used Blades (Sphere)	Knives	11	477	22	21	5	\N	383
+Well-Used Blades (Cube)	Knives	11	437	18	12	9	\N	383
+Well-Used Blades (Polygon)	Knives	11	446	30	27	4	\N	383
+Well-Used Blades (Spiral)	Knives	19	729	20	8	11	3060	383
+Well-Used Blades (Lodranite)	Knives	9	386	25	48	2	\N	383
+Well-Used Blades (Brachinite)	Knives	9	374	15	23	6	\N	383
+Well-Used Blades (Ureilite)	Knives	9	405	20	30	4	3078	383
+Well-Used Blades (Winonaite)	Knives	19	775	24	27	4	\N	383
+Well-Used Blades (Nakhlite)	Knives	12	489	27	50	2	\N	383
+Well-Used Blades (Howardite)	Knives	12	474	15	23	6	\N	383
+Well-Used Blades (Aubrite)	Knives	12	518	20	27	4	3050	383
+Well-Used Blades (Angrite)	Knives	19	752	40	48	1	3063	383
+Well-Used Blades (Dark Matter)	Knives	13	509	20	27	4	\N	383
+Well-Used Blades (Axion)	Knives	13	557	25	33	2	\N	383
+Well-Used Blades (Mirror Matter)	Knives	13	525	36	57	1	3052	383
+Well-Used Blades (Shining Star)	Knives	20	779	20	30	11	\N	383
+Well-Used Blades (Moon Matter)	Knives	20	795	36	60	1	\N	383
+Well-Used Blades (Sunlight)	Knives	20	811	30	45	3	3075	383
+Well-Used Blades (Photon)	Knives	14	571	18	42	4	\N	383
+Well-Used Blades (Positron)	Knives	14	605	10	27	5	\N	383
+Well-Used Blades (Hadron)	Knives	14	554	6	18	8	\N	383
+Well-Used Blades (Dilaton)	Knives	20	787	5	30	12	\N	383
+Well-Used Blades (Preon)	Knives	20	826	20	38	4	\N	383
+Well-Used Blades (Tachyon)	Knives	20	818	4	41	8	3074	383
 \.
 
 
