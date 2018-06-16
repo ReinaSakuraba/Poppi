@@ -16292,186 +16292,186 @@ COPY xeno2.pouch_items (id, name, category, sell_price, rarity, location, max_ca
 --
 
 COPY xeno2.skills (name, driver, caption, chart, sp) FROM stdin;
-Muscle Builder	Rex	1240	Normal	375
-Picture of Health	Rex	1231	Normal	1500
-Rapid Attack III	Rex	1230	Normal	5000
-Reflex Response	Rex	1229	Normal	250
-Arts Chain	Rex	1242	Normal	3000
-Lively Lad	Rex	1232	Normal	2000
-Rapid Attack I	Rex	1239	Normal	750
-Combo Enhance	Rex	1241	Normal	2000
-Ultimate Relay	Rex	1253	Normal	4000
-Ether Studies	Rex	1249	Normal	625
-Rapid Attack II	Rex	1252	Normal	2500
-Topple Champ	Rex	1233	Normal	6000
-Rescue	Rex	1250	Normal	500
-Gramps' Blessing	Rex	1251	Normal	1000
-Drive to Win	Rex	1243	Normal	3000
-Further Ether Studies	Rex	1254	NG+	7500
-Inherit Muscle	Rex	1246	NG+	7500
-Solidarity	Rex	1257	NG+	15000
-Shadow Strike	Rex	1244	NG+	3750
-Herbalism	Rex	1256	NG+	12500
-Relentless Spirit	Rex	1238	NG+	30000
-Cheer Up	Rex	1255	NG+	2500
-Eyes on the Prize	Rex	1235	NG+	5000
-Heart Recharge	Rex	1248	NG+	25000
-Prediction	Rex	1245	NG+	5000
-Combat Boost	Rex	1236	NG+	15000
-Child of Steel	Rex	1237	NG+	20000
-Fight or Flight	Rex	1234	NG+	6250
-Pre-empt Moves	Rex	1247	NG+	10000
-Gramps' Auspices	Rex	1258	NG+	10000
-Feral Awakening I	Nia	1283	Normal	750
-Herb Synthesis	Nia	1281	Normal	1000
-Feral Awakening III	Nia	1261	Normal	5000
-Soothing Hand	Nia	1279	Normal	250
-Big Cat	Nia	1260	Normal	2000
-Hard Hitter	Nia	1263	Normal	6000
-Catgirl	Nia	1259	Normal	625
-Mutual Happiness	Nia	1282	Normal	1500
-Bestial Pursuit	Nia	1273	Normal	4000
-Ether Talent	Nia	1280	Normal	375
-Tooth and Claw	Nia	1271	Normal	3000
-Natural Selection	Nia	1262	Normal	3000
-Kinetic Vision	Nia	1269	Normal	500
-Feral Awakening II	Nia	1270	Normal	2500
-Panther Pounce	Nia	1272	Normal	2000
-Chance Recovery	Nia	1284	NG+	2500
-Transmit Power	Nia	1276	NG+	15000
-Adrenaline	Nia	1268	NG+	15000
-Tiger's Eye	Nia	1275	NG+	3750
-Cheer Leader	Nia	1286	NG+	12500
-Road to Victory	Nia	1278	NG+	25000
-Focused Technique	Nia	1264	NG+	7500
-Inner Strength	Nia	1287	NG+	5000
-Sore Loser	Nia	1267	NG+	30000
-Lithe Strength	Nia	1274	NG+	6250
-Lady of Luck	Nia	1288	NG+	7500
-Bear Knuckles	Nia	1277	NG+	20000
-Lucky Cat	Nia	1285	NG+	5000
-Wild Life	Nia	1265	NG+	10000
-Tigergirl	Nia	1266	NG+	10000
-Mach Prep I	Zeke	1389	Normal	500
-Critical Pro	Zeke	1382	Normal	1500
-Histrionic Hero	Zeke	1403	Normal	3000
-Brawn over Brain	Zeke	1390	Normal	250
-Camaraderie	Zeke	1391	Normal	2500
-Mach Prep III	Zeke	1402	Normal	5000
-Lucky Duck	Zeke	1399	Normal	750
-Herculean Strength	Zeke	1392	Normal	1000
-Tantal Courage	Zeke	1401	Normal	2000
-Adamant Heart	Zeke	1379	Normal	375
-Move Chaining	Zeke	1393	Normal	3000
-Ether Prodigy	Zeke	1400	Normal	4000
-Flash Step	Zeke	1380	Normal	625
-Mach Prep II	Zeke	1381	Normal	2000
-Air Extender	Zeke	1383	Normal	6000
-Ether Autarch	Zeke	1404	NG+	7500
-A Hero's Work	Zeke	1398	NG+	15000
-Second Wind	Zeke	1388	NG+	25000
-Natural Healing	Zeke	1384	NG+	5000
-Obsidian Slash	Zeke	1397	NG+	7500
-Raucous Cheer	Zeke	1407	NG+	10000
-Heart of Gold	Zeke	1385	NG+	3750
-Hotshot Hit	Zeke	1396	NG+	5000
-Unleash Shining Justice	Zeke	1406	NG+	30000
-Professional Hit	Zeke	1395	NG+	6250
-Fleetfoot Flit	Zeke	1387	NG+	10000
-Medicinal Maestro	Zeke	1405	NG+	20000
-Fiendish Pursuit	Zeke	1394	NG+	2500
-Zeal Heal	Zeke	1386	NG+	12500
-As One	Zeke	1408	NG+	15000
-Placebo	Tora	1310	Normal	625
-Super Spongy Bod	Tora	1292	Normal	1000
-Tiger Muscles	Tora	1301	Normal	5000
-Raring to Go I	Tora	1289	Normal	750
-Double-Luckypon	Tora	1312	Normal	1500
-Crazy With Hands	Tora	1303	Normal	2000
-Good With Hands	Tora	1299	Normal	375
-Health Bomb	Tora	1291	Normal	2000
-Rapture	Tora	1313	Normal	6000
-Spongy Bod	Tora	1290	Normal	250
-Raring to Go II	Tora	1311	Normal	2500
-Nopon Chain Arts	Tora	1302	Normal	4000
-Luckypon	Tora	1309	Normal	500
-Grin and Bear It	Tora	1293	Normal	3000
-Raring to Go III	Tora	1300	Normal	3000
-Keen Recovery	Tora	1294	NG+	6250
-Team Mascot	Tora	1317	NG+	5000
-Poppi Care	Tora	1307	NG+	20000
-Hidden Talent	Tora	1315	NG+	7500
-Nopon Topple Arts	Tora	1296	NG+	15000
-Inherit Protein	Tora	1306	NG+	15000
-Forced Initiative	Tora	1304	NG+	3750
-Super Restless Foot	Tora	1298	NG+	7500
-Burgeoning Talent...?	Tora	1318	NG+	30000
-Nopon Rescue Service	Tora	1314	NG+	5000
-Look Over There!	Tora	1297	NG+	12500
-Nopon Chain Boost	Tora	1305	NG+	25000
-Restless Foot	Tora	1295	NG+	2500
-Hope for the Best	Tora	1316	NG+	10000
-Mood Maker	Tora	1308	NG+	10000
-Burly Chain	Vandham	1330	Normal	750
-Ether Power	Vandham	1339	Normal	2500
-Serious Recovery	Vandham	1343	Normal	3000
-Tough Nut	Vandham	1319	Normal	250
-Elite Muscles	Vandham	1333	Normal	1000
-Muscle Accelerator III	Vandham	1340	Normal	4000
-10,000 Push-Ups	Vandham	1329	Normal	375
-Beefcake Flurry	Vandham	1332	Normal	2000
-Last Man Standing	Vandham	1323	Normal	6000
-Veteran	Vandham	1320	Normal	625
-Muscle Accelerator II	Vandham	1322	Normal	3000
-Big Strong Hands	Vandham	1341	Normal	2000
-Muscle Accelerator I	Vandham	1331	Normal	500
-Guardian	Vandham	1321	Normal	1500
-Ether Muscle	Vandham	1342	Normal	5000
-Power Lift	Vandham	1324	NG+	7500
-World's Strongest Man	Vandham	1338	NG+	5000
-Buff Buff	Vandham	1346	NG+	15000
-Quick Muscles	Vandham	1325	NG+	3750
-Honed to Perfection	Vandham	1337	NG+	10000
-Higher Powers	Vandham	1347	NG+	30000
-Dependable Guy	Vandham	1336	NG+	2500
-Recuperation	Vandham	1326	NG+	12500
-Physical Fitness	Vandham	1328	NG+	25000
-Anything for a Mate	Vandham	1335	NG+	6250
-Pumped Dodge	Vandham	1327	NG+	7500
-Booming Aid	Vandham	1345	NG+	10000
-Knack for Battle	Vandham	1334	NG+	5000
-Thank the Heavens	Vandham	1344	NG+	15000
-Greatest Work	Vandham	1348	NG+	20000
-Arts Relay	Mòrag	1359	Normal	750
-Vigilance	Mòrag	1361	Normal	1000
-Imperial First Aid	Mòrag	1372	Normal	3000
-Imperial Footwork	Mòrag	1349	Normal	250
-Alchemy	Mòrag	1370	Normal	1500
-Initiative III	Mòrag	1373	Normal	6000
-Etherology	Mòrag	1369	Normal	500
-Initiative II	Mòrag	1360	Normal	2500
-Physical Discipline	Mòrag	1362	Normal	4000
-Basic Discipline	Mòrag	1350	Normal	375
-Martial Prowess	Mòrag	1352	Normal	3000
-Imperial Pursuit	Mòrag	1363	Normal	5000
-Initiative I	Mòrag	1351	Normal	625
-Charmed Life	Mòrag	1371	Normal	2000
-Ultimate Footwork	Mòrag	1353	Normal	2000
-Inspiration	Mòrag	1374	NG+	3750
-Ultimate Etherology	Mòrag	1375	NG+	10000
-Imperial Pride	Mòrag	1358	NG+	30000
-Silent Bloodshed	Mòrag	1364	NG+	2500
-Life's Flow	Mòrag	1357	NG+	5000
-Legendary Skill	Mòrag	1368	NG+	10000
-Instant Chain	Mòrag	1354	NG+	7500
-Cool Focus	Mòrag	1366	NG+	7500
-Golden Opportunity	Mòrag	1378	NG+	20000
-Blade Alliance	Mòrag	1365	NG+	6250
-Warrior's Resolve	Mòrag	1356	NG+	15000
-Battle Stance	Mòrag	1367	NG+	25000
-Survival Training	Mòrag	1355	NG+	5000
-Divination	Mòrag	1376	NG+	12500
-Cheer Master	Mòrag	1377	NG+	15000
+Muscle Builder	Rex	1247	Normal	375
+Picture of Health	Rex	1238	Normal	1500
+Rapid Attack III	Rex	1237	Normal	5000
+Reflex Response	Rex	1236	Normal	250
+Arts Chain	Rex	1249	Normal	3000
+Lively Lad	Rex	1239	Normal	2000
+Rapid Attack I	Rex	1246	Normal	750
+Combo Enhance	Rex	1248	Normal	2000
+Ultimate Relay	Rex	1260	Normal	4000
+Ether Studies	Rex	1256	Normal	625
+Rapid Attack II	Rex	1259	Normal	2500
+Topple Champ	Rex	1240	Normal	6000
+Rescue	Rex	1257	Normal	500
+Gramps' Blessing	Rex	1258	Normal	1000
+Drive to Win	Rex	1250	Normal	3000
+Further Ether Studies	Rex	1261	NG+	7500
+Inherit Muscle	Rex	1253	NG+	7500
+Solidarity	Rex	1264	NG+	15000
+Shadow Strike	Rex	1251	NG+	3750
+Herbalism	Rex	1263	NG+	12500
+Relentless Spirit	Rex	1245	NG+	30000
+Cheer Up	Rex	1262	NG+	2500
+Eyes on the Prize	Rex	1242	NG+	5000
+Heart Recharge	Rex	1255	NG+	25000
+Prediction	Rex	1252	NG+	5000
+Combat Boost	Rex	1243	NG+	15000
+Child of Steel	Rex	1244	NG+	20000
+Fight or Flight	Rex	1241	NG+	6250
+Pre-empt Moves	Rex	1254	NG+	10000
+Gramps' Auspices	Rex	1265	NG+	10000
+Feral Awakening I	Nia	1290	Normal	750
+Herb Synthesis	Nia	1288	Normal	1000
+Feral Awakening III	Nia	1268	Normal	5000
+Soothing Hand	Nia	1286	Normal	250
+Big Cat	Nia	1267	Normal	2000
+Hard Hitter	Nia	1270	Normal	6000
+Catgirl	Nia	1266	Normal	625
+Mutual Happiness	Nia	1289	Normal	1500
+Bestial Pursuit	Nia	1280	Normal	4000
+Ether Talent	Nia	1287	Normal	375
+Tooth and Claw	Nia	1278	Normal	3000
+Natural Selection	Nia	1269	Normal	3000
+Kinetic Vision	Nia	1276	Normal	500
+Feral Awakening II	Nia	1277	Normal	2500
+Panther Pounce	Nia	1279	Normal	2000
+Chance Recovery	Nia	1291	NG+	2500
+Transmit Power	Nia	1283	NG+	15000
+Adrenaline	Nia	1275	NG+	15000
+Tiger's Eye	Nia	1282	NG+	3750
+Cheer Leader	Nia	1293	NG+	12500
+Road to Victory	Nia	1285	NG+	25000
+Focused Technique	Nia	1271	NG+	7500
+Inner Strength	Nia	1294	NG+	5000
+Sore Loser	Nia	1274	NG+	30000
+Lithe Strength	Nia	1281	NG+	6250
+Lady of Luck	Nia	1295	NG+	7500
+Bear Knuckles	Nia	1284	NG+	20000
+Lucky Cat	Nia	1292	NG+	5000
+Wild Life	Nia	1272	NG+	10000
+Tigergirl	Nia	1273	NG+	10000
+Mach Prep I	Zeke	1396	Normal	500
+Critical Pro	Zeke	1389	Normal	1500
+Histrionic Hero	Zeke	1410	Normal	3000
+Brawn over Brain	Zeke	1397	Normal	250
+Camaraderie	Zeke	1398	Normal	2500
+Mach Prep III	Zeke	1409	Normal	5000
+Lucky Duck	Zeke	1406	Normal	750
+Herculean Strength	Zeke	1399	Normal	1000
+Tantal Courage	Zeke	1408	Normal	2000
+Adamant Heart	Zeke	1386	Normal	375
+Move Chaining	Zeke	1400	Normal	3000
+Ether Prodigy	Zeke	1407	Normal	4000
+Flash Step	Zeke	1387	Normal	625
+Mach Prep II	Zeke	1388	Normal	2000
+Air Extender	Zeke	1390	Normal	6000
+Ether Autarch	Zeke	1411	NG+	7500
+A Hero's Work	Zeke	1405	NG+	15000
+Second Wind	Zeke	1395	NG+	25000
+Natural Healing	Zeke	1391	NG+	5000
+Obsidian Slash	Zeke	1404	NG+	7500
+Raucous Cheer	Zeke	1414	NG+	10000
+Heart of Gold	Zeke	1392	NG+	3750
+Hotshot Hit	Zeke	1403	NG+	5000
+Unleash Shining Justice	Zeke	1413	NG+	30000
+Professional Hit	Zeke	1402	NG+	6250
+Fleetfoot Flit	Zeke	1394	NG+	10000
+Medicinal Maestro	Zeke	1412	NG+	20000
+Fiendish Pursuit	Zeke	1401	NG+	2500
+Zeal Heal	Zeke	1393	NG+	12500
+As One	Zeke	1415	NG+	15000
+Placebo	Tora	1317	Normal	625
+Super Spongy Bod	Tora	1299	Normal	1000
+Tiger Muscles	Tora	1308	Normal	5000
+Raring to Go I	Tora	1296	Normal	750
+Double-Luckypon	Tora	1319	Normal	1500
+Crazy With Hands	Tora	1310	Normal	2000
+Good With Hands	Tora	1306	Normal	375
+Health Bomb	Tora	1298	Normal	2000
+Rapture	Tora	1320	Normal	6000
+Spongy Bod	Tora	1297	Normal	250
+Raring to Go II	Tora	1318	Normal	2500
+Nopon Chain Arts	Tora	1309	Normal	4000
+Luckypon	Tora	1316	Normal	500
+Grin and Bear It	Tora	1300	Normal	3000
+Raring to Go III	Tora	1307	Normal	3000
+Keen Recovery	Tora	1301	NG+	6250
+Team Mascot	Tora	1324	NG+	5000
+Poppi Care	Tora	1314	NG+	20000
+Hidden Talent	Tora	1322	NG+	7500
+Nopon Topple Arts	Tora	1303	NG+	15000
+Inherit Protein	Tora	1313	NG+	15000
+Forced Initiative	Tora	1311	NG+	3750
+Super Restless Foot	Tora	1305	NG+	7500
+Burgeoning Talent...?	Tora	1325	NG+	30000
+Nopon Rescue Service	Tora	1321	NG+	5000
+Look Over There!	Tora	1304	NG+	12500
+Nopon Chain Boost	Tora	1312	NG+	25000
+Restless Foot	Tora	1302	NG+	2500
+Hope for the Best	Tora	1323	NG+	10000
+Mood Maker	Tora	1315	NG+	10000
+Burly Chain	Vandham	1337	Normal	750
+Ether Power	Vandham	1346	Normal	2500
+Serious Recovery	Vandham	1350	Normal	3000
+Tough Nut	Vandham	1326	Normal	250
+Elite Muscles	Vandham	1340	Normal	1000
+Muscle Accelerator III	Vandham	1347	Normal	4000
+10,000 Push-Ups	Vandham	1336	Normal	375
+Beefcake Flurry	Vandham	1339	Normal	2000
+Last Man Standing	Vandham	1330	Normal	6000
+Veteran	Vandham	1327	Normal	625
+Muscle Accelerator II	Vandham	1329	Normal	3000
+Big Strong Hands	Vandham	1348	Normal	2000
+Muscle Accelerator I	Vandham	1338	Normal	500
+Guardian	Vandham	1328	Normal	1500
+Ether Muscle	Vandham	1349	Normal	5000
+Power Lift	Vandham	1331	NG+	7500
+World's Strongest Man	Vandham	1345	NG+	5000
+Buff Buff	Vandham	1353	NG+	15000
+Quick Muscles	Vandham	1332	NG+	3750
+Honed to Perfection	Vandham	1344	NG+	10000
+Higher Powers	Vandham	1354	NG+	30000
+Dependable Guy	Vandham	1343	NG+	2500
+Recuperation	Vandham	1333	NG+	12500
+Physical Fitness	Vandham	1335	NG+	25000
+Anything for a Mate	Vandham	1342	NG+	6250
+Pumped Dodge	Vandham	1334	NG+	7500
+Booming Aid	Vandham	1352	NG+	10000
+Knack for Battle	Vandham	1341	NG+	5000
+Thank the Heavens	Vandham	1351	NG+	15000
+Greatest Work	Vandham	1355	NG+	20000
+Arts Relay	Mòrag	1366	Normal	750
+Vigilance	Mòrag	1368	Normal	1000
+Imperial First Aid	Mòrag	1379	Normal	3000
+Imperial Footwork	Mòrag	1356	Normal	250
+Alchemy	Mòrag	1377	Normal	1500
+Initiative III	Mòrag	1380	Normal	6000
+Etherology	Mòrag	1376	Normal	500
+Initiative II	Mòrag	1367	Normal	2500
+Physical Discipline	Mòrag	1369	Normal	4000
+Basic Discipline	Mòrag	1357	Normal	375
+Martial Prowess	Mòrag	1359	Normal	3000
+Imperial Pursuit	Mòrag	1370	Normal	5000
+Initiative I	Mòrag	1358	Normal	625
+Charmed Life	Mòrag	1378	Normal	2000
+Ultimate Footwork	Mòrag	1360	Normal	2000
+Inspiration	Mòrag	1381	NG+	3750
+Ultimate Etherology	Mòrag	1382	NG+	10000
+Imperial Pride	Mòrag	1365	NG+	30000
+Silent Bloodshed	Mòrag	1371	NG+	2500
+Life's Flow	Mòrag	1364	NG+	5000
+Legendary Skill	Mòrag	1375	NG+	10000
+Instant Chain	Mòrag	1361	NG+	7500
+Cool Focus	Mòrag	1373	NG+	7500
+Golden Opportunity	Mòrag	1385	NG+	20000
+Blade Alliance	Mòrag	1372	NG+	6250
+Warrior's Resolve	Mòrag	1363	NG+	15000
+Battle Stance	Mòrag	1374	NG+	25000
+Survival Training	Mòrag	1362	NG+	5000
+Divination	Mòrag	1383	NG+	12500
+Cheer Master	Mòrag	1384	NG+	15000
 \.
 
 
