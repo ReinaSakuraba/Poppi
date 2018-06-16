@@ -98,6 +98,19 @@ CREATE TABLE xeno2.accessories (
 ALTER TABLE xeno2.accessories OWNER TO poppi;
 
 --
+-- Name: art_enhance; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.art_enhance (
+    art text NOT NULL,
+    level smallint NOT NULL,
+    caption smallint
+);
+
+
+ALTER TABLE xeno2.art_enhance OWNER TO poppi;
+
+--
 -- Name: arts; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -111,7 +124,6 @@ CREATE TABLE xeno2.arts (
     range text NOT NULL,
     recharge text NOT NULL,
     reaction text NOT NULL,
-    description text,
     wp text NOT NULL,
     caption text NOT NULL,
     distance smallint NOT NULL,
@@ -1271,310 +1283,1937 @@ Embercake Zeke	Legendary	1000	800
 
 
 --
+-- Data for Name: art_enhance; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.art_enhance (art, level, caption) FROM stdin;
+Sword Bash	1	2729
+Sword Bash	2	2730
+Sword Bash	3	2731
+Sword Bash	4	2732
+Sword Bash	5	2733
+Sword Bash	6	2733
+Double Spinning Edge	1	2714
+Double Spinning Edge	2	2715
+Double Spinning Edge	3	2716
+Double Spinning Edge	4	2717
+Double Spinning Edge	5	2718
+Double Spinning Edge	6	2718
+Anchor Shot	1	2784
+Anchor Shot	2	2785
+Anchor Shot	3	2786
+Anchor Shot	4	2787
+Anchor Shot	5	2788
+Anchor Shot	6	2788
+Rolling Smash	1	2799
+Rolling Smash	2	2800
+Rolling Smash	3	2801
+Rolling Smash	4	2802
+Rolling Smash	5	2803
+Rolling Smash	6	2803
+Saber Slash	1	2784
+Saber Slash	2	2785
+Saber Slash	3	2786
+Saber Slash	4	2787
+Saber Slash	5	2788
+Saber Slash	6	2788
+Water Flower	1	2830
+Water Flower	2	2831
+Water Flower	3	2832
+Water Flower	4	2833
+Water Flower	5	2834
+Water Flower	6	2834
+Wide Slash	1	2714
+Wide Slash	2	2715
+Wide Slash	3	2716
+Wide Slash	4	2717
+Wide Slash	5	2718
+Wide Slash	6	2718
+Strong Saucer	1	2784
+Strong Saucer	2	2785
+Strong Saucer	3	2786
+Strong Saucer	4	2787
+Strong Saucer	5	2788
+Strong Saucer	6	2788
+Eightfold Edge	1	2649
+Eightfold Edge	2	2650
+Eightfold Edge	3	2651
+Eightfold Edge	4	2652
+Eightfold Edge	5	2653
+Eightfold Edge	6	2653
+Jaguar Slash	1	2784
+Jaguar Slash	2	2785
+Jaguar Slash	3	2786
+Jaguar Slash	4	2787
+Jaguar Slash	5	2788
+Jaguar Slash	6	2788
+Gemini Loop	1	2715
+Gemini Loop	2	2715
+Gemini Loop	3	2715
+Gemini Loop	4	2715
+Gemini Loop	5	2715
+Gemini Loop	6	2715
+Halo Strike	1	2784
+Halo Strike	2	2785
+Halo Strike	3	2786
+Halo Strike	4	2787
+Halo Strike	5	2788
+Halo Strike	6	2788
+Inferno Wheel	1	2649
+Inferno Wheel	2	2650
+Inferno Wheel	3	2651
+Inferno Wheel	4	2652
+Inferno Wheel	5	2653
+Inferno Wheel	6	2653
+Rapid Twist	1	2649
+Rapid Twist	2	2650
+Rapid Twist	3	2651
+Rapid Twist	4	2652
+Rapid Twist	5	2653
+Rapid Twist	6	2653
+Clear Divide	1	2784
+Clear Divide	2	2785
+Clear Divide	3	2786
+Clear Divide	4	2787
+Clear Divide	5	2788
+Clear Divide	6	2788
+Righteous Guillotine	1	2669
+Righteous Guillotine	2	2670
+Righteous Guillotine	3	2671
+Righteous Guillotine	4	2672
+Righteous Guillotine	5	2673
+Righteous Guillotine	6	2673
+Shredder Spiral	1	2724
+Shredder Spiral	2	2725
+Shredder Spiral	3	2726
+Shredder Spiral	4	2727
+Shredder Spiral	5	2728
+Shredder Spiral	6	2728
+Steady Drill	1	2749
+Steady Drill	2	2750
+Steady Drill	3	2751
+Steady Drill	4	2752
+Steady Drill	5	2753
+Steady Drill	6	2753
+Big Boost	1	2759
+Big Boost	2	2760
+Big Boost	3	2761
+Big Boost	4	2762
+Big Boost	5	2763
+Big Boost	6	2763
+Spinning Cutter	1	2819
+Spinning Cutter	2	2820
+Spinning Cutter	3	2821
+Spinning Cutter	4	2822
+Spinning Cutter	5	2823
+Spinning Cutter	6	2823
+Rigid Shield	1	2824
+Rigid Shield	2	2825
+Rigid Shield	3	2826
+Rigid Shield	4	2827
+Rigid Shield	5	2828
+Rigid Shield	6	2828
+Pow-Pow Cannon	1	2764
+Pow-Pow Cannon	2	2765
+Pow-Pow Cannon	3	2766
+Pow-Pow Cannon	4	2767
+Pow-Pow Cannon	5	2768
+Pow-Pow Cannon	6	2768
+Scattershot	1	2835
+Scattershot	2	2835
+Scattershot	3	2835
+Scattershot	4	2835
+Scattershot	5	2835
+Scattershot	6	2835
+Boom-Boom Laser	1	2739
+Boom-Boom Laser	2	2740
+Boom-Boom Laser	3	2741
+Boom-Boom Laser	4	2742
+Boom-Boom Laser	5	2743
+Boom-Boom Laser	6	2743
+Steady Beam	1	2704
+Steady Beam	2	2705
+Steady Beam	3	2706
+Steady Beam	4	2707
+Steady Beam	5	2708
+Steady Beam	6	2708
+Heat Rush	1	2734
+Heat Rush	2	2735
+Heat Rush	3	2736
+Heat Rush	4	2737
+Heat Rush	5	2738
+Heat Rush	6	2738
+Storm Spin	1	2759
+Storm Spin	2	2760
+Storm Spin	3	2761
+Storm Spin	4	2762
+Storm Spin	5	2763
+Storm Spin	6	2763
+Blazing Whip	1	2819
+Blazing Whip	2	2820
+Blazing Whip	3	2821
+Blazing Whip	4	2822
+Blazing Whip	5	2823
+Blazing Whip	6	2823
+Phantom Flame	1	2835
+Phantom Flame	2	2835
+Phantom Flame	3	2835
+Phantom Flame	4	2835
+Phantom Flame	5	2835
+Phantom Flame	6	2835
+Azure II: Radiance	1	2734
+Azure II: Radiance	2	2735
+Azure II: Radiance	3	2736
+Azure II: Radiance	4	2737
+Azure II: Radiance	5	2738
+Azure II: Radiance	6	2738
+Azure II: Blaze	1	2819
+Azure II: Blaze	2	2820
+Azure II: Blaze	3	2821
+Azure II: Blaze	4	2822
+Azure II: Blaze	5	2823
+Azure II: Blaze	6	2823
+Azure II: Judgment	1	2835
+Azure II: Judgment	2	2835
+Azure II: Judgment	3	2835
+Azure II: Judgment	4	2835
+Azure II: Judgment	5	2835
+Azure II: Judgment	6	2835
+Electro Buster	1	2739
+Electro Buster	2	2740
+Electro Buster	3	2741
+Electro Buster	4	2742
+Electro Buster	5	2743
+Electro Buster	6	2743
+Voltaic Slash	1	2694
+Voltaic Slash	2	2695
+Voltaic Slash	3	2696
+Voltaic Slash	4	2697
+Voltaic Slash	5	2698
+Voltaic Slash	6	2698
+Dynamic Spark Sword	1	2709
+Dynamic Spark Sword	2	2710
+Dynamic Spark Sword	3	2711
+Dynamic Spark Sword	4	2712
+Dynamic Spark Sword	5	2713
+Dynamic Spark Sword	6	2713
+Overload Thunder Beam	1	2694
+Overload Thunder Beam	2	2695
+Overload Thunder Beam	3	2696
+Overload Thunder Beam	4	2697
+Overload Thunder Beam	5	2698
+Overload Thunder Beam	6	2698
+ULFS Max	1	2739
+ULFS Max	2	2740
+ULFS Max	3	2741
+ULFS Max	4	2742
+ULFS Max	5	2743
+ULFS Max	6	2743
+Cyclone Smash	1	2759
+Cyclone Smash	2	2760
+Cyclone Smash	3	2761
+Cyclone Smash	4	2762
+Cyclone Smash	5	2763
+Cyclone Smash	6	2763
+Wild Scythe	1	2794
+Wild Scythe	2	2795
+Wild Scythe	3	2796
+Wild Scythe	4	2797
+Wild Scythe	5	2798
+Wild Scythe	6	2798
+Vortex Edge	1	2669
+Vortex Edge	2	2670
+Vortex Edge	3	2671
+Vortex Edge	4	2672
+Vortex Edge	5	2673
+Vortex Edge	6	2673
+Muscle Slash	1	2759
+Muscle Slash	2	2760
+Muscle Slash	3	2761
+Muscle Slash	4	2762
+Muscle Slash	5	2763
+Muscle Slash	6	2763
+Fast Twitch	1	2794
+Fast Twitch	2	2795
+Fast Twitch	3	2796
+Fast Twitch	4	2797
+Fast Twitch	5	2798
+Fast Twitch	6	2798
+Mega Muscle	1	2669
+Mega Muscle	2	2670
+Mega Muscle	3	2671
+Mega Muscle	4	2672
+Mega Muscle	5	2673
+Mega Muscle	6	2673
+Strong Smash	1	2739
+Strong Smash	2	2740
+Strong Smash	3	2741
+Strong Smash	4	2742
+Strong Smash	5	2743
+Strong Smash	6	2743
+Axe Twist	1	2674
+Axe Twist	2	2675
+Axe Twist	3	2676
+Axe Twist	4	2677
+Axe Twist	5	2678
+Axe Twist	6	2678
+Bold Tackle	1	2809
+Bold Tackle	2	2810
+Bold Tackle	3	2811
+Bold Tackle	4	2812
+Bold Tackle	5	2813
+Bold Tackle	6	2813
+Rhino Assault	1	2809
+Rhino Assault	2	2810
+Rhino Assault	3	2811
+Rhino Assault	4	2812
+Rhino Assault	5	2813
+Rhino Assault	6	2813
+Bear Smash	1	2734
+Bear Smash	2	2735
+Bear Smash	3	2736
+Bear Smash	4	2737
+Bear Smash	5	2738
+Bear Smash	6	2738
+Shadow Slice	1	2674
+Shadow Slice	2	2675
+Shadow Slice	3	2676
+Shadow Slice	4	2677
+Shadow Slice	5	2678
+Shadow Slice	6	2678
+Rock Cleaver	1	2674
+Rock Cleaver	2	2675
+Rock Cleaver	3	2676
+Rock Cleaver	4	2677
+Rock Cleaver	5	2678
+Rock Cleaver	6	2678
+Admiral Waltz	1	2809
+Admiral Waltz	2	2810
+Admiral Waltz	3	2811
+Admiral Waltz	4	2812
+Admiral Waltz	5	2813
+Admiral Waltz	6	2813
+Rising Dragon	1	2744
+Rising Dragon	2	2745
+Rising Dragon	3	2746
+Rising Dragon	4	2747
+Rising Dragon	5	2748
+Rising Dragon	6	2748
+Raging Charge	1	2734
+Raging Charge	2	2735
+Raging Charge	3	2736
+Raging Charge	4	2737
+Raging Charge	5	2738
+Raging Charge	6	2738
+Berserker Slash	1	2809
+Berserker Slash	2	2810
+Berserker Slash	3	2811
+Berserker Slash	4	2812
+Berserker Slash	5	2813
+Berserker Slash	6	2813
+Strong Horn	1	2769
+Strong Horn	2	2770
+Strong Horn	3	2771
+Strong Horn	4	2772
+Strong Horn	5	2773
+Strong Horn	6	2773
+Power Spike	1	2714
+Power Spike	2	2715
+Power Spike	3	2716
+Power Spike	4	2717
+Power Spike	5	2718
+Power Spike	6	2718
+Heavy Hitter	1	2799
+Heavy Hitter	2	2800
+Heavy Hitter	3	2801
+Heavy Hitter	4	2802
+Heavy Hitter	5	2803
+Heavy Hitter	6	2803
+Feral Spin	1	2654
+Feral Spin	2	2655
+Feral Spin	3	2656
+Feral Spin	4	2657
+Feral Spin	5	2658
+Feral Spin	6	2658
+Vulture Peck	1	2769
+Vulture Peck	2	2770
+Vulture Peck	3	2771
+Vulture Peck	4	2772
+Vulture Peck	5	2773
+Vulture Peck	6	2773
+Gyro Break	1	2654
+Gyro Break	2	2655
+Gyro Break	3	2656
+Gyro Break	4	2657
+Gyro Break	5	2658
+Gyro Break	6	2658
+Raptor Raid	1	2729
+Raptor Raid	2	2730
+Raptor Raid	3	2731
+Raptor Raid	4	2732
+Raptor Raid	5	2733
+Raptor Raid	6	2733
+Discus Glaive	1	2799
+Discus Glaive	2	2800
+Discus Glaive	3	2801
+Discus Glaive	4	2802
+Discus Glaive	5	2803
+Discus Glaive	6	2803
+Spiral Uppercut	1	2729
+Spiral Uppercut	2	2730
+Spiral Uppercut	3	2731
+Spiral Uppercut	4	2732
+Spiral Uppercut	5	2733
+Spiral Uppercut	6	2733
+Twin Dragons	1	2769
+Twin Dragons	2	2770
+Twin Dragons	3	2771
+Twin Dragons	4	2772
+Twin Dragons	5	2773
+Twin Dragons	6	2773
+Windmill	1	2799
+Windmill	2	2800
+Windmill	3	2801
+Windmill	4	2802
+Windmill	5	2803
+Windmill	6	2803
+Brutal Swing	1	2719
+Brutal Swing	2	2720
+Brutal Swing	3	2721
+Brutal Swing	4	2722
+Brutal Swing	5	2723
+Brutal Swing	6	2723
+Meteor Lance	1	2729
+Meteor Lance	2	2730
+Meteor Lance	3	2731
+Meteor Lance	4	2732
+Meteor Lance	5	2733
+Meteor Lance	6	2733
+Supersonic Spin	1	2799
+Supersonic Spin	2	2800
+Supersonic Spin	3	2801
+Supersonic Spin	4	2802
+Supersonic Spin	5	2803
+Supersonic Spin	6	2803
+Daring Shot	1	2774
+Daring Shot	2	2775
+Daring Shot	3	2776
+Daring Shot	4	2777
+Daring Shot	5	2778
+Daring Shot	6	2778
+Armor Crusher	1	2830
+Armor Crusher	2	2831
+Armor Crusher	3	2832
+Armor Crusher	4	2833
+Armor Crusher	5	2834
+Armor Crusher	6	2834
+Wild Volley	1	2779
+Wild Volley	2	2780
+Wild Volley	3	2781
+Wild Volley	4	2782
+Wild Volley	5	2783
+Wild Volley	6	2783
+Breach Shot	1	2779
+Breach Shot	2	2780
+Breach Shot	3	2781
+Breach Shot	4	2782
+Breach Shot	5	2783
+Breach Shot	6	2783
+Leopard Blow	1	2830
+Leopard Blow	2	2831
+Leopard Blow	3	2832
+Leopard Blow	4	2833
+Leopard Blow	5	2834
+Leopard Blow	6	2834
+Cattle Driver	1	2749
+Cattle Driver	2	2750
+Cattle Driver	3	2751
+Cattle Driver	4	2752
+Cattle Driver	5	2753
+Cattle Driver	6	2753
+Pulse Fire	1	2774
+Pulse Fire	2	2775
+Pulse Fire	3	2776
+Pulse Fire	4	2777
+Pulse Fire	5	2778
+Pulse Fire	6	2778
+Ogre Slam	1	2830
+Ogre Slam	2	2831
+Ogre Slam	3	2832
+Ogre Slam	4	2833
+Ogre Slam	5	2834
+Ogre Slam	6	2834
+Woodcutter	1	2774
+Woodcutter	2	2775
+Woodcutter	3	2776
+Woodcutter	4	2777
+Woodcutter	5	2778
+Woodcutter	6	2778
+Mist Buster	1	2749
+Mist Buster	2	2750
+Mist Buster	3	2751
+Mist Buster	4	2752
+Mist Buster	5	2753
+Mist Buster	6	2753
+Burst Gunner	1	2830
+Burst Gunner	2	2831
+Burst Gunner	3	2832
+Burst Gunner	4	2833
+Burst Gunner	5	2834
+Burst Gunner	6	2834
+Haywire Chainshot	1	2779
+Haywire Chainshot	2	2780
+Haywire Chainshot	3	2781
+Haywire Chainshot	4	2782
+Haywire Chainshot	5	2783
+Haywire Chainshot	6	2783
+Laserpoint Bazooka	1	2749
+Laserpoint Bazooka	2	2750
+Laserpoint Bazooka	3	2751
+Laserpoint Bazooka	4	2752
+Laserpoint Bazooka	5	2753
+Laserpoint Bazooka	6	2753
+Iron Wall	1	2824
+Iron Wall	2	2825
+Iron Wall	3	2826
+Iron Wall	4	2827
+Iron Wall	5	2828
+Iron Wall	6	2828
+Diving Swing	1	2819
+Diving Swing	2	2820
+Diving Swing	3	2821
+Diving Swing	4	2822
+Diving Swing	5	2823
+Diving Swing	6	2823
+Power Hammer	1	2709
+Power Hammer	2	2710
+Power Hammer	3	2711
+Power Hammer	4	2712
+Power Hammer	5	2713
+Power Hammer	6	2713
+Mighty Beat	1	2739
+Mighty Beat	2	2740
+Mighty Beat	3	2741
+Mighty Beat	4	2742
+Mighty Beat	5	2743
+Mighty Beat	6	2743
+Rumbling Smash	1	2709
+Rumbling Smash	2	2710
+Rumbling Smash	3	2711
+Rumbling Smash	4	2712
+Rumbling Smash	5	2713
+Rumbling Smash	6	2713
+Elephant Press	1	2819
+Elephant Press	2	2820
+Elephant Press	3	2821
+Elephant Press	4	2822
+Elephant Press	5	2823
+Elephant Press	6	2823
+Buckler Slam	1	2739
+Buckler Slam	2	2740
+Buckler Slam	3	2741
+Buckler Slam	4	2742
+Buckler Slam	5	2743
+Buckler Slam	6	2743
+Battle Top	1	2819
+Battle Top	2	2820
+Battle Top	3	2821
+Battle Top	4	2822
+Battle Top	5	2823
+Battle Top	6	2823
+Mountain Crusher	1	2739
+Mountain Crusher	2	2740
+Mountain Crusher	3	2741
+Mountain Crusher	4	2742
+Mountain Crusher	5	2743
+Mountain Crusher	6	2743
+Decimator	1	2749
+Decimator	2	2750
+Decimator	3	2751
+Decimator	4	2752
+Decimator	5	2753
+Decimator	6	2753
+Brawl Swing	1	2819
+Brawl Swing	2	2820
+Brawl Swing	3	2821
+Brawl Swing	4	2822
+Brawl Swing	5	2823
+Brawl Swing	6	2823
+Detonation Blow	1	2754
+Detonation Blow	2	2755
+Detonation Blow	3	2756
+Detonation Blow	4	2757
+Detonation Blow	5	2758
+Detonation Blow	6	2758
+Impregnable Shield	1	2824
+Impregnable Shield	2	2825
+Impregnable Shield	3	2826
+Impregnable Shield	4	2827
+Impregnable Shield	5	2828
+Impregnable Shield	6	2828
+Feral Blade	1	2819
+Feral Blade	2	2820
+Feral Blade	3	2821
+Feral Blade	4	2822
+Feral Blade	5	2823
+Feral Blade	6	2823
+Breakdown	1	2764
+Breakdown	2	2765
+Breakdown	3	2766
+Breakdown	4	2767
+Breakdown	5	2768
+Breakdown	6	2768
+Dual Slash	1	2835
+Dual Slash	2	2835
+Dual Slash	3	2835
+Dual Slash	4	2835
+Dual Slash	5	2835
+Dual Slash	6	2835
+Deathbound	1	2684
+Deathbound	2	2685
+Deathbound	3	2686
+Deathbound	4	2687
+Deathbound	5	2688
+Deathbound	6	2688
+Scorpion Tail	1	2835
+Scorpion Tail	2	2835
+Scorpion Tail	3	2835
+Scorpion Tail	4	2835
+Scorpion Tail	5	2835
+Scorpion Tail	6	2835
+Wolf Fang	1	2764
+Wolf Fang	2	2765
+Wolf Fang	3	2766
+Wolf Fang	4	2767
+Wolf Fang	5	2768
+Wolf Fang	6	2768
+Triple Flash	1	2819
+Triple Flash	2	2820
+Triple Flash	3	2821
+Triple Flash	4	2822
+Triple Flash	5	2823
+Triple Flash	6	2823
+Eclipse Blade	1	2835
+Eclipse Blade	2	2835
+Eclipse Blade	3	2835
+Eclipse Blade	4	2835
+Eclipse Blade	5	2835
+Eclipse Blade	6	2835
+Overfall	1	2764
+Overfall	2	2765
+Overfall	3	2766
+Overfall	4	2767
+Overfall	5	2768
+Overfall	6	2768
+Quadruple Slash	1	2819
+Quadruple Slash	2	2820
+Quadruple Slash	3	2821
+Quadruple Slash	4	2822
+Quadruple Slash	5	2823
+Quadruple Slash	6	2823
+Reverb Blade	1	2835
+Reverb Blade	2	2835
+Reverb Blade	3	2835
+Reverb Blade	4	2835
+Reverb Blade	5	2835
+Reverb Blade	6	2835
+Psychic Sword	1	2709
+Psychic Sword	2	2710
+Psychic Sword	3	2711
+Psychic Sword	4	2712
+Psychic Sword	5	2713
+Psychic Sword	6	2713
+Aerial Edge	1	2819
+Aerial Edge	2	2820
+Aerial Edge	3	2821
+Aerial Edge	4	2822
+Aerial Edge	5	2823
+Aerial Edge	6	2823
+Shogun Slash	1	2764
+Shogun Slash	2	2765
+Shogun Slash	3	2766
+Shogun Slash	4	2767
+Shogun Slash	5	2768
+Shogun Slash	6	2768
+Touchdown	1	2784
+Touchdown	2	2785
+Touchdown	3	2786
+Touchdown	4	2787
+Touchdown	5	2788
+Touchdown	6	2788
+Brave Throw	1	2734
+Brave Throw	2	2735
+Brave Throw	3	2736
+Brave Throw	4	2737
+Brave Throw	5	2738
+Brave Throw	6	2738
+Strong Shot	1	2814
+Strong Shot	2	2815
+Strong Shot	3	2816
+Strong Shot	4	2817
+Strong Shot	5	2818
+Strong Shot	6	2818
+Mighty Ball	1	2744
+Mighty Ball	2	2745
+Mighty Ball	3	2746
+Mighty Ball	4	2747
+Mighty Ball	5	2748
+Mighty Ball	6	2748
+Dolphin Spin	1	2784
+Dolphin Spin	2	2785
+Dolphin Spin	3	2786
+Dolphin Spin	4	2787
+Dolphin Spin	5	2788
+Dolphin Spin	6	2788
+Falcon Turn	1	2734
+Falcon Turn	2	2735
+Falcon Turn	3	2736
+Falcon Turn	4	2737
+Falcon Turn	5	2738
+Falcon Turn	6	2738
+Dragonbane Shot	1	2784
+Dragonbane Shot	2	2785
+Dragonbane Shot	3	2786
+Dragonbane Shot	4	2787
+Dragonbane Shot	5	2788
+Dragonbane Shot	6	2788
+Shadowrunner	1	2744
+Shadowrunner	2	2745
+Shadowrunner	3	2746
+Shadowrunner	4	2747
+Shadowrunner	5	2748
+Shadowrunner	6	2748
+Gliding Swallow	1	2769
+Gliding Swallow	2	2770
+Gliding Swallow	3	2771
+Gliding Swallow	4	2772
+Gliding Swallow	5	2773
+Gliding Swallow	6	2773
+Rumble Pitch	1	2724
+Rumble Pitch	2	2725
+Rumble Pitch	3	2726
+Rumble Pitch	4	2727
+Rumble Pitch	5	2728
+Rumble Pitch	6	2728
+Pulverizing Dunk	1	2734
+Pulverizing Dunk	2	2735
+Pulverizing Dunk	3	2736
+Pulverizing Dunk	4	2737
+Pulverizing Dunk	5	2738
+Pulverizing Dunk	6	2738
+Shell Shot	1	2814
+Shell Shot	2	2815
+Shell Shot	3	2816
+Shell Shot	4	2817
+Shell Shot	5	2818
+Shell Shot	6	2818
+Precipitous Impact	1	2784
+Precipitous Impact	2	2785
+Precipitous Impact	3	2786
+Precipitous Impact	4	2787
+Precipitous Impact	5	2788
+Precipitous Impact	6	2788
+Feral Uppercut	1	2779
+Feral Uppercut	2	2780
+Feral Uppercut	3	2781
+Feral Uppercut	4	2782
+Feral Uppercut	5	2783
+Feral Uppercut	6	2783
+Grand Smash	1	2784
+Grand Smash	2	2785
+Grand Smash	3	2786
+Grand Smash	4	2787
+Grand Smash	5	2788
+Grand Smash	6	2788
+Mach Straight Punch	1	2724
+Mach Straight Punch	2	2725
+Mach Straight Punch	3	2726
+Mach Straight Punch	4	2727
+Mach Straight Punch	5	2728
+Mach Straight Punch	6	2728
+Jackal Claw	1	2779
+Jackal Claw	2	2780
+Jackal Claw	3	2781
+Jackal Claw	4	2782
+Jackal Claw	5	2783
+Jackal Claw	6	2783
+Deadly Twister	1	2784
+Deadly Twister	2	2785
+Deadly Twister	3	2786
+Deadly Twister	4	2787
+Deadly Twister	5	2788
+Deadly Twister	6	2788
+Raptor Beat	1	2714
+Raptor Beat	2	2715
+Raptor Beat	3	2716
+Raptor Beat	4	2717
+Raptor Beat	5	2718
+Raptor Beat	6	2718
+Armored Fist	1	2779
+Armored Fist	2	2780
+Armored Fist	3	2781
+Armored Fist	4	2782
+Armored Fist	5	2783
+Armored Fist	6	2783
+Sneak Hit	1	2784
+Sneak Hit	2	2785
+Sneak Hit	3	2786
+Sneak Hit	4	2787
+Sneak Hit	5	2788
+Sneak Hit	6	2788
+Peerless Blow	1	2714
+Peerless Blow	2	2715
+Peerless Blow	3	2716
+Peerless Blow	4	2717
+Peerless Blow	5	2718
+Peerless Blow	6	2718
+Fury Dropkick	1	2724
+Fury Dropkick	2	2725
+Fury Dropkick	3	2726
+Fury Dropkick	4	2727
+Fury Dropkick	5	2728
+Fury Dropkick	6	2728
+Dynamite Knuckle	1	2784
+Dynamite Knuckle	2	2785
+Dynamite Knuckle	3	2786
+Dynamite Knuckle	4	2787
+Dynamite Knuckle	5	2788
+Dynamite Knuckle	6	2788
+Skysplitter Cross Chop	1	2799
+Skysplitter Cross Chop	2	2800
+Skysplitter Cross Chop	3	2801
+Skysplitter Cross Chop	4	2802
+Skysplitter Cross Chop	5	2803
+Skysplitter Cross Chop	6	2803
+Sword Bash (Broadsword)	1	2729
+Sword Bash (Broadsword)	2	2730
+Sword Bash (Broadsword)	3	2731
+Sword Bash (Broadsword)	4	2732
+Sword Bash (Broadsword)	5	2733
+Sword Bash (Broadsword)	6	2733
+Double Spinning Edge (Broadsword)	1	2714
+Double Spinning Edge (Broadsword)	2	2715
+Double Spinning Edge (Broadsword)	3	2716
+Double Spinning Edge (Broadsword)	4	2717
+Double Spinning Edge (Broadsword)	5	2718
+Double Spinning Edge (Broadsword)	6	2718
+Rolling Smash (Broadsword)	1	2799
+Rolling Smash (Broadsword)	2	2800
+Rolling Smash (Broadsword)	3	2801
+Rolling Smash (Broadsword)	4	2802
+Rolling Smash (Broadsword)	5	2803
+Rolling Smash (Broadsword)	6	2803
+Anchor Shot (Broadsword)	1	2829
+Anchor Shot (Broadsword)	2	2829
+Anchor Shot (Broadsword)	3	2829
+Anchor Shot (Broadsword)	4	2829
+Anchor Shot (Broadsword)	5	2829
+Anchor Shot (Broadsword)	6	2829
+Ultraslash (Chapter 1)	1	2729
+Ultraslash (Chapter 1)	2	2730
+Ultraslash (Chapter 1)	3	2731
+Ultraslash (Chapter 1)	4	2732
+Ultraslash (Chapter 1)	5	2733
+Ultraslash (Chapter 1)	6	2733
+Empty Moment (Chapter 1)	1	2830
+Empty Moment (Chapter 1)	2	2831
+Empty Moment (Chapter 1)	3	2832
+Empty Moment (Chapter 1)	4	2833
+Empty Moment (Chapter 1)	5	2834
+Empty Moment (Chapter 1)	6	2834
+Stunned Swallow (Chapter 1)	1	2836
+Stunned Swallow (Chapter 1)	2	2837
+Stunned Swallow (Chapter 1)	3	2838
+Stunned Swallow (Chapter 1)	4	2839
+Stunned Swallow (Chapter 1)	5	2840
+Stunned Swallow (Chapter 1)	6	2840
+Sword Strike	1	2709
+Sword Strike	2	2710
+Sword Strike	3	2711
+Sword Strike	4	2712
+Sword Strike	5	2713
+Sword Strike	6	2713
+Spiral Savate	1	2774
+Spiral Savate	2	2775
+Spiral Savate	3	2776
+Spiral Savate	4	2777
+Spiral Savate	5	2778
+Spiral Savate	6	2778
+Ultraslash (Chapter 8)	1	2729
+Ultraslash (Chapter 8)	2	2730
+Ultraslash (Chapter 8)	3	2731
+Ultraslash (Chapter 8)	4	2732
+Ultraslash (Chapter 8)	5	2733
+Ultraslash (Chapter 8)	6	2733
+Heavenly Disrupt (Chapter 8)	1	2830
+Heavenly Disrupt (Chapter 8)	2	2831
+Heavenly Disrupt (Chapter 8)	3	2832
+Heavenly Disrupt (Chapter 8)	4	2833
+Heavenly Disrupt (Chapter 8)	5	2834
+Heavenly Disrupt (Chapter 8)	6	2834
+Stunned Swallow (Chapter 8)	1	2836
+Stunned Swallow (Chapter 8)	2	2837
+Stunned Swallow (Chapter 8)	3	2838
+Stunned Swallow (Chapter 8)	4	2839
+Stunned Swallow (Chapter 8)	5	2840
+Stunned Swallow (Chapter 8)	6	2840
+Revolt Smash	1	2814
+Revolt Smash	2	2815
+Revolt Smash	3	2816
+Revolt Smash	4	2817
+Revolt Smash	5	2818
+Revolt Smash	6	2818
+Screw Reaper	1	2799
+Screw Reaper	2	2800
+Screw Reaper	3	2801
+Screw Reaper	4	2802
+Screw Reaper	5	2803
+Screw Reaper	6	2803
+Withering Assault	1	2784
+Withering Assault	2	2785
+Withering Assault	3	2786
+Withering Assault	4	2787
+Withering Assault	5	2788
+Withering Assault	6	2788
+Capra Assault	1	2784
+Capra Assault	2	2785
+Capra Assault	3	2786
+Capra Assault	4	2787
+Capra Assault	5	2788
+Capra Assault	6	2788
+Grizzly Smash	1	2814
+Grizzly Smash	2	2815
+Grizzly Smash	3	2816
+Grizzly Smash	4	2817
+Grizzly Smash	5	2818
+Grizzly Smash	6	2818
+Creeping Slicer	1	2799
+Creeping Slicer	2	2800
+Creeping Slicer	3	2801
+Creeping Slicer	4	2802
+Creeping Slicer	5	2803
+Creeping Slicer	6	2803
+Tempest Strike	1	2814
+Tempest Strike	2	2815
+Tempest Strike	3	2816
+Tempest Strike	4	2817
+Tempest Strike	5	2818
+Tempest Strike	6	2818
+Sacred Beast's Blessing	1	2784
+Sacred Beast's Blessing	2	2785
+Sacred Beast's Blessing	3	2786
+Sacred Beast's Blessing	4	2787
+Sacred Beast's Blessing	5	2788
+Sacred Beast's Blessing	6	2788
+Azure Dragon Storm	1	2799
+Azure Dragon Storm	2	2800
+Azure Dragon Storm	3	2801
+Azure Dragon Storm	4	2802
+Azure Dragon Storm	5	2803
+Azure Dragon Storm	6	2803
+Careful Swing	1	2799
+Careful Swing	2	2800
+Careful Swing	3	2801
+Careful Swing	4	2802
+Careful Swing	5	2803
+Careful Swing	6	2803
+Standing Ovation	1	2814
+Standing Ovation	2	2815
+Standing Ovation	3	2816
+Standing Ovation	4	2817
+Standing Ovation	5	2818
+Standing Ovation	6	2818
+Bewilder Slash	1	2784
+Bewilder Slash	2	2785
+Bewilder Slash	3	2786
+Bewilder Slash	4	2787
+Bewilder Slash	5	2788
+Bewilder Slash	6	2788
+Earth Splitter	1	2759
+Earth Splitter	2	2760
+Earth Splitter	3	2761
+Earth Splitter	4	2762
+Earth Splitter	5	2763
+Earth Splitter	6	2763
+Powerquake	1	2714
+Powerquake	2	2715
+Powerquake	3	2716
+Powerquake	4	2717
+Powerquake	5	2718
+Powerquake	6	2718
+Final Stone	1	2794
+Final Stone	2	2795
+Final Stone	3	2796
+Final Stone	4	2797
+Final Stone	5	2798
+Final Stone	6	2798
+Dust Up	1	2654
+Dust Up	2	2655
+Dust Up	3	2656
+Dust Up	4	2657
+Dust Up	5	2658
+Dust Up	6	2658
+Condor's Beak	1	2759
+Condor's Beak	2	2760
+Condor's Beak	3	2761
+Condor's Beak	4	2762
+Condor's Beak	5	2763
+Condor's Beak	6	2763
+Sand Break	1	2654
+Sand Break	2	2655
+Sand Break	3	2656
+Sand Break	4	2657
+Sand Break	5	2658
+Sand Break	6	2658
+Cobra Raid	1	2729
+Cobra Raid	2	2730
+Cobra Raid	3	2731
+Cobra Raid	4	2732
+Cobra Raid	5	2733
+Cobra Raid	6	2733
+Merciless Twister	1	2794
+Merciless Twister	2	2795
+Merciless Twister	3	2796
+Merciless Twister	4	2797
+Merciless Twister	5	2798
+Merciless Twister	6	2798
+Heaven's Valor	1	2729
+Heaven's Valor	2	2730
+Heaven's Valor	3	2731
+Heaven's Valor	4	2732
+Heaven's Valor	5	2733
+Heaven's Valor	6	2733
+Lunar Salutation	1	2759
+Lunar Salutation	2	2760
+Lunar Salutation	3	2761
+Lunar Salutation	4	2762
+Lunar Salutation	5	2763
+Lunar Salutation	6	2763
+Twisted Thistle	1	2794
+Twisted Thistle	2	2795
+Twisted Thistle	3	2796
+Twisted Thistle	4	2797
+Twisted Thistle	5	2798
+Twisted Thistle	6	2798
+Grudge Blow	1	2719
+Grudge Blow	2	2720
+Grudge Blow	3	2721
+Grudge Blow	4	2722
+Grudge Blow	5	2723
+Grudge Blow	6	2723
+Heaven's Revenge	1	2729
+Heaven's Revenge	2	2730
+Heaven's Revenge	3	2731
+Heaven's Revenge	4	2732
+Heaven's Revenge	5	2733
+Heaven's Revenge	6	2733
+Whirlwind of Passion	1	2794
+Whirlwind of Passion	2	2795
+Whirlwind of Passion	3	2796
+Whirlwind of Passion	4	2797
+Whirlwind of Passion	5	2798
+Whirlwind of Passion	6	2798
+Opened Fan	1	2709
+Opened Fan	2	2710
+Opened Fan	3	2711
+Opened Fan	4	2712
+Opened Fan	5	2713
+Opened Fan	6	2713
+Screw Cutter	1	2764
+Screw Cutter	2	2765
+Screw Cutter	3	2766
+Screw Cutter	4	2767
+Screw Cutter	5	2768
+Screw Cutter	6	2768
+Cross Edge	1	2649
+Cross Edge	2	2650
+Cross Edge	3	2651
+Cross Edge	4	2652
+Cross Edge	5	2653
+Cross Edge	6	2653
+Brave Wing	1	2819
+Brave Wing	2	2820
+Brave Wing	3	2821
+Brave Wing	4	2822
+Brave Wing	5	2823
+Brave Wing	6	2823
+Scarecrow	1	2764
+Scarecrow	2	2765
+Scarecrow	3	2766
+Scarecrow	4	2767
+Scarecrow	5	2768
+Scarecrow	6	2768
+Vicious Circle	1	2709
+Vicious Circle	2	2710
+Vicious Circle	3	2711
+Vicious Circle	4	2712
+Vicious Circle	5	2713
+Vicious Circle	6	2713
+Albatross Cut	1	2764
+Albatross Cut	2	2765
+Albatross Cut	3	2766
+Albatross Cut	4	2767
+Albatross Cut	5	2768
+Albatross Cut	6	2768
+2,000 Wings	1	2649
+2,000 Wings	2	2650
+2,000 Wings	3	2651
+2,000 Wings	4	2652
+2,000 Wings	5	2653
+2,000 Wings	6	2653
+Black Wing Dance	1	2709
+Black Wing Dance	2	2710
+Black Wing Dance	3	2711
+Black Wing Dance	4	2712
+Black Wing Dance	5	2713
+Black Wing Dance	6	2713
+Twilight Twist	1	2649
+Twilight Twist	2	2650
+Twilight Twist	3	2651
+Twilight Twist	4	2652
+Twilight Twist	5	2653
+Twilight Twist	6	2653
+Bold Division	1	2764
+Bold Division	2	2765
+Bold Division	3	2766
+Bold Division	4	2767
+Bold Division	5	2768
+Bold Division	6	2768
+Gutsy Cutter	1	2819
+Gutsy Cutter	2	2820
+Gutsy Cutter	3	2821
+Gutsy Cutter	4	2822
+Gutsy Cutter	5	2823
+Gutsy Cutter	6	2823
+Exquisite Spiral	1	2709
+Exquisite Spiral	2	2710
+Exquisite Spiral	3	2711
+Exquisite Spiral	4	2712
+Exquisite Spiral	5	2713
+Exquisite Spiral	6	2713
+Thunderclap	1	2714
+Thunderclap	2	2715
+Thunderclap	3	2716
+Thunderclap	4	2717
+Thunderclap	5	2718
+Thunderclap	6	2718
+Haphazard Throw	1	2779
+Haphazard Throw	2	2780
+Haphazard Throw	3	2781
+Haphazard Throw	4	2782
+Haphazard Throw	5	2783
+Haphazard Throw	6	2783
+Cutting Edge	1	2809
+Cutting Edge	2	2810
+Cutting Edge	3	2811
+Cutting Edge	4	2812
+Cutting Edge	5	2813
+Cutting Edge	6	2813
+Papillon Dance	1	2809
+Papillon Dance	2	2810
+Papillon Dance	3	2811
+Papillon Dance	4	2812
+Papillon Dance	5	2813
+Papillon Dance	6	2813
+Cheetah Scratch	1	2779
+Cheetah Scratch	2	2780
+Cheetah Scratch	3	2781
+Cheetah Scratch	4	2782
+Cheetah Scratch	5	2783
+Cheetah Scratch	6	2783
+Tricksy Loop	1	2715
+Tricksy Loop	2	2715
+Tricksy Loop	3	2715
+Tricksy Loop	4	2715
+Tricksy Loop	5	2715
+Tricksy Loop	6	2715
+Photon Slash	1	2779
+Photon Slash	2	2780
+Photon Slash	3	2781
+Photon Slash	4	2782
+Photon Slash	5	2783
+Photon Slash	6	2783
+Marigold in Bloom	1	2809
+Marigold in Bloom	2	2810
+Marigold in Bloom	3	2811
+Marigold in Bloom	4	2812
+Marigold in Bloom	5	2813
+Marigold in Bloom	6	2813
+Electroshade Twist	1	2809
+Electroshade Twist	2	2810
+Electroshade Twist	3	2811
+Electroshade Twist	4	2812
+Electroshade Twist	5	2813
+Electroshade Twist	6	2813
+Bewitching Divide	1	2779
+Bewitching Divide	2	2780
+Bewitching Divide	3	2781
+Bewitching Divide	4	2782
+Bewitching Divide	5	2783
+Bewitching Divide	6	2783
+Thunderslam	1	2669
+Thunderslam	2	2670
+Thunderslam	3	2671
+Thunderslam	4	2672
+Thunderslam	5	2673
+Thunderslam	6	2673
+Florid Spiral	1	2724
+Florid Spiral	2	2725
+Florid Spiral	3	2726
+Florid Spiral	4	2727
+Florid Spiral	5	2728
+Florid Spiral	6	2728
+Critical Trigger	1	2774
+Critical Trigger	2	2775
+Critical Trigger	3	2776
+Critical Trigger	4	2777
+Critical Trigger	5	2778
+Critical Trigger	6	2778
+Mighty Missile	1	2830
+Mighty Missile	2	2831
+Mighty Missile	3	2832
+Mighty Missile	4	2833
+Mighty Missile	5	2834
+Mighty Missile	6	2834
+Flamecaster	1	2709
+Flamecaster	2	2710
+Flamecaster	3	2711
+Flamecaster	4	2712
+Flamecaster	5	2713
+Flamecaster	6	2713
+Surprise Shot	1	2709
+Surprise Shot	2	2710
+Surprise Shot	3	2711
+Surprise Shot	4	2712
+Surprise Shot	5	2713
+Surprise Shot	6	2713
+Porcupine Blow	1	2830
+Porcupine Blow	2	2831
+Porcupine Blow	3	2832
+Porcupine Blow	4	2833
+Porcupine Blow	5	2834
+Porcupine Blow	6	2834
+Mayfly	1	2749
+Mayfly	2	2750
+Mayfly	3	2751
+Mayfly	4	2752
+Mayfly	5	2753
+Mayfly	6	2753
+Phosphorescent Flare	1	2774
+Phosphorescent Flare	2	2775
+Phosphorescent Flare	3	2776
+Phosphorescent Flare	4	2777
+Phosphorescent Flare	5	2778
+Phosphorescent Flare	6	2778
+Cruel Musket	1	2830
+Cruel Musket	2	2831
+Cruel Musket	3	2832
+Cruel Musket	4	2833
+Cruel Musket	5	2834
+Cruel Musket	6	2834
+Thorn Assault	1	2774
+Thorn Assault	2	2775
+Thorn Assault	3	2776
+Thorn Assault	4	2777
+Thorn Assault	5	2778
+Thorn Assault	6	2778
+Chimera Drop	1	2749
+Chimera Drop	2	2750
+Chimera Drop	3	2751
+Chimera Drop	4	2752
+Chimera Drop	5	2753
+Chimera Drop	6	2753
+Breakthrough Cannon	1	2830
+Breakthrough Cannon	2	2831
+Breakthrough Cannon	3	2832
+Breakthrough Cannon	4	2833
+Breakthrough Cannon	5	2834
+Breakthrough Cannon	6	2834
+Frenzied Fire	1	2709
+Frenzied Fire	2	2710
+Frenzied Fire	3	2711
+Frenzied Fire	4	2712
+Frenzied Fire	5	2713
+Frenzied Fire	6	2713
+Crazed Bazooka	1	2749
+Crazed Bazooka	2	2750
+Crazed Bazooka	3	2751
+Crazed Bazooka	4	2752
+Crazed Bazooka	5	2753
+Crazed Bazooka	6	2753
+Wild Slugger	1	2709
+Wild Slugger	2	2710
+Wild Slugger	3	2711
+Wild Slugger	4	2712
+Wild Slugger	5	2713
+Wild Slugger	6	2713
+Terror Smash	1	2764
+Terror Smash	2	2765
+Terror Smash	3	2766
+Terror Smash	4	2767
+Terror Smash	5	2768
+Terror Smash	6	2768
+Rock Bullet	1	2819
+Rock Bullet	2	2820
+Rock Bullet	3	2821
+Rock Bullet	4	2822
+Rock Bullet	5	2823
+Rock Bullet	6	2823
+Lion Claw	1	2709
+Lion Claw	2	2710
+Lion Claw	3	2711
+Lion Claw	4	2712
+Lion Claw	5	2713
+Lion Claw	6	2713
+Raging Screw	1	2764
+Raging Screw	2	2765
+Raging Screw	3	2766
+Raging Screw	4	2767
+Raging Screw	5	2768
+Raging Screw	6	2768
+Buffalo Beat	1	2819
+Buffalo Beat	2	2820
+Buffalo Beat	3	2821
+Buffalo Beat	4	2822
+Buffalo Beat	5	2823
+Buffalo Beat	6	2823
+Armor Breaker	1	2709
+Armor Breaker	2	2710
+Armor Breaker	3	2711
+Armor Breaker	4	2712
+Armor Breaker	5	2713
+Armor Breaker	6	2713
+Devastating Tremor	1	2764
+Devastating Tremor	2	2765
+Devastating Tremor	3	2766
+Devastating Tremor	4	2767
+Devastating Tremor	5	2768
+Devastating Tremor	6	2768
+Earth Mover	1	2819
+Earth Mover	2	2820
+Earth Mover	3	2821
+Earth Mover	4	2822
+Earth Mover	5	2823
+Earth Mover	6	2823
+Falling Dropkick	1	2709
+Falling Dropkick	2	2710
+Falling Dropkick	3	2711
+Falling Dropkick	4	2712
+Falling Dropkick	5	2713
+Falling Dropkick	6	2713
+Decisive Knuckle	1	2764
+Decisive Knuckle	2	2765
+Decisive Knuckle	3	2766
+Decisive Knuckle	4	2767
+Decisive Knuckle	5	2768
+Decisive Knuckle	6	2768
+Sacrificial Chop	1	2819
+Sacrificial Chop	2	2820
+Sacrificial Chop	3	2821
+Sacrificial Chop	4	2822
+Sacrificial Chop	5	2823
+Sacrificial Chop	6	2823
+Gale Upper	1	2754
+Gale Upper	2	2755
+Gale Upper	3	2756
+Gale Upper	4	2757
+Gale Upper	5	2758
+Gale Upper	6	2758
+Wind Smash	1	2764
+Wind Smash	2	2765
+Wind Smash	3	2766
+Wind Smash	4	2767
+Wind Smash	5	2768
+Wind Smash	6	2768
+Stormstarter	1	2819
+Stormstarter	2	2820
+Stormstarter	3	2821
+Stormstarter	4	2822
+Stormstarter	5	2823
+Stormstarter	6	2823
+Sabertooth Slash	1	2754
+Sabertooth Slash	2	2755
+Sabertooth Slash	3	2756
+Sabertooth Slash	4	2757
+Sabertooth Slash	5	2758
+Sabertooth Slash	6	2758
+Whirlwind	1	2764
+Whirlwind	2	2765
+Whirlwind	3	2766
+Whirlwind	4	2767
+Whirlwind	5	2768
+Whirlwind	6	2768
+Universal Beat	1	2819
+Universal Beat	2	2820
+Universal Beat	3	2821
+Universal Beat	4	2822
+Universal Beat	5	2823
+Universal Beat	6	2823
+Blade of the Abyss	1	2754
+Blade of the Abyss	2	2755
+Blade of the Abyss	3	2756
+Blade of the Abyss	4	2757
+Blade of the Abyss	5	2758
+Blade of the Abyss	6	2758
+Galeforce Blow	1	2764
+Galeforce Blow	2	2765
+Galeforce Blow	3	2766
+Galeforce Blow	4	2767
+Galeforce Blow	5	2768
+Galeforce Blow	6	2768
+No Love Lost	1	2819
+No Love Lost	2	2820
+No Love Lost	3	2821
+No Love Lost	4	2822
+No Love Lost	5	2823
+No Love Lost	6	2823
+Hurricane Dropkick	1	2754
+Hurricane Dropkick	2	2755
+Hurricane Dropkick	3	2756
+Hurricane Dropkick	4	2757
+Hurricane Dropkick	5	2758
+Hurricane Dropkick	6	2758
+Shuddering Tonfa	1	2764
+Shuddering Tonfa	2	2765
+Shuddering Tonfa	3	2766
+Shuddering Tonfa	4	2767
+Shuddering Tonfa	5	2768
+Shuddering Tonfa	6	2768
+Wind Dragon Chop	1	2819
+Wind Dragon Chop	2	2820
+Wind Dragon Chop	3	2821
+Wind Dragon Chop	4	2822
+Wind Dragon Chop	5	2823
+Wind Dragon Chop	6	2823
+Monado Shield (Rex)	1	2824
+Monado Shield (Rex)	2	2825
+Monado Shield (Rex)	3	2826
+Monado Shield (Rex)	4	2827
+Monado Shield (Rex)	5	2828
+Monado Shield (Rex)	6	2828
+Monado Storm	1	2799
+Monado Storm	2	2800
+Monado Storm	3	2801
+Monado Storm	4	2802
+Monado Storm	5	2803
+Monado Storm	6	2803
+Monado Burst	1	2729
+Monado Burst	2	2730
+Monado Burst	3	2731
+Monado Burst	4	2732
+Monado Burst	5	2733
+Monado Burst	6	2733
+Monado Beat	1	2739
+Monado Beat	2	2740
+Monado Beat	3	2741
+Monado Beat	4	2742
+Monado Beat	5	2743
+Monado Beat	6	2743
+Lightning Smash	1	2699
+Lightning Smash	2	2700
+Lightning Smash	3	2701
+Lightning Smash	4	2702
+Lightning Smash	5	2703
+Lightning Smash	6	2703
+Monado Striker	1	2799
+Monado Striker	2	2800
+Monado Striker	3	2801
+Monado Striker	4	2802
+Monado Striker	5	2803
+Monado Striker	6	2803
+Lucent Glance	1	2739
+Lucent Glance	2	2740
+Lucent Glance	3	2741
+Lucent Glance	4	2742
+Lucent Glance	5	2743
+Lucent Glance	6	2743
+Beam Thrust	1	2729
+Beam Thrust	2	2730
+Beam Thrust	3	2731
+Beam Thrust	4	2732
+Beam Thrust	5	2733
+Beam Thrust	6	2733
+Blade Masquerade	1	2799
+Blade Masquerade	2	2800
+Blade Masquerade	3	2801
+Blade Masquerade	4	2802
+Blade Masquerade	5	2803
+Blade Masquerade	6	2803
+Echo Edge	1	2739
+Echo Edge	2	2740
+Echo Edge	3	2741
+Echo Edge	4	2742
+Echo Edge	5	2743
+Echo Edge	6	2743
+Sudden Smite	1	2699
+Sudden Smite	2	2700
+Sudden Smite	3	2701
+Sudden Smite	4	2702
+Sudden Smite	5	2703
+Sudden Smite	6	2703
+Monado Shield (Zeke)	1	2824
+Monado Shield (Zeke)	2	2825
+Monado Shield (Zeke)	3	2826
+Monado Shield (Zeke)	4	2827
+Monado Shield (Zeke)	5	2828
+Monado Shield (Zeke)	6	2828
+Helios Circle	1	2799
+Helios Circle	2	2800
+Helios Circle	3	2801
+Helios Circle	4	2802
+Helios Circle	5	2803
+Helios Circle	6	2803
+Nemesis Beat	1	2699
+Nemesis Beat	2	2700
+Nemesis Beat	3	2701
+Nemesis Beat	4	2702
+Nemesis Beat	5	2703
+Nemesis Beat	6	2703
+Wind Slicer	1	2769
+Wind Slicer	2	2770
+Wind Slicer	3	2771
+Wind Slicer	4	2772
+Wind Slicer	5	2773
+Wind Slicer	6	2773
+Skyward Edge	1	2784
+Skyward Edge	2	2785
+Skyward Edge	3	2786
+Skyward Edge	4	2787
+Skyward Edge	5	2788
+Skyward Edge	6	2788
+Infinity Wing	1	2779
+Infinity Wing	2	2780
+Infinity Wing	3	2781
+Infinity Wing	4	2782
+Infinity Wing	5	2783
+Infinity Wing	6	2783
+Screw Edge	1	2809
+Screw Edge	2	2810
+Screw Edge	3	2811
+Screw Edge	4	2812
+Screw Edge	5	2813
+Screw Edge	6	2813
+Air Slash	1	2769
+Air Slash	2	2770
+Air Slash	3	2771
+Air Slash	4	2772
+Air Slash	5	2773
+Air Slash	6	2773
+Avian Spin	1	2784
+Avian Spin	2	2785
+Avian Spin	3	2786
+Avian Spin	4	2787
+Avian Spin	5	2788
+Avian Spin	6	2788
+Whirling Edge	1	2809
+Whirling Edge	2	2810
+Whirling Edge	3	2811
+Whirling Edge	4	2812
+Whirling Edge	5	2813
+Whirling Edge	6	2813
+Draconic Lunge	1	2784
+Draconic Lunge	2	2785
+Draconic Lunge	3	2786
+Draconic Lunge	4	2787
+Draconic Lunge	5	2788
+Draconic Lunge	6	2788
+Phoenix Dance	1	2779
+Phoenix Dance	2	2780
+Phoenix Dance	3	2781
+Phoenix Dance	4	2782
+Phoenix Dance	5	2783
+Phoenix Dance	6	2783
+Universe Flicker	1	2809
+Universe Flicker	2	2810
+Universe Flicker	3	2811
+Universe Flicker	4	2812
+Universe Flicker	5	2813
+Universe Flicker	6	2813
+Tempest Twist	1	2779
+Tempest Twist	2	2780
+Tempest Twist	3	2781
+Tempest Twist	4	2782
+Tempest Twist	5	2783
+Tempest Twist	6	2783
+Flareflash Divide	1	2784
+Flareflash Divide	2	2785
+Flareflash Divide	3	2786
+Flareflash Divide	4	2787
+Flareflash Divide	5	2788
+Flareflash Divide	6	2788
+Windmill Cutter	1	2809
+Windmill Cutter	2	2810
+Windmill Cutter	3	2811
+Windmill Cutter	4	2812
+Windmill Cutter	5	2813
+Windmill Cutter	6	2813
+Typhoon Spin	1	2769
+Typhoon Spin	2	2770
+Typhoon Spin	3	2771
+Typhoon Spin	4	2772
+Typhoon Spin	5	2773
+Typhoon Spin	6	2773
+Stunned Swallow (Challenge Mode)	1	2836
+Stunned Swallow (Challenge Mode)	2	2837
+Stunned Swallow (Challenge Mode)	3	2838
+Stunned Swallow (Challenge Mode)	4	2839
+Stunned Swallow (Challenge Mode)	5	2840
+Stunned Swallow (Challenge Mode)	6	2840
+Empty Moment (Challenge Mode)	1	2830
+Empty Moment (Challenge Mode)	2	2831
+Empty Moment (Challenge Mode)	3	2832
+Empty Moment (Challenge Mode)	4	2833
+Empty Moment (Challenge Mode)	5	2834
+Empty Moment (Challenge Mode)	6	2834
+Heavenly Disrupt (Challenge Mode)	1	2830
+Heavenly Disrupt (Challenge Mode)	2	2831
+Heavenly Disrupt (Challenge Mode)	3	2832
+Heavenly Disrupt (Challenge Mode)	4	2833
+Heavenly Disrupt (Challenge Mode)	5	2834
+Heavenly Disrupt (Challenge Mode)	6	2834
+\.
+
+
+--
 -- Data for Name: arts; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
-COPY xeno2.arts (name, driver, weapon, type, damage_ratio, hits, range, recharge, reaction, description, wp, caption, distance, radius, hate, accuracy_mod, crit_mod) FROM stdin;
-Sword Bash	Rex	Aegis Sword	Physical	170/200/230/260/290/336	1	One Target	7/7/6/6/5/4	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/360/1620/3600/9000	Back attack↑	8	0	14	0	0
-Double Spinning Edge	Rex	Aegis Sword	Physical	200/240/280/320/360/400	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/440/1980/4400/11000	Side attack↑	8	0	14	0	0
-Anchor Shot	Rex	Aegis Sword	Physical	100/120/140/160/180/192	2	One Target	6/6/6/6/6/6	Topple	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/480/2160/4800/12000	HP Potion	8	0	18	0	0
-Rolling Smash	Rex	Aegis Sword	Ether	330/370/410/450/490/545	1	Ahead	11/11/10/10/9/8	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/320/1440/3200/8000	AOE / Aggro down	8	2	14	0	0
-Sword Bash (Broadsword)	Rex	Broadsword	Physical	170/200/230/260/290/336	1	One Target	7/7/6/6/5/4	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/180/810/1800/4500	Back attack↑	8	0	14	0	0
-Double Spinning Edge (Broadsword)	Rex	Broadsword	Physical	200/240/280/320/360/400	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/220/990/2200/5500	Side attack↑	8	0	14	0	0
-Anchor Shot (Broadsword)	Rex	Broadsword	Physical	240/270/300/330/360/400	2	One Target	6/6/6/6/6/6	None	Spawns a small HP Potion when landing a hit.	0/240/1080/2400/6000	HP Potion	8	0	18	0	0
-Rolling Smash (Broadsword)	Rex	Broadsword	Physical	330/370/410/450/490/545	1	Ahead	14/14/13/13/12/11	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/160/720/1600/4000	AOE / Aggro down	8	2	14	0	0
-Saber Slash	Rex	Catalyst Scimitar	Physical	170/200/230/260/290/336	3	One Target	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/310/1390/3080/7700	HP Potion	8	0	14	0	0
-Redemption	Rex	Catalyst Scimitar	Recovery	231/250/270/290/310/341	0	All	14/14/13/13/12/11	None		0/340/1510/3360/8400	Heal party	200	0	18	0	0
-Hydro Blast	Rex	Catalyst Scimitar	Ether	250/300/350/400/450/500	1	Ahead	10/10/9/9/8/7	Knockback		0/220/1010/2240/5600	AOE / Knockback	12	2	10	0	0
-Water Flower	Rex	Catalyst Scimitar	Ether	300/340/380/420/460/500	1	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/250/1130/2520/6300	Pierce	8	0	10	0	0
-Wide Slash	Rex	Twin Rings	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/480/2180/4840/12100	Side attack↑	8	0	10	0	0
-Strong Saucer	Rex	Twin Rings	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/530/2380/5280/13200	HP Potion	8	0	18	0	0
-Eightfold Edge	Rex	Twin Rings	Physical	240/290/340/390/440/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/350/1580/3520/8800	Beasts↑	8	0	10	0	0
-Spin of Bravery	Rex	Twin Rings	Physical	300/340/380/420/460/500	4	Circle (User)	14/14/13/13/12/11	None		0/400/1780/3960/9900	AOE	8	2	10	0	0
-Butterfly Blade	Nia	Twin Rings	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break		0/400/1780/3960/9900	Break	8	0	10	0	0
-Jaguar Slash	Nia	Twin Rings	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/320/1460/3240/8100	HP Potion	8	0	18	0	0
-Gemini Loop	Nia	Twin Rings	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	Increases damage dealt from the side by 50%.	0/290/1300/2880/7200	AOE / Side atk↑	8	2	10	0	0
-Healing Halo	Nia	Twin Rings	Recovery	210/230/250/270/290/290	0	All	14/14/13/13/12/11	None		0/430/1940/4320/10800	Heal party	200	0	18	0	0
-Halo Strike	Mòrag	Twin Rings	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/440/1980/4400/11000	HP Potion	8	0	18	0	0
-Inferno Wheel	Mòrag	Twin Rings	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	Beasts↑	8	0	10	0	0
-Twin Moonblade	Mòrag	Twin Rings	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None		0/360/1620/3600/9000	AOE	8	2	10	0	0
-Revolution Flash	Mòrag	Twin Rings	Recovery	200/220/240/260/280/290	0	All	14/14/13/13/12/11	None		0/480/2160/4800/12000	Heal party	200	0	18	0	0
-Rapid Twist	Zeke	Twin Rings	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/380/1730/3840/9600	Beasts↑	8	0	10	0	0
-Clear Divide	Zeke	Twin Rings	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/580/2590/5760/14400	HP Potion	8	0	18	0	0
-Righteous Guillotine	Zeke	Twin Rings	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt to aerial creatures by [50/50/70/70/100/100]%.	0/430/1940/4320/10800	AOE / Flying↑	8	3	10	0	0
-Shredder Spiral	Zeke	Twin Rings	Physical	220/260/300/340/380/440	2	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt from the back by [50/50/60/60/75/75]%.	0/530/2380/5280/13200	AOE / Back attack↑	8	2	10	0	0
-Steady Drill	Tora	Drill Shields	Physical	270/310/350/390/430/450	5	One Target	9/9/8/8/7/6	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/440/1980/4400/11000	Launched↑	8	0	0	0	0
-Big Boost	Tora	Drill Shields	Physical	200/240/280/320/360/400	4	One Target	11/11/10/10/9/8	Topple	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/480/2160/4800/12000	Topple / Low HP↑	8	0	0	0	0
-Spinning Cutter	Tora	Drill Shields	Physical	96/120/140/160/180/192	4	Circle (User)	6/6/6/6/6/6	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	AOE / Aggro up	8	4	0	0	0
-Rigid Shield	Tora	Drill Shields	Defensive	270/270/360/360/360/450	0	One Target	12/12/11/11/10/9	None	Restores [6/7/8/9/10/10]% HP when guarding. Recharges other Arts when attacked.	0/360/1620/3600/9000	Defense	8	0	0	0	0
-Pow-Pow Cannon	Tora	Mech Arms	Ether	200/240/280/320/360/400	2	One Target	9/9/8/8/7/6	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/430/1940/4320/10800	Aggroed↑	8	0	0	0	0
-Dented Shield	Tora	Mech Arms	Physical	300/340/380/420/460/500	6	One Target	11/11/10/10/9/8	Smash		0/580/2590/5760/14400	Smash	8	0	0	0	0
-Scattershot	Tora	Mech Arms	Ether	150/190/230/270/310/336	10	One Target	9/9/8/8/7/6	None	Evade enemy attacks during Driver Arts.	0/380/1730/3840/9600	Evasion	8	0	0	0	0
-Booming Buster	Tora	Mech Arms	Ether	200/240/280/320/360/400	1	Ahead	11/11/10/10/9/8	Knockback		0/530/2380/5280/13200	AOE / Knockback	8	4	0	0	0
-Swooshing Slash	Tora	Variable Saber	Physical	300/340/380/420/460/500	2	One Target	12/12/11/11/10/9	Launch		0/340/1510/3360/8400	Launch	8	0	0	0	0
-Speedy Sword	Tora	Variable Saber	Physical	200/240/280/320/360/400	3	One Target	11/11/10/10/9/8	Break		0/310/1390/3080/7700	Break	8	0	0	0	0
-Boom-Boom Laser	Tora	Variable Saber	Ether	220/270/320/370/420/460	2	One Target	9/9/8/8/7/6	None	Increases damage dealt to toppled enemies by [100/100/120/120/150/150]%.	0/220/1010/2240/5600	Toppled↑	8	0	0	0	0
-Steady Beam	Tora	Variable Saber	Ether	170/210/250/290/330/360	1	Ahead	10/10/9/9/8/7	None	Restores [10/10/12/12/15/15]% HP of damage dealt when a Driver Art connects.	0/250/1130/2520/6300	AOE / Heal on attack	8	3	0	0	0
-Heat Rush	Rex	Whipsword	Ether	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/430/1940/4320/10800	Toppled↑	9	0	22	0	0
-Storm Spin	Rex	Whipsword	Physical	180/210/240/270/300/350	3	Ahead	11/11/10/10/9/8	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/580/2590/5760/14400	AOE / Low HP↑	9	3	22	0	0
-Blazing Whip	Rex	Whipsword	Physical	120/140/160/180/200/240	1	Ahead	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/380/1730/3840/9600	AOE / Aggro up	9	4	22	0	0
-Phantom Flame	Rex	Whipsword	Ether	200/240/280/320/360/400	2	Ahead	10/10/9/9/8/7	None	Evade enemy attacks during Driver Arts.	0/530/2380/5280/13200	AOE / Evasion	9	3	22	0	0
-Azure II: Hellfire	Mòrag	Whipsword	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Break		0/480/2160/4800/12000	Break	9	0	22	0	0
-Azure II: Radiance	Mòrag	Whipsword	Physical	200/240/280/320/360/400	3	Ahead	10/10/9/9/8/7	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/360/1620/3600/9000	AOE / Toppled↑	9	3	22	0	0
-Azure II: Blaze	Mòrag	Whipsword	Ether	120/140/160/180/200/240	1	Ahead	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	AOE / Aggro up	9	4	22	0	0
-Azure II: Judgment	Mòrag	Whipsword	Ether	200/240/280/320/360/400	3	One Target	11/11/10/10/9/8	None	Evade enemy attacks during Driver Arts.	0/440/1980/4400/11000	Evasion	9	0	22	0	0
-Upper Edge	Rex	Big Bang Edge	Physical	300/340/380/420/460/500	1	One Target	9/9/8/8/7/6	Launch		0/620/2810/6240/15600	Launch	9	0	14	0	0
-Big Impact	Rex	Big Bang Edge	Physical	300/340/380/420/460/500	1	Ahead	8/8/7/7/6/5	Blowdown		0/470/2110/4680/11700	AOE / Blowdown	9	4	14	0	0
-Electro Buster	Rex	Big Bang Edge	Ether	420/450/480/510/540/558	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt to toppled enemies by [100/100/120/120/150/150]%.	0/570/2570/5720/14300	AOE / Toppled↑	9	3	14	0	0
-Voltaic Slash	Rex	Big Bang Edge	Physical	360/410/460/510/560/600	2	Ahead	7/7/6/6/5/4	None	Increases damage dealt to machines by [25/25/35/35/50/50]%.	0/420/1870/4160/10400	AOE / Machines↑	9	3	14	0	0
-Stratospheric Thunder	Zeke	Big Bang Edge	Physical	300/340/380/420/460/500	1	One Target	9/9/8/8/7/6	Launch		0/480/2160/4800/12000	Launch	9	0	14	0	0
-Dynamic Spark Sword	Zeke	Big Bang Edge	Physical	300/350/400/450/500/550	3	One Target	8/8/7/7/6/5	Knockback	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/440/1980/4400/11000	Knockback / Front atk↑	9	0	14	0	0
-Overload Thunder Beam	Zeke	Big Bang Edge	Ether	360/390/420/450/480/500	7	Ahead	7/7/6/6/5/4	None	Increases damage dealt to machines by [25/25/35/35/50/50]%.	0/320/1440/3200/8000	AOE / Machines↑	12	2	14	0	0
-ULFS Max	Zeke	Big Bang Edge	Ether	420/450/480/510/540/589	2	Circle (User)	11/11/10/10/9/8	Blowdown	Increases damage dealt to toppled enemies by [100/100/120/120/150/150]%.	0/360/1620/3600/9000	AOE / Toppled↑/ Blowdown	9	2	14	0	0
-Cyclone Smash	Rex	Dual Scythes	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/360/1620/3600/9000	Low HP↑	8	0	10	0	0
-Wild Scythe	Rex	Dual Scythes	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/440/1980/4400/11000	HP down / Evasion	8	0	10	0	0
-Wing Smash	Rex	Dual Scythes	Physical	250/300/350/400/450/500	1	One Target	12/12/11/11/10/9	Smash		0/480/2160/4800/12000	Smash	8	0	10	0	0
-Vortex Edge	Rex	Dual Scythes	Ether	150/180/210/240/270/288	3	Circle (User)	8/8/7/7/6/5	None	Increases damage dealt to aerial creatures by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	AOE / Flying↑	8	3	10	0	0
-Muscle Slash	Vandham	Dual Scythes	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/320/1440/3200/8000	Low HP↑	8	0	10	0	0
-Fast Twitch	Vandham	Dual Scythes	Physical	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/440/1980/4400/11000	HP down / Evasion	8	0	10	0	0
-Muscle Uppercut	Vandham	Dual Scythes	Physical	250/300/350/400/450/500	1	One Target	9/9/8/8/7/6	Launch		0/480/2160/4800/12000	Launch	8	0	10	0	0
-Mega Muscle	Vandham	Dual Scythes	Physical	150/180/210/240/270/288	3	Circle (User)	6/6/5/5/4/3	None	Increases damage dealt to aerial creatures by [50/50/70/70/100/100]%.	0/360/1620/3600/9000	AOE / Flying↑	8	3	10	0	0
-Strong Smash	Rex	Great Axe	Physical	360/410/460/510/560/600	1	One Target	8/8/8/7/7/7	None	Increases damage dealt to toppled enemies by [100/100/120/120/150/150]%.	0/360/1620/3600/9000	Toppled↑	8	0	14	0	0
-Axe Twist	Rex	Great Axe	Physical	144/170/200/230/260/288	2	Circle (User)	6/6/6/5/5/5	None	Increases damage dealt to aquatic organisms by [25/25/35/35/50/50]%.	0/320/1440/3200/8000	AOE / Aquatic↑	8	3	14	0	0
-Power Swipe	Rex	Great Axe	Physical	220/260/300/340/380/440	1	One Target	8/8/8/7/7/7	Launch		0/480/2160/4800/12000	Launch	8	0	14	0	20
-Bold Tackle	Rex	Great Axe	Physical	240/290/340/390/440/480	2	One Target	7/7/7/6/6/6	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/440/1980/4400/11000	Critical recharge	8	0	14	0	0
-Brutal Blade	Nia	Great Axe	Physical	260/310/360/410/460/520	2	One Target	7/7/7/6/6/6	Topple		0/530/2380/5280/13200	Topple	8	0	14	0	0
-Rhino Assault	Nia	Great Axe	Physical	240/290/340/390/440/480	3	One Target	6/6/6/5/5/5	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/480/2180/4840/12100	Critical recharge	8	0	14	0	20
-Bear Smash	Nia	Great Axe	Physical	330/390/450/510/570/625	1	One Target	8/8/8/7/7/7	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/400/1780/3960/9900	Toppled↑	8	0	14	0	0
-Shadow Slice	Nia	Great Axe	Physical	144/170/200/230/260/288	2	Circle (User)	5/5/5/4/4/4	None	Increases damage dealt to aquatic organisms by [25/25/35/35/50/50]%.	0/350/1580/3520/8800	AOE / Aquatic↑	8	2	14	0	0
-Rock Cleaver	Mòrag	Great Axe	Physical	260/310/360/410/460/520	1	One Target	7/7/7/6/6/6	None	Increases damage dealt to aquatic organisms by [25/25/35/35/50/50]%.	0/380/1730/3840/9600	Aquatic↑	8	0	14	0	0
-Admiral Waltz	Mòrag	Great Axe	Physical	240/290/340/390/440/480	2	One Target	7/7/7/6/6/6	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/580/2590/5760/14400	Critical recharge	8	0	14	0	20
-Gale Blade	Mòrag	Great Axe	Physical	360/410/460/510/560/600	1	One Target	8/8/8/7/7/7	Blowdown		0/530/2380/5280/13200	Blowdown	8	0	14	0	0
-Rising Dragon	Mòrag	Great Axe	Physical	144/170/200/230/260/288	2	Circle (User)	6/6/6/5/5/5	None	Increases damage dealt to launched enemies by [50/50/60/60/75/75]%.	0/430/1940/4320/10800	AOE / Launched↑	8	2	14	0	0
-Spinning Elbow	Zeke	Great Axe	Physical	260/310/360/410/460/520	2	One Target	9/9/9/8/8/8	Topple		0/430/1940/4320/10800	Topple	8	0	14	0	0
-Triumphal Axe	Zeke	Great Axe	Physical	220/260/300/340/380/440	3	Circle (User)	7/7/7/6/6/6	Knockback		0/320/1460/3240/8100	AOE / Knockback	8	2	14	0	0
-Raging Charge	Zeke	Great Axe	Physical	390/430/470/510/550/600	1	Ahead	8/8/8/7/7/7	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/290/1300/2880/7200	AOE / Toppled↑	8	2	14	0	0
-Berserker Slash	Zeke	Great Axe	Physical	240/290/340/390/440/480	2	Ahead	7/7/7/6/6/6	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/400/1780/3960/9900	AOE / Critical recharge	8	2	14	0	20
-Strong Horn	Rex	Megalance	Physical	160/190/220/250/280/320	1	One Target	9/9/8/8/7/6	None	Increases damage dealt by [50/50/60/60/75/75]% when HP is 90% or higher.	0/320/1460/3240/8100	High HP↑	10	0	14	0	0
-Power Spike	Rex	Megalance	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/430/1940/4320/10800	Break / Side attack↑	10	0	14	0	0
-Heavy Hitter	Rex	Megalance	Physical	150/170/190/210/230/240	1	One Target	10/10/9/9/8/7	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/400/1780/3960/9900	Aggro down	10	0	14	0	0
-Feral Spin	Rex	Megalance	Physical	300/340/380/420/460/500	3	Circle (User)	13/13/12/12/11/10	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/290/1300/2880/7200	AOE / Insects↑	10	3	14	0	0
-Vulture Peck	Nia	Megalance	Physical	160/190/220/250/280/320	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [50/50/60/60/75/75]% when HP is 90% or higher.	0/480/2180/4840/12100	High HP↑	10	0	14	0	0
-Gyro Break	Nia	Megalance	Physical	300/340/380/420/460/500	2	Circle (User)	14/14/13/13/12/11	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/350/1580/3520/8800	AOE / Insects↑	10	3	14	0	0
-Raptor Raid	Nia	Megalance	Physical	130/160/190/220/250/264	2	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/400/1780/3960/9900	Back attack↑	10	0	14	0	0
-Discus Glaive	Nia	Megalance	Ether	150/170/190/210/230/240	3	Circle (User)	14/14/13/13/12/11	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/530/2380/5280/13200	AOE / Aggro down	10	2	10	0	0
-Crown Splitter	Mòrag	Megalance	Physical	240/290/340/390/440/500	1	One Target	11/11/10/10/9/8	Smash		0/480/2160/4800/12000	Smash	10	0	14	0	0
-Spiral Uppercut	Mòrag	Megalance	Physical	130/160/190/220/250/264	1	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/320/1440/3200/8000	Back attack↑	10	0	14	0	0
-Twin Dragons	Mòrag	Megalance	Physical	200/240/280/320/360/420	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [50/50/60/60/75/75]% when HP is 90% or higher.	0/360/1620/3600/9000	High HP↑	10	0	14	0	0
-Windmill	Mòrag	Megalance	Physical	150/170/190/210/230/240	2	Ahead	14/14/13/13/12/11	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/440/1980/4400/11000	AOE / Aggro down	10	2	14	0	0
-Brutal Swing	Zeke	Megalance	Physical	120/140/160/180/200/240	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [100/100/120/120/150/150]%.	0/400/1780/3960/9900	Side attack↑	10	0	14	0	0
-Meteor Lance	Zeke	Megalance	Ether	130/160/190/220/250/264	1	Ahead	12/12/11/11/10/9	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/350/1580/3520/8800	AOE / Back attack↑	10	2	14	0	0
-Powerhouse Smash	Zeke	Megalance	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	Smash		0/530/2380/5280/13200	Smash	10	0	14	0	0
-Supersonic Spin	Zeke	Megalance	Ether	150/170/190/210/230/240	2	Ahead	14/14/13/13/12/11	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/480/2180/4840/12100	AOE / Aggro down	10	2	10	0	0
-Daring Shot	Rex	Ether Cannon	Ether	108/130/150/170/190/216	5	One Target	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/400/1780/3960/9900	High HP↑	20	0	14	0	0
-Armor Crusher	Rex	Ether Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/350/1580/3520/8800	Pierce	20	0	14	0	0
-Grenade Launcher	Rex	Ether Cannon	Ether	300/340/380/420/460/500	1	Circle (Target)	12/12/11/11/10/9	Blowdown		0/530/2380/5280/13200	AOE / Blowdown	20	4	14	0	0
-Wild Volley	Rex	Ether Cannon	Ether	180/220/260/300/340/360	1	Ahead	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/480/2180/4840/12100	AOE / Cancel attack↑	20	4	14	0	0
-Breach Shot	Nia	Ether Cannon	Ether	180/220/260/300/340/360	2	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/360/1620/3600/9000	Cancel atk↑	20	0	14	0	0
-Leopard Blow	Nia	Ether Cannon	Ether	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/480/2160/4800/12000	Break / Pierce	20	0	14	0	0
-Cattle Driver	Nia	Ether Cannon	Ether	220/260/300/340/380/440	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/320/1440/3200/8000	AOE / Launched↑	20	6	14	0	0
-Pulse Fire	Nia	Ether Cannon	Ether	108/130/150/170/190/216	5	Ahead	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/440/1980/4400/11000	AOE / High HP↑	20	10	14	0	0
-Ogre Slam	Mòrag	Ether Cannon	Ether	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/430/1940/4320/10800	Break / Pierce	20	0	14	0	0
-Woodcutter	Mòrag	Ether Cannon	Ether	108/130/150/170/190/216	7	Ahead	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/400/1780/3960/9900	AOE / High HP↑	20	2	14	0	0
-Touch-Me-Not	Mòrag	Ether Cannon	Ether	330/370/410/450/490/550	11	Ahead	12/12/11/11/10/9	None		0/320/1460/3240/8100	AOE	20	6	14	0	0
-Mist Buster	Mòrag	Ether Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/290/1300/2880/7200	Launched↑	20	0	14	0	0
-Burst Gunner	Zeke	Ether Cannon	Ether	300/340/380/420/460/500	3	One Target	12/12/11/11/10/9	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/580/2590/5760/14400	Break / Pierce	20	0	14	0	0
-Haywire Chainshot	Zeke	Ether Cannon	Ether	108/130/150/170/190/216	6	One Target	8/8/7/7/6/5	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/430/1940/4320/10800	Cancel attack↑	20	0	14	0	0
-Blowback Cannon	Zeke	Ether Cannon	Ether	300/340/380/420/460/500	1	Circle (Target)	12/12/11/11/10/9	Knockback		0/530/2380/5280/13200	AOE / Knockback	20	4	14	0	0
-Laserpoint Bazooka	Zeke	Ether Cannon	Ether	220/260/300/340/380/440	6	Ahead	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/380/1730/3840/9600	AOE / Launched↑	20	2	14	0	0
-Iron Wall	Rex	Shield Hammer	Defensive	270/270/360/360/360/450	0	One Target	14/14/13/13/12/11	None	Restores [6/7/8/9/10/10]% HP when guarding. Recharges other Arts when attacked.	0/360/1620/3600/9000	Defense	8	0	22	0	0
-Diving Swing	Rex	Shield Hammer	Physical	120/140/160/180/200/240	2	Ahead	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	AOE / Aggro up	8	2	22	0	0
-Power Hammer	Rex	Shield Hammer	Physical	160/190/220/250/280/320	2	One Target	11/11/10/10/9/8	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/480/2160/4800/12000	Front attack↑	8	0	22	0	0
-Mighty Beat	Rex	Shield Hammer	Ether	270/310/350/390/430/450	1	Circle (User)	12/12/11/11/10/9	None	Increases damage dealt to toppled enemies by [100/100/120/120/150/150]%.	0/440/1980/4400/11000	AOE / Toppled↑	8	3	22	0	0
-Rumbling Smash	Nia	Shield Hammer	Physical	160/190/220/250/280/320	3	One Target	11/11/10/10/9/8	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/580/2590/5760/14400	Front attack↑	8	0	22	0	0
-Elephant Press	Nia	Shield Hammer	Physical	120/140/160/180/200/240	3	Circle (User)	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/380/1730/3840/9600	AOE / Aggro up	8	3	22	0	0
-Buckler Slam	Nia	Shield Hammer	Ether	270/310/350/390/430/450	1	Circle (User)	14/14/13/13/12/11	None	Increases damage dealt to toppled enemies by [100/100/120/120/150/150]%.	0/530/2380/5280/13200	AOE / Toppled↑	8	3	22	0	0
-Hammerhead	Nia	Shield Hammer	Physical	200/240/280/320/360/400	1	One Target	11/11/10/10/9/8	Knockback		0/430/1940/4320/10800	Knockback	8	0	22	0	0
-Vajra Blow	Mòrag	Shield Hammer	Physical	200/240/280/320/360/400	1	One Target	14/14/13/13/12/11	Topple		0/530/2380/5280/13200	Topple	8	0	22	0	0
-Battle Top	Mòrag	Shield Hammer	Physical	120/140/160/180/200/240	4	Circle (User)	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/350/1580/3520/8800	AOE / Aggro up	8	3	22	0	0
-Mountain Crusher	Mòrag	Shield Hammer	Physical	200/240/280/320/360/400	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to toppled enemies by [100/100/120/120/150/150]%.	0/480/2180/4840/12100	Toppled↑	8	0	22	0	0
-Decimator	Mòrag	Shield Hammer	Physical	300/340/380/420/460/500	2	One Target	12/12/11/11/10/9	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/400/1780/3960/9900	Launched↑	8	0	22	0	0
-Brawl Swing	Zeke	Shield Hammer	Physical	96/120/140/160/180/192	3	Circle (User)	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/290/1300/2880/7200	AOE / Aggro up	8	3	22	0	0
-Behemoth Uppercut	Zeke	Shield Hammer	Physical	240/290/340/390/440/480	1	One Target	11/11/10/10/9/8	Launch		0/430/1940/4320/10800	Launch	8	0	22	0	0
-Detonation Blow	Zeke	Shield Hammer	Physical	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	Blowdown	Increases damage dealt by [50/50/60/60/75/75]% when HP is 30% or less.	0/400/1780/3960/9900	Blowdown / Low HP↑	8	0	22	0	0
-Impregnable Shield	Zeke	Shield Hammer	Defensive	270/270/360/360/360/450	0	One Target	14/14/13/13/12/11	None	Restores [6/7/8/9/10/10]% HP when guarding. Recharges other Arts when attacked.	0/320/1460/3240/8100	Defense	8	0	22	0	0
-Sword Uppercut	Rex	Chroma Katana	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break		0/580/2590/5760/14400	Break	8	0	20	0	0
-Feral Blade	Rex	Chroma Katana	Ether	120/140/160/180/200/240	1	Ahead	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/380/1730/3840/9600	AOE / Aggro up	8	2	20	0	0
-Breakdown	Rex	Chroma Katana	Physical	160/190/220/250/280/320	3	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/530/2380/5280/13200	Aggroed↑	8	0	20	0	0
-Dual Slash	Rex	Chroma Katana	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	None	Evade enemy attacks during Driver Arts.	0/430/1940/4320/10800	Evasion	8	0	20	0	0
-Deathbound	Nia	Chroma Katana	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	None	Increases damage dealt to humanoids by [25/25/35/35/50/50]%.	0/360/1620/3600/9000	Humanoids↑	8	0	20	0	0
-Scorpion Tail	Nia	Chroma Katana	Physical	285/320/350/380/410/450	1	One Target	14/14/13/13/12/11	None	Evade enemy attacks during Driver Arts.	0/440/1980/4400/11000	Evasion	8	0	20	0	0
-Wolf Fang	Nia	Chroma Katana	Physical	160/190/220/250/280/320	2	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/480/2160/4800/12000	Aggroed↑	8	0	20	0	0
-Triple Flash	Nia	Chroma Katana	Physical	120/140/160/180/200/240	3	Ahead	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	AOE / Aggro up	8	2	20	0	0
-Aerial Slash	Mòrag	Chroma Katana	Physical	300/340/380/420/460/500	2	One Target	14/14/13/13/12/11	Smash		0/430/1940/4320/10800	Smash	8	0	20	0	0
-Eclipse Blade	Mòrag	Chroma Katana	Physical	170/210/250/290/330/380	1	One Target	13/13/12/12/11/10	None	Evade enemy attacks during Driver Arts.	0/400/1780/3960/9900	Evasion	8	0	20	0	0
-Overfall	Mòrag	Chroma Katana	Physical	160/190/220/250/280/320	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/320/1460/3240/8100	Aggroed↑	8	0	20	0	0
-Quadruple Slash	Mòrag	Chroma Katana	Physical	120/140/160/180/200/240	4	One Target	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/290/1300/2880/7200	Aggro up	8	0	20	0	0
-Reverb Blade	Zeke	Chroma Katana	Ether	200/240/280/320/360/400	1	Circle (User)	11/11/10/10/9/8	None	Evade enemy attacks during Driver Arts.	0/360/1620/3600/9000	AOE / Evasion	8	4	20	0	0
-Psychic Sword	Zeke	Chroma Katana	Physical	315/370/420/470/520/575	2	One Target	14/14/13/13/12/11	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/440/1980/4400/11000	Front attack↑	8	0	20	0	0
-Aerial Edge	Zeke	Chroma Katana	Physical	120/140/160/180/200/240	3	Circle (User)	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/320/1440/3200/8000	AOE / Aggro up	8	4	20	0	0
-Shogun Slash	Zeke	Chroma Katana	Physical	200/240/280/320/360/400	2	Ahead	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/480/2160/4800/12000	AOE / Aggroed↑	8	2	20	0	0
-Touchdown	Rex	Bitball	Ether	125/150/170/190/210/240	1	One Target	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/480/2180/4840/12100	HP Potion	6	0	18	0	0
-Brave Throw	Rex	Bitball	Ether	220/260/300/340/380/440	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/400/1780/3960/9900	Toppled↑	8	0	10	0	0
-Strong Shot	Rex	Bitball	Ether	300/340/380/420/460/500	1	One Target	11/11/10/10/9/8	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/530/2380/5280/13200	Heal party on attack	15	0	10	0	0
-Mighty Ball	Rex	Bitball	Ether	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to launched enemies by [50/50/60/60/75/75]%.	0/350/1580/3520/8800	Launched↑	15	0	10	0	0
-Dolphin Spin	Nia	Bitball	Ether	125/150/170/190/210/240	3	One Target	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/320/1460/3240/8100	HP Potion	6	0	18	0	0
-Healing Circle	Nia	Bitball	Recovery	210/230/250/270/290/310	0	All	11/11/10/10/9/8	None		0/430/1940/4320/10800	Heal party	200	0	18	0	0
-Falcon Turn	Nia	Bitball	Ether	200/240/280/320/360/400	1	One Target	5/5/4/4/3/2	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/290/1300/2880/7200	Toppled↑	6	0	10	0	0
-Acrobatic Bomber	Nia	Bitball	Ether	300/340/380/420/460/500	1	Circle (Target)	11/11/10/10/9/8	Break		0/400/1780/3960/9900	AOE / Break	15	2	10	0	0
-Dragonbane Shot	Mòrag	Bitball	Ether	100/120/140/160/180/192	1	One Target	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/440/1980/4400/11000	HP Potion	15	0	18	0	0
-Celestial Flash	Mòrag	Bitball	Recovery	210/230/250/270/290/310	0	All	11/11/10/10/9/8	None		0/480/2160/4800/12000	Heal party	200	0	18	0	0
-Shadowrunner	Mòrag	Bitball	Ether	160/190/220/250/280/320	1	One Target	5/5/4/4/3/2	None	Increases damage dealt to launched enemies by [50/50/60/60/75/75]%.	0/320/1440/3200/8000	Launched↑	15	0	10	0	0
-Gliding Swallow	Mòrag	Bitball	Ether	270/310/350/390/430/450	1	One Target	11/11/10/10/9/8	None	Increases damage dealt by [50/50/60/60/75/75]% when HP is 90% or higher.	0/360/1620/3600/9000	High HP↑	15	0	10	0	0
-Rumble Pitch	Zeke	Bitball	Ether	330/370/410/450/490/550	1	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [50/50/60/60/75/75]%.	0/430/1940/4320/10800	Back attack↑	15	0	10	0	0
-Pulverizing Dunk	Zeke	Bitball	Ether	250/300/350/400/450/500	1	Circle (User)	5/5/4/4/3/2	None	Increases damage dealt to toppled enemies by [50/50/60/60/75/75]%.	0/380/1730/3840/9600	AOE / Toppled↑	6	2	10	0	0
-Shell Shot	Zeke	Bitball	Ether	200/240/280/320/360/400	1	One Target	9/9/8/8/7/6	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/530/2380/5280/13200	Heal party on attack	15	0	10	0	0
-Precipitous Impact	Zeke	Bitball	Ether	100/120/140/160/180/192	1	Circle (Target)	8/8/7/7/6/5	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/580/2590/5760/14400	AOE / HP Potion	15	2	18	0	0
-Feral Uppercut	Rex	Knuckle Claws	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Blowdown	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/480/2180/4840/12100	Blowdown / Cancel atk↑	8	0	10	0	0
-Grand Smash	Rex	Knuckle Claws	Ether	110/140/170/200/230/240	1	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/530/2380/5280/13200	HP Potion	8	0	18	0	0
-Bullet Punch	Rex	Knuckle Claws	Physical	200/240/280/320/360/400	4	Ahead	11/11/10/10/9/8	None		0/350/1580/3520/8800	AOE	8	2	10	0	0
-Mach Straight Punch	Rex	Knuckle Claws	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	Increases damage dealt from the back by [50/50/60/60/75/75]%.	0/400/1780/3960/9900	Back attack↑	8	0	10	0	0
-Jackal Claw	Nia	Knuckle Claws	Physical	120/150/180/210/240/288	3	One Target	8/8/7/7/6/5	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/290/1300/2880/7200	Cancel attack↑	8	0	10	0	0
-Comet Punch	Nia	Knuckle Claws	Ether	180/220/260/300/340/360	1	Circle (User)	14/14/13/13/12/11	Launch		0/430/1940/4320/10800	AOE / Launch	8	3	10	0	0
-Deadly Twister	Nia	Knuckle Claws	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/400/1780/3960/9900	AOE / HP Potion	8	2	18	0	0
-Raptor Beat	Nia	Knuckle Claws	Physical	255/290/320/350/380/425	3	One Target	12/12/11/11/10/9	Knockback	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/320/1460/3240/8100	Knockback / Side atk↑	8	0	10	0	0
-Armored Fist	Mòrag	Knuckle Claws	Physical	120/150/180/210/240/288	1	One Target	8/8/7/7/6/5	Break	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/530/2380/5280/13200	Break / Cancel attack↑	8	0	10	0	0
-Takedown	Mòrag	Knuckle Claws	Physical	300/350/400/450/500/545	2	One Target	14/14/13/13/12/11	Blowdown		0/380/1730/3840/9600	Blowdown	8	0	10	0	0
-Sneak Hit	Mòrag	Knuckle Claws	Physical	110/140/170/200/230/240	2	Ahead	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/580/2590/5760/14400	AOE / HP Potion	8	2	18	0	0
-Peerless Blow	Mòrag	Knuckle Claws	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/430/1940/4320/10800	Side attack↑	8	0	10	0	0
-Hammer Lariat	Zeke	Knuckle Claws	Physical	180/220/260/300/340/360	1	One Target	14/14/13/13/12/11	Topple		0/480/2160/4800/12000	Topple	8	0	10	0	0
-Fury Dropkick	Zeke	Knuckle Claws	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt from the back by [50/50/60/60/75/75]%.	0/320/1440/3200/8000	Blowdown / Back atk↑	8	0	10	0	0
-Dynamite Knuckle	Zeke	Knuckle Claws	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/440/1980/4400/11000	AOE / HP Potion	8	2	18	0	0
-Skysplitter Cross Chop	Zeke	Knuckle Claws	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/360/1620/3600/9000	AOE / Aggro down	8	2	10	0	0
-Ultraslash	Jin	Nodachi	Physical	300/340/380/420/460/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/320/1440/3200/8000	Back attack↑	10	0	10	100	0
-Skyward Slash	Jin	Nodachi	Ether	600/680/760/840/920/1000	1	Ahead	11/11/10/10/9/8	Break		0/440/1980/4400/11000	AOE / Break	14	2	10	100	0
-Empty Moment	Jin	Nodachi	Physical	200/240/280/320/360/400	8	Circle (Target)	14/14/13/13/12/11	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/360/1620/3600/9000	AOE / Pierce	14	16	10	100	0
-Stunned Swallow	Jin	Nodachi	Ether	0/0/0/0/0/0	1	One Target	11/11/10/10/9/8	Blowdown	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/480/2160/4800/12000	Evasion / Counter	8	0	10	0	0
-Ultraslash (Chapter 8)	Jin	Nodachi	Physical	420/420/420/420/460/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/320/1440/3200/8000	Back attack↑	10	0	10	100	0
-Skyward Slash (Chapter 8)	Jin	Nodachi	Ether	840/840/840/840/920/1000	1	Ahead	11/11/10/10/9/8	Break		0/360/1620/3600/9000	AOE / Break	14	2	10	100	0
-Heavenly Disrupt	Jin	Nodachi	Physical	1300/1300/1300/1300/1400/1500	9	One Target	24/24/23/23/22/21	Topple / Launch / Smash	Adds [50/50/70/70/100/100]% chance to annul defense.	0/400/1800/4000/10000	Topple / Launch / Smash	12	0	10	100	0
-Stunned Swallow (Chapter 8)	Jin	Nodachi	Ether	0/0/0/0/0/0	1	Circle (Target)	11/11/10/10/9/8	Blowdown	Counters Driver Arts with [100/125/150/175/200/200]% of physical damage and Blowdown.	0/440/1980/4400/11000	Evasion / Counter	8	10	10	0	0
-Hammer Bash	Malos	Sword Tonfa	Physical	450/510/570/630/690/750	1	One Target	11/11/10/10/9/8	Topple		0/480/2160/4800/12000	Topple	8	0	22	0	0
-Sword Strike	Malos	Sword Tonfa	Physical	300/360/420/480/540/600	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/440/1980/4400/11000	Front attack↑	8	0	22	0	0
-Spiral Savate	Malos	Sword Tonfa	Physical	240/290/340/390/440/480	1	One Target	14/14/13/13/12/11	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/380/1730/3840/9600	High HP↑	8	0	22	0	0
-Chakra Burst	Malos	Sword Tonfa	Ether	180/220/260/300/340/360	1	Circle (Target)	11/11/10/10/9/8	Knockback		0/360/1620/3600/9000	AOE / Knockback	8	10	25	0	0
-Revolt Smash	Rex	Calamity Scythe	Physical	360/410/460/510/560/600	1	One Target	11/11/10/10/9/8	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/790/3560/7920/19800	Heal party on attack	8	0	14	0	0
-Screw Reaper	Rex	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle (User)	8/8/7/7/6/5	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/580/2590/5760/14400	AOE / Aggro down	8	3	0	0	0
-Rising Crescent	Rex	Calamity Scythe	Physical	220/260/300/340/380/440	1	One Target	13/13/12/12/11/10	Launch		0/650/2920/6480/16200	Launch	8	0	10	0	20
-Withering Assault	Rex	Calamity Scythe	Physical	240/290/340/390/440/480	2	One Target	11/11/10/10/9/8	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/790/3560/7920/19800	HP Potion	8	0	14	0	0
-Brutal Scythe	Nia	Calamity Scythe	Physical	260/310/360/410/460/520	2	One Target	13/13/12/12/11/10	Topple		0/910/4100/9120/22800	Topple	8	0	10	0	0
-Capra Assault	Nia	Calamity Scythe	Physical	240/290/340/390/440/480	3	One Target	12/12/11/11/10/9	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/610/2740/6080/15200	HP Potion	8	0	14	0	20
-Grizzly Smash	Nia	Calamity Scythe	Physical	330/390/450/510/570/625	1	One Target	13/13/12/12/11/10	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/680/3080/6840/17100	Heal party on attack	8	0	14	0	0
-Creeping Slicer	Nia	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle (User)	8/8/7/7/6/5	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/840/3760/8360/20900	AOE / Aggro down	8	2	0	0	0
-Tempest Strike	Mòrag	Calamity Scythe	Physical	260/310/360/410/460/520	1	One Target	11/11/10/10/9/8	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/880/3960/8800/22000	Heal party on attack	8	0	14	0	0
-Sacred Beast's Blessing	Mòrag	Calamity Scythe	Physical	240/290/340/390/440/480	2	One Target	12/12/11/11/10/9	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/720/3240/7200/18000	HP Potion	8	0	14	0	20
-Cyclonic Blade	Mòrag	Calamity Scythe	Physical	360/410/460/510/560/600	1	One Target	13/13/12/12/11/10	Blowdown		0/640/2880/6400/16000	Blowdown	8	0	10	0	0
-Azure Dragon Storm	Mòrag	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle (User)	8/8/7/7/6/5	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/960/4320/9600/24000	Aggro down / AOE	8	2	0	0	0
-Surprise Elbow	Zeke	Calamity Scythe	Physical	260/310/360/410/460/520	2	One Target	14/14/13/13/12/11	Topple		0/820/3670/8160/20400	Topple	8	0	10	0	0
-Careful Swing	Zeke	Calamity Scythe	Physical	220/260/300/340/380/440	3	Circle (User)	11/11/10/10/9/8	None	Reduces [20/20/25/25/30/30]% of aggro toward user upon landing a hit.	0/750/3370/7480/18700	Aggro down / AOE	8	2	14	0	0
-Standing Ovation	Zeke	Calamity Scythe	Physical	390/430/470/510/550/600	1	Ahead	14/14/13/13/12/11	None	When landing a hit, restores [25/25/30/30/35/35]% of damage dealt to the whole party.	0/610/2750/6120/15300	AOE / Heal party on attack	8	2	14	0	0
-Bewilder Slash	Zeke	Calamity Scythe	Physical	240/290/340/390/440/480	2	Ahead	12/12/11/11/10/9	None	Spawns a small HP Potion on hit, with a [10/20/30/40/50/50]% chance to spawn 2.	0/540/2450/5440/13600	AOE / HP Potion	8	2	0	0	20
-Earth Splitter	Rex	Cobra Bardiche	Physical	160/190/220/250/280/320	1	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/610/2750/6120/15300	Low HP↑	10	0	14	0	0
-Powerquake	Rex	Cobra Bardiche	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/820/3670/8160/20400	Break / Side attack↑	10	0	14	0	0
-Final Stone	Rex	Cobra Bardiche	Physical	375/430/480/530/580/625	1	One Target	10/10/9/9/8/7	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/750/3370/7480/18700	HP down / Evasion	10	0	14	0	0
-Dust Up	Rex	Cobra Bardiche	Physical	300/340/380/420/460/500	3	Circle (User)	13/13/12/12/11/10	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/540/2450/5440/13600	AOE / Insects↑	10	3	14	0	0
-Condor's Beak	Nia	Cobra Bardiche	Physical	160/190/220/250/280/320	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/840/3760/8360/20900	Low HP↑	10	0	14	0	0
-Sand Break	Nia	Cobra Bardiche	Physical	300/340/380/420/460/500	2	Circle (User)	14/14/13/13/12/11	None	Increases damage dealt to insects by [25/25/35/35/50/50]%.	0/610/2740/6080/15200	AOE / Insects↑	10	3	14	0	0
-Cobra Raid	Nia	Cobra Bardiche	Physical	130/160/190/220/250/264	2	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/910/4100/9120/22800	Back attack↑	10	0	14	0	0
-Merciless Twister	Nia	Cobra Bardiche	Ether	375/430/480/530/580/625	3	Circle (User)	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down / Evasion	10	2	10	0	0
-Blunt Force	Mòrag	Cobra Bardiche	Physical	240/290/340/390/440/500	1	One Target	11/11/10/10/9/8	Smash		0/860/3890/8640/21600	Smash	10	0	14	0	0
-Heaven's Valor	Mòrag	Cobra Bardiche	Physical	130/160/190/220/250/264	1	One Target	11/11/10/10/9/8	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/790/3560/7920/19800	Back attack↑	10	0	14	0	0
-Lunar Salutation	Mòrag	Cobra Bardiche	Physical	200/240/280/320/360/420	2	One Target	9/9/8/8/7/6	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 30% or less.	0/650/2920/6480/16200	Low HP↑	10	0	14	0	0
-Twisted Thistle	Mòrag	Cobra Bardiche	Physical	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/580/2590/5760/14400	AOE / HP down / Evasion	10	2	14	0	0
-Grudge Blow	Zeke	Cobra Bardiche	Physical	120/140/160/180/200/240	2	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [100/100/120/120/150/150]%.	0/610/2740/6080/15200	Side attack↑	10	0	14	0	0
-Heaven's Revenge	Zeke	Cobra Bardiche	Ether	130/160/190/220/250/264	1	Ahead	12/12/11/11/10/9	None	Increases damage dealt from the back by [100/100/120/120/150/150]%.	0/840/3760/8360/20900	AOE / Back attack↑	10	2	14	0	0
-Takedown Smash	Zeke	Cobra Bardiche	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	Smash		0/910/4100/9120/22800	Smash	10	0	14	0	0
-Whirlwind of Passion	Zeke	Cobra Bardiche	Ether	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	Drains 10% of current HP when using the Art. Evasion during Art.	0/680/3080/6840/17100	AOE / HP down / Evasion	10	2	10	0	0
-Opened Fan	Rex	Infinity Fans	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/840/3760/8360/20900	Front attack↑	8	0	20	0	0
-Screw Cutter	Rex	Infinity Fans	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/910/4100/9120/22800	Aggroed↑	8	0	22	0	0
-Cross Edge	Rex	Infinity Fans	Physical	240/290/340/390/440/500	2	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/680/3080/6840/17100	Beasts↑	8	0	20	0	0
-Brave Wing	Rex	Infinity Fans	Physical	300/340/380/420/460/500	4	Circle (User)	14/14/13/13/12/11	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/610/2740/6080/15200	AOE / Aggro up	8	2	20	0	0
-Swallowtail	Nia	Infinity Fans	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break		0/750/3370/7480/18700	Break	8	0	20	0	0
-Scarecrow	Nia	Infinity Fans	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/540/2450/5440/13600	Aggroed↑	8	0	22	0	0
-Vicious Circle	Nia	Infinity Fans	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/610/2750/6120/15300	AOE / Front attack↑	8	2	20	0	0
-Healing Trick	Nia	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/820/3670/8160/20400	Heal party	200	0	20	0	0
-Albatross Cut	Mòrag	Infinity Fans	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	Aggroed↑	8	0	22	0	0
-2,000 Wings	Mòrag	Infinity Fans	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/580/2590/5760/14400	Beasts↑	8	0	20	0	0
-Black Wing Dance	Mòrag	Infinity Fans	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/790/3560/7920/19800	AOE / Front attack↑	8	2	20	0	0
-Stoking the Fire	Mòrag	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/860/3890/8640/21600	Heal party	200	0	20	0	0
-Twilight Twist	Zeke	Infinity Fans	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	Increases damage dealt to beasts by [50/50/70/70/100/100]%.	0/720/3240/7200/18000	Beasts↑	8	0	20	0	0
-Bold Division	Zeke	Infinity Fans	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/880/3960/8800/22000	Aggroed↑	8	0	22	0	0
-Gutsy Cutter	Zeke	Infinity Fans	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/640/2880/6400/16000	AOE / Aggro up	8	3	20	0	0
-Exquisite Spiral	Zeke	Infinity Fans	Physical	220/260/300/340/380/440	2	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/960/4320/9600/24000	AOE / Front attack↑	8	2	20	0	0
-Thunderclap	Rex	Brilliant Twinblades	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	Increases damage dealt from the side by [50/50/60/60/75/75]%.	0/910/4100/9120/22800	Side attack↑	8	0	14	0	0
-Haphazard Throw	Rex	Brilliant Twinblades	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/840/3760/8360/20900	Cancel attack↑	8	0	14	0	0
-Cutting Edge	Rex	Brilliant Twinblades	Physical	240/290/340/390/440/500	2	One Target	8/8/7/7/6/5	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/680/3080/6840/17100	Critical recharge	8	0	14	0	0
-Rebel's Dagger	Rex	Brilliant Twinblades	Physical	300/340/380/420/460/500	4	Circle (User)	14/14/13/13/12/11	None		0/610/2740/6080/15200	AOE	8	2	14	0	0
-Papillon Dance	Nia	Brilliant Twinblades	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/750/3370/7480/18700	Break / Critical recharge	8	0	14	0	0
-Cheetah Scratch	Nia	Brilliant Twinblades	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/540/2450/5440/13600	Cancel attack↑	8	0	14	0	0
-Tricksy Loop	Nia	Brilliant Twinblades	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	Increases damage dealt from the side by 50%.	0/610/2750/6120/15300	AOE / Side attack↑	8	2	14	0	0
-Lustrous Heal	Nia	Brilliant Twinblades	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/820/3670/8160/20400	Heal party	200	0	18	0	0
-Photon Slash	Mòrag	Brilliant Twinblades	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/650/2920/6480/16200	Cancel attack↑	8	0	14	0	0
-Marigold in Bloom	Mòrag	Brilliant Twinblades	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/790/3560/7920/19800	Critical recharge	8	0	14	0	0
-Flowing Shadow	Mòrag	Brilliant Twinblades	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None		0/580/2590/5760/14400	AOE	8	2	14	0	0
-Mastery of Sky Sparks	Mòrag	Brilliant Twinblades	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None		0/860/3890/8640/21600	Heal party	200	0	18	0	0
-Electroshade Twist	Zeke	Brilliant Twinblades	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	Recharges Arts used by [50/50/75/75/100/100]% upon landing a critical hit.	0/880/3960/8800/22000	Critical recharge	8	0	14	0	0
-Bewitching Divide	Zeke	Brilliant Twinblades	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	Adds [50/50/70/70/100/100]% to damage ratio after canceling an auto-attack.	0/720/3240/7200/18000	Cancel attack↑	8	0	14	0	0
-Thunderslam	Zeke	Brilliant Twinblades	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt to aerial creatures by [50/50/70/70/100/100]%.	0/640/2880/6400/16000	AOE / Flying↑	8	3	14	0	0
-Florid Spiral	Zeke	Brilliant Twinblades	Physical	220/260/300/340/380/440	2	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt from the back by [50/50/60/60/75/75]%.	0/960/4320/9600/24000	AOE / Back attack↑	8	2	14	0	0
-Critical Trigger	Rex	Decimation Cannon	Ether	108/130/150/170/190/216	5	One Target	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/680/3080/6840/17100	High HP↑	20	0	14	0	0
-Mighty Missile	Rex	Decimation Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	Adds [50/50/70/70/100/100]% chance to annul defense.	0/610/2740/6080/15200	Launched↑ / Pierce	20	0	14	0	0
-Grenade Burst	Rex	Decimation Cannon	Ether	300/340/380/420/460/500	1	Circle (Target)	14/14/13/13/12/11	Blowdown		0/840/3760/8360/20900	AOE / Blowdown	20	4	14	0	0
-Flamecaster	Rex	Decimation Cannon	Ether	180/220/260/300/340/360	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/910/4100/9120/22800	AOE / Front attack↑	20	4	14	0	0
-Surprise Shot	Nia	Decimation Cannon	Ether	180/220/260/300/340/360	2	One Target	11/11/10/10/9/8	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	Front attack↑	20	0	14	0	0
-Porcupine Blow	Nia	Decimation Cannon	Ether	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/860/3890/8640/21600	Break / Pierce	20	0	14	0	0
-Mayfly	Nia	Decimation Cannon	Ether	220/260/300/340/380/440	1	Ahead	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/580/2590/5760/14400	AOE / Launched↑	20	6	14	0	0
-Phosphorescent Flare	Nia	Decimation Cannon	Ether	108/130/150/170/190/216	5	Ahead	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/790/3560/7920/19800	AOE / High HP↑	20	10	14	0	0
-Cruel Musket	Mòrag	Decimation Cannon	Ether	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/820/3670/8160/20400	Break / Pierce	20	0	14	0	0
-Thorn Assault	Mòrag	Decimation Cannon	Ether	108/130/150/170/190/216	7	Ahead	8/8/7/7/6/5	None	Increases damage dealt by [100/100/120/120/150/150]% when HP is 90% or higher.	0/750/3370/7480/18700	AOE / High HP↑	20	2	14	0	0
-Rhododendron	Mòrag	Decimation Cannon	Ether	330/370/410/450/490/550	11	Ahead	12/12/11/11/10/9	None		0/610/2750/6120/15300	AOE	20	6	14	0	0
-Chimera Drop	Mòrag	Decimation Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/540/2450/5440/13600	Launched↑	20	0	14	0	0
-Breakthrough Cannon	Zeke	Decimation Cannon	Ether	300/340/380/420/460/500	3	One Target	14/14/13/13/12/11	Break	Adds [50/50/70/70/100/100]% chance to annul defense.	0/960/4320/9600/24000	Break / Pierce	20	0	14	0	0
-Frenzied Fire	Zeke	Decimation Cannon	Ether	108/130/150/170/190/216	6	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/880/3960/8800/22000	Front attack↑	20	0	14	0	0
-Stark Artillery	Zeke	Decimation Cannon	Ether	300/340/380/420/460/500	1	Circle (Target)	14/14/13/13/12/11	Knockback		0/720/3240/7200/18000	AOE / Knockback	20	4	14	0	0
-Crazed Bazooka	Zeke	Decimation Cannon	Ether	220/260/300/340/380/440	6	Ahead	11/11/10/10/9/8	None	Increases damage dealt to launched enemies by [100/100/120/120/150/150]%.	0/640/2880/6400/16000	AOE / Launched↑	20	2	14	0	0
-Wild Slugger	Rex	Rockrending Gauntlets	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/910/4100/9120/22800	Blowdown / Front attack↑	8	0	22	0	0
-Terror Smash	Rex	Rockrending Gauntlets	Ether	110/140/170/200/230/240	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/840/3760/8360/20900	Aggroed↑	8	0	22	0	0
-Rock Bullet	Rex	Rockrending Gauntlets	Physical	200/240/280/320/360/400	4	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/610/2740/6080/15200	AOE / Aggro up	8	2	22	0	0
-Giant Straight	Rex	Rockrending Gauntlets	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	Knockback		0/680/3080/6840/17100	Knockback	8	0	22	0	0
-Lion Claw	Nia	Rockrending Gauntlets	Physical	120/150/180/210/240/288	3	One Target	8/8/7/7/6/5	None	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/610/2750/6120/15300	Front attack↑	8	0	22	0	0
-Meteor Punch	Nia	Rockrending Gauntlets	Ether	180/220/260/300/340/360	1	Circle (User)	14/14/13/13/12/11	Launch		0/820/3670/8160/20400	AOE / Launch	8	3	22	0	0
-Raging Screw	Nia	Rockrending Gauntlets	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/750/3370/7480/18700	AOE / Aggroed↑	8	2	22	0	0
-Buffalo Beat	Nia	Rockrending Gauntlets	Physical	255/290/320/350/380/425	3	One Target	12/12/11/11/10/9	Knockback	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/540/2450/5440/13600	Knockback / Aggro up	8	0	22	0	0
-Armor Breaker	Mòrag	Rockrending Gauntlets	Physical	120/150/180/210/240/288	1	One Target	8/8/7/7/6/5	Break	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/880/3960/8800/22000	Break / Front attack↑	8	0	22	0	0
-Bear Twist	Mòrag	Rockrending Gauntlets	Physical	300/350/400/450/500/545	2	One Target	14/14/13/13/12/11	Blowdown		0/720/3240/7200/18000	Blowdown	8	0	22	0	0
-Devastating Tremor	Mòrag	Rockrending Gauntlets	Physical	110/140/170/200/230/240	2	Ahead	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/960/4320/9600/24000	AOE / Aggroed↑	8	2	22	0	0
-Earth Mover	Mòrag	Rockrending Gauntlets	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/640/2880/6400/16000	Aggro up	8	0	22	0	0
-Sublime Lariat	Zeke	Rockrending Gauntlets	Physical	180/220/260/300/340/360	1	One Target	14/14/13/13/12/11	Topple		0/860/3890/8640/21600	Topple	8	0	22	0	0
-Falling Dropkick	Zeke	Rockrending Gauntlets	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt from the front by [50/50/70/70/100/100]%.	0/790/3560/7920/19800	Blowdown / Front attack↑	8	0	22	0	0
-Decisive Knuckle	Zeke	Rockrending Gauntlets	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	AOE / Aggroed↑	8	2	22	0	0
-Sacrificial Chop	Zeke	Rockrending Gauntlets	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/580/2590/5760/14400	AOE / Aggro up	8	2	22	0	0
-Gale Upper	Rex	Sword Tonfa	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt by [50/50/60/60/75/75]% when HP is 30% or less.	0/910/4100/9120/22800	Blowdown / Low HP↑	8	0	22	0	0
-Wind Smash	Rex	Sword Tonfa	Ether	110/140/170/200/230/240	1	One Target	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/840/3760/8360/20900	Aggroed↑	8	0	22	0	0
-Stormstarter	Rex	Sword Tonfa	Physical	200/240/280/320/360/400	4	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/610/2740/6080/15200	AOE / Aggro up	8	2	22	0	0
-Hurricane Punch	Rex	Sword Tonfa	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	Knockback		0/680/3080/6840/17100	Knockback	8	0	22	0	0
-Sabertooth Slash	Nia	Sword Tonfa	Physical	120/150/180/210/240/288	3	One Target	8/8/7/7/6/5	None	Increases damage dealt by [50/50/60/60/75/75]% when HP is 30% or less.	0/540/2450/5440/13600	Low HP↑	8	0	22	0	0
-Updraft	Nia	Sword Tonfa	Ether	180/220/260/300/340/360	1	Circle (User)	14/14/13/13/12/11	Launch		0/820/3670/8160/20400	AOE / Launch	8	3	22	0	0
-Whirlwind	Nia	Sword Tonfa	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/750/3370/7480/18700	AOE / Aggroed↑	8	2	22	0	0
-Universal Beat	Nia	Sword Tonfa	Physical	255/290/320/350/380/425	3	One Target	12/12/11/11/10/9	Knockback	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/610/2750/6120/15300	Knockback / Aggro up	8	0	22	0	0
-Blade of the Abyss	Mòrag	Sword Tonfa	Physical	120/150/180/210/240/288	1	One Target	8/8/7/7/6/5	Break	Increases damage dealt by [50/50/60/60/75/75]% when HP is 30% or less.	0/880/3960/8800/22000	Break / Low HP↑	8	0	22	0	0
-Blunt Aggression	Mòrag	Sword Tonfa	Physical	300/350/400/450/500/545	2	One Target	14/14/13/13/12/11	Blowdown		0/720/3240/7200/18000	Blowdown	8	0	22	0	0
-Galeforce Blow	Mòrag	Sword Tonfa	Physical	110/140/170/200/230/240	2	Ahead	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/960/4320/9600/24000	AOE / Aggroed↑	8	2	22	0	0
-No Love Lost	Mòrag	Sword Tonfa	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/640/2880/6400/16000	Aggro up	8	0	22	0	0
-Menacing Lariat	Zeke	Sword Tonfa	Physical	180/220/260/300/340/360	1	One Target	14/14/13/13/12/11	Topple		0/860/3890/8640/21600	Topple	8	0	22	0	0
-Hurricane Dropkick	Zeke	Sword Tonfa	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	Increases damage dealt by [50/50/60/60/75/75]% when HP is 30% or less.	0/790/3560/7920/19800	Blowdown / Low HP↑	8	0	22	0	0
-Shuddering Tonfa	Zeke	Sword Tonfa	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	Increases damage dealt to enemies targeting user by [50/50/70/70/100/100]%.	0/650/2920/6480/16200	AOE / Aggroed↑	8	2	22	0	0
-Wind Dragon Chop	Zeke	Sword Tonfa	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	Increases aggro drawn from Driver Arts by [50/50/70/70/100/100]%.	0/580/2590/5760/14400	AOE / Aggro up	8	2	22	0	0
+COPY xeno2.arts (name, driver, weapon, type, damage_ratio, hits, range, recharge, reaction, wp, caption, distance, radius, hate, accuracy_mod, crit_mod) FROM stdin;
+Sword Bash	Rex	Aegis Sword	Physical	170/200/230/260/290/336	1	One Target	7/7/6/6/5/4	None	0/360/1620/3600/9000	Back attack↑	8	0	14	0	0
+Double Spinning Edge	Rex	Aegis Sword	Physical	200/240/280/320/360/400	2	One Target	8/8/7/7/6/5	None	0/440/1980/4400/11000	Side attack↑	8	0	14	0	0
+Anchor Shot	Rex	Aegis Sword	Physical	100/120/140/160/180/192	2	One Target	6/6/6/6/6/6	Topple	0/480/2160/4800/12000	HP Potion	8	0	18	0	0
+Rolling Smash	Rex	Aegis Sword	Ether	330/370/410/450/490/545	1	Ahead	11/11/10/10/9/8	None	0/320/1440/3200/8000	AOE / Aggro down	8	2	14	0	0
+Saber Slash	Rex	Catalyst Scimitar	Physical	170/200/230/260/290/336	3	One Target	8/8/7/7/6/5	None	0/310/1390/3080/7700	HP Potion	8	0	14	0	0
+Redemption	Rex	Catalyst Scimitar	Recovery	231/250/270/290/310/341	0	All	14/14/13/13/12/11	None	0/340/1510/3360/8400	Heal party	200	0	18	0	0
+Hydro Blast	Rex	Catalyst Scimitar	Ether	250/300/350/400/450/500	1	Ahead	10/10/9/9/8/7	Knockback	0/220/1010/2240/5600	AOE / Knockback	12	2	10	0	0
+Water Flower	Rex	Catalyst Scimitar	Ether	300/340/380/420/460/500	1	One Target	11/11/10/10/9/8	None	0/250/1130/2520/6300	Pierce	8	0	10	0	0
+Wide Slash	Rex	Twin Rings	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	0/480/2180/4840/12100	Side attack↑	8	0	10	0	0
+Strong Saucer	Rex	Twin Rings	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	0/530/2380/5280/13200	HP Potion	8	0	18	0	0
+Eightfold Edge	Rex	Twin Rings	Physical	240/290/340/390/440/500	2	One Target	8/8/7/7/6/5	None	0/350/1580/3520/8800	Beasts↑	8	0	10	0	0
+Spin of Bravery	Rex	Twin Rings	Physical	300/340/380/420/460/500	4	Circle (User)	14/14/13/13/12/11	None	0/400/1780/3960/9900	AOE	8	2	10	0	0
+Butterfly Blade	Nia	Twin Rings	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break	0/400/1780/3960/9900	Break	8	0	10	0	0
+Jaguar Slash	Nia	Twin Rings	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	0/320/1460/3240/8100	HP Potion	8	0	18	0	0
+Gemini Loop	Nia	Twin Rings	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	0/290/1300/2880/7200	AOE / Side atk↑	8	2	10	0	0
+Healing Halo	Nia	Twin Rings	Recovery	210/230/250/270/290/290	0	All	14/14/13/13/12/11	None	0/430/1940/4320/10800	Heal party	200	0	18	0	0
+Halo Strike	Mòrag	Twin Rings	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	0/440/1980/4400/11000	HP Potion	8	0	18	0	0
+Inferno Wheel	Mòrag	Twin Rings	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	0/320/1440/3200/8000	Beasts↑	8	0	10	0	0
+Twin Moonblade	Mòrag	Twin Rings	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None	0/360/1620/3600/9000	AOE	8	2	10	0	0
+Revolution Flash	Mòrag	Twin Rings	Recovery	200/220/240/260/280/290	0	All	14/14/13/13/12/11	None	0/480/2160/4800/12000	Heal party	200	0	18	0	0
+Rapid Twist	Zeke	Twin Rings	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	0/380/1730/3840/9600	Beasts↑	8	0	10	0	0
+Clear Divide	Zeke	Twin Rings	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	0/580/2590/5760/14400	HP Potion	8	0	18	0	0
+Righteous Guillotine	Zeke	Twin Rings	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	0/430/1940/4320/10800	AOE / Flying↑	8	3	10	0	0
+Shredder Spiral	Zeke	Twin Rings	Physical	220/260/300/340/380/440	2	Circle (User)	11/11/10/10/9/8	None	0/530/2380/5280/13200	AOE / Back attack↑	8	2	10	0	0
+Steady Drill	Tora	Drill Shields	Physical	270/310/350/390/430/450	5	One Target	9/9/8/8/7/6	None	0/440/1980/4400/11000	Launched↑	8	0	0	0	0
+Big Boost	Tora	Drill Shields	Physical	200/240/280/320/360/400	4	One Target	11/11/10/10/9/8	Topple	0/480/2160/4800/12000	Topple / Low HP↑	8	0	0	0	0
+Spinning Cutter	Tora	Drill Shields	Physical	96/120/140/160/180/192	4	Circle (User)	6/6/6/6/6/6	None	0/320/1440/3200/8000	AOE / Aggro up	8	4	0	0	0
+Rigid Shield	Tora	Drill Shields	Defensive	270/270/360/360/360/450	0	One Target	12/12/11/11/10/9	None	0/360/1620/3600/9000	Defense	8	0	0	0	0
+Pow-Pow Cannon	Tora	Mech Arms	Ether	200/240/280/320/360/400	2	One Target	9/9/8/8/7/6	None	0/430/1940/4320/10800	Aggroed↑	8	0	0	0	0
+Dented Shield	Tora	Mech Arms	Physical	300/340/380/420/460/500	6	One Target	11/11/10/10/9/8	Smash	0/580/2590/5760/14400	Smash	8	0	0	0	0
+Scattershot	Tora	Mech Arms	Ether	150/190/230/270/310/336	10	One Target	9/9/8/8/7/6	None	0/380/1730/3840/9600	Evasion	8	0	0	0	0
+Booming Buster	Tora	Mech Arms	Ether	200/240/280/320/360/400	1	Ahead	11/11/10/10/9/8	Knockback	0/530/2380/5280/13200	AOE / Knockback	8	4	0	0	0
+Swooshing Slash	Tora	Variable Saber	Physical	300/340/380/420/460/500	2	One Target	12/12/11/11/10/9	Launch	0/340/1510/3360/8400	Launch	8	0	0	0	0
+Speedy Sword	Tora	Variable Saber	Physical	200/240/280/320/360/400	3	One Target	11/11/10/10/9/8	Break	0/310/1390/3080/7700	Break	8	0	0	0	0
+Boom-Boom Laser	Tora	Variable Saber	Ether	220/270/320/370/420/460	2	One Target	9/9/8/8/7/6	None	0/220/1010/2240/5600	Toppled↑	8	0	0	0	0
+Steady Beam	Tora	Variable Saber	Ether	170/210/250/290/330/360	1	Ahead	10/10/9/9/8/7	None	0/250/1130/2520/6300	AOE / Heal on attack	8	3	0	0	0
+Heat Rush	Rex	Whipsword	Ether	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	None	0/430/1940/4320/10800	Toppled↑	9	0	22	0	0
+Storm Spin	Rex	Whipsword	Physical	180/210/240/270/300/350	3	Ahead	11/11/10/10/9/8	None	0/580/2590/5760/14400	AOE / Low HP↑	9	3	22	0	0
+Blazing Whip	Rex	Whipsword	Physical	120/140/160/180/200/240	1	Ahead	8/8/7/7/6/5	None	0/380/1730/3840/9600	AOE / Aggro up	9	4	22	0	0
+Phantom Flame	Rex	Whipsword	Ether	200/240/280/320/360/400	2	Ahead	10/10/9/9/8/7	None	0/530/2380/5280/13200	AOE / Evasion	9	3	22	0	0
+Azure II: Hellfire	Mòrag	Whipsword	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Break	0/480/2160/4800/12000	Break	9	0	22	0	0
+Azure II: Radiance	Mòrag	Whipsword	Physical	200/240/280/320/360/400	3	Ahead	10/10/9/9/8/7	None	0/360/1620/3600/9000	AOE / Toppled↑	9	3	22	0	0
+Azure II: Blaze	Mòrag	Whipsword	Ether	120/140/160/180/200/240	1	Ahead	8/8/7/7/6/5	None	0/320/1440/3200/8000	AOE / Aggro up	9	4	22	0	0
+Azure II: Judgment	Mòrag	Whipsword	Ether	200/240/280/320/360/400	3	One Target	11/11/10/10/9/8	None	0/440/1980/4400/11000	Evasion	9	0	22	0	0
+Upper Edge	Rex	Big Bang Edge	Physical	300/340/380/420/460/500	1	One Target	9/9/8/8/7/6	Launch	0/620/2810/6240/15600	Launch	9	0	14	0	0
+Big Impact	Rex	Big Bang Edge	Physical	300/340/380/420/460/500	1	Ahead	8/8/7/7/6/5	Blowdown	0/470/2110/4680/11700	AOE / Blowdown	9	4	14	0	0
+Electro Buster	Rex	Big Bang Edge	Ether	420/450/480/510/540/558	1	Ahead	11/11/10/10/9/8	None	0/570/2570/5720/14300	AOE / Toppled↑	9	3	14	0	0
+Voltaic Slash	Rex	Big Bang Edge	Physical	360/410/460/510/560/600	2	Ahead	7/7/6/6/5/4	None	0/420/1870/4160/10400	AOE / Machines↑	9	3	14	0	0
+Stratospheric Thunder	Zeke	Big Bang Edge	Physical	300/340/380/420/460/500	1	One Target	9/9/8/8/7/6	Launch	0/480/2160/4800/12000	Launch	9	0	14	0	0
+Dynamic Spark Sword	Zeke	Big Bang Edge	Physical	300/350/400/450/500/550	3	One Target	8/8/7/7/6/5	Knockback	0/440/1980/4400/11000	Knockback / Front atk↑	9	0	14	0	0
+Overload Thunder Beam	Zeke	Big Bang Edge	Ether	360/390/420/450/480/500	7	Ahead	7/7/6/6/5/4	None	0/320/1440/3200/8000	AOE / Machines↑	12	2	14	0	0
+ULFS Max	Zeke	Big Bang Edge	Ether	420/450/480/510/540/589	2	Circle (User)	11/11/10/10/9/8	Blowdown	0/360/1620/3600/9000	AOE / Toppled↑/ Blowdown	9	2	14	0	0
+Cyclone Smash	Rex	Dual Scythes	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	None	0/360/1620/3600/9000	Low HP↑	8	0	10	0	0
+Wild Scythe	Rex	Dual Scythes	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	None	0/440/1980/4400/11000	HP down / Evasion	8	0	10	0	0
+Wing Smash	Rex	Dual Scythes	Physical	250/300/350/400/450/500	1	One Target	12/12/11/11/10/9	Smash	0/480/2160/4800/12000	Smash	8	0	10	0	0
+Vortex Edge	Rex	Dual Scythes	Ether	150/180/210/240/270/288	3	Circle (User)	8/8/7/7/6/5	None	0/320/1440/3200/8000	AOE / Flying↑	8	3	10	0	0
+Muscle Slash	Vandham	Dual Scythes	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	0/320/1440/3200/8000	Low HP↑	8	0	10	0	0
+Fast Twitch	Vandham	Dual Scythes	Physical	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	None	0/440/1980/4400/11000	HP down / Evasion	8	0	10	0	0
+Muscle Uppercut	Vandham	Dual Scythes	Physical	250/300/350/400/450/500	1	One Target	9/9/8/8/7/6	Launch	0/480/2160/4800/12000	Launch	8	0	10	0	0
+Mega Muscle	Vandham	Dual Scythes	Physical	150/180/210/240/270/288	3	Circle (User)	6/6/5/5/4/3	None	0/360/1620/3600/9000	AOE / Flying↑	8	3	10	0	0
+Strong Smash	Rex	Greataxe	Physical	360/410/460/510/560/600	1	One Target	8/8/8/7/7/7	None	0/360/1620/3600/9000	Toppled↑	8	0	14	0	0
+Axe Twist	Rex	Greataxe	Physical	144/170/200/230/260/288	2	Circle (User)	6/6/6/5/5/5	None	0/320/1440/3200/8000	AOE / Aquatic↑	8	3	14	0	0
+Power Swipe	Rex	Greataxe	Physical	220/260/300/340/380/440	1	One Target	8/8/8/7/7/7	Launch	0/480/2160/4800/12000	Launch	8	0	14	0	20
+Bold Tackle	Rex	Greataxe	Physical	240/290/340/390/440/480	2	One Target	7/7/7/6/6/6	None	0/440/1980/4400/11000	Critical recharge	8	0	14	0	0
+Brutal Blade	Nia	Greataxe	Physical	260/310/360/410/460/520	2	One Target	7/7/7/6/6/6	Topple	0/530/2380/5280/13200	Topple	8	0	14	0	0
+Rhino Assault	Nia	Greataxe	Physical	240/290/340/390/440/480	3	One Target	6/6/6/5/5/5	None	0/480/2180/4840/12100	Critical recharge	8	0	14	0	20
+Bear Smash	Nia	Greataxe	Physical	330/390/450/510/570/625	1	One Target	8/8/8/7/7/7	None	0/400/1780/3960/9900	Toppled↑	8	0	14	0	0
+Shadow Slice	Nia	Greataxe	Physical	144/170/200/230/260/288	2	Circle (User)	5/5/5/4/4/4	None	0/350/1580/3520/8800	AOE / Aquatic↑	8	2	14	0	0
+Rock Cleaver	Mòrag	Greataxe	Physical	260/310/360/410/460/520	1	One Target	7/7/7/6/6/6	None	0/380/1730/3840/9600	Aquatic↑	8	0	14	0	0
+Admiral Waltz	Mòrag	Greataxe	Physical	240/290/340/390/440/480	2	One Target	7/7/7/6/6/6	None	0/580/2590/5760/14400	Critical recharge	8	0	14	0	20
+Gale Blade	Mòrag	Greataxe	Physical	360/410/460/510/560/600	1	One Target	8/8/8/7/7/7	Blowdown	0/530/2380/5280/13200	Blowdown	8	0	14	0	0
+Rising Dragon	Mòrag	Greataxe	Physical	144/170/200/230/260/288	2	Circle (User)	6/6/6/5/5/5	None	0/430/1940/4320/10800	AOE / Launched↑	8	2	14	0	0
+Spinning Elbow	Zeke	Greataxe	Physical	260/310/360/410/460/520	2	One Target	9/9/9/8/8/8	Topple	0/430/1940/4320/10800	Topple	8	0	14	0	0
+Triumphal Axe	Zeke	Greataxe	Physical	220/260/300/340/380/440	3	Circle (User)	7/7/7/6/6/6	Knockback	0/320/1460/3240/8100	AOE / Knockback	8	2	14	0	0
+Raging Charge	Zeke	Greataxe	Physical	390/430/470/510/550/600	1	Ahead	8/8/8/7/7/7	None	0/290/1300/2880/7200	AOE / Toppled↑	8	2	14	0	0
+Berserker Slash	Zeke	Greataxe	Physical	240/290/340/390/440/480	2	Ahead	7/7/7/6/6/6	None	0/400/1780/3960/9900	AOE / Critical recharge	8	2	14	0	20
+Strong Horn	Rex	Megalance	Physical	160/190/220/250/280/320	1	One Target	9/9/8/8/7/6	None	0/320/1460/3240/8100	High HP↑	10	0	14	0	0
+Power Spike	Rex	Megalance	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break	0/430/1940/4320/10800	Break / Side attack↑	10	0	14	0	0
+Heavy Hitter	Rex	Megalance	Physical	150/170/190/210/230/240	1	One Target	10/10/9/9/8/7	None	0/400/1780/3960/9900	Aggro down	10	0	14	0	0
+Feral Spin	Rex	Megalance	Physical	300/340/380/420/460/500	3	Circle (User)	13/13/12/12/11/10	None	0/290/1300/2880/7200	AOE / Insects↑	10	3	14	0	0
+Vulture Peck	Nia	Megalance	Physical	160/190/220/250/280/320	2	One Target	9/9/8/8/7/6	None	0/480/2180/4840/12100	High HP↑	10	0	14	0	0
+Gyro Break	Nia	Megalance	Physical	300/340/380/420/460/500	2	Circle (User)	14/14/13/13/12/11	None	0/350/1580/3520/8800	AOE / Insects↑	10	3	14	0	0
+Raptor Raid	Nia	Megalance	Physical	130/160/190/220/250/264	2	One Target	11/11/10/10/9/8	None	0/400/1780/3960/9900	Back attack↑	10	0	14	0	0
+Discus Glaive	Nia	Megalance	Ether	150/170/190/210/230/240	3	Circle (User)	14/14/13/13/12/11	None	0/530/2380/5280/13200	AOE / Aggro down	10	2	10	0	0
+Crown Splitter	Mòrag	Megalance	Physical	240/290/340/390/440/500	1	One Target	11/11/10/10/9/8	Smash	0/480/2160/4800/12000	Smash	10	0	14	0	0
+Spiral Uppercut	Mòrag	Megalance	Physical	130/160/190/220/250/264	1	One Target	11/11/10/10/9/8	None	0/320/1440/3200/8000	Back attack↑	10	0	14	0	0
+Twin Dragons	Mòrag	Megalance	Physical	200/240/280/320/360/420	2	One Target	9/9/8/8/7/6	None	0/360/1620/3600/9000	High HP↑	10	0	14	0	0
+Windmill	Mòrag	Megalance	Physical	150/170/190/210/230/240	2	Ahead	14/14/13/13/12/11	None	0/440/1980/4400/11000	AOE / Aggro down	10	2	14	0	0
+Brutal Swing	Zeke	Megalance	Physical	120/140/160/180/200/240	2	One Target	8/8/7/7/6/5	None	0/400/1780/3960/9900	Side attack↑	10	0	14	0	0
+Meteor Lance	Zeke	Megalance	Ether	130/160/190/220/250/264	1	Ahead	12/12/11/11/10/9	None	0/350/1580/3520/8800	AOE / Back attack↑	10	2	14	0	0
+Powerhouse Smash	Zeke	Megalance	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	Smash	0/530/2380/5280/13200	Smash	10	0	14	0	0
+Supersonic Spin	Zeke	Megalance	Ether	150/170/190/210/230/240	2	Ahead	14/14/13/13/12/11	None	0/480/2180/4840/12100	AOE / Aggro down	10	2	10	0	0
+Daring Shot	Rex	Ether Cannon	Ether	108/130/150/170/190/216	5	One Target	8/8/7/7/6/5	None	0/400/1780/3960/9900	High HP↑	20	0	14	0	0
+Armor Crusher	Rex	Ether Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	0/350/1580/3520/8800	Pierce	20	0	14	0	0
+Grenade Launcher	Rex	Ether Cannon	Ether	300/340/380/420/460/500	1	Circle (Target)	12/12/11/11/10/9	Blowdown	0/530/2380/5280/13200	AOE / Blowdown	20	4	14	0	0
+Wild Volley	Rex	Ether Cannon	Ether	180/220/260/300/340/360	1	Ahead	11/11/10/10/9/8	None	0/480/2180/4840/12100	AOE / Cancel attack↑	20	4	14	0	0
+Breach Shot	Nia	Ether Cannon	Ether	180/220/260/300/340/360	2	One Target	11/11/10/10/9/8	None	0/360/1620/3600/9000	Cancel atk↑	20	0	14	0	0
+Leopard Blow	Nia	Ether Cannon	Ether	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	Break	0/480/2160/4800/12000	Break / Pierce	20	0	14	0	0
+Cattle Driver	Nia	Ether Cannon	Ether	220/260/300/340/380/440	1	Ahead	11/11/10/10/9/8	None	0/320/1440/3200/8000	AOE / Launched↑	20	6	14	0	0
+Pulse Fire	Nia	Ether Cannon	Ether	108/130/150/170/190/216	5	Ahead	8/8/7/7/6/5	None	0/440/1980/4400/11000	AOE / High HP↑	20	10	14	0	0
+Ogre Slam	Mòrag	Ether Cannon	Ether	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	Break	0/430/1940/4320/10800	Break / Pierce	20	0	14	0	0
+Woodcutter	Mòrag	Ether Cannon	Ether	108/130/150/170/190/216	7	Ahead	8/8/7/7/6/5	None	0/400/1780/3960/9900	AOE / High HP↑	20	2	14	0	0
+Touch-Me-Not	Mòrag	Ether Cannon	Ether	330/370/410/450/490/550	11	Ahead	12/12/11/11/10/9	None	0/320/1460/3240/8100	AOE	20	6	14	0	0
+Mist Buster	Mòrag	Ether Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	0/290/1300/2880/7200	Launched↑	20	0	14	0	0
+Burst Gunner	Zeke	Ether Cannon	Ether	300/340/380/420/460/500	3	One Target	12/12/11/11/10/9	Break	0/580/2590/5760/14400	Break / Pierce	20	0	14	0	0
+Haywire Chainshot	Zeke	Ether Cannon	Ether	108/130/150/170/190/216	6	One Target	8/8/7/7/6/5	None	0/430/1940/4320/10800	Cancel attack↑	20	0	14	0	0
+Blowback Cannon	Zeke	Ether Cannon	Ether	300/340/380/420/460/500	1	Circle (Target)	12/12/11/11/10/9	Knockback	0/530/2380/5280/13200	AOE / Knockback	20	4	14	0	0
+Laserpoint Bazooka	Zeke	Ether Cannon	Ether	220/260/300/340/380/440	6	Ahead	11/11/10/10/9/8	None	0/380/1730/3840/9600	AOE / Launched↑	20	2	14	0	0
+Iron Wall	Rex	Shield Hammer	Defensive	270/270/360/360/360/450	0	One Target	14/14/13/13/12/11	None	0/360/1620/3600/9000	Defense	8	0	22	0	0
+Diving Swing	Rex	Shield Hammer	Physical	120/140/160/180/200/240	2	Ahead	8/8/7/7/6/5	None	0/320/1440/3200/8000	AOE / Aggro up	8	2	22	0	0
+Power Hammer	Rex	Shield Hammer	Physical	160/190/220/250/280/320	2	One Target	11/11/10/10/9/8	None	0/480/2160/4800/12000	Front attack↑	8	0	22	0	0
+Mighty Beat	Rex	Shield Hammer	Ether	270/310/350/390/430/450	1	Circle (User)	12/12/11/11/10/9	None	0/440/1980/4400/11000	AOE / Toppled↑	8	3	22	0	0
+Rumbling Smash	Nia	Shield Hammer	Physical	160/190/220/250/280/320	3	One Target	11/11/10/10/9/8	None	0/580/2590/5760/14400	Front attack↑	8	0	22	0	0
+Elephant Press	Nia	Shield Hammer	Physical	120/140/160/180/200/240	3	Circle (User)	8/8/7/7/6/5	None	0/380/1730/3840/9600	AOE / Aggro up	8	3	22	0	0
+Buckler Slam	Nia	Shield Hammer	Ether	270/310/350/390/430/450	1	Circle (User)	14/14/13/13/12/11	None	0/530/2380/5280/13200	AOE / Toppled↑	8	3	22	0	0
+Hammerhead	Nia	Shield Hammer	Physical	200/240/280/320/360/400	1	One Target	11/11/10/10/9/8	Knockback	0/430/1940/4320/10800	Knockback	8	0	22	0	0
+Vajra Blow	Mòrag	Shield Hammer	Physical	200/240/280/320/360/400	1	One Target	14/14/13/13/12/11	Topple	0/530/2380/5280/13200	Topple	8	0	22	0	0
+Battle Top	Mòrag	Shield Hammer	Physical	120/140/160/180/200/240	4	Circle (User)	8/8/7/7/6/5	None	0/350/1580/3520/8800	AOE / Aggro up	8	3	22	0	0
+Mountain Crusher	Mòrag	Shield Hammer	Physical	200/240/280/320/360/400	1	One Target	11/11/10/10/9/8	None	0/480/2180/4840/12100	Toppled↑	8	0	22	0	0
+Decimator	Mòrag	Shield Hammer	Physical	300/340/380/420/460/500	2	One Target	12/12/11/11/10/9	None	0/400/1780/3960/9900	Launched↑	8	0	22	0	0
+Brawl Swing	Zeke	Shield Hammer	Physical	96/120/140/160/180/192	3	Circle (User)	8/8/7/7/6/5	None	0/290/1300/2880/7200	AOE / Aggro up	8	3	22	0	0
+Behemoth Uppercut	Zeke	Shield Hammer	Physical	240/290/340/390/440/480	1	One Target	11/11/10/10/9/8	Launch	0/430/1940/4320/10800	Launch	8	0	22	0	0
+Detonation Blow	Zeke	Shield Hammer	Physical	300/340/380/420/460/500	1	One Target	12/12/11/11/10/9	Blowdown	0/400/1780/3960/9900	Blowdown / Low HP↑	8	0	22	0	0
+Impregnable Shield	Zeke	Shield Hammer	Defensive	270/270/360/360/360/450	0	One Target	14/14/13/13/12/11	None	0/320/1460/3240/8100	Defense	8	0	22	0	0
+Sword Uppercut	Rex	Chroma Katana	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break	0/580/2590/5760/14400	Break	8	0	20	0	0
+Feral Blade	Rex	Chroma Katana	Ether	120/140/160/180/200/240	1	Ahead	8/8/7/7/6/5	None	0/380/1730/3840/9600	AOE / Aggro up	8	2	20	0	0
+Breakdown	Rex	Chroma Katana	Physical	160/190/220/250/280/320	3	One Target	11/11/10/10/9/8	None	0/530/2380/5280/13200	Aggroed↑	8	0	20	0	0
+Dual Slash	Rex	Chroma Katana	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	None	0/430/1940/4320/10800	Evasion	8	0	20	0	0
+Deathbound	Nia	Chroma Katana	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	None	0/360/1620/3600/9000	Humanoids↑	8	0	20	0	0
+Scorpion Tail	Nia	Chroma Katana	Physical	285/320/350/380/410/450	1	One Target	14/14/13/13/12/11	None	0/440/1980/4400/11000	Evasion	8	0	20	0	0
+Wolf Fang	Nia	Chroma Katana	Physical	160/190/220/250/280/320	2	One Target	11/11/10/10/9/8	None	0/480/2160/4800/12000	Aggroed↑	8	0	20	0	0
+Triple Flash	Nia	Chroma Katana	Physical	120/140/160/180/200/240	3	Ahead	8/8/7/7/6/5	None	0/320/1440/3200/8000	AOE / Aggro up	8	2	20	0	0
+Aerial Slash	Mòrag	Chroma Katana	Physical	300/340/380/420/460/500	2	One Target	14/14/13/13/12/11	Smash	0/430/1940/4320/10800	Smash	8	0	20	0	0
+Eclipse Blade	Mòrag	Chroma Katana	Physical	170/210/250/290/330/380	1	One Target	13/13/12/12/11/10	None	0/400/1780/3960/9900	Evasion	8	0	20	0	0
+Overfall	Mòrag	Chroma Katana	Physical	160/190/220/250/280/320	1	One Target	11/11/10/10/9/8	None	0/320/1460/3240/8100	Aggroed↑	8	0	20	0	0
+Quadruple Slash	Mòrag	Chroma Katana	Physical	120/140/160/180/200/240	4	One Target	8/8/7/7/6/5	None	0/290/1300/2880/7200	Aggro up	8	0	20	0	0
+Reverb Blade	Zeke	Chroma Katana	Ether	200/240/280/320/360/400	1	Circle (User)	11/11/10/10/9/8	None	0/360/1620/3600/9000	AOE / Evasion	8	4	20	0	0
+Psychic Sword	Zeke	Chroma Katana	Physical	315/370/420/470/520/575	2	One Target	14/14/13/13/12/11	None	0/440/1980/4400/11000	Front attack↑	8	0	20	0	0
+Aerial Edge	Zeke	Chroma Katana	Physical	120/140/160/180/200/240	3	Circle (User)	8/8/7/7/6/5	None	0/320/1440/3200/8000	AOE / Aggro up	8	4	20	0	0
+Shogun Slash	Zeke	Chroma Katana	Physical	200/240/280/320/360/400	2	Ahead	11/11/10/10/9/8	None	0/480/2160/4800/12000	AOE / Aggroed↑	8	2	20	0	0
+Touchdown	Rex	Bitball	Ether	125/150/170/190/210/240	1	One Target	8/8/7/7/6/5	None	0/480/2180/4840/12100	HP Potion	6	0	18	0	0
+Brave Throw	Rex	Bitball	Ether	220/260/300/340/380/440	1	One Target	8/8/7/7/6/5	None	0/400/1780/3960/9900	Toppled↑	8	0	10	0	0
+Strong Shot	Rex	Bitball	Ether	300/340/380/420/460/500	1	One Target	11/11/10/10/9/8	None	0/530/2380/5280/13200	Heal party on attack	15	0	10	0	0
+Mighty Ball	Rex	Bitball	Ether	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	0/350/1580/3520/8800	Launched↑	15	0	10	0	0
+Dolphin Spin	Nia	Bitball	Ether	125/150/170/190/210/240	3	One Target	8/8/7/7/6/5	None	0/320/1460/3240/8100	HP Potion	6	0	18	0	0
+Healing Circle	Nia	Bitball	Recovery	210/230/250/270/290/310	0	All	11/11/10/10/9/8	None	0/430/1940/4320/10800	Heal party	200	0	18	0	0
+Falcon Turn	Nia	Bitball	Ether	200/240/280/320/360/400	1	One Target	5/5/4/4/3/2	None	0/290/1300/2880/7200	Toppled↑	6	0	10	0	0
+Acrobatic Bomber	Nia	Bitball	Ether	300/340/380/420/460/500	1	Circle (Target)	11/11/10/10/9/8	Break	0/400/1780/3960/9900	AOE / Break	15	2	10	0	0
+Dragonbane Shot	Mòrag	Bitball	Ether	100/120/140/160/180/192	1	One Target	8/8/7/7/6/5	None	0/440/1980/4400/11000	HP Potion	15	0	18	0	0
+Celestial Flash	Mòrag	Bitball	Recovery	210/230/250/270/290/310	0	All	11/11/10/10/9/8	None	0/480/2160/4800/12000	Heal party	200	0	18	0	0
+Shadowrunner	Mòrag	Bitball	Ether	160/190/220/250/280/320	1	One Target	5/5/4/4/3/2	None	0/320/1440/3200/8000	Launched↑	15	0	10	0	0
+Gliding Swallow	Mòrag	Bitball	Ether	270/310/350/390/430/450	1	One Target	11/11/10/10/9/8	None	0/360/1620/3600/9000	High HP↑	15	0	10	0	0
+Rumble Pitch	Zeke	Bitball	Ether	330/370/410/450/490/550	1	One Target	11/11/10/10/9/8	None	0/430/1940/4320/10800	Back attack↑	15	0	10	0	0
+Pulverizing Dunk	Zeke	Bitball	Ether	250/300/350/400/450/500	1	Circle (User)	5/5/4/4/3/2	None	0/380/1730/3840/9600	AOE / Toppled↑	6	2	10	0	0
+Shell Shot	Zeke	Bitball	Ether	200/240/280/320/360/400	1	One Target	9/9/8/8/7/6	None	0/530/2380/5280/13200	Heal party on attack	15	0	10	0	0
+Precipitous Impact	Zeke	Bitball	Ether	100/120/140/160/180/192	1	Circle (Target)	8/8/7/7/6/5	None	0/580/2590/5760/14400	AOE / HP Potion	15	2	18	0	0
+Feral Uppercut	Rex	Knuckle Claws	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Blowdown	0/480/2180/4840/12100	Blowdown / Cancel atk↑	8	0	10	0	0
+Grand Smash	Rex	Knuckle Claws	Ether	110/140/170/200/230/240	1	One Target	11/11/10/10/9/8	None	0/530/2380/5280/13200	HP Potion	8	0	18	0	0
+Bullet Punch	Rex	Knuckle Claws	Physical	200/240/280/320/360/400	4	Ahead	11/11/10/10/9/8	None	0/350/1580/3520/8800	AOE	8	2	10	0	0
+Mach Straight Punch	Rex	Knuckle Claws	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	0/400/1780/3960/9900	Back attack↑	8	0	10	0	0
+Jackal Claw	Nia	Knuckle Claws	Physical	120/150/180/210/240/288	3	One Target	8/8/7/7/6/5	None	0/290/1300/2880/7200	Cancel attack↑	8	0	10	0	0
+Comet Punch	Nia	Knuckle Claws	Ether	180/220/260/300/340/360	1	Circle (User)	14/14/13/13/12/11	Launch	0/430/1940/4320/10800	AOE / Launch	8	3	10	0	0
+Deadly Twister	Nia	Knuckle Claws	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	0/400/1780/3960/9900	AOE / HP Potion	8	2	18	0	0
+Raptor Beat	Nia	Knuckle Claws	Physical	255/290/320/350/380/425	3	One Target	12/12/11/11/10/9	Knockback	0/320/1460/3240/8100	Knockback / Side atk↑	8	0	10	0	0
+Armored Fist	Mòrag	Knuckle Claws	Physical	120/150/180/210/240/288	1	One Target	8/8/7/7/6/5	Break	0/530/2380/5280/13200	Break / Cancel attack↑	8	0	10	0	0
+Takedown	Mòrag	Knuckle Claws	Physical	300/350/400/450/500/545	2	One Target	14/14/13/13/12/11	Blowdown	0/380/1730/3840/9600	Blowdown	8	0	10	0	0
+Sneak Hit	Mòrag	Knuckle Claws	Physical	110/140/170/200/230/240	2	Ahead	11/11/10/10/9/8	None	0/580/2590/5760/14400	AOE / HP Potion	8	2	18	0	0
+Peerless Blow	Mòrag	Knuckle Claws	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	0/430/1940/4320/10800	Side attack↑	8	0	10	0	0
+Hammer Lariat	Zeke	Knuckle Claws	Physical	180/220/260/300/340/360	1	One Target	14/14/13/13/12/11	Topple	0/480/2160/4800/12000	Topple	8	0	10	0	0
+Fury Dropkick	Zeke	Knuckle Claws	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	0/320/1440/3200/8000	Blowdown / Back atk↑	8	0	10	0	0
+Dynamite Knuckle	Zeke	Knuckle Claws	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	0/440/1980/4400/11000	AOE / HP Potion	8	2	18	0	0
+Skysplitter Cross Chop	Zeke	Knuckle Claws	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	0/360/1620/3600/9000	AOE / Aggro down	8	2	10	0	0
+Sword Bash (Broadsword)	Rex	Broadsword	Physical	170/200/230/260/290/336	1	One Target	7/7/6/6/5/4	None	0/180/810/1800/4500	Back attack↑	8	0	14	0	0
+Double Spinning Edge (Broadsword)	Rex	Broadsword	Physical	200/240/280/320/360/400	2	One Target	8/8/7/7/6/5	None	0/220/990/2200/5500	Side attack↑	8	0	14	0	0
+Rolling Smash (Broadsword)	Rex	Broadsword	Physical	330/370/410/450/490/545	1	Ahead	14/14/13/13/12/11	None	0/160/720/1600/4000	AOE / Aggro down	8	2	14	0	0
+Anchor Shot (Broadsword)	Rex	Broadsword	Physical	240/270/300/330/360/400	2	One Target	6/6/6/6/6/6	None	0/240/1080/2400/6000	HP Potion	8	0	18	0	0
+Ultraslash (Chapter 1)	Jin	Nodachi	Physical	300/340/380/420/460/500	2	One Target	8/8/7/7/6/5	None	0/320/1440/3200/8000	Back attack↑	10	0	10	100	0
+Skyward Slash (Chapter 1)	Jin	Nodachi	Ether	600/680/760/840/920/1000	1	Ahead	11/11/10/10/9/8	Break	0/440/1980/4400/11000	AOE / Break	14	2	10	100	0
+Empty Moment (Chapter 1)	Jin	Nodachi	Physical	200/240/280/320/360/400	8	Circle (Target)	14/14/13/13/12/11	None	0/360/1620/3600/9000	AOE / Pierce	14	16	10	100	0
+Stunned Swallow (Chapter 1)	Jin	Nodachi	Ether	0/0/0/0/0/0	1	One Target	11/11/10/10/9/8	Blowdown	0/480/2160/4800/12000	Evasion / Counter	8	0	10	0	0
+Hammer Bash	Malos	Sword Tonfa	Physical	450/510/570/630/690/750	1	One Target	11/11/10/10/9/8	Topple	0/480/2160/4800/12000	Topple	8	0	22	0	0
+Sword Strike	Malos	Sword Tonfa	Physical	300/360/420/480/540/600	2	One Target	8/8/7/7/6/5	None	0/440/1980/4400/11000	Front attack↑	8	0	22	0	0
+Spiral Savate	Malos	Sword Tonfa	Physical	240/290/340/390/440/480	1	One Target	14/14/13/13/12/11	None	0/380/1730/3840/9600	High HP↑	8	0	22	0	0
+Chakra Burst	Malos	Sword Tonfa	Ether	180/220/260/300/340/360	1	Circle (Target)	11/11/10/10/9/8	Knockback	0/360/1620/3600/9000	AOE / Knockback	8	10	25	0	0
+Ultraslash (Chapter 8)	Jin	Nodachi	Physical	420/420/420/420/460/500	2	One Target	8/8/7/7/6/5	None	0/320/1440/3200/8000	Back attack↑	10	0	10	100	0
+Skyward Slash (Chapter 8)	Jin	Nodachi	Ether	840/840/840/840/920/1000	1	Ahead	11/11/10/10/9/8	Break	0/360/1620/3600/9000	AOE / Break	14	2	10	100	0
+Heavenly Disrupt (Chapter 8)	Jin	Nodachi	Physical	1300/1300/1300/1300/1400/1500	9	One Target	24/24/23/23/22/21	Topple / Launch / Smash	0/400/1800/4000/10000	Topple / Launch / Smash	12	0	10	100	0
+Stunned Swallow (Chapter 8)	Jin	Nodachi	Ether	0/0/0/0/0/0	1	Circle (Target)	11/11/10/10/9/8	Blowdown	0/440/1980/4400/11000	Evasion / Counter	8	10	10	0	0
+Revolt Smash	Rex	Calamity Scythe	Physical	360/410/460/510/560/600	1	One Target	11/11/10/10/9/8	None	0/790/3560/7920/19800	Heal party on attack	8	0	14	0	0
+Screw Reaper	Rex	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle (User)	8/8/7/7/6/5	None	0/580/2590/5760/14400	AOE / Aggro down	8	3	0	0	0
+Rising Crescent	Rex	Calamity Scythe	Physical	220/260/300/340/380/440	1	One Target	13/13/12/12/11/10	Launch	0/650/2920/6480/16200	Launch	8	0	10	0	20
+Withering Assault	Rex	Calamity Scythe	Physical	240/290/340/390/440/480	2	One Target	11/11/10/10/9/8	None	0/790/3560/7920/19800	HP Potion	8	0	14	0	0
+Brutal Scythe	Nia	Calamity Scythe	Physical	260/310/360/410/460/520	2	One Target	13/13/12/12/11/10	Topple	0/910/4100/9120/22800	Topple	8	0	10	0	0
+Capra Assault	Nia	Calamity Scythe	Physical	240/290/340/390/440/480	3	One Target	12/12/11/11/10/9	None	0/610/2740/6080/15200	HP Potion	8	0	14	0	20
+Grizzly Smash	Nia	Calamity Scythe	Physical	330/390/450/510/570/625	1	One Target	13/13/12/12/11/10	None	0/680/3080/6840/17100	Heal party on attack	8	0	14	0	0
+Creeping Slicer	Nia	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle (User)	8/8/7/7/6/5	None	0/840/3760/8360/20900	AOE / Aggro down	8	2	0	0	0
+Tempest Strike	Mòrag	Calamity Scythe	Physical	260/310/360/410/460/520	1	One Target	11/11/10/10/9/8	None	0/880/3960/8800/22000	Heal party on attack	8	0	14	0	0
+Sacred Beast's Blessing	Mòrag	Calamity Scythe	Physical	240/290/340/390/440/480	2	One Target	12/12/11/11/10/9	None	0/720/3240/7200/18000	HP Potion	8	0	14	0	20
+Cyclonic Blade	Mòrag	Calamity Scythe	Physical	360/410/460/510/560/600	1	One Target	13/13/12/12/11/10	Blowdown	0/640/2880/6400/16000	Blowdown	8	0	10	0	0
+Azure Dragon Storm	Mòrag	Calamity Scythe	Physical	144/170/200/230/260/288	2	Circle (User)	8/8/7/7/6/5	None	0/960/4320/9600/24000	Aggro down / AOE	8	2	0	0	0
+Surprise Elbow	Zeke	Calamity Scythe	Physical	260/310/360/410/460/520	2	One Target	14/14/13/13/12/11	Topple	0/820/3670/8160/20400	Topple	8	0	10	0	0
+Careful Swing	Zeke	Calamity Scythe	Physical	220/260/300/340/380/440	3	Circle (User)	11/11/10/10/9/8	None	0/750/3370/7480/18700	Aggro down / AOE	8	2	14	0	0
+Standing Ovation	Zeke	Calamity Scythe	Physical	390/430/470/510/550/600	1	Ahead	14/14/13/13/12/11	None	0/610/2750/6120/15300	AOE / Heal party on attack	8	2	14	0	0
+Bewilder Slash	Zeke	Calamity Scythe	Physical	240/290/340/390/440/480	2	Ahead	12/12/11/11/10/9	None	0/540/2450/5440/13600	AOE / HP Potion	8	2	0	0	20
+Earth Splitter	Rex	Cobra Bardiche	Physical	160/190/220/250/280/320	1	One Target	9/9/8/8/7/6	None	0/610/2750/6120/15300	Low HP↑	10	0	14	0	0
+Powerquake	Rex	Cobra Bardiche	Physical	200/240/280/320/360/400	2	One Target	14/14/13/13/12/11	Break	0/820/3670/8160/20400	Break / Side attack↑	10	0	14	0	0
+Final Stone	Rex	Cobra Bardiche	Physical	375/430/480/530/580/625	1	One Target	10/10/9/9/8/7	None	0/750/3370/7480/18700	HP down / Evasion	10	0	14	0	0
+Dust Up	Rex	Cobra Bardiche	Physical	300/340/380/420/460/500	3	Circle (User)	13/13/12/12/11/10	None	0/540/2450/5440/13600	AOE / Insects↑	10	3	14	0	0
+Condor's Beak	Nia	Cobra Bardiche	Physical	160/190/220/250/280/320	2	One Target	9/9/8/8/7/6	None	0/840/3760/8360/20900	Low HP↑	10	0	14	0	0
+Sand Break	Nia	Cobra Bardiche	Physical	300/340/380/420/460/500	2	Circle (User)	14/14/13/13/12/11	None	0/610/2740/6080/15200	AOE / Insects↑	10	3	14	0	0
+Cobra Raid	Nia	Cobra Bardiche	Physical	130/160/190/220/250/264	2	One Target	11/11/10/10/9/8	None	0/910/4100/9120/22800	Back attack↑	10	0	14	0	0
+Merciless Twister	Nia	Cobra Bardiche	Ether	375/430/480/530/580/625	3	Circle (User)	14/14/13/13/12/11	None	0/680/3080/6840/17100	AOE / HP down / Evasion	10	2	10	0	0
+Blunt Force	Mòrag	Cobra Bardiche	Physical	240/290/340/390/440/500	1	One Target	11/11/10/10/9/8	Smash	0/860/3890/8640/21600	Smash	10	0	14	0	0
+Heaven's Valor	Mòrag	Cobra Bardiche	Physical	130/160/190/220/250/264	1	One Target	11/11/10/10/9/8	None	0/790/3560/7920/19800	Back attack↑	10	0	14	0	0
+Lunar Salutation	Mòrag	Cobra Bardiche	Physical	200/240/280/320/360/420	2	One Target	9/9/8/8/7/6	None	0/650/2920/6480/16200	Low HP↑	10	0	14	0	0
+Twisted Thistle	Mòrag	Cobra Bardiche	Physical	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	0/580/2590/5760/14400	AOE / HP down / Evasion	10	2	14	0	0
+Grudge Blow	Zeke	Cobra Bardiche	Physical	120/140/160/180/200/240	2	One Target	8/8/7/7/6/5	None	0/610/2740/6080/15200	Side attack↑	10	0	14	0	0
+Heaven's Revenge	Zeke	Cobra Bardiche	Ether	130/160/190/220/250/264	1	Ahead	12/12/11/11/10/9	None	0/840/3760/8360/20900	AOE / Back attack↑	10	2	14	0	0
+Takedown Smash	Zeke	Cobra Bardiche	Physical	200/240/280/320/360/400	2	One Target	11/11/10/10/9/8	Smash	0/910/4100/9120/22800	Smash	10	0	14	0	0
+Whirlwind of Passion	Zeke	Cobra Bardiche	Ether	375/430/480/530/580/625	2	Ahead	14/14/13/13/12/11	None	0/680/3080/6840/17100	AOE / HP down / Evasion	10	2	10	0	0
+Opened Fan	Rex	Infinity Fans	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	0/840/3760/8360/20900	Front attack↑	8	0	20	0	0
+Screw Cutter	Rex	Infinity Fans	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	0/910/4100/9120/22800	Aggroed↑	8	0	22	0	0
+Cross Edge	Rex	Infinity Fans	Physical	240/290/340/390/440/500	2	One Target	8/8/7/7/6/5	None	0/680/3080/6840/17100	Beasts↑	8	0	20	0	0
+Brave Wing	Rex	Infinity Fans	Physical	300/340/380/420/460/500	4	Circle (User)	14/14/13/13/12/11	None	0/610/2740/6080/15200	AOE / Aggro up	8	2	20	0	0
+Swallowtail	Nia	Infinity Fans	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break	0/750/3370/7480/18700	Break	8	0	20	0	0
+Scarecrow	Nia	Infinity Fans	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	0/540/2450/5440/13600	Aggroed↑	8	0	22	0	0
+Vicious Circle	Nia	Infinity Fans	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	0/610/2750/6120/15300	AOE / Front attack↑	8	2	20	0	0
+Healing Trick	Nia	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None	0/820/3670/8160/20400	Heal party	200	0	20	0	0
+Albatross Cut	Mòrag	Infinity Fans	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	0/650/2920/6480/16200	Aggroed↑	8	0	22	0	0
+2,000 Wings	Mòrag	Infinity Fans	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	0/580/2590/5760/14400	Beasts↑	8	0	20	0	0
+Black Wing Dance	Mòrag	Infinity Fans	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None	0/790/3560/7920/19800	AOE / Front attack↑	8	2	20	0	0
+Stoking the Fire	Mòrag	Infinity Fans	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None	0/860/3890/8640/21600	Heal party	200	0	20	0	0
+Twilight Twist	Zeke	Infinity Fans	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	0/720/3240/7200/18000	Beasts↑	8	0	20	0	0
+Bold Division	Zeke	Infinity Fans	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	0/880/3960/8800/22000	Aggroed↑	8	0	22	0	0
+Gutsy Cutter	Zeke	Infinity Fans	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	0/640/2880/6400/16000	AOE / Aggro up	8	3	20	0	0
+Exquisite Spiral	Zeke	Infinity Fans	Physical	220/260/300/340/380/440	2	Circle (User)	11/11/10/10/9/8	None	0/960/4320/9600/24000	AOE / Front attack↑	8	2	20	0	0
+Thunderclap	Rex	Brilliant Twinblades	Physical	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	0/910/4100/9120/22800	Side attack↑	8	0	14	0	0
+Haphazard Throw	Rex	Brilliant Twinblades	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	0/840/3760/8360/20900	Cancel attack↑	8	0	14	0	0
+Cutting Edge	Rex	Brilliant Twinblades	Physical	240/290/340/390/440/500	2	One Target	8/8/7/7/6/5	None	0/680/3080/6840/17100	Critical recharge	8	0	14	0	0
+Rebel's Dagger	Rex	Brilliant Twinblades	Physical	300/340/380/420/460/500	4	Circle (User)	14/14/13/13/12/11	None	0/610/2740/6080/15200	AOE	8	2	14	0	0
+Papillon Dance	Nia	Brilliant Twinblades	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break	0/750/3370/7480/18700	Break / Critical recharge	8	0	14	0	0
+Cheetah Scratch	Nia	Brilliant Twinblades	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	0/540/2450/5440/13600	Cancel attack↑	8	0	14	0	0
+Tricksy Loop	Nia	Brilliant Twinblades	Ether	200/240/280/320/360/400	2	Ahead	8/8/7/7/6/5	None	0/610/2750/6120/15300	AOE / Side attack↑	8	2	14	0	0
+Lustrous Heal	Nia	Brilliant Twinblades	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None	0/820/3670/8160/20400	Heal party	200	0	18	0	0
+Photon Slash	Mòrag	Brilliant Twinblades	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	0/650/2920/6480/16200	Cancel attack↑	8	0	14	0	0
+Marigold in Bloom	Mòrag	Brilliant Twinblades	Physical	200/240/280/320/360/400	4	One Target	8/8/7/7/6/5	None	0/790/3560/7920/19800	Critical recharge	8	0	14	0	0
+Flowing Shadow	Mòrag	Brilliant Twinblades	Ether	300/340/380/420/460/500	1	Ahead	14/14/13/13/12/11	None	0/580/2590/5760/14400	AOE	8	2	14	0	0
+Mastery of Sky Sparks	Mòrag	Brilliant Twinblades	Recovery	168/180/200/220/240/248	0	All	14/14/13/13/12/11	None	0/860/3890/8640/21600	Heal party	200	0	18	0	0
+Electroshade Twist	Zeke	Brilliant Twinblades	Physical	210/250/290/330/370/420	1	One Target	8/8/7/7/6/5	None	0/880/3960/8800/22000	Critical recharge	8	0	14	0	0
+Bewitching Divide	Zeke	Brilliant Twinblades	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	0/720/3240/7200/18000	Cancel attack↑	8	0	14	0	0
+Thunderslam	Zeke	Brilliant Twinblades	Ether	170/210/250/290/330/360	1	Ahead	11/11/10/10/9/8	None	0/640/2880/6400/16000	AOE / Flying↑	8	3	14	0	0
+Florid Spiral	Zeke	Brilliant Twinblades	Physical	220/260/300/340/380/440	2	Circle (User)	11/11/10/10/9/8	None	0/960/4320/9600/24000	AOE / Back attack↑	8	2	14	0	0
+Critical Trigger	Rex	Decimation Cannon	Ether	108/130/150/170/190/216	5	One Target	8/8/7/7/6/5	None	0/680/3080/6840/17100	High HP↑	20	0	14	0	0
+Mighty Missile	Rex	Decimation Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	0/610/2740/6080/15200	Launched↑ / Pierce	20	0	14	0	0
+Grenade Burst	Rex	Decimation Cannon	Ether	300/340/380/420/460/500	1	Circle (Target)	14/14/13/13/12/11	Blowdown	0/840/3760/8360/20900	AOE / Blowdown	20	4	14	0	0
+Flamecaster	Rex	Decimation Cannon	Ether	180/220/260/300/340/360	1	Ahead	11/11/10/10/9/8	None	0/910/4100/9120/22800	AOE / Front attack↑	20	4	14	0	0
+Surprise Shot	Nia	Decimation Cannon	Ether	180/220/260/300/340/360	2	One Target	11/11/10/10/9/8	None	0/650/2920/6480/16200	Front attack↑	20	0	14	0	0
+Porcupine Blow	Nia	Decimation Cannon	Ether	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Break	0/860/3890/8640/21600	Break / Pierce	20	0	14	0	0
+Mayfly	Nia	Decimation Cannon	Ether	220/260/300/340/380/440	1	Ahead	11/11/10/10/9/8	None	0/580/2590/5760/14400	AOE / Launched↑	20	6	14	0	0
+Phosphorescent Flare	Nia	Decimation Cannon	Ether	108/130/150/170/190/216	5	Ahead	8/8/7/7/6/5	None	0/790/3560/7920/19800	AOE / High HP↑	20	10	14	0	0
+Cruel Musket	Mòrag	Decimation Cannon	Ether	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Break	0/820/3670/8160/20400	Break / Pierce	20	0	14	0	0
+Thorn Assault	Mòrag	Decimation Cannon	Ether	108/130/150/170/190/216	7	Ahead	8/8/7/7/6/5	None	0/750/3370/7480/18700	AOE / High HP↑	20	2	14	0	0
+Rhododendron	Mòrag	Decimation Cannon	Ether	330/370/410/450/490/550	11	Ahead	12/12/11/11/10/9	None	0/610/2750/6120/15300	AOE	20	6	14	0	0
+Chimera Drop	Mòrag	Decimation Cannon	Ether	220/260/300/340/380/440	1	One Target	11/11/10/10/9/8	None	0/540/2450/5440/13600	Launched↑	20	0	14	0	0
+Breakthrough Cannon	Zeke	Decimation Cannon	Ether	300/340/380/420/460/500	3	One Target	14/14/13/13/12/11	Break	0/960/4320/9600/24000	Break / Pierce	20	0	14	0	0
+Frenzied Fire	Zeke	Decimation Cannon	Ether	108/130/150/170/190/216	6	One Target	8/8/7/7/6/5	None	0/880/3960/8800/22000	Front attack↑	20	0	14	0	0
+Stark Artillery	Zeke	Decimation Cannon	Ether	300/340/380/420/460/500	1	Circle (Target)	14/14/13/13/12/11	Knockback	0/720/3240/7200/18000	AOE / Knockback	20	4	14	0	0
+Crazed Bazooka	Zeke	Decimation Cannon	Ether	220/260/300/340/380/440	6	Ahead	11/11/10/10/9/8	None	0/640/2880/6400/16000	AOE / Launched↑	20	2	14	0	0
+Wild Slugger	Rex	Rockrending Gauntlets	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Blowdown	0/910/4100/9120/22800	Blowdown / Front attack↑	8	0	22	0	0
+Terror Smash	Rex	Rockrending Gauntlets	Ether	110/140/170/200/230/240	1	One Target	11/11/10/10/9/8	None	0/840/3760/8360/20900	Aggroed↑	8	0	22	0	0
+Rock Bullet	Rex	Rockrending Gauntlets	Physical	200/240/280/320/360/400	4	Ahead	11/11/10/10/9/8	None	0/610/2740/6080/15200	AOE / Aggro up	8	2	22	0	0
+Giant Straight	Rex	Rockrending Gauntlets	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	Knockback	0/680/3080/6840/17100	Knockback	8	0	22	0	0
+Lion Claw	Nia	Rockrending Gauntlets	Physical	120/150/180/210/240/288	3	One Target	8/8/7/7/6/5	None	0/610/2750/6120/15300	Front attack↑	8	0	22	0	0
+Meteor Punch	Nia	Rockrending Gauntlets	Ether	180/220/260/300/340/360	1	Circle (User)	14/14/13/13/12/11	Launch	0/820/3670/8160/20400	AOE / Launch	8	3	22	0	0
+Raging Screw	Nia	Rockrending Gauntlets	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	0/750/3370/7480/18700	AOE / Aggroed↑	8	2	22	0	0
+Buffalo Beat	Nia	Rockrending Gauntlets	Physical	255/290/320/350/380/425	3	One Target	12/12/11/11/10/9	Knockback	0/540/2450/5440/13600	Knockback / Aggro up	8	0	22	0	0
+Armor Breaker	Mòrag	Rockrending Gauntlets	Physical	120/150/180/210/240/288	1	One Target	8/8/7/7/6/5	Break	0/880/3960/8800/22000	Break / Front attack↑	8	0	22	0	0
+Bear Twist	Mòrag	Rockrending Gauntlets	Physical	300/350/400/450/500/545	2	One Target	14/14/13/13/12/11	Blowdown	0/720/3240/7200/18000	Blowdown	8	0	22	0	0
+Devastating Tremor	Mòrag	Rockrending Gauntlets	Physical	110/140/170/200/230/240	2	Ahead	11/11/10/10/9/8	None	0/960/4320/9600/24000	AOE / Aggroed↑	8	2	22	0	0
+Earth Mover	Mòrag	Rockrending Gauntlets	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	0/640/2880/6400/16000	Aggro up	8	0	22	0	0
+Sublime Lariat	Zeke	Rockrending Gauntlets	Physical	180/220/260/300/340/360	1	One Target	14/14/13/13/12/11	Topple	0/860/3890/8640/21600	Topple	8	0	22	0	0
+Falling Dropkick	Zeke	Rockrending Gauntlets	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	0/790/3560/7920/19800	Blowdown / Front attack↑	8	0	22	0	0
+Decisive Knuckle	Zeke	Rockrending Gauntlets	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	0/650/2920/6480/16200	AOE / Aggroed↑	8	2	22	0	0
+Sacrificial Chop	Zeke	Rockrending Gauntlets	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	0/580/2590/5760/14400	AOE / Aggro up	8	2	22	0	0
+Gale Upper	Rex	Sword Tonfa	Physical	300/340/380/420/460/500	1	One Target	14/14/13/13/12/11	Blowdown	0/910/4100/9120/22800	Blowdown / Low HP↑	8	0	22	0	0
+Wind Smash	Rex	Sword Tonfa	Ether	110/140/170/200/230/240	1	One Target	11/11/10/10/9/8	None	0/840/3760/8360/20900	Aggroed↑	8	0	22	0	0
+Stormstarter	Rex	Sword Tonfa	Physical	200/240/280/320/360/400	4	Ahead	11/11/10/10/9/8	None	0/610/2740/6080/15200	AOE / Aggro up	8	2	22	0	0
+Hurricane Punch	Rex	Sword Tonfa	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	Knockback	0/680/3080/6840/17100	Knockback	8	0	22	0	0
+Sabertooth Slash	Nia	Sword Tonfa	Physical	120/150/180/210/240/288	3	One Target	8/8/7/7/6/5	None	0/540/2450/5440/13600	Low HP↑	8	0	22	0	0
+Updraft	Nia	Sword Tonfa	Ether	180/220/260/300/340/360	1	Circle (User)	14/14/13/13/12/11	Launch	0/820/3670/8160/20400	AOE / Launch	8	3	22	0	0
+Whirlwind	Nia	Sword Tonfa	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	0/750/3370/7480/18700	AOE / Aggroed↑	8	2	22	0	0
+Universal Beat	Nia	Sword Tonfa	Physical	255/290/320/350/380/425	3	One Target	12/12/11/11/10/9	Knockback	0/610/2750/6120/15300	Knockback / Aggro up	8	0	22	0	0
+Blade of the Abyss	Mòrag	Sword Tonfa	Physical	120/150/180/210/240/288	1	One Target	8/8/7/7/6/5	Break	0/880/3960/8800/22000	Break / Low HP↑	8	0	22	0	0
+Blunt Aggression	Mòrag	Sword Tonfa	Physical	300/350/400/450/500/545	2	One Target	14/14/13/13/12/11	Blowdown	0/720/3240/7200/18000	Blowdown	8	0	22	0	0
+Galeforce Blow	Mòrag	Sword Tonfa	Physical	110/140/170/200/230/240	2	Ahead	11/11/10/10/9/8	None	0/960/4320/9600/24000	AOE / Aggroed↑	8	2	22	0	0
+No Love Lost	Mòrag	Sword Tonfa	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	0/640/2880/6400/16000	Aggro up	8	0	22	0	0
+Menacing Lariat	Zeke	Sword Tonfa	Physical	180/220/260/300/340/360	1	One Target	14/14/13/13/12/11	Topple	0/860/3890/8640/21600	Topple	8	0	22	0	0
+Hurricane Dropkick	Zeke	Sword Tonfa	Physical	270/310/350/390/430/450	1	One Target	14/14/13/13/12/11	Blowdown	0/790/3560/7920/19800	Blowdown / Low HP↑	8	0	22	0	0
+Shuddering Tonfa	Zeke	Sword Tonfa	Ether	110/140/170/200/230/240	1	Circle (User)	11/11/10/10/9/8	None	0/650/2920/6480/16200	AOE / Aggroed↑	8	2	22	0	0
+Wind Dragon Chop	Zeke	Sword Tonfa	Physical	160/200/240/280/320/340	1	Ahead	11/11/10/10/9/8	None	0/580/2590/5760/14400	AOE / Aggro up	8	2	22	0	0
+Monado Shield (Rex)	Rex	Monado	Defensive	270/270/360/360/360/450	0	One Target	12/12/11/11/10/9	None	0/360/1620/3600/9000	Defense	8	0	14	0	0
+Monado Storm	Rex	Monado	Physical	270/310/350/390/430/450	2	Ahead	11/11/10/10/9/8	None	0/320/1440/3200/8000	AOE / Aggro down	8	2	10	0	0
+Monado Burst	Rex	Monado	Physical	160/190/220/250/280/320	2	One Target	7/7/6/6/5/4	None	0/480/2160/4800/12000	Back attack↑	8	0	18	0	0
+Monado Beat	Rex	Monado	Ether	300/340/380/420/460/500	1	Circle (User)	9/9/8/8/7/6	None	0/440/1980/4400/11000	AOE / Toppled↑	8	3	14	0	0
+Lightning Smash	Nia	Monado	Physical	230/280/330/380/430/460	3	One Target	8/8/7/7/6/5	None	0/580/2590/5760/14400	Machines↑	8	0	14	0	0
+Monado Striker	Nia	Monado	Physical	270/310/350/390/430/450	3	Circle (User)	11/11/10/10/9/8	None	0/380/1730/3840/9600	AOE / Aggro down	8	3	10	0	0
+Lucent Glance	Nia	Monado	Ether	330/370/410/450/490/550	1	Circle (User)	11/11/10/10/9/8	None	0/530/2380/5280/13200	AOE / Toppled↑	8	3	14	0	0
+Beam Thrust	Nia	Monado	Physical	160/190/220/250/280/320	1	One Target	7/7/6/6/5/4	Knockback	0/430/1940/4320/10800	Back attack↑/ Knockback	8	0	18	0	0
+Steel Brand	Mòrag	Monado	Ether	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	Topple	0/530/2380/5280/13200	Topple	8	0	18	0	0
+Blade Masquerade	Mòrag	Monado	Physical	270/310/350/390/430/450	4	Circle (User)	11/11/10/10/9/8	None	0/350/1580/3520/8800	AOE / Aggro down	8	3	10	0	0
+Echo Edge	Mòrag	Monado	Ether	200/240/280/320/360/400	1	One Target	8/8/7/7/6/5	None	0/480/2180/4840/12100	Toppled↑	8	0	14	0	0
+Sudden Smite	Mòrag	Monado	Physical	345/390/440/490/540/575	2	One Target	10/10/9/9/8/7	None	0/400/1780/3960/9900	Machines↑	8	0	14	0	0
+Monado Shield (Zeke)	Zeke	Monado	Defensive	270/270/360/360/360/450	0	One Target	11/11/10/10/9/8	None	0/320/1460/3240/8100	Defense	8	0	14	0	0
+Helios Circle	Zeke	Monado	Ether	270/310/350/390/430/450	3	Circle (User)	11/11/10/10/9/8	None	0/290/1300/2880/7200	AOE / Aggro down	8	3	10	0	0
+Ragnarok Slash	Zeke	Monado	Physical	220/260/300/340/380/440	1	One Target	8/8/7/7/6/5	Launch	0/430/1940/4320/10800	Launch	8	0	18	0	0
+Nemesis Beat	Zeke	Monado	Physical	345/390/440/490/540/575	1	One Target	10/10/9/9/8/7	Knockback	0/400/1780/3960/9900	Machines↑ / Knockback	8	0	14	0	0
+Wind Slicer	Rex	Knives	Physical	180/220/260/300/340/360	1	One Target	9/9/8/8/7/6	None	0/480/2180/4840/12100	High HP↑	8	0	10	0	0
+Skyward Edge	Rex	Knives	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	0/530/2380/5280/13200	HP Potion	8	0	18	0	0
+Infinity Wing	Rex	Knives	Physical	120/140/160/180/200/240	2	One Target	8/8/7/7/6/5	None	0/350/1580/3520/8800	Cancel attack↑	8	0	10	0	0
+Screw Edge	Rex	Knives	Physical	300/340/380/420/460/500	4	Circle (User)	12/12/11/11/10/9	None	0/400/1780/3960/9900	AOE / Critical recharge	8	2	10	0	0
+Air Slash	Nia	Knives	Physical	240/280/320/360/400/450	4	One Target	14/14/13/13/12/11	Break	0/400/1780/3960/9900	Break / High HP↑	8	0	10	0	0
+Avian Spin	Nia	Knives	Ether	100/130/160/190/220/240	1	One Target	11/11/10/10/9/8	None	0/320/1460/3240/8100	HP Potion	8	0	18	0	0
+Whirling Edge	Nia	Knives	Ether	180/220/260/300/340/360	2	Ahead	9/9/8/8/7/6	None	0/290/1300/2880/7200	AOE / Critical recharge	8	2	10	0	0
+Soothing Breeze	Nia	Knives	Recovery	210/230/250/270/290/300	0	All	14/14/13/13/12/11	None	0/430/1940/4320/10800	Heal party	200	0	18	0	0
+Draconic Lunge	Mòrag	Knives	Ether	100/130/160/190/220/240	2	One Target	11/11/10/10/9/8	None	0/440/1980/4400/11000	HP Potion	8	0	18	0	0
+Phoenix Dance	Mòrag	Knives	Physical	160/190/220/250/280/320	4	One Target	9/9/8/8/7/6	None	0/320/1440/3200/8000	Cancel attack↑	8	0	10	0	0
+Universe Flicker	Mòrag	Knives	Ether	300/340/380/420/460/500	1	Ahead	12/12/11/11/10/9	None	0/360/1620/3600/9000	AOE / Critical recharge	8	2	10	0	0
+Moongale Waltz	Mòrag	Knives	Recovery	200/220/240/260/280/300	0	All	14/14/13/13/12/11	None	0/480/2160/4800/12000	Heal party	200	0	18	0	0
+Tempest Twist	Zeke	Knives	Physical	120/140/160/180/200/240	1	One Target	8/8/7/7/6/5	None	0/380/1730/3840/9600	Cancel attack↑	8	0	10	0	0
+Flareflash Divide	Zeke	Knives	Ether	100/130/160/190/220/240	1	One Target	14/14/13/13/12/11	None	0/580/2590/5760/14400	HP Potion	8	0	18	0	0
+Windmill Cutter	Zeke	Knives	Ether	300/340/380/420/460/500	1	Ahead	12/12/11/11/10/9	None	0/430/1940/4320/10800	AOE / Critical recharge	8	3	10	0	0
+Typhoon Spin	Zeke	Knives	Physical	180/220/260/300/340/360	2	Circle (User)	8/8/7/7/6/5	None	0/530/2380/5280/13200	AOE / High HP↑	8	2	10	0	0
+Stunned Swallow (Challenge Mode)	Jin	Nodachi	Ether	0/0/0/0/0/0	1	One Target	9/11/10/10/9/8	Blowdown	0/480/2160/4800/12000	Evasion / Counter / Launch	8	0	10	0	0
+Empty Moment (Challenge Mode)	Jin	Nodachi	Ether	500/480/460/440/420/400	8	Circle (Target)	6/14/13/13/12/11	Blowdown	0/360/1620/3600/9000	AOE / Pierce / Blowdown	8	6	10	100	0
+Heavenly Disrupt (Challenge Mode)	Jin	Nodachi	Physical	900/1300/1300/1300/1400/1500	9	Ahead	15/24/23/23/22/21	Break / Topple / Launch / Smash	0/400/1800/4000/10000	Driver Combo	10	3	10	100	0
 \.
 
 
@@ -46454,6 +48093,14 @@ ALTER TABLE ONLY xeno2.accessories
 
 
 --
+-- Name: art_enhance_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.art_enhance
+    ADD CONSTRAINT art_enhance_pkey PRIMARY KEY (art, level);
+
+
+--
 -- Name: arts_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -46755,6 +48402,22 @@ ALTER TABLE ONLY xenox.skills
 
 ALTER TABLE ONLY xeno2.accessories
     ADD CONSTRAINT accessories_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance(id);
+
+
+--
+-- Name: art_enhance_art_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.art_enhance
+    ADD CONSTRAINT art_enhance_art_fkey FOREIGN KEY (art) REFERENCES xeno2.arts(name);
+
+
+--
+-- Name: art_enhance_caption_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.art_enhance
+    ADD CONSTRAINT art_enhance_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance(id);
 
 
 --
