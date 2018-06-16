@@ -23,7 +23,22 @@ class Xenoblade2:
                     range,
                     recharge,
                     reaction,
-                    description,
+                    (
+                        SELECT
+                            xeno2.format_caption(
+                                enhance_captions.caption,
+                                param,
+                                '[' || STRING_AGG(param_one::float::text, '/' ORDER BY level) || ']',
+                                '[' || STRING_AGG(param_two::float::text, '/' ORDER BY level) || ']'
+                            ) AS caption
+                        FROM xeno2.art_enhance
+                        JOIN xeno2.enhance
+                        ON art_enhance.caption=enhance.id
+                        JOIN xeno2.enhance_captions
+                        ON enhance.caption=enhance_captions.id
+                        WHERE art=name
+                        GROUP BY enhance_captions.caption, param
+                    ),
                     wp,
                     caption,
                     distance || ' meters',
