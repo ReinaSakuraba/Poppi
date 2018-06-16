@@ -690,449 +690,583 @@ ALTER TABLE xenox.skills OWNER TO poppi;
 --
 
 COPY xeno2.accessories (name, rarity, price, caption) FROM stdin;
-Abyss Vest	Rare	5000	667
-Gear Vest	Common	5000	655
-Jade Vest	Common	9600	658
-Titanium Vest	Common	16200	661
-Steam Belt	Common	5000	668
-Silver Belt	Common	9600	671
-Ceramic Belt	Common	16200	674
-Bolt Hat	Common	5600	680
-Pearl Hat	Common	9600	683
-Fiber Hat	Common	16200	686
-Rainbow Gloves	Common	7900	692
-Hero Gloves	Common	13600	695
-Carbon Gloves	Common	16200	698
-Shell Shoes	Common	7900	704
-Assassin Shoes	Common	13600	707
-Ester Shoes	Common	16200	710
-Nacre Choker	Common	5100	716
-Goddess Choker	Common	9800	719
-Comet Choker	Common	11700	722
-Rigid Vest	Common	700	728
-Infantry Vest	Common	2000	731
-Muscle Belt	Common	700	734
-Champion Belt	Common	2000	737
-Fluffy Hat	Common	700	740
-Fabulous Hat	Common	3200	743
-Leather Gloves	Common	1400	746
-Smithy Gloves	Common	4000	749
-Wolf Shoes	Common	1400	752
-Spring Shoes	Common	4000	755
-Bunnit Choker	Common	1300	758
-Gold Gear Choker	Common	3600	761
-Garnet	Common	9400	764
-Sapphire	Common	16300	767
-Diamond	Common	19500	770
-Classic Medal	Common	3600	776
-Modern Medal	Common	6600	779
-Avant-Garde Medal	Common	9500	782
-Iron Headband	Common	3200	785
-Ice Headband	Common	6200	788
-Optical Headband	Common	10400	791
-Moon Cube	Common	8500	797
-Star Cube	Common	16300	800
-Galaxy Cube	Common	19500	803
-Mechanized Greaves	Common	4000	809
-Crystal Greaves	Common	7700	812
-Graphite Greaves	Common	11900	815
-Swordfighting Banner	Common	4500	821
-Goddess Banner	Common	7700	824
-Ancient Banner	Common	11900	827
-Spiked Pauldrons	Common	5000	833
-Hero Pauldrons	Common	8700	836
-Jet Pauldrons	Common	10400	839
-Apprentice Vambraces	Common	4900	845
-Boxer Vambraces	Common	11900	848
-Hero Vambraces	Common	14300	851
-Dark Orb	Common	3500	857
-Eraser Orb	Common	9100	860
-Bloody Orb	Common	13100	863
-Chrome Scarf	Common	4500	869
-Unicorn Scarf	Common	8200	872
-Quantum Scarf	Common	11900	875
-White Belt	Common	7100	881
-Black Belt	Common	13600	884
-Platinum Belt	Common	16200	887
-Soldier Ring	Common	6700	893
-Berserk Ring	Common	12400	896
-Tyrant Ring	Common	17800	899
-Attack Stone	Common	900	905
-Assault Stone	Common	5400	908
-Break Stone	Common	13000	911
-World Tree Drop	Common	19500	917
-Male Loincloth	Common	10900	920
-Charming Swimsuit	Common	16300	920
-Alpha Scope	Common	7900	926
-Gamma Scope	Common	16500	929
-Beast Hood	Common	2100	932
-Camo Hood	Common	6700	935
-Skeleton Hood	Common	12400	938
-Nopon Mask	Common	2800	944
-Metal Nopon Mask	Common	9000	947
-Gold Nopon Mask	Common	16500	950
-Colorful Feather	Common	1600	956
-Silver Feather	Common	5000	959
-Phantom Feather	Common	8700	962
-Grandarbor Ward	Common	1200	968
-Spirit Tree Ward	Common	4700	971
-World Tree Ward	Common	8900	974
-Friendship Ring	Common	600	977
-Affection Ring	Common	1500	980
-Promise Ring	Common	4700	983
-Harvest Necklace	Common	3800	986
-Affection Necklace	Common	9900	989
-Holy Necklace	Common	15600	992
-Shell Cameo	Common	1100	998
-Chivalric Medal	Common	6200	1004
-Military Medal	Common	11900	1007
-Round Table Medal	Common	14300	1010
-Gauntlet	Common	6200	1016
-Bio Gauntlet	Common	11900	1019
-Nano-Metal Gauntlet	Common	14300	1022
-Eyepatch	Common	3200	1028
-Leader's Eyepatch	Common	8200	1031
-Hi-Tech Eyepatch	Common	13000	1034
-Revival Pod	Legendary	29700	1040
-0-Battle Course	Common	39700	1041
-0-Battle Course+	Common	23800	1044
-Alphabet Course	Common	63000	1047
-Alphabet Course+	Common	26000	1050
-Silver Earrings	Common	4500	1053
-Crystal Earrings	Common	10900	1056
-Omega Drive	Common	19500	1059
-Sigma Drive	Common	23800	1062
-Burst Symbol	Common	10300	1065
-Critical Symbol	Common	14800	1068
-Recovery Symbol	Common	8700	1071
-Resurrection Symbol	Legendary	11900	1074
-Infinity Symbol	Common	16500	1075
-Auto-Balancer	Legendary	26000	1078
-Sword Attachment	Common	10700	1079
-Scimitar Attachment	Common	10700	1082
-Ring Attachment	Common	6900	1085
-Shield Attachment	Common	9800	1088
-Arms Attachment	Common	9800	1091
-Saber Attachment	Common	9800	1094
-Whip Attachment	Common	6900	1097
-Edge Attachment	Common	6900	1100
-Scythe Attachment	Common	10700	1103
-Axe Attachment	Common	1200	1106
-Lance Attachment	Common	1200	1109
-Cannon Attachment	Common	1800	1112
-Hammer Attachment	Common	2900	1115
-Katana Attachment	Common	3600	1118
-Ball Attachment	Common	3600	1121
-Knuckle Attachment	Common	5700	1124
-Master Attachment	Common	26000	1127
-Memory Rocket	Legendary	1300	1130
-Cheer Treat	Common	6600	1131
-Red Thread	Common	1100	1134
-Love Thread	Common	5000	1137
-Passion Thread	Common	9500	1140
-Activity Amulet	Common	2900	1143
-Healing Amulet	Common	6900	1146
-Rebirth Amulet	Common	10700	1149
-Beta Scope	Common	23800	1152
-Rush Hour	Common	1400	1158
-Appealing Lamp	Common	3200	1161
-Overclocking Bangle	Common	5700	1164
-Mint Potpourri	Common	3200	1167
-Lavender Potpourri	Common	5700	1170
-Priestess's Auspices	Common	3200	1173
-Sage's Auspices	Common	5700	1176
-Incense of Calm	Common	5700	1180
-Incense of Insight	Common	10900	1183
-Gear Vest	Rare	5000	656
-Jade Vest	Rare	9600	659
-Titanium Vest	Rare	16200	662
-Steam Belt	Rare	5000	669
-Silver Belt	Rare	9600	672
-Ceramic Belt	Rare	16200	675
-Bolt Hat	Rare	5600	681
-Pearl Hat	Rare	9600	684
-Fiber Hat	Rare	16200	687
-Rainbow Gloves	Rare	7900	693
-Hero Gloves	Rare	13600	696
-Carbon Gloves	Rare	16200	699
-Shell Shoes	Rare	7900	705
-Assassin Shoes	Rare	13600	708
-Ester Shoes	Rare	16200	711
-Nacre Choker	Rare	5100	717
-Goddess Choker	Rare	9800	720
-Comet Choker	Rare	11700	723
-Rigid Vest	Rare	700	729
-Infantry Vest	Rare	2000	732
-Muscle Belt	Rare	700	735
-Champion Belt	Rare	2000	738
-Fluffy Hat	Rare	700	741
-Fabulous Hat	Rare	3200	744
-Leather Gloves	Rare	1400	747
-Smithy Gloves	Rare	4000	750
-Wolf Shoes	Rare	1400	753
-Spring Shoes	Rare	4000	756
-Bunnit Choker	Rare	1300	759
-Gold Gear Choker	Rare	3600	762
-Garnet	Rare	9400	765
-Sapphire	Rare	16300	768
-Diamond	Rare	19500	771
-Classic Medal	Rare	3600	777
-Modern Medal	Rare	6600	780
-Avant-Garde Medal	Rare	9500	783
-Iron Headband	Rare	3200	786
-Ice Headband	Rare	6200	789
-Optical Headband	Rare	10400	792
-Moon Cube	Rare	8500	798
-Star Cube	Rare	16300	801
-Galaxy Cube	Rare	19500	804
-Mechanized Greaves	Rare	4000	810
-Crystal Greaves	Rare	7700	813
-Graphite Greaves	Rare	11900	816
-Swordfighting Banner	Rare	4500	822
-Goddess Banner	Rare	7700	825
-Ancient Banner	Rare	11900	828
-Spiked Pauldrons	Rare	5000	834
-Hero Pauldrons	Rare	8700	837
-Jet Pauldrons	Rare	10400	840
-Apprentice Vambraces	Rare	4900	846
-Boxer Vambraces	Rare	11900	849
-Hero Vambraces	Rare	14300	852
-Dark Orb	Rare	3500	858
-Eraser Orb	Rare	9100	861
-Bloody Orb	Rare	13100	864
-Chrome Scarf	Rare	4500	870
-Unicorn Scarf	Rare	8200	873
-Quantum Scarf	Rare	11900	876
-White Belt	Rare	7100	882
-Black Belt	Rare	13600	885
-Platinum Belt	Rare	16200	888
-Soldier Ring	Rare	6700	894
-Berserk Ring	Rare	12400	897
-Tyrant Ring	Rare	17800	900
-Attack Stone	Rare	900	906
-Assault Stone	Rare	5400	909
-Break Stone	Rare	13000	912
-World Tree Drop	Rare	19500	918
-Male Loincloth	Rare	10900	921
-Charming Swimsuit	Rare	16300	921
-Alpha Scope	Rare	7900	927
-Gamma Scope	Rare	16500	930
-Beast Hood	Rare	2100	933
-Camo Hood	Rare	6700	936
-Skeleton Hood	Rare	12400	939
-Nopon Mask	Rare	2800	945
-Metal Nopon Mask	Rare	9000	948
-Gold Nopon Mask	Rare	16500	951
-Colorful Feather	Rare	1600	957
-Silver Feather	Rare	5000	960
-Phantom Feather	Rare	8700	963
-Grandarbor Ward	Rare	1200	969
-Spirit Tree Ward	Rare	4700	972
-World Tree Ward	Rare	8900	975
-Friendship Ring	Rare	600	978
-Affection Ring	Rare	1500	981
-Promise Ring	Rare	4700	984
-Harvest Necklace	Rare	3800	987
-Affection Necklace	Rare	9900	990
-Holy Necklace	Rare	15600	993
-Shell Cameo	Rare	1100	999
-Chivalric Medal	Rare	6200	1005
-Military Medal	Rare	11900	1008
-Round Table Medal	Rare	14300	1011
-Gauntlet	Rare	6200	1017
-Bio Gauntlet	Rare	11900	1020
-Nano-Metal Gauntlet	Rare	14300	1023
-Eyepatch	Rare	3200	1029
-Leader's Eyepatch	Rare	8200	1032
-Hi-Tech Eyepatch	Rare	13000	1035
-Silver Earrings	Rare	4500	1054
-Crystal Earrings	Rare	10900	1057
-Omega Drive	Rare	19500	1060
-Sigma Drive	Rare	23800	1063
-Burst Symbol	Rare	10300	1066
-Critical Symbol	Rare	14800	1069
-Recovery Symbol	Rare	8700	1072
-Infinity Symbol	Rare	16500	1076
-Sword Attachment	Rare	10700	1080
-Scimitar Attachment	Rare	10700	1083
-Ring Attachment	Rare	6900	1086
-Shield Attachment	Rare	9800	1089
-Arms Attachment	Rare	9800	1092
-Saber Attachment	Rare	9800	1095
-Whip Attachment	Rare	6900	1098
-Edge Attachment	Rare	6900	1101
-Scythe Attachment	Rare	10700	1104
-Axe Attachment	Rare	1200	1107
-Lance Attachment	Rare	1200	1110
-Cannon Attachment	Rare	1800	1113
-Hammer Attachment	Rare	2900	1116
-Katana Attachment	Rare	3600	1119
-Ball Attachment	Rare	3600	1122
-Knuckle Attachment	Rare	5700	1125
-Master Attachment	Rare	26000	1128
-Cheer Treat	Rare	6600	1132
-Red Thread	Rare	1100	1135
-Love Thread	Rare	5000	1138
-Passion Thread	Rare	9500	1141
-Activity Amulet	Rare	2900	1144
-Healing Amulet	Rare	6900	1147
-Rebirth Amulet	Rare	10700	1150
-Beta Scope	Rare	23800	1153
-Rush Hour	Rare	1400	1159
-Appealing Lamp	Rare	3200	1162
-Overclocking Bangle	Rare	5700	1165
-Mint Potpourri	Rare	3200	1168
-Lavender Potpourri	Rare	5700	1171
-Priestess's Auspices	Rare	3200	1174
-Sage's Auspices	Rare	5700	1177
-Incense of Calm	Rare	5700	1181
-Incense of Insight	Rare	10900	1184
-Gear Vest	Legendary	5000	657
-Jade Vest	Legendary	9600	660
-Titanium Vest	Legendary	16200	663
-Steam Belt	Legendary	5000	670
-Silver Belt	Legendary	9600	673
-Ceramic Belt	Legendary	16200	676
-Bolt Hat	Legendary	5600	682
-Pearl Hat	Legendary	9600	685
-Fiber Hat	Legendary	16200	688
-Rainbow Gloves	Legendary	7900	694
-Hero Gloves	Legendary	13600	697
-Carbon Gloves	Legendary	16200	700
-Shell Shoes	Legendary	7900	706
-Assassin Shoes	Legendary	13600	709
-Ester Shoes	Legendary	16200	712
-Nacre Choker	Legendary	5100	718
-Goddess Choker	Legendary	9800	721
-Comet Choker	Legendary	11700	724
-Rigid Vest	Legendary	700	730
-Infantry Vest	Legendary	2000	733
-Muscle Belt	Legendary	700	736
-Champion Belt	Legendary	2000	739
-Fluffy Hat	Legendary	700	742
-Fabulous Hat	Legendary	3200	745
-Leather Gloves	Legendary	1400	748
-Smithy Gloves	Legendary	4000	751
-Wolf Shoes	Legendary	1400	754
-Spring Shoes	Legendary	4000	757
-Bunnit Choker	Legendary	1300	760
-Gold Gear Choker	Legendary	3600	763
-Garnet	Legendary	9400	766
-Sapphire	Legendary	16300	769
-Diamond	Legendary	19500	772
-Classic Medal	Legendary	3600	778
-Modern Medal	Legendary	6600	781
-Avant-Garde Medal	Legendary	9500	784
-Iron Headband	Legendary	3200	787
-Ice Headband	Legendary	6200	790
-Optical Headband	Legendary	10400	793
-Moon Cube	Legendary	8500	799
-Star Cube	Legendary	16300	802
-Galaxy Cube	Legendary	19500	805
-Mechanized Greaves	Legendary	4000	811
-Crystal Greaves	Legendary	7700	814
-Graphite Greaves	Legendary	11900	817
-Swordfighting Banner	Legendary	4500	823
-Goddess Banner	Legendary	7700	826
-Ancient Banner	Legendary	11900	829
-Spiked Pauldrons	Legendary	5000	835
-Hero Pauldrons	Legendary	8700	838
-Jet Pauldrons	Legendary	10400	841
-Apprentice Vambraces	Legendary	4900	847
-Boxer Vambraces	Legendary	11900	850
-Hero Vambraces	Legendary	14300	853
-Dark Orb	Legendary	3500	859
-Eraser Orb	Legendary	9100	862
-Bloody Orb	Legendary	13100	865
-Chrome Scarf	Legendary	4500	871
-Unicorn Scarf	Legendary	8200	874
-Quantum Scarf	Legendary	11900	877
-White Belt	Legendary	7100	883
-Black Belt	Legendary	13600	886
-Platinum Belt	Legendary	16200	889
-Soldier Ring	Legendary	6700	895
-Berserk Ring	Legendary	12400	898
-Tyrant Ring	Legendary	17800	901
-Attack Stone	Legendary	900	907
-Assault Stone	Legendary	5400	910
-Break Stone	Legendary	13000	913
-World Tree Drop	Legendary	19500	919
-Male Loincloth	Legendary	10900	922
-Charming Swimsuit	Legendary	16300	922
-Alpha Scope	Legendary	7900	928
-Gamma Scope	Legendary	16500	931
-Beast Hood	Legendary	2100	934
-Camo Hood	Legendary	6700	937
-Skeleton Hood	Legendary	12400	940
-Nopon Mask	Legendary	2800	946
-Metal Nopon Mask	Legendary	9000	949
-Gold Nopon Mask	Legendary	16500	952
-Colorful Feather	Legendary	1600	958
-Silver Feather	Legendary	5000	961
-Phantom Feather	Legendary	8700	964
-Grandarbor Ward	Legendary	1200	970
-Spirit Tree Ward	Legendary	4700	973
-World Tree Ward	Legendary	8900	976
-Friendship Ring	Legendary	600	979
-Affection Ring	Legendary	1500	982
-Promise Ring	Legendary	4700	985
-Harvest Necklace	Legendary	3800	988
-Affection Necklace	Legendary	9900	991
-Holy Necklace	Legendary	15600	994
-Shell Cameo	Legendary	1100	1000
-Chivalric Medal	Legendary	6200	1006
-Military Medal	Legendary	11900	1009
-Round Table Medal	Legendary	14300	1012
-Gauntlet	Legendary	6200	1018
-Bio Gauntlet	Legendary	11900	1021
-Nano-Metal Gauntlet	Legendary	14300	1024
-Eyepatch	Legendary	3200	1030
-Leader's Eyepatch	Legendary	8200	1033
-Hi-Tech Eyepatch	Legendary	13000	1036
-Silver Earrings	Legendary	4500	1055
-Crystal Earrings	Legendary	10900	1058
-Omega Drive	Legendary	19500	1061
-Sigma Drive	Legendary	23800	1064
-Burst Symbol	Legendary	10300	1067
-Critical Symbol	Legendary	14800	1070
-Recovery Symbol	Legendary	8700	1073
-Infinity Symbol	Legendary	16500	1077
-Sword Attachment	Legendary	10700	1081
-Scimitar Attachment	Legendary	10700	1084
-Ring Attachment	Legendary	6900	1087
-Shield Attachment	Legendary	9800	1090
-Arms Attachment	Legendary	9800	1093
-Saber Attachment	Legendary	9800	1096
-Whip Attachment	Legendary	6900	1099
-Edge Attachment	Legendary	6900	1102
-Scythe Attachment	Legendary	10700	1105
-Axe Attachment	Legendary	1200	1108
-Lance Attachment	Legendary	1200	1111
-Cannon Attachment	Legendary	1800	1114
-Hammer Attachment	Legendary	2900	1117
-Katana Attachment	Legendary	3600	1120
-Ball Attachment	Legendary	3600	1123
-Knuckle Attachment	Legendary	5700	1126
-Master Attachment	Legendary	26000	1129
-Cheer Treat	Legendary	6600	1133
-Red Thread	Legendary	1100	1136
-Love Thread	Legendary	5000	1139
-Passion Thread	Legendary	9500	1142
-Activity Amulet	Legendary	2900	1145
-Healing Amulet	Legendary	6900	1148
-Rebirth Amulet	Legendary	10700	1151
-Beta Scope	Legendary	23800	1154
-Rush Hour	Legendary	1400	1160
-Appealing Lamp	Legendary	3200	1163
-Overclocking Bangle	Legendary	5700	1166
-Mint Potpourri	Legendary	3200	1169
-Lavender Potpourri	Legendary	5700	1172
-Priestess's Auspices	Legendary	3200	1175
-Sage's Auspices	Legendary	5700	1178
-Incense of Calm	Legendary	5700	1182
-Incense of Insight	Legendary	10900	1185
-Nopon Doll	Common	10900	1186
-Avian Totem Carving	Legendary	1400	3432
+Abyss Vest	Rare	5000	674
+Gear Vest	Common	5000	662
+Jade Vest	Common	9600	665
+Titanium Vest	Common	16200	668
+Steam Belt	Common	5000	675
+Silver Belt	Common	9600	678
+Ceramic Belt	Common	16200	681
+Bolt Hat	Common	5600	687
+Pearl Hat	Common	9600	690
+Fiber Hat	Common	16200	693
+Rainbow Gloves	Common	7900	699
+Hero Gloves	Common	13600	702
+Carbon Gloves	Common	16200	705
+Shell Shoes	Common	7900	711
+Assassin Shoes	Common	13600	714
+Ester Shoes	Common	16200	717
+Nacre Choker	Common	5100	723
+Goddess Choker	Common	9800	726
+Comet Choker	Common	11700	729
+Rigid Vest	Common	700	735
+Infantry Vest	Common	2000	738
+Muscle Belt	Common	700	741
+Champion Belt	Common	2000	744
+Fluffy Hat	Common	700	747
+Fabulous Hat	Common	3200	750
+Leather Gloves	Common	1400	753
+Smithy Gloves	Common	4000	756
+Wolf Shoes	Common	1400	759
+Spring Shoes	Common	4000	762
+Bunnit Choker	Common	1300	765
+Gold Gear Choker	Common	3600	768
+Garnet	Common	9400	771
+Sapphire	Common	16300	774
+Diamond	Common	19500	777
+Classic Medal	Common	3600	783
+Modern Medal	Common	6600	786
+Avant-Garde Medal	Common	9500	789
+Iron Headband	Common	3200	792
+Ice Headband	Common	6200	795
+Optical Headband	Common	10400	798
+Moon Cube	Common	8500	804
+Star Cube	Common	16300	807
+Galaxy Cube	Common	19500	810
+Mechanized Greaves	Common	4000	816
+Crystal Greaves	Common	7700	819
+Graphite Greaves	Common	11900	822
+Swordfighting Banner	Common	4500	828
+Goddess Banner	Common	7700	831
+Ancient Banner	Common	11900	834
+Spiked Pauldrons	Common	5000	840
+Hero Pauldrons	Common	8700	843
+Jet Pauldrons	Common	10400	846
+Apprentice Vambraces	Common	4900	852
+Boxer Vambraces	Common	11900	855
+Hero Vambraces	Common	14300	858
+Dark Orb	Common	3500	864
+Eraser Orb	Common	9100	867
+Bloody Orb	Common	13100	870
+Chrome Scarf	Common	4500	876
+Unicorn Scarf	Common	8200	879
+Quantum Scarf	Common	11900	882
+White Belt	Common	7100	888
+Black Belt	Common	13600	891
+Platinum Belt	Common	16200	894
+Soldier Ring	Common	6700	900
+Berserk Ring	Common	12400	903
+Tyrant Ring	Common	17800	906
+Attack Stone	Common	900	912
+Assault Stone	Common	5400	915
+Break Stone	Common	13000	918
+World Tree Drop	Common	19500	924
+Male Loincloth	Common	10900	927
+Charming Swimsuit	Common	16300	927
+Alpha Scope	Common	7900	933
+Gamma Scope	Common	16500	936
+Beast Hood	Common	2100	939
+Camo Hood	Common	6700	942
+Skeleton Hood	Common	12400	945
+Nopon Mask	Common	2800	951
+Metal Nopon Mask	Common	9000	954
+Gold Nopon Mask	Common	16500	957
+Colorful Feather	Common	1600	963
+Silver Feather	Common	5000	966
+Phantom Feather	Common	8700	969
+Grandarbor Ward	Common	1200	975
+Spirit Tree Ward	Common	4700	978
+World Tree Ward	Common	8900	981
+Friendship Ring	Common	600	984
+Affection Ring	Common	1500	987
+Promise Ring	Common	4700	990
+Harvest Necklace	Common	3800	993
+Affection Necklace	Common	9900	996
+Holy Necklace	Common	15600	999
+Shell Cameo	Common	1100	1005
+Chivalric Medal	Common	6200	1011
+Military Medal	Common	11900	1014
+Round Table Medal	Common	14300	1017
+Gauntlet	Common	6200	1023
+Bio Gauntlet	Common	11900	1026
+Nano-Metal Gauntlet	Common	14300	1029
+Eyepatch	Common	3200	1035
+Leader's Eyepatch	Common	8200	1038
+Hi-Tech Eyepatch	Common	13000	1041
+Revival Pod	Legendary	29700	1047
+0-Battle Course	Common	39700	1048
+0-Battle Course+	Common	23800	1051
+Alphabet Course	Common	63000	1054
+Alphabet Course+	Common	26000	1057
+Silver Earrings	Common	4500	1060
+Crystal Earrings	Common	10900	1063
+Omega Drive	Common	19500	1066
+Sigma Drive	Common	23800	1069
+Burst Symbol	Common	10300	1072
+Critical Symbol	Common	14800	1075
+Recovery Symbol	Common	8700	1078
+Resurrection Symbol	Legendary	11900	1081
+Infinity Symbol	Common	16500	1082
+Auto-Balancer	Legendary	26000	1085
+Sword Attachment	Common	10700	1086
+Scimitar Attachment	Common	10700	1089
+Ring Attachment	Common	6900	1092
+Shield Attachment	Common	9800	1095
+Arms Attachment	Common	9800	1098
+Saber Attachment	Common	9800	1101
+Whip Attachment	Common	6900	1104
+Edge Attachment	Common	6900	1107
+Scythe Attachment	Common	10700	1110
+Axe Attachment	Common	1200	1113
+Lance Attachment	Common	1200	1116
+Cannon Attachment	Common	1800	1119
+Hammer Attachment	Common	2900	1122
+Katana Attachment	Common	3600	1125
+Ball Attachment	Common	3600	1128
+Knuckle Attachment	Common	5700	1131
+Master Attachment	Common	26000	1134
+Memory Locket	Legendary	1300	1137
+Cheer Treat	Common	6600	1138
+Red Thread	Common	1100	1141
+Love Thread	Common	5000	1144
+Passion Thread	Common	9500	1147
+Activity Amulet	Common	2900	1150
+Healing Amulet	Common	6900	1153
+Rebirth Amulet	Common	10700	1156
+Beta Scope	Common	23800	1159
+Rush Hour	Common	1400	1165
+Appealing Lamp	Common	3200	1168
+Overclocking Bangle	Common	5700	1171
+Mint Potpourri	Common	3200	1174
+Lavender Potpourri	Common	5700	1177
+Priestess's Auspices	Common	3200	1180
+Sage's Auspices	Common	5700	1183
+Incense of Calm	Common	5700	1187
+Incense of Insight	Common	10900	1190
+Gear Vest	Rare	5000	663
+Jade Vest	Rare	9600	666
+Titanium Vest	Rare	16200	669
+Steam Belt	Rare	5000	676
+Silver Belt	Rare	9600	679
+Ceramic Belt	Rare	16200	682
+Bolt Hat	Rare	5600	688
+Pearl Hat	Rare	9600	691
+Fiber Hat	Rare	16200	694
+Rainbow Gloves	Rare	7900	700
+Hero Gloves	Rare	13600	703
+Carbon Gloves	Rare	16200	706
+Shell Shoes	Rare	7900	712
+Assassin Shoes	Rare	13600	715
+Ester Shoes	Rare	16200	718
+Nacre Choker	Rare	5100	724
+Goddess Choker	Rare	9800	727
+Comet Choker	Rare	11700	730
+Rigid Vest	Rare	700	736
+Infantry Vest	Rare	2000	739
+Muscle Belt	Rare	700	742
+Champion Belt	Rare	2000	745
+Fluffy Hat	Rare	700	748
+Fabulous Hat	Rare	3200	751
+Leather Gloves	Rare	1400	754
+Smithy Gloves	Rare	4000	757
+Wolf Shoes	Rare	1400	760
+Spring Shoes	Rare	4000	763
+Bunnit Choker	Rare	1300	766
+Gold Gear Choker	Rare	3600	769
+Garnet	Rare	9400	772
+Sapphire	Rare	16300	775
+Diamond	Rare	19500	778
+Classic Medal	Rare	3600	784
+Modern Medal	Rare	6600	787
+Avant-Garde Medal	Rare	9500	790
+Iron Headband	Rare	3200	793
+Ice Headband	Rare	6200	796
+Optical Headband	Rare	10400	799
+Moon Cube	Rare	8500	805
+Star Cube	Rare	16300	808
+Galaxy Cube	Rare	19500	811
+Mechanized Greaves	Rare	4000	817
+Crystal Greaves	Rare	7700	820
+Graphite Greaves	Rare	11900	823
+Swordfighting Banner	Rare	4500	829
+Goddess Banner	Rare	7700	832
+Ancient Banner	Rare	11900	835
+Spiked Pauldrons	Rare	5000	841
+Hero Pauldrons	Rare	8700	844
+Jet Pauldrons	Rare	10400	847
+Apprentice Vambraces	Rare	4900	853
+Boxer Vambraces	Rare	11900	856
+Hero Vambraces	Rare	14300	859
+Dark Orb	Rare	3500	865
+Eraser Orb	Rare	9100	868
+Bloody Orb	Rare	13100	871
+Chrome Scarf	Rare	4500	877
+Unicorn Scarf	Rare	8200	880
+Quantum Scarf	Rare	11900	883
+White Belt	Rare	7100	889
+Black Belt	Rare	13600	892
+Platinum Belt	Rare	16200	895
+Soldier Ring	Rare	6700	901
+Berserk Ring	Rare	12400	904
+Tyrant Ring	Rare	17800	907
+Attack Stone	Rare	900	913
+Assault Stone	Rare	5400	916
+Break Stone	Rare	13000	919
+World Tree Drop	Rare	19500	925
+Male Loincloth	Rare	10900	928
+Charming Swimsuit	Rare	16300	928
+Alpha Scope	Rare	7900	934
+Gamma Scope	Rare	16500	937
+Beast Hood	Rare	2100	940
+Camo Hood	Rare	6700	943
+Skeleton Hood	Rare	12400	946
+Nopon Mask	Rare	2800	952
+Metal Nopon Mask	Rare	9000	955
+Gold Nopon Mask	Rare	16500	958
+Colorful Feather	Rare	1600	964
+Silver Feather	Rare	5000	967
+Phantom Feather	Rare	8700	970
+Grandarbor Ward	Rare	1200	976
+Spirit Tree Ward	Rare	4700	979
+World Tree Ward	Rare	8900	982
+Friendship Ring	Rare	600	985
+Affection Ring	Rare	1500	988
+Promise Ring	Rare	4700	991
+Harvest Necklace	Rare	3800	994
+Affection Necklace	Rare	9900	997
+Holy Necklace	Rare	15600	1000
+Shell Cameo	Rare	1100	1006
+Chivalric Medal	Rare	6200	1012
+Military Medal	Rare	11900	1015
+Round Table Medal	Rare	14300	1018
+Gauntlet	Rare	6200	1024
+Bio Gauntlet	Rare	11900	1027
+Nano-Metal Gauntlet	Rare	14300	1030
+Eyepatch	Rare	3200	1036
+Leader's Eyepatch	Rare	8200	1039
+Hi-Tech Eyepatch	Rare	13000	1042
+Silver Earrings	Rare	4500	1061
+Crystal Earrings	Rare	10900	1064
+Omega Drive	Rare	19500	1067
+Sigma Drive	Rare	23800	1070
+Burst Symbol	Rare	10300	1073
+Critical Symbol	Rare	14800	1076
+Recovery Symbol	Rare	8700	1079
+Infinity Symbol	Rare	16500	1083
+Sword Attachment	Rare	10700	1087
+Scimitar Attachment	Rare	10700	1090
+Ring Attachment	Rare	6900	1093
+Shield Attachment	Rare	9800	1096
+Arms Attachment	Rare	9800	1099
+Saber Attachment	Rare	9800	1102
+Whip Attachment	Rare	6900	1105
+Edge Attachment	Rare	6900	1108
+Scythe Attachment	Rare	10700	1111
+Axe Attachment	Rare	1200	1114
+Lance Attachment	Rare	1200	1117
+Cannon Attachment	Rare	1800	1120
+Hammer Attachment	Rare	2900	1123
+Katana Attachment	Rare	3600	1126
+Ball Attachment	Rare	3600	1129
+Knuckle Attachment	Rare	5700	1132
+Master Attachment	Rare	26000	1135
+Cheer Treat	Rare	6600	1139
+Red Thread	Rare	1100	1142
+Love Thread	Rare	5000	1145
+Passion Thread	Rare	9500	1148
+Activity Amulet	Rare	2900	1151
+Healing Amulet	Rare	6900	1154
+Rebirth Amulet	Rare	10700	1157
+Beta Scope	Rare	23800	1160
+Rush Hour	Rare	1400	1166
+Appealing Lamp	Rare	3200	1169
+Overclocking Bangle	Rare	5700	1172
+Mint Potpourri	Rare	3200	1175
+Lavender Potpourri	Rare	5700	1178
+Priestess's Auspices	Rare	3200	1181
+Sage's Auspices	Rare	5700	1184
+Incense of Calm	Rare	5700	1188
+Incense of Insight	Rare	10900	1191
+Gear Vest	Legendary	5000	664
+Jade Vest	Legendary	9600	667
+Titanium Vest	Legendary	16200	670
+Steam Belt	Legendary	5000	677
+Silver Belt	Legendary	9600	680
+Ceramic Belt	Legendary	16200	683
+Bolt Hat	Legendary	5600	689
+Pearl Hat	Legendary	9600	692
+Fiber Hat	Legendary	16200	695
+Rainbow Gloves	Legendary	7900	701
+Hero Gloves	Legendary	13600	704
+Carbon Gloves	Legendary	16200	707
+Shell Shoes	Legendary	7900	713
+Assassin Shoes	Legendary	13600	716
+Ester Shoes	Legendary	16200	719
+Nacre Choker	Legendary	5100	725
+Goddess Choker	Legendary	9800	728
+Comet Choker	Legendary	11700	731
+Rigid Vest	Legendary	700	737
+Infantry Vest	Legendary	2000	740
+Muscle Belt	Legendary	700	743
+Champion Belt	Legendary	2000	746
+Fluffy Hat	Legendary	700	749
+Fabulous Hat	Legendary	3200	752
+Leather Gloves	Legendary	1400	755
+Smithy Gloves	Legendary	4000	758
+Wolf Shoes	Legendary	1400	761
+Spring Shoes	Legendary	4000	764
+Bunnit Choker	Legendary	1300	767
+Gold Gear Choker	Legendary	3600	770
+Garnet	Legendary	9400	773
+Sapphire	Legendary	16300	776
+Diamond	Legendary	19500	779
+Classic Medal	Legendary	3600	785
+Modern Medal	Legendary	6600	788
+Avant-Garde Medal	Legendary	9500	791
+Iron Headband	Legendary	3200	794
+Ice Headband	Legendary	6200	797
+Optical Headband	Legendary	10400	800
+Moon Cube	Legendary	8500	806
+Star Cube	Legendary	16300	809
+Galaxy Cube	Legendary	19500	812
+Mechanized Greaves	Legendary	4000	818
+Crystal Greaves	Legendary	7700	821
+Graphite Greaves	Legendary	11900	824
+Swordfighting Banner	Legendary	4500	830
+Goddess Banner	Legendary	7700	833
+Ancient Banner	Legendary	11900	836
+Spiked Pauldrons	Legendary	5000	842
+Hero Pauldrons	Legendary	8700	845
+Jet Pauldrons	Legendary	10400	848
+Apprentice Vambraces	Legendary	4900	854
+Boxer Vambraces	Legendary	11900	857
+Hero Vambraces	Legendary	14300	860
+Dark Orb	Legendary	3500	866
+Eraser Orb	Legendary	9100	869
+Bloody Orb	Legendary	13100	872
+Chrome Scarf	Legendary	4500	878
+Unicorn Scarf	Legendary	8200	881
+Quantum Scarf	Legendary	11900	884
+White Belt	Legendary	7100	890
+Black Belt	Legendary	13600	893
+Platinum Belt	Legendary	16200	896
+Soldier Ring	Legendary	6700	902
+Berserk Ring	Legendary	12400	905
+Tyrant Ring	Legendary	17800	908
+Attack Stone	Legendary	900	914
+Assault Stone	Legendary	5400	917
+Break Stone	Legendary	13000	920
+World Tree Drop	Legendary	19500	926
+Male Loincloth	Legendary	10900	929
+Charming Swimsuit	Legendary	16300	929
+Alpha Scope	Legendary	7900	935
+Gamma Scope	Legendary	16500	938
+Beast Hood	Legendary	2100	941
+Camo Hood	Legendary	6700	944
+Skeleton Hood	Legendary	12400	947
+Nopon Mask	Legendary	2800	953
+Metal Nopon Mask	Legendary	9000	956
+Gold Nopon Mask	Legendary	16500	959
+Colorful Feather	Legendary	1600	965
+Silver Feather	Legendary	5000	968
+Phantom Feather	Legendary	8700	971
+Grandarbor Ward	Legendary	1200	977
+Spirit Tree Ward	Legendary	4700	980
+World Tree Ward	Legendary	8900	983
+Friendship Ring	Legendary	600	986
+Affection Ring	Legendary	1500	989
+Promise Ring	Legendary	4700	992
+Harvest Necklace	Legendary	3800	995
+Affection Necklace	Legendary	9900	998
+Holy Necklace	Legendary	15600	1001
+Shell Cameo	Legendary	1100	1007
+Chivalric Medal	Legendary	6200	1013
+Military Medal	Legendary	11900	1016
+Round Table Medal	Legendary	14300	1019
+Gauntlet	Legendary	6200	1025
+Bio Gauntlet	Legendary	11900	1028
+Nano-Metal Gauntlet	Legendary	14300	1031
+Eyepatch	Legendary	3200	1037
+Leader's Eyepatch	Legendary	8200	1040
+Hi-Tech Eyepatch	Legendary	13000	1043
+Silver Earrings	Legendary	4500	1062
+Crystal Earrings	Legendary	10900	1065
+Omega Drive	Legendary	19500	1068
+Sigma Drive	Legendary	23800	1071
+Burst Symbol	Legendary	10300	1074
+Critical Symbol	Legendary	14800	1077
+Recovery Symbol	Legendary	8700	1080
+Infinity Symbol	Legendary	16500	1084
+Sword Attachment	Legendary	10700	1088
+Scimitar Attachment	Legendary	10700	1091
+Ring Attachment	Legendary	6900	1094
+Shield Attachment	Legendary	9800	1097
+Arms Attachment	Legendary	9800	1100
+Saber Attachment	Legendary	9800	1103
+Whip Attachment	Legendary	6900	1106
+Edge Attachment	Legendary	6900	1109
+Scythe Attachment	Legendary	10700	1112
+Axe Attachment	Legendary	1200	1115
+Lance Attachment	Legendary	1200	1118
+Cannon Attachment	Legendary	1800	1121
+Hammer Attachment	Legendary	2900	1124
+Katana Attachment	Legendary	3600	1127
+Ball Attachment	Legendary	3600	1130
+Knuckle Attachment	Legendary	5700	1133
+Master Attachment	Legendary	26000	1136
+Cheer Treat	Legendary	6600	1140
+Red Thread	Legendary	1100	1143
+Love Thread	Legendary	5000	1146
+Passion Thread	Legendary	9500	1149
+Activity Amulet	Legendary	2900	1152
+Healing Amulet	Legendary	6900	1155
+Rebirth Amulet	Legendary	10700	1158
+Beta Scope	Legendary	23800	1161
+Rush Hour	Legendary	1400	1167
+Appealing Lamp	Legendary	3200	1170
+Overclocking Bangle	Legendary	5700	1173
+Mint Potpourri	Legendary	3200	1176
+Lavender Potpourri	Legendary	5700	1179
+Priestess's Auspices	Legendary	3200	1182
+Sage's Auspices	Legendary	5700	1185
+Incense of Calm	Legendary	5700	1189
+Incense of Insight	Legendary	10900	1192
+Nopon Doll	Common	10900	1193
+Avian Totem Carving	Legendary	1400	3558
+Consul Greaves	Common	22300	1194
+Consul Greaves	Rare	22300	1195
+Consul Greaves	Legendary	22300	1196
+Infinity Greaves	Common	31800	1197
+Infinity Greaves	Rare	31800	1198
+Infinity Greaves	Legendary	31800	1199
+Night-vision Kit	Common	9700	1200
+Night-vision Kit	Rare	9700	1201
+Night-vision Kit	Legendary	9700	1202
+Augmented Vision Kit	Common	13200	1203
+Augmented Vision Kit	Rare	13200	1204
+Augmented Vision Kit	Legendary	13200	1205
+Charm Bangle	Common	15500	1206
+Charm Bangle	Rare	15500	1207
+Charm Bangle	Legendary	15500	1208
+Belemnite Bangle	Common	26100	1209
+Belemnite Bangle	Rare	26100	1210
+Belemnite Bangle	Legendary	26100	1211
+Seven-League Circlet	Common	17200	1212
+Seven-League Circlet	Rare	17200	1213
+Seven-League Circlet	Legendary	17200	1214
+Fighter's Circlet	Common	25000	1215
+Fighter's Circlet	Rare	25000	1216
+Fighter's Circlet	Legendary	25000	1217
+Ocean Earring	Common	23800	1218
+Ocean Earring	Rare	23800	1219
+Ocean Earring	Legendary	23800	1220
+Seven-Seas Earring	Common	34700	1221
+Seven-Seas Earring	Rare	34700	1222
+Seven-Seas Earring	Legendary	34700	1223
+Terror Masque	Common	6600	1224
+Terror Masque	Rare	6600	1225
+Terror Masque	Legendary	6600	1226
+Abyss Masque	Common	18600	1227
+Abyss Masque	Rare	18600	1228
+Abyss Masque	Legendary	18600	1229
+Envoy's Footgear	Common	6600	1230
+Envoy's Footgear	Rare	6600	1231
+Envoy's Footgear	Legendary	6600	1232
+Survivor's Footgear	Common	18600	1233
+Survivor's Footgear	Rare	18600	1234
+Survivor's Footgear	Legendary	18600	1235
+Twin Trunks Vest	Common	20300	671
+Twin Trunks Vest	Rare	20300	672
+Twin Trunks Vest	Legendary	20300	673
+Beast-Hide Vest	Common	20300	684
+Beast-Hide Vest	Rare	20300	685
+Beast-Hide Vest	Legendary	20300	686
+Prairie Cap	Common	20300	696
+Prairie Cap	Rare	20300	697
+Prairie Cap	Legendary	20300	698
+Vivid Mitts	Common	20300	708
+Vivid Mitts	Rare	20300	709
+Vivid Mitts	Legendary	20300	710
+Dauntless Boots	Common	20300	720
+Dauntless Boots	Rare	20300	721
+Dauntless Boots	Legendary	20300	722
+Sunlight Choker	Common	14600	732
+Sunlight Choker	Rare	14600	733
+Sunlight Choker	Legendary	14600	734
+Alexandrite	Common	24400	780
+Alexandrite	Rare	24400	781
+Alexandrite	Legendary	24400	782
+Crimson Headband	Common	13000	801
+Crimson Headband	Rare	13000	802
+Crimson Headband	Legendary	13000	803
+Black Cube	Common	24400	813
+Black Cube	Rare	24400	814
+Black Cube	Legendary	24400	815
+Staunch Boots	Common	14900	825
+Staunch Boots	Rare	14900	826
+Staunch Boots	Legendary	14900	827
+War God Banner	Common	14900	837
+War God Banner	Rare	14900	838
+War God Banner	Legendary	14900	839
+Consul Pauldrons	Common	13000	849
+Consul Pauldrons	Rare	13000	850
+Consul Pauldrons	Legendary	13000	851
+Divine Vambraces	Common	17900	861
+Divine Vambraces	Rare	17900	862
+Divine Vambraces	Legendary	17900	863
+Demon Orb	Common	16400	873
+Demon Orb	Rare	16400	874
+Demon Orb	Legendary	16400	875
+Tachyon Scarf	Common	14900	885
+Tachyon Scarf	Rare	14900	886
+Tachyon Scarf	Legendary	14900	887
+Rainbow Belt	Common	20300	897
+Rainbow Belt	Rare	20300	898
+Rainbow Belt	Legendary	20300	899
+Goliath Ring	Common	22300	909
+Goliath Ring	Rare	22300	910
+Goliath Ring	Legendary	22300	911
+Violent Stone	Common	16300	921
+Violent Stone	Rare	16300	922
+Violent Stone	Legendary	16300	923
+Enlightened Loincloth	Common	20400	930
+Enlightened Loincloth	Rare	20400	931
+Enlightened Loincloth	Legendary	20400	932
+Glamorous Swimsuit	Common	20400	930
+Glamorous Swimsuit	Rare	20400	931
+Glamorous Swimsuit	Legendary	20400	932
+Vanish Hood	Common	15500	948
+Vanish Hood	Rare	15500	949
+Vanish Hood	Legendary	15500	950
+Platinum Nopon Mask	Common	20600	960
+Platinum Nopon Mask	Rare	20600	961
+Platinum Nopon Mask	Legendary	20600	962
+Gargantuan Feather	Common	10900	972
+Gargantuan Feather	Rare	10900	973
+Gargantuan Feather	Legendary	10900	974
+Saint's Necklace	Common	19500	1002
+Saint's Necklace	Rare	19500	1003
+Saint's Necklace	Legendary	19500	1004
+Marble Cameo	Common	7600	1008
+Marble Cameo	Rare	7600	1009
+Marble Cameo	Legendary	7600	1010
+Beatific Medal	Common	17900	1020
+Beatific Medal	Rare	17900	1021
+Beatific Medal	Legendary	17900	1022
+Carbon Gauntlet	Common	17900	1032
+Carbon Gauntlet	Rare	17900	1033
+Carbon Gauntlet	Legendary	17900	1034
+Noise Dampener	Common	16300	1044
+Noise Dampener	Rare	16300	1045
+Noise Dampener	Legendary	16300	1046
+Master Scope	Common	29800	1162
+Master Scope	Rare	29800	1163
+Master Scope	Legendary	29800	1164
+Prototype Suit Rex	Legendary	1000	812
+Candy Stripe Nia	Legendary	1000	1001
+Buster-Mode Tora	Legendary	1000	779
+Dress Uniform Mòrag	Legendary	1000	707
+Embercake Zeke	Legendary	1000	800
 \.
 
 
