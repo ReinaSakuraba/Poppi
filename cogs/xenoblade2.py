@@ -13,16 +13,44 @@ class Xenoblade2:
         """Gives information for a Xenoblade Chronicles 2 art."""
 
         query = """
+                WITH hidden_hits AS (
+                    SELECT art, hit
+                    FROM xeno2.art_ratios
+                    WHERE ratio=255
+                ), hit_data AS (
+                    SELECT
+                        art_hit_frames.art,
+                        art_hit_frames.hit - (
+                            SELECT COUNT(*)
+                            FROM hidden_hits
+                            WHERE hidden_hits.art=art_hit_frames.art
+                            AND hidden_hits.hit < art_hit_frames.hit
+                        ) AS hit,
+                        hit_frame,
+                        reaction,
+                        ROUND(COALESCE(ratio, 1)::numeric / SUM(COALESCE(ratio, 1)::numeric) OVER (PARTITION BY art_hit_frames.art) * 100, 2) AS ratio
+                    FROM xeno2.art_hit_frames
+                    LEFT JOIN hidden_hits
+                    ON art_hit_frames.art=hidden_hits.art
+                    AND art_hit_frames.hit=hidden_hits.hit
+                    LEFT JOIN xeno2.art_reactions
+                    ON art_hit_frames.art=art_reactions.art
+                    AND art_hit_frames.hit=art_reactions.hit
+                    LEFT JOIN xeno2.art_ratios
+                    ON art_hit_frames.art=art_ratios.art
+                    AND art_hit_frames.hit=art_ratios.hit
+                    WHERE hidden_hits.hit IS NULL
+                )
                 SELECT
                     name,
                     driver,
                     weapon,
                     type,
                     damage_ratio,
-                    hits,
+                    COUNT(hit) AS hits,
                     range,
                     recharge,
-                    reaction,
+                    STRING_AGG(DISTINCT reaction, ' / ') AS reactions,
                     (
                         SELECT
                             xeno2.format_caption(
@@ -45,9 +73,15 @@ class Xenoblade2:
                     radius || ' meters',
                     hate,
                     '+' || accuracy_mod || '%',
-                    '+' || crit_mod || '%'
+                    '+' || crit_mod || '%',
+                    STRING_AGG(hit || ': ' || hit_frame, E'\n' ORDER BY hit) AS hit_frames,
+                    STRING_AGG(hit || ': ' || reaction, E'\n' ORDER BY hit) AS reaction_data,
+                    STRING_AGG(hit || ': ' || ratio::float::text || '%', E'\n' ORDER BY hit) AS ratios
                 FROM xeno2.arts
-                WHERE LOWER(name)=$1;
+                LEFT JOIN hit_data
+                ON name=art
+                WHERE LOWER(name)=$1
+                GROUP BY name;
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
@@ -55,7 +89,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2art_search, name=name)
 
-        name, driver, weapon, type_, damage_ratio, hits, range_, recharge, reaction, description, wp, caption, distance, radius, hate, accuracy_mod, crit_mod = record
+        name, driver, weapon, type_, damage_ratio, hits, range_, recharge, reaction, description, wp, caption, distance, radius, hate, accuracy_mod, crit_mod, hit_frames, reaction_data, ratios = record
 
         types = {
             'Physical': 'Damage Ratio',
@@ -83,7 +117,13 @@ class Xenoblade2:
         embed.add_field(name='Aggro', value=hate)
         embed.add_field(name='Accuracy Modifier', value=accuracy_mod)
         embed.add_field(name='Crit Modifier', value=crit_mod)
-        embed.add_field(name='WP', value=wp)
+        embed.add_field(name='WP', value=wp, inline=False)
+        if hit_frames:
+            embed.add_field(name='Hit Frames', value=hit_frames)
+        if reaction_data:
+            embed.add_field(name='Hit Reactions', value=reaction_data)
+        if hits > 1:
+            embed.add_field(name='Damage Distribution', value=ratios)
 
         await ctx.send(embed=embed)
 
