@@ -198,6 +198,48 @@ class Images:
                 b.seek(0)
                 return b
 
+    @commands.command()
+    async def stylize(self, ctx, member: discord.Member = None, intensity: int = 5):
+        member = member or ctx.author
+
+        async with ctx.session.get(member.avatar_url_as(format='png')) as r:
+            f = io.BytesIO(await r.read())
+
+            func = functools.partial(self._stylize, f, intensity)
+            file = await utils.run_in_executor(func, loop=ctx.bot.loop)
+
+            await ctx.send(file=discord.File(file, 'stylized.png'))
+
+    def _stylize(self, data, intensity):
+        with Image.open(data) as image:
+            quantized_image = image.quantize(intensity)
+
+            b = io.BytesIO()
+            quantized_image.save(b, format='png')
+            b.seek(0)
+            return b
+
+    @commands.command()
+    async def scoop(self, ctx, member: discord.Member = None, intensity: int = 5):
+        member = member or ctx.author
+
+        async with ctx.session.get(member.avatar_url_as(format='png')) as r:
+            f = io.BytesIO(await r.read())
+
+            func = functools.partial(self._scoop, f, intensity)
+            file = await utils.run_in_executor(func, loop=ctx.bot.loop)
+
+            await ctx.send(file=discord.File(file, 'stylized.png'))
+
+    def _scoop(self, data, intensity):
+        with Image.open(data).convert('RGB') as image:
+            quantized_image = image.quantize(intensity, method=1)
+
+            b = io.BytesIO()
+            quantized_image.save(b, format='png')
+            b.seek(0)
+            return b
+
 
 def setup(bot):
     bot.add_cog(Images())
