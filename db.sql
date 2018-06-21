@@ -533,6 +533,71 @@ CREATE TABLE xeno2.skills (
 ALTER TABLE xeno2.skills OWNER TO poppi;
 
 --
+-- Name: special_damage_ratios; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.special_damage_ratios (
+    special text NOT NULL,
+    level smallint NOT NULL,
+    damage_ratio smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.special_damage_ratios OWNER TO poppi;
+
+--
+-- Name: special_enhance; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.special_enhance (
+    special text NOT NULL,
+    level smallint NOT NULL,
+    caption smallint
+);
+
+
+ALTER TABLE xeno2.special_enhance OWNER TO poppi;
+
+--
+-- Name: special_hit_frames; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.special_hit_frames (
+    special text NOT NULL,
+    hit smallint NOT NULL,
+    hit_frame smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.special_hit_frames OWNER TO poppi;
+
+--
+-- Name: special_ratios; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.special_ratios (
+    special text NOT NULL,
+    hit smallint NOT NULL,
+    ratio smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.special_ratios OWNER TO poppi;
+
+--
+-- Name: special_reactions; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.special_reactions (
+    special text NOT NULL,
+    hit smallint NOT NULL,
+    reaction text NOT NULL
+);
+
+
+ALTER TABLE xeno2.special_reactions OWNER TO poppi;
+
+--
 -- Name: specials; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -540,11 +605,7 @@ CREATE TABLE xeno2.specials (
     name text NOT NULL,
     level smallint NOT NULL,
     type text NOT NULL,
-    damage_ratio text NOT NULL,
-    hits smallint NOT NULL,
     range text NOT NULL,
-    reaction text NOT NULL,
-    description text NOT NULL,
     caption text NOT NULL,
     distance smallint NOT NULL,
     radius smallint NOT NULL,
@@ -19405,208 +19466,3915 @@ Cheer Master	Mòrag	1384	NG+	15000
 
 
 --
+-- Data for Name: special_damage_ratios; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.special_damage_ratios (special, level, damage_ratio) FROM stdin;
+Flame Nova	1	300
+Flame Nova	2	360
+Flame Nova	3	420
+Flame Nova	4	480
+Flame Nova	5	540
+Flame Nova	6	576
+Prominence Revolt	1	400
+Prominence Revolt	2	450
+Prominence Revolt	3	500
+Prominence Revolt	4	550
+Prominence Revolt	5	600
+Prominence Revolt	6	638
+Blazing End	1	500
+Blazing End	2	570
+Blazing End	3	640
+Blazing End	4	710
+Blazing End	5	780
+Blazing End	6	850
+Ray of Punishment	1	360
+Ray of Punishment	2	400
+Ray of Punishment	3	440
+Ray of Punishment	4	480
+Ray of Punishment	5	520
+Ray of Punishment	6	576
+Photon Edge	1	440
+Photon Edge	2	480
+Photon Edge	3	520
+Photon Edge	4	560
+Photon Edge	5	600
+Photon Edge	6	638
+Lightning Buster	1	625
+Lightning Buster	2	670
+Lightning Buster	3	720
+Lightning Buster	4	770
+Lightning Buster	5	820
+Lightning Buster	6	850
+Starburst	1	720
+Starburst	2	720
+Starburst	3	720
+Starburst	4	720
+Starburst	5	720
+Starburst	6	720
+Radiant Flare	1	870
+Radiant Flare	2	870
+Radiant Flare	3	870
+Radiant Flare	4	870
+Radiant Flare	5	870
+Radiant Flare	6	870
+Genesis Saber	1	1020
+Genesis Saber	2	1020
+Genesis Saber	3	1020
+Genesis Saber	4	1020
+Genesis Saber	5	1020
+Genesis Saber	6	1020
+Last Hope	1	315
+Last Hope	2	350
+Last Hope	3	390
+Last Hope	4	430
+Last Hope	5	470
+Last Hope	6	504
+Merciful Heart	1	420
+Merciful Heart	2	460
+Merciful Heart	3	500
+Merciful Heart	4	540
+Merciful Heart	5	580
+Merciful Heart	6	609
+Redeeming Strike	1	525
+Redeeming Strike	2	560
+Redeeming Strike	3	600
+Redeeming Strike	4	640
+Redeeming Strike	5	680
+Redeeming Strike	6	714
+Raging Tiger	1	300
+Raging Tiger	2	350
+Raging Tiger	3	400
+Raging Tiger	4	450
+Raging Tiger	5	500
+Raging Tiger	6	528
+Aqua Wave	1	360
+Aqua Wave	2	400
+Aqua Wave	3	440
+Aqua Wave	4	480
+Aqua Wave	5	520
+Aqua Wave	6	580
+Wild Roar	1	500
+Wild Roar	2	550
+Wild Roar	3	600
+Wild Roar	4	650
+Wild Roar	5	700
+Wild Roar	6	748
+Poppi Spinning Slash	1	300
+Poppi Spinning Slash	2	340
+Poppi Spinning Slash	3	380
+Poppi Spinning Slash	4	420
+Poppi Spinning Slash	5	460
+Poppi Spinning Slash	6	480
+Noponic Storm	1	400
+Noponic Storm	2	440
+Noponic Storm	3	480
+Noponic Storm	4	520
+Noponic Storm	5	560
+Noponic Storm	6	580
+Poppi Drill	1	500
+Poppi Drill	2	540
+Poppi Drill	3	580
+Poppi Drill	4	620
+Poppi Drill	5	660
+Poppi Drill	6	714
+Poppi Missile	1	300
+Poppi Missile	2	340
+Poppi Missile	3	380
+Poppi Missile	4	420
+Poppi Missile	5	460
+Poppi Missile	6	480
+Poppi Crushing Blow	1	400
+Poppi Crushing Blow	2	440
+Poppi Crushing Blow	3	480
+Poppi Crushing Blow	4	520
+Poppi Crushing Blow	5	560
+Poppi Crushing Blow	6	609
+Noponic Destruction	1	525
+Noponic Destruction	2	570
+Noponic Destruction	3	610
+Noponic Destruction	4	650
+Noponic Destruction	5	690
+Noponic Destruction	6	748
+Poppi Ignition	1	300
+Poppi Ignition	2	340
+Poppi Ignition	3	380
+Poppi Ignition	4	420
+Poppi Ignition	5	460
+Poppi Ignition	6	480
+Noponic Axion	1	400
+Noponic Axion	2	440
+Noponic Axion	3	480
+Noponic Axion	4	520
+Noponic Axion	5	560
+Noponic Axion	6	609
+Poppi Unlimited	1	500
+Poppi Unlimited	2	550
+Poppi Unlimited	3	600
+Poppi Unlimited	4	650
+Poppi Unlimited	5	700
+Poppi Unlimited	6	748
+Heat Haze	1	300
+Heat Haze	2	340
+Heat Haze	3	380
+Heat Haze	4	420
+Heat Haze	5	460
+Heat Haze	6	480
+Will-o'-the-Wisp	1	400
+Will-o'-the-Wisp	2	440
+Will-o'-the-Wisp	3	480
+Will-o'-the-Wisp	4	520
+Will-o'-the-Wisp	5	560
+Will-o'-the-Wisp	6	609
+Swirling Dragon	1	500
+Swirling Dragon	2	550
+Swirling Dragon	3	600
+Swirling Dragon	4	650
+Swirling Dragon	5	700
+Swirling Dragon	6	748
+Lightning Force	1	270
+Lightning Force	2	340
+Lightning Force	3	410
+Lightning Force	4	480
+Lightning Force	5	550
+Lightning Force	6	600
+Electric Circus	1	360
+Electric Circus	2	430
+Electric Circus	3	500
+Electric Circus	4	570
+Electric Circus	5	640
+Electric Circus	6	725
+Thunder Doom	1	450
+Thunder Doom	2	530
+Thunder Doom	3	610
+Thunder Doom	4	690
+Thunder Doom	5	770
+Thunder Doom	6	850
+Death Wing	1	300
+Death Wing	2	340
+Death Wing	3	380
+Death Wing	4	420
+Death Wing	5	460
+Death Wing	6	480
+Crushing Twister	1	400
+Crushing Twister	2	440
+Crushing Twister	3	480
+Crushing Twister	4	520
+Crushing Twister	5	560
+Crushing Twister	6	580
+Feather Typhoon	1	500
+Feather Typhoon	2	540
+Feather Typhoon	3	580
+Feather Typhoon	4	620
+Feather Typhoon	5	660
+Feather Typhoon	6	680
+Storm Edge	1	300
+Storm Edge	2	340
+Storm Edge	3	380
+Storm Edge	4	420
+Storm Edge	5	460
+Storm Edge	6	480
+Engrave	1	400
+Engrave	2	450
+Engrave	3	500
+Engrave	4	550
+Engrave	5	600
+Engrave	6	638
+Death Match	1	550
+Death Match	2	600
+Death Match	3	650
+Death Match	4	700
+Death Match	5	750
+Death Match	6	816
+White Wave	1	300
+White Wave	2	340
+White Wave	3	380
+White Wave	4	420
+White Wave	5	460
+White Wave	6	480
+Sacred Wyrm	1	400
+Sacred Wyrm	2	450
+Sacred Wyrm	3	500
+Sacred Wyrm	4	550
+Sacred Wyrm	5	600
+Sacred Wyrm	6	638
+Dark Judgment	1	550
+Dark Judgment	2	600
+Dark Judgment	3	650
+Dark Judgment	4	700
+Dark Judgment	5	750
+Dark Judgment	6	816
+Swallow's Flight	1	300
+Swallow's Flight	2	340
+Swallow's Flight	3	380
+Swallow's Flight	4	420
+Swallow's Flight	5	460
+Swallow's Flight	6	480
+Great Garland	1	420
+Great Garland	2	460
+Great Garland	3	500
+Great Garland	4	540
+Great Garland	5	580
+Great Garland	6	609
+Dragonfly Slash	1	550
+Dragonfly Slash	2	620
+Dragonfly Slash	3	690
+Dragonfly Slash	4	760
+Dragonfly Slash	5	830
+Dragonfly Slash	6	884
+Crow Beat	1	300
+Crow Beat	2	340
+Crow Beat	3	380
+Crow Beat	4	420
+Crow Beat	5	460
+Crow Beat	6	480
+Crow Feather	1	400
+Crow Feather	2	440
+Crow Feather	3	480
+Crow Feather	4	520
+Crow Feather	5	560
+Crow Feather	6	580
+Final Crow	1	500
+Final Crow	2	540
+Final Crow	3	580
+Final Crow	4	620
+Final Crow	5	660
+Final Crow	6	680
+Shred	1	300
+Shred	2	340
+Shred	3	380
+Shred	4	420
+Shred	5	460
+Shred	6	480
+Skewer	1	400
+Skewer	2	440
+Skewer	3	480
+Skewer	4	520
+Skewer	5	560
+Skewer	6	580
+Cruel World	1	500
+Cruel World	2	540
+Cruel World	3	580
+Cruel World	4	620
+Cruel World	5	660
+Cruel World	6	680
+Diamond Crash	1	300
+Diamond Crash	2	340
+Diamond Crash	3	380
+Diamond Crash	4	420
+Diamond Crash	5	460
+Diamond Crash	6	480
+Diamond Flight	1	420
+Diamond Flight	2	460
+Diamond Flight	3	500
+Diamond Flight	4	540
+Diamond Flight	5	580
+Diamond Flight	6	609
+Diamond Hands	1	550
+Diamond Hands	2	600
+Diamond Hands	3	650
+Diamond Hands	4	700
+Diamond Hands	5	750
+Diamond Hands	6	816
+Dead Ball	1	300
+Dead Ball	2	340
+Dead Ball	3	380
+Dead Ball	4	420
+Dead Ball	5	460
+Dead Ball	6	480
+Berserk March	1	440
+Berserk March	2	500
+Berserk March	3	560
+Berserk March	4	620
+Berserk March	5	680
+Berserk March	6	725
+Earth Breath	1	550
+Earth Breath	2	590
+Earth Breath	3	630
+Earth Breath	4	670
+Earth Breath	5	710
+Earth Breath	6	748
+Water Moon	1	300
+Water Moon	2	340
+Water Moon	3	380
+Water Moon	4	420
+Water Moon	5	460
+Water Moon	6	480
+Breaking Wave	1	400
+Breaking Wave	2	440
+Breaking Wave	3	480
+Breaking Wave	4	520
+Breaking Wave	5	560
+Breaking Wave	6	609
+Midnight Mist	1	500
+Midnight Mist	2	550
+Midnight Mist	3	600
+Midnight Mist	4	650
+Midnight Mist	5	700
+Midnight Mist	6	748
+Tough Break	1	300
+Tough Break	2	340
+Tough Break	3	380
+Tough Break	4	420
+Tough Break	5	460
+Tough Break	6	480
+Cold Judgment	1	400
+Cold Judgment	2	440
+Cold Judgment	3	480
+Cold Judgment	4	520
+Cold Judgment	5	560
+Cold Judgment	6	580
+Justice Blizzard	1	500
+Justice Blizzard	2	540
+Justice Blizzard	3	580
+Justice Blizzard	4	620
+Justice Blizzard	5	660
+Justice Blizzard	6	680
+Brutal Lance	1	300
+Brutal Lance	2	340
+Brutal Lance	3	380
+Brutal Lance	4	420
+Brutal Lance	5	460
+Brutal Lance	6	480
+Termination Blast	1	400
+Termination Blast	2	440
+Termination Blast	3	480
+Termination Blast	4	520
+Termination Blast	5	560
+Termination Blast	6	609
+Hellbound	1	500
+Hellbound	2	550
+Hellbound	3	600
+Hellbound	4	650
+Hellbound	5	700
+Hellbound	6	748
+Dark Serpent	1	300
+Dark Serpent	2	340
+Dark Serpent	3	380
+Dark Serpent	4	420
+Dark Serpent	5	460
+Dark Serpent	6	480
+Blade Vortex	1	400
+Blade Vortex	2	440
+Blade Vortex	3	480
+Blade Vortex	4	520
+Blade Vortex	5	560
+Blade Vortex	6	580
+Grim Moon	1	500
+Grim Moon	2	550
+Grim Moon	3	600
+Grim Moon	4	650
+Grim Moon	5	700
+Grim Moon	6	748
+Innocent Teardrop	1	300
+Innocent Teardrop	2	340
+Innocent Teardrop	3	380
+Innocent Teardrop	4	420
+Innocent Teardrop	5	460
+Innocent Teardrop	6	480
+Bittersweet Dreams	1	400
+Bittersweet Dreams	2	440
+Bittersweet Dreams	3	480
+Bittersweet Dreams	4	520
+Bittersweet Dreams	5	560
+Bittersweet Dreams	6	580
+Leave Me Alone	1	500
+Leave Me Alone	2	540
+Leave Me Alone	3	580
+Leave Me Alone	4	620
+Leave Me Alone	5	660
+Leave Me Alone	6	680
+Flame Crown (Weak)	1	120
+Flame Crown (Weak)	2	130
+Flame Crown (Weak)	3	140
+Flame Crown (Weak)	4	150
+Flame Crown (Weak)	5	160
+Flame Crown (Weak)	6	192
+Tyrant Crush (Weak)	1	160
+Tyrant Crush (Weak)	2	170
+Tyrant Crush (Weak)	3	180
+Tyrant Crush (Weak)	4	190
+Tyrant Crush (Weak)	5	200
+Tyrant Crush (Weak)	6	232
+Kaiser Flare (Weak)	1	200
+Kaiser Flare (Weak)	2	210
+Kaiser Flare (Weak)	3	220
+Kaiser Flare (Weak)	4	230
+Kaiser Flare (Weak)	5	240
+Kaiser Flare (Weak)	6	272
+Flame Crown	1	300
+Flame Crown	2	340
+Flame Crown	3	380
+Flame Crown	4	420
+Flame Crown	5	460
+Flame Crown	6	480
+Tyrant Crush	1	400
+Tyrant Crush	2	450
+Tyrant Crush	3	500
+Tyrant Crush	4	550
+Tyrant Crush	5	600
+Tyrant Crush	6	638
+Kaiser Flare	1	500
+Kaiser Flare	2	550
+Kaiser Flare	3	600
+Kaiser Flare	4	650
+Kaiser Flare	5	700
+Kaiser Flare	6	748
+Open Wide!	1	300
+Open Wide!	2	350
+Open Wide!	3	400
+Open Wide!	4	450
+Open Wide!	5	500
+Open Wide!	6	528
+Snack On This!	1	400
+Snack On This!	2	440
+Snack On This!	3	480
+Snack On This!	4	520
+Snack On This!	5	560
+Snack On This!	6	580
+Gobble 'em Up!	1	550
+Gobble 'em Up!	2	590
+Gobble 'em Up!	3	630
+Gobble 'em Up!	4	670
+Gobble 'em Up!	5	710
+Gobble 'em Up!	6	748
+Lavender Drive	1	300
+Lavender Drive	2	340
+Lavender Drive	3	380
+Lavender Drive	4	420
+Lavender Drive	5	460
+Lavender Drive	6	480
+Lilium Dance	1	400
+Lilium Dance	2	440
+Lilium Dance	3	480
+Lilium Dance	4	520
+Lilium Dance	5	560
+Lilium Dance	6	609
+Physalis Judgment	1	550
+Physalis Judgment	2	600
+Physalis Judgment	3	650
+Physalis Judgment	4	700
+Physalis Judgment	5	750
+Physalis Judgment	6	782
+Sentimental Burst	1	300
+Sentimental Burst	2	340
+Sentimental Burst	3	380
+Sentimental Burst	4	420
+Sentimental Burst	5	460
+Sentimental Burst	6	480
+Hidden Emotion	1	400
+Hidden Emotion	2	440
+Hidden Emotion	3	480
+Hidden Emotion	4	520
+Hidden Emotion	5	560
+Hidden Emotion	6	609
+Secret Desire	1	500
+Secret Desire	2	550
+Secret Desire	3	600
+Secret Desire	4	650
+Secret Desire	5	700
+Secret Desire	6	748
+Foam Blast	1	270
+Foam Blast	2	310
+Foam Blast	3	350
+Foam Blast	4	390
+Foam Blast	5	430
+Foam Blast	6	456
+Geyser Spring	1	400
+Geyser Spring	2	440
+Geyser Spring	3	480
+Geyser Spring	4	520
+Geyser Spring	5	560
+Geyser Spring	6	609
+Fierce Deluge	1	500
+Fierce Deluge	2	540
+Fierce Deluge	3	580
+Fierce Deluge	4	620
+Fierce Deluge	5	660
+Fierce Deluge	6	680
+Ice Slash	1	300
+Ice Slash	2	340
+Ice Slash	3	380
+Ice Slash	4	420
+Ice Slash	5	460
+Ice Slash	6	480
+Frost Banish	1	400
+Frost Banish	2	440
+Frost Banish	3	480
+Frost Banish	4	520
+Frost Banish	5	560
+Frost Banish	6	609
+Rebel Sister	1	500
+Rebel Sister	2	550
+Rebel Sister	3	600
+Rebel Sister	4	650
+Rebel Sister	5	700
+Rebel Sister	6	748
+Cold Sever	1	300
+Cold Sever	2	340
+Cold Sever	3	380
+Cold Sever	4	420
+Cold Sever	5	460
+Cold Sever	6	480
+Punishment Strike	1	400
+Punishment Strike	2	440
+Punishment Strike	3	480
+Punishment Strike	4	520
+Punishment Strike	5	560
+Punishment Strike	6	580
+Extinction Icicle	1	500
+Extinction Icicle	2	540
+Extinction Icicle	3	580
+Extinction Icicle	4	620
+Extinction Icicle	5	660
+Extinction Icicle	6	680
+Electric Pompom	1	300
+Electric Pompom	2	340
+Electric Pompom	3	380
+Electric Pompom	4	420
+Electric Pompom	5	460
+Electric Pompom	6	480
+Vivid Love	1	400
+Vivid Love	2	440
+Vivid Love	3	480
+Vivid Love	4	520
+Vivid Love	5	560
+Vivid Love	6	580
+Angelic Drop	1	500
+Angelic Drop	2	550
+Angelic Drop	3	600
+Angelic Drop	4	650
+Angelic Drop	5	700
+Angelic Drop	6	748
+Nightmare Rondeau	1	300
+Nightmare Rondeau	2	340
+Nightmare Rondeau	3	380
+Nightmare Rondeau	4	420
+Nightmare Rondeau	5	460
+Nightmare Rondeau	6	480
+Shadow Rhapsody	1	400
+Shadow Rhapsody	2	440
+Shadow Rhapsody	3	480
+Shadow Rhapsody	4	520
+Shadow Rhapsody	5	560
+Shadow Rhapsody	6	580
+Decadent Finale	1	500
+Decadent Finale	2	540
+Decadent Finale	3	580
+Decadent Finale	4	620
+Decadent Finale	5	660
+Decadent Finale	6	680
+Beary Strong	1	300
+Beary Strong	2	340
+Beary Strong	3	380
+Beary Strong	4	420
+Beary Strong	5	460
+Beary Strong	6	504
+Beary Helpful	1	380
+Beary Helpful	2	410
+Beary Helpful	3	440
+Beary Helpful	4	470
+Beary Helpful	5	500
+Beary Helpful	6	551
+Beary-Go-Round	1	550
+Beary-Go-Round	2	600
+Beary-Go-Round	3	650
+Beary-Go-Round	4	700
+Beary-Go-Round	5	750
+Beary-Go-Round	6	816
+Flaming Slashwave	1	300
+Flaming Slashwave	2	340
+Flaming Slashwave	3	380
+Flaming Slashwave	4	420
+Flaming Slashwave	5	460
+Flaming Slashwave	6	480
+Immolating Cleave	1	440
+Immolating Cleave	2	480
+Immolating Cleave	3	520
+Immolating Cleave	4	560
+Immolating Cleave	5	600
+Immolating Cleave	6	638
+Extreme Gutsy Spirit	1	600
+Extreme Gutsy Spirit	2	640
+Extreme Gutsy Spirit	3	680
+Extreme Gutsy Spirit	4	720
+Extreme Gutsy Spirit	5	760
+Extreme Gutsy Spirit	6	816
+Fierce Healer	1	285
+Fierce Healer	2	320
+Fierce Healer	3	350
+Fierce Healer	4	380
+Fierce Healer	5	410
+Fierce Healer	6	456
+Wild Grappler	1	400
+Wild Grappler	2	440
+Wild Grappler	3	480
+Wild Grappler	4	520
+Wild Grappler	5	560
+Wild Grappler	6	609
+Organic Automata	1	550
+Organic Automata	2	600
+Organic Automata	3	650
+Organic Automata	4	700
+Organic Automata	5	750
+Organic Automata	6	782
+Dessert Bomb	1	270
+Dessert Bomb	2	300
+Dessert Bomb	3	330
+Dessert Bomb	4	360
+Dessert Bomb	5	390
+Dessert Bomb	6	432
+Tea Leaves	1	380
+Tea Leaves	2	410
+Tea Leaves	3	440
+Tea Leaves	4	470
+Tea Leaves	5	500
+Tea Leaves	6	551
+Golden Font	1	500
+Golden Font	2	540
+Golden Font	3	580
+Golden Font	4	620
+Golden Font	5	660
+Golden Font	6	680
+Healing Bolt	1	300
+Healing Bolt	2	340
+Healing Bolt	3	380
+Healing Bolt	4	420
+Healing Bolt	5	460
+Healing Bolt	6	480
+Ball Lightning	1	400
+Ball Lightning	2	440
+Ball Lightning	3	480
+Ball Lightning	4	520
+Ball Lightning	5	560
+Ball Lightning	6	580
+Thunderstrike	1	550
+Thunderstrike	2	590
+Thunderstrike	3	630
+Thunderstrike	4	670
+Thunderstrike	5	710
+Thunderstrike	6	748
+Harness the Wind	1	300
+Harness the Wind	2	340
+Harness the Wind	3	380
+Harness the Wind	4	420
+Harness the Wind	5	460
+Harness the Wind	6	480
+Slipstream	1	400
+Slipstream	2	440
+Slipstream	3	480
+Slipstream	4	520
+Slipstream	5	560
+Slipstream	6	580
+Mortal Storm	1	550
+Mortal Storm	2	590
+Mortal Storm	3	630
+Mortal Storm	4	670
+Mortal Storm	5	710
+Mortal Storm	6	748
+Bang-Bang Bound	1	285
+Bang-Bang Bound	2	320
+Bang-Bang Bound	3	350
+Bang-Bang Bound	4	380
+Bang-Bang Bound	5	410
+Bang-Bang Bound	6	456
+Shocking Assault	1	380
+Shocking Assault	2	430
+Shocking Assault	3	480
+Shocking Assault	4	530
+Shocking Assault	5	580
+Shocking Assault	6	609
+Rolling Thunder	1	500
+Rolling Thunder	2	550
+Rolling Thunder	3	600
+Rolling Thunder	4	650
+Rolling Thunder	5	700
+Rolling Thunder	6	748
+Diabolic Zephyr	1	330
+Diabolic Zephyr	2	370
+Diabolic Zephyr	3	410
+Diabolic Zephyr	4	450
+Diabolic Zephyr	5	490
+Diabolic Zephyr	6	528
+Adamantine Axe	1	480
+Adamantine Axe	2	520
+Adamantine Axe	3	560
+Adamantine Axe	4	600
+Adamantine Axe	5	640
+Adamantine Axe	6	696
+Ascension Blade	1	625
+Ascension Blade	2	670
+Ascension Blade	3	720
+Ascension Blade	4	770
+Ascension Blade	5	820
+Ascension Blade	6	850
+Blast of Fresh Air	1	315
+Blast of Fresh Air	2	350
+Blast of Fresh Air	3	390
+Blast of Fresh Air	4	430
+Blast of Fresh Air	5	470
+Blast of Fresh Air	6	504
+Whoopsie Crazy	1	440
+Whoopsie Crazy	2	480
+Whoopsie Crazy	3	520
+Whoopsie Crazy	4	560
+Whoopsie Crazy	5	600
+Whoopsie Crazy	6	638
+Wake-Up Whirl	1	575
+Wake-Up Whirl	2	620
+Wake-Up Whirl	3	660
+Wake-Up Whirl	4	700
+Wake-Up Whirl	5	740
+Wake-Up Whirl	6	782
+R-Blade	1	330
+R-Blade	2	370
+R-Blade	3	410
+R-Blade	4	450
+R-Blade	5	490
+R-Blade	6	528
+H-Effect R	1	480
+H-Effect R	2	520
+H-Effect R	3	560
+H-Effect R	4	600
+H-Effect R	5	640
+H-Effect R	6	696
+F-G-Shot	1	650
+F-G-Shot	2	700
+F-G-Shot	3	750
+F-G-Shot	4	800
+F-G-Shot	5	850
+F-G-Shot	6	884
+Empyrean Salvo	1	300
+Empyrean Salvo	2	350
+Empyrean Salvo	3	400
+Empyrean Salvo	4	450
+Empyrean Salvo	5	500
+Empyrean Salvo	6	528
+The Heavens Open	1	400
+The Heavens Open	2	460
+The Heavens Open	3	520
+The Heavens Open	4	580
+The Heavens Open	5	640
+The Heavens Open	6	696
+Final Retribution	1	500
+Final Retribution	2	580
+Final Retribution	3	660
+Final Retribution	4	740
+Final Retribution	5	820
+Final Retribution	6	884
+Blood Altar	1	270
+Blood Altar	2	300
+Blood Altar	3	330
+Blood Altar	4	360
+Blood Altar	5	390
+Blood Altar	6	432
+Tainted Palace	1	360
+Tainted Palace	2	400
+Tainted Palace	3	440
+Tainted Palace	4	480
+Tainted Palace	5	520
+Tainted Palace	6	580
+Accursed Prison	1	450
+Accursed Prison	2	510
+Accursed Prison	3	570
+Accursed Prison	4	630
+Accursed Prison	5	690
+Accursed Prison	6	748
+Heliodor Passion	1	300
+Heliodor Passion	2	340
+Heliodor Passion	3	380
+Heliodor Passion	4	420
+Heliodor Passion	5	460
+Heliodor Passion	6	480
+Star Beryl Courage	1	400
+Star Beryl Courage	2	440
+Star Beryl Courage	3	480
+Star Beryl Courage	4	520
+Star Beryl Courage	5	560
+Star Beryl Courage	6	580
+Rhodochrosite Might	1	500
+Rhodochrosite Might	2	540
+Rhodochrosite Might	3	580
+Rhodochrosite Might	4	620
+Rhodochrosite Might	5	660
+Rhodochrosite Might	6	680
+Crystal Blizzard	1	300
+Crystal Blizzard	2	340
+Crystal Blizzard	3	380
+Crystal Blizzard	4	420
+Crystal Blizzard	5	460
+Crystal Blizzard	6	480
+Snowblind	1	400
+Snowblind	2	440
+Snowblind	3	480
+Snowblind	4	520
+Snowblind	5	560
+Snowblind	6	580
+Frost Queen	1	500
+Frost Queen	2	550
+Frost Queen	3	600
+Frost Queen	4	650
+Frost Queen	5	700
+Frost Queen	6	748
+Stream Edge	1	240
+Stream Edge	2	270
+Stream Edge	3	300
+Stream Edge	4	330
+Stream Edge	5	360
+Stream Edge	6	384
+Falling Axe	1	320
+Falling Axe	2	350
+Falling Axe	3	380
+Falling Axe	4	410
+Falling Axe	5	440
+Falling Axe	6	464
+Axe Throw	1	400
+Axe Throw	2	430
+Axe Throw	3	460
+Axe Throw	4	490
+Axe Throw	5	520
+Axe Throw	6	544
+Round Break	1	270
+Round Break	2	300
+Round Break	3	330
+Round Break	4	360
+Round Break	5	390
+Round Break	6	432
+Boomerang Spear	1	360
+Boomerang Spear	2	390
+Boomerang Spear	3	420
+Boomerang Spear	4	450
+Boomerang Spear	5	480
+Boomerang Spear	6	522
+Splash Lance	1	450
+Splash Lance	2	480
+Splash Lance	3	510
+Splash Lance	4	540
+Splash Lance	5	570
+Splash Lance	6	612
+Sidewinder	1	240
+Sidewinder	2	270
+Sidewinder	3	300
+Sidewinder	4	330
+Sidewinder	5	360
+Sidewinder	6	384
+Aerial Trigger	1	320
+Aerial Trigger	2	350
+Aerial Trigger	3	380
+Aerial Trigger	4	410
+Aerial Trigger	5	440
+Aerial Trigger	6	464
+Swing Cannon	1	400
+Swing Cannon	2	430
+Swing Cannon	3	460
+Swing Cannon	4	490
+Swing Cannon	5	520
+Swing Cannon	6	544
+Shield Charge	1	400
+Shield Charge	2	430
+Shield Charge	3	460
+Shield Charge	4	490
+Shield Charge	5	520
+Shield Charge	6	544
+Smash Circle	1	320
+Smash Circle	2	350
+Smash Circle	3	380
+Smash Circle	4	410
+Smash Circle	5	440
+Smash Circle	6	464
+Hammer Beat	1	240
+Hammer Beat	2	270
+Hammer Beat	3	300
+Hammer Beat	4	330
+Hammer Beat	5	360
+Hammer Beat	6	384
+Excelsior Slash	1	270
+Excelsior Slash	2	300
+Excelsior Slash	3	330
+Excelsior Slash	4	360
+Excelsior Slash	5	390
+Excelsior Slash	6	432
+Triple Edge	1	360
+Triple Edge	2	390
+Triple Edge	3	420
+Triple Edge	4	450
+Triple Edge	5	480
+Triple Edge	6	522
+Multi-Raid	1	400
+Multi-Raid	2	430
+Multi-Raid	3	460
+Multi-Raid	4	490
+Multi-Raid	5	520
+Multi-Raid	6	544
+Grenade Throw	1	320
+Grenade Throw	2	350
+Grenade Throw	3	380
+Grenade Throw	4	410
+Grenade Throw	5	440
+Grenade Throw	6	464
+Grim Sphere	1	400
+Grim Sphere	2	430
+Grim Sphere	3	460
+Grim Sphere	4	490
+Grim Sphere	5	520
+Grim Sphere	6	544
+Shrapnel	1	240
+Shrapnel	2	270
+Shrapnel	3	300
+Shrapnel	4	330
+Shrapnel	5	360
+Shrapnel	6	384
+Flying Knuckle	1	240
+Flying Knuckle	2	270
+Flying Knuckle	3	300
+Flying Knuckle	4	330
+Flying Knuckle	5	360
+Flying Knuckle	6	384
+Assault Rush	1	320
+Assault Rush	2	350
+Assault Rush	3	380
+Assault Rush	4	410
+Assault Rush	5	440
+Assault Rush	6	464
+Executioner	1	400
+Executioner	2	430
+Executioner	3	460
+Executioner	4	490
+Executioner	5	520
+Executioner	6	544
+Axe Break	1	270
+Axe Break	2	300
+Axe Break	3	330
+Axe Break	4	360
+Axe Break	5	390
+Axe Break	6	432
+Ground Charge	1	360
+Ground Charge	2	390
+Ground Charge	3	420
+Ground Charge	4	450
+Ground Charge	5	480
+Ground Charge	6	522
+War Swing	1	450
+War Swing	2	480
+War Swing	3	510
+War Swing	4	540
+War Swing	5	570
+War Swing	6	612
+Speed Glaive	1	240
+Speed Glaive	2	270
+Speed Glaive	3	300
+Speed Glaive	4	330
+Speed Glaive	5	360
+Speed Glaive	6	384
+Beam Halberd	1	320
+Beam Halberd	2	350
+Beam Halberd	3	380
+Beam Halberd	4	410
+Beam Halberd	5	440
+Beam Halberd	6	464
+Hair Trigger	1	400
+Hair Trigger	2	430
+Hair Trigger	3	460
+Hair Trigger	4	490
+Hair Trigger	5	520
+Hair Trigger	6	544
+Beam Bomber	1	400
+Beam Bomber	2	430
+Beam Bomber	3	460
+Beam Bomber	4	490
+Beam Bomber	5	520
+Beam Bomber	6	544
+Zero Burst	1	240
+Zero Burst	2	270
+Zero Burst	3	300
+Zero Burst	4	330
+Zero Burst	5	360
+Zero Burst	6	384
+Spinning Laser	1	320
+Spinning Laser	2	350
+Spinning Laser	3	380
+Spinning Laser	4	410
+Spinning Laser	5	440
+Spinning Laser	6	464
+Wheel Crash	1	450
+Wheel Crash	2	480
+Wheel Crash	3	510
+Wheel Crash	4	540
+Wheel Crash	5	570
+Wheel Crash	6	612
+Ground Impulse	1	270
+Ground Impulse	2	300
+Ground Impulse	3	330
+Ground Impulse	4	360
+Ground Impulse	5	390
+Ground Impulse	6	432
+Turn Strike	1	360
+Turn Strike	2	390
+Turn Strike	3	420
+Turn Strike	4	450
+Turn Strike	5	480
+Turn Strike	6	522
+Drop Edge	1	240
+Drop Edge	2	270
+Drop Edge	3	300
+Drop Edge	4	330
+Drop Edge	5	360
+Drop Edge	6	384
+Counter Spin	1	320
+Counter Spin	2	350
+Counter Spin	3	380
+Counter Spin	4	410
+Counter Spin	5	440
+Counter Spin	6	464
+Magnum Edge	1	400
+Magnum Edge	2	430
+Magnum Edge	3	460
+Magnum Edge	4	490
+Magnum Edge	5	520
+Magnum Edge	6	544
+Metal Blast	1	240
+Metal Blast	2	270
+Metal Blast	3	300
+Metal Blast	4	330
+Metal Blast	5	360
+Metal Blast	6	384
+Wrecking Ball	1	320
+Wrecking Ball	2	350
+Wrecking Ball	3	380
+Wrecking Ball	4	410
+Wrecking Ball	5	440
+Wrecking Ball	6	464
+Violent Swing	1	400
+Violent Swing	2	430
+Violent Swing	3	460
+Violent Swing	4	490
+Violent Swing	5	520
+Violent Swing	6	544
+Bomber Tackle	1	270
+Bomber Tackle	2	300
+Bomber Tackle	3	330
+Bomber Tackle	4	360
+Bomber Tackle	5	390
+Bomber Tackle	6	432
+Head Shaker	1	360
+Head Shaker	2	390
+Head Shaker	3	420
+Head Shaker	4	450
+Head Shaker	5	480
+Head Shaker	6	522
+Knuckle Purge	1	450
+Knuckle Purge	2	480
+Knuckle Purge	3	510
+Knuckle Purge	4	540
+Knuckle Purge	5	570
+Knuckle Purge	6	612
+Axe Strike	1	240
+Axe Strike	2	270
+Axe Strike	3	300
+Axe Strike	4	330
+Axe Strike	5	360
+Axe Strike	6	384
+Megaslash	1	320
+Megaslash	2	350
+Megaslash	3	380
+Megaslash	4	410
+Megaslash	5	440
+Megaslash	6	464
+Flying Cutter	1	400
+Flying Cutter	2	430
+Flying Cutter	3	460
+Flying Cutter	4	490
+Flying Cutter	5	520
+Flying Cutter	6	544
+Multi-Edge	1	240
+Multi-Edge	2	270
+Multi-Edge	3	300
+Multi-Edge	4	330
+Multi-Edge	5	360
+Multi-Edge	6	384
+Trident Buster	1	320
+Trident Buster	2	350
+Trident Buster	3	380
+Trident Buster	4	410
+Trident Buster	5	440
+Trident Buster	6	464
+Spiral Spear	1	400
+Spiral Spear	2	430
+Spiral Spear	3	460
+Spiral Spear	4	490
+Spiral Spear	5	520
+Spiral Spear	6	544
+Flash Barrel	1	270
+Flash Barrel	2	300
+Flash Barrel	3	330
+Flash Barrel	4	360
+Flash Barrel	5	390
+Flash Barrel	6	432
+Blink Bullet	1	360
+Blink Bullet	2	390
+Blink Bullet	3	420
+Blink Bullet	4	450
+Blink Bullet	5	480
+Blink Bullet	6	522
+Beam Barrage	1	450
+Beam Barrage	2	480
+Beam Barrage	3	510
+Beam Barrage	4	540
+Beam Barrage	5	570
+Beam Barrage	6	612
+Aerial Shield	1	240
+Aerial Shield	2	270
+Aerial Shield	3	300
+Aerial Shield	4	330
+Aerial Shield	5	360
+Aerial Shield	6	384
+Drum Roll	1	320
+Drum Roll	2	350
+Drum Roll	3	380
+Drum Roll	4	410
+Drum Roll	5	440
+Drum Roll	6	464
+Hammer Rush	1	400
+Hammer Rush	2	430
+Hammer Rush	3	460
+Hammer Rush	4	490
+Hammer Rush	5	520
+Hammer Rush	6	544
+Sword Dance	1	240
+Sword Dance	2	270
+Sword Dance	3	300
+Sword Dance	4	330
+Sword Dance	5	360
+Sword Dance	6	384
+Rage Cutter	1	320
+Rage Cutter	2	350
+Rage Cutter	3	380
+Rage Cutter	4	410
+Rage Cutter	5	440
+Rage Cutter	6	464
+Air Slash	1	400
+Air Slash	2	430
+Air Slash	3	460
+Air Slash	4	490
+Air Slash	5	520
+Air Slash	6	544
+Flash Bomb	1	270
+Flash Bomb	2	300
+Flash Bomb	3	330
+Flash Bomb	4	360
+Flash Bomb	5	390
+Flash Bomb	6	432
+Power Effect	1	360
+Power Effect	2	390
+Power Effect	3	420
+Power Effect	4	450
+Power Effect	5	480
+Power Effect	6	522
+Rumble Sphere	1	450
+Rumble Sphere	2	480
+Rumble Sphere	3	510
+Rumble Sphere	4	540
+Rumble Sphere	5	570
+Rumble Sphere	6	612
+Thermal Payload	1	240
+Thermal Payload	2	270
+Thermal Payload	3	300
+Thermal Payload	4	330
+Thermal Payload	5	360
+Thermal Payload	6	384
+Leg Blast	1	320
+Leg Blast	2	350
+Leg Blast	3	380
+Leg Blast	4	410
+Leg Blast	5	440
+Leg Blast	6	464
+Flash Blow	1	400
+Flash Blow	2	430
+Flash Blow	3	460
+Flash Blow	4	490
+Flash Blow	5	520
+Flash Blow	6	544
+Ripple Drive	1	270
+Ripple Drive	2	300
+Ripple Drive	3	330
+Ripple Drive	4	360
+Ripple Drive	5	390
+Ripple Drive	6	432
+Dual Fang	1	360
+Dual Fang	2	400
+Dual Fang	3	440
+Dual Fang	4	480
+Dual Fang	5	520
+Dual Fang	6	551
+Screw Edge	1	475
+Screw Edge	2	520
+Screw Edge	3	560
+Screw Edge	4	600
+Screw Edge	5	640
+Screw Edge	6	680
+ECHIDNA	1	330
+ECHIDNA	2	370
+ECHIDNA	3	410
+ECHIDNA	4	450
+ECHIDNA	5	490
+ECHIDNA	6	528
+MAGDALENE 16	1	480
+MAGDALENE 16	2	520
+MAGDALENE 16	3	560
+MAGDALENE 16	4	600
+MAGDALENE 16	5	640
+MAGDALENE 16	6	696
+T-SKYLLA	1	650
+T-SKYLLA	2	700
+T-SKYLLA	3	750
+T-SKYLLA	4	800
+T-SKYLLA	5	850
+T-SKYLLA	6	884
+Buster Cyclone	1	300
+Buster Cyclone	2	350
+Buster Cyclone	3	400
+Buster Cyclone	4	450
+Buster Cyclone	5	500
+Buster Cyclone	6	528
+Buster Cannon	1	400
+Buster Cannon	2	460
+Buster Cannon	3	520
+Buster Cannon	4	580
+Buster Cannon	5	640
+Buster Cannon	6	696
+Buster Mirage	1	500
+Buster Mirage	2	570
+Buster Mirage	3	640
+Buster Mirage	4	710
+Buster Mirage	5	780
+Buster Mirage	6	850
+Monado Purge	1	330
+Monado Purge	2	370
+Monado Purge	3	410
+Monado Purge	4	450
+Monado Purge	5	490
+Monado Purge	6	528
+Monado Cyclone	1	480
+Monado Cyclone	2	520
+Monado Cyclone	3	560
+Monado Cyclone	4	600
+Monado Cyclone	5	640
+Monado Cyclone	6	696
+Monado Buster	1	625
+Monado Buster	2	670
+Monado Buster	3	720
+Monado Buster	4	770
+Monado Buster	5	820
+Monado Buster	6	850
+Hidden Thorn	1	315
+Hidden Thorn	2	350
+Hidden Thorn	3	390
+Hidden Thorn	4	430
+Hidden Thorn	5	470
+Hidden Thorn	6	504
+Power Smash	1	420
+Power Smash	2	460
+Power Smash	3	500
+Power Smash	4	540
+Power Smash	5	580
+Power Smash	6	609
+Lacerate	1	525
+Lacerate	2	560
+Lacerate	3	600
+Lacerate	4	640
+Lacerate	5	680
+Lacerate	6	714
+\.
+
+
+--
+-- Data for Name: special_enhance; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.special_enhance (special, level, caption) FROM stdin;
+Flame Nova	1	2853
+Flame Nova	2	2854
+Flame Nova	3	2855
+Flame Nova	4	2856
+Flame Nova	5	2857
+Flame Nova	6	2857
+Prominence Revolt	1	2953
+Prominence Revolt	2	2954
+Prominence Revolt	3	2955
+Prominence Revolt	4	2956
+Prominence Revolt	5	2957
+Prominence Revolt	6	2957
+Blazing End	1	2933
+Blazing End	2	2934
+Blazing End	3	2935
+Blazing End	4	2936
+Blazing End	5	2937
+Blazing End	6	2937
+Ray of Punishment	1	2953
+Ray of Punishment	2	2954
+Ray of Punishment	3	2955
+Ray of Punishment	4	2956
+Ray of Punishment	5	2957
+Ray of Punishment	6	2957
+Photon Edge	1	2973
+Photon Edge	2	2974
+Photon Edge	3	2975
+Photon Edge	4	2976
+Photon Edge	5	2977
+Photon Edge	6	2977
+Lightning Buster	1	2983
+Lightning Buster	2	2984
+Lightning Buster	3	2985
+Lightning Buster	4	2986
+Lightning Buster	5	2987
+Lightning Buster	6	2987
+Starburst	1	2973
+Starburst	2	2974
+Starburst	3	2975
+Starburst	4	2976
+Starburst	5	2977
+Starburst	6	2977
+Radiant Flare	1	2973
+Radiant Flare	2	2974
+Radiant Flare	3	2975
+Radiant Flare	4	2976
+Radiant Flare	5	2977
+Radiant Flare	6	2977
+Genesis Saber	1	2973
+Genesis Saber	2	2974
+Genesis Saber	3	2975
+Genesis Saber	4	2976
+Genesis Saber	5	2977
+Genesis Saber	6	2977
+Last Hope	1	2923
+Last Hope	2	2924
+Last Hope	3	2925
+Last Hope	4	2926
+Last Hope	5	2927
+Last Hope	6	2927
+Merciful Heart	1	3013
+Merciful Heart	2	3014
+Merciful Heart	3	3015
+Merciful Heart	4	3016
+Merciful Heart	5	3017
+Merciful Heart	6	3017
+Redeeming Strike	1	3028
+Redeeming Strike	2	3029
+Redeeming Strike	3	3030
+Redeeming Strike	4	3031
+Redeeming Strike	5	3032
+Redeeming Strike	6	3032
+Raging Tiger	1	2928
+Raging Tiger	2	2929
+Raging Tiger	3	2930
+Raging Tiger	4	2931
+Raging Tiger	5	2932
+Raging Tiger	6	2932
+Aqua Wave	1	3028
+Aqua Wave	2	3029
+Aqua Wave	3	3030
+Aqua Wave	4	3031
+Aqua Wave	5	3032
+Aqua Wave	6	3032
+Wild Roar	1	3013
+Wild Roar	2	3014
+Wild Roar	3	3015
+Wild Roar	4	3016
+Wild Roar	5	3017
+Wild Roar	6	3017
+Heat Haze	1	3003
+Heat Haze	2	3004
+Heat Haze	3	3005
+Heat Haze	4	3006
+Heat Haze	5	3007
+Heat Haze	6	3007
+Will-o'-the-Wisp	1	2958
+Will-o'-the-Wisp	2	2959
+Will-o'-the-Wisp	3	2960
+Will-o'-the-Wisp	4	2961
+Will-o'-the-Wisp	5	2962
+Will-o'-the-Wisp	6	2962
+Swirling Dragon	1	2983
+Swirling Dragon	2	2984
+Swirling Dragon	3	2985
+Swirling Dragon	4	2986
+Swirling Dragon	5	2987
+Swirling Dragon	6	2987
+Lightning Force	1	2878
+Lightning Force	2	2879
+Lightning Force	3	2880
+Lightning Force	4	2881
+Lightning Force	5	2882
+Lightning Force	6	2882
+Electric Circus	1	2933
+Electric Circus	2	2934
+Electric Circus	3	2935
+Electric Circus	4	2936
+Electric Circus	5	2937
+Electric Circus	6	2937
+Thunder Doom	1	2933
+Thunder Doom	2	2934
+Thunder Doom	3	2935
+Thunder Doom	4	2936
+Thunder Doom	5	2937
+Thunder Doom	6	2937
+Death Wing	1	2863
+Death Wing	2	2864
+Death Wing	3	2865
+Death Wing	4	2866
+Death Wing	5	2867
+Death Wing	6	2867
+Crushing Twister	1	2983
+Crushing Twister	2	2984
+Crushing Twister	3	2985
+Crushing Twister	4	2986
+Crushing Twister	5	2987
+Crushing Twister	6	2987
+Feather Typhoon	1	2898
+Feather Typhoon	2	2899
+Feather Typhoon	3	2900
+Feather Typhoon	4	2901
+Feather Typhoon	5	2902
+Feather Typhoon	6	2902
+Storm Edge	1	2933
+Storm Edge	2	2934
+Storm Edge	3	2935
+Storm Edge	4	2936
+Storm Edge	5	2937
+Storm Edge	6	2937
+Engrave	1	3003
+Engrave	2	3004
+Engrave	3	3005
+Engrave	4	3006
+Engrave	5	3007
+Engrave	6	3007
+Death Match	1	2973
+Death Match	2	2974
+Death Match	3	2975
+Death Match	4	2976
+Death Match	5	2977
+Death Match	6	2977
+White Wave	1	3028
+White Wave	2	3029
+White Wave	3	3030
+White Wave	4	3031
+White Wave	5	3032
+White Wave	6	3032
+Sacred Wyrm	1	2993
+Sacred Wyrm	2	2994
+Sacred Wyrm	3	2995
+Sacred Wyrm	4	2996
+Sacred Wyrm	5	2997
+Sacred Wyrm	6	2997
+Dark Judgment	1	2923
+Dark Judgment	2	2924
+Dark Judgment	3	2925
+Dark Judgment	4	2926
+Dark Judgment	5	2927
+Dark Judgment	6	2927
+Swallow's Flight	1	2933
+Swallow's Flight	2	2934
+Swallow's Flight	3	2935
+Swallow's Flight	4	2936
+Swallow's Flight	5	2937
+Swallow's Flight	6	2937
+Great Garland	1	2953
+Great Garland	2	2954
+Great Garland	3	2955
+Great Garland	4	2956
+Great Garland	5	2957
+Great Garland	6	2957
+Dragonfly Slash	1	2983
+Dragonfly Slash	2	2984
+Dragonfly Slash	3	2985
+Dragonfly Slash	4	2986
+Dragonfly Slash	5	2987
+Dragonfly Slash	6	2987
+Crow Beat	1	3003
+Crow Beat	2	3004
+Crow Beat	3	3005
+Crow Beat	4	3006
+Crow Beat	5	3007
+Crow Beat	6	3007
+Crow Feather	1	2958
+Crow Feather	2	2959
+Crow Feather	3	2960
+Crow Feather	4	2961
+Crow Feather	5	2962
+Crow Feather	6	2962
+Final Crow	1	2988
+Final Crow	2	2989
+Final Crow	3	2990
+Final Crow	4	2991
+Final Crow	5	2992
+Final Crow	6	2992
+Shred	1	2948
+Shred	2	2949
+Shred	3	2950
+Shred	4	2951
+Shred	5	2952
+Shred	6	2952
+Skewer	1	2993
+Skewer	2	2994
+Skewer	3	2995
+Skewer	4	2996
+Skewer	5	2997
+Skewer	6	2997
+Cruel World	1	2973
+Cruel World	2	2974
+Cruel World	3	2975
+Cruel World	4	2976
+Cruel World	5	2977
+Cruel World	6	2977
+Diamond Crash	1	2953
+Diamond Crash	2	2954
+Diamond Crash	3	2955
+Diamond Crash	4	2956
+Diamond Crash	5	2957
+Diamond Crash	6	2957
+Diamond Flight	1	3018
+Diamond Flight	2	3019
+Diamond Flight	3	3020
+Diamond Flight	4	3021
+Diamond Flight	5	3022
+Diamond Flight	6	3022
+Diamond Hands	1	2973
+Diamond Hands	2	2974
+Diamond Hands	3	2975
+Diamond Hands	4	2976
+Diamond Hands	5	2977
+Diamond Hands	6	2977
+Dead Ball	1	2973
+Dead Ball	2	2974
+Dead Ball	3	2975
+Dead Ball	4	2976
+Dead Ball	5	2977
+Dead Ball	6	2977
+Berserk March	1	3003
+Berserk March	2	3004
+Berserk March	3	3005
+Berserk March	4	3006
+Berserk March	5	3007
+Berserk March	6	3007
+Earth Breath	1	3028
+Earth Breath	2	3029
+Earth Breath	3	3030
+Earth Breath	4	3031
+Earth Breath	5	3032
+Earth Breath	6	3032
+Water Moon	1	2973
+Water Moon	2	2974
+Water Moon	3	2975
+Water Moon	4	2976
+Water Moon	5	2977
+Water Moon	6	2977
+Breaking Wave	1	2933
+Breaking Wave	2	2934
+Breaking Wave	3	2935
+Breaking Wave	4	2936
+Breaking Wave	5	2937
+Breaking Wave	6	2937
+Midnight Mist	1	2988
+Midnight Mist	2	2989
+Midnight Mist	3	2990
+Midnight Mist	4	2991
+Midnight Mist	5	2992
+Midnight Mist	6	2992
+Tough Break	1	2988
+Tough Break	2	2989
+Tough Break	3	2990
+Tough Break	4	2991
+Tough Break	5	2992
+Tough Break	6	2992
+Cold Judgment	1	2953
+Cold Judgment	2	2954
+Cold Judgment	3	2955
+Cold Judgment	4	2956
+Cold Judgment	5	2957
+Cold Judgment	6	2957
+Justice Blizzard	1	2983
+Justice Blizzard	2	2984
+Justice Blizzard	3	2985
+Justice Blizzard	4	2986
+Justice Blizzard	5	2987
+Justice Blizzard	6	2987
+Brutal Lance	1	2953
+Brutal Lance	2	2954
+Brutal Lance	3	2955
+Brutal Lance	4	2956
+Brutal Lance	5	2957
+Brutal Lance	6	2957
+Termination Blast	1	2983
+Termination Blast	2	2984
+Termination Blast	3	2985
+Termination Blast	4	2986
+Termination Blast	5	2987
+Termination Blast	6	2987
+Hellbound	1	2973
+Hellbound	2	2974
+Hellbound	3	2975
+Hellbound	4	2976
+Hellbound	5	2977
+Hellbound	6	2977
+Dark Serpent	1	3003
+Dark Serpent	2	3004
+Dark Serpent	3	3005
+Dark Serpent	4	3006
+Dark Serpent	5	3007
+Dark Serpent	6	3007
+Blade Vortex	1	2988
+Blade Vortex	2	2989
+Blade Vortex	3	2990
+Blade Vortex	4	2991
+Blade Vortex	5	2992
+Blade Vortex	6	2992
+Grim Moon	1	3033
+Grim Moon	2	3034
+Grim Moon	3	3035
+Grim Moon	4	3036
+Grim Moon	5	3037
+Grim Moon	6	3037
+Innocent Teardrop	1	3023
+Innocent Teardrop	2	3024
+Innocent Teardrop	3	3025
+Innocent Teardrop	4	3026
+Innocent Teardrop	5	3027
+Innocent Teardrop	6	3027
+Bittersweet Dreams	1	3018
+Bittersweet Dreams	2	3019
+Bittersweet Dreams	3	3020
+Bittersweet Dreams	4	3021
+Bittersweet Dreams	5	3022
+Bittersweet Dreams	6	3022
+Leave Me Alone	1	2953
+Leave Me Alone	2	2954
+Leave Me Alone	3	2955
+Leave Me Alone	4	2956
+Leave Me Alone	5	2957
+Leave Me Alone	6	2957
+Flame Crown (Weak)	1	2868
+Flame Crown (Weak)	2	2869
+Flame Crown (Weak)	3	2870
+Flame Crown (Weak)	4	2871
+Flame Crown (Weak)	5	2872
+Flame Crown (Weak)	6	2872
+Tyrant Crush (Weak)	1	2933
+Tyrant Crush (Weak)	2	2934
+Tyrant Crush (Weak)	3	2935
+Tyrant Crush (Weak)	4	2936
+Tyrant Crush (Weak)	5	2937
+Tyrant Crush (Weak)	6	2937
+Kaiser Flare (Weak)	1	2983
+Kaiser Flare (Weak)	2	2984
+Kaiser Flare (Weak)	3	2985
+Kaiser Flare (Weak)	4	2986
+Kaiser Flare (Weak)	5	2987
+Kaiser Flare (Weak)	6	2987
+Flame Crown	1	2868
+Flame Crown	2	2869
+Flame Crown	3	2870
+Flame Crown	4	2871
+Flame Crown	5	2872
+Flame Crown	6	2872
+Tyrant Crush	1	2933
+Tyrant Crush	2	2934
+Tyrant Crush	3	2935
+Tyrant Crush	4	2936
+Tyrant Crush	5	2937
+Tyrant Crush	6	2937
+Kaiser Flare	1	2983
+Kaiser Flare	2	2984
+Kaiser Flare	3	2985
+Kaiser Flare	4	2986
+Kaiser Flare	5	2987
+Kaiser Flare	6	2987
+Open Wide!	1	2928
+Open Wide!	2	2929
+Open Wide!	3	2930
+Open Wide!	4	2931
+Open Wide!	5	2932
+Open Wide!	6	2932
+Snack On This!	1	2923
+Snack On This!	2	2924
+Snack On This!	3	2925
+Snack On This!	4	2926
+Snack On This!	5	2927
+Snack On This!	6	2927
+Gobble 'em Up!	1	3028
+Gobble 'em Up!	2	3029
+Gobble 'em Up!	3	3030
+Gobble 'em Up!	4	3031
+Gobble 'em Up!	5	3032
+Gobble 'em Up!	6	3032
+Lavender Drive	1	2958
+Lavender Drive	2	2959
+Lavender Drive	3	2960
+Lavender Drive	4	2961
+Lavender Drive	5	2962
+Lavender Drive	6	2962
+Lilium Dance	1	3028
+Lilium Dance	2	3029
+Lilium Dance	3	3030
+Lilium Dance	4	3031
+Lilium Dance	5	3032
+Lilium Dance	6	3032
+Physalis Judgment	1	3013
+Physalis Judgment	2	3014
+Physalis Judgment	3	3015
+Physalis Judgment	4	3016
+Physalis Judgment	5	3017
+Physalis Judgment	6	3017
+Sentimental Burst	1	3003
+Sentimental Burst	2	3004
+Sentimental Burst	3	3005
+Sentimental Burst	4	3006
+Sentimental Burst	5	3007
+Sentimental Burst	6	3007
+Hidden Emotion	1	2988
+Hidden Emotion	2	2989
+Hidden Emotion	3	2990
+Hidden Emotion	4	2991
+Hidden Emotion	5	2992
+Hidden Emotion	6	2992
+Secret Desire	1	2983
+Secret Desire	2	2984
+Secret Desire	3	2985
+Secret Desire	4	2986
+Secret Desire	5	2987
+Secret Desire	6	2987
+Foam Blast	1	3018
+Foam Blast	2	3019
+Foam Blast	3	3020
+Foam Blast	4	3021
+Foam Blast	5	3022
+Foam Blast	6	3022
+Geyser Spring	1	2973
+Geyser Spring	2	2974
+Geyser Spring	3	2975
+Geyser Spring	4	2976
+Geyser Spring	5	2977
+Geyser Spring	6	2977
+Fierce Deluge	1	2943
+Fierce Deluge	2	2944
+Fierce Deluge	3	2945
+Fierce Deluge	4	2946
+Fierce Deluge	5	2947
+Fierce Deluge	6	2947
+Ice Slash	1	3003
+Ice Slash	2	3004
+Ice Slash	3	3005
+Ice Slash	4	3006
+Ice Slash	5	3007
+Ice Slash	6	3007
+Frost Banish	1	2988
+Frost Banish	2	2989
+Frost Banish	3	2990
+Frost Banish	4	2991
+Frost Banish	5	2992
+Frost Banish	6	2992
+Rebel Sister	1	2933
+Rebel Sister	2	2934
+Rebel Sister	3	2935
+Rebel Sister	4	2936
+Rebel Sister	5	2937
+Rebel Sister	6	2937
+Cold Sever	1	2943
+Cold Sever	2	2944
+Cold Sever	3	2945
+Cold Sever	4	2946
+Cold Sever	5	2947
+Cold Sever	6	2947
+Punishment Strike	1	3018
+Punishment Strike	2	3019
+Punishment Strike	3	3020
+Punishment Strike	4	3021
+Punishment Strike	5	3022
+Punishment Strike	6	3022
+Extinction Icicle	1	2968
+Extinction Icicle	2	2969
+Extinction Icicle	3	2970
+Extinction Icicle	4	2971
+Extinction Icicle	5	2972
+Extinction Icicle	6	2972
+Electric Pompom	1	2958
+Electric Pompom	2	2959
+Electric Pompom	3	2960
+Electric Pompom	4	2961
+Electric Pompom	5	2962
+Electric Pompom	6	2962
+Vivid Love	1	3013
+Vivid Love	2	3014
+Vivid Love	3	3015
+Vivid Love	4	3016
+Vivid Love	5	3017
+Vivid Love	6	3017
+Angelic Drop	1	3028
+Angelic Drop	2	3029
+Angelic Drop	3	3030
+Angelic Drop	4	3031
+Angelic Drop	5	3032
+Angelic Drop	6	3032
+Nightmare Rondeau	1	2983
+Nightmare Rondeau	2	2984
+Nightmare Rondeau	3	2985
+Nightmare Rondeau	4	2986
+Nightmare Rondeau	5	2987
+Nightmare Rondeau	6	2987
+Shadow Rhapsody	1	2983
+Shadow Rhapsody	2	2984
+Shadow Rhapsody	3	2985
+Shadow Rhapsody	4	2986
+Shadow Rhapsody	5	2987
+Shadow Rhapsody	6	2987
+Decadent Finale	1	2983
+Decadent Finale	2	2984
+Decadent Finale	3	2985
+Decadent Finale	4	2986
+Decadent Finale	5	2987
+Decadent Finale	6	2987
+Beary Strong	1	3013
+Beary Strong	2	3014
+Beary Strong	3	3015
+Beary Strong	4	3016
+Beary Strong	5	3017
+Beary Strong	6	3017
+Beary Helpful	1	3028
+Beary Helpful	2	3029
+Beary Helpful	3	3030
+Beary Helpful	4	3031
+Beary Helpful	5	3032
+Beary Helpful	6	3032
+Beary-Go-Round	1	2983
+Beary-Go-Round	2	2984
+Beary-Go-Round	3	2985
+Beary-Go-Round	4	2986
+Beary-Go-Round	5	2987
+Beary-Go-Round	6	2987
+Flaming Slashwave	1	3003
+Flaming Slashwave	2	3004
+Flaming Slashwave	3	3005
+Flaming Slashwave	4	3006
+Flaming Slashwave	5	3007
+Flaming Slashwave	6	3007
+Immolating Cleave	1	2958
+Immolating Cleave	2	2959
+Immolating Cleave	3	2960
+Immolating Cleave	4	2961
+Immolating Cleave	5	2962
+Immolating Cleave	6	2962
+Extreme Gutsy Spirit	1	2973
+Extreme Gutsy Spirit	2	2974
+Extreme Gutsy Spirit	3	2975
+Extreme Gutsy Spirit	4	2976
+Extreme Gutsy Spirit	5	2977
+Extreme Gutsy Spirit	6	2977
+Fierce Healer	1	3028
+Fierce Healer	2	3029
+Fierce Healer	3	3030
+Fierce Healer	4	3031
+Fierce Healer	5	3032
+Fierce Healer	6	3032
+Wild Grappler	1	3013
+Wild Grappler	2	3014
+Wild Grappler	3	3015
+Wild Grappler	4	3016
+Wild Grappler	5	3017
+Wild Grappler	6	3017
+Organic Automata	1	3028
+Organic Automata	2	3029
+Organic Automata	3	3030
+Organic Automata	4	3031
+Organic Automata	5	3032
+Organic Automata	6	3032
+Dessert Bomb	1	2993
+Dessert Bomb	2	2994
+Dessert Bomb	3	2995
+Dessert Bomb	4	2996
+Dessert Bomb	5	2997
+Dessert Bomb	6	2997
+Tea Leaves	1	2933
+Tea Leaves	2	2934
+Tea Leaves	3	2935
+Tea Leaves	4	2936
+Tea Leaves	5	2937
+Tea Leaves	6	2937
+Golden Font	1	3038
+Golden Font	2	3039
+Golden Font	3	3040
+Golden Font	4	3041
+Golden Font	5	3042
+Golden Font	6	3042
+Healing Bolt	1	3028
+Healing Bolt	2	3029
+Healing Bolt	3	3030
+Healing Bolt	4	3031
+Healing Bolt	5	3032
+Healing Bolt	6	3032
+Ball Lightning	1	2878
+Ball Lightning	2	2879
+Ball Lightning	3	2880
+Ball Lightning	4	2881
+Ball Lightning	5	2882
+Ball Lightning	6	2882
+Thunderstrike	1	3013
+Thunderstrike	2	3014
+Thunderstrike	3	3015
+Thunderstrike	4	3016
+Thunderstrike	5	3017
+Thunderstrike	6	3017
+Harness the Wind	1	3018
+Harness the Wind	2	3019
+Harness the Wind	3	3020
+Harness the Wind	4	3021
+Harness the Wind	5	3022
+Harness the Wind	6	3022
+Slipstream	1	2973
+Slipstream	2	2974
+Slipstream	3	2975
+Slipstream	4	2976
+Slipstream	5	2977
+Slipstream	6	2977
+Mortal Storm	1	2973
+Mortal Storm	2	2974
+Mortal Storm	3	2975
+Mortal Storm	4	2976
+Mortal Storm	5	2977
+Mortal Storm	6	2977
+Bang-Bang Bound	1	2953
+Bang-Bang Bound	2	2954
+Bang-Bang Bound	3	2955
+Bang-Bang Bound	4	2956
+Bang-Bang Bound	5	2957
+Bang-Bang Bound	6	2957
+Shocking Assault	1	2958
+Shocking Assault	2	2959
+Shocking Assault	3	2960
+Shocking Assault	4	2961
+Shocking Assault	5	2962
+Shocking Assault	6	2962
+Rolling Thunder	1	3003
+Rolling Thunder	2	3004
+Rolling Thunder	3	3005
+Rolling Thunder	4	3006
+Rolling Thunder	5	3007
+Rolling Thunder	6	3007
+Diabolic Zephyr	1	2983
+Diabolic Zephyr	2	2984
+Diabolic Zephyr	3	2985
+Diabolic Zephyr	4	2986
+Diabolic Zephyr	5	2987
+Diabolic Zephyr	6	2987
+Adamantine Axe	1	2953
+Adamantine Axe	2	2954
+Adamantine Axe	3	2955
+Adamantine Axe	4	2956
+Adamantine Axe	5	2957
+Adamantine Axe	6	2957
+Ascension Blade	1	2963
+Ascension Blade	2	2964
+Ascension Blade	3	2965
+Ascension Blade	4	2966
+Ascension Blade	5	2967
+Ascension Blade	6	2967
+Blast of Fresh Air	1	3023
+Blast of Fresh Air	2	3024
+Blast of Fresh Air	3	3025
+Blast of Fresh Air	4	3026
+Blast of Fresh Air	5	3027
+Blast of Fresh Air	6	3027
+Whoopsie Crazy	1	3003
+Whoopsie Crazy	2	3004
+Whoopsie Crazy	3	3005
+Whoopsie Crazy	4	3006
+Whoopsie Crazy	5	3007
+Whoopsie Crazy	6	3007
+Wake-Up Whirl	1	2953
+Wake-Up Whirl	2	2954
+Wake-Up Whirl	3	2955
+Wake-Up Whirl	4	2956
+Wake-Up Whirl	5	2957
+Wake-Up Whirl	6	2957
+R-Blade	1	2933
+R-Blade	2	2934
+R-Blade	3	2935
+R-Blade	4	2936
+R-Blade	5	2937
+R-Blade	6	2937
+H-Effect R	1	3028
+H-Effect R	2	3029
+H-Effect R	3	3030
+H-Effect R	4	3031
+H-Effect R	5	3032
+H-Effect R	6	3032
+F-G-Shot	1	2973
+F-G-Shot	2	2974
+F-G-Shot	3	2975
+F-G-Shot	4	2976
+F-G-Shot	5	2977
+F-G-Shot	6	2977
+Empyrean Salvo	1	2933
+Empyrean Salvo	2	2934
+Empyrean Salvo	3	2935
+Empyrean Salvo	4	2936
+Empyrean Salvo	5	2937
+Empyrean Salvo	6	2937
+The Heavens Open	1	2973
+The Heavens Open	2	2974
+The Heavens Open	3	2975
+The Heavens Open	4	2976
+The Heavens Open	5	2977
+The Heavens Open	6	2977
+Final Retribution	1	2983
+Final Retribution	2	2984
+Final Retribution	3	2985
+Final Retribution	4	2986
+Final Retribution	5	2987
+Final Retribution	6	2987
+Blood Altar	1	2983
+Blood Altar	2	2984
+Blood Altar	3	2985
+Blood Altar	4	2986
+Blood Altar	5	2987
+Blood Altar	6	2987
+Tainted Palace	1	2888
+Tainted Palace	2	2889
+Tainted Palace	3	2890
+Tainted Palace	4	2891
+Tainted Palace	5	2892
+Tainted Palace	6	2892
+Accursed Prison	1	2973
+Accursed Prison	2	2974
+Accursed Prison	3	2975
+Accursed Prison	4	2976
+Accursed Prison	5	2977
+Accursed Prison	6	2977
+Heliodor Passion	1	2958
+Heliodor Passion	2	2959
+Heliodor Passion	3	2960
+Heliodor Passion	4	2961
+Heliodor Passion	5	2962
+Heliodor Passion	6	2962
+Star Beryl Courage	1	2953
+Star Beryl Courage	2	2954
+Star Beryl Courage	3	2955
+Star Beryl Courage	4	2956
+Star Beryl Courage	5	2957
+Star Beryl Courage	6	2957
+Rhodochrosite Might	1	2933
+Rhodochrosite Might	2	2934
+Rhodochrosite Might	3	2935
+Rhodochrosite Might	4	2936
+Rhodochrosite Might	5	2937
+Rhodochrosite Might	6	2937
+Crystal Blizzard	1	2933
+Crystal Blizzard	2	2934
+Crystal Blizzard	3	2935
+Crystal Blizzard	4	2936
+Crystal Blizzard	5	2937
+Crystal Blizzard	6	2937
+Snowblind	1	3013
+Snowblind	2	3014
+Snowblind	3	3015
+Snowblind	4	3016
+Snowblind	5	3017
+Snowblind	6	3017
+Frost Queen	1	3028
+Frost Queen	2	3029
+Frost Queen	3	3030
+Frost Queen	4	3031
+Frost Queen	5	3032
+Frost Queen	6	3032
+Stream Edge	1	2973
+Stream Edge	2	2974
+Stream Edge	3	2975
+Stream Edge	4	2976
+Stream Edge	5	2977
+Stream Edge	6	2977
+Falling Axe	1	2953
+Falling Axe	2	2954
+Falling Axe	3	2955
+Falling Axe	4	2956
+Falling Axe	5	2957
+Falling Axe	6	2957
+Axe Throw	1	2868
+Axe Throw	2	2869
+Axe Throw	3	2870
+Axe Throw	4	2871
+Axe Throw	5	2872
+Axe Throw	6	2872
+Round Break	1	2953
+Round Break	2	2954
+Round Break	3	2955
+Round Break	4	2956
+Round Break	5	2957
+Round Break	6	2957
+Boomerang Spear	1	2858
+Boomerang Spear	2	2859
+Boomerang Spear	3	2860
+Boomerang Spear	4	2861
+Boomerang Spear	5	2862
+Boomerang Spear	6	2862
+Splash Lance	1	3018
+Splash Lance	2	3019
+Splash Lance	3	3020
+Splash Lance	4	3021
+Splash Lance	5	3022
+Splash Lance	6	3022
+Sidewinder	1	2878
+Sidewinder	2	2879
+Sidewinder	3	2880
+Sidewinder	4	2881
+Sidewinder	5	2882
+Sidewinder	6	2882
+Aerial Trigger	1	2953
+Aerial Trigger	2	2954
+Aerial Trigger	3	2955
+Aerial Trigger	4	2956
+Aerial Trigger	5	2957
+Aerial Trigger	6	2957
+Swing Cannon	1	2993
+Swing Cannon	2	2994
+Swing Cannon	3	2995
+Swing Cannon	4	2996
+Swing Cannon	5	2997
+Swing Cannon	6	2997
+Shield Charge	1	2938
+Shield Charge	2	2939
+Shield Charge	3	2940
+Shield Charge	4	2941
+Shield Charge	5	2942
+Shield Charge	6	2942
+Smash Circle	1	3003
+Smash Circle	2	3004
+Smash Circle	3	3005
+Smash Circle	4	3006
+Smash Circle	5	3007
+Smash Circle	6	3007
+Hammer Beat	1	2953
+Hammer Beat	2	2954
+Hammer Beat	3	2955
+Hammer Beat	4	2956
+Hammer Beat	5	2957
+Hammer Beat	6	2957
+Excelsior Slash	1	2973
+Excelsior Slash	2	2974
+Excelsior Slash	3	2975
+Excelsior Slash	4	2976
+Excelsior Slash	5	2977
+Excelsior Slash	6	2977
+Triple Edge	1	3003
+Triple Edge	2	3004
+Triple Edge	3	3005
+Triple Edge	4	3006
+Triple Edge	5	3007
+Triple Edge	6	3007
+Multi-Raid	1	2988
+Multi-Raid	2	2989
+Multi-Raid	3	2990
+Multi-Raid	4	2991
+Multi-Raid	5	2992
+Multi-Raid	6	2992
+Grenade Throw	1	2953
+Grenade Throw	2	2954
+Grenade Throw	3	2955
+Grenade Throw	4	2956
+Grenade Throw	5	2957
+Grenade Throw	6	2957
+Grim Sphere	1	3028
+Grim Sphere	2	3029
+Grim Sphere	3	3030
+Grim Sphere	4	3031
+Grim Sphere	5	3032
+Grim Sphere	6	3032
+Shrapnel	1	2923
+Shrapnel	2	2924
+Shrapnel	3	2925
+Shrapnel	4	2926
+Shrapnel	5	2927
+Shrapnel	6	2927
+Flying Knuckle	1	3013
+Flying Knuckle	2	3014
+Flying Knuckle	3	3015
+Flying Knuckle	4	3016
+Flying Knuckle	5	3017
+Flying Knuckle	6	3017
+Assault Rush	1	2928
+Assault Rush	2	2929
+Assault Rush	3	2930
+Assault Rush	4	2931
+Assault Rush	5	2932
+Assault Rush	6	2932
+Executioner	1	3028
+Executioner	2	3029
+Executioner	3	3030
+Executioner	4	3031
+Executioner	5	3032
+Executioner	6	3032
+Axe Break	1	2933
+Axe Break	2	2934
+Axe Break	3	2935
+Axe Break	4	2936
+Axe Break	5	2937
+Axe Break	6	2937
+Ground Charge	1	2953
+Ground Charge	2	2954
+Ground Charge	3	2955
+Ground Charge	4	2956
+Ground Charge	5	2957
+Ground Charge	6	2957
+War Swing	1	2973
+War Swing	2	2974
+War Swing	3	2975
+War Swing	4	2976
+War Swing	5	2977
+War Swing	6	2977
+Speed Glaive	1	2943
+Speed Glaive	2	2944
+Speed Glaive	3	2945
+Speed Glaive	4	2946
+Speed Glaive	5	2947
+Speed Glaive	6	2947
+Beam Halberd	1	2973
+Beam Halberd	2	2974
+Beam Halberd	3	2975
+Beam Halberd	4	2976
+Beam Halberd	5	2977
+Beam Halberd	6	2977
+Hair Trigger	1	3018
+Hair Trigger	2	3019
+Hair Trigger	3	3020
+Hair Trigger	4	3021
+Hair Trigger	5	3022
+Hair Trigger	6	3022
+Beam Bomber	1	2993
+Beam Bomber	2	2994
+Beam Bomber	3	2995
+Beam Bomber	4	2996
+Beam Bomber	5	2997
+Beam Bomber	6	2997
+Zero Burst	1	2958
+Zero Burst	2	2959
+Zero Burst	3	2960
+Zero Burst	4	2961
+Zero Burst	5	2962
+Zero Burst	6	2962
+Spinning Laser	1	2973
+Spinning Laser	2	2974
+Spinning Laser	3	2975
+Spinning Laser	4	2976
+Spinning Laser	5	2977
+Spinning Laser	6	2977
+Wheel Crash	1	2938
+Wheel Crash	2	2939
+Wheel Crash	3	2940
+Wheel Crash	4	2941
+Wheel Crash	5	2942
+Wheel Crash	6	2942
+Ground Impulse	1	2958
+Ground Impulse	2	2959
+Ground Impulse	3	2960
+Ground Impulse	4	2961
+Ground Impulse	5	2962
+Ground Impulse	6	2962
+Turn Strike	1	3003
+Turn Strike	2	3004
+Turn Strike	3	3005
+Turn Strike	4	3006
+Turn Strike	5	3007
+Turn Strike	6	3007
+Drop Edge	1	2953
+Drop Edge	2	2954
+Drop Edge	3	2955
+Drop Edge	4	2956
+Drop Edge	5	2957
+Drop Edge	6	2957
+Counter Spin	1	3003
+Counter Spin	2	3004
+Counter Spin	3	3005
+Counter Spin	4	3006
+Counter Spin	5	3007
+Counter Spin	6	3007
+Magnum Edge	1	2988
+Magnum Edge	2	2989
+Magnum Edge	3	2990
+Magnum Edge	4	2991
+Magnum Edge	5	2992
+Magnum Edge	6	2992
+Metal Blast	1	2953
+Metal Blast	2	2954
+Metal Blast	3	2955
+Metal Blast	4	2956
+Metal Blast	5	2957
+Metal Blast	6	2957
+Wrecking Ball	1	3013
+Wrecking Ball	2	3014
+Wrecking Ball	3	3015
+Wrecking Ball	4	3016
+Wrecking Ball	5	3017
+Wrecking Ball	6	3017
+Violent Swing	1	3028
+Violent Swing	2	3029
+Violent Swing	3	3030
+Violent Swing	4	3031
+Violent Swing	5	3032
+Violent Swing	6	3032
+Bomber Tackle	1	2928
+Bomber Tackle	2	2929
+Bomber Tackle	3	2930
+Bomber Tackle	4	2931
+Bomber Tackle	5	2932
+Bomber Tackle	6	2932
+Head Shaker	1	2958
+Head Shaker	2	2959
+Head Shaker	3	2960
+Head Shaker	4	2961
+Head Shaker	5	2962
+Head Shaker	6	2962
+Knuckle Purge	1	3013
+Knuckle Purge	2	3014
+Knuckle Purge	3	3015
+Knuckle Purge	4	3016
+Knuckle Purge	5	3017
+Knuckle Purge	6	3017
+Axe Strike	1	2953
+Axe Strike	2	2954
+Axe Strike	3	2955
+Axe Strike	4	2956
+Axe Strike	5	2957
+Axe Strike	6	2957
+Megaslash	1	2933
+Megaslash	2	2934
+Megaslash	3	2935
+Megaslash	4	2936
+Megaslash	5	2937
+Megaslash	6	2937
+Flying Cutter	1	2853
+Flying Cutter	2	2854
+Flying Cutter	3	2855
+Flying Cutter	4	2856
+Flying Cutter	5	2857
+Flying Cutter	6	2857
+Multi-Edge	1	3023
+Multi-Edge	2	3024
+Multi-Edge	3	3025
+Multi-Edge	4	3026
+Multi-Edge	5	3027
+Multi-Edge	6	3027
+Trident Buster	1	2953
+Trident Buster	2	2954
+Trident Buster	3	2955
+Trident Buster	4	2956
+Trident Buster	5	2957
+Trident Buster	6	2957
+Spiral Spear	1	2993
+Spiral Spear	2	2994
+Spiral Spear	3	2995
+Spiral Spear	4	2996
+Spiral Spear	5	2997
+Spiral Spear	6	2997
+Flash Barrel	1	2953
+Flash Barrel	2	2954
+Flash Barrel	3	2955
+Flash Barrel	4	2956
+Flash Barrel	5	2957
+Flash Barrel	6	2957
+Blink Bullet	1	2993
+Blink Bullet	2	2994
+Blink Bullet	3	2995
+Blink Bullet	4	2996
+Blink Bullet	5	2997
+Blink Bullet	6	2997
+Beam Barrage	1	2973
+Beam Barrage	2	2974
+Beam Barrage	3	2975
+Beam Barrage	4	2976
+Beam Barrage	5	2977
+Beam Barrage	6	2977
+Aerial Shield	1	2938
+Aerial Shield	2	2939
+Aerial Shield	3	2940
+Aerial Shield	4	2941
+Aerial Shield	5	2942
+Aerial Shield	6	2942
+Drum Roll	1	2958
+Drum Roll	2	2959
+Drum Roll	3	2960
+Drum Roll	4	2961
+Drum Roll	5	2962
+Drum Roll	6	2962
+Hammer Rush	1	2983
+Hammer Rush	2	2984
+Hammer Rush	3	2985
+Hammer Rush	4	2986
+Hammer Rush	5	2987
+Hammer Rush	6	2987
+Sword Dance	1	2973
+Sword Dance	2	2974
+Sword Dance	3	2975
+Sword Dance	4	2976
+Sword Dance	5	2977
+Sword Dance	6	2977
+Rage Cutter	1	3003
+Rage Cutter	2	3004
+Rage Cutter	3	3005
+Rage Cutter	4	3006
+Rage Cutter	5	3007
+Rage Cutter	6	3007
+Air Slash	1	2988
+Air Slash	2	2989
+Air Slash	3	2990
+Air Slash	4	2991
+Air Slash	5	2992
+Air Slash	6	2992
+Flash Bomb	1	2928
+Flash Bomb	2	2929
+Flash Bomb	3	2930
+Flash Bomb	4	2931
+Flash Bomb	5	2932
+Flash Bomb	6	2932
+Power Effect	1	3028
+Power Effect	2	3029
+Power Effect	3	3030
+Power Effect	4	3031
+Power Effect	5	3032
+Power Effect	6	3032
+Rumble Sphere	1	3013
+Rumble Sphere	2	3014
+Rumble Sphere	3	3015
+Rumble Sphere	4	3016
+Rumble Sphere	5	3017
+Rumble Sphere	6	3017
+Thermal Payload	1	3013
+Thermal Payload	2	3014
+Thermal Payload	3	3015
+Thermal Payload	4	3016
+Thermal Payload	5	3017
+Thermal Payload	6	3017
+Leg Blast	1	2928
+Leg Blast	2	2929
+Leg Blast	3	2930
+Leg Blast	4	2931
+Leg Blast	5	2932
+Leg Blast	6	2932
+Flash Blow	1	3028
+Flash Blow	2	3029
+Flash Blow	3	3030
+Flash Blow	4	3031
+Flash Blow	5	3032
+Flash Blow	6	3032
+Ripple Drive	1	3028
+Ripple Drive	2	3029
+Ripple Drive	3	3030
+Ripple Drive	4	3031
+Ripple Drive	5	3032
+Ripple Drive	6	3032
+Dual Fang	1	3028
+Dual Fang	2	3029
+Dual Fang	3	3030
+Dual Fang	4	3031
+Dual Fang	5	3032
+Dual Fang	6	3032
+Screw Edge	1	3013
+Screw Edge	2	3014
+Screw Edge	3	3015
+Screw Edge	4	3016
+Screw Edge	5	3017
+Screw Edge	6	3017
+ECHIDNA	1	2933
+ECHIDNA	2	2934
+ECHIDNA	3	2935
+ECHIDNA	4	2936
+ECHIDNA	5	2937
+ECHIDNA	6	2937
+MAGDALENE 16	1	2963
+MAGDALENE 16	2	2964
+MAGDALENE 16	3	2965
+MAGDALENE 16	4	2966
+MAGDALENE 16	5	2967
+MAGDALENE 16	6	2967
+T-SKYLLA	1	2973
+T-SKYLLA	2	2974
+T-SKYLLA	3	2975
+T-SKYLLA	4	2976
+T-SKYLLA	5	2977
+T-SKYLLA	6	2977
+Buster Cyclone	1	3003
+Buster Cyclone	2	3004
+Buster Cyclone	3	3005
+Buster Cyclone	4	3006
+Buster Cyclone	5	3007
+Buster Cyclone	6	3007
+Buster Cannon	1	2973
+Buster Cannon	2	2974
+Buster Cannon	3	2975
+Buster Cannon	4	2976
+Buster Cannon	5	2977
+Buster Cannon	6	2977
+Buster Mirage	1	2988
+Buster Mirage	2	2989
+Buster Mirage	3	2990
+Buster Mirage	4	2991
+Buster Mirage	5	2992
+Buster Mirage	6	2992
+Monado Purge	1	3664
+Monado Purge	2	3665
+Monado Purge	3	3666
+Monado Purge	4	3667
+Monado Purge	5	3668
+Monado Purge	6	3668
+Monado Cyclone	1	2933
+Monado Cyclone	2	2934
+Monado Cyclone	3	2935
+Monado Cyclone	4	2936
+Monado Cyclone	5	2937
+Monado Cyclone	6	2937
+Monado Buster	1	2973
+Monado Buster	2	2974
+Monado Buster	3	2975
+Monado Buster	4	2976
+Monado Buster	5	2977
+Monado Buster	6	2977
+Hidden Thorn	1	3013
+Hidden Thorn	2	3014
+Hidden Thorn	3	3015
+Hidden Thorn	4	3016
+Hidden Thorn	5	3017
+Hidden Thorn	6	3017
+Power Smash	1	2928
+Power Smash	2	2929
+Power Smash	3	2930
+Power Smash	4	2931
+Power Smash	5	2932
+Power Smash	6	2932
+Lacerate	1	3028
+Lacerate	2	3029
+Lacerate	3	3030
+Lacerate	4	3031
+Lacerate	5	3032
+Lacerate	6	3032
+\.
+
+
+--
+-- Data for Name: special_hit_frames; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.special_hit_frames (special, hit, hit_frame) FROM stdin;
+Flame Nova	1	47
+Prominence Revolt	1	33
+Blazing End	1	4
+Blazing End	2	17
+Blazing End	3	29
+Blazing End	4	67
+Blazing End	5	74
+Blazing End	6	81
+Blazing End	7	88
+Blazing End	8	95
+Blazing End	9	102
+Ray of Punishment	1	25
+Photon Edge	1	1
+Photon Edge	2	4
+Photon Edge	3	7
+Photon Edge	4	9
+Photon Edge	5	13
+Photon Edge	6	15
+Photon Edge	7	18
+Photon Edge	8	22
+Photon Edge	9	25
+Photon Edge	10	27
+Photon Edge	11	29
+Photon Edge	12	31
+Photon Edge	13	34
+Lightning Buster	1	6
+Lightning Buster	2	19
+Lightning Buster	3	30
+Lightning Buster	4	41
+Starburst	1	55
+Starburst	2	62
+Starburst	3	69
+Starburst	4	76
+Starburst	5	83
+Starburst	6	90
+Radiant Flare	1	8
+Radiant Flare	2	18
+Radiant Flare	3	28
+Radiant Flare	4	38
+Radiant Flare	5	48
+Genesis Saber	1	60
+Genesis Saber	2	64
+Genesis Saber	3	68
+Genesis Saber	4	72
+Genesis Saber	5	76
+Genesis Saber	6	80
+Last Hope	1	6
+Last Hope	2	15
+Last Hope	3	24
+Merciful Heart	1	3
+Redeeming Strike	1	33
+Redeeming Strike	2	90
+Raging Tiger	1	8
+Raging Tiger	2	22
+Raging Tiger	3	26
+Aqua Wave	1	40
+Wild Roar	1	40
+Poppi Spinning Slash	1	10
+Poppi Spinning Slash	2	18
+Poppi Spinning Slash	3	25
+Poppi Spinning Slash	4	29
+Noponic Storm	1	70
+Noponic Storm	2	80
+Noponic Storm	3	90
+Noponic Storm	4	100
+Noponic Storm	5	110
+Noponic Storm	6	120
+Poppi Drill	1	48
+Poppi Missile	1	38
+Poppi Missile	2	38
+Poppi Crushing Blow	1	1
+Poppi Crushing Blow	2	18
+Poppi Crushing Blow	3	28
+Poppi Crushing Blow	4	43
+Poppi Crushing Blow	5	44
+Noponic Destruction	1	53
+Poppi Ignition	1	5
+Poppi Ignition	2	20
+Poppi Ignition	3	28
+Poppi Ignition	4	40
+Poppi Ignition	5	43
+Noponic Axion	1	20
+Noponic Axion	2	30
+Noponic Axion	3	40
+Noponic Axion	4	50
+Noponic Axion	5	60
+Poppi Unlimited	1	35
+Poppi Unlimited	2	46
+Poppi Unlimited	3	93
+Poppi Unlimited	4	106
+Heat Haze	1	35
+Heat Haze	2	43
+Heat Haze	3	51
+Heat Haze	4	60
+Will-o'-the-Wisp	1	3
+Will-o'-the-Wisp	2	3
+Will-o'-the-Wisp	3	3
+Will-o'-the-Wisp	4	3
+Will-o'-the-Wisp	5	3
+Will-o'-the-Wisp	6	3
+Will-o'-the-Wisp	7	3
+Will-o'-the-Wisp	8	3
+Will-o'-the-Wisp	9	22
+Will-o'-the-Wisp	10	22
+Will-o'-the-Wisp	11	22
+Will-o'-the-Wisp	12	22
+Will-o'-the-Wisp	13	22
+Will-o'-the-Wisp	14	22
+Will-o'-the-Wisp	15	22
+Will-o'-the-Wisp	16	23
+Swirling Dragon	1	19
+Swirling Dragon	2	26
+Swirling Dragon	3	34
+Swirling Dragon	4	42
+Swirling Dragon	5	48
+Swirling Dragon	6	55
+Swirling Dragon	7	63
+Swirling Dragon	8	71
+Swirling Dragon	9	78
+Swirling Dragon	10	85
+Swirling Dragon	11	90
+Lightning Force	1	42
+Electric Circus	1	80
+Electric Circus	2	105
+Thunder Doom	1	145
+Death Wing	1	12
+Death Wing	2	32
+Death Wing	3	36
+Death Wing	4	40
+Crushing Twister	1	4
+Crushing Twister	2	14
+Crushing Twister	3	26
+Crushing Twister	4	33
+Crushing Twister	5	44
+Crushing Twister	6	47
+Crushing Twister	7	50
+Crushing Twister	8	52
+Feather Typhoon	1	42
+Feather Typhoon	2	52
+Feather Typhoon	3	62
+Feather Typhoon	4	72
+Storm Edge	1	6
+Engrave	1	12
+Engrave	2	18
+Engrave	3	24
+Engrave	4	30
+Engrave	5	37
+Engrave	6	43
+Engrave	7	47
+Engrave	8	53
+Engrave	9	58
+Engrave	10	65
+Death Match	1	7
+Death Match	2	27
+Death Match	3	47
+White Wave	1	7
+Sacred Wyrm	1	1
+Sacred Wyrm	2	12
+Sacred Wyrm	3	13
+Sacred Wyrm	4	32
+Dark Judgment	1	8
+Dark Judgment	2	15
+Dark Judgment	3	22
+Dark Judgment	4	29
+Dark Judgment	5	37
+Swallow's Flight	1	3
+Swallow's Flight	2	20
+Swallow's Flight	3	44
+Great Garland	1	100
+Dragonfly Slash	1	5
+Dragonfly Slash	2	8
+Dragonfly Slash	3	11
+Crow Beat	1	2
+Crow Feather	1	6
+Final Crow	1	80
+Shred	1	6
+Shred	2	12
+Shred	3	22
+Shred	4	32
+Shred	5	42
+Shred	6	52
+Shred	7	65
+Shred	8	79
+Skewer	1	16
+Skewer	2	16
+Skewer	3	18
+Skewer	4	18
+Skewer	5	20
+Skewer	6	20
+Cruel World	1	10
+Cruel World	2	20
+Cruel World	3	30
+Cruel World	4	40
+Cruel World	5	50
+Cruel World	6	60
+Diamond Crash	1	6
+Diamond Flight	1	6
+Diamond Flight	2	18
+Diamond Flight	3	30
+Diamond Flight	4	42
+Diamond Flight	5	54
+Diamond Hands	1	5
+Diamond Hands	2	14
+Diamond Hands	3	26
+Diamond Hands	4	49
+Dead Ball	1	9
+Berserk March	1	13
+Berserk March	2	23
+Berserk March	3	35
+Berserk March	4	53
+Earth Breath	1	11
+Water Moon	1	5
+Breaking Wave	1	43
+Breaking Wave	2	72
+Breaking Wave	3	78
+Midnight Mist	1	9
+Midnight Mist	2	14
+Midnight Mist	3	19
+Midnight Mist	4	24
+Midnight Mist	5	29
+Midnight Mist	6	34
+Midnight Mist	7	39
+Midnight Mist	8	43
+Midnight Mist	9	48
+Midnight Mist	10	53
+Midnight Mist	11	58
+Midnight Mist	12	63
+Midnight Mist	13	68
+Tough Break	1	61
+Cold Judgment	1	43
+Justice Blizzard	1	1
+Justice Blizzard	2	10
+Justice Blizzard	3	27
+Justice Blizzard	4	39
+Justice Blizzard	5	50
+Justice Blizzard	6	97
+Justice Blizzard	7	110
+Brutal Lance	1	19
+Brutal Lance	2	33
+Brutal Lance	3	49
+Brutal Lance	4	75
+Termination Blast	1	59
+Termination Blast	2	69
+Termination Blast	3	79
+Termination Blast	4	89
+Termination Blast	5	99
+Termination Blast	6	109
+Hellbound	1	51
+Hellbound	2	64
+Hellbound	3	79
+Hellbound	4	92
+Hellbound	5	103
+Hellbound	6	110
+Hellbound	7	117
+Hellbound	8	126
+Hellbound	9	131
+Hellbound	10	134
+Hellbound	11	137
+Hellbound	12	148
+Hellbound	13	154
+Hellbound	14	181
+Dark Serpent	1	96
+Dark Serpent	2	101
+Dark Serpent	3	105
+Dark Serpent	4	111
+Blade Vortex	1	105
+Grim Moon	1	45
+Grim Moon	2	65
+Innocent Teardrop	1	38
+Bittersweet Dreams	1	15
+Bittersweet Dreams	2	41
+Bittersweet Dreams	3	65
+Leave Me Alone	1	24
+Leave Me Alone	2	32
+Leave Me Alone	3	38
+Leave Me Alone	4	45
+Leave Me Alone	5	51
+Leave Me Alone	6	59
+Leave Me Alone	7	65
+Leave Me Alone	8	81
+Flame Crown (Weak)	1	76
+Tyrant Crush (Weak)	1	34
+Tyrant Crush (Weak)	2	48
+Tyrant Crush (Weak)	3	78
+Kaiser Flare (Weak)	1	30
+Kaiser Flare (Weak)	2	48
+Flame Crown	1	76
+Tyrant Crush	1	34
+Tyrant Crush	2	48
+Tyrant Crush	3	78
+Kaiser Flare	1	30
+Kaiser Flare	2	48
+Open Wide!	1	30
+Snack On This!	1	9
+Snack On This!	2	12
+Snack On This!	3	18
+Snack On This!	4	24
+Snack On This!	5	32
+Gobble 'em Up!	1	45
+Gobble 'em Up!	2	49
+Gobble 'em Up!	3	53
+Gobble 'em Up!	4	56
+Gobble 'em Up!	5	60
+Gobble 'em Up!	6	65
+Lavender Drive	1	21
+Lavender Drive	2	36
+Lavender Drive	3	50
+Lilium Dance	1	19
+Lilium Dance	2	48
+Lilium Dance	3	80
+Physalis Judgment	1	79
+Sentimental Burst	1	124
+Hidden Emotion	1	60
+Secret Desire	1	98
+Secret Desire	2	117
+Secret Desire	3	129
+Secret Desire	4	142
+Secret Desire	5	154
+Secret Desire	6	164
+Secret Desire	7	189
+Foam Blast	1	3
+Geyser Spring	1	4
+Fierce Deluge	1	8
+Fierce Deluge	2	17
+Fierce Deluge	3	24
+Fierce Deluge	4	30
+Fierce Deluge	5	34
+Fierce Deluge	6	40
+Fierce Deluge	7	43
+Fierce Deluge	8	48
+Fierce Deluge	9	54
+Ice Slash	1	3
+Ice Slash	2	29
+Frost Banish	1	28
+Frost Banish	2	37
+Frost Banish	3	44
+Frost Banish	4	52
+Rebel Sister	1	61
+Rebel Sister	2	91
+Cold Sever	1	5
+Cold Sever	2	10
+Cold Sever	3	15
+Cold Sever	4	20
+Cold Sever	5	25
+Cold Sever	6	30
+Cold Sever	7	35
+Cold Sever	8	40
+Cold Sever	9	44
+Cold Sever	10	49
+Cold Sever	11	54
+Cold Sever	12	59
+Cold Sever	13	64
+Cold Sever	14	69
+Cold Sever	15	74
+Cold Sever	16	80
+Punishment Strike	1	65
+Extinction Icicle	1	92
+Electric Pompom	1	67
+Vivid Love	1	50
+Angelic Drop	1	49
+Nightmare Rondeau	1	1
+Nightmare Rondeau	2	20
+Nightmare Rondeau	3	32
+Nightmare Rondeau	4	44
+Nightmare Rondeau	5	60
+Shadow Rhapsody	1	7
+Shadow Rhapsody	2	11
+Shadow Rhapsody	3	15
+Shadow Rhapsody	4	19
+Shadow Rhapsody	5	23
+Shadow Rhapsody	6	27
+Shadow Rhapsody	7	31
+Shadow Rhapsody	8	35
+Shadow Rhapsody	9	39
+Shadow Rhapsody	10	43
+Decadent Finale	1	15
+Decadent Finale	2	30
+Decadent Finale	3	40
+Beary Strong	1	35
+Beary Strong	2	55
+Beary Helpful	1	30
+Beary-Go-Round	1	36
+Beary-Go-Round	2	43
+Beary-Go-Round	3	45
+Beary-Go-Round	4	50
+Beary-Go-Round	5	55
+Beary-Go-Round	6	59
+Beary-Go-Round	7	63
+Beary-Go-Round	8	68
+Flaming Slashwave	1	26
+Immolating Cleave	1	84
+Extreme Gutsy Spirit	1	47
+Extreme Gutsy Spirit	2	50
+Extreme Gutsy Spirit	3	53
+Extreme Gutsy Spirit	4	56
+Extreme Gutsy Spirit	5	59
+Extreme Gutsy Spirit	6	62
+Extreme Gutsy Spirit	7	65
+Extreme Gutsy Spirit	8	68
+Extreme Gutsy Spirit	9	71
+Extreme Gutsy Spirit	10	75
+Extreme Gutsy Spirit	11	105
+Extreme Gutsy Spirit	12	153
+Fierce Healer	1	89
+Wild Grappler	1	46
+Wild Grappler	2	52
+Wild Grappler	3	57
+Wild Grappler	4	69
+Organic Automata	1	68
+Organic Automata	2	107
+Organic Automata	3	111
+Organic Automata	4	114
+Organic Automata	5	120
+Dessert Bomb	1	44
+Tea Leaves	1	19
+Golden Font	1	23
+Healing Bolt	1	84
+Healing Bolt	2	124
+Ball Lightning	1	35
+Thunderstrike	1	79
+Thunderstrike	2	106
+Harness the Wind	1	20
+Slipstream	1	24
+Slipstream	2	48
+Slipstream	3	72
+Mortal Storm	1	1
+Mortal Storm	2	16
+Mortal Storm	3	45
+Mortal Storm	4	57
+Mortal Storm	5	68
+Bang-Bang Bound	1	42
+Bang-Bang Bound	2	66
+Bang-Bang Bound	3	129
+Shocking Assault	1	120
+Rolling Thunder	1	155
+Rolling Thunder	2	165
+Rolling Thunder	3	175
+Diabolic Zephyr	1	2
+Diabolic Zephyr	2	42
+Adamantine Axe	1	40
+Ascension Blade	2	6
+Ascension Blade	3	13
+Ascension Blade	4	24
+Ascension Blade	5	30
+Ascension Blade	6	41
+Ascension Blade	7	46
+Ascension Blade	8	56
+Ascension Blade	9	63
+Ascension Blade	10	80
+Blast of Fresh Air	1	27
+Whoopsie Crazy	1	47
+Whoopsie Crazy	2	69
+Whoopsie Crazy	3	88
+Wake-Up Whirl	1	43
+R-Blade	1	20
+R-Blade	2	29
+R-Blade	3	43
+R-Blade	4	94
+H-Effect R	1	39
+H-Effect R	2	49
+H-Effect R	3	59
+H-Effect R	4	69
+F-G-Shot	1	23
+F-G-Shot	2	28
+F-G-Shot	3	34
+F-G-Shot	4	39
+F-G-Shot	5	45
+F-G-Shot	6	50
+F-G-Shot	7	56
+F-G-Shot	8	61
+F-G-Shot	9	67
+F-G-Shot	10	72
+F-G-Shot	11	78
+F-G-Shot	12	83
+F-G-Shot	13	89
+F-G-Shot	14	94
+F-G-Shot	15	100
+F-G-Shot	16	105
+Empyrean Salvo	1	22
+Empyrean Salvo	2	27
+Empyrean Salvo	3	33
+Empyrean Salvo	4	38
+Empyrean Salvo	5	43
+Empyrean Salvo	6	48
+Empyrean Salvo	7	55
+Empyrean Salvo	8	60
+Empyrean Salvo	9	65
+Empyrean Salvo	10	70
+Empyrean Salvo	11	76
+Empyrean Salvo	12	81
+Empyrean Salvo	13	87
+Empyrean Salvo	14	92
+Empyrean Salvo	15	98
+Empyrean Salvo	16	105
+The Heavens Open	1	97
+Final Retribution	1	6
+Final Retribution	2	33
+Final Retribution	3	95
+Blood Altar	1	30
+Blood Altar	2	38
+Blood Altar	3	63
+Tainted Palace	1	1
+Tainted Palace	2	5
+Tainted Palace	3	71
+Tainted Palace	4	72
+Accursed Prison	1	1
+Accursed Prison	2	8
+Accursed Prison	3	52
+Accursed Prison	4	53
+Accursed Prison	5	104
+Heliodor Passion	1	34
+Heliodor Passion	2	60
+Heliodor Passion	3	96
+Star Beryl Courage	1	15
+Star Beryl Courage	2	28
+Star Beryl Courage	3	41
+Rhodochrosite Might	1	45
+Rhodochrosite Might	2	60
+Rhodochrosite Might	3	85
+Crystal Blizzard	1	10
+Snowblind	1	13
+Frost Queen	1	100
+Stream Edge	1	7
+Stream Edge	2	41
+Stream Edge	3	79
+Falling Axe	1	13
+Axe Throw	1	20
+Axe Throw	2	28
+Axe Throw	3	36
+Axe Throw	4	44
+Axe Throw	5	52
+Axe Throw	6	60
+Axe Throw	7	68
+Axe Throw	8	76
+Round Break	1	31
+Boomerang Spear	1	20
+Boomerang Spear	2	28
+Boomerang Spear	3	36
+Boomerang Spear	4	44
+Boomerang Spear	5	52
+Boomerang Spear	6	60
+Boomerang Spear	7	68
+Boomerang Spear	8	76
+Boomerang Spear	9	84
+Boomerang Spear	10	92
+Boomerang Spear	11	100
+Splash Lance	1	5
+Splash Lance	2	5
+Splash Lance	3	5
+Splash Lance	4	5
+Splash Lance	5	5
+Splash Lance	6	5
+Sidewinder	1	26
+Aerial Trigger	1	32
+Swing Cannon	1	36
+Swing Cannon	2	44
+Swing Cannon	3	52
+Swing Cannon	4	60
+Swing Cannon	5	68
+Swing Cannon	6	76
+Swing Cannon	7	84
+Shield Charge	1	31
+Smash Circle	1	46
+Smash Circle	2	54
+Smash Circle	3	62
+Smash Circle	4	70
+Hammer Beat	1	57
+Excelsior Slash	1	20
+Excelsior Slash	2	92
+Triple Edge	1	4
+Triple Edge	2	19
+Triple Edge	3	32
+Multi-Raid	1	15
+Multi-Raid	2	90
+Grenade Throw	1	8
+Grim Sphere	1	7
+Shrapnel	1	40
+Flying Knuckle	1	4
+Assault Rush	1	14
+Assault Rush	2	19
+Assault Rush	3	25
+Assault Rush	4	31
+Assault Rush	5	36
+Assault Rush	6	43
+Assault Rush	7	48
+Assault Rush	8	57
+Executioner	1	94
+Axe Break	1	35
+Ground Charge	1	28
+War Swing	1	12
+War Swing	2	16
+War Swing	3	20
+War Swing	4	24
+War Swing	5	28
+War Swing	6	32
+War Swing	7	36
+Speed Glaive	1	3
+Speed Glaive	2	8
+Speed Glaive	3	13
+Speed Glaive	4	18
+Speed Glaive	5	23
+Speed Glaive	6	30
+Beam Halberd	1	9
+Beam Halberd	2	27
+Hair Trigger	1	61
+Beam Bomber	1	10
+Beam Bomber	2	18
+Beam Bomber	3	26
+Beam Bomber	4	34
+Beam Bomber	5	42
+Zero Burst	1	23
+Spinning Laser	1	30
+Spinning Laser	2	36
+Spinning Laser	3	42
+Spinning Laser	4	48
+Wheel Crash	1	18
+Wheel Crash	2	20
+Wheel Crash	3	22
+Wheel Crash	4	24
+Ground Impulse	1	30
+Turn Strike	1	10
+Turn Strike	2	15
+Turn Strike	3	20
+Turn Strike	4	25
+Turn Strike	5	30
+Drop Edge	1	36
+Counter Spin	1	6
+Counter Spin	2	12
+Counter Spin	3	14
+Counter Spin	4	18
+Counter Spin	5	24
+Magnum Edge	1	6
+Metal Blast	1	10
+Wrecking Ball	1	7
+Violent Swing	1	10
+Violent Swing	2	18
+Violent Swing	3	26
+Violent Swing	4	34
+Violent Swing	5	42
+Violent Swing	6	50
+Violent Swing	7	58
+Violent Swing	8	66
+Bomber Tackle	1	16
+Head Shaker	1	29
+Knuckle Purge	1	34
+Axe Strike	1	34
+Megaslash	1	10
+Megaslash	2	43
+Megaslash	3	71
+Megaslash	4	81
+Flying Cutter	1	13
+Flying Cutter	2	21
+Flying Cutter	3	29
+Flying Cutter	4	37
+Flying Cutter	5	44
+Flying Cutter	6	51
+Flying Cutter	7	59
+Multi-Edge	1	4
+Multi-Edge	2	4
+Multi-Edge	3	4
+Multi-Edge	4	4
+Multi-Edge	5	4
+Multi-Edge	6	4
+Trident Buster	1	32
+Spiral Spear	1	9
+Spiral Spear	2	13
+Spiral Spear	3	21
+Spiral Spear	4	28
+Spiral Spear	5	38
+Spiral Spear	6	46
+Spiral Spear	7	56
+Spiral Spear	8	66
+Flash Barrel	1	50
+Blink Bullet	1	36
+Beam Barrage	1	86
+Beam Barrage	2	91
+Beam Barrage	3	95
+Beam Barrage	4	100
+Beam Barrage	5	105
+Beam Barrage	6	110
+Beam Barrage	7	115
+Beam Barrage	8	120
+Beam Barrage	9	125
+Aerial Shield	1	35
+Aerial Shield	2	41
+Aerial Shield	3	47
+Aerial Shield	4	53
+Aerial Shield	5	60
+Aerial Shield	6	67
+Aerial Shield	7	71
+Drum Roll	1	31
+Hammer Rush	1	12
+Hammer Rush	2	23
+Hammer Rush	3	33
+Hammer Rush	4	52
+Sword Dance	1	8
+Sword Dance	2	17
+Rage Cutter	1	5
+Rage Cutter	2	11
+Rage Cutter	3	20
+Air Slash	1	22
+Flash Bomb	1	48
+Power Effect	1	57
+Rumble Sphere	1	37
+Thermal Payload	1	12
+Thermal Payload	2	22
+Leg Blast	1	8
+Leg Blast	2	37
+Flash Blow	1	16
+Flash Blow	2	38
+Flash Blow	3	47
+Flash Blow	4	52
+Flash Blow	5	59
+Flash Blow	6	70
+Flash Blow	7	81
+Flash Blow	8	96
+Ripple Drive	1	47
+Ripple Drive	2	58
+Ripple Drive	3	69
+Ripple Drive	4	80
+Dual Fang	1	12
+Dual Fang	2	22
+Dual Fang	3	32
+Screw Edge	1	25
+Screw Edge	2	48
+Screw Edge	3	77
+ECHIDNA	1	4
+ECHIDNA	2	55
+MAGDALENE 16	1	12
+MAGDALENE 16	2	49
+MAGDALENE 16	3	56
+MAGDALENE 16	4	63
+MAGDALENE 16	5	70
+MAGDALENE 16	6	77
+MAGDALENE 16	7	84
+T-SKYLLA	1	4
+T-SKYLLA	2	16
+T-SKYLLA	3	57
+T-SKYLLA	4	91
+Buster Cyclone	1	26
+Buster Cyclone	2	61
+Buster Cyclone	3	73
+Buster Cyclone	4	86
+Buster Cyclone	5	99
+Buster Cyclone	6	112
+Buster Cyclone	7	125
+Buster Cannon	1	3
+Buster Mirage	1	6
+Buster Mirage	2	12
+Buster Mirage	3	18
+Buster Mirage	4	35
+Buster Mirage	5	39
+Buster Mirage	6	81
+Buster Mirage	7	88
+Monado Purge	1	26
+Monado Cyclone	1	14
+Monado Cyclone	2	16
+Monado Cyclone	3	18
+Monado Cyclone	4	20
+Monado Cyclone	5	22
+Monado Buster	1	26
+Hidden Thorn	1	9
+Hidden Thorn	2	36
+Power Smash	1	15
+Power Smash	2	21
+Power Smash	3	24
+Power Smash	4	30
+Power Smash	5	34
+Power Smash	6	40
+Lacerate	1	11
+Lacerate	2	46
+\.
+
+
+--
+-- Data for Name: special_ratios; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.special_ratios (special, hit, ratio) FROM stdin;
+Blazing End	1	2
+Blazing End	2	2
+Blazing End	3	2
+Blazing End	4	1
+Blazing End	5	1
+Blazing End	6	1
+Blazing End	7	1
+Blazing End	8	1
+Blazing End	9	1
+Ray of Punishment	1	2
+Ray of Punishment	2	2
+Ray of Punishment	3	2
+Ray of Punishment	4	1
+Ray of Punishment	5	1
+Ray of Punishment	6	1
+Ray of Punishment	7	1
+Ray of Punishment	8	1
+Ray of Punishment	9	1
+Photon Edge	1	255
+Photon Edge	3	255
+Photon Edge	5	255
+Photon Edge	7	255
+Photon Edge	9	255
+Photon Edge	11	255
+Photon Edge	13	255
+Raging Tiger	1	1
+Raging Tiger	2	1
+Raging Tiger	3	2
+Poppi Spinning Slash	1	1
+Poppi Spinning Slash	2	1
+Poppi Spinning Slash	3	1
+Poppi Spinning Slash	4	2
+Noponic Storm	1	2
+Noponic Storm	2	1
+Noponic Storm	3	1
+Noponic Storm	4	1
+Noponic Storm	5	1
+Noponic Storm	6	1
+Poppi Crushing Blow	1	255
+Poppi Crushing Blow	4	255
+Crushing Twister	1	2
+Crushing Twister	2	2
+Crushing Twister	3	2
+Crushing Twister	4	2
+Crushing Twister	5	1
+Crushing Twister	6	1
+Crushing Twister	7	1
+Crushing Twister	8	1
+Feather Typhoon	1	1
+Feather Typhoon	2	1
+Feather Typhoon	3	1
+Feather Typhoon	4	2
+Engrave	1	1
+Engrave	2	1
+Engrave	3	1
+Engrave	4	1
+Engrave	5	1
+Engrave	6	1
+Engrave	7	1
+Engrave	8	1
+Engrave	9	2
+Sacred Wyrm	1	255
+Sacred Wyrm	3	255
+Berserk March	1	1
+Berserk March	2	1
+Berserk March	3	1
+Berserk March	4	2
+Justice Blizzard	1	255
+Justice Blizzard	2	1
+Justice Blizzard	3	1
+Justice Blizzard	4	1
+Justice Blizzard	5	1
+Justice Blizzard	6	255
+Justice Blizzard	7	2
+Brutal Lance	1	1
+Brutal Lance	2	1
+Brutal Lance	3	1
+Brutal Lance	4	2
+Hellbound	1	1
+Hellbound	2	1
+Hellbound	3	1
+Hellbound	4	1
+Hellbound	5	1
+Hellbound	6	1
+Hellbound	7	1
+Hellbound	8	1
+Hellbound	9	1
+Hellbound	10	1
+Hellbound	11	1
+Hellbound	12	1
+Hellbound	13	1
+Hellbound	14	2
+Grim Moon	1	1
+Grim Moon	2	2
+Leave Me Alone	1	1
+Leave Me Alone	2	1
+Leave Me Alone	3	1
+Leave Me Alone	4	1
+Leave Me Alone	5	1
+Leave Me Alone	6	1
+Leave Me Alone	7	1
+Leave Me Alone	8	2
+Secret Desire	1	1
+Secret Desire	2	1
+Secret Desire	3	1
+Secret Desire	4	1
+Secret Desire	5	1
+Secret Desire	6	1
+Secret Desire	7	2
+Fierce Deluge	1	2
+Fierce Deluge	2	1
+Fierce Deluge	3	1
+Fierce Deluge	4	1
+Fierce Deluge	5	1
+Fierce Deluge	6	1
+Fierce Deluge	7	1
+Fierce Deluge	8	1
+Fierce Deluge	9	2
+Ice Slash	1	1
+Ice Slash	2	2
+Frost Banish	1	1
+Frost Banish	2	1
+Frost Banish	3	1
+Frost Banish	4	2
+Rebel Sister	1	1
+Rebel Sister	2	2
+Cold Sever	1	1
+Cold Sever	2	1
+Cold Sever	3	1
+Cold Sever	4	1
+Cold Sever	5	1
+Cold Sever	6	1
+Cold Sever	7	1
+Cold Sever	8	1
+Cold Sever	9	1
+Cold Sever	10	1
+Cold Sever	11	1
+Cold Sever	12	1
+Cold Sever	13	1
+Cold Sever	14	1
+Cold Sever	15	1
+Cold Sever	16	2
+Extreme Gutsy Spirit	1	1
+Extreme Gutsy Spirit	2	1
+Extreme Gutsy Spirit	3	1
+Extreme Gutsy Spirit	4	1
+Extreme Gutsy Spirit	5	1
+Extreme Gutsy Spirit	6	1
+Extreme Gutsy Spirit	7	1
+Extreme Gutsy Spirit	8	1
+Extreme Gutsy Spirit	9	1
+Extreme Gutsy Spirit	10	1
+Extreme Gutsy Spirit	11	2
+Fierce Healer	1	1
+Fierce Healer	2	2
+Organic Automata	1	2
+Organic Automata	2	1
+Organic Automata	3	1
+Organic Automata	4	1
+Organic Automata	5	1
+Bang-Bang Bound	1	1
+Bang-Bang Bound	2	1
+Bang-Bang Bound	3	2
+Diabolic Zephyr	1	1
+Diabolic Zephyr	2	2
+Ascension Blade	1	255
+Ascension Blade	3	255
+Ascension Blade	5	255
+Ascension Blade	7	255
+Ascension Blade	9	255
+Tainted Palace	1	255
+Tainted Palace	3	255
+Accursed Prison	1	255
+Accursed Prison	3	255
+Excelsior Slash	1	1
+Excelsior Slash	2	2
+Multi-Raid	1	1
+Multi-Raid	2	2
+Assault Rush	1	1
+Assault Rush	2	1
+Assault Rush	3	1
+Assault Rush	4	1
+Assault Rush	5	1
+Assault Rush	6	1
+Assault Rush	7	1
+Assault Rush	8	2
+War Swing	1	1
+War Swing	2	1
+War Swing	3	1
+War Swing	4	1
+War Swing	5	1
+War Swing	6	1
+War Swing	7	2
+Speed Glaive	1	1
+Speed Glaive	2	1
+Speed Glaive	3	1
+Speed Glaive	4	1
+Speed Glaive	5	1
+Speed Glaive	6	2
+Beam Bomber	1	1
+Beam Bomber	2	1
+Beam Bomber	3	1
+Beam Bomber	4	1
+Beam Bomber	5	5
+Counter Spin	1	1
+Counter Spin	2	1
+Counter Spin	3	2
+Counter Spin	4	1
+Counter Spin	5	1
+Megaslash	1	1
+Megaslash	2	1
+Megaslash	3	2
+Megaslash	4	2
+Beam Barrage	1	2
+Beam Barrage	2	1
+Beam Barrage	3	1
+Beam Barrage	4	1
+Beam Barrage	5	1
+Beam Barrage	6	1
+Beam Barrage	7	1
+Beam Barrage	8	1
+Beam Barrage	9	1
+Hammer Rush	1	1
+Hammer Rush	2	1
+Hammer Rush	3	1
+Hammer Rush	4	2
+Sword Dance	1	1
+Sword Dance	2	2
+Leg Blast	1	1
+Leg Blast	2	2
+Flash Blow	1	2
+Flash Blow	2	1
+Flash Blow	3	1
+Flash Blow	4	1
+Flash Blow	5	1
+Flash Blow	6	1
+Flash Blow	7	1
+Flash Blow	8	3
+\.
+
+
+--
+-- Data for Name: special_reactions; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.special_reactions (special, hit, reaction) FROM stdin;
+Ray of Punishment	1	Knockback Lv 1
+Merciful Heart	1	Knockback Lv 1
+Noponic Storm	1	Knockback Lv 1
+Noponic Storm	2	Knockback Lv 1
+Noponic Storm	3	Knockback Lv 1
+Noponic Storm	4	Knockback Lv 1
+Noponic Storm	5	Knockback Lv 1
+Noponic Storm	6	Knockback Lv 1
+Feather Typhoon	4	Blowdown Lv 1
+Berserk March	1	Knockback Lv 2
+Berserk March	2	Knockback Lv 2
+Berserk March	3	Knockback Lv 2
+Berserk March	4	Blowdown Lv 2
+Breaking Wave	1	Knockback Lv 1
+Tough Break	1	Knockback Lv 1
+Justice Blizzard	7	Blowdown Lv 3
+Innocent Teardrop	1	Knockback Lv 3
+Tyrant Crush (Weak)	1	Blowdown Lv 1
+Tyrant Crush (Weak)	2	Blowdown Lv 2
+Tyrant Crush	1	Blowdown Lv 1
+Tyrant Crush	2	Blowdown Lv 2
+Open Wide!	1	Knockback Lv 4
+Geyser Spring	1	Knockback Lv 1
+Beary-Go-Round	1	Blowdown Lv 1
+Beary-Go-Round	2	Blowdown Lv 1
+Beary-Go-Round	3	Blowdown Lv 1
+Beary-Go-Round	4	Blowdown Lv 1
+Beary-Go-Round	5	Blowdown Lv 1
+Beary-Go-Round	6	Blowdown Lv 1
+Beary-Go-Round	7	Blowdown Lv 1
+Beary-Go-Round	8	Blowdown Lv 1
+Extreme Gutsy Spirit	11	Blowdown Lv 3
+Dessert Bomb	1	Knockback Lv 5
+Tea Leaves	1	Blowdown Lv 5
+Golden Font	1	Blowdown Lv 1
+Mortal Storm	1	Knockback Lv 1
+Mortal Storm	2	Blowdown Lv 1
+Mortal Storm	3	Blowdown Lv 1
+Mortal Storm	4	Blowdown Lv 1
+Mortal Storm	5	Blowdown Lv 3
+Blast of Fresh Air	1	Knockback Lv 1
+Wake-Up Whirl	1	Blowdown Lv 2
+The Heavens Open	1	Blowdown Lv 3
+Final Retribution	1	Blowdown Lv 1
+Final Retribution	2	Blowdown Lv 3
+Final Retribution	3	Blowdown Lv 5
+Shield Charge	1	Knockback Lv 3
+Multi-Raid	1	Knockback Lv 2
+Flying Knuckle	1	Knockback Lv 1
+Executioner	1	Blowdown Lv 1
+War Swing	7	Knockback Lv 2
+Zero Burst	1	Blowdown Lv 1
+Bomber Tackle	1	Blowdown Lv 1
+Flash Blow	1	Blowdown Lv 1
+ECHIDNA	2	Knockback Lv 1
+T-SKYLLA	3	Blowdown Lv 1
+T-SKYLLA	4	Blowdown Lv 3
+Buster Cyclone	1	Blowdown Lv 2
+Buster Cannon	1	Blowdown Lv 5
+Buster Mirage	2	Knockback Lv 1
+Buster Mirage	5	Knockback Lv 1
+Buster Mirage	6	Knockback Lv 2
+Monado Buster	1	Blowdown Lv 2
+\.
+
+
+--
 -- Data for Name: specials; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
-COPY xeno2.specials (name, level, type, damage_ratio, hits, range, reaction, description, caption, distance, radius, hate, accuracy_mod, crit_mod) FROM stdin;
-Flame Nova	1	Ether	300/360/420/480/540/576	1	One Target	None	Increases damage dealt to beasts by [60/70/80/90/100/100]%.	Absorb ether from the air and transform it into fighting spirit.	10	0	5	0	0
-Prominence Revolt	2	Ether	400/450/500/550/600/638	1	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Pillars of fire erupt from beneath all enemies.	15	100	5	0	0
-Blazing End	3	Ether	500/570/640/710/780/850	9	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Concentrate attack on a single enemy, incinerating them.	10	0	5	0	25
-Burning Sword	4	Ether	1150	11	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Cleave the enemy with a giant sword of flame that detonates on impact.	10	0	10	100	20
-Ray of Punishment	1	Ether	360/400/440/480/520/576	1	One Target	Knockback	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Fire concentrated arrows of light at an enemy.	15	5	5	0	0
-Photon Edge	2	Ether	440/480/520/560/600/638	13	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Move at light-speed to cut the enemy instantaneously.	15	100	5	0	25
-Lightning Buster	3	Ether	625/670/720/770/820/850	4	Circle (Target)	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Slice an enemy multiple times with a blade of light.	10	5	5	0	50
-Sacred Arrow	4	Ether	1400	7	Circle (Target)	None	Adds a 100% chance of dealing a guard-annulling attack.	Rain down arrows of light from above to tear the enemy apart.	10	50	10	100	40
-Starburst	1	Ether	720/720/720/720/720/720	6	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Blast a merciless siren beam through enemies.	20	0	35	100	100
-Radiant Flare	2	Ether	870/870/870/870/870/870	5	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Attack hostiles with a light-speed attack.	20	100	35	100	100
-Genesis Saber	3	Ether	1020/1020/1020/1020/1020/1020	6	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Pierce enemies with countless light blades created by ether.	20	100	35	100	100
-Infinity Blade	4	Ether	2025	1	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Unleash energy and sever the enemy with a sword of light.	10	0	100	100	60
-Raging Tiger	1	Physical	300/350/400/450/500/528	3	One Target	None	Absorbs [60/70/80/90/100/100]% of critical damage dealt as HP.	Slash repeatedly by unleashing your inner beast.	10	0	5	0	25
-Aqua Wave	2	Ether	360/400/440/480/520/580	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Attack enemies and heal allies with a wave of ether.	15	8	5	0	0
-Wild Roar	3	Ether	500/550/600/650/700/748	1	Ahead	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Shoot forward all ether collected by the rings.	15	3	5	0	0
-Dark Maelstrom	4	Ether	1100	5	One Target	None	Spawns a small HP Potion on hit, with a 100% chance to spawn 2.	Follow up Wild Roar with an overwhelming assault.	10	0	10	100	20
-Poppi Spinning Slash	1	Physical	300/340/380/420/460/480	4	Circle (User)	None		Attack all within range with spinning motion.	10	4	25	0	0
-Noponic Storm	2	Ether	400/440/480/520/560/580	6	Ahead	Knockback		Shoot out a vortex of ether created within the body.	15	3	25	0	0
-Poppi Drill	3	Physical	500/540/580/620/660/714	1	One Target	None		Charge with jet propulsion like a spinning drill.	10	0	25	0	0
-Jet Biter	4	Physical	500	1	One Target	None	Increases damage dealt to toppled enemies by 150%.	Attack with the Big Mecha Biter (once charged).	10	0	40	100	20
-Poppi Missile	1	Ether	300/340/380/420/460/480	2	Circle (Target)	None		Launch a large missile and audaciously bomb the enemy.	10	5	20	0	0
-Poppi Crushing Blow	2	Physical	400/440/480/520/560/609	5	One Target	None		Pulverize the enemy with a spinning punch then an explosive uppercut.	15	5	20	0	0
-Noponic Destruction	3	Ether	525/570/610/650/690/748	1	Ahead	None		Launch countless missiles while in the air to mow down your enemies.	15	3	20	0	0
-Quixotic Megaburst	4	Ether	550	6	One Target	Blowdown	Increases damage dealt to launched enemies by 150%.	Fire off numerous destructive missiles (once charged).	10	0	30	100	40
-Poppi Ignition	1	Physical	300/340/380/420/460/480	5	One Target	None		Shoot repeated slashing attacks while maneuvering freely.	10	0	20	0	25
-Noponic Axion	2	Ether	400/440/480/520/560/609	5	Ahead	None		Mop up the enemy with a laser blast in bombardment mode.	15	2	20	0	25
-Poppi Unlimited	3	Ether	500/550/600/650/700/748	4	One Target	None		Overwhelm the enemy with unlimited repeat attacks.	10	0	20	25	50
-Quantum Judgment	4	Ether	575	10	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Dice the enemy and unleash 100% power in mid-air.	10	0	30	100	60
-Death Wing	1	Physical	300/340/380/420/460/480	4	One Target	None	Increases damage dealt to aerial creatures by [60/70/80/90/100/100]%.	Combine the Dual Scythes and throw them at the enemy.	10	0	5	25	0
-Crushing Twister	2	Physical	400/440/480/520/560/580	8	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Take the enemy by surprise with acrobatic movements.	10	0	5	0	0
-Feather Typhoon	3	Ether	500/540/580/620/660/680	4	Ahead	Blowdown	[1/2/3/4/5/5]% chance of felling an aerial foe on attack (fails on bosses/uniques).	Create a giant vortex to suck up the enemy in one go.	15	3	5	0	25
-Crimson Storm	4	Physical	575	2	One Target	Blowdown	Increases damage dealt to launched enemies by 150%.	Roc follows up Driver attack with an assault from the air.	10	0	0	100	40
-Heat Haze	1	Ether	300/340/380/420/460/480	4	Circle (Target)	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Spin your weapon round and incinerate enemies within range.	10	5	25	0	0
-Will-o'-the-Wisp	2	Ether	400/440/480/520/560/609	16	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Blue flames follow the enemy and deal damage.	15	0	25	25	0
-Swirling Dragon	3	Physical	500/550/600/650/700/748	11	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Swing round your weapon and focus the attack on a single enemy.	10	0	25	0	25
-Azure III: Soulfire	4	Ether	1000	16	One Target	None	Increases damage dealt to enemies targeting user by 100%.	Engulf the enemy in countless blue flames, reducing them to ashes.	20	0	40	100	20
-Lightning Force	1	Ether	270/340/410/480/550/600	1	Ahead	None	Increases damage dealt to machines by [60/70/80/90/100/100]%.	Catch a lightning strike with your wand and throw it out to attack enemies.	10	3	5	0	25
-Electric Circus	2	Physical	360/430/500/570/640/725	2	Ahead	None	Increases critical damage by [25/40/55/70/85/85]%.	Manipulate an electrified weapon with your wand and attack the enemy.	10	4	5	0	25
-Thunder Doom	3	Ether	450/530/610/690/770/850	1	Circle (Target)	None	Increases critical damage by [25/40/55/70/85/85]%.	Smash your weapon into the ground for a massive lightning explosion.	10	5	5	0	25
-Sonic Thunderslash	4	Physical	1150	16	One Target	None	Increases critical damage by 85%.	Power up Driver to strike the enemy at ultra high speed.	10	0	10	100	60
-Last Hope	1	Physical	315/350/390/430/470/504	3	One Target	None	Restores [10/12/15/17/20/20]% HP of damage dealt when a Special connects.	Drain enemies' life force, and distribute it to allies.	10	0	5	0	0
-Merciful Heart	2	Ether	420/460/500/540/580/609	1	Ahead	Knockback	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Attack enemies with a water shock wave.	10	3	5	0	0
-Redeeming Strike	3	Ether	525/560/600/640/680/714	2	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Destroy enemies from within by manipulating the power of regeneration.	10	100	5	0	0
-Divine Sword	4	Ether	1150	6	One Target	Blowdown	When landing a hit, restores 50% of damage dealt to the whole party.	Invert the power of regeneration to erode the enemy from within.	10	0	10	100	20
-Water Moon	1	Ether	300/340/380/420/460/480	1	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Gather ether in the Chroma Katana and release it as you draw the blade.	15	0	25	0	0
-Breaking Wave	2	Physical	400/440/480/520/560/609	3	One Target	Knockback	Increases critical damage by [25/40/55/70/85/85]%.	Use a flying kick to dissolve the enemy's composure then tear them up.	10	0	25	0	25
-Midnight Mist	3	Physical	500/550/600/650/700/748	13	One Target	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Perform a series of quick draw slashes the moment you engage the enemy.	10	0	25	0	0
-Sea God's Tidal Wave	4	Physical	500	3	One Target	Knockback	Increases damage dealt to enemies targeting user by 100%.	Sharpen senses and unleash a series of fierce strikes.	10	0	40	100	40
-Tough Break	1	Physical	300/340/380/420/460/480	1	One Target	Knockback	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Attack by grasping your shield and thrusting forward with all your might.	10	0	35	0	0
-Cold Judgment	2	Ether	400/440/480/520/560/580	1	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Create a shock wave and ice pillar to overwhelm the enemy.	10	5	35	0	0
-Justice Blizzard	3	Ether	500/540/580/620/660/680	7	Circle (Target)	Blowdown	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Release all power and cause a massive ice explosion.	10	5	35	0	0
-Whiteout	4	Physical	500	5	One Target	Blowdown		Attack repeatedly and slam your weapon to create a shockwave.	10	0	50	100	20
-Brutal Lance	1	Physical	300/340/380/420/460/480	4	Ahead	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Spin weapon erratically and strike.	10	4	5	0	0
-Termination Blast	2	Ether	400/440/480/520/560/609	6	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Shoot out absorbed energy in a laser blast.	15	2	5	25	0
-Hellbound	3	Physical	500/550/600/650/700/748	14	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Fly up and perform a drop attack with maximum power.	10	0	5	0	25
-Apocalypse	4	Physical	690	6	One Target	Blowdown	Increases critical damage by 85%.	Jab at the enemy repeatedly and fire a laser from the chest.	10	0	10	100	60
-Dark Serpent	1	Ether	300/340/380/420/460/480	4	Ahead	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Attack by spraying out dark ether.	10	3	25	0	0
-Blade Vortex	2	Physical	400/440/480/520/560/580	1	One Target	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	At the moment of movement, perform quick draw cuts at visible speed.	10	0	25	0	0
-Grim Moon	3	Physical	500/550/600/650/700/748	2	Ahead	None	Adds [1/1/2/2/3/3]% chance to incapacitate enemy (fails on bosses and uniques).	Adopt a quick draw pose, then in an instant slash all enemies in range.	10	8	25	0	25
-Demon Quadrant	4	Physical	500	4	One Target	Knockback	Adds 3% chance to incapacitate enemy (fails on bosses and uniques).	Mow down the enemy with 3 strikes, then finish with an almighty slice.	10	0	50	100	50
-Blood Altar	1	Physical	270/300/330/360/390/432	3	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Slap the enemy with the side of your weapon, then go on the attack.	10	0	5	0	0
-Tainted Palace	2	Physical	360/400/440/480/520/580	4	Ahead	None	[1/2/3/4/5/5]% chance of felling a beast on attack (fails on bosses/uniques).	Seal enemy movements and pierce with the lance as far as possible.	10	3	5	25	0
-Accursed Prison	3	Ether	450/510/570/630/690/748	5	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Throw your weapon twice, then hit the enemy with a drop attack.	10	6	5	0	25
-Dark Drama	4	Physical	575	4	One Target	None	Increases damage dealt by 150% when HP is 30% or less.	Lose control completely and batter the enemy with the lance.	10	0	10	100	60
-Heliodor Passion	1	Physical	300/340/380/420/460/480	3	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	The thrown weapon spins and cuts up the enemy.	10	0	5	0	0
-Star Beryl Courage	2	Physical	400/440/480/520/560/580	3	One Target	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Swing the weapon down with all your strength as if digging.	10	0	5	0	0
-Rhodochrosite Might	3	Ether	500/540/580/620/660/680	3	Ahead	None	Increases critical damage by [25/40/55/70/85/85]%.	Attack the enemy by smashing up a crystal.	10	3	5	0	25
-Invincible Moldavite	4	Ether	500	7	One Target	Blowdown	Increases damage dealt to toppled enemies by 150%.	Launch an attack while spinning the weapon around.	10	0	10	100	20
-Innocent Teardrop	1	Ether	300/340/380/420/460/480	1	Ahead	Knockback	Increases Affinity by [60/70/80/90/100/100] when using a Special.	Condense water ether and attack all enemies over a wide range.	10	5	5	0	0
-Bittersweet Dreams	2	Ether	400/440/480/520/560/580	3	Circle (Target)	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Attack by shooting out water ether from your spinning weapon.	10	6	5	0	25
-Leave Me Alone	3	Physical	500/540/580/620/660/680	8	One Target	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	After high-speed spinning slashes, launch a giant water pillar.	10	0	5	25	0
-Rock My World	4	Ether	500	3	Circle (Target)	Blowdown		Use the momentum of a spinning cut to jump and fire a shockwave.	10	4	10	100	20
-Open Wide!	1	Physical	300/350/400/450/500/528	1	One Target	None	Absorbs [60/70/80/90/100/100]% of critical damage dealt as HP.	Cover your whole body with wind ether and charge.	15	0	5	0	0
-Snack On This!	2	Ether	400/440/480/520/560/580	5	One Target	None	Restores [10/12/15/17/20/20]% HP of damage dealt when a Special connects.	Chew a Bitball and shoot out balls of energy.	20	0	5	0	0
-Gobble 'em Up!	3	Ether	550/590/630/670/710/748	6	Ahead	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Shoot out a laser while in the air and eradicate your enemies.	15	8	5	0	25
-Gobble Gobble!	4	Ether	500	2	One Target	None	When landing a hit, restores 50% of damage dealt to the whole party.	Jump after a spinning attack to fire a hail of bullets.	15	0	10	100	20
-Flame Crown	1	Physical	300/340/380/420/460/480	1	One Target	None	Increases damage dealt to aquatic organisms by [60/70/80/90/100/100]%.	Calmly draw near the enemy and perform intense slashing attacks.	10	0	5	0	0
-Tyrant Crush	2	Physical	400/450/500/550/600/638	3	One Target	Blowdown	Increases critical damage by [25/40/55/70/85/85]%.	Pursue a downed enemy with a kick and perform spinning slashes.	10	0	5	0	0
-Kaiser Flare	3	Ether	500/550/600/650/700/748	2	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Spread maximum ether and incinerate everything.	10	3	5	25	25
-Blazing Conquest	4	Ether	600	1	One Target	None	Increases damage dealt to toppled enemies by 150%.	Slowly build up energy to burn the enemy to a crisp.	10	0	10	100	40
-Flame Crown (Weak)	1	Physical	120/130/140/150/160/192	1	One Target	None	Increases damage dealt to aquatic organisms by [60/70/80/90/100/100]%.	Calmly draw near the enemy and perform intense slashing attacks.	10	0	5	0	0
-Tyrant Crush (Weak)	2	Physical	160/170/180/190/200/232	3	One Target	Blowdown	Increases critical damage by [25/40/55/70/85/85]%.	Pursue a downed enemy with a kick and perform spinning slashes.	10	0	5	0	0
-Kaiser Flare (Weak)	3	Ether	200/210/220/230/240/272	2	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Spread maximum ether and incinerate everything.	10	3	5	25	25
-Blazing Conquest (Weak)	4	Ether	450	1	One Target	None	Increases damage dealt to toppled enemies by 150%.	Slowly build up energy to burn the enemy to a crisp.	10	0	10	100	40
-Sentimental Burst	1	Ether	300/340/380/420/460/480	1	One Target	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Condense dark ether until it explodes.	10	0	35	0	0
-Hidden Emotion	2	Ether	400/440/480/520/560/609	1	Ahead	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Hit the shield while in the air, and emit a large amount of healing.	10	3	35	0	0
-Secret Desire	3	Physical	500/550/600/650/700/748	7	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Enter unconscious state with the mask and draw out your true power.	10	0	35	0	0
-Melancholic Break	4	Ether	600	6	One Target	None		Offer prayers to your shield, then release a large number of bandages.	10	0	50	100	20
-Foam Blast	1	Ether	270/310/350/390/430/456	1	Ahead	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Transform ether into bubble form and spray it forward.	10	3	0	0	0
-Geyser Spring	2	Ether	400/440/480/520/560/609	1	Ahead	Knockback	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Gather ether on your weapon and shoot it out as a powerful current of water.	15	2	5	25	0
-Fierce Deluge	3	Physical	500/540/580/620/660/680	9	One Target	None	Increases damage dealt from the side by [100/110/120/130/150/150]%.	Use water ether to attack with high-speed repeated thrusts.	10	0	5	0	0
-Torrential Pain	4	Physical	400	5	One Target	Knockback / Blowdown	Increases damage dealt from the side by 150%.	Launch a continuous, hard-to-dodge attack at high speeds.	10	0	10	100	40
-Ice Slash	1	Ether	300/340/380/420/460/480	2	Ahead	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	After throwing ice knives, attack with slashes.	15	3	25	25	0
-Frost Banish	2	Physical	400/440/480/520/560/609	4	One Target	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Release a powerful somersault kick after three repeat attacks.	10	0	25	0	0
-Rebel Sister	3	Ether	500/550/600/650/700/748	2	Circle (Target)	None	Increases critical damage by [25/40/55/70/85/85]%.	With one slash, smash an ice pillar and attack enemies over a wide area.	10	8	25	0	0
-Winter's Wake	4	Physical	400	4	One Target	None	Increases damage dealt to enemies targeting user by 100%.	Hurl out continuous ice strikes to freeze the enemy in their tracks.	10	0	40	100	40
-Cold Sever	1	Physical	300/340/380/420/460/480	16	One Target	None	Increases damage dealt from the side by [100/110/120/130/150/150]%.	Use ice ether to attack with a series of high-speed stabs.	10	0	5	0	0
-Punishment Strike	2	Ether	400/440/480/520/560/580	1	Circle (Target)	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Swing your weapon round above your head to create a giant block of ice.	10	5	5	0	0
-Extinction Icicle	3	Physical	500/540/580/620/660/680	1	One Target	None	Increases damage dealt when an ally is incapacitated by [50/75/100/125/150/150]%.	Create a giant ice lance and use it in an extra powerful charge.	10	0	5	0	25
-Snowflake of Judgment	4	Physical	450	8	One Target	Blowdown	Increases damage dealt when an ally is incapacitated by 150%.	After a series of trifling cuts, unleash a giant pillar of ice.	10	0	10	100	40
-Electric Pompom	1	Ether	300/340/380/420/460/480	1	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Do lively jumps and smash your weapon into the ground.	10	0	5	0	0
-Vivid Love	2	Ether	400/440/480/520/560/580	1	Ahead	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Give heart-shaped electric ether to your enemies as a present.	15	3	5	0	0
-Angelic Drop	3	Physical	500/550/600/650/700/748	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Release a powerful flying kick while spinning your weapon.	10	5	5	0	25
-Sweet Emotion	4	Ether	500	2	One Target	None	Spawns a small HP Potion on hit, with a 100% chance to spawn 2.	Break the enemy's block, then throw a full-strength lightning punch.	10	0	10	100	20
-Nightmare Rondeau	1	Ether	300/340/380/420/460/480	5	Circle (Target)	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Throw your weapon spinning into the air so it shoots out lasers.	20	6	5	0	0
-Shadow Rhapsody	2	Ether	400/440/480/520/560/580	10	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Ether becomes a dark hand that rises out of the ground to attack the enemy.	20	3	5	25	0
-Decadent Finale	3	Ether	500/540/580/620/660/680	3	Circle (Target)	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Throw your weapon into the air and spray bullets to annihilate the enemy.	20	2	5	50	25
-Evil Ensemble	4	Ether	400	5	One Target	None	Increases damage dealt by 150% when HP is 30% or less.	Fire bullets continuously at the enemy while dancing in a circle.	20	0	10	100	40
-Beary Strong	1	Physical	300/340/380/420/460/504	2	One Target	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Beary swipes his ice claws and mows down the enemy.	10	0	5	0	25
-Beary Helpful	2	Ether	380/410/440/470/500/551	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Beary attacks the enemy with an ice shockwave.	15	10	5	0	0
-Beary-Go-Round	3	Physical	550/600/650/700/750/816	8	One Target	Blowdown	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Beary spins round and overwhelms all enemies in range.	10	0	5	0	0
-Ursine Phantasm	4	Ether	550	5	One Target	Knockback / Blowdown	When landing a hit, restores 50% of damage dealt to the whole party.	Attack with an uppercut while Beary rushes the enemy.	15	0	10	100	20
-Flaming Slashwave	1	Ether	300/340/380/420/460/480	1	Ahead	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Change ether into flaming slashes that shoot out ahead.	15	3	25	25	0
-Immolating Cleave	2	Physical	440/480/520/560/600/638	1	Ahead	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Wrap the Chroma Katana in flames and cut enemies ahead in two.	10	3	25	0	0
-Extreme Gutsy Spirit	3	Physical	600/640/680/720/760/816	12	One Target	Blowdown	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	After dealing a series of violent punches, cut enemies in two.	10	0	25	0	50
-Going Ballistic	4	Physical	575	4	One Target	Knockback / Blowdown		Attack with a series of cuts, then an explosion with ether from the scabbard.	10	0	40	100	40
-Fierce Healer	1	Ether	285/320/350/380/410/456	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Shoot out your own ether as a shockwave.	10	10	5	0	0
-Wild Grappler	2	Physical	400/440/480/520/560/609	4	One Target	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Rush in wielding a weapon of concentrated ether.	10	0	5	0	0
-Organic Automata	3	Ether	550/600/650/700/750/782	5	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Kit and Sunny emit a laser beam.	10	12	5	0	0
-Earth Priestess	4	Ether	500	5	One Target	None		After a series of attacks, hit the enemy with a high-powered laser shot.	10	0	10	100	20
-Dessert Bomb	1	Ether	270/300/330/360/390/432	1	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 90% or higher.	Explode a giant ball of water ether in mid-air.	20	6	5	0	0
-Tea Leaves	2	Physical	380/410/440/470/500/551	1	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	An unprecedented bathtub-based charging assault.	20	5	5	0	50
-Golden Font	3	Ether	500/540/580/620/660/680	1	Circle (Target)	Blowdown	Adds [60/70/80/90/100/100]% chance to drop gold upon landing a hit.	Fly up in the bath and attack indiscriminately.	100	100	5	0	0
-Royal Tea Party	4	Ether	690	13	One Target	None		Sheba sits in her bathtub to attack in tandem with her watery lover.	20	0	10	100	60
-Healing Bolt	1	Ether	300/340/380/420/460/480	2	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Swing your weapon round your head and release a shockwave.	15	5	5	0	0
-Ball Lightning	2	Ether	400/440/480/520/560/580	1	One Target	None	Increases damage dealt to machines by [60/70/80/90/100/100]%.	Throw your weapon about randomly and cause a lightning explosion.	15	5	5	0	0
-Thunderstrike	3	Ether	550/590/630/670/710/748	2	One Target	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Kick a ball and lightning will strike where it bounces.	10	0	5	0	25
-Divine Plasma	4	Ether	425	1	One Target	None	When landing a hit, restores 50% of damage dealt to the whole party.	Attack the enemy with a ball of lightning formed by Vess's weapon.	15	0	10	100	20
-Harness the Wind	1	Ether	300/340/380/420/460/480	1	Circle (Target)	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Compress wind ether and blow away the enemy.	15	5	5	0	0
-Slipstream	2	Ether	400/440/480/520/560/580	3	Ahead	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Create a vacuum with high-speed chops and kicks.	15	4	5	0	25
-Mortal Storm	3	Physical	550/590/630/670/710/748	5	One Target	Knockback / Blowdown	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Hit the enemy with a series of compressed air kicks.	15	0	5	50	50
-Literacy Beatdown	4	Ether	550	5	One Target	Blowdown		As the enemy recoils from a series of attacks, fire a blast of compressed air.	10	0	10	100	60
-Bang-Bang Bound	1	Ether	285/320/350/380/410/456	3	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Hit the ground while cheerfully jumping and bounding.	10	3	35	0	0
-Shocking Assault	2	Ether	380/430/480/530/580/609	1	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Charge forward after charging up electric ether.	10	0	35	0	0
-Rolling Thunder	3	Ether	500/550/600/650/700/748	3	Circle (Target)	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Create thunder clouds and attack enemies in range with lightning strikes.	10	5	35	0	25
-Electrifying Show	4	Physical	400	3	One Target	None	Increases damage dealt from the front by 100%.	Electra hits her weapon like a drum to trigger a shockwave.	10	0	50	100	20
-Diabolic Zephyr	1	Physical	330/370/410/450/490/528	2	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Gently raise the axe overhead then bring it down crashing.	10	4	5	0	25
-Adamantine Axe	2	Physical	480/520/560/600/640/696	1	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Quickly raise the axe overhead and attack quickly.	10	5	5	0	0
-Ascension Blade	3	Ether	625/670/720/770/820/850	10	One Target	None	Increases damage dealt to higher-level enemies by [60/70/80/90/100/100]%.	Fly around cutting up the enemy with powerful slash attacks.	10	5	5	0	50
-Twixt Heaven & Hell	4	Physical	600	8	One Target	None	Increases damage dealt to higher-level enemies by 100%.	Strike down on the enemy from on high with a powerful weapon.	10	0	10	100	60
-Blast of Fresh Air	1	Ether	315/350/390/430/470/504	1	Circle (Target)	Knockback	Increases Affinity by [60/70/80/90/100/100] when using a Special.	Swing the hammer and hit ether balls.	15	5	5	0	0
-Whoopsie Crazy	2	Physical	440/480/520/560/600/638	3	One Target	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Attack enemies within range while jumping and spinning your weapon.	10	0	5	0	25
-Wake-Up Whirl	3	Physical	575/620/660/700/740/782	1	Circle (Target)	Blowdown	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	After jumping up in the sky, crash into the ground at high speed.	10	5	5	0	0
-Perfect Storm	4	Ether	500	4	One Target	None		During a spinning attack...slip and let go of the hammer.	10	0	80	100	20
-Lavender Drive	1	Physical	300/340/380/420/460/480	3	One Target	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Kick a Bitball three times while spinning.	10	0	5	0	0
-Lilium Dance	2	Ether	400/440/480/520/560/609	3	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Release a shockwave while spinning a Bitball.	15	5	5	0	0
-Physalis Judgment	3	Ether	550/600/650/700/750/782	1	Circle (Target)	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Massively enlarge a Bitball and roll it over the enemy.	10	5	5	0	25
-Lethal Lavender	4	Ether	500	6	One Target	None	When landing a hit, restores 50% of damage dealt to the whole party.	Spin along with the Bitball to send out a shockwave in all directions.	15	0	10	100	20
-R-Blade	1	Ether	330/370/410/450/490/528	4	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Put your enemies into a hornet's nest by spraying out bullets.	20	0	5	0	50
-H-Effect R	2	Ether	480/520/560/600/640/696	4	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Develop the Hilbert Effect and change the course of battle.	20	50	5	0	0
-F-G-Shot	3	Ether	650/700/750/800/850/884	16	Ahead	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	After charging energy, shoot out scattered laser beams.	20	2	5	50	100
-X-Buster	4	Ether	719	9	Ahead	None	Adds a 100% chance of dealing a guard-annulling attack.	Fire a concentrated laser beam, but only when energy reserves are full.	20	5	10	100	60
-Empyrean Salvo	1	Ether	300/350/400/450/500/528	16	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Launch homing missiles from your weapon and tail.	20	0	5	0	0
-The Heavens Open	2	Ether	400/460/520/580/640/696	1	Circle (Target)	Blowdown	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Release maximum electric ether and cause a huge explosion.	20	5	5	0	50
-Final Retribution	3	Physical	500/580/660/740/820/884	3	Ahead	Blowdown	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Remove limiter and charge the enemy, exterminating them.	20	4	5	50	100
-Heaven on Earth	4	Ether	621	8	One Target	Blowdown	Increases critical damage by 85%.	Fire a super-strong laser to annihilate the enemy.	20	0	10	100	60
-Crystal Blizzard	1	Ether	300/340/380/420/460/480	1	Circle (Target)	None	Increases critical damage by [25/40/55/70/85/85]%.	Lift foot up high and throw the ball as hard as possible.	15	5	5	0	25
-Snowblind	2	Ether	400/440/480/520/560/580	1	One Target	None	Spawns a small HP Potion on hit, with a [60/70/80/90/100/100]% chance to spawn 2.	Kiss and attack with a ball filled with ether.	15	0	5	0	0
-Frost Queen	3	Ether	500/550/600/650/700/748	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Charge up a Bitball on an ice stage, then attack.	15	10	5	25	0
-Silver-Snow Glory	4	Ether	450	5	One Target	None	When landing a hit, restores 50% of damage dealt to the whole party.	Fire icy crystals from the ball as it moves around Dahlia.	15	0	10	100	20
-Storm Edge	1	Ether	300/340/380/420/460/480	1	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Slash enemies in Tonfa mode and create a whirlwind.	10	0	5	0	0
-Engrave	2	Ether	400/450/500/550/600/638	10	Ahead	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Pierce the enemy countless times in Sword mode.	10	3	5	0	0
-Death Match	3	Ether	550/600/650/700/750/816	3	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Shoot out a whirlwind to collect ether in Shield mode.	10	5	5	0	50
-Deadly Divide	4	Physical	575	1	One Target	None		Slash the enemy with a giant blade of ether.	10	0	10	100	60
-White Wave	1	Ether	300/340/380/420/460/480	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Release a shockwave from your weapon in Shield mode.	10	10	5	0	0
-Sacred Wyrm	2	Ether	400/450/500/550/600/638	4	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 90% or higher.	Shoot in Bow mode while flying back.	10	0	5	50	0
-Dark Judgment	3	Physical	550/600/650/700/750/816	5	One Target	None	Restores [10/12/15/17/20/20]% HP of damage dealt when a Special connects.	Cut up the enemy while spinning horizontally in the air with a kama.	10	0	5	0	50
-Hellwind of Ruin	4	Ether	575	6	One Target	Blowdown	Adds a 100% chance of dealing a guard-annulling attack.	Perform a spinning attack in the air, finishing with a bowshot.	10	0	10	100	40
-Swallow's Flight	1	Physical	300/340/380/420/460/480	3	One Target	None	Increases critical damage by [25/40/55/70/85/85]%.	Perform a horizontal sweeping three-pronged attack.	10	0	5	0	50
-Great Garland	2	Ether	420/460/500/540/580/609	1	Circle (Target)	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Smash the naginata into the ground to send out a shockwave.	10	10	5	0	0
-Dragonfly Slash	3	Ether	550/620/690/760/830/884	3	Ahead	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 30% or less.	Release a strong slashing attack with a backward somersault.	10	3	5	0	50
-Illusory Bloom	4	Ether	600	10	One Target	Blowdown	Increases damage dealt by 150% when HP is 30% or less.	Transform weapon into scimitar and hack the enemy to pieces.	10	0	10	100	60
-Crow Beat	1	Ether	300/340/380/420/460/480	1	Circle (Target)	None	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Soar into the air and attack with black wings.	10	5	5	0	0
-Crow Feather	2	Ether	400/440/480/520/560/580	1	Ahead	None	Increases damage dealt to launched enemies by [100/110/120/130/150/150]%.	Deal serious damage simply by twisting your fan.	10	3	5	0	0
-Final Crow	3	Ether	500/540/580/620/660/680	1	Circle (Target)	None	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Compress ether between two fans and shoot it at the enemy.	10	5	5	50	50
-Ultimate Crow	4	Ether	575	10	One Target	Blowdown		Flourish two fans to slice the enemy with an elegant dance.	10	0	10	100	40
-Shred	1	Physical	300/340/380/420/460/480	8	One Target	None	Increases damage dealt from the back by [100/110/120/130/150/150]%.	Tear into the enemy at great speed, haphazardly wielding your weapon.	10	0	5	0	0
-Skewer	2	Ether	400/440/480/520/560/580	6	One Target	None	Increases damage dealt by [100/110/120/130/150/150]% when HP is 90% or higher.	Create a short sword from electric ether and skewer the enemy.	18	0	5	100	50
-Cruel World	3	Ether	500/540/580/620/660/680	6	Ahead	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Emits a mysterious light from giant eyes on your wings.	10	3	5	0	0
-Lacerator	4	Ether	575	10	One Target	Knockback	Increases damage dealt by 150% when HP is 90% or higher.	Slash the enemy and emit mystic rays of light from your wings.	10	0	10	100	40
-Diamond Crash	1	Physical	300/340/380/420/460/480	1	One Target	None	Increases damage dealt to toppled enemies by [100/110/120/130/150/150]%.	Bash the hammer into the ground and set off a shockwave.	20	0	5	0	0
-Diamond Flight	2	Ether	420/460/500/540/580/609	5	Circle (Target)	None	Reduces [20/25/30/35/40/40]% of aggro toward user upon landing a hit.	Release ether in one burst, attacking indiscriminately.	20	5	5	0	0
-Diamond Hands	3	Physical	550/600/650/700/750/816	4	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Wield four weapons and shower the enemy with blows.	20	0	5	50	50
-Diamond Inferno	4	Physical	625	8	One Target	None		Annihilate the enemy with attacks from four different weapons.	20	0	10	100	80
-Dead Ball	1	Ether	300/340/380/420/460/480	1	One Target	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Throw out a ball of condensed energy from your right hand.	10	0	5	50	0
-Berserk March	2	Physical	440/500/560/620/680/725	4	Ahead	Knockback / Blowdown	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Go on a rampage, bowling over the enemy.	10	4	5	0	50
-Earth Breath	3	Ether	550/590/630/670/710/748	1	Circle (Target)	None	When landing a hit, restores [30/35/40/45/50/50]% of damage dealt to the whole party.	Hit the ground with ether collected between both fists.	10	5	5	0	0
-Star Crusher	4	Ether	575	4	One Target	Knockback	Increases critical damage by 85%.	Rush down the enemy and slam them with a leaping body press.	10	0	10	100	40
-ECHIDNA	1	Physical	330/370/410/450/490/528	2	One Target	Knockback	Increases critical damage by [25/40/55/70/85/85]%.	Deliver a slashing attack, and follow it up with a powerful kick.	10	0	5	0	25
-MAGDALENE 16	2	Ether	480/520/560/600/640/696	7	Ahead	None	Increases damage dealt to higher-level enemies by [60/70/80/90/100/100]%.	Deliver a whirling blow followed by a wild volley of shots.	10	2	5	0	25
-T-SKYLLA	3	Ether	650/700/750/800/850/884	4	Ahead	Blowdown	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Unleash a midair slash and then unload your firearm at the enemy.	10	4	5	50	100
-U-TENERITAS	4	Ether	719	2	Ahead	None	Adds a 100% chance of dealing a guard-annulling attack.	Detonate a high-energy explosive that damages all enemies in the vicinity.	10	5	10	100	60
-Buster Cyclone	1	Physical	300/350/400/450/500/528	7	Circle (Target)	Blowdown	Increases aggro drawn from Specials by [60/70/80/90/100/100]%.	Transform your weapon into knuckle claws and barrel into the enemy.	10	6	35	0	0
-Buster Cannon	2	Ether	400/460/520/580/640/696	1	Circle (Target)	None	Adds a [60/70/80/90/100/100]% chance of dealing a guard-annulling attack.	Transform your weapon into a cannon and unload it into the enemy.	15	6	35	0	0
-Buster Mirage	3	Physical	500/570/640/710/780/850	7	Ahead	Knockback	Increases damage dealt to enemies targeting user by [60/70/80/90/100/100]%.	Unleash the combined power of Poppi Mk. II and Poppibuster on the enemy.	10	3	35	0	25
-Buster Impact	4	Ether	975	9	Circle (Target)	Knockback	Adds a 100% chance of dealing a guard-annulling attack.	Initiate Poppibuster self-destruct mode.	10	12	50	100	20
-Union Sword	4	Ether	1500	5	One Target	None	Adds a 100% chance of dealing a guard-annulling attack.	Beat the enemy to a pulp with a medley of fire and water.	10	0	10	100	40
-Nexus Force	4	Ether	1500	2	One Target	Blowdown	When landing a hit, restores 50% of damage dealt to the whole party.	Beat the enemy to a pulp with a medley of fire and water.	10	0	10	100	40
+COPY xeno2.specials (name, level, type, range, caption, distance, radius, hate, accuracy_mod, crit_mod) FROM stdin;
+Flame Nova	1	Ether	One Target	Absorb ether from the air and transform it into fighting spirit.	10	0	5	0	0
+Prominence Revolt	2	Ether	Circle (Target)	Pillars of fire erupt from beneath all enemies.	15	100	5	0	0
+Blazing End	3	Ether	One Target	Concentrate attack on a single enemy, incinerating them.	10	0	5	0	25
+Ray of Punishment	1	Ether	One Target	Fire concentrated arrows of light at an enemy.	15	5	5	0	0
+Photon Edge	2	Ether	Circle (Target)	Move at light-speed to cut the enemy instantaneously.	15	100	5	0	25
+Lightning Buster	3	Ether	Circle (Target)	Slice an enemy multiple times with a blade of light.	10	5	5	0	50
+Starburst	1	Ether	One Target	Blast a merciless siren beam through enemies.	20	0	35	100	100
+Radiant Flare	2	Ether	Circle (Target)	Attack hostiles with a light-speed attack.	20	100	35	100	100
+Genesis Saber	3	Ether	Circle (Target)	Pierce enemies with countless light blades created by ether.	20	100	35	100	100
+Last Hope	1	Physical	One Target	Drain enemies' life force, and distribute it to allies.	10	0	5	0	0
+Merciful Heart	2	Ether	Ahead	Attack enemies with a water shock wave.	10	3	5	0	0
+Redeeming Strike	3	Ether	Circle (Target)	Destroy enemies from within by manipulating the power of regeneration.	10	100	5	0	0
+Raging Tiger	1	Physical	One Target	Slash repeatedly by unleashing your inner beast.	10	0	5	0	25
+Aqua Wave	2	Ether	Circle (Target)	Attack enemies and heal allies with a wave of ether.	15	8	5	0	0
+Wild Roar	3	Ether	Ahead	Shoot forward all ether collected by the rings.	15	3	5	0	0
+Poppi Spinning Slash	1	Physical	Circle (User)	Attack all within range with spinning motion.	10	4	25	0	0
+Noponic Storm	2	Ether	Ahead	Shoot out a vortex of ether created within the body.	15	3	25	0	0
+Poppi Drill	3	Physical	One Target	Charge with jet propulsion like a spinning drill.	10	0	25	0	0
+Poppi Missile	1	Ether	Circle (Target)	Launch a large missile and audaciously bomb the enemy.	10	5	20	0	0
+Poppi Crushing Blow	2	Physical	One Target	Pulverize the enemy with a spinning punch then an explosive uppercut.	15	5	20	0	0
+Noponic Destruction	3	Ether	Ahead	Launch countless missiles while in the air to mow down your enemies.	15	3	20	0	0
+Poppi Ignition	1	Physical	One Target	Shoot repeated slashing attacks while maneuvering freely.	10	0	20	0	25
+Noponic Axion	2	Ether	Ahead	Mop up the enemy with a laser blast in bombardment mode.	15	2	20	0	25
+Poppi Unlimited	3	Ether	One Target	Overwhelm the enemy with unlimited repeat attacks.	10	0	20	25	50
+Heat Haze	1	Ether	Circle (Target)	Spin your weapon round and incinerate enemies within range.	10	5	25	0	0
+Will-o'-the-Wisp	2	Ether	One Target	Blue flames follow the enemy and deal damage.	15	0	25	25	0
+Swirling Dragon	3	Physical	One Target	Swing round your weapon and focus the attack on a single enemy.	10	0	25	0	25
+Lightning Force	1	Ether	Ahead	Catch a lightning strike with your wand and throw it out to attack enemies.	10	3	5	0	25
+Electric Circus	2	Physical	Ahead	Manipulate an electrified weapon with your wand and attack the enemy.	10	4	5	0	25
+Thunder Doom	3	Ether	Circle (Target)	Smash your weapon into the ground for a massive lightning explosion.	10	5	5	0	25
+Death Wing	1	Physical	One Target	Combine the Dual Scythes and throw them at the enemy.	10	0	5	25	0
+Crushing Twister	2	Physical	One Target	Take the enemy by surprise with acrobatic movements.	10	0	5	0	0
+Feather Typhoon	3	Ether	Ahead	Create a giant vortex to suck up the enemy in one go.	15	3	5	0	25
+Storm Edge	1	Ether	One Target	Slash enemies in Tonfa mode and create a whirlwind.	10	0	5	0	0
+Engrave	2	Ether	Ahead	Pierce the enemy countless times in Sword mode.	10	3	5	0	0
+Death Match	3	Ether	Circle (Target)	Shoot out a whirlwind to collect ether in Shield mode.	10	5	5	0	50
+White Wave	1	Ether	Circle (Target)	Release a shockwave from your weapon in Shield mode.	10	10	5	0	0
+Sacred Wyrm	2	Ether	One Target	Shoot in Bow mode while flying back.	10	0	5	50	0
+Dark Judgment	3	Physical	One Target	Cut up the enemy while spinning horizontally in the air with a kama.	10	0	5	0	50
+Swallow's Flight	1	Physical	One Target	Perform a horizontal sweeping three-pronged attack.	10	0	5	0	50
+Great Garland	2	Ether	Circle (Target)	Smash the naginata into the ground to send out a shockwave.	10	10	5	0	0
+Dragonfly Slash	3	Ether	Ahead	Release a strong slashing attack with a backward somersault.	10	3	5	0	50
+Crow Beat	1	Ether	Circle (Target)	Soar into the air and attack with black wings.	10	5	5	0	0
+Crow Feather	2	Ether	Ahead	Deal serious damage simply by twisting your fan.	10	3	5	0	0
+Final Crow	3	Ether	Circle (Target)	Compress ether between two fans and shoot it at the enemy.	10	5	5	50	50
+Shred	1	Physical	One Target	Tear into the enemy at great speed, haphazardly wielding your weapon.	10	0	5	0	0
+Skewer	2	Ether	One Target	Create a short sword from electric ether and skewer the enemy.	18	0	5	100	50
+Cruel World	3	Ether	Ahead	Emits a mysterious light from giant eyes on your wings.	10	3	5	0	0
+Diamond Crash	1	Physical	One Target	Bash the hammer into the ground and set off a shockwave.	20	0	5	0	0
+Diamond Flight	2	Ether	Circle (Target)	Release ether in one burst, attacking indiscriminately.	20	5	5	0	0
+Diamond Hands	3	Physical	One Target	Wield four weapons and shower the enemy with blows.	20	0	5	50	50
+Dead Ball	1	Ether	One Target	Throw out a ball of condensed energy from your right hand.	10	0	5	50	0
+Berserk March	2	Physical	Ahead	Go on a rampage, bowling over the enemy.	10	4	5	0	50
+Earth Breath	3	Ether	Circle (Target)	Hit the ground with ether collected between both fists.	10	5	5	0	0
+Water Moon	1	Ether	One Target	Gather ether in the Chroma Katana and release it as you draw the blade.	15	0	25	0	0
+Breaking Wave	2	Physical	One Target	Use a flying kick to dissolve the enemy's composure then tear them up.	10	0	25	0	25
+Midnight Mist	3	Physical	One Target	Perform a series of quick draw slashes the moment you engage the enemy.	10	0	25	0	0
+Tough Break	1	Physical	One Target	Attack by grasping your shield and thrusting forward with all your might.	10	0	35	0	0
+Cold Judgment	2	Ether	Circle (Target)	Create a shock wave and ice pillar to overwhelm the enemy.	10	5	35	0	0
+Justice Blizzard	3	Ether	Circle (Target)	Release all power and cause a massive ice explosion.	10	5	35	0	0
+Brutal Lance	1	Physical	Ahead	Spin weapon erratically and strike.	10	4	5	0	0
+Termination Blast	2	Ether	Ahead	Shoot out absorbed energy in a laser blast.	15	2	5	25	0
+Hellbound	3	Physical	One Target	Fly up and perform a drop attack with maximum power.	10	0	5	0	25
+Dark Serpent	1	Ether	Ahead	Attack by spraying out dark ether.	10	3	25	0	0
+Blade Vortex	2	Physical	One Target	At the moment of movement, perform quick draw cuts at visible speed.	10	0	25	0	0
+Grim Moon	3	Physical	Ahead	Adopt a quick draw pose, then in an instant slash all enemies in range.	10	8	25	0	25
+Innocent Teardrop	1	Ether	Ahead	Condense water ether and attack all enemies over a wide range.	10	5	5	0	0
+Bittersweet Dreams	2	Ether	Circle (Target)	Attack by shooting out water ether from your spinning weapon.	10	6	5	0	25
+Leave Me Alone	3	Physical	One Target	After high-speed spinning slashes, launch a giant water pillar.	10	0	5	25	0
+Flame Crown (Weak)	1	Physical	One Target	Calmly draw near the enemy and perform intense slashing attacks.	10	0	5	0	0
+Tyrant Crush (Weak)	2	Physical	One Target	Pursue a downed enemy with a kick and perform spinning slashes.	10	0	5	0	0
+Kaiser Flare (Weak)	3	Ether	Ahead	Spread maximum ether and incinerate everything.	10	3	5	25	25
+Flame Crown	1	Physical	One Target	Calmly draw near the enemy and perform intense slashing attacks.	10	0	5	0	0
+Tyrant Crush	2	Physical	One Target	Pursue a downed enemy with a kick and perform spinning slashes.	10	0	5	0	0
+Kaiser Flare	3	Ether	Ahead	Spread maximum ether and incinerate everything.	10	3	5	25	25
+Open Wide!	1	Physical	One Target	Cover your whole body with wind ether and charge.	15	0	5	0	0
+Snack On This!	2	Ether	One Target	Chew a Bitball and shoot out balls of energy.	20	0	5	0	0
+Gobble 'em Up!	3	Ether	Ahead	Shoot out a laser while in the air and eradicate your enemies.	15	8	5	0	25
+Lavender Drive	1	Physical	One Target	Kick a Bitball three times while spinning.	10	0	5	0	0
+Lilium Dance	2	Ether	Circle (Target)	Release a shockwave while spinning a Bitball.	15	5	5	0	0
+Physalis Judgment	3	Ether	Circle (Target)	Massively enlarge a Bitball and roll it over the enemy.	10	5	5	0	25
+Sentimental Burst	1	Ether	One Target	Condense dark ether until it explodes.	10	0	35	0	0
+Hidden Emotion	2	Ether	Ahead	Hit the shield while in the air, and emit a large amount of healing.	10	3	35	0	0
+Secret Desire	3	Physical	One Target	Enter unconscious state with the mask and draw out your true power.	10	0	35	0	0
+Foam Blast	1	Ether	Ahead	Transform ether into bubble form and spray it forward.	10	3	0	0	0
+Geyser Spring	2	Ether	Ahead	Gather ether on your weapon and shoot it out as a powerful current of water.	15	2	5	25	0
+Fierce Deluge	3	Physical	One Target	Use water ether to attack with high-speed repeated thrusts.	10	0	5	0	0
+Ice Slash	1	Ether	Ahead	After throwing ice knives, attack with slashes.	15	3	25	25	0
+Frost Banish	2	Physical	One Target	Release a powerful somersault kick after three repeat attacks.	10	0	25	0	0
+Rebel Sister	3	Ether	Circle (Target)	With one slash, smash an ice pillar and attack enemies over a wide area.	10	8	25	0	0
+Cold Sever	1	Physical	One Target	Use ice ether to attack with a series of high-speed stabs.	10	0	5	0	0
+Punishment Strike	2	Ether	Circle (Target)	Swing your weapon round above your head to create a giant block of ice.	10	5	5	0	0
+Extinction Icicle	3	Physical	One Target	Create a giant ice lance and use it in an extra powerful charge.	10	0	5	0	25
+Electric Pompom	1	Ether	One Target	Do lively jumps and smash your weapon into the ground.	10	0	5	0	0
+Vivid Love	2	Ether	Ahead	Give heart-shaped electric ether to your enemies as a present.	15	3	5	0	0
+Angelic Drop	3	Physical	Circle (Target)	Release a powerful flying kick while spinning your weapon.	10	5	5	0	25
+Nightmare Rondeau	1	Ether	Circle (Target)	Throw your weapon spinning into the air so it shoots out lasers.	20	6	5	0	0
+Shadow Rhapsody	2	Ether	One Target	Ether becomes a dark hand that rises out of the ground to attack the enemy.	20	3	5	25	0
+Decadent Finale	3	Ether	Circle (Target)	Throw your weapon into the air and spray bullets to annihilate the enemy.	20	2	5	50	25
+Beary Strong	1	Physical	One Target	Beary swipes his ice claws and mows down the enemy.	10	0	5	0	25
+Beary Helpful	2	Ether	Circle (Target)	Beary attacks the enemy with an ice shockwave.	15	10	5	0	0
+Beary-Go-Round	3	Physical	One Target	Beary spins round and overwhelms all enemies in range.	10	0	5	0	0
+Flaming Slashwave	1	Ether	Ahead	Change ether into flaming slashes that shoot out ahead.	15	3	25	25	0
+Immolating Cleave	2	Physical	Ahead	Wrap the Chroma Katana in flames and cut enemies ahead in two.	10	3	25	0	0
+Extreme Gutsy Spirit	3	Physical	One Target	After dealing a series of violent punches, cut enemies in two.	10	0	25	0	50
+Fierce Healer	1	Ether	Circle (Target)	Shoot out your own ether as a shockwave.	10	10	5	0	0
+Wild Grappler	2	Physical	One Target	Rush in wielding a weapon of concentrated ether.	10	0	5	0	0
+Organic Automata	3	Ether	Circle (Target)	Kit and Sunny emit a laser beam.	10	12	5	0	0
+Dessert Bomb	1	Ether	Ahead	Explode a giant ball of water ether in mid-air.	20	6	5	0	0
+Tea Leaves	2	Physical	One Target	An unprecedented bathtub-based charging assault.	20	5	5	0	50
+Golden Font	3	Ether	Circle (Target)	Fly up in the bath and attack indiscriminately.	100	100	5	0	0
+Healing Bolt	1	Ether	Circle (Target)	Swing your weapon round your head and release a shockwave.	15	5	5	0	0
+Ball Lightning	2	Ether	One Target	Throw your weapon about randomly and cause a lightning explosion.	15	5	5	0	0
+Thunderstrike	3	Ether	One Target	Kick a ball and lightning will strike where it bounces.	10	0	5	0	25
+Harness the Wind	1	Ether	Circle (Target)	Compress wind ether and blow away the enemy.	15	5	5	0	0
+Slipstream	2	Ether	Ahead	Create a vacuum with high-speed chops and kicks.	15	4	5	0	25
+Mortal Storm	3	Physical	One Target	Hit the enemy with a series of compressed air kicks.	15	0	5	50	50
+Bang-Bang Bound	1	Ether	Circle (Target)	Hit the ground while cheerfully jumping and bounding.	10	3	35	0	0
+Shocking Assault	2	Ether	One Target	Charge forward after charging up electric ether.	10	0	35	0	0
+Rolling Thunder	3	Ether	Circle (Target)	Create thunder clouds and attack enemies in range with lightning strikes.	10	5	35	0	25
+Diabolic Zephyr	1	Physical	Ahead	Gently raise the axe overhead then bring it down crashing.	10	4	5	0	25
+Adamantine Axe	2	Physical	Circle (Target)	Quickly raise the axe overhead and attack quickly.	10	5	5	0	0
+Ascension Blade	3	Ether	One Target	Fly around cutting up the enemy with powerful slash attacks.	10	5	5	0	50
+Blast of Fresh Air	1	Ether	Circle (Target)	Swing the hammer and hit ether balls.	15	5	5	0	0
+Whoopsie Crazy	2	Physical	One Target	Attack enemies within range while jumping and spinning your weapon.	10	0	5	0	25
+Wake-Up Whirl	3	Physical	Circle (Target)	After jumping up in the sky, crash into the ground at high speed.	10	5	5	0	0
+R-Blade	1	Ether	One Target	Put your enemies into a hornet's nest by spraying out bullets.	20	0	5	0	50
+H-Effect R	2	Ether	Circle (Target)	Develop the Hilbert Effect and change the course of battle.	20	50	5	0	0
+F-G-Shot	3	Ether	Ahead	After charging energy, shoot out scattered laser beams.	20	2	5	50	100
+Empyrean Salvo	1	Ether	One Target	Launch homing missiles from your weapon and tail.	20	0	5	0	0
+The Heavens Open	2	Ether	Circle (Target)	Release maximum electric ether and cause a huge explosion.	20	5	5	0	50
+Final Retribution	3	Physical	Ahead	Remove limiter and charge the enemy, exterminating them.	20	4	5	50	100
+Blood Altar	1	Physical	One Target	Slap the enemy with the side of your weapon, then go on the attack.	10	0	5	0	0
+Tainted Palace	2	Physical	Ahead	Seal enemy movements and pierce with the lance as far as possible.	10	3	5	25	0
+Accursed Prison	3	Ether	Circle (Target)	Throw your weapon twice, then hit the enemy with a drop attack.	10	6	5	0	25
+Heliodor Passion	1	Physical	One Target	The thrown weapon spins and cuts up the enemy.	10	0	5	0	0
+Star Beryl Courage	2	Physical	One Target	Swing the weapon down with all your strength as if digging.	10	0	5	0	0
+Rhodochrosite Might	3	Ether	Ahead	Attack the enemy by smashing up a crystal.	10	3	5	0	25
+Crystal Blizzard	1	Ether	Circle (Target)	Lift foot up high and throw the ball as hard as possible.	15	5	5	0	25
+Snowblind	2	Ether	One Target	Kiss and attack with a ball filled with ether.	15	0	5	0	0
+Frost Queen	3	Ether	Circle (Target)	Charge up a Bitball on an ice stage, then attack.	15	10	5	25	0
+Stream Edge	1	Physical	One Target	Scare the enemy with crescent moon slashes, then pounce.	10	0	5	0	25
+Falling Axe	2	Ether	One Target	Attack by dropping down an ether blade from above.	10	0	5	0	0
+Axe Throw	3	Physical	Ahead	Slash up enemies in range while spinning your weapon.	10	3	5	0	0
+Round Break	1	Physical	One Target	Jump up and throw your Megalance down to the side.	10	0	5	0	0
+Boomerang Spear	2	Ether	One Target	Spin your weapon at high speed, dealing countless slash attacks.	10	0	5	0	0
+Splash Lance	3	Ether	Ahead	Create countless ether balls to attack the enemy.	10	3	5	25	0
+Sidewinder	1	Ether	One Target	Launch two missiles at once to attack the enemy.	20	0	5	25	0
+Aerial Trigger	2	Ether	Circle (Target)	Jump into the air and fire a shot with an elemental attribute.	20	5	5	0	0
+Swing Cannon	3	Ether	Ahead	Float your weapon and mow down all enemies within range with a laser.	20	7	5	0	0
+Shield Charge	3	Physical	One Target	Charge in with your shield and perform a follow-on attack.	10	0	35	0	0
+Smash Circle	2	Physical	One Target	Attack by throwing your weapon like a disc.	10	0	35	0	0
+Hammer Beat	1	Ether	Circle (Target)	Hit the ground with all your might to attack with a shockwave.	10	5	35	0	0
+Excelsior Slash	1	Ether	One Target	Attack with a shockwave, then follow on with an ether slash attack.	10	0	25	0	25
+Triple Edge	2	Physical	One Target	Slash at the enemy repeatedly, not allowing them chance to defend.	10	0	25	0	0
+Multi-Raid	3	Physical	One Target	Attack with a shockwave and repeated slashes of your blade.	10	0	25	0	0
+Grenade Throw	2	Ether	Circle (Target)	Throw a condensed ball of ether which explodes.	20	3	5	0	0
+Grim Sphere	3	Ether	One Target	Attack by repeatedly bashing your enemy with the ball.	20	0	5	0	0
+Shrapnel	1	Ether	One Target	Attacks with a Bitball, absorbing ether which is used to heal you.	15	0	5	0	0
+Flying Knuckle	1	Physical	One Target	Launch your Knuckle Claws like missiles to attack the enemy.	10	0	5	0	0
+Assault Rush	2	Physical	One Target	Charge forward in an instant and overwhelm the enemy with a flurry.	10	0	5	0	25
+Executioner	3	Physical	One Target	Unleash a dive kick and cause an ether explosion.	10	0	5	0	0
+Axe Break	1	Ether	Circle (Target)	Smash your weapon into the ground and release a shockwave in the area.	10	5	5	0	0
+Ground Charge	2	Physical	One Target	Smash your weapon into the ground and charge into the enemy.	10	0	5	0	0
+War Swing	3	Physical	Circle (Target)	Swing your weapon with all your might to attack enemies in range.	10	5	5	0	25
+Speed Glaive	1	Physical	One Target	Use high-speed repeated stabs to destroy the enemy to its core.	10	0	5	0	0
+Beam Halberd	2	Ether	Ahead	Fill your weapon with ether and shoot it out as a laser.	15	2	5	25	0
+Hair Trigger	3	Ether	One Target	Pierce the ground with your lance tip to release a shockwave.	10	3	5	0	25
+Beam Bomber	3	Ether	Ahead	Emit a laser from your overcharged weapon.	20	2	5	0	0
+Zero Burst	1	Ether	One Target	Charge at the enemy, then fire at close range so it's difficult to avoid.	20	3	5	0	0
+Spinning Laser	2	Ether	Circle (Target)	Spin while emitting a laser, to mow down the enemy.	20	5	5	25	0
+Wheel Crash	3	Physical	One Target	Throw a hammer so it spins at high speed and hits the enemy.	10	0	35	0	0
+Ground Impulse	1	Ether	Ahead	Hit the ground with your weapon and cause a shockwave.	10	4	35	0	0
+Turn Strike	2	Physical	Circle (Target)	Throw your weapon ahead and by spinning it, attack enemies in range.	10	5	35	0	0
+Drop Edge	1	Physical	One Target	Attack with blade sheathed, then draw and slash.	10	0	25	0	25
+Counter Spin	2	Ether	One Target	After throwing the scabbard from your left hand, perform a slash attack.	10	0	25	25	0
+Magnum Edge	3	Ether	Ahead	Stomp on the ground, and perform a quick draw cut with all your might.	10	3	25	0	0
+Metal Blast	1	Ether	Ahead	Hit the ball into the ground and cause a massive explosion.	10	3	5	0	0
+Wrecking Ball	2	Ether	One Target	Hit the ball with your fist so it hits the enemy multiple times.	20	0	5	0	0
+Violent Swing	3	Ether	Circle (Target)	Swing the ball around, as if on a chain, to hit enemies repeatedly.	10	5	5	0	25
+Bomber Tackle	1	Physical	One Target	Barge into the enemy then give them a powerful uppercut while dazed.	10	0	5	0	0
+Head Shaker	2	Ether	One Target	Hit the ground with both fists to attack the enemy with a powerful shockwave.	10	0	5	0	0
+Knuckle Purge	3	Physical	Ahead	Daze the enemy with a tackle then shoot your weapon.	10	4	5	0	0
+Axe Strike	1	Ether	One Target	Drop an ether blade from above to attack.	10	0	5	0	0
+Megaslash	2	Physical	One Target	After random slash attacks, perform a powerful spinning slash.	10	0	5	0	25
+Flying Cutter	3	Ether	Ahead	Throw your weapon and adjust its path to attack the enemy.	10	3	5	25	0
+Multi-Edge	1	Ether	One Target	Create countless ether balls to attack the enemy.	10	0	5	25	0
+Trident Buster	2	Physical	One Target	Jump up and throw your Megalance down to the side.	10	0	5	0	0
+Spiral Spear	3	Physical	Circle (Target)	Throw your weapon so it spins round, hitting any enemy in range.	10	5	5	0	0
+Flash Barrel	1	Ether	One Target	Float your weapon and launch a giant ether ball.	20	0	5	0	25
+Blink Bullet	2	Ether	One Target	Jump up into the air and launch a homing missile.	20	0	5	0	0
+Beam Barrage	3	Ether	Ahead	Emit a laser from your overcharged weapon.	20	2	5	25	25
+Aerial Shield	1	Physical	One Target	A mid-air weapon drops down at high speed, attacking the enemy.	10	0	35	0	0
+Drum Roll	2	Ether	Ahead	Hit the ground with all your might, attacking with a shockwave.	10	4	35	0	0
+Hammer Rush	3	Physical	One Target	After swinging your weapon repeatedly, finish off with a rising attack.	10	0	35	0	0
+Sword Dance	1	Physical	One Target	A two-stage attack where you slash then attack with blade sheathed.	10	0	25	0	25
+Rage Cutter	2	Physical	Ahead	Heighten concentration and perform a triple slash attack.	10	2	25	25	0
+Air Slash	3	Ether	One Target	Perform a quick draw in the air then release a massive slash attack.	10	0	25	0	0
+Flash Bomb	1	Ether	Circle (Target)	Throw a condensed ball of ether which explodes.	20	3	5	0	0
+Power Effect	2	Ether	Circle (Target)	Unleash condensed ether above the head to attack.	15	5	5	0	0
+Rumble Sphere	3	Ether	One Target	The ball bashes into the enemy multiple times, damaging them.	20	0	5	0	25
+Thermal Payload	1	Physical	One Target	Knuckle Claws fly out matching your movements.	10	0	5	0	0
+Leg Blast	2	Physical	One Target	Combo move with a single punch followed by a sharp kick.	10	0	5	0	0
+Flash Blow	3	Physical	One Target	Combo attack with a forward somersault followed by a flying kick.	10	0	5	0	25
+Ripple Drive	1	Physical	Circle (Target)	Control ether to attack the enemy and heal allies.	10	10	5	0	0
+Dual Fang	2	Ether	Ahead	Shoot out lasers from the rings floating on both sides.	10	3	5	0	0
+Screw Edge	3	Ether	One Target	Attack repeatedly using the ring held in the mouth.	10	0	5	0	0
+ECHIDNA	1	Physical	One Target	Deliver a slashing attack, and follow it up with a powerful kick.	10	0	5	0	25
+MAGDALENE 16	2	Ether	Ahead	Deliver a whirling blow followed by a wild volley of shots.	10	2	5	0	25
+T-SKYLLA	3	Ether	Ahead	Unleash a midair slash and then unload your firearm at the enemy.	10	4	5	50	100
+Buster Cyclone	1	Physical	Circle (Target)	Transform your weapon into knuckle claws and barrel into the enemy.	10	6	35	0	0
+Buster Cannon	2	Ether	Circle (Target)	Transform your weapon into a cannon and unload it into the enemy.	15	6	35	0	0
+Buster Mirage	3	Physical	Ahead	Unleash the combined power of Poppi Mk. II and Poppibuster on the enemy.	10	3	35	0	25
+Monado Purge	1	Ether	One Target	Brandish the Monado to generate a mid-air shockwave.	15	0	5	0	0
+Monado Cyclone	2	Ether	Circle (Target)	Perform a rising spin to damage enemies surrounding you.	10	5	5	0	25
+Monado Buster	3	Ether	Ahead	A powerful slash using the true power of the Monado.	10	3	5	25	50
+Hidden Thorn	1	Physical	One Target	Quickly close in on the enemy and dice them into submission.	10	0	5	25	25
+Power Smash	2	Physical	Circle (Target)	Charge up power, then unleash it in a series of airborne spinning attacks.	10	5	5	25	25
+Lacerate	3	Physical	One Target	Deliver a rising attack, followed up with a strong downward blow.	10	0	5	25	25
 \.
 
 
@@ -49451,6 +53219,46 @@ ALTER TABLE ONLY xeno2.skills
 
 
 --
+-- Name: special_damage_ratios_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_damage_ratios
+    ADD CONSTRAINT special_damage_ratios_pkey PRIMARY KEY (special, level);
+
+
+--
+-- Name: special_enhance_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_enhance
+    ADD CONSTRAINT special_enhance_pkey PRIMARY KEY (special, level);
+
+
+--
+-- Name: special_hit_frames_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_hit_frames
+    ADD CONSTRAINT special_hit_frames_pkey PRIMARY KEY (special, hit);
+
+
+--
+-- Name: special_ratios_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_ratios
+    ADD CONSTRAINT special_ratios_pkey PRIMARY KEY (special, hit);
+
+
+--
+-- Name: special_reactions_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_reactions
+    ADD CONSTRAINT special_reactions_pkey PRIMARY KEY (special, hit);
+
+
+--
 -- Name: specials_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -49744,6 +53552,54 @@ ALTER TABLE ONLY xeno2.pouch_item_effects
 
 ALTER TABLE ONLY xeno2.skills
     ADD CONSTRAINT skills_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance(id);
+
+
+--
+-- Name: special_damage_ratios_special_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_damage_ratios
+    ADD CONSTRAINT special_damage_ratios_special_fkey FOREIGN KEY (special) REFERENCES xeno2.specials(name);
+
+
+--
+-- Name: special_enhance_caption_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_enhance
+    ADD CONSTRAINT special_enhance_caption_fkey FOREIGN KEY (caption) REFERENCES xeno2.enhance(id);
+
+
+--
+-- Name: special_enhance_special_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_enhance
+    ADD CONSTRAINT special_enhance_special_fkey FOREIGN KEY (special) REFERENCES xeno2.specials(name);
+
+
+--
+-- Name: special_hit_frames_special_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_hit_frames
+    ADD CONSTRAINT special_hit_frames_special_fkey FOREIGN KEY (special) REFERENCES xeno2.specials(name);
+
+
+--
+-- Name: special_ratios_special_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_ratios
+    ADD CONSTRAINT special_ratios_special_fkey FOREIGN KEY (special) REFERENCES xeno2.specials(name);
+
+
+--
+-- Name: special_reactions_special_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.special_reactions
+    ADD CONSTRAINT special_reactions_special_fkey FOREIGN KEY (special) REFERENCES xeno2.specials(name);
 
 
 --
