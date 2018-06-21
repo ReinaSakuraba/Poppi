@@ -150,23 +150,78 @@ class Xenoblade2:
         """Gives information for a Xenoblade Chronicles 2 special."""
 
         query = """
+                WITH hidden_hits AS (
+                    SELECT special, hit
+                    FROM xeno2.special_ratios
+                    WHERE ratio=255
+                ), hit_data AS (
+                    SELECT
+                        special_hit_frames.special,
+                        special_hit_frames.hit - (
+                            SELECT COUNT(*)
+                            FROM hidden_hits
+                            WHERE hidden_hits.special=special_hit_frames.special
+                            AND hidden_hits.hit < special_hit_frames.hit
+                        ) AS hit,
+                        hit_frame,
+                        reaction,
+                        ROUND(COALESCE(ratio, 1)::numeric / SUM(COALESCE(ratio, 1)::numeric) OVER (PARTITION BY special_hit_frames.special) * 100, 2) AS ratio
+                    FROM xeno2.special_hit_frames
+                    LEFT JOIN hidden_hits
+                    ON special_hit_frames.special=hidden_hits.special
+                    AND special_hit_frames.hit=hidden_hits.hit
+                    LEFT JOIN xeno2.special_reactions
+                    ON special_hit_frames.special=special_reactions.special
+                    AND special_hit_frames.hit=special_reactions.hit
+                    LEFT JOIN xeno2.special_ratios
+                    ON special_hit_frames.special=special_ratios.special
+                    AND special_hit_frames.hit=special_ratios.hit
+                    WHERE hidden_hits.hit IS NULL
+                ), damage_ratios AS (
+                    SELECT special, STRING_AGG(damage_ratio::text, '/' ORDER BY level) AS damage_ratio
+                    FROM xeno2.special_damage_ratios
+                    GROUP BY special
+                )
                 SELECT
                     name,
-                    level,
+                    specials.level,
                     type,
                     damage_ratio,
-                    hits,
+                    COUNT(hit) AS hits,
                     range,
-                    reaction,
-                    description,
+                    STRING_AGG(DISTINCT reaction, ' / ') AS reactions,
+                    (
+                        SELECT
+                            xeno2.format_caption(
+                                enhance_captions.caption,
+                                param,
+                                '[' || STRING_AGG(param_one::float::text, '/' ORDER BY level) || ']',
+                                '[' || STRING_AGG(param_two::float::text, '/' ORDER BY level) || ']'
+                            ) AS caption
+                        FROM xeno2.special_enhance
+                        JOIN xeno2.enhance
+                        ON special_enhance.caption=enhance.id
+                        JOIN xeno2.enhance_captions
+                        ON enhance.caption=enhance_captions.id
+                        WHERE special=name
+                        GROUP BY enhance_captions.caption, param
+                    ),
                     caption,
                     distance || ' meters',
                     radius || ' meters',
                     hate,
                     '+' || accuracy_mod || '%',
-                    '+' || crit_mod || '%'
+                    '+' || crit_mod || '%',
+                    STRING_AGG(hit || ': ' || hit_frame, E'\n' ORDER BY hit) AS hit_frames,
+                    STRING_AGG(hit || ': ' || reaction, E'\n' ORDER BY hit) AS reaction_data,
+                    STRING_AGG(hit || ': ' || ratio::float::text || '%', E'\n' ORDER BY hit) AS ratios
                 FROM xeno2.specials
-                WHERE LOWER(name)=$1;
+                JOIN damage_ratios
+                ON name=damage_ratios.special
+                LEFT JOIN hit_data
+                ON name=hit_data.special
+                WHERE LOWER(name)=$1
+                GROUP BY name, damage_ratio;
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
@@ -174,7 +229,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2special_search, name=name)
 
-        name, level, type_, damage_ratio, hits, range_, reaction, description, caption, distance, radius, hate, accuracy_mod, crit_mod = record
+        name, level, type_, damage_ratio, hits, range_, reaction, description, caption, distance, radius, hate, accuracy_mod, crit_mod, hit_frames, reaction_data, ratios = record
 
         embed = discord.Embed(title=name, description=caption)
         embed.add_field(name='Type', value=type_)
@@ -190,6 +245,12 @@ class Xenoblade2:
         embed.add_field(name='Damage Ratio', value=damage_ratio, inline=False)
         if description:
             embed.add_field(name='Decription', value=description, inline=False)
+        if hit_frames:
+            embed.add_field(name='Hit Frames', value=hit_frames)
+        if reaction_data:
+            embed.add_field(name='Hit Reactions', value=reaction_data)
+        if hits > 1:
+            embed.add_field(name='Damage Distribution', value=ratios)
 
         await ctx.send(embed=embed)
 
