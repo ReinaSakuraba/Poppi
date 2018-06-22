@@ -211,6 +211,18 @@ CREATE TABLE xeno2.blade_chances (
 ALTER TABLE xeno2.blade_chances OWNER TO poppi;
 
 --
+-- Name: blade_favorite_pouch_items; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_favorite_pouch_items (
+    blade text NOT NULL,
+    pouch_item integer NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_favorite_pouch_items OWNER TO poppi;
+
+--
 -- Name: blade_field_skills; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -5005,6 +5017,114 @@ T-elos	2	5.00	f
 T-elos	3	5.00	f
 T-elos	4	5.00	f
 T-elos	5	5.00	f
+\.
+
+
+--
+-- Data for Name: blade_favorite_pouch_items; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_favorite_pouch_items (blade, pouch_item) FROM stdin;
+Pyra	40112
+Pyra	40067
+Mythra	40155
+Mythra	40121
+Dromarch	40098
+Dromarch	40068
+Poppi α	40016
+Poppi α	40021
+Poppi QT	40161
+Poppi QT	40256
+Poppi QTπ	40010
+Poppi QTπ	40077
+Roc	40082
+Roc	40226
+Brighid	40230
+Brighid	40135
+Pandoria	40301
+Pandoria	40251
+Nia	40190
+Nia	40034
+Aegaeon	40217
+Aegaeon	40208
+Godfrey	40054
+Godfrey	40030
+Wulfric	40009
+Wulfric	40247
+Perceval	40223
+Perceval	40115
+Vale	40224
+Vale	40311
+Agate	40157
+Agate	40177
+Gorg	40110
+Gorg	40176
+Boreas	40004
+Boreas	40204
+Dagas	40225
+Dagas	40072
+Dagas (Weak)	40225
+Dagas (Weak)	40072
+Kasandra	40172
+Kasandra	40243
+Praxis	40232
+Praxis	40041
+Theory	40221
+Theory	40079
+Perun	40111
+Perun	40116
+Kora	40103
+Kora	40078
+Azami	40148
+Azami	40134
+Ursula	40066
+Ursula	40165
+Newt	40180
+Newt	40194
+Nim	40261
+Nim	40244
+Sheba	40203
+Sheba	40171
+Vess	40013
+Vess	40259
+Adenine	40050
+Adenine	40037
+Electra	40019
+Electra	40167
+Zenobia	40097
+Zenobia	40237
+Finch	40051
+Finch	40079
+Floren	40084
+Floren	40234
+KOS-MOS	40129
+KOS-MOS	40303
+Herald	40061
+Herald	40248
+Dahlia	40219
+Dahlia	40293
+Sever	40181
+Sever	40096
+Akhos	40200
+Akhos	40240
+Patroka	40162
+Patroka	40308
+Mikhail	40188
+Mikhail	40254
+Obrona	40126
+Obrona	40218
+Perdido	40206
+Perdido	40123
+Cressidus	40057
+Cressidus	40242
+T-elos	40166
+T-elos	40027
+Poppibuster	40055
+Poppibuster	40132
+Shulk	40263
+Shulk	40174
+Fiora	40228
+Fiora	40039
 \.
 
 
@@ -53067,6 +53187,14 @@ ALTER TABLE ONLY xeno2.blade_chances
 
 
 --
+-- Name: blade_favorite_pouch_items_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_favorite_pouch_items
+    ADD CONSTRAINT blade_favorite_pouch_items_pkey PRIMARY KEY (blade, pouch_item);
+
+
+--
 -- Name: blade_field_skills_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -53371,6 +53499,13 @@ ALTER TABLE ONLY xenox.skills
 
 
 --
+-- Name: pouch_items_id_idx; Type: INDEX; Schema: xeno2; Owner: poppi
+--
+
+CREATE UNIQUE INDEX pouch_items_id_idx ON xeno2.pouch_items USING btree (id);
+
+
+--
 -- Name: accessories_caption_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -53432,6 +53567,22 @@ ALTER TABLE ONLY xeno2.blade_battle_skills
 
 ALTER TABLE ONLY xeno2.blade_battle_skills
     ADD CONSTRAINT blade_battle_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
+
+
+--
+-- Name: blade_favorite_pouch_items_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_favorite_pouch_items
+    ADD CONSTRAINT blade_favorite_pouch_items_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
+
+
+--
+-- Name: blade_favorite_pouch_items_pouch_item_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_favorite_pouch_items
+    ADD CONSTRAINT blade_favorite_pouch_items_pouch_item_fkey FOREIGN KEY (pouch_item) REFERENCES xeno2.pouch_items(id);
 
 
 --
