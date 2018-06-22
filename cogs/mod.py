@@ -253,6 +253,47 @@ class Mod:
 
         await ctx.send('All channels are now being unignored.')
 
+    @utils.group()
+    @utils.mod_or_permissions(manage_messages=True)
+    async def purge(self, ctx):
+        """Removes messages that meet a criteria.
+
+        In order to use this command, you must have Manage Messages permission.
+        """
+
+        if ctx.invoked_subcommand is None:
+            help_cmd = ctx.bot.get_command('help')
+            await ctx.invoke(help_cmd, 'purge')
+
+    @purge.command(name='all')
+    async def purge_all(self, ctx, limit: int = 100):
+        """Purges all messages."""
+
+        await self._purge(ctx, limit, lambda message: True)
+
+    @purge.command(name='user')
+    async def purge_user(self, ctx, member: discord.Member, limit: int = 100):
+        """Purges all messages by a user."""
+
+        await self._purge(ctx, limit, lambda message: message.author == member)
+
+    @purge.command(name='images')
+    async def purge_images(self, ctx, limit: int = 100):
+        """Purges all messages with an image."""
+
+        await self._purge(ctx, limit, lambda message: message.embeds or message.attachments)
+
+    async def _purge(self, ctx, limit, predicate):
+        if limit > 2000:
+            return await ctx.send('Limit can not be higher than 2000.')
+
+        try:
+            deleted = await ctx.channel.purge(limit=limit, check=predicate, before=ctx.message)
+        except discord.Forbidden as e:
+            return await ctx.send('I do not have permissions to delete messages.')
+
+        await ctx.send(f'Successfully deleted {len(deleted)} messages.')
+
 
 def setup(bot):
     bot.add_cog(Mod())
