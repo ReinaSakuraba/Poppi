@@ -23,7 +23,8 @@ class Mod:
 
         if ctx.guild:
             is_plonked = await self.is_plonked(ctx.pool, ctx.author.id, ctx.guild.id)
-            return not is_plonked
+            is_ignored = await self.is_ignored(ctx.pool, ctx.guild.id, ctx.channel.id)
+            return not is_plonked and not is_ignored
         return True
 
     async def is_plonked(self, pool, user_id, guild_id=0):
@@ -37,6 +38,18 @@ class Mod:
         plonks = await pool.fetchval(query, guild_id)
 
         return plonks
+
+    async def is_ignored(self, pool, guild_id, channel_id):
+        query = f'SELECT 1 FROM ignores WHERE guild_id=$1 AND channel_id=$2;'
+        is_ignored = await pool.fetchval(query, guild_id, channel_id)
+
+        return is_ignored
+
+    async def get_ignores(self, pool, guild_id):
+        query = f'SELECT ARRAY(SELECT channel_id FROM ignores WHERE guild_id=$1);'
+        ignores = await pool.fetchval(query, guild_id)
+
+        return ignores
 
     @utils.group(invoke_without_command=True)
     @utils.mod_or_permissions()
@@ -134,6 +147,111 @@ class Mod:
             return await ctx.send('This user is not globally bot banned.')
 
         await ctx.send(f'{user.display_name} has been globally unbanned from using the bot.')
+
+    @utils.group(invoke_without_command=True)
+    @utils.mod_or_permissions(manage_channels=True)
+    async def ignore(self, ctx):
+        """Handles the bot's ignore lists.
+
+        To use these commands you must have the Mod role or have the
+        Manage Channels permissions. These commands are not allowed
+        to be used in a private message context. Users with Manage
+        Guild or Mod role can still invoke the bot in ignored channels.
+        """
+        pass
+
+    @ignore.command(name='channel')
+    @utils.mod_or_permissions(manage_channels=True)
+    async def ignore_channel(self, ctx, *, channel: discord.TextChannel = None):
+        """Ignores a specific channel from being processed.
+
+        If no channel is specified, the current channel is ignored. If a
+        channel is ignored then the bot does not process commands in that
+        channel until it is unignored.
+        """
+
+        channel = channel or ctx.channel
+
+        query = """
+                INSERT INTO ignores (
+                    guild_id,
+                    channel_id
+                ) VALUES ($1, $2);
+                """
+        try:
+            await ctx.pool.execute(query, ctx.guild.id, channel.id)
+        except asyncpg.UniqueViolationError:
+            return await ctx.send('This channel is already being ignored in this server.')
+
+        await ctx.send(f'{channel.name} is now being ignored in this server.')
+
+    @ignore.command(name='all')
+    @utils.mod_or_permissions(manage_channels=True)
+    async def ignore_all(self, ctx):
+        """Ignores all channels in this server from being processed."""
+
+        query = """
+                INSERT INTO ignores (
+                    guild_id,
+                    channel_id
+                ) VALUES ($1, $2)
+                ON CONFLICT (guild_id, channel_id)
+                DO NOTHING;
+                """
+
+        for channel in ctx.guild.text_channels:
+            await ctx.pool.execute(query, ctx.guild.id, channel.id)
+
+        await ctx.send('All channels are now being ignored.')
+
+    @ignore.command(name='list')
+    @utils.mod_or_permissions(manage_channels=True)
+    async def ignore_list(self, ctx):
+        """Tells you what channels are currently ignored in this server."""
+
+        ignores = await self.get_ignores(ctx.pool, ctx.guild.id)
+
+        channels = ' '.join(f'<#{channel_id}>' for channel_id in ignores)
+
+
+        if not channels:
+            return await ctx.send('No channels are being ignored in this server.')
+
+        await ctx.send(f'The following channels are being ignored in this server: {channels}')
+
+
+    @utils.group(invoke_without_command=True)
+    @utils.mod_or_permissions(manage_channels=True)
+    async def unignore(self, ctx, *, channel: discord.TextChannel = None):
+        """Unignores a channel from being processed.
+
+        If no channel is specified, it unignores the current channel.
+
+        To use this command you must have tha Manage Channels permission
+        or have the Mod role.
+        """
+
+        channel = channel or ctx.channel
+
+        query = "DELETE FROM ignores WHERE channel_id=$1 RETURNING 1;"
+
+        was_ignored = await ctx.pool.fetchval(query, channel.id)
+
+        if not was_ignored:
+            return await ctx.send('This channel is not being ignored in this server.')
+
+        await ctx.send(f'{channel.name} is now being unignored in this server.')
+
+    @unignore.command(name='all')
+    @utils.mod_or_permissions(manage_channels=True)
+    async def unignore_all(self, ctx):
+        """Unignores all channels in this server from being processed."""
+
+        query = "DELETE FROM ignores WHERE guild_id=$1;"
+
+        await ctx.pool.execute(query, ctx.guild.id)
+
+        await ctx.send('All channels are now being unignored.')
 
 
 def setup(bot):
