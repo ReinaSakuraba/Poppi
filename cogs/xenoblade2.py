@@ -278,7 +278,7 @@ class Xenoblade2:
 
         query = """
                 SELECT
-                    name,
+                    blades.name,
                     gender,
                     race,
                     weapon,
@@ -290,14 +290,19 @@ class Xenoblade2:
                     illustrator,
                     merc_name,
                     STRING_AGG(DISTINCT blade_battle_skills.skill, E'\n'),
-                    STRING_AGG(DISTINCT blade_field_skills.skill, E'\n')
+                    STRING_AGG(DISTINCT blade_field_skills.skill, E'\n'),
+                    STRING_AGG(DISTINCT pouch_items.name, E'\n')
                 FROM xeno2.blades
                 JOIN xeno2.blade_battle_skills
-                ON name=blade_battle_skills.blade
+                ON blades.name=blade_battle_skills.blade
                 LEFT JOIN xeno2.blade_field_skills
-                ON name=blade_field_skills.blade
-                WHERE LOWER(name)=$1
-                GROUP BY name;
+                ON blades.name=blade_field_skills.blade
+                LEFT JOIN xeno2.blade_favorite_pouch_items
+                ON blades.name=blade_favorite_pouch_items.blade
+                LEFT JOIN xeno2.pouch_items
+                ON blade_favorite_pouch_items.pouch_item=pouch_items.id
+                WHERE LOWER(blades.name)=$1
+                GROUP BY blades.name;
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
@@ -305,7 +310,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2blade_search, name=name)
 
-        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, battle_skills, field_skills = record
+        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, battle_skills, field_skills, favorites = record
 
         embed = discord.Embed(title=name)
         embed.add_field(name='Gender', value=gender)
@@ -319,6 +324,7 @@ class Xenoblade2:
         embed.add_field(name='Mercenary Name', value=merc_name)
         embed.add_field(name='Battle Skills', value=battle_skills, inline=False)
         embed.add_field(name='Field Skills', value=field_skills or 'None', inline=False)
+        embed.add_field(name='Favorite Pouch Items', value=favorites or 'None')
 
         await ctx.send(embed=embed)
 
@@ -740,12 +746,15 @@ class Xenoblade2:
                     max_carry,
                     time,
                     trust,
-                    STRING_AGG(xeno2.format_caption(pouch_captions.caption, param), E'\n') AS effects
+                    STRING_AGG(xeno2.format_caption(pouch_captions.caption, param), E'\n') AS effects,
+                    STRING_AGG(blade, E'\n') AS blades
                 FROM xeno2.pouch_items
                 JOIN xeno2.pouch_item_effects
-                ON name=pouch_item
+                ON name=pouch_item_effects.pouch_item
                 JOIN xeno2.pouch_captions
                 ON pouch_captions.id=pouch_item_effects.caption
+                LEFT JOIN xeno2.blade_favorite_pouch_items
+                ON pouch_items.id=blade_favorite_pouch_items.pouch_item
                 WHERE LOWER(name)=$1
                 GROUP BY name;
                 """
@@ -755,7 +764,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2pouch_search, name=name)
 
-        name, category, sell_price, rarity, location, max_carry, time, trust, effects = record
+        name, category, sell_price, rarity, location, max_carry, time, trust, effects, blades = record
 
         embed = discord.Embed(title=name)
         embed.add_field(name='Category', value=category)
@@ -765,6 +774,8 @@ class Xenoblade2:
         embed.add_field(name='Max Carry', value=max_carry)
         embed.add_field(name='Trust', value=trust)
         embed.add_field(name='Effect Time', value=f'{time} minutes')
+        if blades:
+            embed.add_field(name='Favorites', value=blades)
         embed.add_field(name='Effects', value=effects, inline=False)
 
         await ctx.send(embed=embed)
