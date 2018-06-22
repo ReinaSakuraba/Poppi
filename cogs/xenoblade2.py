@@ -746,8 +746,8 @@ class Xenoblade2:
                     max_carry,
                     time,
                     trust,
-                    STRING_AGG(xeno2.format_caption(pouch_captions.caption, param), E'\n') AS effects,
-                    STRING_AGG(blade, E'\n') AS blades
+                    STRING_AGG(DISTINCT xeno2.format_caption(pouch_captions.caption, param), E'\n') AS effects,
+                    STRING_AGG(DISTINCT blade, E'\n') AS blades
                 FROM xeno2.pouch_items
                 JOIN xeno2.pouch_item_effects
                 ON name=pouch_item_effects.pouch_item
