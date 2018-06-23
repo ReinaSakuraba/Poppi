@@ -193,7 +193,7 @@ class Gold:
         if item == 'Sheba\'s Core Crystal':
             query = "SELECT amount FROM inventory WHERE user_id=$1 AND item='Sheba''s Core Crystal';"
             sheba_amount = await ctx.pool.fetchval(query, ctx.author.id)
-            if int(sheba_amount) + amount > 1:
+            if sheba_amount if sheba_amount else 0 + amount > 1:
                 return await ctx.send('You can not buy more of that item.')
 
         try:
@@ -302,6 +302,13 @@ class Gold:
             common = True
             msg = f'You pulled a Common Blade named {blade}.'
 
+        query = "UPDATE inventory SET amount=amount-1 WHERE user_id=$1 AND item=$2;"
+
+        await ctx.pool.execute(query, ctx.author.id, core)
+
+        if blade is None:
+            return await ctx.send('You cannot pull any more common blades.')
+
         query = """
                 INSERT INTO pulled_blades (
                     user_id,
@@ -310,9 +317,6 @@ class Gold:
                 ) VALUES ($1, $2, $3);
                 """
         await ctx.pool.execute(query, ctx.author.id, blade, common)
-
-        query = "UPDATE inventory SET amount=amount-1 WHERE user_id=$1 AND item=$2;"
-        await ctx.pool.execute(query, ctx.author.id, core)
 
         await ctx.send(msg)
 
