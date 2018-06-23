@@ -43,7 +43,7 @@ class Gold:
         """Bets gold."""
         pass
 
-    @bet.command(name='rps')
+    @bet.group(name='rps', invoke_without_command=True)
     async def bet_rps(self, ctx, amount: int, choice: str):
         """Bets gold on a Rock Paper Scissors game."""
 
@@ -80,7 +80,14 @@ class Gold:
         await self.add_gold(ctx.author.id, amount)
         await ctx.send(msg)
 
-    @bet.command(name='flip')
+    @bet_rps.command(name='all')
+    async def bet_rps_all(self, ctx, choice: str):
+        """Bets all your gold on a Rock Paper Scissors game."""
+
+        amount = await self.get_gold(ctx.author.id)
+        await ctx.invoke(ctx.command.parent, amount, choice)
+
+    @bet.group(name='flip', invoke_without_command=True)
     async def bet_flip(self, ctx, amount: int, choice: str):
         """Bets gold on a coin flip."""
 
@@ -122,7 +129,14 @@ class Gold:
         await self.add_gold(ctx.author.id, amount)
         await ctx.send(msg)
 
-    @bet.command(name='roll')
+    @bet_flip.command(name='all')
+    async def bet_flip_all(self, ctx, choice: str):
+        """Bets all your gold on a coin flip."""
+
+        amount = await self.get_gold(ctx.author.id)
+        await ctx.invoke(ctx.command.parent, amount, choice)
+
+    @bet.group(name='roll', invoke_without_command=True)
     async def bet_roll(self, ctx, amount: int):
         """Bets gold on a 100 sided die."""
 
@@ -160,6 +174,13 @@ class Gold:
 
         await self.add_gold(ctx.author.id, amount)
         await ctx.send(msg)
+
+    @bet_roll.command(name='all')
+    async def bet_roll_all(self, ctx):
+        """Bets all your gold on a 100 sided die."""
+
+        amount = await self.get_gold(ctx.author.id)
+        await ctx.invoke(ctx.command.parent, amount)
 
     @utils.group(invoke_without_command=True)
     async def shop(self, ctx):
