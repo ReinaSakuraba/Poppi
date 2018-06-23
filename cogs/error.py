@@ -16,16 +16,16 @@ class ErrorHandler:
     async def on_command_error(self, ctx, exception):
         exception = getattr(exception, 'original', exception)
 
-        ignored = (commands.CommandNotFound, commands.UserInputError)
-        if isinstance(exception, ignored):
-            return
-
         try:
             message = self.handler[type(exception)]
         except KeyError:
             pass
         else:
             return await ctx.send(message.format(exception=exception, command_name=ctx.command.qualified_name))
+
+        ignored = (commands.CommandNotFound, commands.UserInputError, commands.CheckFailure)
+        if isinstance(exception, ignored):
+            return
 
         embed = discord.Embed(title=f'Command Exception', color=discord.Color.red())
         embed.set_footer(text='Occured on')
