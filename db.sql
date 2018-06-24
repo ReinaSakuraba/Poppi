@@ -211,6 +211,18 @@ CREATE TABLE xeno2.blade_chances (
 ALTER TABLE xeno2.blade_chances OWNER TO poppi;
 
 --
+-- Name: blade_favorite_pouch_categories; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_favorite_pouch_categories (
+    blade text NOT NULL,
+    pouch_category text NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_favorite_pouch_categories OWNER TO poppi;
+
+--
 -- Name: blade_favorite_pouch_items; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -267,6 +279,22 @@ CREATE TABLE xeno2.blades (
 
 
 ALTER TABLE xeno2.blades OWNER TO poppi;
+
+--
+-- Name: challenge_mode_drops; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.challenge_mode_drops (
+    challenge_id smallint NOT NULL,
+    challenge_name text NOT NULL,
+    chest text NOT NULL,
+    item_id smallint NOT NULL,
+    item_name text NOT NULL,
+    probability numeric NOT NULL
+);
+
+
+ALTER TABLE xeno2.challenge_mode_drops OWNER TO poppi;
 
 --
 -- Name: chip_locations; Type: TABLE; Schema: xeno2; Owner: poppi
@@ -5021,6 +5049,114 @@ T-elos	5	5.00	f
 
 
 --
+-- Data for Name: blade_favorite_pouch_categories; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_favorite_pouch_categories (blade, pouch_category) FROM stdin;
+Pyra	Vegetables
+Pyra	Literature
+Mythra	Desserts
+Mythra	Arts
+Dromarch	Meat
+Dromarch	Board Games
+Poppi α	Staple Foods
+Poppi α	Instruments
+Poppi QT	Vegetables
+Poppi QT	Arts
+Poppi QTπ	Staple Foods
+Poppi QTπ	Textiles
+Roc	Seafood
+Roc	Board Games
+Brighid	Desserts
+Brighid	Cosmetics
+Pandoria	Meat
+Pandoria	Literature
+Nia	Seafood
+Nia	Instruments
+Aegaeon	Desserts
+Aegaeon	Arts
+Godfrey	Meat
+Godfrey	Instruments
+Wulfric	Staple Foods
+Wulfric	Literature
+Perceval	Drinks
+Perceval	Arts
+Vale	Desserts
+Vale	Textiles
+Agate	Drinks
+Agate	Arts
+Gorg	Desserts
+Gorg	Textiles
+Boreas	Staple Foods
+Boreas	Cosmetics
+Dagas	Seafood
+Dagas	Arts
+Dagas (Weak)	Seafood
+Dagas (Weak)	Arts
+Kasandra	Staple Foods
+Kasandra	Cosmetics
+Praxis	Desserts
+Praxis	Literature
+Theory	Vegetables
+Theory	Board Games
+Perun	Seafood
+Perun	Textiles
+Kora	Drinks
+Kora	Cosmetics
+Azami	Drinks
+Azami	Literature
+Ursula	Desserts
+Ursula	Cosmetics
+Newt	Meat
+Newt	Instruments
+Nim	Seafood
+Nim	Instruments
+Sheba	Desserts
+Sheba	Textiles
+Vess	Seafood
+Vess	Cosmetics
+Adenine	Vegetables
+Adenine	Literature
+Electra	Meat
+Electra	Instruments
+Zenobia	Meat
+Zenobia	Literature
+Finch	Vegetables
+Finch	Cosmetics
+Floren	Vegetables
+Floren	Arts
+KOS-MOS	Staple Foods
+KOS-MOS	Board Games
+Herald	Drinks
+Herald	Board Games
+Dahlia	Vegetables
+Dahlia	Cosmetics
+Sever	Meat
+Sever	Instruments
+Akhos	Staple Foods
+Akhos	Board Games
+Patroka	Vegetables
+Patroka	Cosmetics
+Mikhail	Drinks
+Mikhail	Literature
+Obrona	Seafood
+Obrona	Instruments
+Perdido	Drinks
+Perdido	Arts
+Cressidus	Meat
+Cressidus	Textiles
+T-elos	Instruments
+T-elos	Literature
+Poppibuster	Meat
+Poppibuster	Board Games
+Shulk	Vegetables
+Shulk	Literature
+Fiora	Seafood
+Fiora	Cosmetics
+\.
+
+
+--
 -- Data for Name: blade_favorite_pouch_items; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
@@ -6528,6 +6664,8247 @@ T-elos	Female	Humanoid	Greataxe	Dark	3	20	20	Caitlin Thorburn\nMariko Suzuki	MUG
 Poppibuster	4	Humanoid	Shield Hammer	Light	3	40	35	Arina Ii / Nicholas Rowe\nMisaki Kuno / Yasuyuki Kase	Masatsugu Saito	Buster Battalion
 Shulk	Male	Humanoid	Monado	Light	3	20	20	Adam Howden\nShintaro Asanuma	Kunihiko Tanaka	Monado Busters
 Fiora	Female	Humanoid	Knives	Wind	3	10	15	Carina Reeves\nEri Nakao	Kunihiko Tanaka	Colony Nine Irregulars
+\.
+
+
+--
+-- Data for Name: challenge_mode_drops; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.challenge_mode_drops (challenge_id, challenge_name, chest, item_id, item_name, probability) FROM stdin;
+1	Grazing Flock	Common	15007	Physical Defense Up II	0.0178571437
+1	Grazing Flock	Common	15027	Insect Hunter II	0.0178571437
+1	Grazing Flock	Common	15037	Aquatic Hunter II	0.0178571437
+1	Grazing Flock	Common	15047	Machine Hunter II	0.0178571437
+1	Grazing Flock	Common	15052	Titan Hunter II	0.0178571437
+1	Grazing Flock	Common	15063	Fusion Combo Up II	0.0178571437
+1	Grazing Flock	Common	15073	Reflect Immunity	0.0178571437
+1	Grazing Flock	Common	15083	Indoor Attack Up II	0.0178571437
+1	Grazing Flock	Common	15093	Fire Def Up II	0.0178571437
+1	Grazing Flock	Common	15098	Water Def Up II	0.0178571437
+1	Grazing Flock	Common	15103	Earth Def Up II	0.0178571437
+1	Grazing Flock	Common	15108	Wind Def Up II	0.0178571437
+1	Grazing Flock	Common	15113	Electric Def Up II	0.0178571437
+1	Grazing Flock	Common	15118	Ice Def Up II	0.0178571437
+1	Grazing Flock	Common	15123	Dark Def Up II	0.0178571437
+1	Grazing Flock	Common	15128	Light Def Up II	0.0178571437
+1	Grazing Flock	Common	15150	Evasion Focus II	0.0178571437
+1	Grazing Flock	Common	15160	Emergency Guard II	0.0178571437
+1	Grazing Flock	Common	15170	HP Attack Boost II	0.0178571437
+1	Grazing Flock	Common	15180	Break Resist II	0.0178571437
+1	Grazing Flock	Common	15190	Launch Resist II	0.0178571437
+1	Grazing Flock	Common	15200	Blowdown Resist II	0.0178571437
+1	Grazing Flock	Common	15220	Auto-Attack Stealth II	0.0178571437
+1	Grazing Flock	Common	15230	Arts Stealth II	0.0178571437
+1	Grazing Flock	Common	15240	Arts Heal II	0.0178571437
+1	Grazing Flock	Common	15250	Damage Heal II	0.0178571437
+1	Grazing Flock	Common	15260	Sunlight Eye II	0.0178571437
+1	Grazing Flock	Common	15270	Range Boost Up II	0.0178571437
+1	Grazing Flock	Common	15275	Opening Art II	0.0178571437
+1	Grazing Flock	Common	15285	Helping Hand II	0.0178571437
+1	Grazing Flock	Common	15295	Affinity MAX Atk II	0.0178571437
+1	Grazing Flock	Common	15305	Hunter's Chemistry II	0.0178571437
+1	Grazing Flock	Common	15315	Fast Blade Switch II	0.0178571437
+1	Grazing Flock	Common	15346	Jamming II	0.0178571437
+1	Grazing Flock	Common	15351	Element Orb Prioritizer	0.0178571437
+1	Grazing Flock	Common	298	Gear Vest (Legendary)	0.0178571437
+1	Grazing Flock	Common	301	Steam Belt (Legendary)	0.0178571437
+1	Grazing Flock	Common	304	Bolt Hat (Legendary)	0.0178571437
+1	Grazing Flock	Common	323	Smithy Gloves (Legendary)	0.0178571437
+1	Grazing Flock	Common	325	Spring Shoes (Legendary)	0.0178571437
+1	Grazing Flock	Common	327	Gold Gear Choker (Legendary)	0.0178571437
+1	Grazing Flock	Common	331	Classic Medal (Legendary)	0.0178571437
+1	Grazing Flock	Common	334	Iron Headband (Legendary)	0.0178571437
+1	Grazing Flock	Common	340	Mechanized Greaves (Legendary)	0.0178571437
+1	Grazing Flock	Common	343	Swordfighting Banner (Legendary)	0.0178571437
+1	Grazing Flock	Common	349	Apprentice Vambraces (Legendary)	0.0178571437
+1	Grazing Flock	Common	355	Chrome Scarf (Legendary)	0.0178571437
+1	Grazing Flock	Common	361	Soldier Ring (Legendary)	0.0178571437
+1	Grazing Flock	Common	365	Assault Stone (Legendary)	0.0178571437
+1	Grazing Flock	Common	373	Camo Hood (Legendary)	0.0178571437
+1	Grazing Flock	Common	376	Metal Nopon Mask (Legendary)	0.0178571437
+1	Grazing Flock	Common	400	Silver Earrings (Legendary)	0.0178571437
+1	Grazing Flock	Common	421	Katana Attachment (Legendary)	0.0178571437
+1	Grazing Flock	Common	422	Ball Attachment (Legendary)	0.0178571437
+1	Grazing Flock	Common	10027	Magnet Chip	0.0357142873
+1	Grazing Flock	Rare	15007	Physical Defense Up II	0.005509642
+1	Grazing Flock	Rare	15027	Insect Hunter II	0.005509642
+1	Grazing Flock	Rare	15037	Aquatic Hunter II	0.005509642
+1	Grazing Flock	Rare	15047	Machine Hunter II	0.005509642
+1	Grazing Flock	Rare	15052	Titan Hunter II	0.005509642
+1	Grazing Flock	Rare	15063	Fusion Combo Up II	0.005509642
+1	Grazing Flock	Rare	15073	Reflect Immunity	0.005509642
+1	Grazing Flock	Rare	15083	Indoor Attack Up II	0.005509642
+1	Grazing Flock	Rare	15093	Fire Def Up II	0.005509642
+1	Grazing Flock	Rare	15098	Water Def Up II	0.005509642
+1	Grazing Flock	Rare	15103	Earth Def Up II	0.005509642
+1	Grazing Flock	Rare	15108	Wind Def Up II	0.005509642
+1	Grazing Flock	Rare	15113	Electric Def Up II	0.005509642
+1	Grazing Flock	Rare	15118	Ice Def Up II	0.005509642
+1	Grazing Flock	Rare	15123	Dark Def Up II	0.005509642
+1	Grazing Flock	Rare	15128	Light Def Up II	0.005509642
+1	Grazing Flock	Rare	15150	Evasion Focus II	0.005509642
+1	Grazing Flock	Rare	15160	Emergency Guard II	0.005509642
+1	Grazing Flock	Rare	15170	HP Attack Boost II	0.005509642
+1	Grazing Flock	Rare	15180	Break Resist II	0.005509642
+1	Grazing Flock	Rare	15190	Launch Resist II	0.005509642
+1	Grazing Flock	Rare	15200	Blowdown Resist II	0.005509642
+1	Grazing Flock	Rare	15220	Auto-Attack Stealth II	0.005509642
+1	Grazing Flock	Rare	15230	Arts Stealth II	0.005509642
+1	Grazing Flock	Rare	15240	Arts Heal II	0.005509642
+1	Grazing Flock	Rare	15250	Damage Heal II	0.005509642
+1	Grazing Flock	Rare	15260	Sunlight Eye II	0.005509642
+1	Grazing Flock	Rare	15270	Range Boost Up II	0.005509642
+1	Grazing Flock	Rare	15275	Opening Art II	0.005509642
+1	Grazing Flock	Rare	15285	Helping Hand II	0.005509642
+1	Grazing Flock	Rare	15295	Affinity MAX Atk II	0.005509642
+1	Grazing Flock	Rare	15305	Hunter's Chemistry II	0.005509642
+1	Grazing Flock	Rare	15315	Fast Blade Switch II	0.005509642
+1	Grazing Flock	Rare	15346	Jamming II	0.005509642
+1	Grazing Flock	Rare	15351	Element Orb Prioritizer	0.005509642
+1	Grazing Flock	Rare	298	Gear Vest (Legendary)	0.005509642
+1	Grazing Flock	Rare	301	Steam Belt (Legendary)	0.005509642
+1	Grazing Flock	Rare	304	Bolt Hat (Legendary)	0.005509642
+1	Grazing Flock	Rare	323	Smithy Gloves (Legendary)	0.005509642
+1	Grazing Flock	Rare	325	Spring Shoes (Legendary)	0.005509642
+1	Grazing Flock	Rare	327	Gold Gear Choker (Legendary)	0.005509642
+1	Grazing Flock	Rare	331	Classic Medal (Legendary)	0.005509642
+1	Grazing Flock	Rare	334	Iron Headband (Legendary)	0.005509642
+1	Grazing Flock	Rare	340	Mechanized Greaves (Legendary)	0.005509642
+1	Grazing Flock	Rare	343	Swordfighting Banner (Legendary)	0.005509642
+1	Grazing Flock	Rare	349	Apprentice Vambraces (Legendary)	0.005509642
+1	Grazing Flock	Rare	355	Chrome Scarf (Legendary)	0.005509642
+1	Grazing Flock	Rare	361	Soldier Ring (Legendary)	0.005509642
+1	Grazing Flock	Rare	365	Assault Stone (Legendary)	0.005509642
+1	Grazing Flock	Rare	373	Camo Hood (Legendary)	0.005509642
+1	Grazing Flock	Rare	376	Metal Nopon Mask (Legendary)	0.005509642
+1	Grazing Flock	Rare	400	Silver Earrings (Legendary)	0.005509642
+1	Grazing Flock	Rare	421	Katana Attachment (Legendary)	0.005509642
+1	Grazing Flock	Rare	422	Ball Attachment (Legendary)	0.005509642
+1	Grazing Flock	Rare	10027	Magnet Chip	0.0110192839
+1	Grazing Flock	Rare	15002	Critical Up II	0.0110192839
+1	Grazing Flock	Rare	15012	Ether Defense Up II	0.0110192839
+1	Grazing Flock	Rare	15017	Block Rate Up II	0.0110192839
+1	Grazing Flock	Rare	15022	Beast Hunter II	0.0110192839
+1	Grazing Flock	Rare	15032	Aerial Hunter II	0.0110192839
+1	Grazing Flock	Rare	15042	Humanoid Hunter II	0.0110192839
+1	Grazing Flock	Rare	15057	Blade Combo Boost II	0.0110192839
+1	Grazing Flock	Rare	15068	Ambush Boost II	0.0110192839
+1	Grazing Flock	Rare	15078	Aggro Attack Up II	0.0110192839
+1	Grazing Flock	Rare	15088	Outdoor Attack Up II	0.0110192839
+1	Grazing Flock	Rare	15155	Swift Evasion II	0.0110192839
+1	Grazing Flock	Rare	15165	Endurance II	0.0110192839
+1	Grazing Flock	Rare	15175	Spike Defense II	0.0110192839
+1	Grazing Flock	Rare	15185	Topple Resist II	0.0110192839
+1	Grazing Flock	Rare	15195	Smash Resist II	0.0110192839
+1	Grazing Flock	Rare	15205	Knockback Resist II	0.0110192839
+1	Grazing Flock	Rare	15215	Shackle Blade Resist II	0.0110192839
+1	Grazing Flock	Rare	15225	Aggro Boost II	0.0110192839
+1	Grazing Flock	Rare	15235	Arts Aggro Boost II	0.0110192839
+1	Grazing Flock	Rare	15245	Movement Heal II	0.0110192839
+1	Grazing Flock	Rare	15255	Night Vision II	0.0110192839
+1	Grazing Flock	Rare	15265	Reflect Damage Up II	0.0110192839
+1	Grazing Flock	Rare	15280	Telepathy II	0.0110192839
+1	Grazing Flock	Rare	15290	Affinity MAX Barrier II	0.0110192839
+1	Grazing Flock	Rare	15300	Affinity MAX Evade II	0.0110192839
+1	Grazing Flock	Rare	15310	Shoulder to Shoulder II	0.0110192839
+1	Grazing Flock	Rare	15321	Specials Lv 1 Plus II	0.0110192839
+1	Grazing Flock	Rare	15326	Specials Lv 2 Plus II	0.0110192839
+1	Grazing Flock	Rare	15331	Specials Lv 3 Plus II	0.0110192839
+1	Grazing Flock	Rare	15336	Specials Lv 4 Plus II	0.0110192839
+1	Grazing Flock	Rare	15341	Affinity MAX Acc II	0.0110192839
+1	Grazing Flock	Rare	15350	Element Orb Ender	0.0110192839
+1	Grazing Flock	Rare	307	Rainbow Gloves (Legendary)	0.0110192839
+1	Grazing Flock	Rare	310	Shell Shoes (Legendary)	0.0110192839
+1	Grazing Flock	Rare	313	Nacre Choker (Legendary)	0.0110192839
+1	Grazing Flock	Rare	328	Garnet (Legendary)	0.0110192839
+1	Grazing Flock	Rare	337	Moon Cube (Legendary)	0.0110192839
+1	Grazing Flock	Rare	346	Spiked Pauldrons (Legendary)	0.0110192839
+1	Grazing Flock	Rare	358	White Belt (Legendary)	0.0110192839
+1	Grazing Flock	Rare	379	Silver Feather (Legendary)	0.0110192839
+1	Grazing Flock	Rare	382	Spirit Tree Ward (Legendary)	0.0110192839
+1	Grazing Flock	Rare	386	Promise Ring (Legendary)	0.0110192839
+1	Grazing Flock	Rare	391	Chivalric Medal (Legendary)	0.0110192839
+1	Grazing Flock	Rare	394	Gauntlet (Legendary)	0.0110192839
+1	Grazing Flock	Rare	423	Knuckle Attachment (Legendary)	0.0110192839
+1	Grazing Flock	Rare	427	Love Thread (Legendary)	0.0110192839
+1	Grazing Flock	Rare	435	Overclocking Bangle (Legendary)	0.0110192839
+1	Grazing Flock	Rare	437	Lavender Potpourri (Legendary)	0.0110192839
+1	Grazing Flock	Rare	439	Sage's Auspices (Legendary)	0.0110192839
+1	Grazing Flock	Rare	440	Incense of Calm (Legendary)	0.0110192839
+1	Grazing Flock	Rare	10015	Glass Chip	0.0220385678
+1	Grazing Flock	Rare	10035	Pentagon Chip	0.0220385678
+1	Grazing Flock	Rare	462	Night-vision Kit (Common)	0.0137741044
+1	Grazing Flock	Rare	570	Marble Cameo (Common)	0.0275482088
+1	Grazing Flock	Rare	463	Night-vision Kit (Rare)	0.0137741044
+1	Grazing Flock	Rare	571	Marble Cameo (Rare)	0.0137741044
+1	Grazing Flock	Rare	464	Night-vision Kit (Legendary)	0.0137741044
+1	Grazing Flock	Rare	572	Marble Cameo (Legendary)	0.0137741044
+1	Grazing Flock	Legendary	15002	Critical Up II	0.010416667
+1	Grazing Flock	Legendary	15012	Ether Defense Up II	0.010416667
+1	Grazing Flock	Legendary	15017	Block Rate Up II	0.010416667
+1	Grazing Flock	Legendary	15022	Beast Hunter II	0.010416667
+1	Grazing Flock	Legendary	15032	Aerial Hunter II	0.010416667
+1	Grazing Flock	Legendary	15042	Humanoid Hunter II	0.010416667
+1	Grazing Flock	Legendary	15057	Blade Combo Boost II	0.010416667
+1	Grazing Flock	Legendary	15068	Ambush Boost II	0.010416667
+1	Grazing Flock	Legendary	15078	Aggro Attack Up II	0.010416667
+1	Grazing Flock	Legendary	15088	Outdoor Attack Up II	0.010416667
+1	Grazing Flock	Legendary	15155	Swift Evasion II	0.010416667
+1	Grazing Flock	Legendary	15165	Endurance II	0.010416667
+1	Grazing Flock	Legendary	15175	Spike Defense II	0.010416667
+1	Grazing Flock	Legendary	15185	Topple Resist II	0.010416667
+1	Grazing Flock	Legendary	15195	Smash Resist II	0.010416667
+1	Grazing Flock	Legendary	15205	Knockback Resist II	0.010416667
+1	Grazing Flock	Legendary	15215	Shackle Blade Resist II	0.010416667
+1	Grazing Flock	Legendary	15225	Aggro Boost II	0.010416667
+1	Grazing Flock	Legendary	15235	Arts Aggro Boost II	0.010416667
+1	Grazing Flock	Legendary	15245	Movement Heal II	0.010416667
+1	Grazing Flock	Legendary	15255	Night Vision II	0.010416667
+1	Grazing Flock	Legendary	15265	Reflect Damage Up II	0.010416667
+1	Grazing Flock	Legendary	15280	Telepathy II	0.010416667
+1	Grazing Flock	Legendary	15290	Affinity MAX Barrier II	0.010416667
+1	Grazing Flock	Legendary	15300	Affinity MAX Evade II	0.010416667
+1	Grazing Flock	Legendary	15310	Shoulder to Shoulder II	0.010416667
+1	Grazing Flock	Legendary	15321	Specials Lv 1 Plus II	0.010416667
+1	Grazing Flock	Legendary	15326	Specials Lv 2 Plus II	0.010416667
+1	Grazing Flock	Legendary	15331	Specials Lv 3 Plus II	0.010416667
+1	Grazing Flock	Legendary	15336	Specials Lv 4 Plus II	0.010416667
+1	Grazing Flock	Legendary	15341	Affinity MAX Acc II	0.010416667
+1	Grazing Flock	Legendary	15350	Element Orb Ender	0.010416667
+1	Grazing Flock	Legendary	307	Rainbow Gloves (Legendary)	0.010416667
+1	Grazing Flock	Legendary	310	Shell Shoes (Legendary)	0.010416667
+1	Grazing Flock	Legendary	313	Nacre Choker (Legendary)	0.010416667
+1	Grazing Flock	Legendary	328	Garnet (Legendary)	0.010416667
+1	Grazing Flock	Legendary	337	Moon Cube (Legendary)	0.010416667
+1	Grazing Flock	Legendary	346	Spiked Pauldrons (Legendary)	0.010416667
+1	Grazing Flock	Legendary	358	White Belt (Legendary)	0.010416667
+1	Grazing Flock	Legendary	379	Silver Feather (Legendary)	0.010416667
+1	Grazing Flock	Legendary	382	Spirit Tree Ward (Legendary)	0.010416667
+1	Grazing Flock	Legendary	386	Promise Ring (Legendary)	0.010416667
+1	Grazing Flock	Legendary	391	Chivalric Medal (Legendary)	0.010416667
+1	Grazing Flock	Legendary	394	Gauntlet (Legendary)	0.010416667
+1	Grazing Flock	Legendary	423	Knuckle Attachment (Legendary)	0.010416667
+1	Grazing Flock	Legendary	427	Love Thread (Legendary)	0.010416667
+1	Grazing Flock	Legendary	435	Overclocking Bangle (Legendary)	0.010416667
+1	Grazing Flock	Legendary	437	Lavender Potpourri (Legendary)	0.010416667
+1	Grazing Flock	Legendary	439	Sage's Auspices (Legendary)	0.010416667
+1	Grazing Flock	Legendary	440	Incense of Calm (Legendary)	0.010416667
+1	Grazing Flock	Legendary	10015	Glass Chip	0.020833334
+1	Grazing Flock	Legendary	10035	Pentagon Chip	0.020833334
+1	Grazing Flock	Legendary	462	Night-vision Kit (Common)	0.013020833
+1	Grazing Flock	Legendary	570	Marble Cameo (Common)	0.013020833
+1	Grazing Flock	Legendary	463	Night-vision Kit (Rare)	0.013020833
+1	Grazing Flock	Legendary	571	Marble Cameo (Rare)	0.013020833
+1	Grazing Flock	Legendary	464	Night-vision Kit (Legendary)	0.013020833
+1	Grazing Flock	Legendary	572	Marble Cameo (Legendary)	0.013020833
+1	Grazing Flock	Legendary	15008	Physical Defense Up III	0.00520833349
+1	Grazing Flock	Legendary	15028	Insect Hunter III	0.00520833349
+1	Grazing Flock	Legendary	15038	Aquatic Hunter III	0.00520833349
+1	Grazing Flock	Legendary	15048	Machine Hunter III	0.00520833349
+1	Grazing Flock	Legendary	15053	Titan Hunter III	0.00520833349
+1	Grazing Flock	Legendary	15064	Fusion Combo Up III	0.00520833349
+1	Grazing Flock	Legendary	15074	Reflect Immunity	0.00520833349
+1	Grazing Flock	Legendary	15084	Indoor Attack Up III	0.00520833349
+1	Grazing Flock	Legendary	15094	Fire Def Up III	0.00520833349
+1	Grazing Flock	Legendary	15099	Water Def Up III	0.00520833349
+1	Grazing Flock	Legendary	15104	Earth Def Up III	0.00520833349
+1	Grazing Flock	Legendary	15109	Wind Def Up III	0.00520833349
+1	Grazing Flock	Legendary	15114	Electric Def Up III	0.00520833349
+1	Grazing Flock	Legendary	15119	Ice Def Up III	0.00520833349
+1	Grazing Flock	Legendary	15124	Dark Def Up III	0.00520833349
+1	Grazing Flock	Legendary	15129	Light Def Up III	0.00520833349
+1	Grazing Flock	Legendary	15151	Evasion Focus III	0.00520833349
+1	Grazing Flock	Legendary	15161	Emergency Guard III	0.00520833349
+1	Grazing Flock	Legendary	15171	HP Attack Boost III	0.00520833349
+1	Grazing Flock	Legendary	15181	Break Resist III	0.00520833349
+1	Grazing Flock	Legendary	15191	Launch Resist III	0.00520833349
+1	Grazing Flock	Legendary	15201	Blowdown Resist III	0.00520833349
+1	Grazing Flock	Legendary	15221	Auto-Attack Stealth III	0.00520833349
+1	Grazing Flock	Legendary	15231	Arts Stealth III	0.00520833349
+1	Grazing Flock	Legendary	15241	Arts Heal III	0.00520833349
+1	Grazing Flock	Legendary	15251	Damage Heal III	0.00520833349
+1	Grazing Flock	Legendary	15261	Sunlight Eye III	0.00520833349
+1	Grazing Flock	Legendary	15271	Range Boost Up III	0.00520833349
+1	Grazing Flock	Legendary	15276	Opening Art III	0.00520833349
+1	Grazing Flock	Legendary	15286	Helping Hand III	0.00520833349
+1	Grazing Flock	Legendary	15296	Affinity MAX Atk III	0.00520833349
+1	Grazing Flock	Legendary	15306	Hunter's Chemistry III	0.00520833349
+1	Grazing Flock	Legendary	15316	Fast Blade Switch III	0.00520833349
+1	Grazing Flock	Legendary	15347	Jamming III	0.00520833349
+1	Grazing Flock	Legendary	299	Jade Vest (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	302	Silver Belt (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	305	Pearl Hat (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	332	Modern Medal (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	335	Ice Headband (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	341	Crystal Greaves (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	344	Goddess Banner (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	353	Eraser Orb (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	356	Unicorn Scarf (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	362	Berserk Ring (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	374	Skeleton Hood (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	377	Gold Nopon Mask (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	388	Affection Necklace (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	398	Leader's Eyepatch (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	404	Burst Symbol (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	407	Infinity Symbol (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	410	Ring Attachment (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	414	Whip Attachment (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	415	Edge Attachment (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	425	Cheer Treat (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	430	Healing Amulet (Legendary)	0.00520833349
+1	Grazing Flock	Legendary	10031	Motor Chip	0.010416667
+1	Grazing Flock	Legendary	10043	Ureilite Chip	0.010416667
+1	Grazing Flock	Legendary	486	Terror Masque (Common)	0.0078125
+1	Grazing Flock	Legendary	492	Envoy's Footgear (Common)	0.0078125
+1	Grazing Flock	Legendary	487	Terror Masque (Rare)	0.0078125
+1	Grazing Flock	Legendary	493	Envoy's Footgear (Rare)	0.0078125
+1	Grazing Flock	Legendary	488	Terror Masque (Legendary)	0.0078125
+1	Grazing Flock	Legendary	494	Envoy's Footgear (Legendary)	0.0078125
+1	Grazing Flock	Legendary	25405	Weaponry for Noobs	0.00520833349
+2	Pest Control	Common	15007	Physical Defense Up II	0.00884955749
+2	Pest Control	Common	15027	Insect Hunter II	0.00884955749
+2	Pest Control	Common	15037	Aquatic Hunter II	0.00884955749
+2	Pest Control	Common	15047	Machine Hunter II	0.00884955749
+2	Pest Control	Common	15052	Titan Hunter II	0.00884955749
+2	Pest Control	Common	15063	Fusion Combo Up II	0.00884955749
+2	Pest Control	Common	15073	Reflect Immunity	0.00884955749
+2	Pest Control	Common	15083	Indoor Attack Up II	0.00884955749
+2	Pest Control	Common	15093	Fire Def Up II	0.00884955749
+2	Pest Control	Common	15098	Water Def Up II	0.00884955749
+2	Pest Control	Common	15103	Earth Def Up II	0.00884955749
+2	Pest Control	Common	15108	Wind Def Up II	0.00884955749
+2	Pest Control	Common	15113	Electric Def Up II	0.00884955749
+2	Pest Control	Common	15118	Ice Def Up II	0.00884955749
+2	Pest Control	Common	15123	Dark Def Up II	0.00884955749
+2	Pest Control	Common	15128	Light Def Up II	0.00884955749
+2	Pest Control	Common	15150	Evasion Focus II	0.00884955749
+2	Pest Control	Common	15160	Emergency Guard II	0.00884955749
+2	Pest Control	Common	15170	HP Attack Boost II	0.00884955749
+2	Pest Control	Common	15180	Break Resist II	0.00884955749
+2	Pest Control	Common	15190	Launch Resist II	0.00884955749
+2	Pest Control	Common	15200	Blowdown Resist II	0.00884955749
+2	Pest Control	Common	15220	Auto-Attack Stealth II	0.00884955749
+2	Pest Control	Common	15230	Arts Stealth II	0.00884955749
+2	Pest Control	Common	15240	Arts Heal II	0.00884955749
+2	Pest Control	Common	15250	Damage Heal II	0.00884955749
+2	Pest Control	Common	15260	Sunlight Eye II	0.00884955749
+2	Pest Control	Common	15270	Range Boost Up II	0.00884955749
+2	Pest Control	Common	15275	Opening Art II	0.00884955749
+2	Pest Control	Common	15285	Helping Hand II	0.00884955749
+2	Pest Control	Common	15295	Affinity MAX Atk II	0.00884955749
+2	Pest Control	Common	15305	Hunter's Chemistry II	0.00884955749
+2	Pest Control	Common	15315	Fast Blade Switch II	0.00884955749
+2	Pest Control	Common	15346	Jamming II	0.00884955749
+2	Pest Control	Common	15351	Element Orb Prioritizer	0.00884955749
+2	Pest Control	Common	298	Gear Vest (Legendary)	0.03539823
+2	Pest Control	Common	301	Steam Belt (Legendary)	0.03539823
+2	Pest Control	Common	304	Bolt Hat (Legendary)	0.03539823
+2	Pest Control	Common	323	Smithy Gloves (Legendary)	0.03539823
+2	Pest Control	Common	325	Spring Shoes (Legendary)	0.03539823
+2	Pest Control	Common	327	Gold Gear Choker (Legendary)	0.03539823
+2	Pest Control	Common	331	Classic Medal (Legendary)	0.03539823
+2	Pest Control	Common	334	Iron Headband (Legendary)	0.03539823
+2	Pest Control	Common	340	Mechanized Greaves (Legendary)	0.03539823
+2	Pest Control	Common	343	Swordfighting Banner (Legendary)	0.03539823
+2	Pest Control	Common	349	Apprentice Vambraces (Legendary)	0.03539823
+2	Pest Control	Common	355	Chrome Scarf (Legendary)	0.03539823
+2	Pest Control	Common	361	Soldier Ring (Legendary)	0.03539823
+2	Pest Control	Common	365	Assault Stone (Legendary)	0.03539823
+2	Pest Control	Common	373	Camo Hood (Legendary)	0.03539823
+2	Pest Control	Common	376	Metal Nopon Mask (Legendary)	0.03539823
+2	Pest Control	Common	400	Silver Earrings (Legendary)	0.03539823
+2	Pest Control	Common	421	Katana Attachment (Legendary)	0.03539823
+2	Pest Control	Common	422	Ball Attachment (Legendary)	0.03539823
+2	Pest Control	Common	10027	Magnet Chip	0.017699115
+2	Pest Control	Rare	15007	Physical Defense Up II	0.00250626565
+2	Pest Control	Rare	15027	Insect Hunter II	0.00250626565
+2	Pest Control	Rare	15037	Aquatic Hunter II	0.00250626565
+2	Pest Control	Rare	15047	Machine Hunter II	0.00250626565
+2	Pest Control	Rare	15052	Titan Hunter II	0.00250626565
+2	Pest Control	Rare	15063	Fusion Combo Up II	0.00250626565
+2	Pest Control	Rare	15073	Reflect Immunity	0.00250626565
+2	Pest Control	Rare	15083	Indoor Attack Up II	0.00250626565
+2	Pest Control	Rare	15093	Fire Def Up II	0.00250626565
+2	Pest Control	Rare	15098	Water Def Up II	0.00250626565
+2	Pest Control	Rare	15103	Earth Def Up II	0.00250626565
+2	Pest Control	Rare	15108	Wind Def Up II	0.00250626565
+2	Pest Control	Rare	15113	Electric Def Up II	0.00250626565
+2	Pest Control	Rare	15118	Ice Def Up II	0.00250626565
+2	Pest Control	Rare	15123	Dark Def Up II	0.00250626565
+2	Pest Control	Rare	15128	Light Def Up II	0.00250626565
+2	Pest Control	Rare	15150	Evasion Focus II	0.00250626565
+2	Pest Control	Rare	15160	Emergency Guard II	0.00250626565
+2	Pest Control	Rare	15170	HP Attack Boost II	0.00250626565
+2	Pest Control	Rare	15180	Break Resist II	0.00250626565
+2	Pest Control	Rare	15190	Launch Resist II	0.00250626565
+2	Pest Control	Rare	15200	Blowdown Resist II	0.00250626565
+2	Pest Control	Rare	15220	Auto-Attack Stealth II	0.00250626565
+2	Pest Control	Rare	15230	Arts Stealth II	0.00250626565
+2	Pest Control	Rare	15240	Arts Heal II	0.00250626565
+2	Pest Control	Rare	15250	Damage Heal II	0.00250626565
+2	Pest Control	Rare	15260	Sunlight Eye II	0.00250626565
+2	Pest Control	Rare	15270	Range Boost Up II	0.00250626565
+2	Pest Control	Rare	15275	Opening Art II	0.00250626565
+2	Pest Control	Rare	15285	Helping Hand II	0.00250626565
+2	Pest Control	Rare	15295	Affinity MAX Atk II	0.00250626565
+2	Pest Control	Rare	15305	Hunter's Chemistry II	0.00250626565
+2	Pest Control	Rare	15315	Fast Blade Switch II	0.00250626565
+2	Pest Control	Rare	15346	Jamming II	0.00250626565
+2	Pest Control	Rare	15351	Element Orb Prioritizer	0.00250626565
+2	Pest Control	Rare	298	Gear Vest (Legendary)	0.0100250626
+2	Pest Control	Rare	301	Steam Belt (Legendary)	0.0100250626
+2	Pest Control	Rare	304	Bolt Hat (Legendary)	0.0100250626
+2	Pest Control	Rare	323	Smithy Gloves (Legendary)	0.0100250626
+2	Pest Control	Rare	325	Spring Shoes (Legendary)	0.0100250626
+2	Pest Control	Rare	327	Gold Gear Choker (Legendary)	0.0100250626
+2	Pest Control	Rare	331	Classic Medal (Legendary)	0.0100250626
+2	Pest Control	Rare	334	Iron Headband (Legendary)	0.0100250626
+2	Pest Control	Rare	340	Mechanized Greaves (Legendary)	0.0100250626
+2	Pest Control	Rare	343	Swordfighting Banner (Legendary)	0.0100250626
+2	Pest Control	Rare	349	Apprentice Vambraces (Legendary)	0.0100250626
+2	Pest Control	Rare	355	Chrome Scarf (Legendary)	0.0100250626
+2	Pest Control	Rare	361	Soldier Ring (Legendary)	0.0100250626
+2	Pest Control	Rare	365	Assault Stone (Legendary)	0.0100250626
+2	Pest Control	Rare	373	Camo Hood (Legendary)	0.0100250626
+2	Pest Control	Rare	376	Metal Nopon Mask (Legendary)	0.0100250626
+2	Pest Control	Rare	400	Silver Earrings (Legendary)	0.0100250626
+2	Pest Control	Rare	421	Katana Attachment (Legendary)	0.0100250626
+2	Pest Control	Rare	422	Ball Attachment (Legendary)	0.0100250626
+2	Pest Control	Rare	10027	Magnet Chip	0.0050125313
+2	Pest Control	Rare	15002	Critical Up II	0.0050125313
+2	Pest Control	Rare	15012	Ether Defense Up II	0.0050125313
+2	Pest Control	Rare	15017	Block Rate Up II	0.0050125313
+2	Pest Control	Rare	15022	Beast Hunter II	0.0050125313
+2	Pest Control	Rare	15032	Aerial Hunter II	0.0050125313
+2	Pest Control	Rare	15042	Humanoid Hunter II	0.0050125313
+2	Pest Control	Rare	15057	Blade Combo Boost II	0.0050125313
+2	Pest Control	Rare	15068	Ambush Boost II	0.0050125313
+2	Pest Control	Rare	15078	Aggro Attack Up II	0.0050125313
+2	Pest Control	Rare	15088	Outdoor Attack Up II	0.0050125313
+2	Pest Control	Rare	15155	Swift Evasion II	0.0050125313
+2	Pest Control	Rare	15165	Endurance II	0.0050125313
+2	Pest Control	Rare	15175	Spike Defense II	0.0050125313
+2	Pest Control	Rare	15185	Topple Resist II	0.0050125313
+2	Pest Control	Rare	15195	Smash Resist II	0.0050125313
+2	Pest Control	Rare	15205	Knockback Resist II	0.0050125313
+2	Pest Control	Rare	15215	Shackle Blade Resist II	0.0050125313
+2	Pest Control	Rare	15225	Aggro Boost II	0.0050125313
+2	Pest Control	Rare	15235	Arts Aggro Boost II	0.0050125313
+2	Pest Control	Rare	15245	Movement Heal II	0.0050125313
+2	Pest Control	Rare	15255	Night Vision II	0.0050125313
+2	Pest Control	Rare	15265	Reflect Damage Up II	0.0050125313
+2	Pest Control	Rare	15280	Telepathy II	0.0050125313
+2	Pest Control	Rare	15290	Affinity MAX Barrier II	0.0050125313
+2	Pest Control	Rare	15300	Affinity MAX Evade II	0.0050125313
+2	Pest Control	Rare	15310	Shoulder to Shoulder II	0.0050125313
+2	Pest Control	Rare	15321	Specials Lv 1 Plus II	0.0050125313
+2	Pest Control	Rare	15326	Specials Lv 2 Plus II	0.0050125313
+2	Pest Control	Rare	15331	Specials Lv 3 Plus II	0.0050125313
+2	Pest Control	Rare	15336	Specials Lv 4 Plus II	0.0050125313
+2	Pest Control	Rare	15341	Affinity MAX Acc II	0.0050125313
+2	Pest Control	Rare	15350	Element Orb Ender	0.0050125313
+2	Pest Control	Rare	307	Rainbow Gloves (Legendary)	0.0200501252
+2	Pest Control	Rare	310	Shell Shoes (Legendary)	0.0200501252
+2	Pest Control	Rare	313	Nacre Choker (Legendary)	0.0200501252
+2	Pest Control	Rare	328	Garnet (Legendary)	0.0200501252
+2	Pest Control	Rare	337	Moon Cube (Legendary)	0.0200501252
+2	Pest Control	Rare	346	Spiked Pauldrons (Legendary)	0.0200501252
+2	Pest Control	Rare	358	White Belt (Legendary)	0.0200501252
+2	Pest Control	Rare	379	Silver Feather (Legendary)	0.0200501252
+2	Pest Control	Rare	382	Spirit Tree Ward (Legendary)	0.0200501252
+2	Pest Control	Rare	386	Promise Ring (Legendary)	0.0200501252
+2	Pest Control	Rare	391	Chivalric Medal (Legendary)	0.0200501252
+2	Pest Control	Rare	394	Gauntlet (Legendary)	0.0200501252
+2	Pest Control	Rare	423	Knuckle Attachment (Legendary)	0.0200501252
+2	Pest Control	Rare	427	Love Thread (Legendary)	0.0200501252
+2	Pest Control	Rare	435	Overclocking Bangle (Legendary)	0.0200501252
+2	Pest Control	Rare	437	Lavender Potpourri (Legendary)	0.0200501252
+2	Pest Control	Rare	439	Sage's Auspices (Legendary)	0.0200501252
+2	Pest Control	Rare	440	Incense of Calm (Legendary)	0.0200501252
+2	Pest Control	Rare	10015	Glass Chip	0.0100250626
+2	Pest Control	Rare	10035	Pentagon Chip	0.0100250626
+2	Pest Control	Rare	462	Night-vision Kit (Common)	0.0501253121
+2	Pest Control	Rare	570	Marble Cameo (Common)	0.025062656
+2	Pest Control	Rare	463	Night-vision Kit (Rare)	0.025062656
+2	Pest Control	Rare	571	Marble Cameo (Rare)	0.025062656
+2	Pest Control	Rare	464	Night-vision Kit (Legendary)	0.025062656
+2	Pest Control	Rare	572	Marble Cameo (Legendary)	0.025062656
+2	Pest Control	Legendary	15002	Critical Up II	0.00458715577
+2	Pest Control	Legendary	15012	Ether Defense Up II	0.00458715577
+2	Pest Control	Legendary	15017	Block Rate Up II	0.00458715577
+2	Pest Control	Legendary	15022	Beast Hunter II	0.00458715577
+2	Pest Control	Legendary	15032	Aerial Hunter II	0.00458715577
+2	Pest Control	Legendary	15042	Humanoid Hunter II	0.00458715577
+2	Pest Control	Legendary	15057	Blade Combo Boost II	0.00458715577
+2	Pest Control	Legendary	15068	Ambush Boost II	0.00458715577
+2	Pest Control	Legendary	15078	Aggro Attack Up II	0.00458715577
+2	Pest Control	Legendary	15088	Outdoor Attack Up II	0.00458715577
+2	Pest Control	Legendary	15155	Swift Evasion II	0.00458715577
+2	Pest Control	Legendary	15165	Endurance II	0.00458715577
+2	Pest Control	Legendary	15175	Spike Defense II	0.00458715577
+2	Pest Control	Legendary	15185	Topple Resist II	0.00458715577
+2	Pest Control	Legendary	15195	Smash Resist II	0.00458715577
+2	Pest Control	Legendary	15205	Knockback Resist II	0.00458715577
+2	Pest Control	Legendary	15215	Shackle Blade Resist II	0.00458715577
+2	Pest Control	Legendary	15225	Aggro Boost II	0.00458715577
+2	Pest Control	Legendary	15235	Arts Aggro Boost II	0.00458715577
+2	Pest Control	Legendary	15245	Movement Heal II	0.00458715577
+2	Pest Control	Legendary	15255	Night Vision II	0.00458715577
+2	Pest Control	Legendary	15265	Reflect Damage Up II	0.00458715577
+2	Pest Control	Legendary	15280	Telepathy II	0.00458715577
+2	Pest Control	Legendary	15290	Affinity MAX Barrier II	0.00458715577
+2	Pest Control	Legendary	15300	Affinity MAX Evade II	0.00458715577
+2	Pest Control	Legendary	15310	Shoulder to Shoulder II	0.00458715577
+2	Pest Control	Legendary	15321	Specials Lv 1 Plus II	0.00458715577
+2	Pest Control	Legendary	15326	Specials Lv 2 Plus II	0.00458715577
+2	Pest Control	Legendary	15331	Specials Lv 3 Plus II	0.00458715577
+2	Pest Control	Legendary	15336	Specials Lv 4 Plus II	0.00458715577
+2	Pest Control	Legendary	15341	Affinity MAX Acc II	0.00458715577
+2	Pest Control	Legendary	15350	Element Orb Ender	0.00458715577
+2	Pest Control	Legendary	307	Rainbow Gloves (Legendary)	0.0183486231
+2	Pest Control	Legendary	310	Shell Shoes (Legendary)	0.0183486231
+2	Pest Control	Legendary	313	Nacre Choker (Legendary)	0.0183486231
+2	Pest Control	Legendary	328	Garnet (Legendary)	0.0183486231
+2	Pest Control	Legendary	337	Moon Cube (Legendary)	0.0183486231
+2	Pest Control	Legendary	346	Spiked Pauldrons (Legendary)	0.0183486231
+2	Pest Control	Legendary	358	White Belt (Legendary)	0.0183486231
+2	Pest Control	Legendary	379	Silver Feather (Legendary)	0.0183486231
+2	Pest Control	Legendary	382	Spirit Tree Ward (Legendary)	0.0183486231
+2	Pest Control	Legendary	386	Promise Ring (Legendary)	0.0183486231
+2	Pest Control	Legendary	391	Chivalric Medal (Legendary)	0.0183486231
+2	Pest Control	Legendary	394	Gauntlet (Legendary)	0.0183486231
+2	Pest Control	Legendary	423	Knuckle Attachment (Legendary)	0.0183486231
+2	Pest Control	Legendary	427	Love Thread (Legendary)	0.0183486231
+2	Pest Control	Legendary	435	Overclocking Bangle (Legendary)	0.0183486231
+2	Pest Control	Legendary	437	Lavender Potpourri (Legendary)	0.0183486231
+2	Pest Control	Legendary	439	Sage's Auspices (Legendary)	0.0183486231
+2	Pest Control	Legendary	440	Incense of Calm (Legendary)	0.0183486231
+2	Pest Control	Legendary	10015	Glass Chip	0.00917431153
+2	Pest Control	Legendary	10035	Pentagon Chip	0.00917431153
+2	Pest Control	Legendary	462	Night-vision Kit (Common)	0.02293578
+2	Pest Control	Legendary	570	Marble Cameo (Common)	0.02293578
+2	Pest Control	Legendary	463	Night-vision Kit (Rare)	0.02293578
+2	Pest Control	Legendary	571	Marble Cameo (Rare)	0.02293578
+2	Pest Control	Legendary	464	Night-vision Kit (Legendary)	0.02293578
+2	Pest Control	Legendary	572	Marble Cameo (Legendary)	0.02293578
+2	Pest Control	Legendary	15008	Physical Defense Up III	0.00229357788
+2	Pest Control	Legendary	15028	Insect Hunter III	0.00229357788
+2	Pest Control	Legendary	15038	Aquatic Hunter III	0.00229357788
+2	Pest Control	Legendary	15048	Machine Hunter III	0.00229357788
+2	Pest Control	Legendary	15053	Titan Hunter III	0.00229357788
+2	Pest Control	Legendary	15064	Fusion Combo Up III	0.00229357788
+2	Pest Control	Legendary	15074	Reflect Immunity	0.00229357788
+2	Pest Control	Legendary	15084	Indoor Attack Up III	0.00229357788
+2	Pest Control	Legendary	15094	Fire Def Up III	0.00229357788
+2	Pest Control	Legendary	15099	Water Def Up III	0.00229357788
+2	Pest Control	Legendary	15104	Earth Def Up III	0.00229357788
+2	Pest Control	Legendary	15109	Wind Def Up III	0.00229357788
+2	Pest Control	Legendary	15114	Electric Def Up III	0.00229357788
+2	Pest Control	Legendary	15119	Ice Def Up III	0.00229357788
+2	Pest Control	Legendary	15124	Dark Def Up III	0.00229357788
+2	Pest Control	Legendary	15129	Light Def Up III	0.00229357788
+2	Pest Control	Legendary	15151	Evasion Focus III	0.00229357788
+2	Pest Control	Legendary	15161	Emergency Guard III	0.00229357788
+2	Pest Control	Legendary	15171	HP Attack Boost III	0.00229357788
+2	Pest Control	Legendary	15181	Break Resist III	0.00229357788
+2	Pest Control	Legendary	15191	Launch Resist III	0.00229357788
+2	Pest Control	Legendary	15201	Blowdown Resist III	0.00229357788
+2	Pest Control	Legendary	15221	Auto-Attack Stealth III	0.00229357788
+2	Pest Control	Legendary	15231	Arts Stealth III	0.00229357788
+2	Pest Control	Legendary	15241	Arts Heal III	0.00229357788
+2	Pest Control	Legendary	15251	Damage Heal III	0.00229357788
+2	Pest Control	Legendary	15261	Sunlight Eye III	0.00229357788
+2	Pest Control	Legendary	15271	Range Boost Up III	0.00229357788
+2	Pest Control	Legendary	15276	Opening Art III	0.00229357788
+2	Pest Control	Legendary	15286	Helping Hand III	0.00229357788
+2	Pest Control	Legendary	15296	Affinity MAX Atk III	0.00229357788
+2	Pest Control	Legendary	15306	Hunter's Chemistry III	0.00229357788
+2	Pest Control	Legendary	15316	Fast Blade Switch III	0.00229357788
+2	Pest Control	Legendary	15347	Jamming III	0.00229357788
+2	Pest Control	Legendary	299	Jade Vest (Legendary)	0.00917431153
+2	Pest Control	Legendary	302	Silver Belt (Legendary)	0.00917431153
+2	Pest Control	Legendary	305	Pearl Hat (Legendary)	0.00917431153
+2	Pest Control	Legendary	332	Modern Medal (Legendary)	0.00917431153
+2	Pest Control	Legendary	335	Ice Headband (Legendary)	0.00917431153
+2	Pest Control	Legendary	341	Crystal Greaves (Legendary)	0.00917431153
+2	Pest Control	Legendary	344	Goddess Banner (Legendary)	0.00917431153
+2	Pest Control	Legendary	353	Eraser Orb (Legendary)	0.00917431153
+2	Pest Control	Legendary	356	Unicorn Scarf (Legendary)	0.00917431153
+2	Pest Control	Legendary	362	Berserk Ring (Legendary)	0.00917431153
+2	Pest Control	Legendary	374	Skeleton Hood (Legendary)	0.00917431153
+2	Pest Control	Legendary	377	Gold Nopon Mask (Legendary)	0.00917431153
+2	Pest Control	Legendary	388	Affection Necklace (Legendary)	0.00917431153
+2	Pest Control	Legendary	398	Leader's Eyepatch (Legendary)	0.00917431153
+2	Pest Control	Legendary	404	Burst Symbol (Legendary)	0.00917431153
+2	Pest Control	Legendary	407	Infinity Symbol (Legendary)	0.00917431153
+2	Pest Control	Legendary	410	Ring Attachment (Legendary)	0.00917431153
+2	Pest Control	Legendary	414	Whip Attachment (Legendary)	0.00917431153
+2	Pest Control	Legendary	415	Edge Attachment (Legendary)	0.00917431153
+2	Pest Control	Legendary	425	Cheer Treat (Legendary)	0.00917431153
+2	Pest Control	Legendary	430	Healing Amulet (Legendary)	0.00917431153
+2	Pest Control	Legendary	10031	Motor Chip	0.00458715577
+2	Pest Control	Legendary	10043	Ureilite Chip	0.00458715577
+2	Pest Control	Legendary	486	Terror Masque (Common)	0.0137614682
+2	Pest Control	Legendary	492	Envoy's Footgear (Common)	0.0137614682
+2	Pest Control	Legendary	487	Terror Masque (Rare)	0.0137614682
+2	Pest Control	Legendary	493	Envoy's Footgear (Rare)	0.0137614682
+2	Pest Control	Legendary	488	Terror Masque (Legendary)	0.0137614682
+2	Pest Control	Legendary	494	Envoy's Footgear (Legendary)	0.0137614682
+2	Pest Control	Legendary	25405	Weaponry for Noobs	0.00458715577
+3	Think of the Soldiers	Common	15007	Physical Defense Up II	0.024844721
+3	Think of the Soldiers	Common	15027	Insect Hunter II	0.024844721
+3	Think of the Soldiers	Common	15037	Aquatic Hunter II	0.024844721
+3	Think of the Soldiers	Common	15047	Machine Hunter II	0.024844721
+3	Think of the Soldiers	Common	15052	Titan Hunter II	0.024844721
+3	Think of the Soldiers	Common	15063	Fusion Combo Up II	0.024844721
+3	Think of the Soldiers	Common	15073	Reflect Immunity	0.024844721
+3	Think of the Soldiers	Common	15083	Indoor Attack Up II	0.024844721
+3	Think of the Soldiers	Common	15093	Fire Def Up II	0.024844721
+3	Think of the Soldiers	Common	15098	Water Def Up II	0.024844721
+3	Think of the Soldiers	Common	15103	Earth Def Up II	0.024844721
+3	Think of the Soldiers	Common	15108	Wind Def Up II	0.024844721
+3	Think of the Soldiers	Common	15113	Electric Def Up II	0.024844721
+3	Think of the Soldiers	Common	15118	Ice Def Up II	0.024844721
+3	Think of the Soldiers	Common	15123	Dark Def Up II	0.024844721
+3	Think of the Soldiers	Common	15128	Light Def Up II	0.024844721
+3	Think of the Soldiers	Common	15150	Evasion Focus II	0.024844721
+3	Think of the Soldiers	Common	15160	Emergency Guard II	0.024844721
+3	Think of the Soldiers	Common	15170	HP Attack Boost II	0.024844721
+3	Think of the Soldiers	Common	15180	Break Resist II	0.024844721
+3	Think of the Soldiers	Common	15190	Launch Resist II	0.024844721
+3	Think of the Soldiers	Common	15200	Blowdown Resist II	0.024844721
+3	Think of the Soldiers	Common	15220	Auto-Attack Stealth II	0.024844721
+3	Think of the Soldiers	Common	15230	Arts Stealth II	0.024844721
+3	Think of the Soldiers	Common	15240	Arts Heal II	0.024844721
+3	Think of the Soldiers	Common	15250	Damage Heal II	0.024844721
+3	Think of the Soldiers	Common	15260	Sunlight Eye II	0.024844721
+3	Think of the Soldiers	Common	15270	Range Boost Up II	0.024844721
+3	Think of the Soldiers	Common	15275	Opening Art II	0.024844721
+3	Think of the Soldiers	Common	15285	Helping Hand II	0.024844721
+3	Think of the Soldiers	Common	15295	Affinity MAX Atk II	0.024844721
+3	Think of the Soldiers	Common	15305	Hunter's Chemistry II	0.024844721
+3	Think of the Soldiers	Common	15315	Fast Blade Switch II	0.024844721
+3	Think of the Soldiers	Common	15346	Jamming II	0.024844721
+3	Think of the Soldiers	Common	15351	Element Orb Prioritizer	0.024844721
+3	Think of the Soldiers	Common	298	Gear Vest (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	301	Steam Belt (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	304	Bolt Hat (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	323	Smithy Gloves (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	325	Spring Shoes (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	327	Gold Gear Choker (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	331	Classic Medal (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	334	Iron Headband (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	340	Mechanized Greaves (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	343	Swordfighting Banner (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	349	Apprentice Vambraces (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	355	Chrome Scarf (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	361	Soldier Ring (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	365	Assault Stone (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	373	Camo Hood (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	376	Metal Nopon Mask (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	400	Silver Earrings (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	421	Katana Attachment (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	422	Ball Attachment (Legendary)	0.00621118024
+3	Think of the Soldiers	Common	10027	Magnet Chip	0.0124223605
+3	Think of the Soldiers	Rare	15007	Physical Defense Up II	0.008413967
+3	Think of the Soldiers	Rare	15027	Insect Hunter II	0.008413967
+3	Think of the Soldiers	Rare	15037	Aquatic Hunter II	0.008413967
+3	Think of the Soldiers	Rare	15047	Machine Hunter II	0.008413967
+3	Think of the Soldiers	Rare	15052	Titan Hunter II	0.008413967
+3	Think of the Soldiers	Rare	15063	Fusion Combo Up II	0.008413967
+3	Think of the Soldiers	Rare	15073	Reflect Immunity	0.008413967
+3	Think of the Soldiers	Rare	15083	Indoor Attack Up II	0.008413967
+3	Think of the Soldiers	Rare	15093	Fire Def Up II	0.008413967
+3	Think of the Soldiers	Rare	15098	Water Def Up II	0.008413967
+3	Think of the Soldiers	Rare	15103	Earth Def Up II	0.008413967
+3	Think of the Soldiers	Rare	15108	Wind Def Up II	0.008413967
+3	Think of the Soldiers	Rare	15113	Electric Def Up II	0.008413967
+3	Think of the Soldiers	Rare	15118	Ice Def Up II	0.008413967
+3	Think of the Soldiers	Rare	15123	Dark Def Up II	0.008413967
+3	Think of the Soldiers	Rare	15128	Light Def Up II	0.008413967
+3	Think of the Soldiers	Rare	15150	Evasion Focus II	0.008413967
+3	Think of the Soldiers	Rare	15160	Emergency Guard II	0.008413967
+3	Think of the Soldiers	Rare	15170	HP Attack Boost II	0.008413967
+3	Think of the Soldiers	Rare	15180	Break Resist II	0.008413967
+3	Think of the Soldiers	Rare	15190	Launch Resist II	0.008413967
+3	Think of the Soldiers	Rare	15200	Blowdown Resist II	0.008413967
+3	Think of the Soldiers	Rare	15220	Auto-Attack Stealth II	0.008413967
+3	Think of the Soldiers	Rare	15230	Arts Stealth II	0.008413967
+3	Think of the Soldiers	Rare	15240	Arts Heal II	0.008413967
+3	Think of the Soldiers	Rare	15250	Damage Heal II	0.008413967
+3	Think of the Soldiers	Rare	15260	Sunlight Eye II	0.008413967
+3	Think of the Soldiers	Rare	15270	Range Boost Up II	0.008413967
+3	Think of the Soldiers	Rare	15275	Opening Art II	0.008413967
+3	Think of the Soldiers	Rare	15285	Helping Hand II	0.008413967
+3	Think of the Soldiers	Rare	15295	Affinity MAX Atk II	0.008413967
+3	Think of the Soldiers	Rare	15305	Hunter's Chemistry II	0.008413967
+3	Think of the Soldiers	Rare	15315	Fast Blade Switch II	0.008413967
+3	Think of the Soldiers	Rare	15346	Jamming II	0.008413967
+3	Think of the Soldiers	Rare	15351	Element Orb Prioritizer	0.008413967
+3	Think of the Soldiers	Rare	298	Gear Vest (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	301	Steam Belt (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	304	Bolt Hat (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	323	Smithy Gloves (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	325	Spring Shoes (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	327	Gold Gear Choker (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	331	Classic Medal (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	334	Iron Headband (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	340	Mechanized Greaves (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	343	Swordfighting Banner (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	349	Apprentice Vambraces (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	355	Chrome Scarf (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	361	Soldier Ring (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	365	Assault Stone (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	373	Camo Hood (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	376	Metal Nopon Mask (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	400	Silver Earrings (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	421	Katana Attachment (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	422	Ball Attachment (Legendary)	0.00210349169
+3	Think of the Soldiers	Rare	10027	Magnet Chip	0.00420698337
+3	Think of the Soldiers	Rare	15002	Critical Up II	0.0168279335
+3	Think of the Soldiers	Rare	15012	Ether Defense Up II	0.0168279335
+3	Think of the Soldiers	Rare	15017	Block Rate Up II	0.0168279335
+3	Think of the Soldiers	Rare	15022	Beast Hunter II	0.0168279335
+3	Think of the Soldiers	Rare	15032	Aerial Hunter II	0.0168279335
+3	Think of the Soldiers	Rare	15042	Humanoid Hunter II	0.0168279335
+3	Think of the Soldiers	Rare	15057	Blade Combo Boost II	0.0168279335
+3	Think of the Soldiers	Rare	15068	Ambush Boost II	0.0168279335
+3	Think of the Soldiers	Rare	15078	Aggro Attack Up II	0.0168279335
+3	Think of the Soldiers	Rare	15088	Outdoor Attack Up II	0.0168279335
+3	Think of the Soldiers	Rare	15155	Swift Evasion II	0.0168279335
+3	Think of the Soldiers	Rare	15165	Endurance II	0.0168279335
+3	Think of the Soldiers	Rare	15175	Spike Defense II	0.0168279335
+3	Think of the Soldiers	Rare	15185	Topple Resist II	0.0168279335
+3	Think of the Soldiers	Rare	15195	Smash Resist II	0.0168279335
+3	Think of the Soldiers	Rare	15205	Knockback Resist II	0.0168279335
+3	Think of the Soldiers	Rare	15215	Shackle Blade Resist II	0.0168279335
+3	Think of the Soldiers	Rare	15225	Aggro Boost II	0.0168279335
+3	Think of the Soldiers	Rare	15235	Arts Aggro Boost II	0.0168279335
+3	Think of the Soldiers	Rare	15245	Movement Heal II	0.0168279335
+3	Think of the Soldiers	Rare	15255	Night Vision II	0.0168279335
+3	Think of the Soldiers	Rare	15265	Reflect Damage Up II	0.0168279335
+3	Think of the Soldiers	Rare	15280	Telepathy II	0.0168279335
+3	Think of the Soldiers	Rare	15290	Affinity MAX Barrier II	0.0168279335
+3	Think of the Soldiers	Rare	15300	Affinity MAX Evade II	0.0168279335
+3	Think of the Soldiers	Rare	15310	Shoulder to Shoulder II	0.0168279335
+3	Think of the Soldiers	Rare	15321	Specials Lv 1 Plus II	0.0168279335
+3	Think of the Soldiers	Rare	15326	Specials Lv 2 Plus II	0.0168279335
+3	Think of the Soldiers	Rare	15331	Specials Lv 3 Plus II	0.0168279335
+3	Think of the Soldiers	Rare	15336	Specials Lv 4 Plus II	0.0168279335
+3	Think of the Soldiers	Rare	15341	Affinity MAX Acc II	0.0168279335
+3	Think of the Soldiers	Rare	15350	Element Orb Ender	0.0168279335
+3	Think of the Soldiers	Rare	307	Rainbow Gloves (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	310	Shell Shoes (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	313	Nacre Choker (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	328	Garnet (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	337	Moon Cube (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	346	Spiked Pauldrons (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	358	White Belt (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	379	Silver Feather (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	382	Spirit Tree Ward (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	386	Promise Ring (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	391	Chivalric Medal (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	394	Gauntlet (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	423	Knuckle Attachment (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	427	Love Thread (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	435	Overclocking Bangle (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	437	Lavender Potpourri (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	439	Sage's Auspices (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	440	Incense of Calm (Legendary)	0.00420698337
+3	Think of the Soldiers	Rare	10015	Glass Chip	0.008413967
+3	Think of the Soldiers	Rare	10035	Pentagon Chip	0.008413967
+3	Think of the Soldiers	Rare	462	Night-vision Kit (Common)	0.00504838023
+3	Think of the Soldiers	Rare	570	Marble Cameo (Common)	0.00504838023
+3	Think of the Soldiers	Rare	463	Night-vision Kit (Rare)	0.00504838023
+3	Think of the Soldiers	Rare	571	Marble Cameo (Rare)	0.00504838023
+3	Think of the Soldiers	Rare	464	Night-vision Kit (Legendary)	0.00504838023
+3	Think of the Soldiers	Rare	572	Marble Cameo (Legendary)	0.00504838023
+3	Think of the Soldiers	Legendary	15002	Critical Up II	0.01642036
+3	Think of the Soldiers	Legendary	15012	Ether Defense Up II	0.01642036
+3	Think of the Soldiers	Legendary	15017	Block Rate Up II	0.01642036
+3	Think of the Soldiers	Legendary	15022	Beast Hunter II	0.01642036
+3	Think of the Soldiers	Legendary	15032	Aerial Hunter II	0.01642036
+3	Think of the Soldiers	Legendary	15042	Humanoid Hunter II	0.01642036
+3	Think of the Soldiers	Legendary	15057	Blade Combo Boost II	0.01642036
+3	Think of the Soldiers	Legendary	15068	Ambush Boost II	0.01642036
+3	Think of the Soldiers	Legendary	15078	Aggro Attack Up II	0.01642036
+3	Think of the Soldiers	Legendary	15088	Outdoor Attack Up II	0.01642036
+3	Think of the Soldiers	Legendary	15155	Swift Evasion II	0.01642036
+3	Think of the Soldiers	Legendary	15165	Endurance II	0.01642036
+3	Think of the Soldiers	Legendary	15175	Spike Defense II	0.01642036
+3	Think of the Soldiers	Legendary	15185	Topple Resist II	0.01642036
+3	Think of the Soldiers	Legendary	15195	Smash Resist II	0.01642036
+3	Think of the Soldiers	Legendary	15205	Knockback Resist II	0.01642036
+3	Think of the Soldiers	Legendary	15215	Shackle Blade Resist II	0.01642036
+3	Think of the Soldiers	Legendary	15225	Aggro Boost II	0.01642036
+3	Think of the Soldiers	Legendary	15235	Arts Aggro Boost II	0.01642036
+3	Think of the Soldiers	Legendary	15245	Movement Heal II	0.01642036
+3	Think of the Soldiers	Legendary	15255	Night Vision II	0.01642036
+3	Think of the Soldiers	Legendary	15265	Reflect Damage Up II	0.01642036
+3	Think of the Soldiers	Legendary	15280	Telepathy II	0.01642036
+3	Think of the Soldiers	Legendary	15290	Affinity MAX Barrier II	0.01642036
+3	Think of the Soldiers	Legendary	15300	Affinity MAX Evade II	0.01642036
+3	Think of the Soldiers	Legendary	15310	Shoulder to Shoulder II	0.01642036
+3	Think of the Soldiers	Legendary	15321	Specials Lv 1 Plus II	0.01642036
+3	Think of the Soldiers	Legendary	15326	Specials Lv 2 Plus II	0.01642036
+3	Think of the Soldiers	Legendary	15331	Specials Lv 3 Plus II	0.01642036
+3	Think of the Soldiers	Legendary	15336	Specials Lv 4 Plus II	0.01642036
+3	Think of the Soldiers	Legendary	15341	Affinity MAX Acc II	0.01642036
+3	Think of the Soldiers	Legendary	15350	Element Orb Ender	0.01642036
+3	Think of the Soldiers	Legendary	307	Rainbow Gloves (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	310	Shell Shoes (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	313	Nacre Choker (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	328	Garnet (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	337	Moon Cube (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	346	Spiked Pauldrons (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	358	White Belt (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	379	Silver Feather (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	382	Spirit Tree Ward (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	386	Promise Ring (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	391	Chivalric Medal (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	394	Gauntlet (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	423	Knuckle Attachment (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	427	Love Thread (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	435	Overclocking Bangle (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	437	Lavender Potpourri (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	439	Sage's Auspices (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	440	Incense of Calm (Legendary)	0.00410509
+3	Think of the Soldiers	Legendary	10015	Glass Chip	0.00821018
+3	Think of the Soldiers	Legendary	10035	Pentagon Chip	0.00821018
+3	Think of the Soldiers	Legendary	462	Night-vision Kit (Common)	0.00492610829
+3	Think of the Soldiers	Legendary	570	Marble Cameo (Common)	0.00492610829
+3	Think of the Soldiers	Legendary	463	Night-vision Kit (Rare)	0.00492610829
+3	Think of the Soldiers	Legendary	571	Marble Cameo (Rare)	0.00492610829
+3	Think of the Soldiers	Legendary	464	Night-vision Kit (Legendary)	0.00492610829
+3	Think of the Soldiers	Legendary	572	Marble Cameo (Legendary)	0.00492610829
+3	Think of the Soldiers	Legendary	15008	Physical Defense Up III	0.00821018
+3	Think of the Soldiers	Legendary	15028	Insect Hunter III	0.00821018
+3	Think of the Soldiers	Legendary	15038	Aquatic Hunter III	0.00821018
+3	Think of the Soldiers	Legendary	15048	Machine Hunter III	0.00821018
+3	Think of the Soldiers	Legendary	15053	Titan Hunter III	0.00821018
+3	Think of the Soldiers	Legendary	15064	Fusion Combo Up III	0.00821018
+3	Think of the Soldiers	Legendary	15074	Reflect Immunity	0.00821018
+3	Think of the Soldiers	Legendary	15084	Indoor Attack Up III	0.00821018
+3	Think of the Soldiers	Legendary	15094	Fire Def Up III	0.00821018
+3	Think of the Soldiers	Legendary	15099	Water Def Up III	0.00821018
+3	Think of the Soldiers	Legendary	15104	Earth Def Up III	0.00821018
+3	Think of the Soldiers	Legendary	15109	Wind Def Up III	0.00821018
+3	Think of the Soldiers	Legendary	15114	Electric Def Up III	0.00821018
+3	Think of the Soldiers	Legendary	15119	Ice Def Up III	0.00821018
+3	Think of the Soldiers	Legendary	15124	Dark Def Up III	0.00821018
+3	Think of the Soldiers	Legendary	15129	Light Def Up III	0.00821018
+3	Think of the Soldiers	Legendary	15151	Evasion Focus III	0.00821018
+3	Think of the Soldiers	Legendary	15161	Emergency Guard III	0.00821018
+3	Think of the Soldiers	Legendary	15171	HP Attack Boost III	0.00821018
+3	Think of the Soldiers	Legendary	15181	Break Resist III	0.00821018
+3	Think of the Soldiers	Legendary	15191	Launch Resist III	0.00821018
+3	Think of the Soldiers	Legendary	15201	Blowdown Resist III	0.00821018
+3	Think of the Soldiers	Legendary	15221	Auto-Attack Stealth III	0.00821018
+3	Think of the Soldiers	Legendary	15231	Arts Stealth III	0.00821018
+3	Think of the Soldiers	Legendary	15241	Arts Heal III	0.00821018
+3	Think of the Soldiers	Legendary	15251	Damage Heal III	0.00821018
+3	Think of the Soldiers	Legendary	15261	Sunlight Eye III	0.00821018
+3	Think of the Soldiers	Legendary	15271	Range Boost Up III	0.00821018
+3	Think of the Soldiers	Legendary	15276	Opening Art III	0.00821018
+3	Think of the Soldiers	Legendary	15286	Helping Hand III	0.00821018
+3	Think of the Soldiers	Legendary	15296	Affinity MAX Atk III	0.00821018
+3	Think of the Soldiers	Legendary	15306	Hunter's Chemistry III	0.00821018
+3	Think of the Soldiers	Legendary	15316	Fast Blade Switch III	0.00821018
+3	Think of the Soldiers	Legendary	15347	Jamming III	0.00821018
+3	Think of the Soldiers	Legendary	299	Jade Vest (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	302	Silver Belt (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	305	Pearl Hat (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	332	Modern Medal (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	335	Ice Headband (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	341	Crystal Greaves (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	344	Goddess Banner (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	353	Eraser Orb (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	356	Unicorn Scarf (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	362	Berserk Ring (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	374	Skeleton Hood (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	377	Gold Nopon Mask (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	388	Affection Necklace (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	398	Leader's Eyepatch (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	404	Burst Symbol (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	407	Infinity Symbol (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	410	Ring Attachment (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	414	Whip Attachment (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	415	Edge Attachment (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	425	Cheer Treat (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	430	Healing Amulet (Legendary)	0.002052545
+3	Think of the Soldiers	Legendary	10031	Motor Chip	0.00410509
+3	Think of the Soldiers	Legendary	10043	Ureilite Chip	0.00410509
+3	Think of the Soldiers	Legendary	486	Terror Masque (Common)	0.00574712642
+3	Think of the Soldiers	Legendary	492	Envoy's Footgear (Common)	0.00287356321
+3	Think of the Soldiers	Legendary	487	Terror Masque (Rare)	0.00287356321
+3	Think of the Soldiers	Legendary	493	Envoy's Footgear (Rare)	0.00287356321
+3	Think of the Soldiers	Legendary	488	Terror Masque (Legendary)	0.00287356321
+3	Think of the Soldiers	Legendary	494	Envoy's Footgear (Legendary)	0.00287356321
+3	Think of the Soldiers	Legendary	25405	Weaponry for Noobs	0.00410509
+4	Bewitching Dance	Common	15007	Physical Defense Up II	0.0135135138
+4	Bewitching Dance	Common	15027	Insect Hunter II	0.0135135138
+4	Bewitching Dance	Common	15037	Aquatic Hunter II	0.0135135138
+4	Bewitching Dance	Common	15047	Machine Hunter II	0.0135135138
+4	Bewitching Dance	Common	15052	Titan Hunter II	0.0135135138
+4	Bewitching Dance	Common	15063	Fusion Combo Up II	0.0135135138
+4	Bewitching Dance	Common	15073	Reflect Immunity	0.0135135138
+4	Bewitching Dance	Common	15083	Indoor Attack Up II	0.0135135138
+4	Bewitching Dance	Common	15093	Fire Def Up II	0.0135135138
+4	Bewitching Dance	Common	15098	Water Def Up II	0.0135135138
+4	Bewitching Dance	Common	15103	Earth Def Up II	0.0135135138
+4	Bewitching Dance	Common	15108	Wind Def Up II	0.0135135138
+4	Bewitching Dance	Common	15113	Electric Def Up II	0.0135135138
+4	Bewitching Dance	Common	15118	Ice Def Up II	0.0135135138
+4	Bewitching Dance	Common	15123	Dark Def Up II	0.0135135138
+4	Bewitching Dance	Common	15128	Light Def Up II	0.0135135138
+4	Bewitching Dance	Common	15150	Evasion Focus II	0.0135135138
+4	Bewitching Dance	Common	15160	Emergency Guard II	0.0135135138
+4	Bewitching Dance	Common	15170	HP Attack Boost II	0.0135135138
+4	Bewitching Dance	Common	15180	Break Resist II	0.0135135138
+4	Bewitching Dance	Common	15190	Launch Resist II	0.0135135138
+4	Bewitching Dance	Common	15200	Blowdown Resist II	0.0135135138
+4	Bewitching Dance	Common	15220	Auto-Attack Stealth II	0.0135135138
+4	Bewitching Dance	Common	15230	Arts Stealth II	0.0135135138
+4	Bewitching Dance	Common	15240	Arts Heal II	0.0135135138
+4	Bewitching Dance	Common	15250	Damage Heal II	0.0135135138
+4	Bewitching Dance	Common	15260	Sunlight Eye II	0.0135135138
+4	Bewitching Dance	Common	15270	Range Boost Up II	0.0135135138
+4	Bewitching Dance	Common	15275	Opening Art II	0.0135135138
+4	Bewitching Dance	Common	15285	Helping Hand II	0.0135135138
+4	Bewitching Dance	Common	15295	Affinity MAX Atk II	0.0135135138
+4	Bewitching Dance	Common	15305	Hunter's Chemistry II	0.0135135138
+4	Bewitching Dance	Common	15315	Fast Blade Switch II	0.0135135138
+4	Bewitching Dance	Common	15346	Jamming II	0.0135135138
+4	Bewitching Dance	Common	15351	Element Orb Prioritizer	0.0135135138
+4	Bewitching Dance	Common	298	Gear Vest (Legendary)	0.0270270277
+4	Bewitching Dance	Common	301	Steam Belt (Legendary)	0.0270270277
+4	Bewitching Dance	Common	304	Bolt Hat (Legendary)	0.0270270277
+4	Bewitching Dance	Common	323	Smithy Gloves (Legendary)	0.0270270277
+4	Bewitching Dance	Common	325	Spring Shoes (Legendary)	0.0270270277
+4	Bewitching Dance	Common	327	Gold Gear Choker (Legendary)	0.0270270277
+4	Bewitching Dance	Common	331	Classic Medal (Legendary)	0.0270270277
+4	Bewitching Dance	Common	334	Iron Headband (Legendary)	0.0270270277
+4	Bewitching Dance	Common	340	Mechanized Greaves (Legendary)	0.0270270277
+4	Bewitching Dance	Common	343	Swordfighting Banner (Legendary)	0.0270270277
+4	Bewitching Dance	Common	349	Apprentice Vambraces (Legendary)	0.0270270277
+4	Bewitching Dance	Common	355	Chrome Scarf (Legendary)	0.0270270277
+4	Bewitching Dance	Common	361	Soldier Ring (Legendary)	0.0270270277
+4	Bewitching Dance	Common	365	Assault Stone (Legendary)	0.0270270277
+4	Bewitching Dance	Common	373	Camo Hood (Legendary)	0.0270270277
+4	Bewitching Dance	Common	376	Metal Nopon Mask (Legendary)	0.0270270277
+4	Bewitching Dance	Common	400	Silver Earrings (Legendary)	0.0270270277
+4	Bewitching Dance	Common	421	Katana Attachment (Legendary)	0.0270270277
+4	Bewitching Dance	Common	422	Ball Attachment (Legendary)	0.0270270277
+4	Bewitching Dance	Common	10027	Magnet Chip	0.0135135138
+4	Bewitching Dance	Rare	15007	Physical Defense Up II	0.00409836043
+4	Bewitching Dance	Rare	15027	Insect Hunter II	0.00409836043
+4	Bewitching Dance	Rare	15037	Aquatic Hunter II	0.00409836043
+4	Bewitching Dance	Rare	15047	Machine Hunter II	0.00409836043
+4	Bewitching Dance	Rare	15052	Titan Hunter II	0.00409836043
+4	Bewitching Dance	Rare	15063	Fusion Combo Up II	0.00409836043
+4	Bewitching Dance	Rare	15073	Reflect Immunity	0.00409836043
+4	Bewitching Dance	Rare	15083	Indoor Attack Up II	0.00409836043
+4	Bewitching Dance	Rare	15093	Fire Def Up II	0.00409836043
+4	Bewitching Dance	Rare	15098	Water Def Up II	0.00409836043
+4	Bewitching Dance	Rare	15103	Earth Def Up II	0.00409836043
+4	Bewitching Dance	Rare	15108	Wind Def Up II	0.00409836043
+4	Bewitching Dance	Rare	15113	Electric Def Up II	0.00409836043
+4	Bewitching Dance	Rare	15118	Ice Def Up II	0.00409836043
+4	Bewitching Dance	Rare	15123	Dark Def Up II	0.00409836043
+4	Bewitching Dance	Rare	15128	Light Def Up II	0.00409836043
+4	Bewitching Dance	Rare	15150	Evasion Focus II	0.00409836043
+4	Bewitching Dance	Rare	15160	Emergency Guard II	0.00409836043
+4	Bewitching Dance	Rare	15170	HP Attack Boost II	0.00409836043
+4	Bewitching Dance	Rare	15180	Break Resist II	0.00409836043
+4	Bewitching Dance	Rare	15190	Launch Resist II	0.00409836043
+4	Bewitching Dance	Rare	15200	Blowdown Resist II	0.00409836043
+4	Bewitching Dance	Rare	15220	Auto-Attack Stealth II	0.00409836043
+4	Bewitching Dance	Rare	15230	Arts Stealth II	0.00409836043
+4	Bewitching Dance	Rare	15240	Arts Heal II	0.00409836043
+4	Bewitching Dance	Rare	15250	Damage Heal II	0.00409836043
+4	Bewitching Dance	Rare	15260	Sunlight Eye II	0.00409836043
+4	Bewitching Dance	Rare	15270	Range Boost Up II	0.00409836043
+4	Bewitching Dance	Rare	15275	Opening Art II	0.00409836043
+4	Bewitching Dance	Rare	15285	Helping Hand II	0.00409836043
+4	Bewitching Dance	Rare	15295	Affinity MAX Atk II	0.00409836043
+4	Bewitching Dance	Rare	15305	Hunter's Chemistry II	0.00409836043
+4	Bewitching Dance	Rare	15315	Fast Blade Switch II	0.00409836043
+4	Bewitching Dance	Rare	15346	Jamming II	0.00409836043
+4	Bewitching Dance	Rare	15351	Element Orb Prioritizer	0.00409836043
+4	Bewitching Dance	Rare	298	Gear Vest (Legendary)	0.008196721
+4	Bewitching Dance	Rare	301	Steam Belt (Legendary)	0.008196721
+4	Bewitching Dance	Rare	304	Bolt Hat (Legendary)	0.008196721
+4	Bewitching Dance	Rare	323	Smithy Gloves (Legendary)	0.008196721
+4	Bewitching Dance	Rare	325	Spring Shoes (Legendary)	0.008196721
+4	Bewitching Dance	Rare	327	Gold Gear Choker (Legendary)	0.008196721
+4	Bewitching Dance	Rare	331	Classic Medal (Legendary)	0.008196721
+4	Bewitching Dance	Rare	334	Iron Headband (Legendary)	0.008196721
+4	Bewitching Dance	Rare	340	Mechanized Greaves (Legendary)	0.008196721
+4	Bewitching Dance	Rare	343	Swordfighting Banner (Legendary)	0.008196721
+4	Bewitching Dance	Rare	349	Apprentice Vambraces (Legendary)	0.008196721
+4	Bewitching Dance	Rare	355	Chrome Scarf (Legendary)	0.008196721
+4	Bewitching Dance	Rare	361	Soldier Ring (Legendary)	0.008196721
+4	Bewitching Dance	Rare	365	Assault Stone (Legendary)	0.008196721
+4	Bewitching Dance	Rare	373	Camo Hood (Legendary)	0.008196721
+4	Bewitching Dance	Rare	376	Metal Nopon Mask (Legendary)	0.008196721
+4	Bewitching Dance	Rare	400	Silver Earrings (Legendary)	0.008196721
+4	Bewitching Dance	Rare	421	Katana Attachment (Legendary)	0.008196721
+4	Bewitching Dance	Rare	422	Ball Attachment (Legendary)	0.008196721
+4	Bewitching Dance	Rare	10027	Magnet Chip	0.00409836043
+4	Bewitching Dance	Rare	15002	Critical Up II	0.008196721
+4	Bewitching Dance	Rare	15012	Ether Defense Up II	0.008196721
+4	Bewitching Dance	Rare	15017	Block Rate Up II	0.008196721
+4	Bewitching Dance	Rare	15022	Beast Hunter II	0.008196721
+4	Bewitching Dance	Rare	15032	Aerial Hunter II	0.008196721
+4	Bewitching Dance	Rare	15042	Humanoid Hunter II	0.008196721
+4	Bewitching Dance	Rare	15057	Blade Combo Boost II	0.008196721
+4	Bewitching Dance	Rare	15068	Ambush Boost II	0.008196721
+4	Bewitching Dance	Rare	15078	Aggro Attack Up II	0.008196721
+4	Bewitching Dance	Rare	15088	Outdoor Attack Up II	0.008196721
+4	Bewitching Dance	Rare	15155	Swift Evasion II	0.008196721
+4	Bewitching Dance	Rare	15165	Endurance II	0.008196721
+4	Bewitching Dance	Rare	15175	Spike Defense II	0.008196721
+4	Bewitching Dance	Rare	15185	Topple Resist II	0.008196721
+4	Bewitching Dance	Rare	15195	Smash Resist II	0.008196721
+4	Bewitching Dance	Rare	15205	Knockback Resist II	0.008196721
+4	Bewitching Dance	Rare	15215	Shackle Blade Resist II	0.008196721
+4	Bewitching Dance	Rare	15225	Aggro Boost II	0.008196721
+4	Bewitching Dance	Rare	15235	Arts Aggro Boost II	0.008196721
+4	Bewitching Dance	Rare	15245	Movement Heal II	0.008196721
+4	Bewitching Dance	Rare	15255	Night Vision II	0.008196721
+4	Bewitching Dance	Rare	15265	Reflect Damage Up II	0.008196721
+4	Bewitching Dance	Rare	15280	Telepathy II	0.008196721
+4	Bewitching Dance	Rare	15290	Affinity MAX Barrier II	0.008196721
+4	Bewitching Dance	Rare	15300	Affinity MAX Evade II	0.008196721
+4	Bewitching Dance	Rare	15310	Shoulder to Shoulder II	0.008196721
+4	Bewitching Dance	Rare	15321	Specials Lv 1 Plus II	0.008196721
+4	Bewitching Dance	Rare	15326	Specials Lv 2 Plus II	0.008196721
+4	Bewitching Dance	Rare	15331	Specials Lv 3 Plus II	0.008196721
+4	Bewitching Dance	Rare	15336	Specials Lv 4 Plus II	0.008196721
+4	Bewitching Dance	Rare	15341	Affinity MAX Acc II	0.008196721
+4	Bewitching Dance	Rare	15350	Element Orb Ender	0.008196721
+4	Bewitching Dance	Rare	307	Rainbow Gloves (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	310	Shell Shoes (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	313	Nacre Choker (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	328	Garnet (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	337	Moon Cube (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	346	Spiked Pauldrons (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	358	White Belt (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	379	Silver Feather (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	382	Spirit Tree Ward (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	386	Promise Ring (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	391	Chivalric Medal (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	394	Gauntlet (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	423	Knuckle Attachment (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	427	Love Thread (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	435	Overclocking Bangle (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	437	Lavender Potpourri (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	439	Sage's Auspices (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	440	Incense of Calm (Legendary)	0.0163934417
+4	Bewitching Dance	Rare	10015	Glass Chip	0.008196721
+4	Bewitching Dance	Rare	10035	Pentagon Chip	0.008196721
+4	Bewitching Dance	Rare	462	Night-vision Kit (Common)	0.0204918031
+4	Bewitching Dance	Rare	570	Marble Cameo (Common)	0.0204918031
+4	Bewitching Dance	Rare	463	Night-vision Kit (Rare)	0.0204918031
+4	Bewitching Dance	Rare	571	Marble Cameo (Rare)	0.0204918031
+4	Bewitching Dance	Rare	464	Night-vision Kit (Legendary)	0.0204918031
+4	Bewitching Dance	Rare	572	Marble Cameo (Legendary)	0.0204918031
+4	Bewitching Dance	Legendary	15002	Critical Up II	0.007380074
+4	Bewitching Dance	Legendary	15012	Ether Defense Up II	0.007380074
+4	Bewitching Dance	Legendary	15017	Block Rate Up II	0.007380074
+4	Bewitching Dance	Legendary	15022	Beast Hunter II	0.007380074
+4	Bewitching Dance	Legendary	15032	Aerial Hunter II	0.007380074
+4	Bewitching Dance	Legendary	15042	Humanoid Hunter II	0.007380074
+4	Bewitching Dance	Legendary	15057	Blade Combo Boost II	0.007380074
+4	Bewitching Dance	Legendary	15068	Ambush Boost II	0.007380074
+4	Bewitching Dance	Legendary	15078	Aggro Attack Up II	0.007380074
+4	Bewitching Dance	Legendary	15088	Outdoor Attack Up II	0.007380074
+4	Bewitching Dance	Legendary	15155	Swift Evasion II	0.007380074
+4	Bewitching Dance	Legendary	15165	Endurance II	0.007380074
+4	Bewitching Dance	Legendary	15175	Spike Defense II	0.007380074
+4	Bewitching Dance	Legendary	15185	Topple Resist II	0.007380074
+4	Bewitching Dance	Legendary	15195	Smash Resist II	0.007380074
+4	Bewitching Dance	Legendary	15205	Knockback Resist II	0.007380074
+4	Bewitching Dance	Legendary	15215	Shackle Blade Resist II	0.007380074
+4	Bewitching Dance	Legendary	15225	Aggro Boost II	0.007380074
+4	Bewitching Dance	Legendary	15235	Arts Aggro Boost II	0.007380074
+4	Bewitching Dance	Legendary	15245	Movement Heal II	0.007380074
+4	Bewitching Dance	Legendary	15255	Night Vision II	0.007380074
+4	Bewitching Dance	Legendary	15265	Reflect Damage Up II	0.007380074
+4	Bewitching Dance	Legendary	15280	Telepathy II	0.007380074
+4	Bewitching Dance	Legendary	15290	Affinity MAX Barrier II	0.007380074
+4	Bewitching Dance	Legendary	15300	Affinity MAX Evade II	0.007380074
+4	Bewitching Dance	Legendary	15310	Shoulder to Shoulder II	0.007380074
+4	Bewitching Dance	Legendary	15321	Specials Lv 1 Plus II	0.007380074
+4	Bewitching Dance	Legendary	15326	Specials Lv 2 Plus II	0.007380074
+4	Bewitching Dance	Legendary	15331	Specials Lv 3 Plus II	0.007380074
+4	Bewitching Dance	Legendary	15336	Specials Lv 4 Plus II	0.007380074
+4	Bewitching Dance	Legendary	15341	Affinity MAX Acc II	0.007380074
+4	Bewitching Dance	Legendary	15350	Element Orb Ender	0.007380074
+4	Bewitching Dance	Legendary	307	Rainbow Gloves (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	310	Shell Shoes (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	313	Nacre Choker (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	328	Garnet (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	337	Moon Cube (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	346	Spiked Pauldrons (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	358	White Belt (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	379	Silver Feather (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	382	Spirit Tree Ward (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	386	Promise Ring (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	391	Chivalric Medal (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	394	Gauntlet (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	423	Knuckle Attachment (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	427	Love Thread (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	435	Overclocking Bangle (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	437	Lavender Potpourri (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	439	Sage's Auspices (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	440	Incense of Calm (Legendary)	0.0147601478
+4	Bewitching Dance	Legendary	10015	Glass Chip	0.007380074
+4	Bewitching Dance	Legendary	10035	Pentagon Chip	0.007380074
+4	Bewitching Dance	Legendary	462	Night-vision Kit (Common)	0.0184501838
+4	Bewitching Dance	Legendary	570	Marble Cameo (Common)	0.0184501838
+4	Bewitching Dance	Legendary	463	Night-vision Kit (Rare)	0.0184501838
+4	Bewitching Dance	Legendary	571	Marble Cameo (Rare)	0.0184501838
+4	Bewitching Dance	Legendary	464	Night-vision Kit (Legendary)	0.0184501838
+4	Bewitching Dance	Legendary	572	Marble Cameo (Legendary)	0.0184501838
+4	Bewitching Dance	Legendary	15008	Physical Defense Up III	0.003690037
+4	Bewitching Dance	Legendary	15028	Insect Hunter III	0.003690037
+4	Bewitching Dance	Legendary	15038	Aquatic Hunter III	0.003690037
+4	Bewitching Dance	Legendary	15048	Machine Hunter III	0.003690037
+4	Bewitching Dance	Legendary	15053	Titan Hunter III	0.003690037
+4	Bewitching Dance	Legendary	15064	Fusion Combo Up III	0.003690037
+4	Bewitching Dance	Legendary	15074	Reflect Immunity	0.003690037
+4	Bewitching Dance	Legendary	15084	Indoor Attack Up III	0.003690037
+4	Bewitching Dance	Legendary	15094	Fire Def Up III	0.003690037
+4	Bewitching Dance	Legendary	15099	Water Def Up III	0.003690037
+4	Bewitching Dance	Legendary	15104	Earth Def Up III	0.003690037
+4	Bewitching Dance	Legendary	15109	Wind Def Up III	0.003690037
+4	Bewitching Dance	Legendary	15114	Electric Def Up III	0.003690037
+4	Bewitching Dance	Legendary	15119	Ice Def Up III	0.003690037
+4	Bewitching Dance	Legendary	15124	Dark Def Up III	0.003690037
+4	Bewitching Dance	Legendary	15129	Light Def Up III	0.003690037
+4	Bewitching Dance	Legendary	15151	Evasion Focus III	0.003690037
+4	Bewitching Dance	Legendary	15161	Emergency Guard III	0.003690037
+4	Bewitching Dance	Legendary	15171	HP Attack Boost III	0.003690037
+4	Bewitching Dance	Legendary	15181	Break Resist III	0.003690037
+4	Bewitching Dance	Legendary	15191	Launch Resist III	0.003690037
+4	Bewitching Dance	Legendary	15201	Blowdown Resist III	0.003690037
+4	Bewitching Dance	Legendary	15221	Auto-Attack Stealth III	0.003690037
+4	Bewitching Dance	Legendary	15231	Arts Stealth III	0.003690037
+4	Bewitching Dance	Legendary	15241	Arts Heal III	0.003690037
+4	Bewitching Dance	Legendary	15251	Damage Heal III	0.003690037
+4	Bewitching Dance	Legendary	15261	Sunlight Eye III	0.003690037
+4	Bewitching Dance	Legendary	15271	Range Boost Up III	0.003690037
+4	Bewitching Dance	Legendary	15276	Opening Art III	0.003690037
+4	Bewitching Dance	Legendary	15286	Helping Hand III	0.003690037
+4	Bewitching Dance	Legendary	15296	Affinity MAX Atk III	0.003690037
+4	Bewitching Dance	Legendary	15306	Hunter's Chemistry III	0.003690037
+4	Bewitching Dance	Legendary	15316	Fast Blade Switch III	0.003690037
+4	Bewitching Dance	Legendary	15347	Jamming III	0.003690037
+4	Bewitching Dance	Legendary	299	Jade Vest (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	302	Silver Belt (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	305	Pearl Hat (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	332	Modern Medal (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	335	Ice Headband (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	341	Crystal Greaves (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	344	Goddess Banner (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	353	Eraser Orb (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	356	Unicorn Scarf (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	362	Berserk Ring (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	374	Skeleton Hood (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	377	Gold Nopon Mask (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	388	Affection Necklace (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	398	Leader's Eyepatch (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	404	Burst Symbol (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	407	Infinity Symbol (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	410	Ring Attachment (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	414	Whip Attachment (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	415	Edge Attachment (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	425	Cheer Treat (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	430	Healing Amulet (Legendary)	0.007380074
+4	Bewitching Dance	Legendary	10031	Motor Chip	0.003690037
+4	Bewitching Dance	Legendary	10043	Ureilite Chip	0.003690037
+4	Bewitching Dance	Legendary	486	Terror Masque (Common)	0.0110701108
+4	Bewitching Dance	Legendary	492	Envoy's Footgear (Common)	0.0221402217
+4	Bewitching Dance	Legendary	487	Terror Masque (Rare)	0.0110701108
+4	Bewitching Dance	Legendary	493	Envoy's Footgear (Rare)	0.0110701108
+4	Bewitching Dance	Legendary	488	Terror Masque (Legendary)	0.0110701108
+4	Bewitching Dance	Legendary	494	Envoy's Footgear (Legendary)	0.0110701108
+4	Bewitching Dance	Legendary	25405	Weaponry for Noobs	0.007380074
+5	Darkening Skies	Common	15030	Insect Hunter V	0.0109289614
+5	Darkening Skies	Common	15040	Aquatic Hunter V	0.0109289614
+5	Darkening Skies	Common	15025	Beast Hunter V	0.0109289614
+5	Darkening Skies	Common	15035	Aerial Hunter V	0.0109289614
+5	Darkening Skies	Common	15045	Humanoid Hunter V	0.0109289614
+5	Darkening Skies	Common	15055	Titan Hunter V	0.0109289614
+5	Darkening Skies	Common	15050	Machine Hunter V	0.0109289614
+5	Darkening Skies	Common	15071	Ambush Boost V	0.0109289614
+5	Darkening Skies	Common	15081	Aggro Attack Up V	0.0109289614
+5	Darkening Skies	Common	15086	Indoor Attack Up V	0.0109289614
+5	Darkening Skies	Common	15096	Fire Def Up V	0.0109289614
+5	Darkening Skies	Common	15101	Water Def Up V	0.0109289614
+5	Darkening Skies	Common	15106	Earth Def Up V	0.0109289614
+5	Darkening Skies	Common	15111	Wind Def Up V	0.0109289614
+5	Darkening Skies	Common	15116	Electric Def Up V	0.0109289614
+5	Darkening Skies	Common	15121	Ice Def Up V	0.0109289614
+5	Darkening Skies	Common	15126	Dark Def Up V	0.0109289614
+5	Darkening Skies	Common	15131	Light Def Up V	0.0109289614
+5	Darkening Skies	Common	15163	Emergency Guard V	0.0109289614
+5	Darkening Skies	Common	15173	HP Attack Boost V	0.0109289614
+5	Darkening Skies	Common	15178	Spike Defense V	0.0109289614
+5	Darkening Skies	Common	15188	Topple Resist V	0.0109289614
+5	Darkening Skies	Common	15193	Launch Resist V	0.0109289614
+5	Darkening Skies	Common	15203	Blowdown Resist V	0.0109289614
+5	Darkening Skies	Common	15218	Shackle Blade Resist V	0.0109289614
+5	Darkening Skies	Common	15223	Auto-Attack Stealth V	0.0109289614
+5	Darkening Skies	Common	15228	Aggro Boost V	0.0109289614
+5	Darkening Skies	Common	15243	Arts Heal V	0.0109289614
+5	Darkening Skies	Common	15258	Night Vision V	0.0109289614
+5	Darkening Skies	Common	15268	Reflect Damage Up V	0.0109289614
+5	Darkening Skies	Common	15278	Opening Art V	0.0109289614
+5	Darkening Skies	Common	15283	Telepathy V	0.0109289614
+5	Darkening Skies	Common	15293	Affinity MAX Barrier V	0.0109289614
+5	Darkening Skies	Common	15298	Affinity MAX Atk V	0.0109289614
+5	Darkening Skies	Common	15313	Shoulder to Shoulder V	0.0109289614
+5	Darkening Skies	Common	15324	Specials Lv 1 Plus V	0.0109289614
+5	Darkening Skies	Common	15329	Specials Lv 2 Plus V	0.0109289614
+5	Darkening Skies	Common	15349	Jamming V	0.0109289614
+5	Darkening Skies	Common	333	Avant-Garde Medal (Legendary)	0.0109289614
+5	Darkening Skies	Common	345	Ancient Banner (Legendary)	0.0109289614
+5	Darkening Skies	Common	354	Bloody Orb (Legendary)	0.0109289614
+5	Darkening Skies	Common	405	Critical Symbol (Legendary)	0.0109289614
+5	Darkening Skies	Common	116	Resurrection Symbol (Legendary)	0.0109289614
+5	Darkening Skies	Common	408	Sword Attachment (Legendary)	0.0109289614
+5	Darkening Skies	Common	409	Scimitar Attachment (Legendary)	0.0109289614
+5	Darkening Skies	Common	416	Scythe Attachment (Legendary)	0.0109289614
+5	Darkening Skies	Common	431	Rebirth Amulet (Legendary)	0.0109289614
+5	Darkening Skies	Common	432	Beta Scope (Legendary)	0.0109289614
+5	Darkening Skies	Common	10046	Howardite Chip	0.0218579229
+5	Darkening Skies	Common	10047	Aubrite Chip	0.0218579229
+5	Darkening Skies	Common	10050	Axion Chip	0.0218579229
+5	Darkening Skies	Common	10051	Mirror Matter Chip	0.0218579229
+5	Darkening Skies	Common	15364	Ambush Boost VI	0.0109289614
+5	Darkening Skies	Common	15383	Launch Resist VI	0.0163934417
+5	Darkening Skies	Common	15384	Smash Resist VI	0.0163934417
+5	Darkening Skies	Common	15385	Blowdown Resist VI	0.0163934417
+5	Darkening Skies	Common	15386	Knockback Resist VI	0.0163934417
+5	Darkening Skies	Common	15396	Reflect Damage Up VI	0.0163934417
+5	Darkening Skies	Common	15397	Opening Art VI	0.0163934417
+5	Darkening Skies	Common	528	War God Banner (Common)	0.0163934417
+5	Darkening Skies	Common	537	Demon Orb (Common)	0.0163934417
+5	Darkening Skies	Common	549	Violent Stone (Common)	0.0163934417
+5	Darkening Skies	Common	564	Gargantuan Feather (Common)	0.0163934417
+5	Darkening Skies	Common	579	Noise Dampener (Common)	0.0163934417
+5	Darkening Skies	Common	529	War God Banner (Rare)	0.0163934417
+5	Darkening Skies	Common	538	Demon Orb (Rare)	0.0163934417
+5	Darkening Skies	Common	550	Violent Stone (Rare)	0.0163934417
+5	Darkening Skies	Common	565	Gargantuan Feather (Rare)	0.0163934417
+5	Darkening Skies	Common	580	Noise Dampener (Rare)	0.0163934417
+5	Darkening Skies	Common	530	War God Banner (Legendary)	0.0163934417
+5	Darkening Skies	Common	539	Demon Orb (Legendary)	0.0163934417
+5	Darkening Skies	Common	551	Violent Stone (Legendary)	0.0163934417
+5	Darkening Skies	Common	566	Gargantuan Feather (Legendary)	0.0163934417
+5	Darkening Skies	Common	581	Noise Dampener (Legendary)	0.0163934417
+5	Darkening Skies	Common	488	Terror Masque (Legendary)	0.0163934417
+5	Darkening Skies	Common	494	Envoy's Footgear (Legendary)	0.0163934417
+5	Darkening Skies	Rare	15030	Insect Hunter V	0.00539083546
+5	Darkening Skies	Rare	15040	Aquatic Hunter V	0.00539083546
+5	Darkening Skies	Rare	15025	Beast Hunter V	0.00539083546
+5	Darkening Skies	Rare	15035	Aerial Hunter V	0.00539083546
+5	Darkening Skies	Rare	15045	Humanoid Hunter V	0.00539083546
+5	Darkening Skies	Rare	15055	Titan Hunter V	0.00539083546
+5	Darkening Skies	Rare	15050	Machine Hunter V	0.00539083546
+5	Darkening Skies	Rare	15071	Ambush Boost V	0.00539083546
+5	Darkening Skies	Rare	15081	Aggro Attack Up V	0.00539083546
+5	Darkening Skies	Rare	15086	Indoor Attack Up V	0.00539083546
+5	Darkening Skies	Rare	15096	Fire Def Up V	0.00539083546
+5	Darkening Skies	Rare	15101	Water Def Up V	0.00539083546
+5	Darkening Skies	Rare	15106	Earth Def Up V	0.00539083546
+5	Darkening Skies	Rare	15111	Wind Def Up V	0.00539083546
+5	Darkening Skies	Rare	15116	Electric Def Up V	0.00539083546
+5	Darkening Skies	Rare	15121	Ice Def Up V	0.00539083546
+5	Darkening Skies	Rare	15126	Dark Def Up V	0.00539083546
+5	Darkening Skies	Rare	15131	Light Def Up V	0.00539083546
+5	Darkening Skies	Rare	15163	Emergency Guard V	0.00539083546
+5	Darkening Skies	Rare	15173	HP Attack Boost V	0.00539083546
+5	Darkening Skies	Rare	15178	Spike Defense V	0.00539083546
+5	Darkening Skies	Rare	15188	Topple Resist V	0.00539083546
+5	Darkening Skies	Rare	15193	Launch Resist V	0.00539083546
+5	Darkening Skies	Rare	15203	Blowdown Resist V	0.00539083546
+5	Darkening Skies	Rare	15218	Shackle Blade Resist V	0.00539083546
+5	Darkening Skies	Rare	15223	Auto-Attack Stealth V	0.00539083546
+5	Darkening Skies	Rare	15228	Aggro Boost V	0.00539083546
+5	Darkening Skies	Rare	15243	Arts Heal V	0.00539083546
+5	Darkening Skies	Rare	15258	Night Vision V	0.00539083546
+5	Darkening Skies	Rare	15268	Reflect Damage Up V	0.00539083546
+5	Darkening Skies	Rare	15278	Opening Art V	0.00539083546
+5	Darkening Skies	Rare	15283	Telepathy V	0.00539083546
+5	Darkening Skies	Rare	15293	Affinity MAX Barrier V	0.00539083546
+5	Darkening Skies	Rare	15298	Affinity MAX Atk V	0.00539083546
+5	Darkening Skies	Rare	15313	Shoulder to Shoulder V	0.00539083546
+5	Darkening Skies	Rare	15324	Specials Lv 1 Plus V	0.00539083546
+5	Darkening Skies	Rare	15329	Specials Lv 2 Plus V	0.00539083546
+5	Darkening Skies	Rare	15349	Jamming V	0.00539083546
+5	Darkening Skies	Rare	333	Avant-Garde Medal (Legendary)	0.00539083546
+5	Darkening Skies	Rare	345	Ancient Banner (Legendary)	0.00539083546
+5	Darkening Skies	Rare	354	Bloody Orb (Legendary)	0.00539083546
+5	Darkening Skies	Rare	405	Critical Symbol (Legendary)	0.00539083546
+5	Darkening Skies	Rare	116	Resurrection Symbol (Legendary)	0.00539083546
+5	Darkening Skies	Rare	408	Sword Attachment (Legendary)	0.00539083546
+5	Darkening Skies	Rare	409	Scimitar Attachment (Legendary)	0.00539083546
+5	Darkening Skies	Rare	416	Scythe Attachment (Legendary)	0.00539083546
+5	Darkening Skies	Rare	431	Rebirth Amulet (Legendary)	0.00539083546
+5	Darkening Skies	Rare	432	Beta Scope (Legendary)	0.00539083546
+5	Darkening Skies	Rare	10046	Howardite Chip	0.0107816709
+5	Darkening Skies	Rare	10047	Aubrite Chip	0.0107816709
+5	Darkening Skies	Rare	10050	Axion Chip	0.0107816709
+5	Darkening Skies	Rare	10051	Mirror Matter Chip	0.0107816709
+5	Darkening Skies	Rare	15364	Ambush Boost VI	0.00539083546
+5	Darkening Skies	Rare	15383	Launch Resist VI	0.008086253
+5	Darkening Skies	Rare	15384	Smash Resist VI	0.008086253
+5	Darkening Skies	Rare	15385	Blowdown Resist VI	0.008086253
+5	Darkening Skies	Rare	15386	Knockback Resist VI	0.008086253
+5	Darkening Skies	Rare	15396	Reflect Damage Up VI	0.008086253
+5	Darkening Skies	Rare	15397	Opening Art VI	0.008086253
+5	Darkening Skies	Rare	528	War God Banner (Common)	0.008086253
+5	Darkening Skies	Rare	537	Demon Orb (Common)	0.008086253
+5	Darkening Skies	Rare	549	Violent Stone (Common)	0.008086253
+5	Darkening Skies	Rare	564	Gargantuan Feather (Common)	0.008086253
+5	Darkening Skies	Rare	579	Noise Dampener (Common)	0.008086253
+5	Darkening Skies	Rare	529	War God Banner (Rare)	0.008086253
+5	Darkening Skies	Rare	538	Demon Orb (Rare)	0.008086253
+5	Darkening Skies	Rare	550	Violent Stone (Rare)	0.008086253
+5	Darkening Skies	Rare	565	Gargantuan Feather (Rare)	0.008086253
+5	Darkening Skies	Rare	580	Noise Dampener (Rare)	0.008086253
+5	Darkening Skies	Rare	530	War God Banner (Legendary)	0.008086253
+5	Darkening Skies	Rare	539	Demon Orb (Legendary)	0.008086253
+5	Darkening Skies	Rare	551	Violent Stone (Legendary)	0.008086253
+5	Darkening Skies	Rare	566	Gargantuan Feather (Legendary)	0.008086253
+5	Darkening Skies	Rare	581	Noise Dampener (Legendary)	0.008086253
+5	Darkening Skies	Rare	488	Terror Masque (Legendary)	0.008086253
+5	Darkening Skies	Rare	494	Envoy's Footgear (Legendary)	0.008086253
+5	Darkening Skies	Rare	15010	Physical Defense Up V	0.00539083546
+5	Darkening Skies	Rare	15020	Block Rate Up V	0.00539083546
+5	Darkening Skies	Rare	15066	Fusion Combo Up V	0.00539083546
+5	Darkening Skies	Rare	15076	Reflect Immunity	0.00539083546
+5	Darkening Skies	Rare	15091	Outdoor Attack Up V	0.00539083546
+5	Darkening Skies	Rare	15153	Evasion Focus V	0.00539083546
+5	Darkening Skies	Rare	15183	Break Resist V	0.00539083546
+5	Darkening Skies	Rare	15198	Smash Resist V	0.00539083546
+5	Darkening Skies	Rare	15208	Knockback Resist V	0.00539083546
+5	Darkening Skies	Rare	15238	Arts Aggro Boost V	0.00539083546
+5	Darkening Skies	Rare	15263	Sunlight Eye V	0.00539083546
+5	Darkening Skies	Rare	15273	Range Boost Up V	0.00539083546
+5	Darkening Skies	Rare	15288	Helping Hand V	0.00539083546
+5	Darkening Skies	Rare	15308	Hunter's Chemistry V	0.00539083546
+5	Darkening Skies	Rare	15318	Fast Blade Switch V	0.00539083546
+5	Darkening Skies	Rare	15334	Specials Lv 3 Plus V	0.00539083546
+5	Darkening Skies	Rare	15339	Specials Lv 4 Plus V	0.00539083546
+5	Darkening Skies	Rare	15344	Affinity MAX Acc V	0.00539083546
+5	Darkening Skies	Rare	300	Titanium Vest (Legendary)	0.00539083546
+5	Darkening Skies	Rare	303	Ceramic Belt (Legendary)	0.00539083546
+5	Darkening Skies	Rare	306	Fiber Hat (Legendary)	0.00539083546
+5	Darkening Skies	Rare	309	Carbon Gloves (Legendary)	0.00539083546
+5	Darkening Skies	Rare	312	Ester Shoes (Legendary)	0.00539083546
+5	Darkening Skies	Rare	315	Comet Choker (Legendary)	0.00539083546
+5	Darkening Skies	Rare	336	Optical Headband (Legendary)	0.00539083546
+5	Darkening Skies	Rare	342	Graphite Greaves (Legendary)	0.00539083546
+5	Darkening Skies	Rare	348	Jet Pauldrons (Legendary)	0.00539083546
+5	Darkening Skies	Rare	351	Hero Vambraces (Legendary)	0.00539083546
+5	Darkening Skies	Rare	357	Quantum Scarf (Legendary)	0.00539083546
+5	Darkening Skies	Rare	383	World Tree Ward (Legendary)	0.00539083546
+5	Darkening Skies	Rare	389	Holy Necklace (Legendary)	0.00539083546
+5	Darkening Skies	Rare	393	Round Table Medal (Legendary)	0.00539083546
+5	Darkening Skies	Rare	396	Nano-Metal Gauntlet (Legendary)	0.00539083546
+5	Darkening Skies	Rare	399	Hi-Tech Eyepatch (Legendary)	0.00539083546
+5	Darkening Skies	Rare	10056	Positron Chip	0.0107816709
+5	Darkening Skies	Rare	15356	Beast Hunter VI	0.00539083546
+5	Darkening Skies	Rare	15357	Insect Hunter VI	0.00539083546
+5	Darkening Skies	Rare	15358	Aerial Hunter VI	0.0107816709
+5	Darkening Skies	Rare	15359	Aquatic Hunter VI	0.00539083546
+5	Darkening Skies	Rare	15360	Humanoid Hunter VI	0.00539083546
+5	Darkening Skies	Rare	15361	Machine Hunter VI	0.00539083546
+5	Darkening Skies	Rare	15362	Titan Hunter VI	0.00539083546
+5	Darkening Skies	Rare	15382	Topple Resist VI	0.00539083546
+5	Darkening Skies	Rare	15387	Auto-Attack Stealth VI	0.00539083546
+5	Darkening Skies	Rare	15388	Aggro Boost VI	0.00539083546
+5	Darkening Skies	Rare	15389	Arts Stealth VI	0.00539083546
+5	Darkening Skies	Rare	15390	Arts Aggro Boost VI	0.00539083546
+5	Darkening Skies	Rare	15394	Night Vision VI	0.00539083546
+5	Darkening Skies	Rare	15395	Sunlight Eye VI	0.00539083546
+5	Darkening Skies	Rare	15401	Specials Lv 1 Plus VI	0.00539083546
+5	Darkening Skies	Rare	15402	Specials Lv 2 Plus VI	0.00539083546
+5	Darkening Skies	Rare	15403	Specials Lv 3 Plus VI	0.00539083546
+5	Darkening Skies	Rare	15404	Specials Lv 4 Plus VI	0.00539083546
+5	Darkening Skies	Rare	465	Augmented Vision Kit (Common)	0.00539083546
+5	Darkening Skies	Rare	468	Charm Bangle (Common)	0.00539083546
+5	Darkening Skies	Rare	474	Seven-League Circlet (Common)	0.00539083546
+5	Darkening Skies	Rare	498	Twin Trunks Vest (Common)	0.00539083546
+5	Darkening Skies	Rare	507	Vivid Mitts (Common)	0.00539083546
+5	Darkening Skies	Rare	510	Dauntless Boots (Common)	0.00539083546
+5	Darkening Skies	Rare	513	Sunlight Choker (Common)	0.00539083546
+5	Darkening Skies	Rare	525	Staunch Boots (Common)	0.00539083546
+5	Darkening Skies	Rare	552	Enlightened Loincloth (Common)	0.00539083546
+5	Darkening Skies	Rare	555	Glamorous Swimsuit (Common)	0.00539083546
+5	Darkening Skies	Rare	558	Vanish Hood (Common)	0.00539083546
+5	Darkening Skies	Rare	561	Platinum Nopon Mask (Common)	0.00539083546
+5	Darkening Skies	Rare	573	Beatific Medal (Common)	0.00539083546
+5	Darkening Skies	Rare	466	Augmented Vision Kit (Rare)	0.00539083546
+5	Darkening Skies	Rare	469	Charm Bangle (Rare)	0.00539083546
+5	Darkening Skies	Rare	475	Seven-League Circlet (Rare)	0.00539083546
+5	Darkening Skies	Rare	499	Twin Trunks Vest (Rare)	0.00539083546
+5	Darkening Skies	Rare	508	Vivid Mitts (Rare)	0.00539083546
+5	Darkening Skies	Rare	511	Dauntless Boots (Rare)	0.00539083546
+5	Darkening Skies	Rare	514	Sunlight Choker (Rare)	0.00539083546
+5	Darkening Skies	Rare	526	Staunch Boots (Rare)	0.00539083546
+5	Darkening Skies	Rare	553	Enlightened Loincloth (Rare)	0.00539083546
+5	Darkening Skies	Rare	556	Glamorous Swimsuit (Rare)	0.00539083546
+5	Darkening Skies	Rare	559	Vanish Hood (Rare)	0.00539083546
+5	Darkening Skies	Rare	562	Platinum Nopon Mask (Rare)	0.00539083546
+5	Darkening Skies	Rare	574	Beatific Medal (Rare)	0.00539083546
+5	Darkening Skies	Rare	467	Augmented Vision Kit (Legendary)	0.00539083546
+5	Darkening Skies	Rare	470	Charm Bangle (Legendary)	0.00539083546
+5	Darkening Skies	Rare	476	Seven-League Circlet (Legendary)	0.00539083546
+5	Darkening Skies	Rare	500	Twin Trunks Vest (Legendary)	0.00539083546
+5	Darkening Skies	Rare	509	Vivid Mitts (Legendary)	0.00539083546
+5	Darkening Skies	Rare	512	Dauntless Boots (Legendary)	0.00539083546
+5	Darkening Skies	Rare	515	Sunlight Choker (Legendary)	0.00539083546
+5	Darkening Skies	Rare	527	Staunch Boots (Legendary)	0.00539083546
+5	Darkening Skies	Rare	554	Enlightened Loincloth (Legendary)	0.00539083546
+5	Darkening Skies	Rare	557	Glamorous Swimsuit (Legendary)	0.00539083546
+5	Darkening Skies	Rare	560	Vanish Hood (Legendary)	0.00539083546
+5	Darkening Skies	Rare	563	Platinum Nopon Mask (Legendary)	0.00539083546
+5	Darkening Skies	Rare	575	Beatific Medal (Legendary)	0.00539083546
+5	Darkening Skies	Legendary	15010	Physical Defense Up V	0.00657894742
+5	Darkening Skies	Legendary	15020	Block Rate Up V	0.00657894742
+5	Darkening Skies	Legendary	15066	Fusion Combo Up V	0.00657894742
+5	Darkening Skies	Legendary	15076	Reflect Immunity	0.00657894742
+5	Darkening Skies	Legendary	15091	Outdoor Attack Up V	0.00657894742
+5	Darkening Skies	Legendary	15153	Evasion Focus V	0.00657894742
+5	Darkening Skies	Legendary	15183	Break Resist V	0.00657894742
+5	Darkening Skies	Legendary	15198	Smash Resist V	0.00657894742
+5	Darkening Skies	Legendary	15208	Knockback Resist V	0.00657894742
+5	Darkening Skies	Legendary	15238	Arts Aggro Boost V	0.00657894742
+5	Darkening Skies	Legendary	15263	Sunlight Eye V	0.00657894742
+5	Darkening Skies	Legendary	15273	Range Boost Up V	0.00657894742
+5	Darkening Skies	Legendary	15288	Helping Hand V	0.00657894742
+5	Darkening Skies	Legendary	15308	Hunter's Chemistry V	0.00657894742
+5	Darkening Skies	Legendary	15318	Fast Blade Switch V	0.00657894742
+5	Darkening Skies	Legendary	15334	Specials Lv 3 Plus V	0.00657894742
+5	Darkening Skies	Legendary	15339	Specials Lv 4 Plus V	0.00657894742
+5	Darkening Skies	Legendary	15344	Affinity MAX Acc V	0.00657894742
+5	Darkening Skies	Legendary	300	Titanium Vest (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	303	Ceramic Belt (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	306	Fiber Hat (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	309	Carbon Gloves (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	312	Ester Shoes (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	315	Comet Choker (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	336	Optical Headband (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	342	Graphite Greaves (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	348	Jet Pauldrons (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	351	Hero Vambraces (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	357	Quantum Scarf (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	383	World Tree Ward (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	389	Holy Necklace (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	393	Round Table Medal (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	10056	Positron Chip	0.0131578948
+5	Darkening Skies	Legendary	15356	Beast Hunter VI	0.00657894742
+5	Darkening Skies	Legendary	15357	Insect Hunter VI	0.00657894742
+5	Darkening Skies	Legendary	15358	Aerial Hunter VI	0.00657894742
+5	Darkening Skies	Legendary	15359	Aquatic Hunter VI	0.00657894742
+5	Darkening Skies	Legendary	15360	Humanoid Hunter VI	0.00657894742
+5	Darkening Skies	Legendary	15361	Machine Hunter VI	0.00657894742
+5	Darkening Skies	Legendary	15362	Titan Hunter VI	0.00657894742
+5	Darkening Skies	Legendary	15382	Topple Resist VI	0.00657894742
+5	Darkening Skies	Legendary	15387	Auto-Attack Stealth VI	0.00657894742
+5	Darkening Skies	Legendary	15388	Aggro Boost VI	0.00657894742
+5	Darkening Skies	Legendary	15389	Arts Stealth VI	0.00657894742
+5	Darkening Skies	Legendary	15390	Arts Aggro Boost VI	0.00657894742
+5	Darkening Skies	Legendary	15394	Night Vision VI	0.00657894742
+5	Darkening Skies	Legendary	15395	Sunlight Eye VI	0.00657894742
+5	Darkening Skies	Legendary	15401	Specials Lv 1 Plus VI	0.00657894742
+5	Darkening Skies	Legendary	15402	Specials Lv 2 Plus VI	0.00657894742
+5	Darkening Skies	Legendary	15403	Specials Lv 3 Plus VI	0.00657894742
+5	Darkening Skies	Legendary	15404	Specials Lv 4 Plus VI	0.00657894742
+5	Darkening Skies	Legendary	465	Augmented Vision Kit (Common)	0.00657894742
+5	Darkening Skies	Legendary	468	Charm Bangle (Common)	0.00657894742
+5	Darkening Skies	Legendary	474	Seven-League Circlet (Common)	0.00657894742
+5	Darkening Skies	Legendary	498	Twin Trunks Vest (Common)	0.00657894742
+5	Darkening Skies	Legendary	507	Vivid Mitts (Common)	0.00657894742
+5	Darkening Skies	Legendary	510	Dauntless Boots (Common)	0.00657894742
+5	Darkening Skies	Legendary	513	Sunlight Choker (Common)	0.00657894742
+5	Darkening Skies	Legendary	525	Staunch Boots (Common)	0.00657894742
+5	Darkening Skies	Legendary	552	Enlightened Loincloth (Common)	0.00657894742
+5	Darkening Skies	Legendary	555	Glamorous Swimsuit (Common)	0.00657894742
+5	Darkening Skies	Legendary	558	Vanish Hood (Common)	0.00657894742
+5	Darkening Skies	Legendary	561	Platinum Nopon Mask (Common)	0.00657894742
+5	Darkening Skies	Legendary	573	Beatific Medal (Common)	0.00657894742
+5	Darkening Skies	Legendary	466	Augmented Vision Kit (Rare)	0.00657894742
+5	Darkening Skies	Legendary	469	Charm Bangle (Rare)	0.00657894742
+5	Darkening Skies	Legendary	475	Seven-League Circlet (Rare)	0.00657894742
+5	Darkening Skies	Legendary	499	Twin Trunks Vest (Rare)	0.00657894742
+5	Darkening Skies	Legendary	508	Vivid Mitts (Rare)	0.00657894742
+5	Darkening Skies	Legendary	511	Dauntless Boots (Rare)	0.00657894742
+5	Darkening Skies	Legendary	514	Sunlight Choker (Rare)	0.00657894742
+5	Darkening Skies	Legendary	526	Staunch Boots (Rare)	0.00657894742
+5	Darkening Skies	Legendary	553	Enlightened Loincloth (Rare)	0.00657894742
+5	Darkening Skies	Legendary	556	Glamorous Swimsuit (Rare)	0.00657894742
+5	Darkening Skies	Legendary	559	Vanish Hood (Rare)	0.00657894742
+5	Darkening Skies	Legendary	562	Platinum Nopon Mask (Rare)	0.00657894742
+5	Darkening Skies	Legendary	574	Beatific Medal (Rare)	0.00657894742
+5	Darkening Skies	Legendary	467	Augmented Vision Kit (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	470	Charm Bangle (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	476	Seven-League Circlet (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	500	Twin Trunks Vest (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	509	Vivid Mitts (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	512	Dauntless Boots (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	515	Sunlight Choker (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	527	Staunch Boots (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	554	Enlightened Loincloth (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	557	Glamorous Swimsuit (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	560	Vanish Hood (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	563	Platinum Nopon Mask (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	575	Beatific Medal (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	15005	Critical Up V	0.00657894742
+5	Darkening Skies	Legendary	15015	Ether Defense Up V	0.00657894742
+5	Darkening Skies	Legendary	15060	Blade Combo Boost V	0.00657894742
+5	Darkening Skies	Legendary	15158	Swift Evasion V	0.00657894742
+5	Darkening Skies	Legendary	15168	Endurance V	0.00657894742
+5	Darkening Skies	Legendary	15233	Arts Stealth V	0.00657894742
+5	Darkening Skies	Legendary	15248	Movement Heal V	0.00657894742
+5	Darkening Skies	Legendary	15253	Damage Heal V	0.00657894742
+5	Darkening Skies	Legendary	15303	Affinity MAX Evade V	0.00657894742
+5	Darkening Skies	Legendary	10057	Hadron Chip	0.0131578948
+5	Darkening Skies	Legendary	15353	Physical Defense Up VI	0.00657894742
+5	Darkening Skies	Legendary	15354	Ether Defense Up VI	0.00657894742
+5	Darkening Skies	Legendary	15368	Fire Def Up VI	0.009868421
+5	Darkening Skies	Legendary	15369	Water Def Up VI	0.009868421
+5	Darkening Skies	Legendary	15370	Wind Def Up VI	0.009868421
+5	Darkening Skies	Legendary	15371	Earth Def Up VI	0.009868421
+5	Darkening Skies	Legendary	15372	Electric Def Up VI	0.009868421
+5	Darkening Skies	Legendary	15373	Ice Def Up VI	0.009868421
+5	Darkening Skies	Legendary	15374	Light Def Up VI	0.009868421
+5	Darkening Skies	Legendary	15375	Dark Def Up VI	0.009868421
+5	Darkening Skies	Legendary	15381	Break Resist VI	0.00657894742
+5	Darkening Skies	Legendary	15405	Affinity MAX Acc VI	0.00657894742
+5	Darkening Skies	Legendary	456	Consul Greaves (Common)	0.00657894742
+5	Darkening Skies	Legendary	489	Abyss Masque (Common)	0.00657894742
+5	Darkening Skies	Legendary	495	Survivor's Footgear (Common)	0.00657894742
+5	Darkening Skies	Legendary	501	Beast-Hide Vest (Common)	0.00657894742
+5	Darkening Skies	Legendary	504	Prairie Cap (Common)	0.00657894742
+5	Darkening Skies	Legendary	519	Crimson Headband (Common)	0.00657894742
+5	Darkening Skies	Legendary	531	Consul Pauldrons (Common)	0.0131578948
+5	Darkening Skies	Legendary	534	Divine Vambraces (Common)	0.00657894742
+5	Darkening Skies	Legendary	540	Tachyon Scarf (Common)	0.00657894742
+5	Darkening Skies	Legendary	576	Carbon Gauntlet (Common)	0.00657894742
+5	Darkening Skies	Legendary	457	Consul Greaves (Rare)	0.00657894742
+5	Darkening Skies	Legendary	490	Abyss Masque (Rare)	0.00657894742
+5	Darkening Skies	Legendary	496	Survivor's Footgear (Rare)	0.00657894742
+5	Darkening Skies	Legendary	502	Beast-Hide Vest (Rare)	0.00657894742
+5	Darkening Skies	Legendary	505	Prairie Cap (Rare)	0.00657894742
+5	Darkening Skies	Legendary	520	Crimson Headband (Rare)	0.00657894742
+5	Darkening Skies	Legendary	532	Consul Pauldrons (Rare)	0.00657894742
+5	Darkening Skies	Legendary	535	Divine Vambraces (Rare)	0.00657894742
+5	Darkening Skies	Legendary	541	Tachyon Scarf (Rare)	0.00657894742
+5	Darkening Skies	Legendary	577	Carbon Gauntlet (Rare)	0.00657894742
+5	Darkening Skies	Legendary	458	Consul Greaves (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	491	Abyss Masque (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	497	Survivor's Footgear (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	503	Beast-Hide Vest (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	506	Prairie Cap (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	521	Crimson Headband (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	533	Consul Pauldrons (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	536	Divine Vambraces (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	542	Tachyon Scarf (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	578	Carbon Gauntlet (Legendary)	0.00657894742
+5	Darkening Skies	Legendary	25406	Intermediate Weaponry	0.00657894742
+6	Sacred Wood	Common	15030	Insect Hunter V	0.01710864
+6	Sacred Wood	Common	15040	Aquatic Hunter V	0.01710864
+6	Sacred Wood	Common	15025	Beast Hunter V	0.01710864
+6	Sacred Wood	Common	15035	Aerial Hunter V	0.01710864
+6	Sacred Wood	Common	15045	Humanoid Hunter V	0.01710864
+6	Sacred Wood	Common	15055	Titan Hunter V	0.01710864
+6	Sacred Wood	Common	15050	Machine Hunter V	0.01710864
+6	Sacred Wood	Common	15071	Ambush Boost V	0.01710864
+6	Sacred Wood	Common	15081	Aggro Attack Up V	0.01710864
+6	Sacred Wood	Common	15086	Indoor Attack Up V	0.01710864
+6	Sacred Wood	Common	15096	Fire Def Up V	0.01710864
+6	Sacred Wood	Common	15101	Water Def Up V	0.01710864
+6	Sacred Wood	Common	15106	Earth Def Up V	0.01710864
+6	Sacred Wood	Common	15111	Wind Def Up V	0.01710864
+6	Sacred Wood	Common	15116	Electric Def Up V	0.01710864
+6	Sacred Wood	Common	15121	Ice Def Up V	0.01710864
+6	Sacred Wood	Common	15126	Dark Def Up V	0.01710864
+6	Sacred Wood	Common	15131	Light Def Up V	0.01710864
+6	Sacred Wood	Common	15163	Emergency Guard V	0.01710864
+6	Sacred Wood	Common	15173	HP Attack Boost V	0.01710864
+6	Sacred Wood	Common	15178	Spike Defense V	0.01710864
+6	Sacred Wood	Common	15188	Topple Resist V	0.01710864
+6	Sacred Wood	Common	15193	Launch Resist V	0.01710864
+6	Sacred Wood	Common	15203	Blowdown Resist V	0.01710864
+6	Sacred Wood	Common	15218	Shackle Blade Resist V	0.01710864
+6	Sacred Wood	Common	15223	Auto-Attack Stealth V	0.01710864
+6	Sacred Wood	Common	15228	Aggro Boost V	0.01710864
+6	Sacred Wood	Common	15243	Arts Heal V	0.01710864
+6	Sacred Wood	Common	15258	Night Vision V	0.01710864
+6	Sacred Wood	Common	15268	Reflect Damage Up V	0.01710864
+6	Sacred Wood	Common	15278	Opening Art V	0.01710864
+6	Sacred Wood	Common	15283	Telepathy V	0.01710864
+6	Sacred Wood	Common	15293	Affinity MAX Barrier V	0.01710864
+6	Sacred Wood	Common	15298	Affinity MAX Atk V	0.01710864
+6	Sacred Wood	Common	15313	Shoulder to Shoulder V	0.01710864
+6	Sacred Wood	Common	15324	Specials Lv 1 Plus V	0.01710864
+6	Sacred Wood	Common	15329	Specials Lv 2 Plus V	0.01710864
+6	Sacred Wood	Common	15349	Jamming V	0.01710864
+6	Sacred Wood	Common	333	Avant-Garde Medal (Legendary)	0.00427716
+6	Sacred Wood	Common	345	Ancient Banner (Legendary)	0.00427716
+6	Sacred Wood	Common	354	Bloody Orb (Legendary)	0.00427716
+6	Sacred Wood	Common	405	Critical Symbol (Legendary)	0.00427716
+6	Sacred Wood	Common	116	Resurrection Symbol (Legendary)	0.00427716
+6	Sacred Wood	Common	408	Sword Attachment (Legendary)	0.00427716
+6	Sacred Wood	Common	409	Scimitar Attachment (Legendary)	0.00427716
+6	Sacred Wood	Common	416	Scythe Attachment (Legendary)	0.00427716
+6	Sacred Wood	Common	431	Rebirth Amulet (Legendary)	0.00427716
+6	Sacred Wood	Common	432	Beta Scope (Legendary)	0.00427716
+6	Sacred Wood	Common	10046	Howardite Chip	0.00855432
+6	Sacred Wood	Common	10047	Aubrite Chip	0.00855432
+6	Sacred Wood	Common	10050	Axion Chip	0.00855432
+6	Sacred Wood	Common	10051	Mirror Matter Chip	0.00855432
+6	Sacred Wood	Common	15364	Ambush Boost VI	0.01710864
+6	Sacred Wood	Common	15383	Launch Resist VI	0.02566296
+6	Sacred Wood	Common	15384	Smash Resist VI	0.02566296
+6	Sacred Wood	Common	15385	Blowdown Resist VI	0.02566296
+6	Sacred Wood	Common	15386	Knockback Resist VI	0.02566296
+6	Sacred Wood	Common	15396	Reflect Damage Up VI	0.02566296
+6	Sacred Wood	Common	15397	Opening Art VI	0.02566296
+6	Sacred Wood	Common	528	War God Banner (Common)	0.005988024
+6	Sacred Wood	Common	537	Demon Orb (Common)	0.005988024
+6	Sacred Wood	Common	549	Violent Stone (Common)	0.005988024
+6	Sacred Wood	Common	564	Gargantuan Feather (Common)	0.005988024
+6	Sacred Wood	Common	579	Noise Dampener (Common)	0.005988024
+6	Sacred Wood	Common	529	War God Banner (Rare)	0.005988024
+6	Sacred Wood	Common	538	Demon Orb (Rare)	0.005988024
+6	Sacred Wood	Common	550	Violent Stone (Rare)	0.005988024
+6	Sacred Wood	Common	565	Gargantuan Feather (Rare)	0.005988024
+6	Sacred Wood	Common	580	Noise Dampener (Rare)	0.005988024
+6	Sacred Wood	Common	530	War God Banner (Legendary)	0.005988024
+6	Sacred Wood	Common	539	Demon Orb (Legendary)	0.005988024
+6	Sacred Wood	Common	551	Violent Stone (Legendary)	0.005988024
+6	Sacred Wood	Common	566	Gargantuan Feather (Legendary)	0.005988024
+6	Sacred Wood	Common	581	Noise Dampener (Legendary)	0.005988024
+6	Sacred Wood	Common	488	Terror Masque (Legendary)	0.005988024
+6	Sacred Wood	Common	494	Envoy's Footgear (Legendary)	0.005988024
+6	Sacred Wood	Rare	15030	Insect Hunter V	0.008992806
+6	Sacred Wood	Rare	15040	Aquatic Hunter V	0.008992806
+6	Sacred Wood	Rare	15025	Beast Hunter V	0.008992806
+6	Sacred Wood	Rare	15035	Aerial Hunter V	0.008992806
+6	Sacred Wood	Rare	15045	Humanoid Hunter V	0.008992806
+6	Sacred Wood	Rare	15055	Titan Hunter V	0.008992806
+6	Sacred Wood	Rare	15050	Machine Hunter V	0.008992806
+6	Sacred Wood	Rare	15071	Ambush Boost V	0.008992806
+6	Sacred Wood	Rare	15081	Aggro Attack Up V	0.008992806
+6	Sacred Wood	Rare	15086	Indoor Attack Up V	0.008992806
+6	Sacred Wood	Rare	15096	Fire Def Up V	0.008992806
+6	Sacred Wood	Rare	15101	Water Def Up V	0.008992806
+6	Sacred Wood	Rare	15106	Earth Def Up V	0.008992806
+6	Sacred Wood	Rare	15111	Wind Def Up V	0.008992806
+6	Sacred Wood	Rare	15116	Electric Def Up V	0.008992806
+6	Sacred Wood	Rare	15121	Ice Def Up V	0.008992806
+6	Sacred Wood	Rare	15126	Dark Def Up V	0.008992806
+6	Sacred Wood	Rare	15131	Light Def Up V	0.008992806
+6	Sacred Wood	Rare	15163	Emergency Guard V	0.008992806
+6	Sacred Wood	Rare	15173	HP Attack Boost V	0.008992806
+6	Sacred Wood	Rare	15178	Spike Defense V	0.008992806
+6	Sacred Wood	Rare	15188	Topple Resist V	0.008992806
+6	Sacred Wood	Rare	15193	Launch Resist V	0.008992806
+6	Sacred Wood	Rare	15203	Blowdown Resist V	0.008992806
+6	Sacred Wood	Rare	15218	Shackle Blade Resist V	0.008992806
+6	Sacred Wood	Rare	15223	Auto-Attack Stealth V	0.008992806
+6	Sacred Wood	Rare	15228	Aggro Boost V	0.008992806
+6	Sacred Wood	Rare	15243	Arts Heal V	0.008992806
+6	Sacred Wood	Rare	15258	Night Vision V	0.008992806
+6	Sacred Wood	Rare	15268	Reflect Damage Up V	0.008992806
+6	Sacred Wood	Rare	15278	Opening Art V	0.008992806
+6	Sacred Wood	Rare	15283	Telepathy V	0.008992806
+6	Sacred Wood	Rare	15293	Affinity MAX Barrier V	0.008992806
+6	Sacred Wood	Rare	15298	Affinity MAX Atk V	0.008992806
+6	Sacred Wood	Rare	15313	Shoulder to Shoulder V	0.008992806
+6	Sacred Wood	Rare	15324	Specials Lv 1 Plus V	0.008992806
+6	Sacred Wood	Rare	15329	Specials Lv 2 Plus V	0.008992806
+6	Sacred Wood	Rare	15349	Jamming V	0.008992806
+6	Sacred Wood	Rare	333	Avant-Garde Medal (Legendary)	0.00224820152
+6	Sacred Wood	Rare	345	Ancient Banner (Legendary)	0.00224820152
+6	Sacred Wood	Rare	354	Bloody Orb (Legendary)	0.00224820152
+6	Sacred Wood	Rare	405	Critical Symbol (Legendary)	0.00224820152
+6	Sacred Wood	Rare	116	Resurrection Symbol (Legendary)	0.00224820152
+6	Sacred Wood	Rare	408	Sword Attachment (Legendary)	0.00224820152
+6	Sacred Wood	Rare	409	Scimitar Attachment (Legendary)	0.00224820152
+6	Sacred Wood	Rare	416	Scythe Attachment (Legendary)	0.00224820152
+6	Sacred Wood	Rare	431	Rebirth Amulet (Legendary)	0.00224820152
+6	Sacred Wood	Rare	432	Beta Scope (Legendary)	0.00224820152
+6	Sacred Wood	Rare	10046	Howardite Chip	0.004496403
+6	Sacred Wood	Rare	10047	Aubrite Chip	0.004496403
+6	Sacred Wood	Rare	10050	Axion Chip	0.004496403
+6	Sacred Wood	Rare	10051	Mirror Matter Chip	0.004496403
+6	Sacred Wood	Rare	15364	Ambush Boost VI	0.008992806
+6	Sacred Wood	Rare	15383	Launch Resist VI	0.0134892082
+6	Sacred Wood	Rare	15384	Smash Resist VI	0.0134892082
+6	Sacred Wood	Rare	15385	Blowdown Resist VI	0.0134892082
+6	Sacred Wood	Rare	15386	Knockback Resist VI	0.0134892082
+6	Sacred Wood	Rare	15396	Reflect Damage Up VI	0.0134892082
+6	Sacred Wood	Rare	15397	Opening Art VI	0.0134892082
+6	Sacred Wood	Rare	528	War God Banner (Common)	0.003147482
+6	Sacred Wood	Rare	537	Demon Orb (Common)	0.003147482
+6	Sacred Wood	Rare	549	Violent Stone (Common)	0.003147482
+6	Sacred Wood	Rare	564	Gargantuan Feather (Common)	0.003147482
+6	Sacred Wood	Rare	579	Noise Dampener (Common)	0.003147482
+6	Sacred Wood	Rare	529	War God Banner (Rare)	0.003147482
+6	Sacred Wood	Rare	538	Demon Orb (Rare)	0.003147482
+6	Sacred Wood	Rare	550	Violent Stone (Rare)	0.003147482
+6	Sacred Wood	Rare	565	Gargantuan Feather (Rare)	0.003147482
+6	Sacred Wood	Rare	580	Noise Dampener (Rare)	0.003147482
+6	Sacred Wood	Rare	530	War God Banner (Legendary)	0.003147482
+6	Sacred Wood	Rare	539	Demon Orb (Legendary)	0.003147482
+6	Sacred Wood	Rare	551	Violent Stone (Legendary)	0.003147482
+6	Sacred Wood	Rare	566	Gargantuan Feather (Legendary)	0.003147482
+6	Sacred Wood	Rare	581	Noise Dampener (Legendary)	0.003147482
+6	Sacred Wood	Rare	488	Terror Masque (Legendary)	0.003147482
+6	Sacred Wood	Rare	494	Envoy's Footgear (Legendary)	0.003147482
+6	Sacred Wood	Rare	15010	Physical Defense Up V	0.008992806
+6	Sacred Wood	Rare	15020	Block Rate Up V	0.008992806
+6	Sacred Wood	Rare	15066	Fusion Combo Up V	0.008992806
+6	Sacred Wood	Rare	15076	Reflect Immunity	0.008992806
+6	Sacred Wood	Rare	15091	Outdoor Attack Up V	0.008992806
+6	Sacred Wood	Rare	15153	Evasion Focus V	0.008992806
+6	Sacred Wood	Rare	15183	Break Resist V	0.008992806
+6	Sacred Wood	Rare	15198	Smash Resist V	0.008992806
+6	Sacred Wood	Rare	15208	Knockback Resist V	0.008992806
+6	Sacred Wood	Rare	15238	Arts Aggro Boost V	0.008992806
+6	Sacred Wood	Rare	15263	Sunlight Eye V	0.008992806
+6	Sacred Wood	Rare	15273	Range Boost Up V	0.008992806
+6	Sacred Wood	Rare	15288	Helping Hand V	0.008992806
+6	Sacred Wood	Rare	15308	Hunter's Chemistry V	0.008992806
+6	Sacred Wood	Rare	15318	Fast Blade Switch V	0.008992806
+6	Sacred Wood	Rare	15334	Specials Lv 3 Plus V	0.008992806
+6	Sacred Wood	Rare	15339	Specials Lv 4 Plus V	0.008992806
+6	Sacred Wood	Rare	15344	Affinity MAX Acc V	0.008992806
+6	Sacred Wood	Rare	300	Titanium Vest (Legendary)	0.00224820152
+6	Sacred Wood	Rare	303	Ceramic Belt (Legendary)	0.00224820152
+6	Sacred Wood	Rare	306	Fiber Hat (Legendary)	0.00224820152
+6	Sacred Wood	Rare	309	Carbon Gloves (Legendary)	0.00224820152
+6	Sacred Wood	Rare	312	Ester Shoes (Legendary)	0.00224820152
+6	Sacred Wood	Rare	315	Comet Choker (Legendary)	0.00224820152
+6	Sacred Wood	Rare	336	Optical Headband (Legendary)	0.00224820152
+6	Sacred Wood	Rare	342	Graphite Greaves (Legendary)	0.00224820152
+6	Sacred Wood	Rare	348	Jet Pauldrons (Legendary)	0.00224820152
+6	Sacred Wood	Rare	351	Hero Vambraces (Legendary)	0.00224820152
+6	Sacred Wood	Rare	357	Quantum Scarf (Legendary)	0.00224820152
+6	Sacred Wood	Rare	383	World Tree Ward (Legendary)	0.00224820152
+6	Sacred Wood	Rare	389	Holy Necklace (Legendary)	0.00224820152
+6	Sacred Wood	Rare	393	Round Table Medal (Legendary)	0.00224820152
+6	Sacred Wood	Rare	396	Nano-Metal Gauntlet (Legendary)	0.00224820152
+6	Sacred Wood	Rare	399	Hi-Tech Eyepatch (Legendary)	0.00224820152
+6	Sacred Wood	Rare	10056	Positron Chip	0.004496403
+6	Sacred Wood	Rare	15356	Beast Hunter VI	0.008992806
+6	Sacred Wood	Rare	15357	Insect Hunter VI	0.008992806
+6	Sacred Wood	Rare	15358	Aerial Hunter VI	0.008992806
+6	Sacred Wood	Rare	15359	Aquatic Hunter VI	0.008992806
+6	Sacred Wood	Rare	15360	Humanoid Hunter VI	0.0179856122
+6	Sacred Wood	Rare	15361	Machine Hunter VI	0.008992806
+6	Sacred Wood	Rare	15362	Titan Hunter VI	0.008992806
+6	Sacred Wood	Rare	15382	Topple Resist VI	0.008992806
+6	Sacred Wood	Rare	15387	Auto-Attack Stealth VI	0.008992806
+6	Sacred Wood	Rare	15388	Aggro Boost VI	0.008992806
+6	Sacred Wood	Rare	15389	Arts Stealth VI	0.008992806
+6	Sacred Wood	Rare	15390	Arts Aggro Boost VI	0.008992806
+6	Sacred Wood	Rare	15394	Night Vision VI	0.0179856122
+6	Sacred Wood	Rare	15395	Sunlight Eye VI	0.008992806
+6	Sacred Wood	Rare	15401	Specials Lv 1 Plus VI	0.008992806
+6	Sacred Wood	Rare	15402	Specials Lv 2 Plus VI	0.008992806
+6	Sacred Wood	Rare	15403	Specials Lv 3 Plus VI	0.008992806
+6	Sacred Wood	Rare	15404	Specials Lv 4 Plus VI	0.008992806
+6	Sacred Wood	Rare	465	Augmented Vision Kit (Common)	0.00224820152
+6	Sacred Wood	Rare	468	Charm Bangle (Common)	0.00224820152
+6	Sacred Wood	Rare	474	Seven-League Circlet (Common)	0.00224820152
+6	Sacred Wood	Rare	498	Twin Trunks Vest (Common)	0.00224820152
+6	Sacred Wood	Rare	507	Vivid Mitts (Common)	0.00224820152
+6	Sacred Wood	Rare	510	Dauntless Boots (Common)	0.00224820152
+6	Sacred Wood	Rare	513	Sunlight Choker (Common)	0.00224820152
+6	Sacred Wood	Rare	525	Staunch Boots (Common)	0.00224820152
+6	Sacred Wood	Rare	552	Enlightened Loincloth (Common)	0.004496403
+6	Sacred Wood	Rare	555	Glamorous Swimsuit (Common)	0.004496403
+6	Sacred Wood	Rare	558	Vanish Hood (Common)	0.00224820152
+6	Sacred Wood	Rare	561	Platinum Nopon Mask (Common)	0.00224820152
+6	Sacred Wood	Rare	573	Beatific Medal (Common)	0.00224820152
+6	Sacred Wood	Rare	466	Augmented Vision Kit (Rare)	0.00224820152
+6	Sacred Wood	Rare	469	Charm Bangle (Rare)	0.00224820152
+6	Sacred Wood	Rare	475	Seven-League Circlet (Rare)	0.00224820152
+6	Sacred Wood	Rare	499	Twin Trunks Vest (Rare)	0.00224820152
+6	Sacred Wood	Rare	508	Vivid Mitts (Rare)	0.00224820152
+6	Sacred Wood	Rare	511	Dauntless Boots (Rare)	0.00224820152
+6	Sacred Wood	Rare	514	Sunlight Choker (Rare)	0.00224820152
+6	Sacred Wood	Rare	526	Staunch Boots (Rare)	0.00224820152
+6	Sacred Wood	Rare	553	Enlightened Loincloth (Rare)	0.00224820152
+6	Sacred Wood	Rare	556	Glamorous Swimsuit (Rare)	0.00224820152
+6	Sacred Wood	Rare	559	Vanish Hood (Rare)	0.00224820152
+6	Sacred Wood	Rare	562	Platinum Nopon Mask (Rare)	0.00224820152
+6	Sacred Wood	Rare	574	Beatific Medal (Rare)	0.00224820152
+6	Sacred Wood	Rare	467	Augmented Vision Kit (Legendary)	0.00224820152
+6	Sacred Wood	Rare	470	Charm Bangle (Legendary)	0.00224820152
+6	Sacred Wood	Rare	476	Seven-League Circlet (Legendary)	0.00224820152
+6	Sacred Wood	Rare	500	Twin Trunks Vest (Legendary)	0.00224820152
+6	Sacred Wood	Rare	509	Vivid Mitts (Legendary)	0.00224820152
+6	Sacred Wood	Rare	512	Dauntless Boots (Legendary)	0.00224820152
+6	Sacred Wood	Rare	515	Sunlight Choker (Legendary)	0.00224820152
+6	Sacred Wood	Rare	527	Staunch Boots (Legendary)	0.00224820152
+6	Sacred Wood	Rare	554	Enlightened Loincloth (Legendary)	0.00224820152
+6	Sacred Wood	Rare	557	Glamorous Swimsuit (Legendary)	0.00224820152
+6	Sacred Wood	Rare	560	Vanish Hood (Legendary)	0.00224820152
+6	Sacred Wood	Rare	563	Platinum Nopon Mask (Legendary)	0.00224820152
+6	Sacred Wood	Rare	575	Beatific Medal (Legendary)	0.00224820152
+6	Sacred Wood	Legendary	15010	Physical Defense Up V	0.0119402986
+6	Sacred Wood	Legendary	15020	Block Rate Up V	0.0119402986
+6	Sacred Wood	Legendary	15066	Fusion Combo Up V	0.0119402986
+6	Sacred Wood	Legendary	15076	Reflect Immunity	0.0119402986
+6	Sacred Wood	Legendary	15091	Outdoor Attack Up V	0.0119402986
+6	Sacred Wood	Legendary	15153	Evasion Focus V	0.0119402986
+6	Sacred Wood	Legendary	15183	Break Resist V	0.0119402986
+6	Sacred Wood	Legendary	15198	Smash Resist V	0.0119402986
+6	Sacred Wood	Legendary	15208	Knockback Resist V	0.0119402986
+6	Sacred Wood	Legendary	15238	Arts Aggro Boost V	0.0119402986
+6	Sacred Wood	Legendary	15263	Sunlight Eye V	0.0119402986
+6	Sacred Wood	Legendary	15273	Range Boost Up V	0.0119402986
+6	Sacred Wood	Legendary	15288	Helping Hand V	0.0119402986
+6	Sacred Wood	Legendary	15308	Hunter's Chemistry V	0.0119402986
+6	Sacred Wood	Legendary	15318	Fast Blade Switch V	0.0119402986
+6	Sacred Wood	Legendary	15334	Specials Lv 3 Plus V	0.0119402986
+6	Sacred Wood	Legendary	15339	Specials Lv 4 Plus V	0.0119402986
+6	Sacred Wood	Legendary	15344	Affinity MAX Acc V	0.0119402986
+6	Sacred Wood	Legendary	300	Titanium Vest (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	303	Ceramic Belt (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	306	Fiber Hat (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	309	Carbon Gloves (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	312	Ester Shoes (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	315	Comet Choker (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	336	Optical Headband (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	342	Graphite Greaves (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	348	Jet Pauldrons (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	351	Hero Vambraces (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	357	Quantum Scarf (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	383	World Tree Ward (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	389	Holy Necklace (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	393	Round Table Medal (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	10056	Positron Chip	0.0059701493
+6	Sacred Wood	Legendary	15356	Beast Hunter VI	0.0119402986
+6	Sacred Wood	Legendary	15357	Insect Hunter VI	0.0119402986
+6	Sacred Wood	Legendary	15358	Aerial Hunter VI	0.0119402986
+6	Sacred Wood	Legendary	15359	Aquatic Hunter VI	0.0119402986
+6	Sacred Wood	Legendary	15360	Humanoid Hunter VI	0.0119402986
+6	Sacred Wood	Legendary	15361	Machine Hunter VI	0.0119402986
+6	Sacred Wood	Legendary	15362	Titan Hunter VI	0.0119402986
+6	Sacred Wood	Legendary	15382	Topple Resist VI	0.0119402986
+6	Sacred Wood	Legendary	15387	Auto-Attack Stealth VI	0.0119402986
+6	Sacred Wood	Legendary	15388	Aggro Boost VI	0.0119402986
+6	Sacred Wood	Legendary	15389	Arts Stealth VI	0.0119402986
+6	Sacred Wood	Legendary	15390	Arts Aggro Boost VI	0.0119402986
+6	Sacred Wood	Legendary	15394	Night Vision VI	0.0119402986
+6	Sacred Wood	Legendary	15395	Sunlight Eye VI	0.0119402986
+6	Sacred Wood	Legendary	15401	Specials Lv 1 Plus VI	0.0119402986
+6	Sacred Wood	Legendary	15402	Specials Lv 2 Plus VI	0.0119402986
+6	Sacred Wood	Legendary	15403	Specials Lv 3 Plus VI	0.0119402986
+6	Sacred Wood	Legendary	15404	Specials Lv 4 Plus VI	0.0119402986
+6	Sacred Wood	Legendary	465	Augmented Vision Kit (Common)	0.00298507465
+6	Sacred Wood	Legendary	468	Charm Bangle (Common)	0.00298507465
+6	Sacred Wood	Legendary	474	Seven-League Circlet (Common)	0.00298507465
+6	Sacred Wood	Legendary	498	Twin Trunks Vest (Common)	0.00298507465
+6	Sacred Wood	Legendary	507	Vivid Mitts (Common)	0.00298507465
+6	Sacred Wood	Legendary	510	Dauntless Boots (Common)	0.00298507465
+6	Sacred Wood	Legendary	513	Sunlight Choker (Common)	0.00298507465
+6	Sacred Wood	Legendary	525	Staunch Boots (Common)	0.00298507465
+6	Sacred Wood	Legendary	552	Enlightened Loincloth (Common)	0.00298507465
+6	Sacred Wood	Legendary	555	Glamorous Swimsuit (Common)	0.00298507465
+6	Sacred Wood	Legendary	558	Vanish Hood (Common)	0.00298507465
+6	Sacred Wood	Legendary	561	Platinum Nopon Mask (Common)	0.00298507465
+6	Sacred Wood	Legendary	573	Beatific Medal (Common)	0.00298507465
+6	Sacred Wood	Legendary	466	Augmented Vision Kit (Rare)	0.00298507465
+6	Sacred Wood	Legendary	469	Charm Bangle (Rare)	0.00298507465
+6	Sacred Wood	Legendary	475	Seven-League Circlet (Rare)	0.00298507465
+6	Sacred Wood	Legendary	499	Twin Trunks Vest (Rare)	0.00298507465
+6	Sacred Wood	Legendary	508	Vivid Mitts (Rare)	0.00298507465
+6	Sacred Wood	Legendary	511	Dauntless Boots (Rare)	0.00298507465
+6	Sacred Wood	Legendary	514	Sunlight Choker (Rare)	0.00298507465
+6	Sacred Wood	Legendary	526	Staunch Boots (Rare)	0.00298507465
+6	Sacred Wood	Legendary	553	Enlightened Loincloth (Rare)	0.00298507465
+6	Sacred Wood	Legendary	556	Glamorous Swimsuit (Rare)	0.00298507465
+6	Sacred Wood	Legendary	559	Vanish Hood (Rare)	0.00298507465
+6	Sacred Wood	Legendary	562	Platinum Nopon Mask (Rare)	0.00298507465
+6	Sacred Wood	Legendary	574	Beatific Medal (Rare)	0.00298507465
+6	Sacred Wood	Legendary	467	Augmented Vision Kit (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	470	Charm Bangle (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	476	Seven-League Circlet (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	500	Twin Trunks Vest (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	509	Vivid Mitts (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	512	Dauntless Boots (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	515	Sunlight Choker (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	527	Staunch Boots (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	554	Enlightened Loincloth (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	557	Glamorous Swimsuit (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	560	Vanish Hood (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	563	Platinum Nopon Mask (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	575	Beatific Medal (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	15005	Critical Up V	0.0119402986
+6	Sacred Wood	Legendary	15015	Ether Defense Up V	0.0119402986
+6	Sacred Wood	Legendary	15060	Blade Combo Boost V	0.0119402986
+6	Sacred Wood	Legendary	15158	Swift Evasion V	0.0119402986
+6	Sacred Wood	Legendary	15168	Endurance V	0.0119402986
+6	Sacred Wood	Legendary	15233	Arts Stealth V	0.0119402986
+6	Sacred Wood	Legendary	15248	Movement Heal V	0.0119402986
+6	Sacred Wood	Legendary	15253	Damage Heal V	0.0119402986
+6	Sacred Wood	Legendary	15303	Affinity MAX Evade V	0.0119402986
+6	Sacred Wood	Legendary	10057	Hadron Chip	0.0059701493
+6	Sacred Wood	Legendary	15353	Physical Defense Up VI	0.0119402986
+6	Sacred Wood	Legendary	15354	Ether Defense Up VI	0.0119402986
+6	Sacred Wood	Legendary	15368	Fire Def Up VI	0.017910447
+6	Sacred Wood	Legendary	15369	Water Def Up VI	0.017910447
+6	Sacred Wood	Legendary	15370	Wind Def Up VI	0.017910447
+6	Sacred Wood	Legendary	15371	Earth Def Up VI	0.017910447
+6	Sacred Wood	Legendary	15372	Electric Def Up VI	0.017910447
+6	Sacred Wood	Legendary	15373	Ice Def Up VI	0.017910447
+6	Sacred Wood	Legendary	15374	Light Def Up VI	0.017910447
+6	Sacred Wood	Legendary	15375	Dark Def Up VI	0.017910447
+6	Sacred Wood	Legendary	15381	Break Resist VI	0.0119402986
+6	Sacred Wood	Legendary	15405	Affinity MAX Acc VI	0.0119402986
+6	Sacred Wood	Legendary	456	Consul Greaves (Common)	0.00298507465
+6	Sacred Wood	Legendary	489	Abyss Masque (Common)	0.00298507465
+6	Sacred Wood	Legendary	495	Survivor's Footgear (Common)	0.00298507465
+6	Sacred Wood	Legendary	501	Beast-Hide Vest (Common)	0.00298507465
+6	Sacred Wood	Legendary	504	Prairie Cap (Common)	0.00298507465
+6	Sacred Wood	Legendary	519	Crimson Headband (Common)	0.00298507465
+6	Sacred Wood	Legendary	531	Consul Pauldrons (Common)	0.00298507465
+6	Sacred Wood	Legendary	534	Divine Vambraces (Common)	0.00298507465
+6	Sacred Wood	Legendary	540	Tachyon Scarf (Common)	0.00298507465
+6	Sacred Wood	Legendary	576	Carbon Gauntlet (Common)	0.00298507465
+6	Sacred Wood	Legendary	457	Consul Greaves (Rare)	0.00298507465
+6	Sacred Wood	Legendary	490	Abyss Masque (Rare)	0.00298507465
+6	Sacred Wood	Legendary	496	Survivor's Footgear (Rare)	0.00298507465
+6	Sacred Wood	Legendary	502	Beast-Hide Vest (Rare)	0.00298507465
+6	Sacred Wood	Legendary	505	Prairie Cap (Rare)	0.00298507465
+6	Sacred Wood	Legendary	520	Crimson Headband (Rare)	0.00298507465
+6	Sacred Wood	Legendary	532	Consul Pauldrons (Rare)	0.00298507465
+6	Sacred Wood	Legendary	535	Divine Vambraces (Rare)	0.00298507465
+6	Sacred Wood	Legendary	541	Tachyon Scarf (Rare)	0.00298507465
+6	Sacred Wood	Legendary	577	Carbon Gauntlet (Rare)	0.00298507465
+6	Sacred Wood	Legendary	458	Consul Greaves (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	491	Abyss Masque (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	497	Survivor's Footgear (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	503	Beast-Hide Vest (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	506	Prairie Cap (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	521	Crimson Headband (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	533	Consul Pauldrons (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	536	Divine Vambraces (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	542	Tachyon Scarf (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	578	Carbon Gauntlet (Legendary)	0.00298507465
+6	Sacred Wood	Legendary	25406	Intermediate Weaponry	0.0059701493
+7	Temperantian Standoff	Common	15030	Insect Hunter V	0.00491642067
+7	Temperantian Standoff	Common	15040	Aquatic Hunter V	0.00491642067
+7	Temperantian Standoff	Common	15025	Beast Hunter V	0.00491642067
+7	Temperantian Standoff	Common	15035	Aerial Hunter V	0.00491642067
+7	Temperantian Standoff	Common	15045	Humanoid Hunter V	0.00491642067
+7	Temperantian Standoff	Common	15055	Titan Hunter V	0.00491642067
+7	Temperantian Standoff	Common	15050	Machine Hunter V	0.00491642067
+7	Temperantian Standoff	Common	15071	Ambush Boost V	0.00491642067
+7	Temperantian Standoff	Common	15081	Aggro Attack Up V	0.00491642067
+7	Temperantian Standoff	Common	15086	Indoor Attack Up V	0.00491642067
+7	Temperantian Standoff	Common	15096	Fire Def Up V	0.00491642067
+7	Temperantian Standoff	Common	15101	Water Def Up V	0.00491642067
+7	Temperantian Standoff	Common	15106	Earth Def Up V	0.00491642067
+7	Temperantian Standoff	Common	15111	Wind Def Up V	0.00491642067
+7	Temperantian Standoff	Common	15116	Electric Def Up V	0.00491642067
+7	Temperantian Standoff	Common	15121	Ice Def Up V	0.00491642067
+7	Temperantian Standoff	Common	15126	Dark Def Up V	0.00491642067
+7	Temperantian Standoff	Common	15131	Light Def Up V	0.00491642067
+7	Temperantian Standoff	Common	15163	Emergency Guard V	0.00491642067
+7	Temperantian Standoff	Common	15173	HP Attack Boost V	0.00491642067
+7	Temperantian Standoff	Common	15178	Spike Defense V	0.00491642067
+7	Temperantian Standoff	Common	15188	Topple Resist V	0.00491642067
+7	Temperantian Standoff	Common	15193	Launch Resist V	0.00491642067
+7	Temperantian Standoff	Common	15203	Blowdown Resist V	0.00491642067
+7	Temperantian Standoff	Common	15218	Shackle Blade Resist V	0.00491642067
+7	Temperantian Standoff	Common	15223	Auto-Attack Stealth V	0.00491642067
+7	Temperantian Standoff	Common	15228	Aggro Boost V	0.00491642067
+7	Temperantian Standoff	Common	15243	Arts Heal V	0.00491642067
+7	Temperantian Standoff	Common	15258	Night Vision V	0.00491642067
+7	Temperantian Standoff	Common	15268	Reflect Damage Up V	0.00491642067
+7	Temperantian Standoff	Common	15278	Opening Art V	0.00491642067
+7	Temperantian Standoff	Common	15283	Telepathy V	0.00491642067
+7	Temperantian Standoff	Common	15293	Affinity MAX Barrier V	0.00491642067
+7	Temperantian Standoff	Common	15298	Affinity MAX Atk V	0.00491642067
+7	Temperantian Standoff	Common	15313	Shoulder to Shoulder V	0.00491642067
+7	Temperantian Standoff	Common	15324	Specials Lv 1 Plus V	0.00491642067
+7	Temperantian Standoff	Common	15329	Specials Lv 2 Plus V	0.00491642067
+7	Temperantian Standoff	Common	15349	Jamming V	0.00491642067
+7	Temperantian Standoff	Common	333	Avant-Garde Medal (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	345	Ancient Banner (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	354	Bloody Orb (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	405	Critical Symbol (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	116	Resurrection Symbol (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	408	Sword Attachment (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	409	Scimitar Attachment (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	416	Scythe Attachment (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	431	Rebirth Amulet (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	432	Beta Scope (Legendary)	0.0196656827
+7	Temperantian Standoff	Common	10046	Howardite Chip	0.009832841
+7	Temperantian Standoff	Common	10047	Aubrite Chip	0.009832841
+7	Temperantian Standoff	Common	10050	Axion Chip	0.009832841
+7	Temperantian Standoff	Common	10051	Mirror Matter Chip	0.009832841
+7	Temperantian Standoff	Common	15364	Ambush Boost VI	0.00491642067
+7	Temperantian Standoff	Common	15383	Launch Resist VI	0.00688298931
+7	Temperantian Standoff	Common	15384	Smash Resist VI	0.00688298931
+7	Temperantian Standoff	Common	15385	Blowdown Resist VI	0.00688298931
+7	Temperantian Standoff	Common	15386	Knockback Resist VI	0.00688298931
+7	Temperantian Standoff	Common	15396	Reflect Damage Up VI	0.00688298931
+7	Temperantian Standoff	Common	15397	Opening Art VI	0.00688298931
+7	Temperantian Standoff	Common	528	War God Banner (Common)	0.029498525
+7	Temperantian Standoff	Common	537	Demon Orb (Common)	0.029498525
+7	Temperantian Standoff	Common	549	Violent Stone (Common)	0.029498525
+7	Temperantian Standoff	Common	564	Gargantuan Feather (Common)	0.05899705
+7	Temperantian Standoff	Common	579	Noise Dampener (Common)	0.029498525
+7	Temperantian Standoff	Common	529	War God Banner (Rare)	0.029498525
+7	Temperantian Standoff	Common	538	Demon Orb (Rare)	0.029498525
+7	Temperantian Standoff	Common	550	Violent Stone (Rare)	0.029498525
+7	Temperantian Standoff	Common	565	Gargantuan Feather (Rare)	0.029498525
+7	Temperantian Standoff	Common	580	Noise Dampener (Rare)	0.029498525
+7	Temperantian Standoff	Common	530	War God Banner (Legendary)	0.029498525
+7	Temperantian Standoff	Common	539	Demon Orb (Legendary)	0.029498525
+7	Temperantian Standoff	Common	551	Violent Stone (Legendary)	0.029498525
+7	Temperantian Standoff	Common	566	Gargantuan Feather (Legendary)	0.029498525
+7	Temperantian Standoff	Common	581	Noise Dampener (Legendary)	0.029498525
+7	Temperantian Standoff	Common	488	Terror Masque (Legendary)	0.029498525
+7	Temperantian Standoff	Common	494	Envoy's Footgear (Legendary)	0.029498525
+7	Temperantian Standoff	Rare	15030	Insect Hunter V	0.00219587167
+7	Temperantian Standoff	Rare	15040	Aquatic Hunter V	0.00219587167
+7	Temperantian Standoff	Rare	15025	Beast Hunter V	0.00219587167
+7	Temperantian Standoff	Rare	15035	Aerial Hunter V	0.00219587167
+7	Temperantian Standoff	Rare	15045	Humanoid Hunter V	0.00219587167
+7	Temperantian Standoff	Rare	15055	Titan Hunter V	0.00219587167
+7	Temperantian Standoff	Rare	15050	Machine Hunter V	0.00219587167
+7	Temperantian Standoff	Rare	15071	Ambush Boost V	0.00219587167
+7	Temperantian Standoff	Rare	15081	Aggro Attack Up V	0.00219587167
+7	Temperantian Standoff	Rare	15086	Indoor Attack Up V	0.00219587167
+7	Temperantian Standoff	Rare	15096	Fire Def Up V	0.00219587167
+7	Temperantian Standoff	Rare	15101	Water Def Up V	0.00219587167
+7	Temperantian Standoff	Rare	15106	Earth Def Up V	0.00219587167
+7	Temperantian Standoff	Rare	15111	Wind Def Up V	0.00219587167
+7	Temperantian Standoff	Rare	15116	Electric Def Up V	0.00219587167
+7	Temperantian Standoff	Rare	15121	Ice Def Up V	0.00219587167
+7	Temperantian Standoff	Rare	15126	Dark Def Up V	0.00219587167
+7	Temperantian Standoff	Rare	15131	Light Def Up V	0.00219587167
+7	Temperantian Standoff	Rare	15163	Emergency Guard V	0.00219587167
+7	Temperantian Standoff	Rare	15173	HP Attack Boost V	0.00219587167
+7	Temperantian Standoff	Rare	15178	Spike Defense V	0.00219587167
+7	Temperantian Standoff	Rare	15188	Topple Resist V	0.00219587167
+7	Temperantian Standoff	Rare	15193	Launch Resist V	0.00219587167
+7	Temperantian Standoff	Rare	15203	Blowdown Resist V	0.00219587167
+7	Temperantian Standoff	Rare	15218	Shackle Blade Resist V	0.00219587167
+7	Temperantian Standoff	Rare	15223	Auto-Attack Stealth V	0.00219587167
+7	Temperantian Standoff	Rare	15228	Aggro Boost V	0.00219587167
+7	Temperantian Standoff	Rare	15243	Arts Heal V	0.00219587167
+7	Temperantian Standoff	Rare	15258	Night Vision V	0.00219587167
+7	Temperantian Standoff	Rare	15268	Reflect Damage Up V	0.00219587167
+7	Temperantian Standoff	Rare	15278	Opening Art V	0.00219587167
+7	Temperantian Standoff	Rare	15283	Telepathy V	0.00219587167
+7	Temperantian Standoff	Rare	15293	Affinity MAX Barrier V	0.00219587167
+7	Temperantian Standoff	Rare	15298	Affinity MAX Atk V	0.00219587167
+7	Temperantian Standoff	Rare	15313	Shoulder to Shoulder V	0.00219587167
+7	Temperantian Standoff	Rare	15324	Specials Lv 1 Plus V	0.00219587167
+7	Temperantian Standoff	Rare	15329	Specials Lv 2 Plus V	0.00219587167
+7	Temperantian Standoff	Rare	15349	Jamming V	0.00219587167
+7	Temperantian Standoff	Rare	333	Avant-Garde Medal (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	345	Ancient Banner (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	354	Bloody Orb (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	405	Critical Symbol (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	116	Resurrection Symbol (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	408	Sword Attachment (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	409	Scimitar Attachment (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	416	Scythe Attachment (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	431	Rebirth Amulet (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	432	Beta Scope (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	10046	Howardite Chip	0.00439174334
+7	Temperantian Standoff	Rare	10047	Aubrite Chip	0.00439174334
+7	Temperantian Standoff	Rare	10050	Axion Chip	0.00439174334
+7	Temperantian Standoff	Rare	10051	Mirror Matter Chip	0.00439174334
+7	Temperantian Standoff	Rare	15364	Ambush Boost VI	0.00219587167
+7	Temperantian Standoff	Rare	15383	Launch Resist VI	0.00307422038
+7	Temperantian Standoff	Rare	15384	Smash Resist VI	0.00307422038
+7	Temperantian Standoff	Rare	15385	Blowdown Resist VI	0.00307422038
+7	Temperantian Standoff	Rare	15386	Knockback Resist VI	0.00307422038
+7	Temperantian Standoff	Rare	15396	Reflect Damage Up VI	0.00307422038
+7	Temperantian Standoff	Rare	15397	Opening Art VI	0.00307422038
+7	Temperantian Standoff	Rare	528	War God Banner (Common)	0.0131752305
+7	Temperantian Standoff	Rare	537	Demon Orb (Common)	0.0131752305
+7	Temperantian Standoff	Rare	549	Violent Stone (Common)	0.0131752305
+7	Temperantian Standoff	Rare	564	Gargantuan Feather (Common)	0.0131752305
+7	Temperantian Standoff	Rare	579	Noise Dampener (Common)	0.0131752305
+7	Temperantian Standoff	Rare	529	War God Banner (Rare)	0.0131752305
+7	Temperantian Standoff	Rare	538	Demon Orb (Rare)	0.0131752305
+7	Temperantian Standoff	Rare	550	Violent Stone (Rare)	0.0131752305
+7	Temperantian Standoff	Rare	565	Gargantuan Feather (Rare)	0.0131752305
+7	Temperantian Standoff	Rare	580	Noise Dampener (Rare)	0.0131752305
+7	Temperantian Standoff	Rare	530	War God Banner (Legendary)	0.0131752305
+7	Temperantian Standoff	Rare	539	Demon Orb (Legendary)	0.0131752305
+7	Temperantian Standoff	Rare	551	Violent Stone (Legendary)	0.0131752305
+7	Temperantian Standoff	Rare	566	Gargantuan Feather (Legendary)	0.0131752305
+7	Temperantian Standoff	Rare	581	Noise Dampener (Legendary)	0.0131752305
+7	Temperantian Standoff	Rare	488	Terror Masque (Legendary)	0.0131752305
+7	Temperantian Standoff	Rare	494	Envoy's Footgear (Legendary)	0.0131752305
+7	Temperantian Standoff	Rare	15010	Physical Defense Up V	0.00219587167
+7	Temperantian Standoff	Rare	15020	Block Rate Up V	0.00219587167
+7	Temperantian Standoff	Rare	15066	Fusion Combo Up V	0.00219587167
+7	Temperantian Standoff	Rare	15076	Reflect Immunity	0.00219587167
+7	Temperantian Standoff	Rare	15091	Outdoor Attack Up V	0.00219587167
+7	Temperantian Standoff	Rare	15153	Evasion Focus V	0.00219587167
+7	Temperantian Standoff	Rare	15183	Break Resist V	0.00219587167
+7	Temperantian Standoff	Rare	15198	Smash Resist V	0.00219587167
+7	Temperantian Standoff	Rare	15208	Knockback Resist V	0.00219587167
+7	Temperantian Standoff	Rare	15238	Arts Aggro Boost V	0.00219587167
+7	Temperantian Standoff	Rare	15263	Sunlight Eye V	0.00219587167
+7	Temperantian Standoff	Rare	15273	Range Boost Up V	0.00219587167
+7	Temperantian Standoff	Rare	15288	Helping Hand V	0.00219587167
+7	Temperantian Standoff	Rare	15308	Hunter's Chemistry V	0.00219587167
+7	Temperantian Standoff	Rare	15318	Fast Blade Switch V	0.00219587167
+7	Temperantian Standoff	Rare	15334	Specials Lv 3 Plus V	0.00219587167
+7	Temperantian Standoff	Rare	15339	Specials Lv 4 Plus V	0.00219587167
+7	Temperantian Standoff	Rare	15344	Affinity MAX Acc V	0.00219587167
+7	Temperantian Standoff	Rare	300	Titanium Vest (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	303	Ceramic Belt (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	306	Fiber Hat (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	309	Carbon Gloves (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	312	Ester Shoes (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	315	Comet Choker (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	336	Optical Headband (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	342	Graphite Greaves (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	348	Jet Pauldrons (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	351	Hero Vambraces (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	357	Quantum Scarf (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	383	World Tree Ward (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	389	Holy Necklace (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	393	Round Table Medal (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	396	Nano-Metal Gauntlet (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	399	Hi-Tech Eyepatch (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	10056	Positron Chip	0.00439174334
+7	Temperantian Standoff	Rare	15356	Beast Hunter VI	0.00219587167
+7	Temperantian Standoff	Rare	15357	Insect Hunter VI	0.00219587167
+7	Temperantian Standoff	Rare	15358	Aerial Hunter VI	0.00219587167
+7	Temperantian Standoff	Rare	15359	Aquatic Hunter VI	0.00219587167
+7	Temperantian Standoff	Rare	15360	Humanoid Hunter VI	0.00219587167
+7	Temperantian Standoff	Rare	15361	Machine Hunter VI	0.00219587167
+7	Temperantian Standoff	Rare	15362	Titan Hunter VI	0.00219587167
+7	Temperantian Standoff	Rare	15382	Topple Resist VI	0.00219587167
+7	Temperantian Standoff	Rare	15387	Auto-Attack Stealth VI	0.00219587167
+7	Temperantian Standoff	Rare	15388	Aggro Boost VI	0.00219587167
+7	Temperantian Standoff	Rare	15389	Arts Stealth VI	0.00219587167
+7	Temperantian Standoff	Rare	15390	Arts Aggro Boost VI	0.00219587167
+7	Temperantian Standoff	Rare	15394	Night Vision VI	0.00219587167
+7	Temperantian Standoff	Rare	15395	Sunlight Eye VI	0.00219587167
+7	Temperantian Standoff	Rare	15401	Specials Lv 1 Plus VI	0.00219587167
+7	Temperantian Standoff	Rare	15402	Specials Lv 2 Plus VI	0.00219587167
+7	Temperantian Standoff	Rare	15403	Specials Lv 3 Plus VI	0.00219587167
+7	Temperantian Standoff	Rare	15404	Specials Lv 4 Plus VI	0.00219587167
+7	Temperantian Standoff	Rare	465	Augmented Vision Kit (Common)	0.008783487
+7	Temperantian Standoff	Rare	468	Charm Bangle (Common)	0.008783487
+7	Temperantian Standoff	Rare	474	Seven-League Circlet (Common)	0.008783487
+7	Temperantian Standoff	Rare	498	Twin Trunks Vest (Common)	0.008783487
+7	Temperantian Standoff	Rare	507	Vivid Mitts (Common)	0.008783487
+7	Temperantian Standoff	Rare	510	Dauntless Boots (Common)	0.008783487
+7	Temperantian Standoff	Rare	513	Sunlight Choker (Common)	0.008783487
+7	Temperantian Standoff	Rare	525	Staunch Boots (Common)	0.008783487
+7	Temperantian Standoff	Rare	552	Enlightened Loincloth (Common)	0.008783487
+7	Temperantian Standoff	Rare	555	Glamorous Swimsuit (Common)	0.008783487
+7	Temperantian Standoff	Rare	558	Vanish Hood (Common)	0.008783487
+7	Temperantian Standoff	Rare	561	Platinum Nopon Mask (Common)	0.008783487
+7	Temperantian Standoff	Rare	573	Beatific Medal (Common)	0.008783487
+7	Temperantian Standoff	Rare	466	Augmented Vision Kit (Rare)	0.008783487
+7	Temperantian Standoff	Rare	469	Charm Bangle (Rare)	0.008783487
+7	Temperantian Standoff	Rare	475	Seven-League Circlet (Rare)	0.008783487
+7	Temperantian Standoff	Rare	499	Twin Trunks Vest (Rare)	0.008783487
+7	Temperantian Standoff	Rare	508	Vivid Mitts (Rare)	0.008783487
+7	Temperantian Standoff	Rare	511	Dauntless Boots (Rare)	0.008783487
+7	Temperantian Standoff	Rare	514	Sunlight Choker (Rare)	0.008783487
+7	Temperantian Standoff	Rare	526	Staunch Boots (Rare)	0.008783487
+7	Temperantian Standoff	Rare	553	Enlightened Loincloth (Rare)	0.008783487
+7	Temperantian Standoff	Rare	556	Glamorous Swimsuit (Rare)	0.008783487
+7	Temperantian Standoff	Rare	559	Vanish Hood (Rare)	0.008783487
+7	Temperantian Standoff	Rare	562	Platinum Nopon Mask (Rare)	0.008783487
+7	Temperantian Standoff	Rare	574	Beatific Medal (Rare)	0.008783487
+7	Temperantian Standoff	Rare	467	Augmented Vision Kit (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	470	Charm Bangle (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	476	Seven-League Circlet (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	500	Twin Trunks Vest (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	509	Vivid Mitts (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	512	Dauntless Boots (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	515	Sunlight Choker (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	527	Staunch Boots (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	554	Enlightened Loincloth (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	557	Glamorous Swimsuit (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	560	Vanish Hood (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	563	Platinum Nopon Mask (Legendary)	0.008783487
+7	Temperantian Standoff	Rare	575	Beatific Medal (Legendary)	0.008783487
+7	Temperantian Standoff	Legendary	15010	Physical Defense Up V	0.00245579565
+7	Temperantian Standoff	Legendary	15020	Block Rate Up V	0.00245579565
+7	Temperantian Standoff	Legendary	15066	Fusion Combo Up V	0.00245579565
+7	Temperantian Standoff	Legendary	15076	Reflect Immunity	0.00245579565
+7	Temperantian Standoff	Legendary	15091	Outdoor Attack Up V	0.00245579565
+7	Temperantian Standoff	Legendary	15153	Evasion Focus V	0.00245579565
+7	Temperantian Standoff	Legendary	15183	Break Resist V	0.00245579565
+7	Temperantian Standoff	Legendary	15198	Smash Resist V	0.00245579565
+7	Temperantian Standoff	Legendary	15208	Knockback Resist V	0.00245579565
+7	Temperantian Standoff	Legendary	15238	Arts Aggro Boost V	0.00245579565
+7	Temperantian Standoff	Legendary	15263	Sunlight Eye V	0.00245579565
+7	Temperantian Standoff	Legendary	15273	Range Boost Up V	0.00245579565
+7	Temperantian Standoff	Legendary	15288	Helping Hand V	0.00245579565
+7	Temperantian Standoff	Legendary	15308	Hunter's Chemistry V	0.00245579565
+7	Temperantian Standoff	Legendary	15318	Fast Blade Switch V	0.00245579565
+7	Temperantian Standoff	Legendary	15334	Specials Lv 3 Plus V	0.00245579565
+7	Temperantian Standoff	Legendary	15339	Specials Lv 4 Plus V	0.00245579565
+7	Temperantian Standoff	Legendary	15344	Affinity MAX Acc V	0.00245579565
+7	Temperantian Standoff	Legendary	300	Titanium Vest (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	303	Ceramic Belt (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	306	Fiber Hat (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	309	Carbon Gloves (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	312	Ester Shoes (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	315	Comet Choker (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	336	Optical Headband (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	342	Graphite Greaves (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	348	Jet Pauldrons (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	351	Hero Vambraces (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	357	Quantum Scarf (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	383	World Tree Ward (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	389	Holy Necklace (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	393	Round Table Medal (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	10056	Positron Chip	0.0049115913
+7	Temperantian Standoff	Legendary	15356	Beast Hunter VI	0.00245579565
+7	Temperantian Standoff	Legendary	15357	Insect Hunter VI	0.00245579565
+7	Temperantian Standoff	Legendary	15358	Aerial Hunter VI	0.00245579565
+7	Temperantian Standoff	Legendary	15359	Aquatic Hunter VI	0.00245579565
+7	Temperantian Standoff	Legendary	15360	Humanoid Hunter VI	0.00245579565
+7	Temperantian Standoff	Legendary	15361	Machine Hunter VI	0.00245579565
+7	Temperantian Standoff	Legendary	15362	Titan Hunter VI	0.00245579565
+7	Temperantian Standoff	Legendary	15382	Topple Resist VI	0.00245579565
+7	Temperantian Standoff	Legendary	15387	Auto-Attack Stealth VI	0.00245579565
+7	Temperantian Standoff	Legendary	15388	Aggro Boost VI	0.00245579565
+7	Temperantian Standoff	Legendary	15389	Arts Stealth VI	0.00245579565
+7	Temperantian Standoff	Legendary	15390	Arts Aggro Boost VI	0.00245579565
+7	Temperantian Standoff	Legendary	15394	Night Vision VI	0.00245579565
+7	Temperantian Standoff	Legendary	15395	Sunlight Eye VI	0.00245579565
+7	Temperantian Standoff	Legendary	15401	Specials Lv 1 Plus VI	0.00245579565
+7	Temperantian Standoff	Legendary	15402	Specials Lv 2 Plus VI	0.00245579565
+7	Temperantian Standoff	Legendary	15403	Specials Lv 3 Plus VI	0.00245579565
+7	Temperantian Standoff	Legendary	15404	Specials Lv 4 Plus VI	0.00245579565
+7	Temperantian Standoff	Legendary	465	Augmented Vision Kit (Common)	0.009823183
+7	Temperantian Standoff	Legendary	468	Charm Bangle (Common)	0.009823183
+7	Temperantian Standoff	Legendary	474	Seven-League Circlet (Common)	0.009823183
+7	Temperantian Standoff	Legendary	498	Twin Trunks Vest (Common)	0.009823183
+7	Temperantian Standoff	Legendary	507	Vivid Mitts (Common)	0.009823183
+7	Temperantian Standoff	Legendary	510	Dauntless Boots (Common)	0.009823183
+7	Temperantian Standoff	Legendary	513	Sunlight Choker (Common)	0.009823183
+7	Temperantian Standoff	Legendary	525	Staunch Boots (Common)	0.009823183
+7	Temperantian Standoff	Legendary	552	Enlightened Loincloth (Common)	0.009823183
+7	Temperantian Standoff	Legendary	555	Glamorous Swimsuit (Common)	0.009823183
+7	Temperantian Standoff	Legendary	558	Vanish Hood (Common)	0.009823183
+7	Temperantian Standoff	Legendary	561	Platinum Nopon Mask (Common)	0.009823183
+7	Temperantian Standoff	Legendary	573	Beatific Medal (Common)	0.009823183
+7	Temperantian Standoff	Legendary	466	Augmented Vision Kit (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	469	Charm Bangle (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	475	Seven-League Circlet (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	499	Twin Trunks Vest (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	508	Vivid Mitts (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	511	Dauntless Boots (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	514	Sunlight Choker (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	526	Staunch Boots (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	553	Enlightened Loincloth (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	556	Glamorous Swimsuit (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	559	Vanish Hood (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	562	Platinum Nopon Mask (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	574	Beatific Medal (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	467	Augmented Vision Kit (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	470	Charm Bangle (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	476	Seven-League Circlet (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	500	Twin Trunks Vest (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	509	Vivid Mitts (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	512	Dauntless Boots (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	515	Sunlight Choker (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	527	Staunch Boots (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	554	Enlightened Loincloth (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	557	Glamorous Swimsuit (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	560	Vanish Hood (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	563	Platinum Nopon Mask (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	575	Beatific Medal (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	15005	Critical Up V	0.00245579565
+7	Temperantian Standoff	Legendary	15015	Ether Defense Up V	0.00245579565
+7	Temperantian Standoff	Legendary	15060	Blade Combo Boost V	0.00245579565
+7	Temperantian Standoff	Legendary	15158	Swift Evasion V	0.00245579565
+7	Temperantian Standoff	Legendary	15168	Endurance V	0.00245579565
+7	Temperantian Standoff	Legendary	15233	Arts Stealth V	0.00245579565
+7	Temperantian Standoff	Legendary	15248	Movement Heal V	0.00245579565
+7	Temperantian Standoff	Legendary	15253	Damage Heal V	0.00245579565
+7	Temperantian Standoff	Legendary	15303	Affinity MAX Evade V	0.00245579565
+7	Temperantian Standoff	Legendary	10057	Hadron Chip	0.0049115913
+7	Temperantian Standoff	Legendary	15353	Physical Defense Up VI	0.00245579565
+7	Temperantian Standoff	Legendary	15354	Ether Defense Up VI	0.00245579565
+7	Temperantian Standoff	Legendary	15368	Fire Def Up VI	0.003438114
+7	Temperantian Standoff	Legendary	15369	Water Def Up VI	0.003438114
+7	Temperantian Standoff	Legendary	15370	Wind Def Up VI	0.003438114
+7	Temperantian Standoff	Legendary	15371	Earth Def Up VI	0.003438114
+7	Temperantian Standoff	Legendary	15372	Electric Def Up VI	0.003438114
+7	Temperantian Standoff	Legendary	15373	Ice Def Up VI	0.003438114
+7	Temperantian Standoff	Legendary	15374	Light Def Up VI	0.003438114
+7	Temperantian Standoff	Legendary	15375	Dark Def Up VI	0.003438114
+7	Temperantian Standoff	Legendary	15381	Break Resist VI	0.0049115913
+7	Temperantian Standoff	Legendary	15405	Affinity MAX Acc VI	0.00245579565
+7	Temperantian Standoff	Legendary	456	Consul Greaves (Common)	0.009823183
+7	Temperantian Standoff	Legendary	489	Abyss Masque (Common)	0.009823183
+7	Temperantian Standoff	Legendary	495	Survivor's Footgear (Common)	0.009823183
+7	Temperantian Standoff	Legendary	501	Beast-Hide Vest (Common)	0.009823183
+7	Temperantian Standoff	Legendary	504	Prairie Cap (Common)	0.009823183
+7	Temperantian Standoff	Legendary	519	Crimson Headband (Common)	0.009823183
+7	Temperantian Standoff	Legendary	531	Consul Pauldrons (Common)	0.009823183
+7	Temperantian Standoff	Legendary	534	Divine Vambraces (Common)	0.009823183
+7	Temperantian Standoff	Legendary	540	Tachyon Scarf (Common)	0.009823183
+7	Temperantian Standoff	Legendary	576	Carbon Gauntlet (Common)	0.009823183
+7	Temperantian Standoff	Legendary	457	Consul Greaves (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	490	Abyss Masque (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	496	Survivor's Footgear (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	502	Beast-Hide Vest (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	505	Prairie Cap (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	520	Crimson Headband (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	532	Consul Pauldrons (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	535	Divine Vambraces (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	541	Tachyon Scarf (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	577	Carbon Gauntlet (Rare)	0.009823183
+7	Temperantian Standoff	Legendary	458	Consul Greaves (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	491	Abyss Masque (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	497	Survivor's Footgear (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	503	Beast-Hide Vest (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	506	Prairie Cap (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	521	Crimson Headband (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	533	Consul Pauldrons (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	536	Divine Vambraces (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	542	Tachyon Scarf (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	578	Carbon Gauntlet (Legendary)	0.009823183
+7	Temperantian Standoff	Legendary	25406	Intermediate Weaponry	0.0049115913
+8	Dread Contagion	Common	15030	Insect Hunter V	0.0147601478
+8	Dread Contagion	Common	15040	Aquatic Hunter V	0.0147601478
+8	Dread Contagion	Common	15025	Beast Hunter V	0.0147601478
+8	Dread Contagion	Common	15035	Aerial Hunter V	0.0147601478
+8	Dread Contagion	Common	15045	Humanoid Hunter V	0.0147601478
+8	Dread Contagion	Common	15055	Titan Hunter V	0.0147601478
+8	Dread Contagion	Common	15050	Machine Hunter V	0.0147601478
+8	Dread Contagion	Common	15071	Ambush Boost V	0.0147601478
+8	Dread Contagion	Common	15081	Aggro Attack Up V	0.0147601478
+8	Dread Contagion	Common	15086	Indoor Attack Up V	0.0147601478
+8	Dread Contagion	Common	15096	Fire Def Up V	0.0147601478
+8	Dread Contagion	Common	15101	Water Def Up V	0.0147601478
+8	Dread Contagion	Common	15106	Earth Def Up V	0.0147601478
+8	Dread Contagion	Common	15111	Wind Def Up V	0.0147601478
+8	Dread Contagion	Common	15116	Electric Def Up V	0.0147601478
+8	Dread Contagion	Common	15121	Ice Def Up V	0.0147601478
+8	Dread Contagion	Common	15126	Dark Def Up V	0.0147601478
+8	Dread Contagion	Common	15131	Light Def Up V	0.0147601478
+8	Dread Contagion	Common	15163	Emergency Guard V	0.0147601478
+8	Dread Contagion	Common	15173	HP Attack Boost V	0.0147601478
+8	Dread Contagion	Common	15178	Spike Defense V	0.0147601478
+8	Dread Contagion	Common	15188	Topple Resist V	0.0147601478
+8	Dread Contagion	Common	15193	Launch Resist V	0.0147601478
+8	Dread Contagion	Common	15203	Blowdown Resist V	0.0147601478
+8	Dread Contagion	Common	15218	Shackle Blade Resist V	0.0147601478
+8	Dread Contagion	Common	15223	Auto-Attack Stealth V	0.0147601478
+8	Dread Contagion	Common	15228	Aggro Boost V	0.0147601478
+8	Dread Contagion	Common	15243	Arts Heal V	0.0147601478
+8	Dread Contagion	Common	15258	Night Vision V	0.0147601478
+8	Dread Contagion	Common	15268	Reflect Damage Up V	0.0147601478
+8	Dread Contagion	Common	15278	Opening Art V	0.0147601478
+8	Dread Contagion	Common	15283	Telepathy V	0.0147601478
+8	Dread Contagion	Common	15293	Affinity MAX Barrier V	0.0147601478
+8	Dread Contagion	Common	15298	Affinity MAX Atk V	0.0147601478
+8	Dread Contagion	Common	15313	Shoulder to Shoulder V	0.0147601478
+8	Dread Contagion	Common	15324	Specials Lv 1 Plus V	0.0147601478
+8	Dread Contagion	Common	15329	Specials Lv 2 Plus V	0.0147601478
+8	Dread Contagion	Common	15349	Jamming V	0.0147601478
+8	Dread Contagion	Common	333	Avant-Garde Medal (Legendary)	0.007380074
+8	Dread Contagion	Common	345	Ancient Banner (Legendary)	0.007380074
+8	Dread Contagion	Common	354	Bloody Orb (Legendary)	0.007380074
+8	Dread Contagion	Common	405	Critical Symbol (Legendary)	0.007380074
+8	Dread Contagion	Common	116	Resurrection Symbol (Legendary)	0.007380074
+8	Dread Contagion	Common	408	Sword Attachment (Legendary)	0.007380074
+8	Dread Contagion	Common	409	Scimitar Attachment (Legendary)	0.007380074
+8	Dread Contagion	Common	416	Scythe Attachment (Legendary)	0.007380074
+8	Dread Contagion	Common	431	Rebirth Amulet (Legendary)	0.007380074
+8	Dread Contagion	Common	432	Beta Scope (Legendary)	0.007380074
+8	Dread Contagion	Common	10046	Howardite Chip	0.007380074
+8	Dread Contagion	Common	10047	Aubrite Chip	0.007380074
+8	Dread Contagion	Common	10050	Axion Chip	0.007380074
+8	Dread Contagion	Common	10051	Mirror Matter Chip	0.007380074
+8	Dread Contagion	Common	15364	Ambush Boost VI	0.0147601478
+8	Dread Contagion	Common	15383	Launch Resist VI	0.0221402217
+8	Dread Contagion	Common	15384	Smash Resist VI	0.0221402217
+8	Dread Contagion	Common	15385	Blowdown Resist VI	0.0221402217
+8	Dread Contagion	Common	15386	Knockback Resist VI	0.0221402217
+8	Dread Contagion	Common	15396	Reflect Damage Up VI	0.0221402217
+8	Dread Contagion	Common	15397	Opening Art VI	0.0221402217
+8	Dread Contagion	Common	528	War God Banner (Common)	0.0110701108
+8	Dread Contagion	Common	537	Demon Orb (Common)	0.0110701108
+8	Dread Contagion	Common	549	Violent Stone (Common)	0.0110701108
+8	Dread Contagion	Common	564	Gargantuan Feather (Common)	0.0110701108
+8	Dread Contagion	Common	579	Noise Dampener (Common)	0.0110701108
+8	Dread Contagion	Common	529	War God Banner (Rare)	0.0110701108
+8	Dread Contagion	Common	538	Demon Orb (Rare)	0.0110701108
+8	Dread Contagion	Common	550	Violent Stone (Rare)	0.0110701108
+8	Dread Contagion	Common	565	Gargantuan Feather (Rare)	0.0110701108
+8	Dread Contagion	Common	580	Noise Dampener (Rare)	0.0110701108
+8	Dread Contagion	Common	530	War God Banner (Legendary)	0.0110701108
+8	Dread Contagion	Common	539	Demon Orb (Legendary)	0.0110701108
+8	Dread Contagion	Common	551	Violent Stone (Legendary)	0.0110701108
+8	Dread Contagion	Common	566	Gargantuan Feather (Legendary)	0.0110701108
+8	Dread Contagion	Common	581	Noise Dampener (Legendary)	0.0110701108
+8	Dread Contagion	Common	488	Terror Masque (Legendary)	0.0110701108
+8	Dread Contagion	Common	494	Envoy's Footgear (Legendary)	0.0110701108
+8	Dread Contagion	Rare	15030	Insect Hunter V	0.007561437
+8	Dread Contagion	Rare	15040	Aquatic Hunter V	0.007561437
+8	Dread Contagion	Rare	15025	Beast Hunter V	0.007561437
+8	Dread Contagion	Rare	15035	Aerial Hunter V	0.007561437
+8	Dread Contagion	Rare	15045	Humanoid Hunter V	0.007561437
+8	Dread Contagion	Rare	15055	Titan Hunter V	0.007561437
+8	Dread Contagion	Rare	15050	Machine Hunter V	0.007561437
+8	Dread Contagion	Rare	15071	Ambush Boost V	0.007561437
+8	Dread Contagion	Rare	15081	Aggro Attack Up V	0.007561437
+8	Dread Contagion	Rare	15086	Indoor Attack Up V	0.007561437
+8	Dread Contagion	Rare	15096	Fire Def Up V	0.007561437
+8	Dread Contagion	Rare	15101	Water Def Up V	0.007561437
+8	Dread Contagion	Rare	15106	Earth Def Up V	0.007561437
+8	Dread Contagion	Rare	15111	Wind Def Up V	0.007561437
+8	Dread Contagion	Rare	15116	Electric Def Up V	0.007561437
+8	Dread Contagion	Rare	15121	Ice Def Up V	0.007561437
+8	Dread Contagion	Rare	15126	Dark Def Up V	0.007561437
+8	Dread Contagion	Rare	15131	Light Def Up V	0.007561437
+8	Dread Contagion	Rare	15163	Emergency Guard V	0.007561437
+8	Dread Contagion	Rare	15173	HP Attack Boost V	0.007561437
+8	Dread Contagion	Rare	15178	Spike Defense V	0.007561437
+8	Dread Contagion	Rare	15188	Topple Resist V	0.007561437
+8	Dread Contagion	Rare	15193	Launch Resist V	0.007561437
+8	Dread Contagion	Rare	15203	Blowdown Resist V	0.007561437
+8	Dread Contagion	Rare	15218	Shackle Blade Resist V	0.007561437
+8	Dread Contagion	Rare	15223	Auto-Attack Stealth V	0.007561437
+8	Dread Contagion	Rare	15228	Aggro Boost V	0.007561437
+8	Dread Contagion	Rare	15243	Arts Heal V	0.007561437
+8	Dread Contagion	Rare	15258	Night Vision V	0.007561437
+8	Dread Contagion	Rare	15268	Reflect Damage Up V	0.007561437
+8	Dread Contagion	Rare	15278	Opening Art V	0.007561437
+8	Dread Contagion	Rare	15283	Telepathy V	0.007561437
+8	Dread Contagion	Rare	15293	Affinity MAX Barrier V	0.007561437
+8	Dread Contagion	Rare	15298	Affinity MAX Atk V	0.007561437
+8	Dread Contagion	Rare	15313	Shoulder to Shoulder V	0.007561437
+8	Dread Contagion	Rare	15324	Specials Lv 1 Plus V	0.007561437
+8	Dread Contagion	Rare	15329	Specials Lv 2 Plus V	0.007561437
+8	Dread Contagion	Rare	15349	Jamming V	0.007561437
+8	Dread Contagion	Rare	333	Avant-Garde Medal (Legendary)	0.00378071843
+8	Dread Contagion	Rare	345	Ancient Banner (Legendary)	0.00378071843
+8	Dread Contagion	Rare	354	Bloody Orb (Legendary)	0.00378071843
+8	Dread Contagion	Rare	405	Critical Symbol (Legendary)	0.00378071843
+8	Dread Contagion	Rare	116	Resurrection Symbol (Legendary)	0.00378071843
+8	Dread Contagion	Rare	408	Sword Attachment (Legendary)	0.00378071843
+8	Dread Contagion	Rare	409	Scimitar Attachment (Legendary)	0.00378071843
+8	Dread Contagion	Rare	416	Scythe Attachment (Legendary)	0.00378071843
+8	Dread Contagion	Rare	431	Rebirth Amulet (Legendary)	0.00378071843
+8	Dread Contagion	Rare	432	Beta Scope (Legendary)	0.00378071843
+8	Dread Contagion	Rare	10046	Howardite Chip	0.00378071843
+8	Dread Contagion	Rare	10047	Aubrite Chip	0.00378071843
+8	Dread Contagion	Rare	10050	Axion Chip	0.00378071843
+8	Dread Contagion	Rare	10051	Mirror Matter Chip	0.00378071843
+8	Dread Contagion	Rare	15364	Ambush Boost VI	0.007561437
+8	Dread Contagion	Rare	15383	Launch Resist VI	0.0113421548
+8	Dread Contagion	Rare	15384	Smash Resist VI	0.0113421548
+8	Dread Contagion	Rare	15385	Blowdown Resist VI	0.0113421548
+8	Dread Contagion	Rare	15386	Knockback Resist VI	0.0113421548
+8	Dread Contagion	Rare	15396	Reflect Damage Up VI	0.0113421548
+8	Dread Contagion	Rare	15397	Opening Art VI	0.0113421548
+8	Dread Contagion	Rare	528	War God Banner (Common)	0.00567107741
+8	Dread Contagion	Rare	537	Demon Orb (Common)	0.00567107741
+8	Dread Contagion	Rare	549	Violent Stone (Common)	0.00567107741
+8	Dread Contagion	Rare	564	Gargantuan Feather (Common)	0.00567107741
+8	Dread Contagion	Rare	579	Noise Dampener (Common)	0.00567107741
+8	Dread Contagion	Rare	529	War God Banner (Rare)	0.00567107741
+8	Dread Contagion	Rare	538	Demon Orb (Rare)	0.00567107741
+8	Dread Contagion	Rare	550	Violent Stone (Rare)	0.00567107741
+8	Dread Contagion	Rare	565	Gargantuan Feather (Rare)	0.00567107741
+8	Dread Contagion	Rare	580	Noise Dampener (Rare)	0.00567107741
+8	Dread Contagion	Rare	530	War God Banner (Legendary)	0.00567107741
+8	Dread Contagion	Rare	539	Demon Orb (Legendary)	0.00567107741
+8	Dread Contagion	Rare	551	Violent Stone (Legendary)	0.00567107741
+8	Dread Contagion	Rare	566	Gargantuan Feather (Legendary)	0.00567107741
+8	Dread Contagion	Rare	581	Noise Dampener (Legendary)	0.00567107741
+8	Dread Contagion	Rare	488	Terror Masque (Legendary)	0.00567107741
+8	Dread Contagion	Rare	494	Envoy's Footgear (Legendary)	0.00567107741
+8	Dread Contagion	Rare	15010	Physical Defense Up V	0.007561437
+8	Dread Contagion	Rare	15020	Block Rate Up V	0.007561437
+8	Dread Contagion	Rare	15066	Fusion Combo Up V	0.007561437
+8	Dread Contagion	Rare	15076	Reflect Immunity	0.007561437
+8	Dread Contagion	Rare	15091	Outdoor Attack Up V	0.007561437
+8	Dread Contagion	Rare	15153	Evasion Focus V	0.007561437
+8	Dread Contagion	Rare	15183	Break Resist V	0.007561437
+8	Dread Contagion	Rare	15198	Smash Resist V	0.007561437
+8	Dread Contagion	Rare	15208	Knockback Resist V	0.007561437
+8	Dread Contagion	Rare	15238	Arts Aggro Boost V	0.007561437
+8	Dread Contagion	Rare	15263	Sunlight Eye V	0.007561437
+8	Dread Contagion	Rare	15273	Range Boost Up V	0.007561437
+8	Dread Contagion	Rare	15288	Helping Hand V	0.007561437
+8	Dread Contagion	Rare	15308	Hunter's Chemistry V	0.007561437
+8	Dread Contagion	Rare	15318	Fast Blade Switch V	0.007561437
+8	Dread Contagion	Rare	15334	Specials Lv 3 Plus V	0.007561437
+8	Dread Contagion	Rare	15339	Specials Lv 4 Plus V	0.007561437
+8	Dread Contagion	Rare	15344	Affinity MAX Acc V	0.007561437
+8	Dread Contagion	Rare	300	Titanium Vest (Legendary)	0.00378071843
+8	Dread Contagion	Rare	303	Ceramic Belt (Legendary)	0.00378071843
+8	Dread Contagion	Rare	306	Fiber Hat (Legendary)	0.00378071843
+8	Dread Contagion	Rare	309	Carbon Gloves (Legendary)	0.00378071843
+8	Dread Contagion	Rare	312	Ester Shoes (Legendary)	0.00378071843
+8	Dread Contagion	Rare	315	Comet Choker (Legendary)	0.00378071843
+8	Dread Contagion	Rare	336	Optical Headband (Legendary)	0.00378071843
+8	Dread Contagion	Rare	342	Graphite Greaves (Legendary)	0.00378071843
+8	Dread Contagion	Rare	348	Jet Pauldrons (Legendary)	0.00378071843
+8	Dread Contagion	Rare	351	Hero Vambraces (Legendary)	0.00378071843
+8	Dread Contagion	Rare	357	Quantum Scarf (Legendary)	0.00378071843
+8	Dread Contagion	Rare	383	World Tree Ward (Legendary)	0.00378071843
+8	Dread Contagion	Rare	389	Holy Necklace (Legendary)	0.00378071843
+8	Dread Contagion	Rare	393	Round Table Medal (Legendary)	0.00378071843
+8	Dread Contagion	Rare	396	Nano-Metal Gauntlet (Legendary)	0.00378071843
+8	Dread Contagion	Rare	399	Hi-Tech Eyepatch (Legendary)	0.00378071843
+8	Dread Contagion	Rare	10056	Positron Chip	0.00378071843
+8	Dread Contagion	Rare	15356	Beast Hunter VI	0.007561437
+8	Dread Contagion	Rare	15357	Insect Hunter VI	0.007561437
+8	Dread Contagion	Rare	15358	Aerial Hunter VI	0.007561437
+8	Dread Contagion	Rare	15359	Aquatic Hunter VI	0.007561437
+8	Dread Contagion	Rare	15360	Humanoid Hunter VI	0.007561437
+8	Dread Contagion	Rare	15361	Machine Hunter VI	0.007561437
+8	Dread Contagion	Rare	15362	Titan Hunter VI	0.007561437
+8	Dread Contagion	Rare	15382	Topple Resist VI	0.007561437
+8	Dread Contagion	Rare	15387	Auto-Attack Stealth VI	0.007561437
+8	Dread Contagion	Rare	15388	Aggro Boost VI	0.007561437
+8	Dread Contagion	Rare	15389	Arts Stealth VI	0.007561437
+8	Dread Contagion	Rare	15390	Arts Aggro Boost VI	0.007561437
+8	Dread Contagion	Rare	15394	Night Vision VI	0.007561437
+8	Dread Contagion	Rare	15395	Sunlight Eye VI	0.007561437
+8	Dread Contagion	Rare	15401	Specials Lv 1 Plus VI	0.007561437
+8	Dread Contagion	Rare	15402	Specials Lv 2 Plus VI	0.007561437
+8	Dread Contagion	Rare	15403	Specials Lv 3 Plus VI	0.007561437
+8	Dread Contagion	Rare	15404	Specials Lv 4 Plus VI	0.007561437
+8	Dread Contagion	Rare	465	Augmented Vision Kit (Common)	0.00378071843
+8	Dread Contagion	Rare	468	Charm Bangle (Common)	0.00378071843
+8	Dread Contagion	Rare	474	Seven-League Circlet (Common)	0.007561437
+8	Dread Contagion	Rare	498	Twin Trunks Vest (Common)	0.00378071843
+8	Dread Contagion	Rare	507	Vivid Mitts (Common)	0.00378071843
+8	Dread Contagion	Rare	510	Dauntless Boots (Common)	0.00378071843
+8	Dread Contagion	Rare	513	Sunlight Choker (Common)	0.00378071843
+8	Dread Contagion	Rare	525	Staunch Boots (Common)	0.00378071843
+8	Dread Contagion	Rare	552	Enlightened Loincloth (Common)	0.00378071843
+8	Dread Contagion	Rare	555	Glamorous Swimsuit (Common)	0.00378071843
+8	Dread Contagion	Rare	558	Vanish Hood (Common)	0.00378071843
+8	Dread Contagion	Rare	561	Platinum Nopon Mask (Common)	0.00378071843
+8	Dread Contagion	Rare	573	Beatific Medal (Common)	0.00378071843
+8	Dread Contagion	Rare	466	Augmented Vision Kit (Rare)	0.00378071843
+8	Dread Contagion	Rare	469	Charm Bangle (Rare)	0.00378071843
+8	Dread Contagion	Rare	475	Seven-League Circlet (Rare)	0.00378071843
+8	Dread Contagion	Rare	499	Twin Trunks Vest (Rare)	0.00378071843
+8	Dread Contagion	Rare	508	Vivid Mitts (Rare)	0.00378071843
+8	Dread Contagion	Rare	511	Dauntless Boots (Rare)	0.00378071843
+8	Dread Contagion	Rare	514	Sunlight Choker (Rare)	0.00378071843
+8	Dread Contagion	Rare	526	Staunch Boots (Rare)	0.00378071843
+8	Dread Contagion	Rare	553	Enlightened Loincloth (Rare)	0.00378071843
+8	Dread Contagion	Rare	556	Glamorous Swimsuit (Rare)	0.00378071843
+8	Dread Contagion	Rare	559	Vanish Hood (Rare)	0.00378071843
+8	Dread Contagion	Rare	562	Platinum Nopon Mask (Rare)	0.00378071843
+8	Dread Contagion	Rare	574	Beatific Medal (Rare)	0.00378071843
+8	Dread Contagion	Rare	467	Augmented Vision Kit (Legendary)	0.00378071843
+8	Dread Contagion	Rare	470	Charm Bangle (Legendary)	0.00378071843
+8	Dread Contagion	Rare	476	Seven-League Circlet (Legendary)	0.00378071843
+8	Dread Contagion	Rare	500	Twin Trunks Vest (Legendary)	0.00378071843
+8	Dread Contagion	Rare	509	Vivid Mitts (Legendary)	0.00378071843
+8	Dread Contagion	Rare	512	Dauntless Boots (Legendary)	0.00378071843
+8	Dread Contagion	Rare	515	Sunlight Choker (Legendary)	0.00378071843
+8	Dread Contagion	Rare	527	Staunch Boots (Legendary)	0.00378071843
+8	Dread Contagion	Rare	554	Enlightened Loincloth (Legendary)	0.00378071843
+8	Dread Contagion	Rare	557	Glamorous Swimsuit (Legendary)	0.00378071843
+8	Dread Contagion	Rare	560	Vanish Hood (Legendary)	0.00378071843
+8	Dread Contagion	Rare	563	Platinum Nopon Mask (Legendary)	0.00378071843
+8	Dread Contagion	Rare	575	Beatific Medal (Legendary)	0.00378071843
+8	Dread Contagion	Legendary	15010	Physical Defense Up V	0.009478673
+8	Dread Contagion	Legendary	15020	Block Rate Up V	0.009478673
+8	Dread Contagion	Legendary	15066	Fusion Combo Up V	0.009478673
+8	Dread Contagion	Legendary	15076	Reflect Immunity	0.009478673
+8	Dread Contagion	Legendary	15091	Outdoor Attack Up V	0.009478673
+8	Dread Contagion	Legendary	15153	Evasion Focus V	0.009478673
+8	Dread Contagion	Legendary	15183	Break Resist V	0.009478673
+8	Dread Contagion	Legendary	15198	Smash Resist V	0.009478673
+8	Dread Contagion	Legendary	15208	Knockback Resist V	0.009478673
+8	Dread Contagion	Legendary	15238	Arts Aggro Boost V	0.009478673
+8	Dread Contagion	Legendary	15263	Sunlight Eye V	0.009478673
+8	Dread Contagion	Legendary	15273	Range Boost Up V	0.009478673
+8	Dread Contagion	Legendary	15288	Helping Hand V	0.009478673
+8	Dread Contagion	Legendary	15308	Hunter's Chemistry V	0.009478673
+8	Dread Contagion	Legendary	15318	Fast Blade Switch V	0.009478673
+8	Dread Contagion	Legendary	15334	Specials Lv 3 Plus V	0.009478673
+8	Dread Contagion	Legendary	15339	Specials Lv 4 Plus V	0.009478673
+8	Dread Contagion	Legendary	15344	Affinity MAX Acc V	0.009478673
+8	Dread Contagion	Legendary	300	Titanium Vest (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	303	Ceramic Belt (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	306	Fiber Hat (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	309	Carbon Gloves (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	312	Ester Shoes (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	315	Comet Choker (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	336	Optical Headband (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	342	Graphite Greaves (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	348	Jet Pauldrons (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	351	Hero Vambraces (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	357	Quantum Scarf (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	383	World Tree Ward (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	389	Holy Necklace (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	393	Round Table Medal (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	10056	Positron Chip	0.00473933667
+8	Dread Contagion	Legendary	15356	Beast Hunter VI	0.009478673
+8	Dread Contagion	Legendary	15357	Insect Hunter VI	0.009478673
+8	Dread Contagion	Legendary	15358	Aerial Hunter VI	0.009478673
+8	Dread Contagion	Legendary	15359	Aquatic Hunter VI	0.009478673
+8	Dread Contagion	Legendary	15360	Humanoid Hunter VI	0.009478673
+8	Dread Contagion	Legendary	15361	Machine Hunter VI	0.009478673
+8	Dread Contagion	Legendary	15362	Titan Hunter VI	0.009478673
+8	Dread Contagion	Legendary	15382	Topple Resist VI	0.009478673
+8	Dread Contagion	Legendary	15387	Auto-Attack Stealth VI	0.009478673
+8	Dread Contagion	Legendary	15388	Aggro Boost VI	0.009478673
+8	Dread Contagion	Legendary	15389	Arts Stealth VI	0.009478673
+8	Dread Contagion	Legendary	15390	Arts Aggro Boost VI	0.009478673
+8	Dread Contagion	Legendary	15394	Night Vision VI	0.009478673
+8	Dread Contagion	Legendary	15395	Sunlight Eye VI	0.009478673
+8	Dread Contagion	Legendary	15401	Specials Lv 1 Plus VI	0.009478673
+8	Dread Contagion	Legendary	15402	Specials Lv 2 Plus VI	0.009478673
+8	Dread Contagion	Legendary	15403	Specials Lv 3 Plus VI	0.009478673
+8	Dread Contagion	Legendary	15404	Specials Lv 4 Plus VI	0.009478673
+8	Dread Contagion	Legendary	465	Augmented Vision Kit (Common)	0.00473933667
+8	Dread Contagion	Legendary	468	Charm Bangle (Common)	0.00473933667
+8	Dread Contagion	Legendary	474	Seven-League Circlet (Common)	0.00473933667
+8	Dread Contagion	Legendary	498	Twin Trunks Vest (Common)	0.00473933667
+8	Dread Contagion	Legendary	507	Vivid Mitts (Common)	0.00473933667
+8	Dread Contagion	Legendary	510	Dauntless Boots (Common)	0.00473933667
+8	Dread Contagion	Legendary	513	Sunlight Choker (Common)	0.00473933667
+8	Dread Contagion	Legendary	525	Staunch Boots (Common)	0.00473933667
+8	Dread Contagion	Legendary	552	Enlightened Loincloth (Common)	0.00473933667
+8	Dread Contagion	Legendary	555	Glamorous Swimsuit (Common)	0.00473933667
+8	Dread Contagion	Legendary	558	Vanish Hood (Common)	0.00473933667
+8	Dread Contagion	Legendary	561	Platinum Nopon Mask (Common)	0.00473933667
+8	Dread Contagion	Legendary	573	Beatific Medal (Common)	0.00473933667
+8	Dread Contagion	Legendary	466	Augmented Vision Kit (Rare)	0.00473933667
+8	Dread Contagion	Legendary	469	Charm Bangle (Rare)	0.00473933667
+8	Dread Contagion	Legendary	475	Seven-League Circlet (Rare)	0.00473933667
+8	Dread Contagion	Legendary	499	Twin Trunks Vest (Rare)	0.00473933667
+8	Dread Contagion	Legendary	508	Vivid Mitts (Rare)	0.00473933667
+8	Dread Contagion	Legendary	511	Dauntless Boots (Rare)	0.00473933667
+8	Dread Contagion	Legendary	514	Sunlight Choker (Rare)	0.00473933667
+8	Dread Contagion	Legendary	526	Staunch Boots (Rare)	0.00473933667
+8	Dread Contagion	Legendary	553	Enlightened Loincloth (Rare)	0.00473933667
+8	Dread Contagion	Legendary	556	Glamorous Swimsuit (Rare)	0.00473933667
+8	Dread Contagion	Legendary	559	Vanish Hood (Rare)	0.00473933667
+8	Dread Contagion	Legendary	562	Platinum Nopon Mask (Rare)	0.00473933667
+8	Dread Contagion	Legendary	574	Beatific Medal (Rare)	0.00473933667
+8	Dread Contagion	Legendary	467	Augmented Vision Kit (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	470	Charm Bangle (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	476	Seven-League Circlet (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	500	Twin Trunks Vest (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	509	Vivid Mitts (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	512	Dauntless Boots (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	515	Sunlight Choker (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	527	Staunch Boots (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	554	Enlightened Loincloth (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	557	Glamorous Swimsuit (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	560	Vanish Hood (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	563	Platinum Nopon Mask (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	575	Beatific Medal (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	15005	Critical Up V	0.009478673
+8	Dread Contagion	Legendary	15015	Ether Defense Up V	0.009478673
+8	Dread Contagion	Legendary	15060	Blade Combo Boost V	0.009478673
+8	Dread Contagion	Legendary	15158	Swift Evasion V	0.009478673
+8	Dread Contagion	Legendary	15168	Endurance V	0.009478673
+8	Dread Contagion	Legendary	15233	Arts Stealth V	0.009478673
+8	Dread Contagion	Legendary	15248	Movement Heal V	0.009478673
+8	Dread Contagion	Legendary	15253	Damage Heal V	0.009478673
+8	Dread Contagion	Legendary	15303	Affinity MAX Evade V	0.009478673
+8	Dread Contagion	Legendary	10057	Hadron Chip	0.00473933667
+8	Dread Contagion	Legendary	15353	Physical Defense Up VI	0.009478673
+8	Dread Contagion	Legendary	15354	Ether Defense Up VI	0.009478673
+8	Dread Contagion	Legendary	15368	Fire Def Up VI	0.0142180091
+8	Dread Contagion	Legendary	15369	Water Def Up VI	0.0142180091
+8	Dread Contagion	Legendary	15370	Wind Def Up VI	0.0142180091
+8	Dread Contagion	Legendary	15371	Earth Def Up VI	0.0142180091
+8	Dread Contagion	Legendary	15372	Electric Def Up VI	0.0142180091
+8	Dread Contagion	Legendary	15373	Ice Def Up VI	0.0142180091
+8	Dread Contagion	Legendary	15374	Light Def Up VI	0.0142180091
+8	Dread Contagion	Legendary	15375	Dark Def Up VI	0.0142180091
+8	Dread Contagion	Legendary	15381	Break Resist VI	0.009478673
+8	Dread Contagion	Legendary	15405	Affinity MAX Acc VI	0.009478673
+8	Dread Contagion	Legendary	456	Consul Greaves (Common)	0.00473933667
+8	Dread Contagion	Legendary	489	Abyss Masque (Common)	0.00473933667
+8	Dread Contagion	Legendary	495	Survivor's Footgear (Common)	0.00473933667
+8	Dread Contagion	Legendary	501	Beast-Hide Vest (Common)	0.00473933667
+8	Dread Contagion	Legendary	504	Prairie Cap (Common)	0.00473933667
+8	Dread Contagion	Legendary	519	Crimson Headband (Common)	0.00473933667
+8	Dread Contagion	Legendary	531	Consul Pauldrons (Common)	0.00473933667
+8	Dread Contagion	Legendary	534	Divine Vambraces (Common)	0.00473933667
+8	Dread Contagion	Legendary	540	Tachyon Scarf (Common)	0.00473933667
+8	Dread Contagion	Legendary	576	Carbon Gauntlet (Common)	0.00473933667
+8	Dread Contagion	Legendary	457	Consul Greaves (Rare)	0.00473933667
+8	Dread Contagion	Legendary	490	Abyss Masque (Rare)	0.00473933667
+8	Dread Contagion	Legendary	496	Survivor's Footgear (Rare)	0.00473933667
+8	Dread Contagion	Legendary	502	Beast-Hide Vest (Rare)	0.00473933667
+8	Dread Contagion	Legendary	505	Prairie Cap (Rare)	0.00473933667
+8	Dread Contagion	Legendary	520	Crimson Headband (Rare)	0.00473933667
+8	Dread Contagion	Legendary	532	Consul Pauldrons (Rare)	0.00473933667
+8	Dread Contagion	Legendary	535	Divine Vambraces (Rare)	0.00473933667
+8	Dread Contagion	Legendary	541	Tachyon Scarf (Rare)	0.00473933667
+8	Dread Contagion	Legendary	577	Carbon Gauntlet (Rare)	0.00473933667
+8	Dread Contagion	Legendary	458	Consul Greaves (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	491	Abyss Masque (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	497	Survivor's Footgear (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	503	Beast-Hide Vest (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	506	Prairie Cap (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	521	Crimson Headband (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	533	Consul Pauldrons (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	536	Divine Vambraces (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	542	Tachyon Scarf (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	578	Carbon Gauntlet (Legendary)	0.00473933667
+8	Dread Contagion	Legendary	25406	Intermediate Weaponry	0.009478673
+9	Panic at the Seaside	Common	15030	Insect Hunter V	0.005065856
+9	Panic at the Seaside	Common	15040	Aquatic Hunter V	0.005065856
+9	Panic at the Seaside	Common	15025	Beast Hunter V	0.005065856
+9	Panic at the Seaside	Common	15035	Aerial Hunter V	0.005065856
+9	Panic at the Seaside	Common	15045	Humanoid Hunter V	0.005065856
+9	Panic at the Seaside	Common	15055	Titan Hunter V	0.005065856
+9	Panic at the Seaside	Common	15050	Machine Hunter V	0.005065856
+9	Panic at the Seaside	Common	15071	Ambush Boost V	0.005065856
+9	Panic at the Seaside	Common	15081	Aggro Attack Up V	0.005065856
+9	Panic at the Seaside	Common	15086	Indoor Attack Up V	0.005065856
+9	Panic at the Seaside	Common	15096	Fire Def Up V	0.005065856
+9	Panic at the Seaside	Common	15101	Water Def Up V	0.005065856
+9	Panic at the Seaside	Common	15106	Earth Def Up V	0.005065856
+9	Panic at the Seaside	Common	15111	Wind Def Up V	0.005065856
+9	Panic at the Seaside	Common	15116	Electric Def Up V	0.005065856
+9	Panic at the Seaside	Common	15121	Ice Def Up V	0.005065856
+9	Panic at the Seaside	Common	15126	Dark Def Up V	0.005065856
+9	Panic at the Seaside	Common	15131	Light Def Up V	0.005065856
+9	Panic at the Seaside	Common	15163	Emergency Guard V	0.005065856
+9	Panic at the Seaside	Common	15173	HP Attack Boost V	0.005065856
+9	Panic at the Seaside	Common	15178	Spike Defense V	0.005065856
+9	Panic at the Seaside	Common	15188	Topple Resist V	0.005065856
+9	Panic at the Seaside	Common	15193	Launch Resist V	0.005065856
+9	Panic at the Seaside	Common	15203	Blowdown Resist V	0.005065856
+9	Panic at the Seaside	Common	15218	Shackle Blade Resist V	0.005065856
+9	Panic at the Seaside	Common	15223	Auto-Attack Stealth V	0.005065856
+9	Panic at the Seaside	Common	15228	Aggro Boost V	0.005065856
+9	Panic at the Seaside	Common	15243	Arts Heal V	0.005065856
+9	Panic at the Seaside	Common	15258	Night Vision V	0.005065856
+9	Panic at the Seaside	Common	15268	Reflect Damage Up V	0.005065856
+9	Panic at the Seaside	Common	15278	Opening Art V	0.005065856
+9	Panic at the Seaside	Common	15283	Telepathy V	0.005065856
+9	Panic at the Seaside	Common	15293	Affinity MAX Barrier V	0.005065856
+9	Panic at the Seaside	Common	15298	Affinity MAX Atk V	0.005065856
+9	Panic at the Seaside	Common	15313	Shoulder to Shoulder V	0.005065856
+9	Panic at the Seaside	Common	15324	Specials Lv 1 Plus V	0.005065856
+9	Panic at the Seaside	Common	15329	Specials Lv 2 Plus V	0.005065856
+9	Panic at the Seaside	Common	15349	Jamming V	0.005065856
+9	Panic at the Seaside	Common	333	Avant-Garde Medal (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	345	Ancient Banner (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	354	Bloody Orb (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	405	Critical Symbol (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	116	Resurrection Symbol (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	408	Sword Attachment (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	409	Scimitar Attachment (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	416	Scythe Attachment (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	431	Rebirth Amulet (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	432	Beta Scope (Legendary)	0.0202634241
+9	Panic at the Seaside	Common	10046	Howardite Chip	0.0101317121
+9	Panic at the Seaside	Common	10047	Aubrite Chip	0.0101317121
+9	Panic at the Seaside	Common	10050	Axion Chip	0.0101317121
+9	Panic at the Seaside	Common	10051	Mirror Matter Chip	0.0101317121
+9	Panic at the Seaside	Common	15364	Ambush Boost VI	0.005065856
+9	Panic at the Seaside	Common	15383	Launch Resist VI	0.00709219836
+9	Panic at the Seaside	Common	15384	Smash Resist VI	0.00709219836
+9	Panic at the Seaside	Common	15385	Blowdown Resist VI	0.00709219836
+9	Panic at the Seaside	Common	15386	Knockback Resist VI	0.00709219836
+9	Panic at the Seaside	Common	15396	Reflect Damage Up VI	0.00709219836
+9	Panic at the Seaside	Common	15397	Opening Art VI	0.00709219836
+9	Panic at the Seaside	Common	528	War God Banner (Common)	0.0303951371
+9	Panic at the Seaside	Common	537	Demon Orb (Common)	0.0303951371
+9	Panic at the Seaside	Common	549	Violent Stone (Common)	0.0303951371
+9	Panic at the Seaside	Common	564	Gargantuan Feather (Common)	0.0303951371
+9	Panic at the Seaside	Common	579	Noise Dampener (Common)	0.0303951371
+9	Panic at the Seaside	Common	529	War God Banner (Rare)	0.0303951371
+9	Panic at the Seaside	Common	538	Demon Orb (Rare)	0.0303951371
+9	Panic at the Seaside	Common	550	Violent Stone (Rare)	0.0303951371
+9	Panic at the Seaside	Common	565	Gargantuan Feather (Rare)	0.0303951371
+9	Panic at the Seaside	Common	580	Noise Dampener (Rare)	0.0303951371
+9	Panic at the Seaside	Common	530	War God Banner (Legendary)	0.0303951371
+9	Panic at the Seaside	Common	539	Demon Orb (Legendary)	0.0303951371
+9	Panic at the Seaside	Common	551	Violent Stone (Legendary)	0.0303951371
+9	Panic at the Seaside	Common	566	Gargantuan Feather (Legendary)	0.0303951371
+9	Panic at the Seaside	Common	581	Noise Dampener (Legendary)	0.0303951371
+9	Panic at the Seaside	Common	488	Terror Masque (Legendary)	0.0303951371
+9	Panic at the Seaside	Common	494	Envoy's Footgear (Legendary)	0.0303951371
+9	Panic at the Seaside	Rare	15030	Insect Hunter V	0.00219106046
+9	Panic at the Seaside	Rare	15040	Aquatic Hunter V	0.00219106046
+9	Panic at the Seaside	Rare	15025	Beast Hunter V	0.00219106046
+9	Panic at the Seaside	Rare	15035	Aerial Hunter V	0.00219106046
+9	Panic at the Seaside	Rare	15045	Humanoid Hunter V	0.00219106046
+9	Panic at the Seaside	Rare	15055	Titan Hunter V	0.00219106046
+9	Panic at the Seaside	Rare	15050	Machine Hunter V	0.00219106046
+9	Panic at the Seaside	Rare	15071	Ambush Boost V	0.00219106046
+9	Panic at the Seaside	Rare	15081	Aggro Attack Up V	0.00219106046
+9	Panic at the Seaside	Rare	15086	Indoor Attack Up V	0.00219106046
+9	Panic at the Seaside	Rare	15096	Fire Def Up V	0.00219106046
+9	Panic at the Seaside	Rare	15101	Water Def Up V	0.00219106046
+9	Panic at the Seaside	Rare	15106	Earth Def Up V	0.00219106046
+9	Panic at the Seaside	Rare	15111	Wind Def Up V	0.00219106046
+9	Panic at the Seaside	Rare	15116	Electric Def Up V	0.00219106046
+9	Panic at the Seaside	Rare	15121	Ice Def Up V	0.00219106046
+9	Panic at the Seaside	Rare	15126	Dark Def Up V	0.00219106046
+9	Panic at the Seaside	Rare	15131	Light Def Up V	0.00219106046
+9	Panic at the Seaside	Rare	15163	Emergency Guard V	0.00219106046
+9	Panic at the Seaside	Rare	15173	HP Attack Boost V	0.00219106046
+9	Panic at the Seaside	Rare	15178	Spike Defense V	0.00219106046
+9	Panic at the Seaside	Rare	15188	Topple Resist V	0.00219106046
+9	Panic at the Seaside	Rare	15193	Launch Resist V	0.00219106046
+9	Panic at the Seaside	Rare	15203	Blowdown Resist V	0.00219106046
+9	Panic at the Seaside	Rare	15218	Shackle Blade Resist V	0.00219106046
+9	Panic at the Seaside	Rare	15223	Auto-Attack Stealth V	0.00219106046
+9	Panic at the Seaside	Rare	15228	Aggro Boost V	0.00219106046
+9	Panic at the Seaside	Rare	15243	Arts Heal V	0.00219106046
+9	Panic at the Seaside	Rare	15258	Night Vision V	0.00219106046
+9	Panic at the Seaside	Rare	15268	Reflect Damage Up V	0.00219106046
+9	Panic at the Seaside	Rare	15278	Opening Art V	0.00219106046
+9	Panic at the Seaside	Rare	15283	Telepathy V	0.00219106046
+9	Panic at the Seaside	Rare	15293	Affinity MAX Barrier V	0.00219106046
+9	Panic at the Seaside	Rare	15298	Affinity MAX Atk V	0.00219106046
+9	Panic at the Seaside	Rare	15313	Shoulder to Shoulder V	0.00219106046
+9	Panic at the Seaside	Rare	15324	Specials Lv 1 Plus V	0.00219106046
+9	Panic at the Seaside	Rare	15329	Specials Lv 2 Plus V	0.00219106046
+9	Panic at the Seaside	Rare	15349	Jamming V	0.00219106046
+9	Panic at the Seaside	Rare	333	Avant-Garde Medal (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	345	Ancient Banner (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	354	Bloody Orb (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	405	Critical Symbol (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	116	Resurrection Symbol (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	408	Sword Attachment (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	409	Scimitar Attachment (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	416	Scythe Attachment (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	431	Rebirth Amulet (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	432	Beta Scope (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	10046	Howardite Chip	0.004382121
+9	Panic at the Seaside	Rare	10047	Aubrite Chip	0.004382121
+9	Panic at the Seaside	Rare	10050	Axion Chip	0.004382121
+9	Panic at the Seaside	Rare	10051	Mirror Matter Chip	0.004382121
+9	Panic at the Seaside	Rare	15364	Ambush Boost VI	0.00219106046
+9	Panic at the Seaside	Rare	15383	Launch Resist VI	0.00306748459
+9	Panic at the Seaside	Rare	15384	Smash Resist VI	0.00306748459
+9	Panic at the Seaside	Rare	15385	Blowdown Resist VI	0.00306748459
+9	Panic at the Seaside	Rare	15386	Knockback Resist VI	0.00306748459
+9	Panic at the Seaside	Rare	15396	Reflect Damage Up VI	0.00306748459
+9	Panic at the Seaside	Rare	15397	Opening Art VI	0.00306748459
+9	Panic at the Seaside	Rare	528	War God Banner (Common)	0.0131463632
+9	Panic at the Seaside	Rare	537	Demon Orb (Common)	0.0131463632
+9	Panic at the Seaside	Rare	549	Violent Stone (Common)	0.0131463632
+9	Panic at the Seaside	Rare	564	Gargantuan Feather (Common)	0.0131463632
+9	Panic at the Seaside	Rare	579	Noise Dampener (Common)	0.0131463632
+9	Panic at the Seaside	Rare	529	War God Banner (Rare)	0.0131463632
+9	Panic at the Seaside	Rare	538	Demon Orb (Rare)	0.0131463632
+9	Panic at the Seaside	Rare	550	Violent Stone (Rare)	0.0131463632
+9	Panic at the Seaside	Rare	565	Gargantuan Feather (Rare)	0.0131463632
+9	Panic at the Seaside	Rare	580	Noise Dampener (Rare)	0.0131463632
+9	Panic at the Seaside	Rare	530	War God Banner (Legendary)	0.0131463632
+9	Panic at the Seaside	Rare	539	Demon Orb (Legendary)	0.0131463632
+9	Panic at the Seaside	Rare	551	Violent Stone (Legendary)	0.0131463632
+9	Panic at the Seaside	Rare	566	Gargantuan Feather (Legendary)	0.0131463632
+9	Panic at the Seaside	Rare	581	Noise Dampener (Legendary)	0.0131463632
+9	Panic at the Seaside	Rare	488	Terror Masque (Legendary)	0.0131463632
+9	Panic at the Seaside	Rare	494	Envoy's Footgear (Legendary)	0.0131463632
+9	Panic at the Seaside	Rare	15010	Physical Defense Up V	0.00219106046
+9	Panic at the Seaside	Rare	15020	Block Rate Up V	0.00219106046
+9	Panic at the Seaside	Rare	15066	Fusion Combo Up V	0.00219106046
+9	Panic at the Seaside	Rare	15076	Reflect Immunity	0.00219106046
+9	Panic at the Seaside	Rare	15091	Outdoor Attack Up V	0.00219106046
+9	Panic at the Seaside	Rare	15153	Evasion Focus V	0.00219106046
+9	Panic at the Seaside	Rare	15183	Break Resist V	0.00219106046
+9	Panic at the Seaside	Rare	15198	Smash Resist V	0.00219106046
+9	Panic at the Seaside	Rare	15208	Knockback Resist V	0.00219106046
+9	Panic at the Seaside	Rare	15238	Arts Aggro Boost V	0.00219106046
+9	Panic at the Seaside	Rare	15263	Sunlight Eye V	0.00219106046
+9	Panic at the Seaside	Rare	15273	Range Boost Up V	0.00219106046
+9	Panic at the Seaside	Rare	15288	Helping Hand V	0.00219106046
+9	Panic at the Seaside	Rare	15308	Hunter's Chemistry V	0.00219106046
+9	Panic at the Seaside	Rare	15318	Fast Blade Switch V	0.00219106046
+9	Panic at the Seaside	Rare	15334	Specials Lv 3 Plus V	0.00219106046
+9	Panic at the Seaside	Rare	15339	Specials Lv 4 Plus V	0.00219106046
+9	Panic at the Seaside	Rare	15344	Affinity MAX Acc V	0.00219106046
+9	Panic at the Seaside	Rare	300	Titanium Vest (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	303	Ceramic Belt (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	306	Fiber Hat (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	309	Carbon Gloves (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	312	Ester Shoes (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	315	Comet Choker (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	336	Optical Headband (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	342	Graphite Greaves (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	348	Jet Pauldrons (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	351	Hero Vambraces (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	357	Quantum Scarf (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	383	World Tree Ward (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	389	Holy Necklace (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	393	Round Table Medal (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	396	Nano-Metal Gauntlet (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	399	Hi-Tech Eyepatch (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	10056	Positron Chip	0.004382121
+9	Panic at the Seaside	Rare	15356	Beast Hunter VI	0.00219106046
+9	Panic at the Seaside	Rare	15357	Insect Hunter VI	0.00219106046
+9	Panic at the Seaside	Rare	15358	Aerial Hunter VI	0.00219106046
+9	Panic at the Seaside	Rare	15359	Aquatic Hunter VI	0.004382121
+9	Panic at the Seaside	Rare	15360	Humanoid Hunter VI	0.00219106046
+9	Panic at the Seaside	Rare	15361	Machine Hunter VI	0.00219106046
+9	Panic at the Seaside	Rare	15362	Titan Hunter VI	0.00219106046
+9	Panic at the Seaside	Rare	15382	Topple Resist VI	0.00219106046
+9	Panic at the Seaside	Rare	15387	Auto-Attack Stealth VI	0.00219106046
+9	Panic at the Seaside	Rare	15388	Aggro Boost VI	0.00219106046
+9	Panic at the Seaside	Rare	15389	Arts Stealth VI	0.00219106046
+9	Panic at the Seaside	Rare	15390	Arts Aggro Boost VI	0.00219106046
+9	Panic at the Seaside	Rare	15394	Night Vision VI	0.00219106046
+9	Panic at the Seaside	Rare	15395	Sunlight Eye VI	0.00219106046
+9	Panic at the Seaside	Rare	15401	Specials Lv 1 Plus VI	0.00219106046
+9	Panic at the Seaside	Rare	15402	Specials Lv 2 Plus VI	0.00219106046
+9	Panic at the Seaside	Rare	15403	Specials Lv 3 Plus VI	0.00219106046
+9	Panic at the Seaside	Rare	15404	Specials Lv 4 Plus VI	0.00219106046
+9	Panic at the Seaside	Rare	465	Augmented Vision Kit (Common)	0.008764242
+9	Panic at the Seaside	Rare	468	Charm Bangle (Common)	0.008764242
+9	Panic at the Seaside	Rare	474	Seven-League Circlet (Common)	0.008764242
+9	Panic at the Seaside	Rare	498	Twin Trunks Vest (Common)	0.008764242
+9	Panic at the Seaside	Rare	507	Vivid Mitts (Common)	0.008764242
+9	Panic at the Seaside	Rare	510	Dauntless Boots (Common)	0.008764242
+9	Panic at the Seaside	Rare	513	Sunlight Choker (Common)	0.008764242
+9	Panic at the Seaside	Rare	525	Staunch Boots (Common)	0.008764242
+9	Panic at the Seaside	Rare	552	Enlightened Loincloth (Common)	0.008764242
+9	Panic at the Seaside	Rare	555	Glamorous Swimsuit (Common)	0.008764242
+9	Panic at the Seaside	Rare	558	Vanish Hood (Common)	0.008764242
+9	Panic at the Seaside	Rare	561	Platinum Nopon Mask (Common)	0.008764242
+9	Panic at the Seaside	Rare	573	Beatific Medal (Common)	0.008764242
+9	Panic at the Seaside	Rare	466	Augmented Vision Kit (Rare)	0.008764242
+9	Panic at the Seaside	Rare	469	Charm Bangle (Rare)	0.008764242
+9	Panic at the Seaside	Rare	475	Seven-League Circlet (Rare)	0.008764242
+9	Panic at the Seaside	Rare	499	Twin Trunks Vest (Rare)	0.008764242
+9	Panic at the Seaside	Rare	508	Vivid Mitts (Rare)	0.008764242
+9	Panic at the Seaside	Rare	511	Dauntless Boots (Rare)	0.008764242
+9	Panic at the Seaside	Rare	514	Sunlight Choker (Rare)	0.008764242
+9	Panic at the Seaside	Rare	526	Staunch Boots (Rare)	0.008764242
+9	Panic at the Seaside	Rare	553	Enlightened Loincloth (Rare)	0.008764242
+9	Panic at the Seaside	Rare	556	Glamorous Swimsuit (Rare)	0.008764242
+9	Panic at the Seaside	Rare	559	Vanish Hood (Rare)	0.008764242
+9	Panic at the Seaside	Rare	562	Platinum Nopon Mask (Rare)	0.008764242
+9	Panic at the Seaside	Rare	574	Beatific Medal (Rare)	0.008764242
+9	Panic at the Seaside	Rare	467	Augmented Vision Kit (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	470	Charm Bangle (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	476	Seven-League Circlet (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	500	Twin Trunks Vest (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	509	Vivid Mitts (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	512	Dauntless Boots (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	515	Sunlight Choker (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	527	Staunch Boots (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	554	Enlightened Loincloth (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	557	Glamorous Swimsuit (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	560	Vanish Hood (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	563	Platinum Nopon Mask (Legendary)	0.008764242
+9	Panic at the Seaside	Rare	575	Beatific Medal (Legendary)	0.008764242
+9	Panic at the Seaside	Legendary	15010	Physical Defense Up V	0.002437835
+9	Panic at the Seaside	Legendary	15020	Block Rate Up V	0.002437835
+9	Panic at the Seaside	Legendary	15066	Fusion Combo Up V	0.002437835
+9	Panic at the Seaside	Legendary	15076	Reflect Immunity	0.002437835
+9	Panic at the Seaside	Legendary	15091	Outdoor Attack Up V	0.002437835
+9	Panic at the Seaside	Legendary	15153	Evasion Focus V	0.002437835
+9	Panic at the Seaside	Legendary	15183	Break Resist V	0.002437835
+9	Panic at the Seaside	Legendary	15198	Smash Resist V	0.002437835
+9	Panic at the Seaside	Legendary	15208	Knockback Resist V	0.002437835
+9	Panic at the Seaside	Legendary	15238	Arts Aggro Boost V	0.002437835
+9	Panic at the Seaside	Legendary	15263	Sunlight Eye V	0.002437835
+9	Panic at the Seaside	Legendary	15273	Range Boost Up V	0.002437835
+9	Panic at the Seaside	Legendary	15288	Helping Hand V	0.002437835
+9	Panic at the Seaside	Legendary	15308	Hunter's Chemistry V	0.002437835
+9	Panic at the Seaside	Legendary	15318	Fast Blade Switch V	0.002437835
+9	Panic at the Seaside	Legendary	15334	Specials Lv 3 Plus V	0.002437835
+9	Panic at the Seaside	Legendary	15339	Specials Lv 4 Plus V	0.002437835
+9	Panic at the Seaside	Legendary	15344	Affinity MAX Acc V	0.002437835
+9	Panic at the Seaside	Legendary	300	Titanium Vest (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	303	Ceramic Belt (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	306	Fiber Hat (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	309	Carbon Gloves (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	312	Ester Shoes (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	315	Comet Choker (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	336	Optical Headband (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	342	Graphite Greaves (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	348	Jet Pauldrons (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	351	Hero Vambraces (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	357	Quantum Scarf (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	383	World Tree Ward (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	389	Holy Necklace (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	393	Round Table Medal (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	10056	Positron Chip	0.00487567
+9	Panic at the Seaside	Legendary	15356	Beast Hunter VI	0.002437835
+9	Panic at the Seaside	Legendary	15357	Insect Hunter VI	0.002437835
+9	Panic at the Seaside	Legendary	15358	Aerial Hunter VI	0.002437835
+9	Panic at the Seaside	Legendary	15359	Aquatic Hunter VI	0.002437835
+9	Panic at the Seaside	Legendary	15360	Humanoid Hunter VI	0.002437835
+9	Panic at the Seaside	Legendary	15361	Machine Hunter VI	0.002437835
+9	Panic at the Seaside	Legendary	15362	Titan Hunter VI	0.002437835
+9	Panic at the Seaside	Legendary	15382	Topple Resist VI	0.002437835
+9	Panic at the Seaside	Legendary	15387	Auto-Attack Stealth VI	0.002437835
+9	Panic at the Seaside	Legendary	15388	Aggro Boost VI	0.002437835
+9	Panic at the Seaside	Legendary	15389	Arts Stealth VI	0.002437835
+9	Panic at the Seaside	Legendary	15390	Arts Aggro Boost VI	0.002437835
+9	Panic at the Seaside	Legendary	15394	Night Vision VI	0.002437835
+9	Panic at the Seaside	Legendary	15395	Sunlight Eye VI	0.002437835
+9	Panic at the Seaside	Legendary	15401	Specials Lv 1 Plus VI	0.002437835
+9	Panic at the Seaside	Legendary	15402	Specials Lv 2 Plus VI	0.002437835
+9	Panic at the Seaside	Legendary	15403	Specials Lv 3 Plus VI	0.002437835
+9	Panic at the Seaside	Legendary	15404	Specials Lv 4 Plus VI	0.002437835
+9	Panic at the Seaside	Legendary	465	Augmented Vision Kit (Common)	0.00975134
+9	Panic at the Seaside	Legendary	468	Charm Bangle (Common)	0.00975134
+9	Panic at the Seaside	Legendary	474	Seven-League Circlet (Common)	0.00975134
+9	Panic at the Seaside	Legendary	498	Twin Trunks Vest (Common)	0.00975134
+9	Panic at the Seaside	Legendary	507	Vivid Mitts (Common)	0.00975134
+9	Panic at the Seaside	Legendary	510	Dauntless Boots (Common)	0.00975134
+9	Panic at the Seaside	Legendary	513	Sunlight Choker (Common)	0.00975134
+9	Panic at the Seaside	Legendary	525	Staunch Boots (Common)	0.00975134
+9	Panic at the Seaside	Legendary	552	Enlightened Loincloth (Common)	0.00975134
+9	Panic at the Seaside	Legendary	555	Glamorous Swimsuit (Common)	0.00975134
+9	Panic at the Seaside	Legendary	558	Vanish Hood (Common)	0.00975134
+9	Panic at the Seaside	Legendary	561	Platinum Nopon Mask (Common)	0.00975134
+9	Panic at the Seaside	Legendary	573	Beatific Medal (Common)	0.00975134
+9	Panic at the Seaside	Legendary	466	Augmented Vision Kit (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	469	Charm Bangle (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	475	Seven-League Circlet (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	499	Twin Trunks Vest (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	508	Vivid Mitts (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	511	Dauntless Boots (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	514	Sunlight Choker (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	526	Staunch Boots (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	553	Enlightened Loincloth (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	556	Glamorous Swimsuit (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	559	Vanish Hood (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	562	Platinum Nopon Mask (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	574	Beatific Medal (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	467	Augmented Vision Kit (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	470	Charm Bangle (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	476	Seven-League Circlet (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	500	Twin Trunks Vest (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	509	Vivid Mitts (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	512	Dauntless Boots (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	515	Sunlight Choker (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	527	Staunch Boots (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	554	Enlightened Loincloth (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	557	Glamorous Swimsuit (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	560	Vanish Hood (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	563	Platinum Nopon Mask (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	575	Beatific Medal (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	15005	Critical Up V	0.002437835
+9	Panic at the Seaside	Legendary	15015	Ether Defense Up V	0.002437835
+9	Panic at the Seaside	Legendary	15060	Blade Combo Boost V	0.002437835
+9	Panic at the Seaside	Legendary	15158	Swift Evasion V	0.002437835
+9	Panic at the Seaside	Legendary	15168	Endurance V	0.002437835
+9	Panic at the Seaside	Legendary	15233	Arts Stealth V	0.002437835
+9	Panic at the Seaside	Legendary	15248	Movement Heal V	0.002437835
+9	Panic at the Seaside	Legendary	15253	Damage Heal V	0.002437835
+9	Panic at the Seaside	Legendary	15303	Affinity MAX Evade V	0.002437835
+9	Panic at the Seaside	Legendary	10057	Hadron Chip	0.00487567
+9	Panic at the Seaside	Legendary	15353	Physical Defense Up VI	0.002437835
+9	Panic at the Seaside	Legendary	15354	Ether Defense Up VI	0.002437835
+9	Panic at the Seaside	Legendary	15368	Fire Def Up VI	0.00341296918
+9	Panic at the Seaside	Legendary	15369	Water Def Up VI	0.00341296918
+9	Panic at the Seaside	Legendary	15370	Wind Def Up VI	0.00341296918
+9	Panic at the Seaside	Legendary	15371	Earth Def Up VI	0.00341296918
+9	Panic at the Seaside	Legendary	15372	Electric Def Up VI	0.00341296918
+9	Panic at the Seaside	Legendary	15373	Ice Def Up VI	0.00341296918
+9	Panic at the Seaside	Legendary	15374	Light Def Up VI	0.00341296918
+9	Panic at the Seaside	Legendary	15375	Dark Def Up VI	0.00341296918
+9	Panic at the Seaside	Legendary	15381	Break Resist VI	0.002437835
+9	Panic at the Seaside	Legendary	15405	Affinity MAX Acc VI	0.002437835
+9	Panic at the Seaside	Legendary	456	Consul Greaves (Common)	0.01950268
+9	Panic at the Seaside	Legendary	489	Abyss Masque (Common)	0.00975134
+9	Panic at the Seaside	Legendary	495	Survivor's Footgear (Common)	0.00975134
+9	Panic at the Seaside	Legendary	501	Beast-Hide Vest (Common)	0.00975134
+9	Panic at the Seaside	Legendary	504	Prairie Cap (Common)	0.00975134
+9	Panic at the Seaside	Legendary	519	Crimson Headband (Common)	0.00975134
+9	Panic at the Seaside	Legendary	531	Consul Pauldrons (Common)	0.00975134
+9	Panic at the Seaside	Legendary	534	Divine Vambraces (Common)	0.00975134
+9	Panic at the Seaside	Legendary	540	Tachyon Scarf (Common)	0.00975134
+9	Panic at the Seaside	Legendary	576	Carbon Gauntlet (Common)	0.00975134
+9	Panic at the Seaside	Legendary	457	Consul Greaves (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	490	Abyss Masque (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	496	Survivor's Footgear (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	502	Beast-Hide Vest (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	505	Prairie Cap (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	520	Crimson Headband (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	532	Consul Pauldrons (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	535	Divine Vambraces (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	541	Tachyon Scarf (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	577	Carbon Gauntlet (Rare)	0.00975134
+9	Panic at the Seaside	Legendary	458	Consul Greaves (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	491	Abyss Masque (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	497	Survivor's Footgear (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	503	Beast-Hide Vest (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	506	Prairie Cap (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	521	Crimson Headband (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	533	Consul Pauldrons (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	536	Divine Vambraces (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	542	Tachyon Scarf (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	578	Carbon Gauntlet (Legendary)	0.00975134
+9	Panic at the Seaside	Legendary	25406	Intermediate Weaponry	0.00487567
+10	Tiger! Tiger! IRL	Common	15030	Insect Hunter V	0.005065856
+10	Tiger! Tiger! IRL	Common	15040	Aquatic Hunter V	0.005065856
+10	Tiger! Tiger! IRL	Common	15025	Beast Hunter V	0.005065856
+10	Tiger! Tiger! IRL	Common	15035	Aerial Hunter V	0.005065856
+10	Tiger! Tiger! IRL	Common	15045	Humanoid Hunter V	0.005065856
+10	Tiger! Tiger! IRL	Common	15055	Titan Hunter V	0.005065856
+10	Tiger! Tiger! IRL	Common	15050	Machine Hunter V	0.005065856
+10	Tiger! Tiger! IRL	Common	15071	Ambush Boost V	0.005065856
+10	Tiger! Tiger! IRL	Common	15081	Aggro Attack Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15086	Indoor Attack Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15096	Fire Def Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15101	Water Def Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15106	Earth Def Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15111	Wind Def Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15116	Electric Def Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15121	Ice Def Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15126	Dark Def Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15131	Light Def Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15163	Emergency Guard V	0.005065856
+10	Tiger! Tiger! IRL	Common	15173	HP Attack Boost V	0.005065856
+10	Tiger! Tiger! IRL	Common	15178	Spike Defense V	0.005065856
+10	Tiger! Tiger! IRL	Common	15188	Topple Resist V	0.005065856
+10	Tiger! Tiger! IRL	Common	15193	Launch Resist V	0.005065856
+10	Tiger! Tiger! IRL	Common	15203	Blowdown Resist V	0.005065856
+10	Tiger! Tiger! IRL	Common	15218	Shackle Blade Resist V	0.005065856
+10	Tiger! Tiger! IRL	Common	15223	Auto-Attack Stealth V	0.005065856
+10	Tiger! Tiger! IRL	Common	15228	Aggro Boost V	0.005065856
+10	Tiger! Tiger! IRL	Common	15243	Arts Heal V	0.005065856
+10	Tiger! Tiger! IRL	Common	15258	Night Vision V	0.005065856
+10	Tiger! Tiger! IRL	Common	15268	Reflect Damage Up V	0.005065856
+10	Tiger! Tiger! IRL	Common	15278	Opening Art V	0.005065856
+10	Tiger! Tiger! IRL	Common	15283	Telepathy V	0.005065856
+10	Tiger! Tiger! IRL	Common	15293	Affinity MAX Barrier V	0.005065856
+10	Tiger! Tiger! IRL	Common	15298	Affinity MAX Atk V	0.005065856
+10	Tiger! Tiger! IRL	Common	15313	Shoulder to Shoulder V	0.005065856
+10	Tiger! Tiger! IRL	Common	15324	Specials Lv 1 Plus V	0.005065856
+10	Tiger! Tiger! IRL	Common	15329	Specials Lv 2 Plus V	0.005065856
+10	Tiger! Tiger! IRL	Common	15349	Jamming V	0.005065856
+10	Tiger! Tiger! IRL	Common	333	Avant-Garde Medal (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	345	Ancient Banner (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	354	Bloody Orb (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	405	Critical Symbol (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	116	Resurrection Symbol (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	408	Sword Attachment (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	409	Scimitar Attachment (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	416	Scythe Attachment (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	431	Rebirth Amulet (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	432	Beta Scope (Legendary)	0.0202634241
+10	Tiger! Tiger! IRL	Common	10046	Howardite Chip	0.0101317121
+10	Tiger! Tiger! IRL	Common	10047	Aubrite Chip	0.0101317121
+10	Tiger! Tiger! IRL	Common	10050	Axion Chip	0.0101317121
+10	Tiger! Tiger! IRL	Common	10051	Mirror Matter Chip	0.0101317121
+10	Tiger! Tiger! IRL	Common	15364	Ambush Boost VI	0.005065856
+10	Tiger! Tiger! IRL	Common	15383	Launch Resist VI	0.00709219836
+10	Tiger! Tiger! IRL	Common	15384	Smash Resist VI	0.00709219836
+10	Tiger! Tiger! IRL	Common	15385	Blowdown Resist VI	0.00709219836
+10	Tiger! Tiger! IRL	Common	15386	Knockback Resist VI	0.00709219836
+10	Tiger! Tiger! IRL	Common	15396	Reflect Damage Up VI	0.00709219836
+10	Tiger! Tiger! IRL	Common	15397	Opening Art VI	0.00709219836
+10	Tiger! Tiger! IRL	Common	528	War God Banner (Common)	0.0303951371
+10	Tiger! Tiger! IRL	Common	537	Demon Orb (Common)	0.0303951371
+10	Tiger! Tiger! IRL	Common	549	Violent Stone (Common)	0.0303951371
+10	Tiger! Tiger! IRL	Common	564	Gargantuan Feather (Common)	0.0303951371
+10	Tiger! Tiger! IRL	Common	579	Noise Dampener (Common)	0.0303951371
+10	Tiger! Tiger! IRL	Common	529	War God Banner (Rare)	0.0303951371
+10	Tiger! Tiger! IRL	Common	538	Demon Orb (Rare)	0.0303951371
+10	Tiger! Tiger! IRL	Common	550	Violent Stone (Rare)	0.0303951371
+10	Tiger! Tiger! IRL	Common	565	Gargantuan Feather (Rare)	0.0303951371
+10	Tiger! Tiger! IRL	Common	580	Noise Dampener (Rare)	0.0303951371
+10	Tiger! Tiger! IRL	Common	530	War God Banner (Legendary)	0.0303951371
+10	Tiger! Tiger! IRL	Common	539	Demon Orb (Legendary)	0.0303951371
+10	Tiger! Tiger! IRL	Common	551	Violent Stone (Legendary)	0.0303951371
+10	Tiger! Tiger! IRL	Common	566	Gargantuan Feather (Legendary)	0.0303951371
+10	Tiger! Tiger! IRL	Common	581	Noise Dampener (Legendary)	0.0303951371
+10	Tiger! Tiger! IRL	Common	488	Terror Masque (Legendary)	0.0303951371
+10	Tiger! Tiger! IRL	Common	494	Envoy's Footgear (Legendary)	0.0303951371
+10	Tiger! Tiger! IRL	Rare	15030	Insect Hunter V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15040	Aquatic Hunter V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15025	Beast Hunter V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15035	Aerial Hunter V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15045	Humanoid Hunter V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15055	Titan Hunter V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15050	Machine Hunter V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15071	Ambush Boost V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15081	Aggro Attack Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15086	Indoor Attack Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15096	Fire Def Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15101	Water Def Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15106	Earth Def Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15111	Wind Def Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15116	Electric Def Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15121	Ice Def Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15126	Dark Def Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15131	Light Def Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15163	Emergency Guard V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15173	HP Attack Boost V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15178	Spike Defense V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15188	Topple Resist V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15193	Launch Resist V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15203	Blowdown Resist V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15218	Shackle Blade Resist V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15223	Auto-Attack Stealth V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15228	Aggro Boost V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15243	Arts Heal V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15258	Night Vision V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15268	Reflect Damage Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15278	Opening Art V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15283	Telepathy V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15293	Affinity MAX Barrier V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15298	Affinity MAX Atk V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15313	Shoulder to Shoulder V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15324	Specials Lv 1 Plus V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15329	Specials Lv 2 Plus V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15349	Jamming V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	333	Avant-Garde Medal (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	345	Ancient Banner (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	354	Bloody Orb (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	405	Critical Symbol (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	116	Resurrection Symbol (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	408	Sword Attachment (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	409	Scimitar Attachment (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	416	Scythe Attachment (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	431	Rebirth Amulet (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	432	Beta Scope (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	10046	Howardite Chip	0.00435350463
+10	Tiger! Tiger! IRL	Rare	10047	Aubrite Chip	0.00435350463
+10	Tiger! Tiger! IRL	Rare	10050	Axion Chip	0.00435350463
+10	Tiger! Tiger! IRL	Rare	10051	Mirror Matter Chip	0.00435350463
+10	Tiger! Tiger! IRL	Rare	15364	Ambush Boost VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15383	Launch Resist VI	0.00304745324
+10	Tiger! Tiger! IRL	Rare	15384	Smash Resist VI	0.00304745324
+10	Tiger! Tiger! IRL	Rare	15385	Blowdown Resist VI	0.00304745324
+10	Tiger! Tiger! IRL	Rare	15386	Knockback Resist VI	0.00304745324
+10	Tiger! Tiger! IRL	Rare	15396	Reflect Damage Up VI	0.00304745324
+10	Tiger! Tiger! IRL	Rare	15397	Opening Art VI	0.00304745324
+10	Tiger! Tiger! IRL	Rare	528	War God Banner (Common)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	537	Demon Orb (Common)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	549	Violent Stone (Common)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	564	Gargantuan Feather (Common)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	579	Noise Dampener (Common)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	529	War God Banner (Rare)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	538	Demon Orb (Rare)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	550	Violent Stone (Rare)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	565	Gargantuan Feather (Rare)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	580	Noise Dampener (Rare)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	530	War God Banner (Legendary)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	539	Demon Orb (Legendary)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	551	Violent Stone (Legendary)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	566	Gargantuan Feather (Legendary)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	581	Noise Dampener (Legendary)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	488	Terror Masque (Legendary)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	494	Envoy's Footgear (Legendary)	0.0130605139
+10	Tiger! Tiger! IRL	Rare	15010	Physical Defense Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15020	Block Rate Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15066	Fusion Combo Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15076	Reflect Immunity	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15091	Outdoor Attack Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15153	Evasion Focus V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15183	Break Resist V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15198	Smash Resist V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15208	Knockback Resist V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15238	Arts Aggro Boost V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15263	Sunlight Eye V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15273	Range Boost Up V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15288	Helping Hand V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15308	Hunter's Chemistry V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15318	Fast Blade Switch V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15334	Specials Lv 3 Plus V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15339	Specials Lv 4 Plus V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15344	Affinity MAX Acc V	0.00217675231
+10	Tiger! Tiger! IRL	Rare	300	Titanium Vest (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	303	Ceramic Belt (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	306	Fiber Hat (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	309	Carbon Gloves (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	312	Ester Shoes (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	315	Comet Choker (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	336	Optical Headband (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	342	Graphite Greaves (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	348	Jet Pauldrons (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	351	Hero Vambraces (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	357	Quantum Scarf (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	383	World Tree Ward (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	389	Holy Necklace (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	393	Round Table Medal (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	396	Nano-Metal Gauntlet (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	399	Hi-Tech Eyepatch (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	10056	Positron Chip	0.00435350463
+10	Tiger! Tiger! IRL	Rare	15356	Beast Hunter VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15357	Insect Hunter VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15358	Aerial Hunter VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15359	Aquatic Hunter VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15360	Humanoid Hunter VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15361	Machine Hunter VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15362	Titan Hunter VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15382	Topple Resist VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15387	Auto-Attack Stealth VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15388	Aggro Boost VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15389	Arts Stealth VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15390	Arts Aggro Boost VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15394	Night Vision VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15395	Sunlight Eye VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15401	Specials Lv 1 Plus VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15402	Specials Lv 2 Plus VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15403	Specials Lv 3 Plus VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	15404	Specials Lv 4 Plus VI	0.00217675231
+10	Tiger! Tiger! IRL	Rare	465	Augmented Vision Kit (Common)	0.0174140185
+10	Tiger! Tiger! IRL	Rare	468	Charm Bangle (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	474	Seven-League Circlet (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	498	Twin Trunks Vest (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	507	Vivid Mitts (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	510	Dauntless Boots (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	513	Sunlight Choker (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	525	Staunch Boots (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	552	Enlightened Loincloth (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	555	Glamorous Swimsuit (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	558	Vanish Hood (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	561	Platinum Nopon Mask (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	573	Beatific Medal (Common)	0.008707009
+10	Tiger! Tiger! IRL	Rare	466	Augmented Vision Kit (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	469	Charm Bangle (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	475	Seven-League Circlet (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	499	Twin Trunks Vest (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	508	Vivid Mitts (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	511	Dauntless Boots (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	514	Sunlight Choker (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	526	Staunch Boots (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	553	Enlightened Loincloth (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	556	Glamorous Swimsuit (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	559	Vanish Hood (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	562	Platinum Nopon Mask (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	574	Beatific Medal (Rare)	0.008707009
+10	Tiger! Tiger! IRL	Rare	467	Augmented Vision Kit (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	470	Charm Bangle (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	476	Seven-League Circlet (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	500	Twin Trunks Vest (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	509	Vivid Mitts (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	512	Dauntless Boots (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	515	Sunlight Choker (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	527	Staunch Boots (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	554	Enlightened Loincloth (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	557	Glamorous Swimsuit (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	560	Vanish Hood (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	563	Platinum Nopon Mask (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Rare	575	Beatific Medal (Legendary)	0.008707009
+10	Tiger! Tiger! IRL	Legendary	15010	Physical Defense Up V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15020	Block Rate Up V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15066	Fusion Combo Up V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15076	Reflect Immunity	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15091	Outdoor Attack Up V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15153	Evasion Focus V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15183	Break Resist V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15198	Smash Resist V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15208	Knockback Resist V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15238	Arts Aggro Boost V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15263	Sunlight Eye V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15273	Range Boost Up V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15288	Helping Hand V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15308	Hunter's Chemistry V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15318	Fast Blade Switch V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15334	Specials Lv 3 Plus V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15339	Specials Lv 4 Plus V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15344	Affinity MAX Acc V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	300	Titanium Vest (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	303	Ceramic Belt (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	306	Fiber Hat (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	309	Carbon Gloves (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	312	Ester Shoes (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	315	Comet Choker (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	336	Optical Headband (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	342	Graphite Greaves (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	348	Jet Pauldrons (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	351	Hero Vambraces (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	357	Quantum Scarf (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	383	World Tree Ward (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	389	Holy Necklace (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	393	Round Table Medal (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	10056	Positron Chip	0.00488758553
+10	Tiger! Tiger! IRL	Legendary	15356	Beast Hunter VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15357	Insect Hunter VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15358	Aerial Hunter VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15359	Aquatic Hunter VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15360	Humanoid Hunter VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15361	Machine Hunter VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15362	Titan Hunter VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15382	Topple Resist VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15387	Auto-Attack Stealth VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15388	Aggro Boost VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15389	Arts Stealth VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15390	Arts Aggro Boost VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15394	Night Vision VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15395	Sunlight Eye VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15401	Specials Lv 1 Plus VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15402	Specials Lv 2 Plus VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15403	Specials Lv 3 Plus VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15404	Specials Lv 4 Plus VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	465	Augmented Vision Kit (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	468	Charm Bangle (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	474	Seven-League Circlet (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	498	Twin Trunks Vest (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	507	Vivid Mitts (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	510	Dauntless Boots (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	513	Sunlight Choker (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	525	Staunch Boots (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	552	Enlightened Loincloth (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	555	Glamorous Swimsuit (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	558	Vanish Hood (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	561	Platinum Nopon Mask (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	573	Beatific Medal (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	466	Augmented Vision Kit (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	469	Charm Bangle (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	475	Seven-League Circlet (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	499	Twin Trunks Vest (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	508	Vivid Mitts (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	511	Dauntless Boots (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	514	Sunlight Choker (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	526	Staunch Boots (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	553	Enlightened Loincloth (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	556	Glamorous Swimsuit (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	559	Vanish Hood (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	562	Platinum Nopon Mask (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	574	Beatific Medal (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	467	Augmented Vision Kit (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	470	Charm Bangle (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	476	Seven-League Circlet (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	500	Twin Trunks Vest (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	509	Vivid Mitts (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	512	Dauntless Boots (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	515	Sunlight Choker (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	527	Staunch Boots (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	554	Enlightened Loincloth (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	557	Glamorous Swimsuit (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	560	Vanish Hood (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	563	Platinum Nopon Mask (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	575	Beatific Medal (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	15005	Critical Up V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15015	Ether Defense Up V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15060	Blade Combo Boost V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15158	Swift Evasion V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15168	Endurance V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15233	Arts Stealth V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15248	Movement Heal V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15253	Damage Heal V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15303	Affinity MAX Evade V	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	10057	Hadron Chip	0.00488758553
+10	Tiger! Tiger! IRL	Legendary	15353	Physical Defense Up VI	0.00488758553
+10	Tiger! Tiger! IRL	Legendary	15354	Ether Defense Up VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15368	Fire Def Up VI	0.00342130987
+10	Tiger! Tiger! IRL	Legendary	15369	Water Def Up VI	0.00342130987
+10	Tiger! Tiger! IRL	Legendary	15370	Wind Def Up VI	0.00342130987
+10	Tiger! Tiger! IRL	Legendary	15371	Earth Def Up VI	0.00342130987
+10	Tiger! Tiger! IRL	Legendary	15372	Electric Def Up VI	0.00342130987
+10	Tiger! Tiger! IRL	Legendary	15373	Ice Def Up VI	0.00342130987
+10	Tiger! Tiger! IRL	Legendary	15374	Light Def Up VI	0.00342130987
+10	Tiger! Tiger! IRL	Legendary	15375	Dark Def Up VI	0.00342130987
+10	Tiger! Tiger! IRL	Legendary	15381	Break Resist VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	15405	Affinity MAX Acc VI	0.00244379276
+10	Tiger! Tiger! IRL	Legendary	456	Consul Greaves (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	489	Abyss Masque (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	495	Survivor's Footgear (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	501	Beast-Hide Vest (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	504	Prairie Cap (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	519	Crimson Headband (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	531	Consul Pauldrons (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	534	Divine Vambraces (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	540	Tachyon Scarf (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	576	Carbon Gauntlet (Common)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	457	Consul Greaves (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	490	Abyss Masque (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	496	Survivor's Footgear (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	502	Beast-Hide Vest (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	505	Prairie Cap (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	520	Crimson Headband (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	532	Consul Pauldrons (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	535	Divine Vambraces (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	541	Tachyon Scarf (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	577	Carbon Gauntlet (Rare)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	458	Consul Greaves (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	491	Abyss Masque (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	497	Survivor's Footgear (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	503	Beast-Hide Vest (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	506	Prairie Cap (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	521	Crimson Headband (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	533	Consul Pauldrons (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	536	Divine Vambraces (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	542	Tachyon Scarf (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	578	Carbon Gauntlet (Legendary)	0.009775171
+10	Tiger! Tiger! IRL	Legendary	25406	Intermediate Weaponry	0.009775171
+11	Torna's Finest	Common	15030	Insect Hunter V	0.0147601478
+11	Torna's Finest	Common	15040	Aquatic Hunter V	0.0147601478
+11	Torna's Finest	Common	15025	Beast Hunter V	0.0147601478
+11	Torna's Finest	Common	15035	Aerial Hunter V	0.0147601478
+11	Torna's Finest	Common	15045	Humanoid Hunter V	0.0147601478
+11	Torna's Finest	Common	15055	Titan Hunter V	0.0147601478
+11	Torna's Finest	Common	15050	Machine Hunter V	0.0147601478
+11	Torna's Finest	Common	15071	Ambush Boost V	0.0147601478
+11	Torna's Finest	Common	15081	Aggro Attack Up V	0.0147601478
+11	Torna's Finest	Common	15086	Indoor Attack Up V	0.0147601478
+11	Torna's Finest	Common	15096	Fire Def Up V	0.0147601478
+11	Torna's Finest	Common	15101	Water Def Up V	0.0147601478
+11	Torna's Finest	Common	15106	Earth Def Up V	0.0147601478
+11	Torna's Finest	Common	15111	Wind Def Up V	0.0147601478
+11	Torna's Finest	Common	15116	Electric Def Up V	0.0147601478
+11	Torna's Finest	Common	15121	Ice Def Up V	0.0147601478
+11	Torna's Finest	Common	15126	Dark Def Up V	0.0147601478
+11	Torna's Finest	Common	15131	Light Def Up V	0.0147601478
+11	Torna's Finest	Common	15163	Emergency Guard V	0.0147601478
+11	Torna's Finest	Common	15173	HP Attack Boost V	0.0147601478
+11	Torna's Finest	Common	15178	Spike Defense V	0.0147601478
+11	Torna's Finest	Common	15188	Topple Resist V	0.0147601478
+11	Torna's Finest	Common	15193	Launch Resist V	0.0147601478
+11	Torna's Finest	Common	15203	Blowdown Resist V	0.0147601478
+11	Torna's Finest	Common	15218	Shackle Blade Resist V	0.0147601478
+11	Torna's Finest	Common	15223	Auto-Attack Stealth V	0.0147601478
+11	Torna's Finest	Common	15228	Aggro Boost V	0.0147601478
+11	Torna's Finest	Common	15243	Arts Heal V	0.0147601478
+11	Torna's Finest	Common	15258	Night Vision V	0.0147601478
+11	Torna's Finest	Common	15268	Reflect Damage Up V	0.0147601478
+11	Torna's Finest	Common	15278	Opening Art V	0.0147601478
+11	Torna's Finest	Common	15283	Telepathy V	0.0147601478
+11	Torna's Finest	Common	15293	Affinity MAX Barrier V	0.0147601478
+11	Torna's Finest	Common	15298	Affinity MAX Atk V	0.0147601478
+11	Torna's Finest	Common	15313	Shoulder to Shoulder V	0.0147601478
+11	Torna's Finest	Common	15324	Specials Lv 1 Plus V	0.0147601478
+11	Torna's Finest	Common	15329	Specials Lv 2 Plus V	0.0147601478
+11	Torna's Finest	Common	15349	Jamming V	0.0147601478
+11	Torna's Finest	Common	333	Avant-Garde Medal (Legendary)	0.007380074
+11	Torna's Finest	Common	345	Ancient Banner (Legendary)	0.007380074
+11	Torna's Finest	Common	354	Bloody Orb (Legendary)	0.007380074
+11	Torna's Finest	Common	405	Critical Symbol (Legendary)	0.007380074
+11	Torna's Finest	Common	116	Resurrection Symbol (Legendary)	0.007380074
+11	Torna's Finest	Common	408	Sword Attachment (Legendary)	0.007380074
+11	Torna's Finest	Common	409	Scimitar Attachment (Legendary)	0.007380074
+11	Torna's Finest	Common	416	Scythe Attachment (Legendary)	0.007380074
+11	Torna's Finest	Common	431	Rebirth Amulet (Legendary)	0.007380074
+11	Torna's Finest	Common	432	Beta Scope (Legendary)	0.007380074
+11	Torna's Finest	Common	10046	Howardite Chip	0.007380074
+11	Torna's Finest	Common	10047	Aubrite Chip	0.007380074
+11	Torna's Finest	Common	10050	Axion Chip	0.007380074
+11	Torna's Finest	Common	10051	Mirror Matter Chip	0.007380074
+11	Torna's Finest	Common	15364	Ambush Boost VI	0.0147601478
+11	Torna's Finest	Common	15383	Launch Resist VI	0.0221402217
+11	Torna's Finest	Common	15384	Smash Resist VI	0.0221402217
+11	Torna's Finest	Common	15385	Blowdown Resist VI	0.0221402217
+11	Torna's Finest	Common	15386	Knockback Resist VI	0.0221402217
+11	Torna's Finest	Common	15396	Reflect Damage Up VI	0.0221402217
+11	Torna's Finest	Common	15397	Opening Art VI	0.0221402217
+11	Torna's Finest	Common	528	War God Banner (Common)	0.0110701108
+11	Torna's Finest	Common	537	Demon Orb (Common)	0.0110701108
+11	Torna's Finest	Common	549	Violent Stone (Common)	0.0110701108
+11	Torna's Finest	Common	564	Gargantuan Feather (Common)	0.0110701108
+11	Torna's Finest	Common	579	Noise Dampener (Common)	0.0110701108
+11	Torna's Finest	Common	529	War God Banner (Rare)	0.0110701108
+11	Torna's Finest	Common	538	Demon Orb (Rare)	0.0110701108
+11	Torna's Finest	Common	550	Violent Stone (Rare)	0.0110701108
+11	Torna's Finest	Common	565	Gargantuan Feather (Rare)	0.0110701108
+11	Torna's Finest	Common	580	Noise Dampener (Rare)	0.0110701108
+11	Torna's Finest	Common	530	War God Banner (Legendary)	0.0110701108
+11	Torna's Finest	Common	539	Demon Orb (Legendary)	0.0110701108
+11	Torna's Finest	Common	551	Violent Stone (Legendary)	0.0110701108
+11	Torna's Finest	Common	566	Gargantuan Feather (Legendary)	0.0110701108
+11	Torna's Finest	Common	581	Noise Dampener (Legendary)	0.0110701108
+11	Torna's Finest	Common	488	Terror Masque (Legendary)	0.0110701108
+11	Torna's Finest	Common	494	Envoy's Footgear (Legendary)	0.0110701108
+11	Torna's Finest	Rare	15030	Insect Hunter V	0.007561437
+11	Torna's Finest	Rare	15040	Aquatic Hunter V	0.007561437
+11	Torna's Finest	Rare	15025	Beast Hunter V	0.007561437
+11	Torna's Finest	Rare	15035	Aerial Hunter V	0.007561437
+11	Torna's Finest	Rare	15045	Humanoid Hunter V	0.007561437
+11	Torna's Finest	Rare	15055	Titan Hunter V	0.007561437
+11	Torna's Finest	Rare	15050	Machine Hunter V	0.007561437
+11	Torna's Finest	Rare	15071	Ambush Boost V	0.007561437
+11	Torna's Finest	Rare	15081	Aggro Attack Up V	0.007561437
+11	Torna's Finest	Rare	15086	Indoor Attack Up V	0.007561437
+11	Torna's Finest	Rare	15096	Fire Def Up V	0.007561437
+11	Torna's Finest	Rare	15101	Water Def Up V	0.007561437
+11	Torna's Finest	Rare	15106	Earth Def Up V	0.007561437
+11	Torna's Finest	Rare	15111	Wind Def Up V	0.007561437
+11	Torna's Finest	Rare	15116	Electric Def Up V	0.007561437
+11	Torna's Finest	Rare	15121	Ice Def Up V	0.007561437
+11	Torna's Finest	Rare	15126	Dark Def Up V	0.007561437
+11	Torna's Finest	Rare	15131	Light Def Up V	0.007561437
+11	Torna's Finest	Rare	15163	Emergency Guard V	0.007561437
+11	Torna's Finest	Rare	15173	HP Attack Boost V	0.007561437
+11	Torna's Finest	Rare	15178	Spike Defense V	0.007561437
+11	Torna's Finest	Rare	15188	Topple Resist V	0.007561437
+11	Torna's Finest	Rare	15193	Launch Resist V	0.007561437
+11	Torna's Finest	Rare	15203	Blowdown Resist V	0.007561437
+11	Torna's Finest	Rare	15218	Shackle Blade Resist V	0.007561437
+11	Torna's Finest	Rare	15223	Auto-Attack Stealth V	0.007561437
+11	Torna's Finest	Rare	15228	Aggro Boost V	0.007561437
+11	Torna's Finest	Rare	15243	Arts Heal V	0.007561437
+11	Torna's Finest	Rare	15258	Night Vision V	0.007561437
+11	Torna's Finest	Rare	15268	Reflect Damage Up V	0.007561437
+11	Torna's Finest	Rare	15278	Opening Art V	0.007561437
+11	Torna's Finest	Rare	15283	Telepathy V	0.007561437
+11	Torna's Finest	Rare	15293	Affinity MAX Barrier V	0.007561437
+11	Torna's Finest	Rare	15298	Affinity MAX Atk V	0.007561437
+11	Torna's Finest	Rare	15313	Shoulder to Shoulder V	0.007561437
+11	Torna's Finest	Rare	15324	Specials Lv 1 Plus V	0.007561437
+11	Torna's Finest	Rare	15329	Specials Lv 2 Plus V	0.007561437
+11	Torna's Finest	Rare	15349	Jamming V	0.007561437
+11	Torna's Finest	Rare	333	Avant-Garde Medal (Legendary)	0.00378071843
+11	Torna's Finest	Rare	345	Ancient Banner (Legendary)	0.00378071843
+11	Torna's Finest	Rare	354	Bloody Orb (Legendary)	0.00378071843
+11	Torna's Finest	Rare	405	Critical Symbol (Legendary)	0.00378071843
+11	Torna's Finest	Rare	116	Resurrection Symbol (Legendary)	0.00378071843
+11	Torna's Finest	Rare	408	Sword Attachment (Legendary)	0.00378071843
+11	Torna's Finest	Rare	409	Scimitar Attachment (Legendary)	0.00378071843
+11	Torna's Finest	Rare	416	Scythe Attachment (Legendary)	0.00378071843
+11	Torna's Finest	Rare	431	Rebirth Amulet (Legendary)	0.00378071843
+11	Torna's Finest	Rare	432	Beta Scope (Legendary)	0.00378071843
+11	Torna's Finest	Rare	10046	Howardite Chip	0.00378071843
+11	Torna's Finest	Rare	10047	Aubrite Chip	0.00378071843
+11	Torna's Finest	Rare	10050	Axion Chip	0.00378071843
+11	Torna's Finest	Rare	10051	Mirror Matter Chip	0.00378071843
+11	Torna's Finest	Rare	15364	Ambush Boost VI	0.007561437
+11	Torna's Finest	Rare	15383	Launch Resist VI	0.0113421548
+11	Torna's Finest	Rare	15384	Smash Resist VI	0.0113421548
+11	Torna's Finest	Rare	15385	Blowdown Resist VI	0.0113421548
+11	Torna's Finest	Rare	15386	Knockback Resist VI	0.0113421548
+11	Torna's Finest	Rare	15396	Reflect Damage Up VI	0.0113421548
+11	Torna's Finest	Rare	15397	Opening Art VI	0.0113421548
+11	Torna's Finest	Rare	528	War God Banner (Common)	0.00567107741
+11	Torna's Finest	Rare	537	Demon Orb (Common)	0.00567107741
+11	Torna's Finest	Rare	549	Violent Stone (Common)	0.00567107741
+11	Torna's Finest	Rare	564	Gargantuan Feather (Common)	0.00567107741
+11	Torna's Finest	Rare	579	Noise Dampener (Common)	0.00567107741
+11	Torna's Finest	Rare	529	War God Banner (Rare)	0.00567107741
+11	Torna's Finest	Rare	538	Demon Orb (Rare)	0.00567107741
+11	Torna's Finest	Rare	550	Violent Stone (Rare)	0.00567107741
+11	Torna's Finest	Rare	565	Gargantuan Feather (Rare)	0.00567107741
+11	Torna's Finest	Rare	580	Noise Dampener (Rare)	0.00567107741
+11	Torna's Finest	Rare	530	War God Banner (Legendary)	0.00567107741
+11	Torna's Finest	Rare	539	Demon Orb (Legendary)	0.00567107741
+11	Torna's Finest	Rare	551	Violent Stone (Legendary)	0.00567107741
+11	Torna's Finest	Rare	566	Gargantuan Feather (Legendary)	0.00567107741
+11	Torna's Finest	Rare	581	Noise Dampener (Legendary)	0.00567107741
+11	Torna's Finest	Rare	488	Terror Masque (Legendary)	0.00567107741
+11	Torna's Finest	Rare	494	Envoy's Footgear (Legendary)	0.00567107741
+11	Torna's Finest	Rare	15010	Physical Defense Up V	0.007561437
+11	Torna's Finest	Rare	15020	Block Rate Up V	0.007561437
+11	Torna's Finest	Rare	15066	Fusion Combo Up V	0.007561437
+11	Torna's Finest	Rare	15076	Reflect Immunity	0.007561437
+11	Torna's Finest	Rare	15091	Outdoor Attack Up V	0.007561437
+11	Torna's Finest	Rare	15153	Evasion Focus V	0.007561437
+11	Torna's Finest	Rare	15183	Break Resist V	0.007561437
+11	Torna's Finest	Rare	15198	Smash Resist V	0.007561437
+11	Torna's Finest	Rare	15208	Knockback Resist V	0.007561437
+11	Torna's Finest	Rare	15238	Arts Aggro Boost V	0.007561437
+11	Torna's Finest	Rare	15263	Sunlight Eye V	0.007561437
+11	Torna's Finest	Rare	15273	Range Boost Up V	0.007561437
+11	Torna's Finest	Rare	15288	Helping Hand V	0.007561437
+11	Torna's Finest	Rare	15308	Hunter's Chemistry V	0.007561437
+11	Torna's Finest	Rare	15318	Fast Blade Switch V	0.007561437
+11	Torna's Finest	Rare	15334	Specials Lv 3 Plus V	0.007561437
+11	Torna's Finest	Rare	15339	Specials Lv 4 Plus V	0.007561437
+11	Torna's Finest	Rare	15344	Affinity MAX Acc V	0.007561437
+11	Torna's Finest	Rare	300	Titanium Vest (Legendary)	0.00378071843
+11	Torna's Finest	Rare	303	Ceramic Belt (Legendary)	0.00378071843
+11	Torna's Finest	Rare	306	Fiber Hat (Legendary)	0.00378071843
+11	Torna's Finest	Rare	309	Carbon Gloves (Legendary)	0.00378071843
+11	Torna's Finest	Rare	312	Ester Shoes (Legendary)	0.00378071843
+11	Torna's Finest	Rare	315	Comet Choker (Legendary)	0.00378071843
+11	Torna's Finest	Rare	336	Optical Headband (Legendary)	0.00378071843
+11	Torna's Finest	Rare	342	Graphite Greaves (Legendary)	0.00378071843
+11	Torna's Finest	Rare	348	Jet Pauldrons (Legendary)	0.00378071843
+11	Torna's Finest	Rare	351	Hero Vambraces (Legendary)	0.00378071843
+11	Torna's Finest	Rare	357	Quantum Scarf (Legendary)	0.00378071843
+11	Torna's Finest	Rare	383	World Tree Ward (Legendary)	0.00378071843
+11	Torna's Finest	Rare	389	Holy Necklace (Legendary)	0.00378071843
+11	Torna's Finest	Rare	393	Round Table Medal (Legendary)	0.00378071843
+11	Torna's Finest	Rare	396	Nano-Metal Gauntlet (Legendary)	0.00378071843
+11	Torna's Finest	Rare	399	Hi-Tech Eyepatch (Legendary)	0.00378071843
+11	Torna's Finest	Rare	10056	Positron Chip	0.00378071843
+11	Torna's Finest	Rare	15356	Beast Hunter VI	0.007561437
+11	Torna's Finest	Rare	15357	Insect Hunter VI	0.007561437
+11	Torna's Finest	Rare	15358	Aerial Hunter VI	0.007561437
+11	Torna's Finest	Rare	15359	Aquatic Hunter VI	0.007561437
+11	Torna's Finest	Rare	15360	Humanoid Hunter VI	0.007561437
+11	Torna's Finest	Rare	15361	Machine Hunter VI	0.007561437
+11	Torna's Finest	Rare	15362	Titan Hunter VI	0.007561437
+11	Torna's Finest	Rare	15382	Topple Resist VI	0.007561437
+11	Torna's Finest	Rare	15387	Auto-Attack Stealth VI	0.007561437
+11	Torna's Finest	Rare	15388	Aggro Boost VI	0.007561437
+11	Torna's Finest	Rare	15389	Arts Stealth VI	0.007561437
+11	Torna's Finest	Rare	15390	Arts Aggro Boost VI	0.007561437
+11	Torna's Finest	Rare	15394	Night Vision VI	0.007561437
+11	Torna's Finest	Rare	15395	Sunlight Eye VI	0.007561437
+11	Torna's Finest	Rare	15401	Specials Lv 1 Plus VI	0.007561437
+11	Torna's Finest	Rare	15402	Specials Lv 2 Plus VI	0.007561437
+11	Torna's Finest	Rare	15403	Specials Lv 3 Plus VI	0.007561437
+11	Torna's Finest	Rare	15404	Specials Lv 4 Plus VI	0.007561437
+11	Torna's Finest	Rare	465	Augmented Vision Kit (Common)	0.00378071843
+11	Torna's Finest	Rare	468	Charm Bangle (Common)	0.007561437
+11	Torna's Finest	Rare	474	Seven-League Circlet (Common)	0.00378071843
+11	Torna's Finest	Rare	498	Twin Trunks Vest (Common)	0.00378071843
+11	Torna's Finest	Rare	507	Vivid Mitts (Common)	0.00378071843
+11	Torna's Finest	Rare	510	Dauntless Boots (Common)	0.00378071843
+11	Torna's Finest	Rare	513	Sunlight Choker (Common)	0.00378071843
+11	Torna's Finest	Rare	525	Staunch Boots (Common)	0.00378071843
+11	Torna's Finest	Rare	552	Enlightened Loincloth (Common)	0.00378071843
+11	Torna's Finest	Rare	555	Glamorous Swimsuit (Common)	0.00378071843
+11	Torna's Finest	Rare	558	Vanish Hood (Common)	0.00378071843
+11	Torna's Finest	Rare	561	Platinum Nopon Mask (Common)	0.00378071843
+11	Torna's Finest	Rare	573	Beatific Medal (Common)	0.00378071843
+11	Torna's Finest	Rare	466	Augmented Vision Kit (Rare)	0.00378071843
+11	Torna's Finest	Rare	469	Charm Bangle (Rare)	0.00378071843
+11	Torna's Finest	Rare	475	Seven-League Circlet (Rare)	0.00378071843
+11	Torna's Finest	Rare	499	Twin Trunks Vest (Rare)	0.00378071843
+11	Torna's Finest	Rare	508	Vivid Mitts (Rare)	0.00378071843
+11	Torna's Finest	Rare	511	Dauntless Boots (Rare)	0.00378071843
+11	Torna's Finest	Rare	514	Sunlight Choker (Rare)	0.00378071843
+11	Torna's Finest	Rare	526	Staunch Boots (Rare)	0.00378071843
+11	Torna's Finest	Rare	553	Enlightened Loincloth (Rare)	0.00378071843
+11	Torna's Finest	Rare	556	Glamorous Swimsuit (Rare)	0.00378071843
+11	Torna's Finest	Rare	559	Vanish Hood (Rare)	0.00378071843
+11	Torna's Finest	Rare	562	Platinum Nopon Mask (Rare)	0.00378071843
+11	Torna's Finest	Rare	574	Beatific Medal (Rare)	0.00378071843
+11	Torna's Finest	Rare	467	Augmented Vision Kit (Legendary)	0.00378071843
+11	Torna's Finest	Rare	470	Charm Bangle (Legendary)	0.00378071843
+11	Torna's Finest	Rare	476	Seven-League Circlet (Legendary)	0.00378071843
+11	Torna's Finest	Rare	500	Twin Trunks Vest (Legendary)	0.00378071843
+11	Torna's Finest	Rare	509	Vivid Mitts (Legendary)	0.00378071843
+11	Torna's Finest	Rare	512	Dauntless Boots (Legendary)	0.00378071843
+11	Torna's Finest	Rare	515	Sunlight Choker (Legendary)	0.00378071843
+11	Torna's Finest	Rare	527	Staunch Boots (Legendary)	0.00378071843
+11	Torna's Finest	Rare	554	Enlightened Loincloth (Legendary)	0.00378071843
+11	Torna's Finest	Rare	557	Glamorous Swimsuit (Legendary)	0.00378071843
+11	Torna's Finest	Rare	560	Vanish Hood (Legendary)	0.00378071843
+11	Torna's Finest	Rare	563	Platinum Nopon Mask (Legendary)	0.00378071843
+11	Torna's Finest	Rare	575	Beatific Medal (Legendary)	0.00378071843
+11	Torna's Finest	Legendary	15010	Physical Defense Up V	0.009345794
+11	Torna's Finest	Legendary	15020	Block Rate Up V	0.009345794
+11	Torna's Finest	Legendary	15066	Fusion Combo Up V	0.009345794
+11	Torna's Finest	Legendary	15076	Reflect Immunity	0.009345794
+11	Torna's Finest	Legendary	15091	Outdoor Attack Up V	0.009345794
+11	Torna's Finest	Legendary	15153	Evasion Focus V	0.009345794
+11	Torna's Finest	Legendary	15183	Break Resist V	0.009345794
+11	Torna's Finest	Legendary	15198	Smash Resist V	0.009345794
+11	Torna's Finest	Legendary	15208	Knockback Resist V	0.009345794
+11	Torna's Finest	Legendary	15238	Arts Aggro Boost V	0.009345794
+11	Torna's Finest	Legendary	15263	Sunlight Eye V	0.009345794
+11	Torna's Finest	Legendary	15273	Range Boost Up V	0.009345794
+11	Torna's Finest	Legendary	15288	Helping Hand V	0.009345794
+11	Torna's Finest	Legendary	15308	Hunter's Chemistry V	0.009345794
+11	Torna's Finest	Legendary	15318	Fast Blade Switch V	0.009345794
+11	Torna's Finest	Legendary	15334	Specials Lv 3 Plus V	0.009345794
+11	Torna's Finest	Legendary	15339	Specials Lv 4 Plus V	0.009345794
+11	Torna's Finest	Legendary	15344	Affinity MAX Acc V	0.009345794
+11	Torna's Finest	Legendary	300	Titanium Vest (Legendary)	0.004672897
+11	Torna's Finest	Legendary	303	Ceramic Belt (Legendary)	0.004672897
+11	Torna's Finest	Legendary	306	Fiber Hat (Legendary)	0.004672897
+11	Torna's Finest	Legendary	309	Carbon Gloves (Legendary)	0.004672897
+11	Torna's Finest	Legendary	312	Ester Shoes (Legendary)	0.004672897
+11	Torna's Finest	Legendary	315	Comet Choker (Legendary)	0.004672897
+11	Torna's Finest	Legendary	336	Optical Headband (Legendary)	0.004672897
+11	Torna's Finest	Legendary	342	Graphite Greaves (Legendary)	0.004672897
+11	Torna's Finest	Legendary	348	Jet Pauldrons (Legendary)	0.004672897
+11	Torna's Finest	Legendary	351	Hero Vambraces (Legendary)	0.004672897
+11	Torna's Finest	Legendary	357	Quantum Scarf (Legendary)	0.004672897
+11	Torna's Finest	Legendary	383	World Tree Ward (Legendary)	0.004672897
+11	Torna's Finest	Legendary	389	Holy Necklace (Legendary)	0.004672897
+11	Torna's Finest	Legendary	393	Round Table Medal (Legendary)	0.004672897
+11	Torna's Finest	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.004672897
+11	Torna's Finest	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.004672897
+11	Torna's Finest	Legendary	10056	Positron Chip	0.004672897
+11	Torna's Finest	Legendary	15356	Beast Hunter VI	0.009345794
+11	Torna's Finest	Legendary	15357	Insect Hunter VI	0.009345794
+11	Torna's Finest	Legendary	15358	Aerial Hunter VI	0.009345794
+11	Torna's Finest	Legendary	15359	Aquatic Hunter VI	0.009345794
+11	Torna's Finest	Legendary	15360	Humanoid Hunter VI	0.009345794
+11	Torna's Finest	Legendary	15361	Machine Hunter VI	0.009345794
+11	Torna's Finest	Legendary	15362	Titan Hunter VI	0.009345794
+11	Torna's Finest	Legendary	15382	Topple Resist VI	0.009345794
+11	Torna's Finest	Legendary	15387	Auto-Attack Stealth VI	0.009345794
+11	Torna's Finest	Legendary	15388	Aggro Boost VI	0.009345794
+11	Torna's Finest	Legendary	15389	Arts Stealth VI	0.009345794
+11	Torna's Finest	Legendary	15390	Arts Aggro Boost VI	0.009345794
+11	Torna's Finest	Legendary	15394	Night Vision VI	0.009345794
+11	Torna's Finest	Legendary	15395	Sunlight Eye VI	0.009345794
+11	Torna's Finest	Legendary	15401	Specials Lv 1 Plus VI	0.009345794
+11	Torna's Finest	Legendary	15402	Specials Lv 2 Plus VI	0.009345794
+11	Torna's Finest	Legendary	15403	Specials Lv 3 Plus VI	0.009345794
+11	Torna's Finest	Legendary	15404	Specials Lv 4 Plus VI	0.009345794
+11	Torna's Finest	Legendary	465	Augmented Vision Kit (Common)	0.004672897
+11	Torna's Finest	Legendary	468	Charm Bangle (Common)	0.004672897
+11	Torna's Finest	Legendary	474	Seven-League Circlet (Common)	0.004672897
+11	Torna's Finest	Legendary	498	Twin Trunks Vest (Common)	0.004672897
+11	Torna's Finest	Legendary	507	Vivid Mitts (Common)	0.004672897
+11	Torna's Finest	Legendary	510	Dauntless Boots (Common)	0.004672897
+11	Torna's Finest	Legendary	513	Sunlight Choker (Common)	0.004672897
+11	Torna's Finest	Legendary	525	Staunch Boots (Common)	0.004672897
+11	Torna's Finest	Legendary	552	Enlightened Loincloth (Common)	0.004672897
+11	Torna's Finest	Legendary	555	Glamorous Swimsuit (Common)	0.004672897
+11	Torna's Finest	Legendary	558	Vanish Hood (Common)	0.004672897
+11	Torna's Finest	Legendary	561	Platinum Nopon Mask (Common)	0.004672897
+11	Torna's Finest	Legendary	573	Beatific Medal (Common)	0.004672897
+11	Torna's Finest	Legendary	466	Augmented Vision Kit (Rare)	0.004672897
+11	Torna's Finest	Legendary	469	Charm Bangle (Rare)	0.004672897
+11	Torna's Finest	Legendary	475	Seven-League Circlet (Rare)	0.004672897
+11	Torna's Finest	Legendary	499	Twin Trunks Vest (Rare)	0.004672897
+11	Torna's Finest	Legendary	508	Vivid Mitts (Rare)	0.004672897
+11	Torna's Finest	Legendary	511	Dauntless Boots (Rare)	0.004672897
+11	Torna's Finest	Legendary	514	Sunlight Choker (Rare)	0.004672897
+11	Torna's Finest	Legendary	526	Staunch Boots (Rare)	0.004672897
+11	Torna's Finest	Legendary	553	Enlightened Loincloth (Rare)	0.004672897
+11	Torna's Finest	Legendary	556	Glamorous Swimsuit (Rare)	0.004672897
+11	Torna's Finest	Legendary	559	Vanish Hood (Rare)	0.004672897
+11	Torna's Finest	Legendary	562	Platinum Nopon Mask (Rare)	0.004672897
+11	Torna's Finest	Legendary	574	Beatific Medal (Rare)	0.004672897
+11	Torna's Finest	Legendary	467	Augmented Vision Kit (Legendary)	0.004672897
+11	Torna's Finest	Legendary	470	Charm Bangle (Legendary)	0.004672897
+11	Torna's Finest	Legendary	476	Seven-League Circlet (Legendary)	0.004672897
+11	Torna's Finest	Legendary	500	Twin Trunks Vest (Legendary)	0.004672897
+11	Torna's Finest	Legendary	509	Vivid Mitts (Legendary)	0.004672897
+11	Torna's Finest	Legendary	512	Dauntless Boots (Legendary)	0.004672897
+11	Torna's Finest	Legendary	515	Sunlight Choker (Legendary)	0.004672897
+11	Torna's Finest	Legendary	527	Staunch Boots (Legendary)	0.004672897
+11	Torna's Finest	Legendary	554	Enlightened Loincloth (Legendary)	0.004672897
+11	Torna's Finest	Legendary	557	Glamorous Swimsuit (Legendary)	0.004672897
+11	Torna's Finest	Legendary	560	Vanish Hood (Legendary)	0.004672897
+11	Torna's Finest	Legendary	563	Platinum Nopon Mask (Legendary)	0.004672897
+11	Torna's Finest	Legendary	575	Beatific Medal (Legendary)	0.004672897
+11	Torna's Finest	Legendary	15005	Critical Up V	0.009345794
+11	Torna's Finest	Legendary	15015	Ether Defense Up V	0.009345794
+11	Torna's Finest	Legendary	15060	Blade Combo Boost V	0.009345794
+11	Torna's Finest	Legendary	15158	Swift Evasion V	0.009345794
+11	Torna's Finest	Legendary	15168	Endurance V	0.009345794
+11	Torna's Finest	Legendary	15233	Arts Stealth V	0.009345794
+11	Torna's Finest	Legendary	15248	Movement Heal V	0.009345794
+11	Torna's Finest	Legendary	15253	Damage Heal V	0.009345794
+11	Torna's Finest	Legendary	15303	Affinity MAX Evade V	0.009345794
+11	Torna's Finest	Legendary	10057	Hadron Chip	0.004672897
+11	Torna's Finest	Legendary	15353	Physical Defense Up VI	0.009345794
+11	Torna's Finest	Legendary	15354	Ether Defense Up VI	0.009345794
+11	Torna's Finest	Legendary	15368	Fire Def Up VI	0.0140186911
+11	Torna's Finest	Legendary	15369	Water Def Up VI	0.0140186911
+11	Torna's Finest	Legendary	15370	Wind Def Up VI	0.0140186911
+11	Torna's Finest	Legendary	15371	Earth Def Up VI	0.0140186911
+11	Torna's Finest	Legendary	15372	Electric Def Up VI	0.0140186911
+11	Torna's Finest	Legendary	15373	Ice Def Up VI	0.0140186911
+11	Torna's Finest	Legendary	15374	Light Def Up VI	0.0140186911
+11	Torna's Finest	Legendary	15375	Dark Def Up VI	0.0140186911
+11	Torna's Finest	Legendary	15381	Break Resist VI	0.009345794
+11	Torna's Finest	Legendary	15405	Affinity MAX Acc VI	0.0186915882
+11	Torna's Finest	Legendary	456	Consul Greaves (Common)	0.004672897
+11	Torna's Finest	Legendary	489	Abyss Masque (Common)	0.004672897
+11	Torna's Finest	Legendary	495	Survivor's Footgear (Common)	0.004672897
+11	Torna's Finest	Legendary	501	Beast-Hide Vest (Common)	0.004672897
+11	Torna's Finest	Legendary	504	Prairie Cap (Common)	0.004672897
+11	Torna's Finest	Legendary	519	Crimson Headband (Common)	0.004672897
+11	Torna's Finest	Legendary	531	Consul Pauldrons (Common)	0.004672897
+11	Torna's Finest	Legendary	534	Divine Vambraces (Common)	0.004672897
+11	Torna's Finest	Legendary	540	Tachyon Scarf (Common)	0.004672897
+11	Torna's Finest	Legendary	576	Carbon Gauntlet (Common)	0.009345794
+11	Torna's Finest	Legendary	457	Consul Greaves (Rare)	0.004672897
+11	Torna's Finest	Legendary	490	Abyss Masque (Rare)	0.004672897
+11	Torna's Finest	Legendary	496	Survivor's Footgear (Rare)	0.004672897
+11	Torna's Finest	Legendary	502	Beast-Hide Vest (Rare)	0.004672897
+11	Torna's Finest	Legendary	505	Prairie Cap (Rare)	0.004672897
+11	Torna's Finest	Legendary	520	Crimson Headband (Rare)	0.004672897
+11	Torna's Finest	Legendary	532	Consul Pauldrons (Rare)	0.004672897
+11	Torna's Finest	Legendary	535	Divine Vambraces (Rare)	0.004672897
+11	Torna's Finest	Legendary	541	Tachyon Scarf (Rare)	0.004672897
+11	Torna's Finest	Legendary	577	Carbon Gauntlet (Rare)	0.004672897
+11	Torna's Finest	Legendary	458	Consul Greaves (Legendary)	0.004672897
+11	Torna's Finest	Legendary	491	Abyss Masque (Legendary)	0.004672897
+11	Torna's Finest	Legendary	497	Survivor's Footgear (Legendary)	0.004672897
+11	Torna's Finest	Legendary	503	Beast-Hide Vest (Legendary)	0.004672897
+11	Torna's Finest	Legendary	506	Prairie Cap (Legendary)	0.004672897
+11	Torna's Finest	Legendary	521	Crimson Headband (Legendary)	0.004672897
+11	Torna's Finest	Legendary	533	Consul Pauldrons (Legendary)	0.004672897
+11	Torna's Finest	Legendary	536	Divine Vambraces (Legendary)	0.004672897
+11	Torna's Finest	Legendary	542	Tachyon Scarf (Legendary)	0.004672897
+11	Torna's Finest	Legendary	578	Carbon Gauntlet (Legendary)	0.004672897
+11	Torna's Finest	Legendary	25406	Intermediate Weaponry	0.009345794
+12	Serious Showdown	Common	15030	Insect Hunter V	0.005065856
+12	Serious Showdown	Common	15040	Aquatic Hunter V	0.005065856
+12	Serious Showdown	Common	15025	Beast Hunter V	0.005065856
+12	Serious Showdown	Common	15035	Aerial Hunter V	0.005065856
+12	Serious Showdown	Common	15045	Humanoid Hunter V	0.005065856
+12	Serious Showdown	Common	15055	Titan Hunter V	0.005065856
+12	Serious Showdown	Common	15050	Machine Hunter V	0.005065856
+12	Serious Showdown	Common	15071	Ambush Boost V	0.005065856
+12	Serious Showdown	Common	15081	Aggro Attack Up V	0.005065856
+12	Serious Showdown	Common	15086	Indoor Attack Up V	0.005065856
+12	Serious Showdown	Common	15096	Fire Def Up V	0.005065856
+12	Serious Showdown	Common	15101	Water Def Up V	0.005065856
+12	Serious Showdown	Common	15106	Earth Def Up V	0.005065856
+12	Serious Showdown	Common	15111	Wind Def Up V	0.005065856
+12	Serious Showdown	Common	15116	Electric Def Up V	0.005065856
+12	Serious Showdown	Common	15121	Ice Def Up V	0.005065856
+12	Serious Showdown	Common	15126	Dark Def Up V	0.005065856
+12	Serious Showdown	Common	15131	Light Def Up V	0.005065856
+12	Serious Showdown	Common	15163	Emergency Guard V	0.005065856
+12	Serious Showdown	Common	15173	HP Attack Boost V	0.005065856
+12	Serious Showdown	Common	15178	Spike Defense V	0.005065856
+12	Serious Showdown	Common	15188	Topple Resist V	0.005065856
+12	Serious Showdown	Common	15193	Launch Resist V	0.005065856
+12	Serious Showdown	Common	15203	Blowdown Resist V	0.005065856
+12	Serious Showdown	Common	15218	Shackle Blade Resist V	0.005065856
+12	Serious Showdown	Common	15223	Auto-Attack Stealth V	0.005065856
+12	Serious Showdown	Common	15228	Aggro Boost V	0.005065856
+12	Serious Showdown	Common	15243	Arts Heal V	0.005065856
+12	Serious Showdown	Common	15258	Night Vision V	0.005065856
+12	Serious Showdown	Common	15268	Reflect Damage Up V	0.005065856
+12	Serious Showdown	Common	15278	Opening Art V	0.005065856
+12	Serious Showdown	Common	15283	Telepathy V	0.005065856
+12	Serious Showdown	Common	15293	Affinity MAX Barrier V	0.005065856
+12	Serious Showdown	Common	15298	Affinity MAX Atk V	0.005065856
+12	Serious Showdown	Common	15313	Shoulder to Shoulder V	0.005065856
+12	Serious Showdown	Common	15324	Specials Lv 1 Plus V	0.005065856
+12	Serious Showdown	Common	15329	Specials Lv 2 Plus V	0.005065856
+12	Serious Showdown	Common	15349	Jamming V	0.005065856
+12	Serious Showdown	Common	333	Avant-Garde Medal (Legendary)	0.0202634241
+12	Serious Showdown	Common	345	Ancient Banner (Legendary)	0.0202634241
+12	Serious Showdown	Common	354	Bloody Orb (Legendary)	0.0202634241
+12	Serious Showdown	Common	405	Critical Symbol (Legendary)	0.0202634241
+12	Serious Showdown	Common	116	Resurrection Symbol (Legendary)	0.0202634241
+12	Serious Showdown	Common	408	Sword Attachment (Legendary)	0.0202634241
+12	Serious Showdown	Common	409	Scimitar Attachment (Legendary)	0.0202634241
+12	Serious Showdown	Common	416	Scythe Attachment (Legendary)	0.0202634241
+12	Serious Showdown	Common	431	Rebirth Amulet (Legendary)	0.0202634241
+12	Serious Showdown	Common	432	Beta Scope (Legendary)	0.0202634241
+12	Serious Showdown	Common	10046	Howardite Chip	0.0101317121
+12	Serious Showdown	Common	10047	Aubrite Chip	0.0101317121
+12	Serious Showdown	Common	10050	Axion Chip	0.0101317121
+12	Serious Showdown	Common	10051	Mirror Matter Chip	0.0101317121
+12	Serious Showdown	Common	15364	Ambush Boost VI	0.005065856
+12	Serious Showdown	Common	15383	Launch Resist VI	0.00709219836
+12	Serious Showdown	Common	15384	Smash Resist VI	0.00709219836
+12	Serious Showdown	Common	15385	Blowdown Resist VI	0.00709219836
+12	Serious Showdown	Common	15386	Knockback Resist VI	0.00709219836
+12	Serious Showdown	Common	15396	Reflect Damage Up VI	0.00709219836
+12	Serious Showdown	Common	15397	Opening Art VI	0.00709219836
+12	Serious Showdown	Common	528	War God Banner (Common)	0.0303951371
+12	Serious Showdown	Common	537	Demon Orb (Common)	0.0303951371
+12	Serious Showdown	Common	549	Violent Stone (Common)	0.0303951371
+12	Serious Showdown	Common	564	Gargantuan Feather (Common)	0.0303951371
+12	Serious Showdown	Common	579	Noise Dampener (Common)	0.0303951371
+12	Serious Showdown	Common	529	War God Banner (Rare)	0.0303951371
+12	Serious Showdown	Common	538	Demon Orb (Rare)	0.0303951371
+12	Serious Showdown	Common	550	Violent Stone (Rare)	0.0303951371
+12	Serious Showdown	Common	565	Gargantuan Feather (Rare)	0.0303951371
+12	Serious Showdown	Common	580	Noise Dampener (Rare)	0.0303951371
+12	Serious Showdown	Common	530	War God Banner (Legendary)	0.0303951371
+12	Serious Showdown	Common	539	Demon Orb (Legendary)	0.0303951371
+12	Serious Showdown	Common	551	Violent Stone (Legendary)	0.0303951371
+12	Serious Showdown	Common	566	Gargantuan Feather (Legendary)	0.0303951371
+12	Serious Showdown	Common	581	Noise Dampener (Legendary)	0.0303951371
+12	Serious Showdown	Common	488	Terror Masque (Legendary)	0.0303951371
+12	Serious Showdown	Common	494	Envoy's Footgear (Legendary)	0.0303951371
+12	Serious Showdown	Rare	15030	Insect Hunter V	0.00219106046
+12	Serious Showdown	Rare	15040	Aquatic Hunter V	0.00219106046
+12	Serious Showdown	Rare	15025	Beast Hunter V	0.00219106046
+12	Serious Showdown	Rare	15035	Aerial Hunter V	0.00219106046
+12	Serious Showdown	Rare	15045	Humanoid Hunter V	0.00219106046
+12	Serious Showdown	Rare	15055	Titan Hunter V	0.00219106046
+12	Serious Showdown	Rare	15050	Machine Hunter V	0.00219106046
+12	Serious Showdown	Rare	15071	Ambush Boost V	0.00219106046
+12	Serious Showdown	Rare	15081	Aggro Attack Up V	0.00219106046
+12	Serious Showdown	Rare	15086	Indoor Attack Up V	0.00219106046
+12	Serious Showdown	Rare	15096	Fire Def Up V	0.00219106046
+12	Serious Showdown	Rare	15101	Water Def Up V	0.00219106046
+12	Serious Showdown	Rare	15106	Earth Def Up V	0.00219106046
+12	Serious Showdown	Rare	15111	Wind Def Up V	0.00219106046
+12	Serious Showdown	Rare	15116	Electric Def Up V	0.00219106046
+12	Serious Showdown	Rare	15121	Ice Def Up V	0.00219106046
+12	Serious Showdown	Rare	15126	Dark Def Up V	0.00219106046
+12	Serious Showdown	Rare	15131	Light Def Up V	0.00219106046
+12	Serious Showdown	Rare	15163	Emergency Guard V	0.00219106046
+12	Serious Showdown	Rare	15173	HP Attack Boost V	0.00219106046
+12	Serious Showdown	Rare	15178	Spike Defense V	0.00219106046
+12	Serious Showdown	Rare	15188	Topple Resist V	0.00219106046
+12	Serious Showdown	Rare	15193	Launch Resist V	0.00219106046
+12	Serious Showdown	Rare	15203	Blowdown Resist V	0.00219106046
+12	Serious Showdown	Rare	15218	Shackle Blade Resist V	0.00219106046
+12	Serious Showdown	Rare	15223	Auto-Attack Stealth V	0.00219106046
+12	Serious Showdown	Rare	15228	Aggro Boost V	0.00219106046
+12	Serious Showdown	Rare	15243	Arts Heal V	0.00219106046
+12	Serious Showdown	Rare	15258	Night Vision V	0.00219106046
+12	Serious Showdown	Rare	15268	Reflect Damage Up V	0.00219106046
+12	Serious Showdown	Rare	15278	Opening Art V	0.00219106046
+12	Serious Showdown	Rare	15283	Telepathy V	0.00219106046
+12	Serious Showdown	Rare	15293	Affinity MAX Barrier V	0.00219106046
+12	Serious Showdown	Rare	15298	Affinity MAX Atk V	0.00219106046
+12	Serious Showdown	Rare	15313	Shoulder to Shoulder V	0.00219106046
+12	Serious Showdown	Rare	15324	Specials Lv 1 Plus V	0.00219106046
+12	Serious Showdown	Rare	15329	Specials Lv 2 Plus V	0.00219106046
+12	Serious Showdown	Rare	15349	Jamming V	0.00219106046
+12	Serious Showdown	Rare	333	Avant-Garde Medal (Legendary)	0.008764242
+12	Serious Showdown	Rare	345	Ancient Banner (Legendary)	0.008764242
+12	Serious Showdown	Rare	354	Bloody Orb (Legendary)	0.008764242
+12	Serious Showdown	Rare	405	Critical Symbol (Legendary)	0.008764242
+12	Serious Showdown	Rare	116	Resurrection Symbol (Legendary)	0.008764242
+12	Serious Showdown	Rare	408	Sword Attachment (Legendary)	0.008764242
+12	Serious Showdown	Rare	409	Scimitar Attachment (Legendary)	0.008764242
+12	Serious Showdown	Rare	416	Scythe Attachment (Legendary)	0.008764242
+12	Serious Showdown	Rare	431	Rebirth Amulet (Legendary)	0.008764242
+12	Serious Showdown	Rare	432	Beta Scope (Legendary)	0.008764242
+12	Serious Showdown	Rare	10046	Howardite Chip	0.004382121
+12	Serious Showdown	Rare	10047	Aubrite Chip	0.004382121
+12	Serious Showdown	Rare	10050	Axion Chip	0.004382121
+12	Serious Showdown	Rare	10051	Mirror Matter Chip	0.004382121
+12	Serious Showdown	Rare	15364	Ambush Boost VI	0.00219106046
+12	Serious Showdown	Rare	15383	Launch Resist VI	0.00306748459
+12	Serious Showdown	Rare	15384	Smash Resist VI	0.00306748459
+12	Serious Showdown	Rare	15385	Blowdown Resist VI	0.00306748459
+12	Serious Showdown	Rare	15386	Knockback Resist VI	0.00306748459
+12	Serious Showdown	Rare	15396	Reflect Damage Up VI	0.00306748459
+12	Serious Showdown	Rare	15397	Opening Art VI	0.00306748459
+12	Serious Showdown	Rare	528	War God Banner (Common)	0.0131463632
+12	Serious Showdown	Rare	537	Demon Orb (Common)	0.0131463632
+12	Serious Showdown	Rare	549	Violent Stone (Common)	0.0131463632
+12	Serious Showdown	Rare	564	Gargantuan Feather (Common)	0.0131463632
+12	Serious Showdown	Rare	579	Noise Dampener (Common)	0.0131463632
+12	Serious Showdown	Rare	529	War God Banner (Rare)	0.0131463632
+12	Serious Showdown	Rare	538	Demon Orb (Rare)	0.0131463632
+12	Serious Showdown	Rare	550	Violent Stone (Rare)	0.0131463632
+12	Serious Showdown	Rare	565	Gargantuan Feather (Rare)	0.0131463632
+12	Serious Showdown	Rare	580	Noise Dampener (Rare)	0.0131463632
+12	Serious Showdown	Rare	530	War God Banner (Legendary)	0.0131463632
+12	Serious Showdown	Rare	539	Demon Orb (Legendary)	0.0131463632
+12	Serious Showdown	Rare	551	Violent Stone (Legendary)	0.0131463632
+12	Serious Showdown	Rare	566	Gargantuan Feather (Legendary)	0.0131463632
+12	Serious Showdown	Rare	581	Noise Dampener (Legendary)	0.0131463632
+12	Serious Showdown	Rare	488	Terror Masque (Legendary)	0.0131463632
+12	Serious Showdown	Rare	494	Envoy's Footgear (Legendary)	0.0131463632
+12	Serious Showdown	Rare	15010	Physical Defense Up V	0.00219106046
+12	Serious Showdown	Rare	15020	Block Rate Up V	0.00219106046
+12	Serious Showdown	Rare	15066	Fusion Combo Up V	0.00219106046
+12	Serious Showdown	Rare	15076	Reflect Immunity	0.00219106046
+12	Serious Showdown	Rare	15091	Outdoor Attack Up V	0.00219106046
+12	Serious Showdown	Rare	15153	Evasion Focus V	0.00219106046
+12	Serious Showdown	Rare	15183	Break Resist V	0.00219106046
+12	Serious Showdown	Rare	15198	Smash Resist V	0.00219106046
+12	Serious Showdown	Rare	15208	Knockback Resist V	0.00219106046
+12	Serious Showdown	Rare	15238	Arts Aggro Boost V	0.00219106046
+12	Serious Showdown	Rare	15263	Sunlight Eye V	0.00219106046
+12	Serious Showdown	Rare	15273	Range Boost Up V	0.00219106046
+12	Serious Showdown	Rare	15288	Helping Hand V	0.00219106046
+12	Serious Showdown	Rare	15308	Hunter's Chemistry V	0.00219106046
+12	Serious Showdown	Rare	15318	Fast Blade Switch V	0.00219106046
+12	Serious Showdown	Rare	15334	Specials Lv 3 Plus V	0.00219106046
+12	Serious Showdown	Rare	15339	Specials Lv 4 Plus V	0.00219106046
+12	Serious Showdown	Rare	15344	Affinity MAX Acc V	0.00219106046
+12	Serious Showdown	Rare	300	Titanium Vest (Legendary)	0.008764242
+12	Serious Showdown	Rare	303	Ceramic Belt (Legendary)	0.008764242
+12	Serious Showdown	Rare	306	Fiber Hat (Legendary)	0.008764242
+12	Serious Showdown	Rare	309	Carbon Gloves (Legendary)	0.008764242
+12	Serious Showdown	Rare	312	Ester Shoes (Legendary)	0.008764242
+12	Serious Showdown	Rare	315	Comet Choker (Legendary)	0.008764242
+12	Serious Showdown	Rare	336	Optical Headband (Legendary)	0.008764242
+12	Serious Showdown	Rare	342	Graphite Greaves (Legendary)	0.008764242
+12	Serious Showdown	Rare	348	Jet Pauldrons (Legendary)	0.008764242
+12	Serious Showdown	Rare	351	Hero Vambraces (Legendary)	0.008764242
+12	Serious Showdown	Rare	357	Quantum Scarf (Legendary)	0.008764242
+12	Serious Showdown	Rare	383	World Tree Ward (Legendary)	0.008764242
+12	Serious Showdown	Rare	389	Holy Necklace (Legendary)	0.008764242
+12	Serious Showdown	Rare	393	Round Table Medal (Legendary)	0.008764242
+12	Serious Showdown	Rare	396	Nano-Metal Gauntlet (Legendary)	0.008764242
+12	Serious Showdown	Rare	399	Hi-Tech Eyepatch (Legendary)	0.008764242
+12	Serious Showdown	Rare	10056	Positron Chip	0.004382121
+12	Serious Showdown	Rare	15356	Beast Hunter VI	0.00219106046
+12	Serious Showdown	Rare	15357	Insect Hunter VI	0.00219106046
+12	Serious Showdown	Rare	15358	Aerial Hunter VI	0.00219106046
+12	Serious Showdown	Rare	15359	Aquatic Hunter VI	0.00219106046
+12	Serious Showdown	Rare	15360	Humanoid Hunter VI	0.00219106046
+12	Serious Showdown	Rare	15361	Machine Hunter VI	0.00219106046
+12	Serious Showdown	Rare	15362	Titan Hunter VI	0.00219106046
+12	Serious Showdown	Rare	15382	Topple Resist VI	0.00219106046
+12	Serious Showdown	Rare	15387	Auto-Attack Stealth VI	0.00219106046
+12	Serious Showdown	Rare	15388	Aggro Boost VI	0.004382121
+12	Serious Showdown	Rare	15389	Arts Stealth VI	0.00219106046
+12	Serious Showdown	Rare	15390	Arts Aggro Boost VI	0.00219106046
+12	Serious Showdown	Rare	15394	Night Vision VI	0.00219106046
+12	Serious Showdown	Rare	15395	Sunlight Eye VI	0.00219106046
+12	Serious Showdown	Rare	15401	Specials Lv 1 Plus VI	0.00219106046
+12	Serious Showdown	Rare	15402	Specials Lv 2 Plus VI	0.00219106046
+12	Serious Showdown	Rare	15403	Specials Lv 3 Plus VI	0.00219106046
+12	Serious Showdown	Rare	15404	Specials Lv 4 Plus VI	0.00219106046
+12	Serious Showdown	Rare	465	Augmented Vision Kit (Common)	0.008764242
+12	Serious Showdown	Rare	468	Charm Bangle (Common)	0.008764242
+12	Serious Showdown	Rare	474	Seven-League Circlet (Common)	0.008764242
+12	Serious Showdown	Rare	498	Twin Trunks Vest (Common)	0.008764242
+12	Serious Showdown	Rare	507	Vivid Mitts (Common)	0.008764242
+12	Serious Showdown	Rare	510	Dauntless Boots (Common)	0.008764242
+12	Serious Showdown	Rare	513	Sunlight Choker (Common)	0.008764242
+12	Serious Showdown	Rare	525	Staunch Boots (Common)	0.008764242
+12	Serious Showdown	Rare	552	Enlightened Loincloth (Common)	0.008764242
+12	Serious Showdown	Rare	555	Glamorous Swimsuit (Common)	0.008764242
+12	Serious Showdown	Rare	558	Vanish Hood (Common)	0.008764242
+12	Serious Showdown	Rare	561	Platinum Nopon Mask (Common)	0.008764242
+12	Serious Showdown	Rare	573	Beatific Medal (Common)	0.008764242
+12	Serious Showdown	Rare	466	Augmented Vision Kit (Rare)	0.008764242
+12	Serious Showdown	Rare	469	Charm Bangle (Rare)	0.008764242
+12	Serious Showdown	Rare	475	Seven-League Circlet (Rare)	0.008764242
+12	Serious Showdown	Rare	499	Twin Trunks Vest (Rare)	0.008764242
+12	Serious Showdown	Rare	508	Vivid Mitts (Rare)	0.008764242
+12	Serious Showdown	Rare	511	Dauntless Boots (Rare)	0.008764242
+12	Serious Showdown	Rare	514	Sunlight Choker (Rare)	0.008764242
+12	Serious Showdown	Rare	526	Staunch Boots (Rare)	0.008764242
+12	Serious Showdown	Rare	553	Enlightened Loincloth (Rare)	0.008764242
+12	Serious Showdown	Rare	556	Glamorous Swimsuit (Rare)	0.008764242
+12	Serious Showdown	Rare	559	Vanish Hood (Rare)	0.008764242
+12	Serious Showdown	Rare	562	Platinum Nopon Mask (Rare)	0.008764242
+12	Serious Showdown	Rare	574	Beatific Medal (Rare)	0.008764242
+12	Serious Showdown	Rare	467	Augmented Vision Kit (Legendary)	0.008764242
+12	Serious Showdown	Rare	470	Charm Bangle (Legendary)	0.008764242
+12	Serious Showdown	Rare	476	Seven-League Circlet (Legendary)	0.008764242
+12	Serious Showdown	Rare	500	Twin Trunks Vest (Legendary)	0.008764242
+12	Serious Showdown	Rare	509	Vivid Mitts (Legendary)	0.008764242
+12	Serious Showdown	Rare	512	Dauntless Boots (Legendary)	0.008764242
+12	Serious Showdown	Rare	515	Sunlight Choker (Legendary)	0.008764242
+12	Serious Showdown	Rare	527	Staunch Boots (Legendary)	0.008764242
+12	Serious Showdown	Rare	554	Enlightened Loincloth (Legendary)	0.008764242
+12	Serious Showdown	Rare	557	Glamorous Swimsuit (Legendary)	0.008764242
+12	Serious Showdown	Rare	560	Vanish Hood (Legendary)	0.008764242
+12	Serious Showdown	Rare	563	Platinum Nopon Mask (Legendary)	0.008764242
+12	Serious Showdown	Rare	575	Beatific Medal (Legendary)	0.008764242
+12	Serious Showdown	Legendary	15010	Physical Defense Up V	0.00239693187
+12	Serious Showdown	Legendary	15020	Block Rate Up V	0.00239693187
+12	Serious Showdown	Legendary	15066	Fusion Combo Up V	0.00239693187
+12	Serious Showdown	Legendary	15076	Reflect Immunity	0.00239693187
+12	Serious Showdown	Legendary	15091	Outdoor Attack Up V	0.00239693187
+12	Serious Showdown	Legendary	15153	Evasion Focus V	0.00239693187
+12	Serious Showdown	Legendary	15183	Break Resist V	0.00239693187
+12	Serious Showdown	Legendary	15198	Smash Resist V	0.00239693187
+12	Serious Showdown	Legendary	15208	Knockback Resist V	0.00239693187
+12	Serious Showdown	Legendary	15238	Arts Aggro Boost V	0.00239693187
+12	Serious Showdown	Legendary	15263	Sunlight Eye V	0.00239693187
+12	Serious Showdown	Legendary	15273	Range Boost Up V	0.00239693187
+12	Serious Showdown	Legendary	15288	Helping Hand V	0.00239693187
+12	Serious Showdown	Legendary	15308	Hunter's Chemistry V	0.00239693187
+12	Serious Showdown	Legendary	15318	Fast Blade Switch V	0.00239693187
+12	Serious Showdown	Legendary	15334	Specials Lv 3 Plus V	0.00239693187
+12	Serious Showdown	Legendary	15339	Specials Lv 4 Plus V	0.00239693187
+12	Serious Showdown	Legendary	15344	Affinity MAX Acc V	0.00239693187
+12	Serious Showdown	Legendary	300	Titanium Vest (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	303	Ceramic Belt (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	306	Fiber Hat (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	309	Carbon Gloves (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	312	Ester Shoes (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	315	Comet Choker (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	336	Optical Headband (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	342	Graphite Greaves (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	348	Jet Pauldrons (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	351	Hero Vambraces (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	357	Quantum Scarf (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	383	World Tree Ward (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	389	Holy Necklace (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	393	Round Table Medal (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	10056	Positron Chip	0.00479386374
+12	Serious Showdown	Legendary	15356	Beast Hunter VI	0.00239693187
+12	Serious Showdown	Legendary	15357	Insect Hunter VI	0.00239693187
+12	Serious Showdown	Legendary	15358	Aerial Hunter VI	0.00239693187
+12	Serious Showdown	Legendary	15359	Aquatic Hunter VI	0.00239693187
+12	Serious Showdown	Legendary	15360	Humanoid Hunter VI	0.00239693187
+12	Serious Showdown	Legendary	15361	Machine Hunter VI	0.00239693187
+12	Serious Showdown	Legendary	15362	Titan Hunter VI	0.00239693187
+12	Serious Showdown	Legendary	15382	Topple Resist VI	0.00239693187
+12	Serious Showdown	Legendary	15387	Auto-Attack Stealth VI	0.00239693187
+12	Serious Showdown	Legendary	15388	Aggro Boost VI	0.00239693187
+12	Serious Showdown	Legendary	15389	Arts Stealth VI	0.00239693187
+12	Serious Showdown	Legendary	15390	Arts Aggro Boost VI	0.00239693187
+12	Serious Showdown	Legendary	15394	Night Vision VI	0.00239693187
+12	Serious Showdown	Legendary	15395	Sunlight Eye VI	0.00239693187
+12	Serious Showdown	Legendary	15401	Specials Lv 1 Plus VI	0.00239693187
+12	Serious Showdown	Legendary	15402	Specials Lv 2 Plus VI	0.00239693187
+12	Serious Showdown	Legendary	15403	Specials Lv 3 Plus VI	0.00239693187
+12	Serious Showdown	Legendary	15404	Specials Lv 4 Plus VI	0.00239693187
+12	Serious Showdown	Legendary	465	Augmented Vision Kit (Common)	0.00958772749
+12	Serious Showdown	Legendary	468	Charm Bangle (Common)	0.00958772749
+12	Serious Showdown	Legendary	474	Seven-League Circlet (Common)	0.00958772749
+12	Serious Showdown	Legendary	498	Twin Trunks Vest (Common)	0.00958772749
+12	Serious Showdown	Legendary	507	Vivid Mitts (Common)	0.00958772749
+12	Serious Showdown	Legendary	510	Dauntless Boots (Common)	0.00958772749
+12	Serious Showdown	Legendary	513	Sunlight Choker (Common)	0.00958772749
+12	Serious Showdown	Legendary	525	Staunch Boots (Common)	0.00958772749
+12	Serious Showdown	Legendary	552	Enlightened Loincloth (Common)	0.00958772749
+12	Serious Showdown	Legendary	555	Glamorous Swimsuit (Common)	0.00958772749
+12	Serious Showdown	Legendary	558	Vanish Hood (Common)	0.00958772749
+12	Serious Showdown	Legendary	561	Platinum Nopon Mask (Common)	0.00958772749
+12	Serious Showdown	Legendary	573	Beatific Medal (Common)	0.00958772749
+12	Serious Showdown	Legendary	466	Augmented Vision Kit (Rare)	0.00958772749
+12	Serious Showdown	Legendary	469	Charm Bangle (Rare)	0.00958772749
+12	Serious Showdown	Legendary	475	Seven-League Circlet (Rare)	0.00958772749
+12	Serious Showdown	Legendary	499	Twin Trunks Vest (Rare)	0.00958772749
+12	Serious Showdown	Legendary	508	Vivid Mitts (Rare)	0.00958772749
+12	Serious Showdown	Legendary	511	Dauntless Boots (Rare)	0.00958772749
+12	Serious Showdown	Legendary	514	Sunlight Choker (Rare)	0.00958772749
+12	Serious Showdown	Legendary	526	Staunch Boots (Rare)	0.00958772749
+12	Serious Showdown	Legendary	553	Enlightened Loincloth (Rare)	0.00958772749
+12	Serious Showdown	Legendary	556	Glamorous Swimsuit (Rare)	0.00958772749
+12	Serious Showdown	Legendary	559	Vanish Hood (Rare)	0.00958772749
+12	Serious Showdown	Legendary	562	Platinum Nopon Mask (Rare)	0.00958772749
+12	Serious Showdown	Legendary	574	Beatific Medal (Rare)	0.00958772749
+12	Serious Showdown	Legendary	467	Augmented Vision Kit (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	470	Charm Bangle (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	476	Seven-League Circlet (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	500	Twin Trunks Vest (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	509	Vivid Mitts (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	512	Dauntless Boots (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	515	Sunlight Choker (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	527	Staunch Boots (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	554	Enlightened Loincloth (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	557	Glamorous Swimsuit (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	560	Vanish Hood (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	563	Platinum Nopon Mask (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	575	Beatific Medal (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	15005	Critical Up V	0.00239693187
+12	Serious Showdown	Legendary	15015	Ether Defense Up V	0.00239693187
+12	Serious Showdown	Legendary	15060	Blade Combo Boost V	0.00239693187
+12	Serious Showdown	Legendary	15158	Swift Evasion V	0.00239693187
+12	Serious Showdown	Legendary	15168	Endurance V	0.00239693187
+12	Serious Showdown	Legendary	15233	Arts Stealth V	0.00239693187
+12	Serious Showdown	Legendary	15248	Movement Heal V	0.00239693187
+12	Serious Showdown	Legendary	15253	Damage Heal V	0.00239693187
+12	Serious Showdown	Legendary	15303	Affinity MAX Evade V	0.00239693187
+12	Serious Showdown	Legendary	10057	Hadron Chip	0.00479386374
+12	Serious Showdown	Legendary	15353	Physical Defense Up VI	0.00239693187
+12	Serious Showdown	Legendary	15354	Ether Defense Up VI	0.00479386374
+12	Serious Showdown	Legendary	15368	Fire Def Up VI	0.00335570471
+12	Serious Showdown	Legendary	15369	Water Def Up VI	0.00335570471
+12	Serious Showdown	Legendary	15370	Wind Def Up VI	0.00335570471
+12	Serious Showdown	Legendary	15371	Earth Def Up VI	0.00335570471
+12	Serious Showdown	Legendary	15372	Electric Def Up VI	0.00335570471
+12	Serious Showdown	Legendary	15373	Ice Def Up VI	0.00335570471
+12	Serious Showdown	Legendary	15374	Light Def Up VI	0.00335570471
+12	Serious Showdown	Legendary	15375	Dark Def Up VI	0.00335570471
+12	Serious Showdown	Legendary	15381	Break Resist VI	0.00239693187
+12	Serious Showdown	Legendary	15405	Affinity MAX Acc VI	0.00239693187
+12	Serious Showdown	Legendary	456	Consul Greaves (Common)	0.00958772749
+12	Serious Showdown	Legendary	489	Abyss Masque (Common)	0.019175455
+12	Serious Showdown	Legendary	495	Survivor's Footgear (Common)	0.019175455
+12	Serious Showdown	Legendary	501	Beast-Hide Vest (Common)	0.00958772749
+12	Serious Showdown	Legendary	504	Prairie Cap (Common)	0.00958772749
+12	Serious Showdown	Legendary	519	Crimson Headband (Common)	0.00958772749
+12	Serious Showdown	Legendary	531	Consul Pauldrons (Common)	0.00958772749
+12	Serious Showdown	Legendary	534	Divine Vambraces (Common)	0.00958772749
+12	Serious Showdown	Legendary	540	Tachyon Scarf (Common)	0.00958772749
+12	Serious Showdown	Legendary	576	Carbon Gauntlet (Common)	0.00958772749
+12	Serious Showdown	Legendary	457	Consul Greaves (Rare)	0.00958772749
+12	Serious Showdown	Legendary	490	Abyss Masque (Rare)	0.00958772749
+12	Serious Showdown	Legendary	496	Survivor's Footgear (Rare)	0.00958772749
+12	Serious Showdown	Legendary	502	Beast-Hide Vest (Rare)	0.00958772749
+12	Serious Showdown	Legendary	505	Prairie Cap (Rare)	0.00958772749
+12	Serious Showdown	Legendary	520	Crimson Headband (Rare)	0.00958772749
+12	Serious Showdown	Legendary	532	Consul Pauldrons (Rare)	0.00958772749
+12	Serious Showdown	Legendary	535	Divine Vambraces (Rare)	0.00958772749
+12	Serious Showdown	Legendary	541	Tachyon Scarf (Rare)	0.00958772749
+12	Serious Showdown	Legendary	577	Carbon Gauntlet (Rare)	0.00958772749
+12	Serious Showdown	Legendary	458	Consul Greaves (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	491	Abyss Masque (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	497	Survivor's Footgear (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	503	Beast-Hide Vest (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	506	Prairie Cap (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	521	Crimson Headband (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	533	Consul Pauldrons (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	536	Divine Vambraces (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	542	Tachyon Scarf (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	578	Carbon Gauntlet (Legendary)	0.00958772749
+12	Serious Showdown	Legendary	25406	Intermediate Weaponry	0.00958772749
+13	Dino Drama	Common	15356	Beast Hunter VI	0.0120481923
+13	Dino Drama	Common	15357	Insect Hunter VI	0.0120481923
+13	Dino Drama	Common	15358	Aerial Hunter VI	0.0120481923
+13	Dino Drama	Common	15359	Aquatic Hunter VI	0.0120481923
+13	Dino Drama	Common	15360	Humanoid Hunter VI	0.0120481923
+13	Dino Drama	Common	15361	Machine Hunter VI	0.0120481923
+13	Dino Drama	Common	15362	Titan Hunter VI	0.0120481923
+13	Dino Drama	Common	15364	Ambush Boost VI	0.0120481923
+13	Dino Drama	Common	15366	Indoor Attack Up VI	0.0120481923
+13	Dino Drama	Common	15367	Outdoor Attack Up VI	0.0120481923
+13	Dino Drama	Common	15378	Emergency Guard VI	0.0120481923
+13	Dino Drama	Common	15383	Launch Resist VI	0.0120481923
+13	Dino Drama	Common	15384	Smash Resist VI	0.0120481923
+13	Dino Drama	Common	15386	Knockback Resist VI	0.0120481923
+13	Dino Drama	Common	15394	Night Vision VI	0.0120481923
+13	Dino Drama	Common	15395	Sunlight Eye VI	0.0120481923
+13	Dino Drama	Common	15396	Reflect Damage Up VI	0.0120481923
+13	Dino Drama	Common	15397	Opening Art VI	0.0120481923
+13	Dino Drama	Common	15401	Specials Lv 1 Plus VI	0.0120481923
+13	Dino Drama	Common	15402	Specials Lv 2 Plus VI	0.0120481923
+13	Dino Drama	Common	15403	Specials Lv 3 Plus VI	0.0120481923
+13	Dino Drama	Common	15404	Specials Lv 4 Plus VI	0.0120481923
+13	Dino Drama	Common	10004	Silver Chip	0.0240963846
+13	Dino Drama	Common	10008	Gold Chip	0.0240963846
+13	Dino Drama	Common	10012	Horn Chip	0.0240963846
+13	Dino Drama	Common	10016	Forest Chip	0.0240963846
+13	Dino Drama	Common	10020	Fluorite Chip	0.0240963846
+13	Dino Drama	Common	10024	Zircon Chip	0.0240963846
+13	Dino Drama	Common	15352	Critical Up VI	0.0120481923
+13	Dino Drama	Common	15355	Block Rate Up VI	0.0120481923
+13	Dino Drama	Common	15363	Fusion Combo Up VI	0.0120481923
+13	Dino Drama	Common	15366	Indoor Attack Up VI	0.0120481923
+13	Dino Drama	Common	15367	Outdoor Attack Up VI	0.0120481923
+13	Dino Drama	Common	15378	Emergency Guard VI	0.0120481923
+13	Dino Drama	Common	15398	Affinity MAX Barrier VI	0.0120481923
+13	Dino Drama	Common	567	Saint's Necklace (Common)	0.0120481923
+13	Dino Drama	Common	568	Saint's Necklace (Rare)	0.0120481923
+13	Dino Drama	Common	569	Saint's Necklace (Legendary)	0.0120481923
+13	Dino Drama	Common	465	Augmented Vision Kit (Common)	0.0120481923
+13	Dino Drama	Common	468	Charm Bangle (Common)	0.0120481923
+13	Dino Drama	Common	474	Seven-League Circlet (Common)	0.0120481923
+13	Dino Drama	Common	498	Twin Trunks Vest (Common)	0.0120481923
+13	Dino Drama	Common	507	Vivid Mitts (Common)	0.0120481923
+13	Dino Drama	Common	510	Dauntless Boots (Common)	0.0120481923
+13	Dino Drama	Common	513	Sunlight Choker (Common)	0.0120481923
+13	Dino Drama	Common	525	Staunch Boots (Common)	0.0120481923
+13	Dino Drama	Common	552	Enlightened Loincloth (Common)	0.0120481923
+13	Dino Drama	Common	555	Glamorous Swimsuit (Common)	0.0120481923
+13	Dino Drama	Common	558	Vanish Hood (Common)	0.0120481923
+13	Dino Drama	Common	561	Platinum Nopon Mask (Common)	0.0120481923
+13	Dino Drama	Common	573	Beatific Medal (Common)	0.0120481923
+13	Dino Drama	Common	466	Augmented Vision Kit (Rare)	0.0120481923
+13	Dino Drama	Common	469	Charm Bangle (Rare)	0.0120481923
+13	Dino Drama	Common	475	Seven-League Circlet (Rare)	0.0120481923
+13	Dino Drama	Common	499	Twin Trunks Vest (Rare)	0.0120481923
+13	Dino Drama	Common	508	Vivid Mitts (Rare)	0.0120481923
+13	Dino Drama	Common	511	Dauntless Boots (Rare)	0.0120481923
+13	Dino Drama	Common	514	Sunlight Choker (Rare)	0.0120481923
+13	Dino Drama	Common	526	Staunch Boots (Rare)	0.0120481923
+13	Dino Drama	Common	553	Enlightened Loincloth (Rare)	0.0120481923
+13	Dino Drama	Common	556	Glamorous Swimsuit (Rare)	0.0120481923
+13	Dino Drama	Common	559	Vanish Hood (Rare)	0.0120481923
+13	Dino Drama	Common	562	Platinum Nopon Mask (Rare)	0.0120481923
+13	Dino Drama	Common	574	Beatific Medal (Rare)	0.0120481923
+13	Dino Drama	Common	467	Augmented Vision Kit (Legendary)	0.0120481923
+13	Dino Drama	Common	470	Charm Bangle (Legendary)	0.0120481923
+13	Dino Drama	Common	476	Seven-League Circlet (Legendary)	0.0120481923
+13	Dino Drama	Common	500	Twin Trunks Vest (Legendary)	0.0120481923
+13	Dino Drama	Common	509	Vivid Mitts (Legendary)	0.0120481923
+13	Dino Drama	Common	512	Dauntless Boots (Legendary)	0.0120481923
+13	Dino Drama	Common	515	Sunlight Choker (Legendary)	0.0120481923
+13	Dino Drama	Common	527	Staunch Boots (Legendary)	0.0120481923
+13	Dino Drama	Common	554	Enlightened Loincloth (Legendary)	0.0120481923
+13	Dino Drama	Common	557	Glamorous Swimsuit (Legendary)	0.0120481923
+13	Dino Drama	Common	560	Vanish Hood (Legendary)	0.0120481923
+13	Dino Drama	Common	563	Platinum Nopon Mask (Legendary)	0.0120481923
+13	Dino Drama	Common	575	Beatific Medal (Legendary)	0.0120481923
+13	Dino Drama	Rare	15356	Beast Hunter VI	0.00480769249
+13	Dino Drama	Rare	15357	Insect Hunter VI	0.00480769249
+13	Dino Drama	Rare	15358	Aerial Hunter VI	0.00480769249
+13	Dino Drama	Rare	15359	Aquatic Hunter VI	0.00480769249
+13	Dino Drama	Rare	15360	Humanoid Hunter VI	0.00480769249
+13	Dino Drama	Rare	15361	Machine Hunter VI	0.00480769249
+13	Dino Drama	Rare	15362	Titan Hunter VI	0.00480769249
+13	Dino Drama	Rare	15364	Ambush Boost VI	0.00480769249
+13	Dino Drama	Rare	15366	Indoor Attack Up VI	0.00480769249
+13	Dino Drama	Rare	15367	Outdoor Attack Up VI	0.00480769249
+13	Dino Drama	Rare	15378	Emergency Guard VI	0.00480769249
+13	Dino Drama	Rare	15383	Launch Resist VI	0.00480769249
+13	Dino Drama	Rare	15384	Smash Resist VI	0.00480769249
+13	Dino Drama	Rare	15386	Knockback Resist VI	0.00480769249
+13	Dino Drama	Rare	15394	Night Vision VI	0.00480769249
+13	Dino Drama	Rare	15395	Sunlight Eye VI	0.00480769249
+13	Dino Drama	Rare	15396	Reflect Damage Up VI	0.00480769249
+13	Dino Drama	Rare	15397	Opening Art VI	0.00480769249
+13	Dino Drama	Rare	15401	Specials Lv 1 Plus VI	0.00480769249
+13	Dino Drama	Rare	15402	Specials Lv 2 Plus VI	0.00480769249
+13	Dino Drama	Rare	15403	Specials Lv 3 Plus VI	0.00480769249
+13	Dino Drama	Rare	15404	Specials Lv 4 Plus VI	0.00480769249
+13	Dino Drama	Rare	10004	Silver Chip	0.009615385
+13	Dino Drama	Rare	10008	Gold Chip	0.009615385
+13	Dino Drama	Rare	10012	Horn Chip	0.009615385
+13	Dino Drama	Rare	10016	Forest Chip	0.009615385
+13	Dino Drama	Rare	10020	Fluorite Chip	0.009615385
+13	Dino Drama	Rare	10024	Zircon Chip	0.009615385
+13	Dino Drama	Rare	15352	Critical Up VI	0.00480769249
+13	Dino Drama	Rare	15355	Block Rate Up VI	0.00480769249
+13	Dino Drama	Rare	15363	Fusion Combo Up VI	0.00480769249
+13	Dino Drama	Rare	15366	Indoor Attack Up VI	0.00480769249
+13	Dino Drama	Rare	15367	Outdoor Attack Up VI	0.00480769249
+13	Dino Drama	Rare	15378	Emergency Guard VI	0.00480769249
+13	Dino Drama	Rare	15398	Affinity MAX Barrier VI	0.00480769249
+13	Dino Drama	Rare	567	Saint's Necklace (Common)	0.00480769249
+13	Dino Drama	Rare	568	Saint's Necklace (Rare)	0.00480769249
+13	Dino Drama	Rare	569	Saint's Necklace (Legendary)	0.00480769249
+13	Dino Drama	Rare	465	Augmented Vision Kit (Common)	0.00480769249
+13	Dino Drama	Rare	468	Charm Bangle (Common)	0.00480769249
+13	Dino Drama	Rare	474	Seven-League Circlet (Common)	0.00480769249
+13	Dino Drama	Rare	498	Twin Trunks Vest (Common)	0.00480769249
+13	Dino Drama	Rare	507	Vivid Mitts (Common)	0.00480769249
+13	Dino Drama	Rare	510	Dauntless Boots (Common)	0.00480769249
+13	Dino Drama	Rare	513	Sunlight Choker (Common)	0.00480769249
+13	Dino Drama	Rare	525	Staunch Boots (Common)	0.00480769249
+13	Dino Drama	Rare	552	Enlightened Loincloth (Common)	0.00480769249
+13	Dino Drama	Rare	555	Glamorous Swimsuit (Common)	0.00480769249
+13	Dino Drama	Rare	558	Vanish Hood (Common)	0.00480769249
+13	Dino Drama	Rare	561	Platinum Nopon Mask (Common)	0.00480769249
+13	Dino Drama	Rare	573	Beatific Medal (Common)	0.00480769249
+13	Dino Drama	Rare	466	Augmented Vision Kit (Rare)	0.00480769249
+13	Dino Drama	Rare	469	Charm Bangle (Rare)	0.00480769249
+13	Dino Drama	Rare	475	Seven-League Circlet (Rare)	0.00480769249
+13	Dino Drama	Rare	499	Twin Trunks Vest (Rare)	0.00480769249
+13	Dino Drama	Rare	508	Vivid Mitts (Rare)	0.00480769249
+13	Dino Drama	Rare	511	Dauntless Boots (Rare)	0.00480769249
+13	Dino Drama	Rare	514	Sunlight Choker (Rare)	0.00480769249
+13	Dino Drama	Rare	526	Staunch Boots (Rare)	0.00480769249
+13	Dino Drama	Rare	553	Enlightened Loincloth (Rare)	0.00480769249
+13	Dino Drama	Rare	556	Glamorous Swimsuit (Rare)	0.00480769249
+13	Dino Drama	Rare	559	Vanish Hood (Rare)	0.00480769249
+13	Dino Drama	Rare	562	Platinum Nopon Mask (Rare)	0.00480769249
+13	Dino Drama	Rare	574	Beatific Medal (Rare)	0.00480769249
+13	Dino Drama	Rare	467	Augmented Vision Kit (Legendary)	0.00480769249
+13	Dino Drama	Rare	470	Charm Bangle (Legendary)	0.00480769249
+13	Dino Drama	Rare	476	Seven-League Circlet (Legendary)	0.00480769249
+13	Dino Drama	Rare	500	Twin Trunks Vest (Legendary)	0.00480769249
+13	Dino Drama	Rare	509	Vivid Mitts (Legendary)	0.00480769249
+13	Dino Drama	Rare	512	Dauntless Boots (Legendary)	0.00480769249
+13	Dino Drama	Rare	515	Sunlight Choker (Legendary)	0.00480769249
+13	Dino Drama	Rare	527	Staunch Boots (Legendary)	0.00480769249
+13	Dino Drama	Rare	554	Enlightened Loincloth (Legendary)	0.00480769249
+13	Dino Drama	Rare	557	Glamorous Swimsuit (Legendary)	0.00480769249
+13	Dino Drama	Rare	560	Vanish Hood (Legendary)	0.00480769249
+13	Dino Drama	Rare	563	Platinum Nopon Mask (Legendary)	0.00480769249
+13	Dino Drama	Rare	575	Beatific Medal (Legendary)	0.00480769249
+13	Dino Drama	Rare	15365	Aggro Attack Up VI	0.01923077
+13	Dino Drama	Rare	15376	Evasion Focus VI	0.009615385
+13	Dino Drama	Rare	15379	Endurance VI	0.01923077
+13	Dino Drama	Rare	15382	Topple Resist VI	0.009615385
+13	Dino Drama	Rare	15385	Blowdown Resist VI	0.009615385
+13	Dino Drama	Rare	15387	Auto-Attack Stealth VI	0.009615385
+13	Dino Drama	Rare	15389	Arts Stealth VI	0.009615385
+13	Dino Drama	Rare	15398	Affinity MAX Barrier VI	0.009615385
+13	Dino Drama	Rare	15405	Affinity MAX Acc VI	0.009615385
+13	Dino Drama	Rare	15406	Jamming VI	0.009615385
+13	Dino Drama	Rare	10028	Shaft Chip	0.01923077
+13	Dino Drama	Rare	10032	Booster Chip	0.01923077
+13	Dino Drama	Rare	10036	Hexagon Chip	0.01923077
+13	Dino Drama	Rare	10040	Spiral Chip	0.01923077
+13	Dino Drama	Rare	10044	Winonaite Chip	0.01923077
+13	Dino Drama	Rare	10048	Angrite Chip	0.01923077
+13	Dino Drama	Rare	15377	Swift Evasion VI	0.009615385
+13	Dino Drama	Rare	15391	Arts Heal VI	0.009615385
+13	Dino Drama	Rare	456	Consul Greaves (Common)	0.009615385
+13	Dino Drama	Rare	489	Abyss Masque (Common)	0.009615385
+13	Dino Drama	Rare	495	Survivor's Footgear (Common)	0.009615385
+13	Dino Drama	Rare	501	Beast-Hide Vest (Common)	0.009615385
+13	Dino Drama	Rare	504	Prairie Cap (Common)	0.009615385
+13	Dino Drama	Rare	519	Crimson Headband (Common)	0.009615385
+13	Dino Drama	Rare	531	Consul Pauldrons (Common)	0.009615385
+13	Dino Drama	Rare	534	Divine Vambraces (Common)	0.009615385
+13	Dino Drama	Rare	540	Tachyon Scarf (Common)	0.009615385
+13	Dino Drama	Rare	576	Carbon Gauntlet (Common)	0.009615385
+13	Dino Drama	Rare	457	Consul Greaves (Rare)	0.009615385
+13	Dino Drama	Rare	490	Abyss Masque (Rare)	0.009615385
+13	Dino Drama	Rare	496	Survivor's Footgear (Rare)	0.009615385
+13	Dino Drama	Rare	502	Beast-Hide Vest (Rare)	0.009615385
+13	Dino Drama	Rare	505	Prairie Cap (Rare)	0.009615385
+13	Dino Drama	Rare	520	Crimson Headband (Rare)	0.009615385
+13	Dino Drama	Rare	532	Consul Pauldrons (Rare)	0.009615385
+13	Dino Drama	Rare	535	Divine Vambraces (Rare)	0.009615385
+13	Dino Drama	Rare	541	Tachyon Scarf (Rare)	0.009615385
+13	Dino Drama	Rare	577	Carbon Gauntlet (Rare)	0.009615385
+13	Dino Drama	Rare	458	Consul Greaves (Legendary)	0.009615385
+13	Dino Drama	Rare	491	Abyss Masque (Legendary)	0.009615385
+13	Dino Drama	Rare	497	Survivor's Footgear (Legendary)	0.009615385
+13	Dino Drama	Rare	503	Beast-Hide Vest (Legendary)	0.009615385
+13	Dino Drama	Rare	506	Prairie Cap (Legendary)	0.009615385
+13	Dino Drama	Rare	521	Crimson Headband (Legendary)	0.009615385
+13	Dino Drama	Rare	533	Consul Pauldrons (Legendary)	0.009615385
+13	Dino Drama	Rare	536	Divine Vambraces (Legendary)	0.009615385
+13	Dino Drama	Rare	542	Tachyon Scarf (Legendary)	0.009615385
+13	Dino Drama	Rare	578	Carbon Gauntlet (Legendary)	0.009615385
+13	Dino Drama	Rare	471	Belemnite Bangle (Common)	0.009615385
+13	Dino Drama	Rare	477	Fighter's Circlet (Common)	0.00480769249
+13	Dino Drama	Rare	522	Black Cube (Common)	0.00480769249
+13	Dino Drama	Rare	543	Rainbow Belt (Common)	0.00480769249
+13	Dino Drama	Rare	472	Belemnite Bangle (Rare)	0.00480769249
+13	Dino Drama	Rare	478	Fighter's Circlet (Rare)	0.00480769249
+13	Dino Drama	Rare	523	Black Cube (Rare)	0.00480769249
+13	Dino Drama	Rare	544	Rainbow Belt (Rare)	0.00480769249
+13	Dino Drama	Rare	473	Belemnite Bangle (Legendary)	0.00480769249
+13	Dino Drama	Rare	479	Fighter's Circlet (Legendary)	0.00480769249
+13	Dino Drama	Rare	524	Black Cube (Legendary)	0.00480769249
+13	Dino Drama	Rare	545	Rainbow Belt (Legendary)	0.00480769249
+13	Dino Drama	Legendary	15365	Aggro Attack Up VI	0.0120481923
+13	Dino Drama	Legendary	15376	Evasion Focus VI	0.0120481923
+13	Dino Drama	Legendary	15379	Endurance VI	0.0120481923
+13	Dino Drama	Legendary	15382	Topple Resist VI	0.0120481923
+13	Dino Drama	Legendary	15385	Blowdown Resist VI	0.0120481923
+13	Dino Drama	Legendary	15387	Auto-Attack Stealth VI	0.0120481923
+13	Dino Drama	Legendary	15389	Arts Stealth VI	0.0120481923
+13	Dino Drama	Legendary	15398	Affinity MAX Barrier VI	0.0120481923
+13	Dino Drama	Legendary	15405	Affinity MAX Acc VI	0.0120481923
+13	Dino Drama	Legendary	15406	Jamming VI	0.0120481923
+13	Dino Drama	Legendary	10028	Shaft Chip	0.0240963846
+13	Dino Drama	Legendary	10032	Booster Chip	0.0240963846
+13	Dino Drama	Legendary	10036	Hexagon Chip	0.0240963846
+13	Dino Drama	Legendary	10040	Spiral Chip	0.0240963846
+13	Dino Drama	Legendary	10044	Winonaite Chip	0.0240963846
+13	Dino Drama	Legendary	10048	Angrite Chip	0.0240963846
+13	Dino Drama	Legendary	15377	Swift Evasion VI	0.0120481923
+13	Dino Drama	Legendary	15391	Arts Heal VI	0.0120481923
+13	Dino Drama	Legendary	456	Consul Greaves (Common)	0.0120481923
+13	Dino Drama	Legendary	489	Abyss Masque (Common)	0.0120481923
+13	Dino Drama	Legendary	495	Survivor's Footgear (Common)	0.0120481923
+13	Dino Drama	Legendary	501	Beast-Hide Vest (Common)	0.0120481923
+13	Dino Drama	Legendary	504	Prairie Cap (Common)	0.0120481923
+13	Dino Drama	Legendary	519	Crimson Headband (Common)	0.0120481923
+13	Dino Drama	Legendary	531	Consul Pauldrons (Common)	0.0120481923
+13	Dino Drama	Legendary	534	Divine Vambraces (Common)	0.0120481923
+13	Dino Drama	Legendary	540	Tachyon Scarf (Common)	0.0120481923
+13	Dino Drama	Legendary	576	Carbon Gauntlet (Common)	0.0120481923
+13	Dino Drama	Legendary	457	Consul Greaves (Rare)	0.0120481923
+13	Dino Drama	Legendary	490	Abyss Masque (Rare)	0.0120481923
+13	Dino Drama	Legendary	496	Survivor's Footgear (Rare)	0.0120481923
+13	Dino Drama	Legendary	502	Beast-Hide Vest (Rare)	0.0120481923
+13	Dino Drama	Legendary	505	Prairie Cap (Rare)	0.0120481923
+13	Dino Drama	Legendary	520	Crimson Headband (Rare)	0.0120481923
+13	Dino Drama	Legendary	532	Consul Pauldrons (Rare)	0.0120481923
+13	Dino Drama	Legendary	535	Divine Vambraces (Rare)	0.0120481923
+13	Dino Drama	Legendary	541	Tachyon Scarf (Rare)	0.0120481923
+13	Dino Drama	Legendary	577	Carbon Gauntlet (Rare)	0.0120481923
+13	Dino Drama	Legendary	458	Consul Greaves (Legendary)	0.0120481923
+13	Dino Drama	Legendary	491	Abyss Masque (Legendary)	0.0120481923
+13	Dino Drama	Legendary	497	Survivor's Footgear (Legendary)	0.0120481923
+13	Dino Drama	Legendary	503	Beast-Hide Vest (Legendary)	0.0120481923
+13	Dino Drama	Legendary	506	Prairie Cap (Legendary)	0.0120481923
+13	Dino Drama	Legendary	521	Crimson Headband (Legendary)	0.0120481923
+13	Dino Drama	Legendary	533	Consul Pauldrons (Legendary)	0.0120481923
+13	Dino Drama	Legendary	536	Divine Vambraces (Legendary)	0.0120481923
+13	Dino Drama	Legendary	542	Tachyon Scarf (Legendary)	0.0120481923
+13	Dino Drama	Legendary	578	Carbon Gauntlet (Legendary)	0.0120481923
+13	Dino Drama	Legendary	471	Belemnite Bangle (Common)	0.006024096
+13	Dino Drama	Legendary	477	Fighter's Circlet (Common)	0.006024096
+13	Dino Drama	Legendary	522	Black Cube (Common)	0.006024096
+13	Dino Drama	Legendary	543	Rainbow Belt (Common)	0.006024096
+13	Dino Drama	Legendary	472	Belemnite Bangle (Rare)	0.006024096
+13	Dino Drama	Legendary	478	Fighter's Circlet (Rare)	0.006024096
+13	Dino Drama	Legendary	523	Black Cube (Rare)	0.006024096
+13	Dino Drama	Legendary	544	Rainbow Belt (Rare)	0.006024096
+13	Dino Drama	Legendary	473	Belemnite Bangle (Legendary)	0.006024096
+13	Dino Drama	Legendary	479	Fighter's Circlet (Legendary)	0.006024096
+13	Dino Drama	Legendary	524	Black Cube (Legendary)	0.006024096
+13	Dino Drama	Legendary	545	Rainbow Belt (Legendary)	0.006024096
+13	Dino Drama	Legendary	15353	Physical Defense Up VI	0.006024096
+13	Dino Drama	Legendary	15354	Ether Defense Up VI	0.006024096
+13	Dino Drama	Legendary	15061	Blade Combo Boost VI	0.006024096
+13	Dino Drama	Legendary	15132	Ultimate Shield	0.006024096
+13	Dino Drama	Legendary	15380	HP Attack Boost VI	0.006024096
+13	Dino Drama	Legendary	15381	Break Resist VI	0.006024096
+13	Dino Drama	Legendary	15388	Aggro Boost VI	0.006024096
+13	Dino Drama	Legendary	15390	Arts Aggro Boost VI	0.006024096
+13	Dino Drama	Legendary	15393	Damage Heal VI	0.006024096
+13	Dino Drama	Legendary	15319	Fast Blade Switch VI	0.006024096
+13	Dino Drama	Legendary	10052	Shining Star Chip	0.0120481923
+13	Dino Drama	Legendary	10053	Moon Matter Chip	0.0120481923
+13	Dino Drama	Legendary	10054	Sunlight Chip	0.0120481923
+13	Dino Drama	Legendary	10058	Dilaton Chip	0.0120481923
+13	Dino Drama	Legendary	10059	Preon Chip	0.0120481923
+13	Dino Drama	Legendary	10060	Tachyon Chip	0.0120481923
+13	Dino Drama	Legendary	15392	Movement Heal VI	0.006024096
+13	Dino Drama	Legendary	15393	Damage Heal VI	0.006024096
+13	Dino Drama	Legendary	15399	Affinity MAX Atk VI	0.006024096
+13	Dino Drama	Legendary	15400	Affinity MAX Evade VI	0.006024096
+13	Dino Drama	Legendary	459	Infinity Greaves (Common)	0.006024096
+13	Dino Drama	Legendary	480	Ocean Earring (Common)	0.006024096
+13	Dino Drama	Legendary	483	Seven-Seas Earring (Common)	0.006024096
+13	Dino Drama	Legendary	516	Alexandrite (Common)	0.006024096
+13	Dino Drama	Legendary	546	Goliath Ring (Common)	0.006024096
+13	Dino Drama	Legendary	582	Master Scope (Common)	0.006024096
+13	Dino Drama	Legendary	460	Infinity Greaves (Rare)	0.006024096
+13	Dino Drama	Legendary	481	Ocean Earring (Rare)	0.006024096
+13	Dino Drama	Legendary	484	Seven-Seas Earring (Rare)	0.006024096
+13	Dino Drama	Legendary	517	Alexandrite (Rare)	0.006024096
+13	Dino Drama	Legendary	547	Goliath Ring (Rare)	0.006024096
+13	Dino Drama	Legendary	583	Master Scope (Rare)	0.006024096
+13	Dino Drama	Legendary	461	Infinity Greaves (Legendary)	0.006024096
+13	Dino Drama	Legendary	482	Ocean Earring (Legendary)	0.006024096
+13	Dino Drama	Legendary	485	Seven-Seas Earring (Legendary)	0.006024096
+13	Dino Drama	Legendary	518	Alexandrite (Legendary)	0.006024096
+13	Dino Drama	Legendary	548	Goliath Ring (Legendary)	0.006024096
+13	Dino Drama	Legendary	584	Master Scope (Legendary)	0.006024096
+13	Dino Drama	Legendary	25407	Ultimate Weaponry	0.0120481923
+14	Humanoid Alliance	Common	15356	Beast Hunter VI	0.004651163
+14	Humanoid Alliance	Common	15357	Insect Hunter VI	0.004651163
+14	Humanoid Alliance	Common	15358	Aerial Hunter VI	0.004651163
+14	Humanoid Alliance	Common	15359	Aquatic Hunter VI	0.004651163
+14	Humanoid Alliance	Common	15360	Humanoid Hunter VI	0.004651163
+14	Humanoid Alliance	Common	15361	Machine Hunter VI	0.004651163
+14	Humanoid Alliance	Common	15362	Titan Hunter VI	0.004651163
+14	Humanoid Alliance	Common	15364	Ambush Boost VI	0.004651163
+14	Humanoid Alliance	Common	15366	Indoor Attack Up VI	0.004651163
+14	Humanoid Alliance	Common	15367	Outdoor Attack Up VI	0.004651163
+14	Humanoid Alliance	Common	15378	Emergency Guard VI	0.004651163
+14	Humanoid Alliance	Common	15383	Launch Resist VI	0.004651163
+14	Humanoid Alliance	Common	15384	Smash Resist VI	0.004651163
+14	Humanoid Alliance	Common	15386	Knockback Resist VI	0.004651163
+14	Humanoid Alliance	Common	15394	Night Vision VI	0.004651163
+14	Humanoid Alliance	Common	15395	Sunlight Eye VI	0.004651163
+14	Humanoid Alliance	Common	15396	Reflect Damage Up VI	0.004651163
+14	Humanoid Alliance	Common	15397	Opening Art VI	0.004651163
+14	Humanoid Alliance	Common	15401	Specials Lv 1 Plus VI	0.004651163
+14	Humanoid Alliance	Common	15402	Specials Lv 2 Plus VI	0.004651163
+14	Humanoid Alliance	Common	15403	Specials Lv 3 Plus VI	0.004651163
+14	Humanoid Alliance	Common	15404	Specials Lv 4 Plus VI	0.004651163
+14	Humanoid Alliance	Common	10004	Silver Chip	0.009302326
+14	Humanoid Alliance	Common	10008	Gold Chip	0.009302326
+14	Humanoid Alliance	Common	10012	Horn Chip	0.009302326
+14	Humanoid Alliance	Common	10016	Forest Chip	0.009302326
+14	Humanoid Alliance	Common	10020	Fluorite Chip	0.009302326
+14	Humanoid Alliance	Common	10024	Zircon Chip	0.009302326
+14	Humanoid Alliance	Common	15352	Critical Up VI	0.009302326
+14	Humanoid Alliance	Common	15355	Block Rate Up VI	0.009302326
+14	Humanoid Alliance	Common	15363	Fusion Combo Up VI	0.004651163
+14	Humanoid Alliance	Common	15366	Indoor Attack Up VI	0.004651163
+14	Humanoid Alliance	Common	15367	Outdoor Attack Up VI	0.004651163
+14	Humanoid Alliance	Common	15378	Emergency Guard VI	0.004651163
+14	Humanoid Alliance	Common	15398	Affinity MAX Barrier VI	0.004651163
+14	Humanoid Alliance	Common	567	Saint's Necklace (Common)	0.0372093022
+14	Humanoid Alliance	Common	568	Saint's Necklace (Rare)	0.0186046511
+14	Humanoid Alliance	Common	569	Saint's Necklace (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	465	Augmented Vision Kit (Common)	0.0186046511
+14	Humanoid Alliance	Common	468	Charm Bangle (Common)	0.0186046511
+14	Humanoid Alliance	Common	474	Seven-League Circlet (Common)	0.0186046511
+14	Humanoid Alliance	Common	498	Twin Trunks Vest (Common)	0.0186046511
+14	Humanoid Alliance	Common	507	Vivid Mitts (Common)	0.0186046511
+14	Humanoid Alliance	Common	510	Dauntless Boots (Common)	0.0186046511
+14	Humanoid Alliance	Common	513	Sunlight Choker (Common)	0.0186046511
+14	Humanoid Alliance	Common	525	Staunch Boots (Common)	0.0186046511
+14	Humanoid Alliance	Common	552	Enlightened Loincloth (Common)	0.0186046511
+14	Humanoid Alliance	Common	555	Glamorous Swimsuit (Common)	0.0186046511
+14	Humanoid Alliance	Common	558	Vanish Hood (Common)	0.0186046511
+14	Humanoid Alliance	Common	561	Platinum Nopon Mask (Common)	0.0186046511
+14	Humanoid Alliance	Common	573	Beatific Medal (Common)	0.0186046511
+14	Humanoid Alliance	Common	466	Augmented Vision Kit (Rare)	0.0186046511
+14	Humanoid Alliance	Common	469	Charm Bangle (Rare)	0.0186046511
+14	Humanoid Alliance	Common	475	Seven-League Circlet (Rare)	0.0186046511
+14	Humanoid Alliance	Common	499	Twin Trunks Vest (Rare)	0.0186046511
+14	Humanoid Alliance	Common	508	Vivid Mitts (Rare)	0.0186046511
+14	Humanoid Alliance	Common	511	Dauntless Boots (Rare)	0.0186046511
+14	Humanoid Alliance	Common	514	Sunlight Choker (Rare)	0.0186046511
+14	Humanoid Alliance	Common	526	Staunch Boots (Rare)	0.0186046511
+14	Humanoid Alliance	Common	553	Enlightened Loincloth (Rare)	0.0186046511
+14	Humanoid Alliance	Common	556	Glamorous Swimsuit (Rare)	0.0186046511
+14	Humanoid Alliance	Common	559	Vanish Hood (Rare)	0.0186046511
+14	Humanoid Alliance	Common	562	Platinum Nopon Mask (Rare)	0.0186046511
+14	Humanoid Alliance	Common	574	Beatific Medal (Rare)	0.0186046511
+14	Humanoid Alliance	Common	467	Augmented Vision Kit (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	470	Charm Bangle (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	476	Seven-League Circlet (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	500	Twin Trunks Vest (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	509	Vivid Mitts (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	512	Dauntless Boots (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	515	Sunlight Choker (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	527	Staunch Boots (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	554	Enlightened Loincloth (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	557	Glamorous Swimsuit (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	560	Vanish Hood (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	563	Platinum Nopon Mask (Legendary)	0.0186046511
+14	Humanoid Alliance	Common	575	Beatific Medal (Legendary)	0.0186046511
+14	Humanoid Alliance	Rare	15356	Beast Hunter VI	0.0018348624
+14	Humanoid Alliance	Rare	15357	Insect Hunter VI	0.0018348624
+14	Humanoid Alliance	Rare	15358	Aerial Hunter VI	0.0018348624
+14	Humanoid Alliance	Rare	15359	Aquatic Hunter VI	0.0018348624
+14	Humanoid Alliance	Rare	15360	Humanoid Hunter VI	0.0018348624
+14	Humanoid Alliance	Rare	15361	Machine Hunter VI	0.0018348624
+14	Humanoid Alliance	Rare	15362	Titan Hunter VI	0.0018348624
+14	Humanoid Alliance	Rare	15364	Ambush Boost VI	0.0018348624
+14	Humanoid Alliance	Rare	15366	Indoor Attack Up VI	0.0018348624
+14	Humanoid Alliance	Rare	15367	Outdoor Attack Up VI	0.0018348624
+14	Humanoid Alliance	Rare	15378	Emergency Guard VI	0.0018348624
+14	Humanoid Alliance	Rare	15383	Launch Resist VI	0.0018348624
+14	Humanoid Alliance	Rare	15384	Smash Resist VI	0.0018348624
+14	Humanoid Alliance	Rare	15386	Knockback Resist VI	0.0018348624
+14	Humanoid Alliance	Rare	15394	Night Vision VI	0.0018348624
+14	Humanoid Alliance	Rare	15395	Sunlight Eye VI	0.0018348624
+14	Humanoid Alliance	Rare	15396	Reflect Damage Up VI	0.0018348624
+14	Humanoid Alliance	Rare	15397	Opening Art VI	0.0018348624
+14	Humanoid Alliance	Rare	15401	Specials Lv 1 Plus VI	0.0018348624
+14	Humanoid Alliance	Rare	15402	Specials Lv 2 Plus VI	0.0018348624
+14	Humanoid Alliance	Rare	15403	Specials Lv 3 Plus VI	0.0018348624
+14	Humanoid Alliance	Rare	15404	Specials Lv 4 Plus VI	0.0018348624
+14	Humanoid Alliance	Rare	10004	Silver Chip	0.0036697248
+14	Humanoid Alliance	Rare	10008	Gold Chip	0.0036697248
+14	Humanoid Alliance	Rare	10012	Horn Chip	0.0036697248
+14	Humanoid Alliance	Rare	10016	Forest Chip	0.0036697248
+14	Humanoid Alliance	Rare	10020	Fluorite Chip	0.0036697248
+14	Humanoid Alliance	Rare	10024	Zircon Chip	0.0036697248
+14	Humanoid Alliance	Rare	15352	Critical Up VI	0.0018348624
+14	Humanoid Alliance	Rare	15355	Block Rate Up VI	0.0018348624
+14	Humanoid Alliance	Rare	15363	Fusion Combo Up VI	0.0018348624
+14	Humanoid Alliance	Rare	15366	Indoor Attack Up VI	0.0018348624
+14	Humanoid Alliance	Rare	15367	Outdoor Attack Up VI	0.0018348624
+14	Humanoid Alliance	Rare	15378	Emergency Guard VI	0.0018348624
+14	Humanoid Alliance	Rare	15398	Affinity MAX Barrier VI	0.0018348624
+14	Humanoid Alliance	Rare	567	Saint's Necklace (Common)	0.0073394496
+14	Humanoid Alliance	Rare	568	Saint's Necklace (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	569	Saint's Necklace (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	465	Augmented Vision Kit (Common)	0.0073394496
+14	Humanoid Alliance	Rare	468	Charm Bangle (Common)	0.0073394496
+14	Humanoid Alliance	Rare	474	Seven-League Circlet (Common)	0.0073394496
+14	Humanoid Alliance	Rare	498	Twin Trunks Vest (Common)	0.0073394496
+14	Humanoid Alliance	Rare	507	Vivid Mitts (Common)	0.0073394496
+14	Humanoid Alliance	Rare	510	Dauntless Boots (Common)	0.0073394496
+14	Humanoid Alliance	Rare	513	Sunlight Choker (Common)	0.0073394496
+14	Humanoid Alliance	Rare	525	Staunch Boots (Common)	0.0073394496
+14	Humanoid Alliance	Rare	552	Enlightened Loincloth (Common)	0.0073394496
+14	Humanoid Alliance	Rare	555	Glamorous Swimsuit (Common)	0.0073394496
+14	Humanoid Alliance	Rare	558	Vanish Hood (Common)	0.0073394496
+14	Humanoid Alliance	Rare	561	Platinum Nopon Mask (Common)	0.0073394496
+14	Humanoid Alliance	Rare	573	Beatific Medal (Common)	0.0073394496
+14	Humanoid Alliance	Rare	466	Augmented Vision Kit (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	469	Charm Bangle (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	475	Seven-League Circlet (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	499	Twin Trunks Vest (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	508	Vivid Mitts (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	511	Dauntless Boots (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	514	Sunlight Choker (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	526	Staunch Boots (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	553	Enlightened Loincloth (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	556	Glamorous Swimsuit (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	559	Vanish Hood (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	562	Platinum Nopon Mask (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	574	Beatific Medal (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	467	Augmented Vision Kit (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	470	Charm Bangle (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	476	Seven-League Circlet (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	500	Twin Trunks Vest (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	509	Vivid Mitts (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	512	Dauntless Boots (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	515	Sunlight Choker (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	527	Staunch Boots (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	554	Enlightened Loincloth (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	557	Glamorous Swimsuit (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	560	Vanish Hood (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	563	Platinum Nopon Mask (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	575	Beatific Medal (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	15365	Aggro Attack Up VI	0.0036697248
+14	Humanoid Alliance	Rare	15376	Evasion Focus VI	0.0036697248
+14	Humanoid Alliance	Rare	15379	Endurance VI	0.0036697248
+14	Humanoid Alliance	Rare	15382	Topple Resist VI	0.0036697248
+14	Humanoid Alliance	Rare	15385	Blowdown Resist VI	0.0036697248
+14	Humanoid Alliance	Rare	15387	Auto-Attack Stealth VI	0.0036697248
+14	Humanoid Alliance	Rare	15389	Arts Stealth VI	0.0036697248
+14	Humanoid Alliance	Rare	15398	Affinity MAX Barrier VI	0.0036697248
+14	Humanoid Alliance	Rare	15405	Affinity MAX Acc VI	0.0036697248
+14	Humanoid Alliance	Rare	15406	Jamming VI	0.0036697248
+14	Humanoid Alliance	Rare	10028	Shaft Chip	0.0073394496
+14	Humanoid Alliance	Rare	10032	Booster Chip	0.0073394496
+14	Humanoid Alliance	Rare	10036	Hexagon Chip	0.0073394496
+14	Humanoid Alliance	Rare	10040	Spiral Chip	0.0073394496
+14	Humanoid Alliance	Rare	10044	Winonaite Chip	0.0073394496
+14	Humanoid Alliance	Rare	10048	Angrite Chip	0.0073394496
+14	Humanoid Alliance	Rare	15377	Swift Evasion VI	0.0036697248
+14	Humanoid Alliance	Rare	15391	Arts Heal VI	0.0036697248
+14	Humanoid Alliance	Rare	456	Consul Greaves (Common)	0.0146788992
+14	Humanoid Alliance	Rare	489	Abyss Masque (Common)	0.0146788992
+14	Humanoid Alliance	Rare	495	Survivor's Footgear (Common)	0.0146788992
+14	Humanoid Alliance	Rare	501	Beast-Hide Vest (Common)	0.0146788992
+14	Humanoid Alliance	Rare	504	Prairie Cap (Common)	0.0146788992
+14	Humanoid Alliance	Rare	519	Crimson Headband (Common)	0.0146788992
+14	Humanoid Alliance	Rare	531	Consul Pauldrons (Common)	0.0146788992
+14	Humanoid Alliance	Rare	534	Divine Vambraces (Common)	0.0146788992
+14	Humanoid Alliance	Rare	540	Tachyon Scarf (Common)	0.0146788992
+14	Humanoid Alliance	Rare	576	Carbon Gauntlet (Common)	0.0146788992
+14	Humanoid Alliance	Rare	457	Consul Greaves (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	490	Abyss Masque (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	496	Survivor's Footgear (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	502	Beast-Hide Vest (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	505	Prairie Cap (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	520	Crimson Headband (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	532	Consul Pauldrons (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	535	Divine Vambraces (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	541	Tachyon Scarf (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	577	Carbon Gauntlet (Rare)	0.0146788992
+14	Humanoid Alliance	Rare	458	Consul Greaves (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	491	Abyss Masque (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	497	Survivor's Footgear (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	503	Beast-Hide Vest (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	506	Prairie Cap (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	521	Crimson Headband (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	533	Consul Pauldrons (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	536	Divine Vambraces (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	542	Tachyon Scarf (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	578	Carbon Gauntlet (Legendary)	0.0146788992
+14	Humanoid Alliance	Rare	471	Belemnite Bangle (Common)	0.0073394496
+14	Humanoid Alliance	Rare	477	Fighter's Circlet (Common)	0.0073394496
+14	Humanoid Alliance	Rare	522	Black Cube (Common)	0.0073394496
+14	Humanoid Alliance	Rare	543	Rainbow Belt (Common)	0.0073394496
+14	Humanoid Alliance	Rare	472	Belemnite Bangle (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	478	Fighter's Circlet (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	523	Black Cube (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	544	Rainbow Belt (Rare)	0.0073394496
+14	Humanoid Alliance	Rare	473	Belemnite Bangle (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	479	Fighter's Circlet (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	524	Black Cube (Legendary)	0.0073394496
+14	Humanoid Alliance	Rare	545	Rainbow Belt (Legendary)	0.0073394496
+14	Humanoid Alliance	Legendary	15365	Aggro Attack Up VI	0.004524887
+14	Humanoid Alliance	Legendary	15376	Evasion Focus VI	0.004524887
+14	Humanoid Alliance	Legendary	15379	Endurance VI	0.004524887
+14	Humanoid Alliance	Legendary	15382	Topple Resist VI	0.004524887
+14	Humanoid Alliance	Legendary	15385	Blowdown Resist VI	0.004524887
+14	Humanoid Alliance	Legendary	15387	Auto-Attack Stealth VI	0.004524887
+14	Humanoid Alliance	Legendary	15389	Arts Stealth VI	0.004524887
+14	Humanoid Alliance	Legendary	15398	Affinity MAX Barrier VI	0.004524887
+14	Humanoid Alliance	Legendary	15405	Affinity MAX Acc VI	0.004524887
+14	Humanoid Alliance	Legendary	15406	Jamming VI	0.004524887
+14	Humanoid Alliance	Legendary	10028	Shaft Chip	0.009049774
+14	Humanoid Alliance	Legendary	10032	Booster Chip	0.009049774
+14	Humanoid Alliance	Legendary	10036	Hexagon Chip	0.009049774
+14	Humanoid Alliance	Legendary	10040	Spiral Chip	0.009049774
+14	Humanoid Alliance	Legendary	10044	Winonaite Chip	0.009049774
+14	Humanoid Alliance	Legendary	10048	Angrite Chip	0.009049774
+14	Humanoid Alliance	Legendary	15377	Swift Evasion VI	0.004524887
+14	Humanoid Alliance	Legendary	15391	Arts Heal VI	0.004524887
+14	Humanoid Alliance	Legendary	456	Consul Greaves (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	489	Abyss Masque (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	495	Survivor's Footgear (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	501	Beast-Hide Vest (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	504	Prairie Cap (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	519	Crimson Headband (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	531	Consul Pauldrons (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	534	Divine Vambraces (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	540	Tachyon Scarf (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	576	Carbon Gauntlet (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	457	Consul Greaves (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	490	Abyss Masque (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	496	Survivor's Footgear (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	502	Beast-Hide Vest (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	505	Prairie Cap (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	520	Crimson Headband (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	532	Consul Pauldrons (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	535	Divine Vambraces (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	541	Tachyon Scarf (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	577	Carbon Gauntlet (Rare)	0.0180995483
+14	Humanoid Alliance	Legendary	458	Consul Greaves (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	491	Abyss Masque (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	497	Survivor's Footgear (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	503	Beast-Hide Vest (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	506	Prairie Cap (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	521	Crimson Headband (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	533	Consul Pauldrons (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	536	Divine Vambraces (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	542	Tachyon Scarf (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	578	Carbon Gauntlet (Legendary)	0.0180995483
+14	Humanoid Alliance	Legendary	471	Belemnite Bangle (Common)	0.009049774
+14	Humanoid Alliance	Legendary	477	Fighter's Circlet (Common)	0.009049774
+14	Humanoid Alliance	Legendary	522	Black Cube (Common)	0.009049774
+14	Humanoid Alliance	Legendary	543	Rainbow Belt (Common)	0.009049774
+14	Humanoid Alliance	Legendary	472	Belemnite Bangle (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	478	Fighter's Circlet (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	523	Black Cube (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	544	Rainbow Belt (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	473	Belemnite Bangle (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	479	Fighter's Circlet (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	524	Black Cube (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	545	Rainbow Belt (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	15353	Physical Defense Up VI	0.00226244354
+14	Humanoid Alliance	Legendary	15354	Ether Defense Up VI	0.00226244354
+14	Humanoid Alliance	Legendary	15061	Blade Combo Boost VI	0.00226244354
+14	Humanoid Alliance	Legendary	15132	Ultimate Shield	0.00226244354
+14	Humanoid Alliance	Legendary	15380	HP Attack Boost VI	0.00226244354
+14	Humanoid Alliance	Legendary	15381	Break Resist VI	0.00226244354
+14	Humanoid Alliance	Legendary	15388	Aggro Boost VI	0.00226244354
+14	Humanoid Alliance	Legendary	15390	Arts Aggro Boost VI	0.00226244354
+14	Humanoid Alliance	Legendary	15393	Damage Heal VI	0.00226244354
+14	Humanoid Alliance	Legendary	15319	Fast Blade Switch VI	0.00226244354
+14	Humanoid Alliance	Legendary	10052	Shining Star Chip	0.004524887
+14	Humanoid Alliance	Legendary	10053	Moon Matter Chip	0.004524887
+14	Humanoid Alliance	Legendary	10054	Sunlight Chip	0.004524887
+14	Humanoid Alliance	Legendary	10058	Dilaton Chip	0.004524887
+14	Humanoid Alliance	Legendary	10059	Preon Chip	0.004524887
+14	Humanoid Alliance	Legendary	10060	Tachyon Chip	0.004524887
+14	Humanoid Alliance	Legendary	15392	Movement Heal VI	0.00226244354
+14	Humanoid Alliance	Legendary	15393	Damage Heal VI	0.00226244354
+14	Humanoid Alliance	Legendary	15399	Affinity MAX Atk VI	0.00226244354
+14	Humanoid Alliance	Legendary	15400	Affinity MAX Evade VI	0.00226244354
+14	Humanoid Alliance	Legendary	459	Infinity Greaves (Common)	0.009049774
+14	Humanoid Alliance	Legendary	480	Ocean Earring (Common)	0.0180995483
+14	Humanoid Alliance	Legendary	483	Seven-Seas Earring (Common)	0.009049774
+14	Humanoid Alliance	Legendary	516	Alexandrite (Common)	0.009049774
+14	Humanoid Alliance	Legendary	546	Goliath Ring (Common)	0.009049774
+14	Humanoid Alliance	Legendary	582	Master Scope (Common)	0.009049774
+14	Humanoid Alliance	Legendary	460	Infinity Greaves (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	481	Ocean Earring (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	484	Seven-Seas Earring (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	517	Alexandrite (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	547	Goliath Ring (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	583	Master Scope (Rare)	0.009049774
+14	Humanoid Alliance	Legendary	461	Infinity Greaves (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	482	Ocean Earring (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	485	Seven-Seas Earring (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	518	Alexandrite (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	548	Goliath Ring (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	584	Master Scope (Legendary)	0.009049774
+14	Humanoid Alliance	Legendary	25407	Ultimate Weaponry	0.009049774
+15	Chickenheart Challenge	Common	15356	Beast Hunter VI	0.0235294122
+15	Chickenheart Challenge	Common	15357	Insect Hunter VI	0.0235294122
+15	Chickenheart Challenge	Common	15358	Aerial Hunter VI	0.0235294122
+15	Chickenheart Challenge	Common	15359	Aquatic Hunter VI	0.0235294122
+15	Chickenheart Challenge	Common	15360	Humanoid Hunter VI	0.0235294122
+15	Chickenheart Challenge	Common	15361	Machine Hunter VI	0.0235294122
+15	Chickenheart Challenge	Common	15362	Titan Hunter VI	0.0235294122
+15	Chickenheart Challenge	Common	15364	Ambush Boost VI	0.0235294122
+15	Chickenheart Challenge	Common	15366	Indoor Attack Up VI	0.0235294122
+15	Chickenheart Challenge	Common	15367	Outdoor Attack Up VI	0.0235294122
+15	Chickenheart Challenge	Common	15378	Emergency Guard VI	0.0235294122
+15	Chickenheart Challenge	Common	15383	Launch Resist VI	0.0235294122
+15	Chickenheart Challenge	Common	15384	Smash Resist VI	0.0235294122
+15	Chickenheart Challenge	Common	15386	Knockback Resist VI	0.0235294122
+15	Chickenheart Challenge	Common	15394	Night Vision VI	0.0235294122
+15	Chickenheart Challenge	Common	15395	Sunlight Eye VI	0.0235294122
+15	Chickenheart Challenge	Common	15396	Reflect Damage Up VI	0.0235294122
+15	Chickenheart Challenge	Common	15397	Opening Art VI	0.0235294122
+15	Chickenheart Challenge	Common	15401	Specials Lv 1 Plus VI	0.0235294122
+15	Chickenheart Challenge	Common	15402	Specials Lv 2 Plus VI	0.0235294122
+15	Chickenheart Challenge	Common	15403	Specials Lv 3 Plus VI	0.0235294122
+15	Chickenheart Challenge	Common	15404	Specials Lv 4 Plus VI	0.0235294122
+15	Chickenheart Challenge	Common	10004	Silver Chip	0.0117647061
+15	Chickenheart Challenge	Common	10008	Gold Chip	0.0117647061
+15	Chickenheart Challenge	Common	10012	Horn Chip	0.0117647061
+15	Chickenheart Challenge	Common	10016	Forest Chip	0.0117647061
+15	Chickenheart Challenge	Common	10020	Fluorite Chip	0.0117647061
+15	Chickenheart Challenge	Common	10024	Zircon Chip	0.0117647061
+15	Chickenheart Challenge	Common	15352	Critical Up VI	0.0235294122
+15	Chickenheart Challenge	Common	15355	Block Rate Up VI	0.0235294122
+15	Chickenheart Challenge	Common	15363	Fusion Combo Up VI	0.0235294122
+15	Chickenheart Challenge	Common	15366	Indoor Attack Up VI	0.0235294122
+15	Chickenheart Challenge	Common	15367	Outdoor Attack Up VI	0.0235294122
+15	Chickenheart Challenge	Common	15378	Emergency Guard VI	0.0235294122
+15	Chickenheart Challenge	Common	15398	Affinity MAX Barrier VI	0.0235294122
+15	Chickenheart Challenge	Common	567	Saint's Necklace (Common)	0.005882353
+15	Chickenheart Challenge	Common	568	Saint's Necklace (Rare)	0.005882353
+15	Chickenheart Challenge	Common	569	Saint's Necklace (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	465	Augmented Vision Kit (Common)	0.005882353
+15	Chickenheart Challenge	Common	468	Charm Bangle (Common)	0.005882353
+15	Chickenheart Challenge	Common	474	Seven-League Circlet (Common)	0.005882353
+15	Chickenheart Challenge	Common	498	Twin Trunks Vest (Common)	0.005882353
+15	Chickenheart Challenge	Common	507	Vivid Mitts (Common)	0.005882353
+15	Chickenheart Challenge	Common	510	Dauntless Boots (Common)	0.005882353
+15	Chickenheart Challenge	Common	513	Sunlight Choker (Common)	0.005882353
+15	Chickenheart Challenge	Common	525	Staunch Boots (Common)	0.005882353
+15	Chickenheart Challenge	Common	552	Enlightened Loincloth (Common)	0.005882353
+15	Chickenheart Challenge	Common	555	Glamorous Swimsuit (Common)	0.005882353
+15	Chickenheart Challenge	Common	558	Vanish Hood (Common)	0.005882353
+15	Chickenheart Challenge	Common	561	Platinum Nopon Mask (Common)	0.005882353
+15	Chickenheart Challenge	Common	573	Beatific Medal (Common)	0.005882353
+15	Chickenheart Challenge	Common	466	Augmented Vision Kit (Rare)	0.005882353
+15	Chickenheart Challenge	Common	469	Charm Bangle (Rare)	0.005882353
+15	Chickenheart Challenge	Common	475	Seven-League Circlet (Rare)	0.005882353
+15	Chickenheart Challenge	Common	499	Twin Trunks Vest (Rare)	0.005882353
+15	Chickenheart Challenge	Common	508	Vivid Mitts (Rare)	0.005882353
+15	Chickenheart Challenge	Common	511	Dauntless Boots (Rare)	0.005882353
+15	Chickenheart Challenge	Common	514	Sunlight Choker (Rare)	0.005882353
+15	Chickenheart Challenge	Common	526	Staunch Boots (Rare)	0.005882353
+15	Chickenheart Challenge	Common	553	Enlightened Loincloth (Rare)	0.005882353
+15	Chickenheart Challenge	Common	556	Glamorous Swimsuit (Rare)	0.005882353
+15	Chickenheart Challenge	Common	559	Vanish Hood (Rare)	0.005882353
+15	Chickenheart Challenge	Common	562	Platinum Nopon Mask (Rare)	0.005882353
+15	Chickenheart Challenge	Common	574	Beatific Medal (Rare)	0.005882353
+15	Chickenheart Challenge	Common	467	Augmented Vision Kit (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	470	Charm Bangle (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	476	Seven-League Circlet (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	500	Twin Trunks Vest (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	509	Vivid Mitts (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	512	Dauntless Boots (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	515	Sunlight Choker (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	527	Staunch Boots (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	554	Enlightened Loincloth (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	557	Glamorous Swimsuit (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	560	Vanish Hood (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	563	Platinum Nopon Mask (Legendary)	0.005882353
+15	Chickenheart Challenge	Common	575	Beatific Medal (Legendary)	0.005882353
+15	Chickenheart Challenge	Rare	15356	Beast Hunter VI	0.0107816709
+15	Chickenheart Challenge	Rare	15357	Insect Hunter VI	0.0107816709
+15	Chickenheart Challenge	Rare	15358	Aerial Hunter VI	0.0107816709
+15	Chickenheart Challenge	Rare	15359	Aquatic Hunter VI	0.0107816709
+15	Chickenheart Challenge	Rare	15360	Humanoid Hunter VI	0.0107816709
+15	Chickenheart Challenge	Rare	15361	Machine Hunter VI	0.0107816709
+15	Chickenheart Challenge	Rare	15362	Titan Hunter VI	0.0107816709
+15	Chickenheart Challenge	Rare	15364	Ambush Boost VI	0.0107816709
+15	Chickenheart Challenge	Rare	15366	Indoor Attack Up VI	0.0107816709
+15	Chickenheart Challenge	Rare	15367	Outdoor Attack Up VI	0.0107816709
+15	Chickenheart Challenge	Rare	15378	Emergency Guard VI	0.0107816709
+15	Chickenheart Challenge	Rare	15383	Launch Resist VI	0.0107816709
+15	Chickenheart Challenge	Rare	15384	Smash Resist VI	0.0107816709
+15	Chickenheart Challenge	Rare	15386	Knockback Resist VI	0.0107816709
+15	Chickenheart Challenge	Rare	15394	Night Vision VI	0.0107816709
+15	Chickenheart Challenge	Rare	15395	Sunlight Eye VI	0.0107816709
+15	Chickenheart Challenge	Rare	15396	Reflect Damage Up VI	0.0107816709
+15	Chickenheart Challenge	Rare	15397	Opening Art VI	0.0107816709
+15	Chickenheart Challenge	Rare	15401	Specials Lv 1 Plus VI	0.0107816709
+15	Chickenheart Challenge	Rare	15402	Specials Lv 2 Plus VI	0.0107816709
+15	Chickenheart Challenge	Rare	15403	Specials Lv 3 Plus VI	0.0107816709
+15	Chickenheart Challenge	Rare	15404	Specials Lv 4 Plus VI	0.0107816709
+15	Chickenheart Challenge	Rare	10004	Silver Chip	0.00539083546
+15	Chickenheart Challenge	Rare	10008	Gold Chip	0.00539083546
+15	Chickenheart Challenge	Rare	10012	Horn Chip	0.00539083546
+15	Chickenheart Challenge	Rare	10016	Forest Chip	0.00539083546
+15	Chickenheart Challenge	Rare	10020	Fluorite Chip	0.00539083546
+15	Chickenheart Challenge	Rare	10024	Zircon Chip	0.00539083546
+15	Chickenheart Challenge	Rare	15352	Critical Up VI	0.0107816709
+15	Chickenheart Challenge	Rare	15355	Block Rate Up VI	0.0107816709
+15	Chickenheart Challenge	Rare	15363	Fusion Combo Up VI	0.0107816709
+15	Chickenheart Challenge	Rare	15366	Indoor Attack Up VI	0.0107816709
+15	Chickenheart Challenge	Rare	15367	Outdoor Attack Up VI	0.0107816709
+15	Chickenheart Challenge	Rare	15378	Emergency Guard VI	0.0107816709
+15	Chickenheart Challenge	Rare	15398	Affinity MAX Barrier VI	0.0107816709
+15	Chickenheart Challenge	Rare	567	Saint's Necklace (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	568	Saint's Necklace (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	569	Saint's Necklace (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	465	Augmented Vision Kit (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	468	Charm Bangle (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	474	Seven-League Circlet (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	498	Twin Trunks Vest (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	507	Vivid Mitts (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	510	Dauntless Boots (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	513	Sunlight Choker (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	525	Staunch Boots (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	552	Enlightened Loincloth (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	555	Glamorous Swimsuit (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	558	Vanish Hood (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	561	Platinum Nopon Mask (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	573	Beatific Medal (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	466	Augmented Vision Kit (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	469	Charm Bangle (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	475	Seven-League Circlet (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	499	Twin Trunks Vest (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	508	Vivid Mitts (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	511	Dauntless Boots (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	514	Sunlight Choker (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	526	Staunch Boots (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	553	Enlightened Loincloth (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	556	Glamorous Swimsuit (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	559	Vanish Hood (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	562	Platinum Nopon Mask (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	574	Beatific Medal (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	467	Augmented Vision Kit (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	470	Charm Bangle (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	476	Seven-League Circlet (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	500	Twin Trunks Vest (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	509	Vivid Mitts (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	512	Dauntless Boots (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	515	Sunlight Choker (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	527	Staunch Boots (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	554	Enlightened Loincloth (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	557	Glamorous Swimsuit (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	560	Vanish Hood (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	563	Platinum Nopon Mask (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	575	Beatific Medal (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	15365	Aggro Attack Up VI	0.0215633418
+15	Chickenheart Challenge	Rare	15376	Evasion Focus VI	0.0215633418
+15	Chickenheart Challenge	Rare	15379	Endurance VI	0.0215633418
+15	Chickenheart Challenge	Rare	15382	Topple Resist VI	0.0215633418
+15	Chickenheart Challenge	Rare	15385	Blowdown Resist VI	0.0215633418
+15	Chickenheart Challenge	Rare	15387	Auto-Attack Stealth VI	0.0215633418
+15	Chickenheart Challenge	Rare	15389	Arts Stealth VI	0.0215633418
+15	Chickenheart Challenge	Rare	15398	Affinity MAX Barrier VI	0.0215633418
+15	Chickenheart Challenge	Rare	15405	Affinity MAX Acc VI	0.0215633418
+15	Chickenheart Challenge	Rare	15406	Jamming VI	0.0215633418
+15	Chickenheart Challenge	Rare	10028	Shaft Chip	0.0107816709
+15	Chickenheart Challenge	Rare	10032	Booster Chip	0.0107816709
+15	Chickenheart Challenge	Rare	10036	Hexagon Chip	0.0107816709
+15	Chickenheart Challenge	Rare	10040	Spiral Chip	0.0107816709
+15	Chickenheart Challenge	Rare	10044	Winonaite Chip	0.0107816709
+15	Chickenheart Challenge	Rare	10048	Angrite Chip	0.0107816709
+15	Chickenheart Challenge	Rare	15377	Swift Evasion VI	0.0431266837
+15	Chickenheart Challenge	Rare	15391	Arts Heal VI	0.0215633418
+15	Chickenheart Challenge	Rare	456	Consul Greaves (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	489	Abyss Masque (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	495	Survivor's Footgear (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	501	Beast-Hide Vest (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	504	Prairie Cap (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	519	Crimson Headband (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	531	Consul Pauldrons (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	534	Divine Vambraces (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	540	Tachyon Scarf (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	576	Carbon Gauntlet (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	457	Consul Greaves (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	490	Abyss Masque (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	496	Survivor's Footgear (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	502	Beast-Hide Vest (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	505	Prairie Cap (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	520	Crimson Headband (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	532	Consul Pauldrons (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	535	Divine Vambraces (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	541	Tachyon Scarf (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	577	Carbon Gauntlet (Rare)	0.00539083546
+15	Chickenheart Challenge	Rare	458	Consul Greaves (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	491	Abyss Masque (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	497	Survivor's Footgear (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	503	Beast-Hide Vest (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	506	Prairie Cap (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	521	Crimson Headband (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	533	Consul Pauldrons (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	536	Divine Vambraces (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	542	Tachyon Scarf (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	578	Carbon Gauntlet (Legendary)	0.00539083546
+15	Chickenheart Challenge	Rare	471	Belemnite Bangle (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	477	Fighter's Circlet (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	522	Black Cube (Common)	0.00539083546
+15	Chickenheart Challenge	Rare	543	Rainbow Belt (Common)	0.00269541773
+15	Chickenheart Challenge	Rare	472	Belemnite Bangle (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	478	Fighter's Circlet (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	523	Black Cube (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	544	Rainbow Belt (Rare)	0.00269541773
+15	Chickenheart Challenge	Rare	473	Belemnite Bangle (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	479	Fighter's Circlet (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	524	Black Cube (Legendary)	0.00269541773
+15	Chickenheart Challenge	Rare	545	Rainbow Belt (Legendary)	0.00269541773
+15	Chickenheart Challenge	Legendary	15365	Aggro Attack Up VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15376	Evasion Focus VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15379	Endurance VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15382	Topple Resist VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15385	Blowdown Resist VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15387	Auto-Attack Stealth VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15389	Arts Stealth VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15398	Affinity MAX Barrier VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15405	Affinity MAX Acc VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15406	Jamming VI	0.0283687934
+15	Chickenheart Challenge	Legendary	10028	Shaft Chip	0.0141843967
+15	Chickenheart Challenge	Legendary	10032	Booster Chip	0.0141843967
+15	Chickenheart Challenge	Legendary	10036	Hexagon Chip	0.0141843967
+15	Chickenheart Challenge	Legendary	10040	Spiral Chip	0.0141843967
+15	Chickenheart Challenge	Legendary	10044	Winonaite Chip	0.0141843967
+15	Chickenheart Challenge	Legendary	10048	Angrite Chip	0.0141843967
+15	Chickenheart Challenge	Legendary	15377	Swift Evasion VI	0.0283687934
+15	Chickenheart Challenge	Legendary	15391	Arts Heal VI	0.0283687934
+15	Chickenheart Challenge	Legendary	456	Consul Greaves (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	489	Abyss Masque (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	495	Survivor's Footgear (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	501	Beast-Hide Vest (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	504	Prairie Cap (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	519	Crimson Headband (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	531	Consul Pauldrons (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	534	Divine Vambraces (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	540	Tachyon Scarf (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	576	Carbon Gauntlet (Common)	0.00709219836
+15	Chickenheart Challenge	Legendary	457	Consul Greaves (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	490	Abyss Masque (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	496	Survivor's Footgear (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	502	Beast-Hide Vest (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	505	Prairie Cap (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	520	Crimson Headband (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	532	Consul Pauldrons (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	535	Divine Vambraces (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	541	Tachyon Scarf (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	577	Carbon Gauntlet (Rare)	0.00709219836
+15	Chickenheart Challenge	Legendary	458	Consul Greaves (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	491	Abyss Masque (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	497	Survivor's Footgear (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	503	Beast-Hide Vest (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	506	Prairie Cap (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	521	Crimson Headband (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	533	Consul Pauldrons (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	536	Divine Vambraces (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	542	Tachyon Scarf (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	578	Carbon Gauntlet (Legendary)	0.00709219836
+15	Chickenheart Challenge	Legendary	471	Belemnite Bangle (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	477	Fighter's Circlet (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	522	Black Cube (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	543	Rainbow Belt (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	472	Belemnite Bangle (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	478	Fighter's Circlet (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	523	Black Cube (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	544	Rainbow Belt (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	473	Belemnite Bangle (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	479	Fighter's Circlet (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	524	Black Cube (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	545	Rainbow Belt (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	15353	Physical Defense Up VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15354	Ether Defense Up VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15061	Blade Combo Boost VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15132	Ultimate Shield	0.0141843967
+15	Chickenheart Challenge	Legendary	15380	HP Attack Boost VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15381	Break Resist VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15388	Aggro Boost VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15390	Arts Aggro Boost VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15393	Damage Heal VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15319	Fast Blade Switch VI	0.0141843967
+15	Chickenheart Challenge	Legendary	10052	Shining Star Chip	0.00709219836
+15	Chickenheart Challenge	Legendary	10053	Moon Matter Chip	0.00709219836
+15	Chickenheart Challenge	Legendary	10054	Sunlight Chip	0.00709219836
+15	Chickenheart Challenge	Legendary	10058	Dilaton Chip	0.00709219836
+15	Chickenheart Challenge	Legendary	10059	Preon Chip	0.00709219836
+15	Chickenheart Challenge	Legendary	10060	Tachyon Chip	0.00709219836
+15	Chickenheart Challenge	Legendary	15392	Movement Heal VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15393	Damage Heal VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15399	Affinity MAX Atk VI	0.0141843967
+15	Chickenheart Challenge	Legendary	15400	Affinity MAX Evade VI	0.0141843967
+15	Chickenheart Challenge	Legendary	459	Infinity Greaves (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	480	Ocean Earring (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	483	Seven-Seas Earring (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	516	Alexandrite (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	546	Goliath Ring (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	582	Master Scope (Common)	0.00354609918
+15	Chickenheart Challenge	Legendary	460	Infinity Greaves (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	481	Ocean Earring (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	484	Seven-Seas Earring (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	517	Alexandrite (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	547	Goliath Ring (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	583	Master Scope (Rare)	0.00354609918
+15	Chickenheart Challenge	Legendary	461	Infinity Greaves (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	482	Ocean Earring (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	485	Seven-Seas Earring (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	518	Alexandrite (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	548	Goliath Ring (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	584	Master Scope (Legendary)	0.00354609918
+15	Chickenheart Challenge	Legendary	25407	Ultimate Weaponry	0.0141843967
+16	Cloud King's Revenge	Common	15356	Beast Hunter VI	0.004761905
+16	Cloud King's Revenge	Common	15357	Insect Hunter VI	0.004761905
+16	Cloud King's Revenge	Common	15358	Aerial Hunter VI	0.004761905
+16	Cloud King's Revenge	Common	15359	Aquatic Hunter VI	0.004761905
+16	Cloud King's Revenge	Common	15360	Humanoid Hunter VI	0.004761905
+16	Cloud King's Revenge	Common	15361	Machine Hunter VI	0.004761905
+16	Cloud King's Revenge	Common	15362	Titan Hunter VI	0.004761905
+16	Cloud King's Revenge	Common	15364	Ambush Boost VI	0.004761905
+16	Cloud King's Revenge	Common	15366	Indoor Attack Up VI	0.004761905
+16	Cloud King's Revenge	Common	15367	Outdoor Attack Up VI	0.004761905
+16	Cloud King's Revenge	Common	15378	Emergency Guard VI	0.004761905
+16	Cloud King's Revenge	Common	15383	Launch Resist VI	0.004761905
+16	Cloud King's Revenge	Common	15384	Smash Resist VI	0.004761905
+16	Cloud King's Revenge	Common	15386	Knockback Resist VI	0.004761905
+16	Cloud King's Revenge	Common	15394	Night Vision VI	0.004761905
+16	Cloud King's Revenge	Common	15395	Sunlight Eye VI	0.004761905
+16	Cloud King's Revenge	Common	15396	Reflect Damage Up VI	0.004761905
+16	Cloud King's Revenge	Common	15397	Opening Art VI	0.004761905
+16	Cloud King's Revenge	Common	15401	Specials Lv 1 Plus VI	0.004761905
+16	Cloud King's Revenge	Common	15402	Specials Lv 2 Plus VI	0.004761905
+16	Cloud King's Revenge	Common	15403	Specials Lv 3 Plus VI	0.004761905
+16	Cloud King's Revenge	Common	15404	Specials Lv 4 Plus VI	0.004761905
+16	Cloud King's Revenge	Common	10004	Silver Chip	0.00952381
+16	Cloud King's Revenge	Common	10008	Gold Chip	0.00952381
+16	Cloud King's Revenge	Common	10012	Horn Chip	0.00952381
+16	Cloud King's Revenge	Common	10016	Forest Chip	0.00952381
+16	Cloud King's Revenge	Common	10020	Fluorite Chip	0.00952381
+16	Cloud King's Revenge	Common	10024	Zircon Chip	0.00952381
+16	Cloud King's Revenge	Common	15352	Critical Up VI	0.004761905
+16	Cloud King's Revenge	Common	15355	Block Rate Up VI	0.004761905
+16	Cloud King's Revenge	Common	15363	Fusion Combo Up VI	0.00952381
+16	Cloud King's Revenge	Common	15366	Indoor Attack Up VI	0.004761905
+16	Cloud King's Revenge	Common	15367	Outdoor Attack Up VI	0.004761905
+16	Cloud King's Revenge	Common	15378	Emergency Guard VI	0.004761905
+16	Cloud King's Revenge	Common	15398	Affinity MAX Barrier VI	0.004761905
+16	Cloud King's Revenge	Common	567	Saint's Necklace (Common)	0.01904762
+16	Cloud King's Revenge	Common	568	Saint's Necklace (Rare)	0.01904762
+16	Cloud King's Revenge	Common	569	Saint's Necklace (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	465	Augmented Vision Kit (Common)	0.01904762
+16	Cloud King's Revenge	Common	468	Charm Bangle (Common)	0.01904762
+16	Cloud King's Revenge	Common	474	Seven-League Circlet (Common)	0.01904762
+16	Cloud King's Revenge	Common	498	Twin Trunks Vest (Common)	0.01904762
+16	Cloud King's Revenge	Common	507	Vivid Mitts (Common)	0.01904762
+16	Cloud King's Revenge	Common	510	Dauntless Boots (Common)	0.01904762
+16	Cloud King's Revenge	Common	513	Sunlight Choker (Common)	0.01904762
+16	Cloud King's Revenge	Common	525	Staunch Boots (Common)	0.01904762
+16	Cloud King's Revenge	Common	552	Enlightened Loincloth (Common)	0.01904762
+16	Cloud King's Revenge	Common	555	Glamorous Swimsuit (Common)	0.01904762
+16	Cloud King's Revenge	Common	558	Vanish Hood (Common)	0.01904762
+16	Cloud King's Revenge	Common	561	Platinum Nopon Mask (Common)	0.01904762
+16	Cloud King's Revenge	Common	573	Beatific Medal (Common)	0.01904762
+16	Cloud King's Revenge	Common	466	Augmented Vision Kit (Rare)	0.01904762
+16	Cloud King's Revenge	Common	469	Charm Bangle (Rare)	0.01904762
+16	Cloud King's Revenge	Common	475	Seven-League Circlet (Rare)	0.01904762
+16	Cloud King's Revenge	Common	499	Twin Trunks Vest (Rare)	0.01904762
+16	Cloud King's Revenge	Common	508	Vivid Mitts (Rare)	0.01904762
+16	Cloud King's Revenge	Common	511	Dauntless Boots (Rare)	0.01904762
+16	Cloud King's Revenge	Common	514	Sunlight Choker (Rare)	0.01904762
+16	Cloud King's Revenge	Common	526	Staunch Boots (Rare)	0.01904762
+16	Cloud King's Revenge	Common	553	Enlightened Loincloth (Rare)	0.01904762
+16	Cloud King's Revenge	Common	556	Glamorous Swimsuit (Rare)	0.01904762
+16	Cloud King's Revenge	Common	559	Vanish Hood (Rare)	0.01904762
+16	Cloud King's Revenge	Common	562	Platinum Nopon Mask (Rare)	0.01904762
+16	Cloud King's Revenge	Common	574	Beatific Medal (Rare)	0.01904762
+16	Cloud King's Revenge	Common	467	Augmented Vision Kit (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	470	Charm Bangle (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	476	Seven-League Circlet (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	500	Twin Trunks Vest (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	509	Vivid Mitts (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	512	Dauntless Boots (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	515	Sunlight Choker (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	527	Staunch Boots (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	554	Enlightened Loincloth (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	557	Glamorous Swimsuit (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	560	Vanish Hood (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	563	Platinum Nopon Mask (Legendary)	0.01904762
+16	Cloud King's Revenge	Common	575	Beatific Medal (Legendary)	0.01904762
+16	Cloud King's Revenge	Rare	15356	Beast Hunter VI	0.0018348624
+16	Cloud King's Revenge	Rare	15357	Insect Hunter VI	0.0018348624
+16	Cloud King's Revenge	Rare	15358	Aerial Hunter VI	0.0018348624
+16	Cloud King's Revenge	Rare	15359	Aquatic Hunter VI	0.0018348624
+16	Cloud King's Revenge	Rare	15360	Humanoid Hunter VI	0.0018348624
+16	Cloud King's Revenge	Rare	15361	Machine Hunter VI	0.0018348624
+16	Cloud King's Revenge	Rare	15362	Titan Hunter VI	0.0018348624
+16	Cloud King's Revenge	Rare	15364	Ambush Boost VI	0.0018348624
+16	Cloud King's Revenge	Rare	15366	Indoor Attack Up VI	0.0018348624
+16	Cloud King's Revenge	Rare	15367	Outdoor Attack Up VI	0.0018348624
+16	Cloud King's Revenge	Rare	15378	Emergency Guard VI	0.0018348624
+16	Cloud King's Revenge	Rare	15383	Launch Resist VI	0.0018348624
+16	Cloud King's Revenge	Rare	15384	Smash Resist VI	0.0018348624
+16	Cloud King's Revenge	Rare	15386	Knockback Resist VI	0.0018348624
+16	Cloud King's Revenge	Rare	15394	Night Vision VI	0.0018348624
+16	Cloud King's Revenge	Rare	15395	Sunlight Eye VI	0.0018348624
+16	Cloud King's Revenge	Rare	15396	Reflect Damage Up VI	0.0018348624
+16	Cloud King's Revenge	Rare	15397	Opening Art VI	0.0018348624
+16	Cloud King's Revenge	Rare	15401	Specials Lv 1 Plus VI	0.0018348624
+16	Cloud King's Revenge	Rare	15402	Specials Lv 2 Plus VI	0.0018348624
+16	Cloud King's Revenge	Rare	15403	Specials Lv 3 Plus VI	0.0018348624
+16	Cloud King's Revenge	Rare	15404	Specials Lv 4 Plus VI	0.0018348624
+16	Cloud King's Revenge	Rare	10004	Silver Chip	0.0036697248
+16	Cloud King's Revenge	Rare	10008	Gold Chip	0.0036697248
+16	Cloud King's Revenge	Rare	10012	Horn Chip	0.0036697248
+16	Cloud King's Revenge	Rare	10016	Forest Chip	0.0036697248
+16	Cloud King's Revenge	Rare	10020	Fluorite Chip	0.0036697248
+16	Cloud King's Revenge	Rare	10024	Zircon Chip	0.0036697248
+16	Cloud King's Revenge	Rare	15352	Critical Up VI	0.0018348624
+16	Cloud King's Revenge	Rare	15355	Block Rate Up VI	0.0018348624
+16	Cloud King's Revenge	Rare	15363	Fusion Combo Up VI	0.0018348624
+16	Cloud King's Revenge	Rare	15366	Indoor Attack Up VI	0.0018348624
+16	Cloud King's Revenge	Rare	15367	Outdoor Attack Up VI	0.0018348624
+16	Cloud King's Revenge	Rare	15378	Emergency Guard VI	0.0018348624
+16	Cloud King's Revenge	Rare	15398	Affinity MAX Barrier VI	0.0018348624
+16	Cloud King's Revenge	Rare	567	Saint's Necklace (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	568	Saint's Necklace (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	569	Saint's Necklace (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	465	Augmented Vision Kit (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	468	Charm Bangle (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	474	Seven-League Circlet (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	498	Twin Trunks Vest (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	507	Vivid Mitts (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	510	Dauntless Boots (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	513	Sunlight Choker (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	525	Staunch Boots (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	552	Enlightened Loincloth (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	555	Glamorous Swimsuit (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	558	Vanish Hood (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	561	Platinum Nopon Mask (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	573	Beatific Medal (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	466	Augmented Vision Kit (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	469	Charm Bangle (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	475	Seven-League Circlet (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	499	Twin Trunks Vest (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	508	Vivid Mitts (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	511	Dauntless Boots (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	514	Sunlight Choker (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	526	Staunch Boots (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	553	Enlightened Loincloth (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	556	Glamorous Swimsuit (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	559	Vanish Hood (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	562	Platinum Nopon Mask (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	574	Beatific Medal (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	467	Augmented Vision Kit (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	470	Charm Bangle (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	476	Seven-League Circlet (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	500	Twin Trunks Vest (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	509	Vivid Mitts (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	512	Dauntless Boots (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	515	Sunlight Choker (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	527	Staunch Boots (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	554	Enlightened Loincloth (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	557	Glamorous Swimsuit (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	560	Vanish Hood (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	563	Platinum Nopon Mask (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	575	Beatific Medal (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	15365	Aggro Attack Up VI	0.0036697248
+16	Cloud King's Revenge	Rare	15376	Evasion Focus VI	0.0036697248
+16	Cloud King's Revenge	Rare	15379	Endurance VI	0.0036697248
+16	Cloud King's Revenge	Rare	15382	Topple Resist VI	0.0036697248
+16	Cloud King's Revenge	Rare	15385	Blowdown Resist VI	0.0036697248
+16	Cloud King's Revenge	Rare	15387	Auto-Attack Stealth VI	0.0036697248
+16	Cloud King's Revenge	Rare	15389	Arts Stealth VI	0.0036697248
+16	Cloud King's Revenge	Rare	15398	Affinity MAX Barrier VI	0.0036697248
+16	Cloud King's Revenge	Rare	15405	Affinity MAX Acc VI	0.0036697248
+16	Cloud King's Revenge	Rare	15406	Jamming VI	0.0036697248
+16	Cloud King's Revenge	Rare	10028	Shaft Chip	0.0073394496
+16	Cloud King's Revenge	Rare	10032	Booster Chip	0.0073394496
+16	Cloud King's Revenge	Rare	10036	Hexagon Chip	0.0073394496
+16	Cloud King's Revenge	Rare	10040	Spiral Chip	0.0073394496
+16	Cloud King's Revenge	Rare	10044	Winonaite Chip	0.0073394496
+16	Cloud King's Revenge	Rare	10048	Angrite Chip	0.0073394496
+16	Cloud King's Revenge	Rare	15377	Swift Evasion VI	0.0036697248
+16	Cloud King's Revenge	Rare	15391	Arts Heal VI	0.0036697248
+16	Cloud King's Revenge	Rare	456	Consul Greaves (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	489	Abyss Masque (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	495	Survivor's Footgear (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	501	Beast-Hide Vest (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	504	Prairie Cap (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	519	Crimson Headband (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	531	Consul Pauldrons (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	534	Divine Vambraces (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	540	Tachyon Scarf (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	576	Carbon Gauntlet (Common)	0.0146788992
+16	Cloud King's Revenge	Rare	457	Consul Greaves (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	490	Abyss Masque (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	496	Survivor's Footgear (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	502	Beast-Hide Vest (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	505	Prairie Cap (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	520	Crimson Headband (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	532	Consul Pauldrons (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	535	Divine Vambraces (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	541	Tachyon Scarf (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	577	Carbon Gauntlet (Rare)	0.0146788992
+16	Cloud King's Revenge	Rare	458	Consul Greaves (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	491	Abyss Masque (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	497	Survivor's Footgear (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	503	Beast-Hide Vest (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	506	Prairie Cap (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	521	Crimson Headband (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	533	Consul Pauldrons (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	536	Divine Vambraces (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	542	Tachyon Scarf (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	578	Carbon Gauntlet (Legendary)	0.0146788992
+16	Cloud King's Revenge	Rare	471	Belemnite Bangle (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	477	Fighter's Circlet (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	522	Black Cube (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	543	Rainbow Belt (Common)	0.0073394496
+16	Cloud King's Revenge	Rare	472	Belemnite Bangle (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	478	Fighter's Circlet (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	523	Black Cube (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	544	Rainbow Belt (Rare)	0.0073394496
+16	Cloud King's Revenge	Rare	473	Belemnite Bangle (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	479	Fighter's Circlet (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	524	Black Cube (Legendary)	0.0073394496
+16	Cloud King's Revenge	Rare	545	Rainbow Belt (Legendary)	0.0073394496
+16	Cloud King's Revenge	Legendary	15365	Aggro Attack Up VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15376	Evasion Focus VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15379	Endurance VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15382	Topple Resist VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15385	Blowdown Resist VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15387	Auto-Attack Stealth VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15389	Arts Stealth VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15398	Affinity MAX Barrier VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15405	Affinity MAX Acc VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15406	Jamming VI	0.00450450461
+16	Cloud King's Revenge	Legendary	10028	Shaft Chip	0.009009009
+16	Cloud King's Revenge	Legendary	10032	Booster Chip	0.009009009
+16	Cloud King's Revenge	Legendary	10036	Hexagon Chip	0.009009009
+16	Cloud King's Revenge	Legendary	10040	Spiral Chip	0.009009009
+16	Cloud King's Revenge	Legendary	10044	Winonaite Chip	0.009009009
+16	Cloud King's Revenge	Legendary	10048	Angrite Chip	0.009009009
+16	Cloud King's Revenge	Legendary	15377	Swift Evasion VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15391	Arts Heal VI	0.00450450461
+16	Cloud King's Revenge	Legendary	456	Consul Greaves (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	489	Abyss Masque (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	495	Survivor's Footgear (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	501	Beast-Hide Vest (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	504	Prairie Cap (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	519	Crimson Headband (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	531	Consul Pauldrons (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	534	Divine Vambraces (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	540	Tachyon Scarf (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	576	Carbon Gauntlet (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	457	Consul Greaves (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	490	Abyss Masque (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	496	Survivor's Footgear (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	502	Beast-Hide Vest (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	505	Prairie Cap (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	520	Crimson Headband (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	532	Consul Pauldrons (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	535	Divine Vambraces (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	541	Tachyon Scarf (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	577	Carbon Gauntlet (Rare)	0.0180180185
+16	Cloud King's Revenge	Legendary	458	Consul Greaves (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	491	Abyss Masque (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	497	Survivor's Footgear (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	503	Beast-Hide Vest (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	506	Prairie Cap (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	521	Crimson Headband (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	533	Consul Pauldrons (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	536	Divine Vambraces (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	542	Tachyon Scarf (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	578	Carbon Gauntlet (Legendary)	0.0180180185
+16	Cloud King's Revenge	Legendary	471	Belemnite Bangle (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	477	Fighter's Circlet (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	522	Black Cube (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	543	Rainbow Belt (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	472	Belemnite Bangle (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	478	Fighter's Circlet (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	523	Black Cube (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	544	Rainbow Belt (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	473	Belemnite Bangle (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	479	Fighter's Circlet (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	524	Black Cube (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	545	Rainbow Belt (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	15353	Physical Defense Up VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15354	Ether Defense Up VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15061	Blade Combo Boost VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15132	Ultimate Shield	0.00225225231
+16	Cloud King's Revenge	Legendary	15380	HP Attack Boost VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15381	Break Resist VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15388	Aggro Boost VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15390	Arts Aggro Boost VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15393	Damage Heal VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15319	Fast Blade Switch VI	0.00225225231
+16	Cloud King's Revenge	Legendary	10052	Shining Star Chip	0.00450450461
+16	Cloud King's Revenge	Legendary	10053	Moon Matter Chip	0.00450450461
+16	Cloud King's Revenge	Legendary	10054	Sunlight Chip	0.00450450461
+16	Cloud King's Revenge	Legendary	10058	Dilaton Chip	0.00450450461
+16	Cloud King's Revenge	Legendary	10059	Preon Chip	0.00450450461
+16	Cloud King's Revenge	Legendary	10060	Tachyon Chip	0.00450450461
+16	Cloud King's Revenge	Legendary	15392	Movement Heal VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15393	Damage Heal VI	0.00450450461
+16	Cloud King's Revenge	Legendary	15399	Affinity MAX Atk VI	0.00225225231
+16	Cloud King's Revenge	Legendary	15400	Affinity MAX Evade VI	0.00225225231
+16	Cloud King's Revenge	Legendary	459	Infinity Greaves (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	480	Ocean Earring (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	483	Seven-Seas Earring (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	516	Alexandrite (Common)	0.0180180185
+16	Cloud King's Revenge	Legendary	546	Goliath Ring (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	582	Master Scope (Common)	0.009009009
+16	Cloud King's Revenge	Legendary	460	Infinity Greaves (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	481	Ocean Earring (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	484	Seven-Seas Earring (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	517	Alexandrite (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	547	Goliath Ring (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	583	Master Scope (Rare)	0.009009009
+16	Cloud King's Revenge	Legendary	461	Infinity Greaves (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	482	Ocean Earring (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	485	Seven-Seas Earring (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	518	Alexandrite (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	548	Goliath Ring (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	584	Master Scope (Legendary)	0.009009009
+16	Cloud King's Revenge	Legendary	25407	Ultimate Weaponry	0.009009009
+17	Reinventing the Gogol	Common	15356	Beast Hunter VI	0.008403362
+17	Reinventing the Gogol	Common	15357	Insect Hunter VI	0.008403362
+17	Reinventing the Gogol	Common	15358	Aerial Hunter VI	0.008403362
+17	Reinventing the Gogol	Common	15359	Aquatic Hunter VI	0.008403362
+17	Reinventing the Gogol	Common	15360	Humanoid Hunter VI	0.008403362
+17	Reinventing the Gogol	Common	15361	Machine Hunter VI	0.008403362
+17	Reinventing the Gogol	Common	15362	Titan Hunter VI	0.008403362
+17	Reinventing the Gogol	Common	15364	Ambush Boost VI	0.008403362
+17	Reinventing the Gogol	Common	15366	Indoor Attack Up VI	0.008403362
+17	Reinventing the Gogol	Common	15367	Outdoor Attack Up VI	0.008403362
+17	Reinventing the Gogol	Common	15378	Emergency Guard VI	0.008403362
+17	Reinventing the Gogol	Common	15383	Launch Resist VI	0.008403362
+17	Reinventing the Gogol	Common	15384	Smash Resist VI	0.008403362
+17	Reinventing the Gogol	Common	15386	Knockback Resist VI	0.008403362
+17	Reinventing the Gogol	Common	15394	Night Vision VI	0.008403362
+17	Reinventing the Gogol	Common	15395	Sunlight Eye VI	0.008403362
+17	Reinventing the Gogol	Common	15396	Reflect Damage Up VI	0.008403362
+17	Reinventing the Gogol	Common	15397	Opening Art VI	0.008403362
+17	Reinventing the Gogol	Common	15401	Specials Lv 1 Plus VI	0.008403362
+17	Reinventing the Gogol	Common	15402	Specials Lv 2 Plus VI	0.008403362
+17	Reinventing the Gogol	Common	15403	Specials Lv 3 Plus VI	0.008403362
+17	Reinventing the Gogol	Common	15404	Specials Lv 4 Plus VI	0.008403362
+17	Reinventing the Gogol	Common	10004	Silver Chip	0.008403362
+17	Reinventing the Gogol	Common	10008	Gold Chip	0.008403362
+17	Reinventing the Gogol	Common	10012	Horn Chip	0.008403362
+17	Reinventing the Gogol	Common	10016	Forest Chip	0.008403362
+17	Reinventing the Gogol	Common	10020	Fluorite Chip	0.008403362
+17	Reinventing the Gogol	Common	10024	Zircon Chip	0.008403362
+17	Reinventing the Gogol	Common	15352	Critical Up VI	0.008403362
+17	Reinventing the Gogol	Common	15355	Block Rate Up VI	0.008403362
+17	Reinventing the Gogol	Common	15363	Fusion Combo Up VI	0.008403362
+17	Reinventing the Gogol	Common	15366	Indoor Attack Up VI	0.008403362
+17	Reinventing the Gogol	Common	15367	Outdoor Attack Up VI	0.008403362
+17	Reinventing the Gogol	Common	15378	Emergency Guard VI	0.008403362
+17	Reinventing the Gogol	Common	15398	Affinity MAX Barrier VI	0.008403362
+17	Reinventing the Gogol	Common	567	Saint's Necklace (Common)	0.0168067235
+17	Reinventing the Gogol	Common	568	Saint's Necklace (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	569	Saint's Necklace (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	465	Augmented Vision Kit (Common)	0.0168067235
+17	Reinventing the Gogol	Common	468	Charm Bangle (Common)	0.0168067235
+17	Reinventing the Gogol	Common	474	Seven-League Circlet (Common)	0.0168067235
+17	Reinventing the Gogol	Common	498	Twin Trunks Vest (Common)	0.0168067235
+17	Reinventing the Gogol	Common	507	Vivid Mitts (Common)	0.0168067235
+17	Reinventing the Gogol	Common	510	Dauntless Boots (Common)	0.0168067235
+17	Reinventing the Gogol	Common	513	Sunlight Choker (Common)	0.0168067235
+17	Reinventing the Gogol	Common	525	Staunch Boots (Common)	0.0168067235
+17	Reinventing the Gogol	Common	552	Enlightened Loincloth (Common)	0.0168067235
+17	Reinventing the Gogol	Common	555	Glamorous Swimsuit (Common)	0.0168067235
+17	Reinventing the Gogol	Common	558	Vanish Hood (Common)	0.0168067235
+17	Reinventing the Gogol	Common	561	Platinum Nopon Mask (Common)	0.0168067235
+17	Reinventing the Gogol	Common	573	Beatific Medal (Common)	0.0168067235
+17	Reinventing the Gogol	Common	466	Augmented Vision Kit (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	469	Charm Bangle (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	475	Seven-League Circlet (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	499	Twin Trunks Vest (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	508	Vivid Mitts (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	511	Dauntless Boots (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	514	Sunlight Choker (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	526	Staunch Boots (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	553	Enlightened Loincloth (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	556	Glamorous Swimsuit (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	559	Vanish Hood (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	562	Platinum Nopon Mask (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	574	Beatific Medal (Rare)	0.0168067235
+17	Reinventing the Gogol	Common	467	Augmented Vision Kit (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	470	Charm Bangle (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	476	Seven-League Circlet (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	500	Twin Trunks Vest (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	509	Vivid Mitts (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	512	Dauntless Boots (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	515	Sunlight Choker (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	527	Staunch Boots (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	554	Enlightened Loincloth (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	557	Glamorous Swimsuit (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	560	Vanish Hood (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	563	Platinum Nopon Mask (Legendary)	0.0168067235
+17	Reinventing the Gogol	Common	575	Beatific Medal (Legendary)	0.0168067235
+17	Reinventing the Gogol	Rare	15356	Beast Hunter VI	0.00330033014
+17	Reinventing the Gogol	Rare	15357	Insect Hunter VI	0.00330033014
+17	Reinventing the Gogol	Rare	15358	Aerial Hunter VI	0.00330033014
+17	Reinventing the Gogol	Rare	15359	Aquatic Hunter VI	0.00330033014
+17	Reinventing the Gogol	Rare	15360	Humanoid Hunter VI	0.00330033014
+17	Reinventing the Gogol	Rare	15361	Machine Hunter VI	0.00330033014
+17	Reinventing the Gogol	Rare	15362	Titan Hunter VI	0.00330033014
+17	Reinventing the Gogol	Rare	15364	Ambush Boost VI	0.00330033014
+17	Reinventing the Gogol	Rare	15366	Indoor Attack Up VI	0.00330033014
+17	Reinventing the Gogol	Rare	15367	Outdoor Attack Up VI	0.00330033014
+17	Reinventing the Gogol	Rare	15378	Emergency Guard VI	0.00330033014
+17	Reinventing the Gogol	Rare	15383	Launch Resist VI	0.00330033014
+17	Reinventing the Gogol	Rare	15384	Smash Resist VI	0.00330033014
+17	Reinventing the Gogol	Rare	15386	Knockback Resist VI	0.00330033014
+17	Reinventing the Gogol	Rare	15394	Night Vision VI	0.00330033014
+17	Reinventing the Gogol	Rare	15395	Sunlight Eye VI	0.00330033014
+17	Reinventing the Gogol	Rare	15396	Reflect Damage Up VI	0.00330033014
+17	Reinventing the Gogol	Rare	15397	Opening Art VI	0.00330033014
+17	Reinventing the Gogol	Rare	15401	Specials Lv 1 Plus VI	0.00330033014
+17	Reinventing the Gogol	Rare	15402	Specials Lv 2 Plus VI	0.00330033014
+17	Reinventing the Gogol	Rare	15403	Specials Lv 3 Plus VI	0.00330033014
+17	Reinventing the Gogol	Rare	15404	Specials Lv 4 Plus VI	0.00330033014
+17	Reinventing the Gogol	Rare	10004	Silver Chip	0.00330033014
+17	Reinventing the Gogol	Rare	10008	Gold Chip	0.00330033014
+17	Reinventing the Gogol	Rare	10012	Horn Chip	0.00330033014
+17	Reinventing the Gogol	Rare	10016	Forest Chip	0.00330033014
+17	Reinventing the Gogol	Rare	10020	Fluorite Chip	0.00330033014
+17	Reinventing the Gogol	Rare	10024	Zircon Chip	0.00330033014
+17	Reinventing the Gogol	Rare	15352	Critical Up VI	0.00330033014
+17	Reinventing the Gogol	Rare	15355	Block Rate Up VI	0.00330033014
+17	Reinventing the Gogol	Rare	15363	Fusion Combo Up VI	0.00330033014
+17	Reinventing the Gogol	Rare	15366	Indoor Attack Up VI	0.00330033014
+17	Reinventing the Gogol	Rare	15367	Outdoor Attack Up VI	0.00330033014
+17	Reinventing the Gogol	Rare	15378	Emergency Guard VI	0.00330033014
+17	Reinventing the Gogol	Rare	15398	Affinity MAX Barrier VI	0.00330033014
+17	Reinventing the Gogol	Rare	567	Saint's Necklace (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	568	Saint's Necklace (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	569	Saint's Necklace (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	465	Augmented Vision Kit (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	468	Charm Bangle (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	474	Seven-League Circlet (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	498	Twin Trunks Vest (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	507	Vivid Mitts (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	510	Dauntless Boots (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	513	Sunlight Choker (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	525	Staunch Boots (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	552	Enlightened Loincloth (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	555	Glamorous Swimsuit (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	558	Vanish Hood (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	561	Platinum Nopon Mask (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	573	Beatific Medal (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	466	Augmented Vision Kit (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	469	Charm Bangle (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	475	Seven-League Circlet (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	499	Twin Trunks Vest (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	508	Vivid Mitts (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	511	Dauntless Boots (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	514	Sunlight Choker (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	526	Staunch Boots (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	553	Enlightened Loincloth (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	556	Glamorous Swimsuit (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	559	Vanish Hood (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	562	Platinum Nopon Mask (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	574	Beatific Medal (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	467	Augmented Vision Kit (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	470	Charm Bangle (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	476	Seven-League Circlet (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	500	Twin Trunks Vest (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	509	Vivid Mitts (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	512	Dauntless Boots (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	515	Sunlight Choker (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	527	Staunch Boots (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	554	Enlightened Loincloth (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	557	Glamorous Swimsuit (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	560	Vanish Hood (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	563	Platinum Nopon Mask (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	575	Beatific Medal (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	15365	Aggro Attack Up VI	0.00660066027
+17	Reinventing the Gogol	Rare	15376	Evasion Focus VI	0.0132013205
+17	Reinventing the Gogol	Rare	15379	Endurance VI	0.00660066027
+17	Reinventing the Gogol	Rare	15382	Topple Resist VI	0.00660066027
+17	Reinventing the Gogol	Rare	15385	Blowdown Resist VI	0.00660066027
+17	Reinventing the Gogol	Rare	15387	Auto-Attack Stealth VI	0.00660066027
+17	Reinventing the Gogol	Rare	15389	Arts Stealth VI	0.00660066027
+17	Reinventing the Gogol	Rare	15398	Affinity MAX Barrier VI	0.00660066027
+17	Reinventing the Gogol	Rare	15405	Affinity MAX Acc VI	0.00660066027
+17	Reinventing the Gogol	Rare	15406	Jamming VI	0.00660066027
+17	Reinventing the Gogol	Rare	10028	Shaft Chip	0.00660066027
+17	Reinventing the Gogol	Rare	10032	Booster Chip	0.00660066027
+17	Reinventing the Gogol	Rare	10036	Hexagon Chip	0.00660066027
+17	Reinventing the Gogol	Rare	10040	Spiral Chip	0.00660066027
+17	Reinventing the Gogol	Rare	10044	Winonaite Chip	0.00660066027
+17	Reinventing the Gogol	Rare	10048	Angrite Chip	0.00660066027
+17	Reinventing the Gogol	Rare	15377	Swift Evasion VI	0.00660066027
+17	Reinventing the Gogol	Rare	15391	Arts Heal VI	0.00660066027
+17	Reinventing the Gogol	Rare	456	Consul Greaves (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	489	Abyss Masque (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	495	Survivor's Footgear (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	501	Beast-Hide Vest (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	504	Prairie Cap (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	519	Crimson Headband (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	531	Consul Pauldrons (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	534	Divine Vambraces (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	540	Tachyon Scarf (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	576	Carbon Gauntlet (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	457	Consul Greaves (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	490	Abyss Masque (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	496	Survivor's Footgear (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	502	Beast-Hide Vest (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	505	Prairie Cap (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	520	Crimson Headband (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	532	Consul Pauldrons (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	535	Divine Vambraces (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	541	Tachyon Scarf (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	577	Carbon Gauntlet (Rare)	0.0132013205
+17	Reinventing the Gogol	Rare	458	Consul Greaves (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	491	Abyss Masque (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	497	Survivor's Footgear (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	503	Beast-Hide Vest (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	506	Prairie Cap (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	521	Crimson Headband (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	533	Consul Pauldrons (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	536	Divine Vambraces (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	542	Tachyon Scarf (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	578	Carbon Gauntlet (Legendary)	0.0132013205
+17	Reinventing the Gogol	Rare	471	Belemnite Bangle (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	477	Fighter's Circlet (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	522	Black Cube (Common)	0.00660066027
+17	Reinventing the Gogol	Rare	543	Rainbow Belt (Common)	0.0132013205
+17	Reinventing the Gogol	Rare	472	Belemnite Bangle (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	478	Fighter's Circlet (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	523	Black Cube (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	544	Rainbow Belt (Rare)	0.00660066027
+17	Reinventing the Gogol	Rare	473	Belemnite Bangle (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	479	Fighter's Circlet (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	524	Black Cube (Legendary)	0.00660066027
+17	Reinventing the Gogol	Rare	545	Rainbow Belt (Legendary)	0.00660066027
+17	Reinventing the Gogol	Legendary	15365	Aggro Attack Up VI	0.008298756
+17	Reinventing the Gogol	Legendary	15376	Evasion Focus VI	0.008298756
+17	Reinventing the Gogol	Legendary	15379	Endurance VI	0.008298756
+17	Reinventing the Gogol	Legendary	15382	Topple Resist VI	0.008298756
+17	Reinventing the Gogol	Legendary	15385	Blowdown Resist VI	0.008298756
+17	Reinventing the Gogol	Legendary	15387	Auto-Attack Stealth VI	0.008298756
+17	Reinventing the Gogol	Legendary	15389	Arts Stealth VI	0.008298756
+17	Reinventing the Gogol	Legendary	15398	Affinity MAX Barrier VI	0.008298756
+17	Reinventing the Gogol	Legendary	15405	Affinity MAX Acc VI	0.008298756
+17	Reinventing the Gogol	Legendary	15406	Jamming VI	0.008298756
+17	Reinventing the Gogol	Legendary	10028	Shaft Chip	0.008298756
+17	Reinventing the Gogol	Legendary	10032	Booster Chip	0.008298756
+17	Reinventing the Gogol	Legendary	10036	Hexagon Chip	0.008298756
+17	Reinventing the Gogol	Legendary	10040	Spiral Chip	0.008298756
+17	Reinventing the Gogol	Legendary	10044	Winonaite Chip	0.008298756
+17	Reinventing the Gogol	Legendary	10048	Angrite Chip	0.008298756
+17	Reinventing the Gogol	Legendary	15377	Swift Evasion VI	0.008298756
+17	Reinventing the Gogol	Legendary	15391	Arts Heal VI	0.008298756
+17	Reinventing the Gogol	Legendary	456	Consul Greaves (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	489	Abyss Masque (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	495	Survivor's Footgear (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	501	Beast-Hide Vest (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	504	Prairie Cap (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	519	Crimson Headband (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	531	Consul Pauldrons (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	534	Divine Vambraces (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	540	Tachyon Scarf (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	576	Carbon Gauntlet (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	457	Consul Greaves (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	490	Abyss Masque (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	496	Survivor's Footgear (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	502	Beast-Hide Vest (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	505	Prairie Cap (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	520	Crimson Headband (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	532	Consul Pauldrons (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	535	Divine Vambraces (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	541	Tachyon Scarf (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	577	Carbon Gauntlet (Rare)	0.0165975112
+17	Reinventing the Gogol	Legendary	458	Consul Greaves (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	491	Abyss Masque (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	497	Survivor's Footgear (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	503	Beast-Hide Vest (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	506	Prairie Cap (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	521	Crimson Headband (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	533	Consul Pauldrons (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	536	Divine Vambraces (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	542	Tachyon Scarf (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	578	Carbon Gauntlet (Legendary)	0.0165975112
+17	Reinventing the Gogol	Legendary	471	Belemnite Bangle (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	477	Fighter's Circlet (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	522	Black Cube (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	543	Rainbow Belt (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	472	Belemnite Bangle (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	478	Fighter's Circlet (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	523	Black Cube (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	544	Rainbow Belt (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	473	Belemnite Bangle (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	479	Fighter's Circlet (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	524	Black Cube (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	545	Rainbow Belt (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	15353	Physical Defense Up VI	0.004149378
+17	Reinventing the Gogol	Legendary	15354	Ether Defense Up VI	0.004149378
+17	Reinventing the Gogol	Legendary	15061	Blade Combo Boost VI	0.004149378
+17	Reinventing the Gogol	Legendary	15132	Ultimate Shield	0.004149378
+17	Reinventing the Gogol	Legendary	15380	HP Attack Boost VI	0.008298756
+17	Reinventing the Gogol	Legendary	15381	Break Resist VI	0.004149378
+17	Reinventing the Gogol	Legendary	15388	Aggro Boost VI	0.004149378
+17	Reinventing the Gogol	Legendary	15390	Arts Aggro Boost VI	0.004149378
+17	Reinventing the Gogol	Legendary	15393	Damage Heal VI	0.004149378
+17	Reinventing the Gogol	Legendary	15319	Fast Blade Switch VI	0.004149378
+17	Reinventing the Gogol	Legendary	10052	Shining Star Chip	0.004149378
+17	Reinventing the Gogol	Legendary	10053	Moon Matter Chip	0.004149378
+17	Reinventing the Gogol	Legendary	10054	Sunlight Chip	0.004149378
+17	Reinventing the Gogol	Legendary	10058	Dilaton Chip	0.004149378
+17	Reinventing the Gogol	Legendary	10059	Preon Chip	0.004149378
+17	Reinventing the Gogol	Legendary	10060	Tachyon Chip	0.004149378
+17	Reinventing the Gogol	Legendary	15392	Movement Heal VI	0.004149378
+17	Reinventing the Gogol	Legendary	15393	Damage Heal VI	0.004149378
+17	Reinventing the Gogol	Legendary	15399	Affinity MAX Atk VI	0.004149378
+17	Reinventing the Gogol	Legendary	15400	Affinity MAX Evade VI	0.004149378
+17	Reinventing the Gogol	Legendary	459	Infinity Greaves (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	480	Ocean Earring (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	483	Seven-Seas Earring (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	516	Alexandrite (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	546	Goliath Ring (Common)	0.0165975112
+17	Reinventing the Gogol	Legendary	582	Master Scope (Common)	0.008298756
+17	Reinventing the Gogol	Legendary	460	Infinity Greaves (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	481	Ocean Earring (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	484	Seven-Seas Earring (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	517	Alexandrite (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	547	Goliath Ring (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	583	Master Scope (Rare)	0.008298756
+17	Reinventing the Gogol	Legendary	461	Infinity Greaves (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	482	Ocean Earring (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	485	Seven-Seas Earring (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	518	Alexandrite (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	548	Goliath Ring (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	584	Master Scope (Legendary)	0.008298756
+17	Reinventing the Gogol	Legendary	25407	Ultimate Weaponry	0.008298756
+18	Mk. VIII	Common	15356	Beast Hunter VI	0.02247191
+18	Mk. VIII	Common	15357	Insect Hunter VI	0.02247191
+18	Mk. VIII	Common	15358	Aerial Hunter VI	0.02247191
+18	Mk. VIII	Common	15359	Aquatic Hunter VI	0.02247191
+18	Mk. VIII	Common	15360	Humanoid Hunter VI	0.02247191
+18	Mk. VIII	Common	15361	Machine Hunter VI	0.02247191
+18	Mk. VIII	Common	15362	Titan Hunter VI	0.02247191
+18	Mk. VIII	Common	15364	Ambush Boost VI	0.02247191
+18	Mk. VIII	Common	15366	Indoor Attack Up VI	0.02247191
+18	Mk. VIII	Common	15367	Outdoor Attack Up VI	0.02247191
+18	Mk. VIII	Common	15378	Emergency Guard VI	0.04494382
+18	Mk. VIII	Common	15383	Launch Resist VI	0.02247191
+18	Mk. VIII	Common	15384	Smash Resist VI	0.02247191
+18	Mk. VIII	Common	15386	Knockback Resist VI	0.02247191
+18	Mk. VIII	Common	15394	Night Vision VI	0.02247191
+18	Mk. VIII	Common	15395	Sunlight Eye VI	0.02247191
+18	Mk. VIII	Common	15396	Reflect Damage Up VI	0.02247191
+18	Mk. VIII	Common	15397	Opening Art VI	0.02247191
+18	Mk. VIII	Common	15401	Specials Lv 1 Plus VI	0.02247191
+18	Mk. VIII	Common	15402	Specials Lv 2 Plus VI	0.02247191
+18	Mk. VIII	Common	15403	Specials Lv 3 Plus VI	0.02247191
+18	Mk. VIII	Common	15404	Specials Lv 4 Plus VI	0.02247191
+18	Mk. VIII	Common	10004	Silver Chip	0.0112359552
+18	Mk. VIII	Common	10008	Gold Chip	0.0112359552
+18	Mk. VIII	Common	10012	Horn Chip	0.0112359552
+18	Mk. VIII	Common	10016	Forest Chip	0.0112359552
+18	Mk. VIII	Common	10020	Fluorite Chip	0.0112359552
+18	Mk. VIII	Common	10024	Zircon Chip	0.0112359552
+18	Mk. VIII	Common	15352	Critical Up VI	0.02247191
+18	Mk. VIII	Common	15355	Block Rate Up VI	0.02247191
+18	Mk. VIII	Common	15363	Fusion Combo Up VI	0.02247191
+18	Mk. VIII	Common	15366	Indoor Attack Up VI	0.02247191
+18	Mk. VIII	Common	15367	Outdoor Attack Up VI	0.02247191
+18	Mk. VIII	Common	15378	Emergency Guard VI	0.04494382
+18	Mk. VIII	Common	15398	Affinity MAX Barrier VI	0.02247191
+18	Mk. VIII	Common	567	Saint's Necklace (Common)	0.00561797759
+18	Mk. VIII	Common	568	Saint's Necklace (Rare)	0.00561797759
+18	Mk. VIII	Common	569	Saint's Necklace (Legendary)	0.00561797759
+18	Mk. VIII	Common	465	Augmented Vision Kit (Common)	0.00561797759
+18	Mk. VIII	Common	468	Charm Bangle (Common)	0.00561797759
+18	Mk. VIII	Common	474	Seven-League Circlet (Common)	0.00561797759
+18	Mk. VIII	Common	498	Twin Trunks Vest (Common)	0.00561797759
+18	Mk. VIII	Common	507	Vivid Mitts (Common)	0.00561797759
+18	Mk. VIII	Common	510	Dauntless Boots (Common)	0.00561797759
+18	Mk. VIII	Common	513	Sunlight Choker (Common)	0.00561797759
+18	Mk. VIII	Common	525	Staunch Boots (Common)	0.00561797759
+18	Mk. VIII	Common	552	Enlightened Loincloth (Common)	0.00561797759
+18	Mk. VIII	Common	555	Glamorous Swimsuit (Common)	0.00561797759
+18	Mk. VIII	Common	558	Vanish Hood (Common)	0.00561797759
+18	Mk. VIII	Common	561	Platinum Nopon Mask (Common)	0.00561797759
+18	Mk. VIII	Common	573	Beatific Medal (Common)	0.00561797759
+18	Mk. VIII	Common	466	Augmented Vision Kit (Rare)	0.00561797759
+18	Mk. VIII	Common	469	Charm Bangle (Rare)	0.00561797759
+18	Mk. VIII	Common	475	Seven-League Circlet (Rare)	0.00561797759
+18	Mk. VIII	Common	499	Twin Trunks Vest (Rare)	0.00561797759
+18	Mk. VIII	Common	508	Vivid Mitts (Rare)	0.00561797759
+18	Mk. VIII	Common	511	Dauntless Boots (Rare)	0.00561797759
+18	Mk. VIII	Common	514	Sunlight Choker (Rare)	0.00561797759
+18	Mk. VIII	Common	526	Staunch Boots (Rare)	0.00561797759
+18	Mk. VIII	Common	553	Enlightened Loincloth (Rare)	0.00561797759
+18	Mk. VIII	Common	556	Glamorous Swimsuit (Rare)	0.00561797759
+18	Mk. VIII	Common	559	Vanish Hood (Rare)	0.00561797759
+18	Mk. VIII	Common	562	Platinum Nopon Mask (Rare)	0.00561797759
+18	Mk. VIII	Common	574	Beatific Medal (Rare)	0.00561797759
+18	Mk. VIII	Common	467	Augmented Vision Kit (Legendary)	0.00561797759
+18	Mk. VIII	Common	470	Charm Bangle (Legendary)	0.00561797759
+18	Mk. VIII	Common	476	Seven-League Circlet (Legendary)	0.00561797759
+18	Mk. VIII	Common	500	Twin Trunks Vest (Legendary)	0.00561797759
+18	Mk. VIII	Common	509	Vivid Mitts (Legendary)	0.00561797759
+18	Mk. VIII	Common	512	Dauntless Boots (Legendary)	0.00561797759
+18	Mk. VIII	Common	515	Sunlight Choker (Legendary)	0.00561797759
+18	Mk. VIII	Common	527	Staunch Boots (Legendary)	0.00561797759
+18	Mk. VIII	Common	554	Enlightened Loincloth (Legendary)	0.00561797759
+18	Mk. VIII	Common	557	Glamorous Swimsuit (Legendary)	0.00561797759
+18	Mk. VIII	Common	560	Vanish Hood (Legendary)	0.00561797759
+18	Mk. VIII	Common	563	Platinum Nopon Mask (Legendary)	0.00561797759
+18	Mk. VIII	Common	575	Beatific Medal (Legendary)	0.00561797759
+18	Mk. VIII	Rare	15356	Beast Hunter VI	0.0107816709
+18	Mk. VIII	Rare	15357	Insect Hunter VI	0.0107816709
+18	Mk. VIII	Rare	15358	Aerial Hunter VI	0.0107816709
+18	Mk. VIII	Rare	15359	Aquatic Hunter VI	0.0107816709
+18	Mk. VIII	Rare	15360	Humanoid Hunter VI	0.0107816709
+18	Mk. VIII	Rare	15361	Machine Hunter VI	0.0107816709
+18	Mk. VIII	Rare	15362	Titan Hunter VI	0.0107816709
+18	Mk. VIII	Rare	15364	Ambush Boost VI	0.0107816709
+18	Mk. VIII	Rare	15366	Indoor Attack Up VI	0.0107816709
+18	Mk. VIII	Rare	15367	Outdoor Attack Up VI	0.0107816709
+18	Mk. VIII	Rare	15378	Emergency Guard VI	0.0107816709
+18	Mk. VIII	Rare	15383	Launch Resist VI	0.0107816709
+18	Mk. VIII	Rare	15384	Smash Resist VI	0.0107816709
+18	Mk. VIII	Rare	15386	Knockback Resist VI	0.0107816709
+18	Mk. VIII	Rare	15394	Night Vision VI	0.0107816709
+18	Mk. VIII	Rare	15395	Sunlight Eye VI	0.0107816709
+18	Mk. VIII	Rare	15396	Reflect Damage Up VI	0.0107816709
+18	Mk. VIII	Rare	15397	Opening Art VI	0.0107816709
+18	Mk. VIII	Rare	15401	Specials Lv 1 Plus VI	0.0107816709
+18	Mk. VIII	Rare	15402	Specials Lv 2 Plus VI	0.0107816709
+18	Mk. VIII	Rare	15403	Specials Lv 3 Plus VI	0.0107816709
+18	Mk. VIII	Rare	15404	Specials Lv 4 Plus VI	0.0107816709
+18	Mk. VIII	Rare	10004	Silver Chip	0.00539083546
+18	Mk. VIII	Rare	10008	Gold Chip	0.00539083546
+18	Mk. VIII	Rare	10012	Horn Chip	0.00539083546
+18	Mk. VIII	Rare	10016	Forest Chip	0.00539083546
+18	Mk. VIII	Rare	10020	Fluorite Chip	0.00539083546
+18	Mk. VIII	Rare	10024	Zircon Chip	0.00539083546
+18	Mk. VIII	Rare	15352	Critical Up VI	0.0107816709
+18	Mk. VIII	Rare	15355	Block Rate Up VI	0.0107816709
+18	Mk. VIII	Rare	15363	Fusion Combo Up VI	0.0107816709
+18	Mk. VIII	Rare	15366	Indoor Attack Up VI	0.0107816709
+18	Mk. VIII	Rare	15367	Outdoor Attack Up VI	0.0107816709
+18	Mk. VIII	Rare	15378	Emergency Guard VI	0.0107816709
+18	Mk. VIII	Rare	15398	Affinity MAX Barrier VI	0.0107816709
+18	Mk. VIII	Rare	567	Saint's Necklace (Common)	0.00269541773
+18	Mk. VIII	Rare	568	Saint's Necklace (Rare)	0.00269541773
+18	Mk. VIII	Rare	569	Saint's Necklace (Legendary)	0.00269541773
+18	Mk. VIII	Rare	465	Augmented Vision Kit (Common)	0.00269541773
+18	Mk. VIII	Rare	468	Charm Bangle (Common)	0.00269541773
+18	Mk. VIII	Rare	474	Seven-League Circlet (Common)	0.00269541773
+18	Mk. VIII	Rare	498	Twin Trunks Vest (Common)	0.00269541773
+18	Mk. VIII	Rare	507	Vivid Mitts (Common)	0.00269541773
+18	Mk. VIII	Rare	510	Dauntless Boots (Common)	0.00269541773
+18	Mk. VIII	Rare	513	Sunlight Choker (Common)	0.00269541773
+18	Mk. VIII	Rare	525	Staunch Boots (Common)	0.00269541773
+18	Mk. VIII	Rare	552	Enlightened Loincloth (Common)	0.00269541773
+18	Mk. VIII	Rare	555	Glamorous Swimsuit (Common)	0.00269541773
+18	Mk. VIII	Rare	558	Vanish Hood (Common)	0.00269541773
+18	Mk. VIII	Rare	561	Platinum Nopon Mask (Common)	0.00269541773
+18	Mk. VIII	Rare	573	Beatific Medal (Common)	0.00269541773
+18	Mk. VIII	Rare	466	Augmented Vision Kit (Rare)	0.00269541773
+18	Mk. VIII	Rare	469	Charm Bangle (Rare)	0.00269541773
+18	Mk. VIII	Rare	475	Seven-League Circlet (Rare)	0.00269541773
+18	Mk. VIII	Rare	499	Twin Trunks Vest (Rare)	0.00269541773
+18	Mk. VIII	Rare	508	Vivid Mitts (Rare)	0.00269541773
+18	Mk. VIII	Rare	511	Dauntless Boots (Rare)	0.00269541773
+18	Mk. VIII	Rare	514	Sunlight Choker (Rare)	0.00269541773
+18	Mk. VIII	Rare	526	Staunch Boots (Rare)	0.00269541773
+18	Mk. VIII	Rare	553	Enlightened Loincloth (Rare)	0.00269541773
+18	Mk. VIII	Rare	556	Glamorous Swimsuit (Rare)	0.00269541773
+18	Mk. VIII	Rare	559	Vanish Hood (Rare)	0.00269541773
+18	Mk. VIII	Rare	562	Platinum Nopon Mask (Rare)	0.00269541773
+18	Mk. VIII	Rare	574	Beatific Medal (Rare)	0.00269541773
+18	Mk. VIII	Rare	467	Augmented Vision Kit (Legendary)	0.00269541773
+18	Mk. VIII	Rare	470	Charm Bangle (Legendary)	0.00269541773
+18	Mk. VIII	Rare	476	Seven-League Circlet (Legendary)	0.00269541773
+18	Mk. VIII	Rare	500	Twin Trunks Vest (Legendary)	0.00269541773
+18	Mk. VIII	Rare	509	Vivid Mitts (Legendary)	0.00269541773
+18	Mk. VIII	Rare	512	Dauntless Boots (Legendary)	0.00269541773
+18	Mk. VIII	Rare	515	Sunlight Choker (Legendary)	0.00269541773
+18	Mk. VIII	Rare	527	Staunch Boots (Legendary)	0.00269541773
+18	Mk. VIII	Rare	554	Enlightened Loincloth (Legendary)	0.00269541773
+18	Mk. VIII	Rare	557	Glamorous Swimsuit (Legendary)	0.00269541773
+18	Mk. VIII	Rare	560	Vanish Hood (Legendary)	0.00269541773
+18	Mk. VIII	Rare	563	Platinum Nopon Mask (Legendary)	0.00269541773
+18	Mk. VIII	Rare	575	Beatific Medal (Legendary)	0.00269541773
+18	Mk. VIII	Rare	15365	Aggro Attack Up VI	0.0215633418
+18	Mk. VIII	Rare	15376	Evasion Focus VI	0.0215633418
+18	Mk. VIII	Rare	15379	Endurance VI	0.0215633418
+18	Mk. VIII	Rare	15382	Topple Resist VI	0.0215633418
+18	Mk. VIII	Rare	15385	Blowdown Resist VI	0.0215633418
+18	Mk. VIII	Rare	15387	Auto-Attack Stealth VI	0.0215633418
+18	Mk. VIII	Rare	15389	Arts Stealth VI	0.0215633418
+18	Mk. VIII	Rare	15398	Affinity MAX Barrier VI	0.0215633418
+18	Mk. VIII	Rare	15405	Affinity MAX Acc VI	0.0215633418
+18	Mk. VIII	Rare	15406	Jamming VI	0.0431266837
+18	Mk. VIII	Rare	10028	Shaft Chip	0.0107816709
+18	Mk. VIII	Rare	10032	Booster Chip	0.0107816709
+18	Mk. VIII	Rare	10036	Hexagon Chip	0.0107816709
+18	Mk. VIII	Rare	10040	Spiral Chip	0.0107816709
+18	Mk. VIII	Rare	10044	Winonaite Chip	0.0107816709
+18	Mk. VIII	Rare	10048	Angrite Chip	0.0107816709
+18	Mk. VIII	Rare	15377	Swift Evasion VI	0.0215633418
+18	Mk. VIII	Rare	15391	Arts Heal VI	0.0215633418
+18	Mk. VIII	Rare	456	Consul Greaves (Common)	0.00539083546
+18	Mk. VIII	Rare	489	Abyss Masque (Common)	0.00539083546
+18	Mk. VIII	Rare	495	Survivor's Footgear (Common)	0.00539083546
+18	Mk. VIII	Rare	501	Beast-Hide Vest (Common)	0.00539083546
+18	Mk. VIII	Rare	504	Prairie Cap (Common)	0.00539083546
+18	Mk. VIII	Rare	519	Crimson Headband (Common)	0.00539083546
+18	Mk. VIII	Rare	531	Consul Pauldrons (Common)	0.00539083546
+18	Mk. VIII	Rare	534	Divine Vambraces (Common)	0.00539083546
+18	Mk. VIII	Rare	540	Tachyon Scarf (Common)	0.00539083546
+18	Mk. VIII	Rare	576	Carbon Gauntlet (Common)	0.00539083546
+18	Mk. VIII	Rare	457	Consul Greaves (Rare)	0.00539083546
+18	Mk. VIII	Rare	490	Abyss Masque (Rare)	0.00539083546
+18	Mk. VIII	Rare	496	Survivor's Footgear (Rare)	0.00539083546
+18	Mk. VIII	Rare	502	Beast-Hide Vest (Rare)	0.00539083546
+18	Mk. VIII	Rare	505	Prairie Cap (Rare)	0.00539083546
+18	Mk. VIII	Rare	520	Crimson Headband (Rare)	0.00539083546
+18	Mk. VIII	Rare	532	Consul Pauldrons (Rare)	0.00539083546
+18	Mk. VIII	Rare	535	Divine Vambraces (Rare)	0.00539083546
+18	Mk. VIII	Rare	541	Tachyon Scarf (Rare)	0.00539083546
+18	Mk. VIII	Rare	577	Carbon Gauntlet (Rare)	0.00539083546
+18	Mk. VIII	Rare	458	Consul Greaves (Legendary)	0.00539083546
+18	Mk. VIII	Rare	491	Abyss Masque (Legendary)	0.00539083546
+18	Mk. VIII	Rare	497	Survivor's Footgear (Legendary)	0.00539083546
+18	Mk. VIII	Rare	503	Beast-Hide Vest (Legendary)	0.00539083546
+18	Mk. VIII	Rare	506	Prairie Cap (Legendary)	0.00539083546
+18	Mk. VIII	Rare	521	Crimson Headband (Legendary)	0.00539083546
+18	Mk. VIII	Rare	533	Consul Pauldrons (Legendary)	0.00539083546
+18	Mk. VIII	Rare	536	Divine Vambraces (Legendary)	0.00539083546
+18	Mk. VIII	Rare	542	Tachyon Scarf (Legendary)	0.00539083546
+18	Mk. VIII	Rare	578	Carbon Gauntlet (Legendary)	0.00539083546
+18	Mk. VIII	Rare	471	Belemnite Bangle (Common)	0.00269541773
+18	Mk. VIII	Rare	477	Fighter's Circlet (Common)	0.00539083546
+18	Mk. VIII	Rare	522	Black Cube (Common)	0.00269541773
+18	Mk. VIII	Rare	543	Rainbow Belt (Common)	0.00269541773
+18	Mk. VIII	Rare	472	Belemnite Bangle (Rare)	0.00269541773
+18	Mk. VIII	Rare	478	Fighter's Circlet (Rare)	0.00269541773
+18	Mk. VIII	Rare	523	Black Cube (Rare)	0.00269541773
+18	Mk. VIII	Rare	544	Rainbow Belt (Rare)	0.00269541773
+18	Mk. VIII	Rare	473	Belemnite Bangle (Legendary)	0.00269541773
+18	Mk. VIII	Rare	479	Fighter's Circlet (Legendary)	0.00269541773
+18	Mk. VIII	Rare	524	Black Cube (Legendary)	0.00269541773
+18	Mk. VIII	Rare	545	Rainbow Belt (Legendary)	0.00269541773
+18	Mk. VIII	Legendary	15365	Aggro Attack Up VI	0.0283687934
+18	Mk. VIII	Legendary	15376	Evasion Focus VI	0.0283687934
+18	Mk. VIII	Legendary	15379	Endurance VI	0.0283687934
+18	Mk. VIII	Legendary	15382	Topple Resist VI	0.0283687934
+18	Mk. VIII	Legendary	15385	Blowdown Resist VI	0.0283687934
+18	Mk. VIII	Legendary	15387	Auto-Attack Stealth VI	0.0283687934
+18	Mk. VIII	Legendary	15389	Arts Stealth VI	0.0283687934
+18	Mk. VIII	Legendary	15398	Affinity MAX Barrier VI	0.0283687934
+18	Mk. VIII	Legendary	15405	Affinity MAX Acc VI	0.0283687934
+18	Mk. VIII	Legendary	15406	Jamming VI	0.0283687934
+18	Mk. VIII	Legendary	10028	Shaft Chip	0.0141843967
+18	Mk. VIII	Legendary	10032	Booster Chip	0.0141843967
+18	Mk. VIII	Legendary	10036	Hexagon Chip	0.0141843967
+18	Mk. VIII	Legendary	10040	Spiral Chip	0.0141843967
+18	Mk. VIII	Legendary	10044	Winonaite Chip	0.0141843967
+18	Mk. VIII	Legendary	10048	Angrite Chip	0.0141843967
+18	Mk. VIII	Legendary	15377	Swift Evasion VI	0.0283687934
+18	Mk. VIII	Legendary	15391	Arts Heal VI	0.0283687934
+18	Mk. VIII	Legendary	456	Consul Greaves (Common)	0.00709219836
+18	Mk. VIII	Legendary	489	Abyss Masque (Common)	0.00709219836
+18	Mk. VIII	Legendary	495	Survivor's Footgear (Common)	0.00709219836
+18	Mk. VIII	Legendary	501	Beast-Hide Vest (Common)	0.00709219836
+18	Mk. VIII	Legendary	504	Prairie Cap (Common)	0.00709219836
+18	Mk. VIII	Legendary	519	Crimson Headband (Common)	0.00709219836
+18	Mk. VIII	Legendary	531	Consul Pauldrons (Common)	0.00709219836
+18	Mk. VIII	Legendary	534	Divine Vambraces (Common)	0.00709219836
+18	Mk. VIII	Legendary	540	Tachyon Scarf (Common)	0.00709219836
+18	Mk. VIII	Legendary	576	Carbon Gauntlet (Common)	0.00709219836
+18	Mk. VIII	Legendary	457	Consul Greaves (Rare)	0.00709219836
+18	Mk. VIII	Legendary	490	Abyss Masque (Rare)	0.00709219836
+18	Mk. VIII	Legendary	496	Survivor's Footgear (Rare)	0.00709219836
+18	Mk. VIII	Legendary	502	Beast-Hide Vest (Rare)	0.00709219836
+18	Mk. VIII	Legendary	505	Prairie Cap (Rare)	0.00709219836
+18	Mk. VIII	Legendary	520	Crimson Headband (Rare)	0.00709219836
+18	Mk. VIII	Legendary	532	Consul Pauldrons (Rare)	0.00709219836
+18	Mk. VIII	Legendary	535	Divine Vambraces (Rare)	0.00709219836
+18	Mk. VIII	Legendary	541	Tachyon Scarf (Rare)	0.00709219836
+18	Mk. VIII	Legendary	577	Carbon Gauntlet (Rare)	0.00709219836
+18	Mk. VIII	Legendary	458	Consul Greaves (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	491	Abyss Masque (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	497	Survivor's Footgear (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	503	Beast-Hide Vest (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	506	Prairie Cap (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	521	Crimson Headband (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	533	Consul Pauldrons (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	536	Divine Vambraces (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	542	Tachyon Scarf (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	578	Carbon Gauntlet (Legendary)	0.00709219836
+18	Mk. VIII	Legendary	471	Belemnite Bangle (Common)	0.00354609918
+18	Mk. VIII	Legendary	477	Fighter's Circlet (Common)	0.00354609918
+18	Mk. VIII	Legendary	522	Black Cube (Common)	0.00354609918
+18	Mk. VIII	Legendary	543	Rainbow Belt (Common)	0.00354609918
+18	Mk. VIII	Legendary	472	Belemnite Bangle (Rare)	0.00354609918
+18	Mk. VIII	Legendary	478	Fighter's Circlet (Rare)	0.00354609918
+18	Mk. VIII	Legendary	523	Black Cube (Rare)	0.00354609918
+18	Mk. VIII	Legendary	544	Rainbow Belt (Rare)	0.00354609918
+18	Mk. VIII	Legendary	473	Belemnite Bangle (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	479	Fighter's Circlet (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	524	Black Cube (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	545	Rainbow Belt (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	15353	Physical Defense Up VI	0.0141843967
+18	Mk. VIII	Legendary	15354	Ether Defense Up VI	0.0141843967
+18	Mk. VIII	Legendary	15061	Blade Combo Boost VI	0.0141843967
+18	Mk. VIII	Legendary	15132	Ultimate Shield	0.0141843967
+18	Mk. VIII	Legendary	15380	HP Attack Boost VI	0.0141843967
+18	Mk. VIII	Legendary	15381	Break Resist VI	0.0141843967
+18	Mk. VIII	Legendary	15388	Aggro Boost VI	0.0141843967
+18	Mk. VIII	Legendary	15390	Arts Aggro Boost VI	0.0141843967
+18	Mk. VIII	Legendary	15393	Damage Heal VI	0.0141843967
+18	Mk. VIII	Legendary	15319	Fast Blade Switch VI	0.0141843967
+18	Mk. VIII	Legendary	10052	Shining Star Chip	0.00709219836
+18	Mk. VIII	Legendary	10053	Moon Matter Chip	0.00709219836
+18	Mk. VIII	Legendary	10054	Sunlight Chip	0.00709219836
+18	Mk. VIII	Legendary	10058	Dilaton Chip	0.00709219836
+18	Mk. VIII	Legendary	10059	Preon Chip	0.00709219836
+18	Mk. VIII	Legendary	10060	Tachyon Chip	0.00709219836
+18	Mk. VIII	Legendary	15392	Movement Heal VI	0.0141843967
+18	Mk. VIII	Legendary	15393	Damage Heal VI	0.0141843967
+18	Mk. VIII	Legendary	15399	Affinity MAX Atk VI	0.0141843967
+18	Mk. VIII	Legendary	15400	Affinity MAX Evade VI	0.0141843967
+18	Mk. VIII	Legendary	459	Infinity Greaves (Common)	0.00354609918
+18	Mk. VIII	Legendary	480	Ocean Earring (Common)	0.00354609918
+18	Mk. VIII	Legendary	483	Seven-Seas Earring (Common)	0.00354609918
+18	Mk. VIII	Legendary	516	Alexandrite (Common)	0.00354609918
+18	Mk. VIII	Legendary	546	Goliath Ring (Common)	0.00354609918
+18	Mk. VIII	Legendary	582	Master Scope (Common)	0.00354609918
+18	Mk. VIII	Legendary	460	Infinity Greaves (Rare)	0.00354609918
+18	Mk. VIII	Legendary	481	Ocean Earring (Rare)	0.00354609918
+18	Mk. VIII	Legendary	484	Seven-Seas Earring (Rare)	0.00354609918
+18	Mk. VIII	Legendary	517	Alexandrite (Rare)	0.00354609918
+18	Mk. VIII	Legendary	547	Goliath Ring (Rare)	0.00354609918
+18	Mk. VIII	Legendary	583	Master Scope (Rare)	0.00354609918
+18	Mk. VIII	Legendary	461	Infinity Greaves (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	482	Ocean Earring (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	485	Seven-Seas Earring (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	518	Alexandrite (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	548	Goliath Ring (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	584	Master Scope (Legendary)	0.00354609918
+18	Mk. VIII	Legendary	25407	Ultimate Weaponry	0.0141843967
+19	Fiercest Faction	Common	15356	Beast Hunter VI	0.004784689
+19	Fiercest Faction	Common	15357	Insect Hunter VI	0.004784689
+19	Fiercest Faction	Common	15358	Aerial Hunter VI	0.004784689
+19	Fiercest Faction	Common	15359	Aquatic Hunter VI	0.004784689
+19	Fiercest Faction	Common	15360	Humanoid Hunter VI	0.004784689
+19	Fiercest Faction	Common	15361	Machine Hunter VI	0.004784689
+19	Fiercest Faction	Common	15362	Titan Hunter VI	0.004784689
+19	Fiercest Faction	Common	15364	Ambush Boost VI	0.004784689
+19	Fiercest Faction	Common	15366	Indoor Attack Up VI	0.004784689
+19	Fiercest Faction	Common	15367	Outdoor Attack Up VI	0.004784689
+19	Fiercest Faction	Common	15378	Emergency Guard VI	0.004784689
+19	Fiercest Faction	Common	15383	Launch Resist VI	0.004784689
+19	Fiercest Faction	Common	15384	Smash Resist VI	0.004784689
+19	Fiercest Faction	Common	15386	Knockback Resist VI	0.004784689
+19	Fiercest Faction	Common	15394	Night Vision VI	0.004784689
+19	Fiercest Faction	Common	15395	Sunlight Eye VI	0.004784689
+19	Fiercest Faction	Common	15396	Reflect Damage Up VI	0.004784689
+19	Fiercest Faction	Common	15397	Opening Art VI	0.004784689
+19	Fiercest Faction	Common	15401	Specials Lv 1 Plus VI	0.004784689
+19	Fiercest Faction	Common	15402	Specials Lv 2 Plus VI	0.004784689
+19	Fiercest Faction	Common	15403	Specials Lv 3 Plus VI	0.004784689
+19	Fiercest Faction	Common	15404	Specials Lv 4 Plus VI	0.004784689
+19	Fiercest Faction	Common	10004	Silver Chip	0.009569378
+19	Fiercest Faction	Common	10008	Gold Chip	0.009569378
+19	Fiercest Faction	Common	10012	Horn Chip	0.009569378
+19	Fiercest Faction	Common	10016	Forest Chip	0.009569378
+19	Fiercest Faction	Common	10020	Fluorite Chip	0.009569378
+19	Fiercest Faction	Common	10024	Zircon Chip	0.009569378
+19	Fiercest Faction	Common	15352	Critical Up VI	0.004784689
+19	Fiercest Faction	Common	15355	Block Rate Up VI	0.004784689
+19	Fiercest Faction	Common	15363	Fusion Combo Up VI	0.004784689
+19	Fiercest Faction	Common	15366	Indoor Attack Up VI	0.004784689
+19	Fiercest Faction	Common	15367	Outdoor Attack Up VI	0.004784689
+19	Fiercest Faction	Common	15378	Emergency Guard VI	0.004784689
+19	Fiercest Faction	Common	15398	Affinity MAX Barrier VI	0.004784689
+19	Fiercest Faction	Common	567	Saint's Necklace (Common)	0.0191387553
+19	Fiercest Faction	Common	568	Saint's Necklace (Rare)	0.0191387553
+19	Fiercest Faction	Common	569	Saint's Necklace (Legendary)	0.0191387553
+19	Fiercest Faction	Common	465	Augmented Vision Kit (Common)	0.0191387553
+19	Fiercest Faction	Common	468	Charm Bangle (Common)	0.0191387553
+19	Fiercest Faction	Common	474	Seven-League Circlet (Common)	0.0191387553
+19	Fiercest Faction	Common	498	Twin Trunks Vest (Common)	0.0191387553
+19	Fiercest Faction	Common	507	Vivid Mitts (Common)	0.0191387553
+19	Fiercest Faction	Common	510	Dauntless Boots (Common)	0.0191387553
+19	Fiercest Faction	Common	513	Sunlight Choker (Common)	0.0191387553
+19	Fiercest Faction	Common	525	Staunch Boots (Common)	0.0191387553
+19	Fiercest Faction	Common	552	Enlightened Loincloth (Common)	0.0191387553
+19	Fiercest Faction	Common	555	Glamorous Swimsuit (Common)	0.0191387553
+19	Fiercest Faction	Common	558	Vanish Hood (Common)	0.0191387553
+19	Fiercest Faction	Common	561	Platinum Nopon Mask (Common)	0.0191387553
+19	Fiercest Faction	Common	573	Beatific Medal (Common)	0.0191387553
+19	Fiercest Faction	Common	466	Augmented Vision Kit (Rare)	0.0191387553
+19	Fiercest Faction	Common	469	Charm Bangle (Rare)	0.0191387553
+19	Fiercest Faction	Common	475	Seven-League Circlet (Rare)	0.0191387553
+19	Fiercest Faction	Common	499	Twin Trunks Vest (Rare)	0.0191387553
+19	Fiercest Faction	Common	508	Vivid Mitts (Rare)	0.0191387553
+19	Fiercest Faction	Common	511	Dauntless Boots (Rare)	0.0191387553
+19	Fiercest Faction	Common	514	Sunlight Choker (Rare)	0.0191387553
+19	Fiercest Faction	Common	526	Staunch Boots (Rare)	0.0191387553
+19	Fiercest Faction	Common	553	Enlightened Loincloth (Rare)	0.0191387553
+19	Fiercest Faction	Common	556	Glamorous Swimsuit (Rare)	0.0191387553
+19	Fiercest Faction	Common	559	Vanish Hood (Rare)	0.0191387553
+19	Fiercest Faction	Common	562	Platinum Nopon Mask (Rare)	0.0191387553
+19	Fiercest Faction	Common	574	Beatific Medal (Rare)	0.0191387553
+19	Fiercest Faction	Common	467	Augmented Vision Kit (Legendary)	0.0191387553
+19	Fiercest Faction	Common	470	Charm Bangle (Legendary)	0.0191387553
+19	Fiercest Faction	Common	476	Seven-League Circlet (Legendary)	0.0191387553
+19	Fiercest Faction	Common	500	Twin Trunks Vest (Legendary)	0.0191387553
+19	Fiercest Faction	Common	509	Vivid Mitts (Legendary)	0.0191387553
+19	Fiercest Faction	Common	512	Dauntless Boots (Legendary)	0.0191387553
+19	Fiercest Faction	Common	515	Sunlight Choker (Legendary)	0.0191387553
+19	Fiercest Faction	Common	527	Staunch Boots (Legendary)	0.0191387553
+19	Fiercest Faction	Common	554	Enlightened Loincloth (Legendary)	0.0191387553
+19	Fiercest Faction	Common	557	Glamorous Swimsuit (Legendary)	0.0191387553
+19	Fiercest Faction	Common	560	Vanish Hood (Legendary)	0.0191387553
+19	Fiercest Faction	Common	563	Platinum Nopon Mask (Legendary)	0.0191387553
+19	Fiercest Faction	Common	575	Beatific Medal (Legendary)	0.0191387553
+19	Fiercest Faction	Rare	15356	Beast Hunter VI	0.00182815362
+19	Fiercest Faction	Rare	15357	Insect Hunter VI	0.00182815362
+19	Fiercest Faction	Rare	15358	Aerial Hunter VI	0.00182815362
+19	Fiercest Faction	Rare	15359	Aquatic Hunter VI	0.00182815362
+19	Fiercest Faction	Rare	15360	Humanoid Hunter VI	0.00182815362
+19	Fiercest Faction	Rare	15361	Machine Hunter VI	0.00182815362
+19	Fiercest Faction	Rare	15362	Titan Hunter VI	0.00182815362
+19	Fiercest Faction	Rare	15364	Ambush Boost VI	0.00182815362
+19	Fiercest Faction	Rare	15366	Indoor Attack Up VI	0.00182815362
+19	Fiercest Faction	Rare	15367	Outdoor Attack Up VI	0.00182815362
+19	Fiercest Faction	Rare	15378	Emergency Guard VI	0.00182815362
+19	Fiercest Faction	Rare	15383	Launch Resist VI	0.00182815362
+19	Fiercest Faction	Rare	15384	Smash Resist VI	0.00182815362
+19	Fiercest Faction	Rare	15386	Knockback Resist VI	0.00182815362
+19	Fiercest Faction	Rare	15394	Night Vision VI	0.00182815362
+19	Fiercest Faction	Rare	15395	Sunlight Eye VI	0.00182815362
+19	Fiercest Faction	Rare	15396	Reflect Damage Up VI	0.00182815362
+19	Fiercest Faction	Rare	15397	Opening Art VI	0.00182815362
+19	Fiercest Faction	Rare	15401	Specials Lv 1 Plus VI	0.00182815362
+19	Fiercest Faction	Rare	15402	Specials Lv 2 Plus VI	0.00182815362
+19	Fiercest Faction	Rare	15403	Specials Lv 3 Plus VI	0.00182815362
+19	Fiercest Faction	Rare	15404	Specials Lv 4 Plus VI	0.00182815362
+19	Fiercest Faction	Rare	10004	Silver Chip	0.00365630724
+19	Fiercest Faction	Rare	10008	Gold Chip	0.00365630724
+19	Fiercest Faction	Rare	10012	Horn Chip	0.00365630724
+19	Fiercest Faction	Rare	10016	Forest Chip	0.00365630724
+19	Fiercest Faction	Rare	10020	Fluorite Chip	0.00365630724
+19	Fiercest Faction	Rare	10024	Zircon Chip	0.00365630724
+19	Fiercest Faction	Rare	15352	Critical Up VI	0.00182815362
+19	Fiercest Faction	Rare	15355	Block Rate Up VI	0.00182815362
+19	Fiercest Faction	Rare	15363	Fusion Combo Up VI	0.00182815362
+19	Fiercest Faction	Rare	15366	Indoor Attack Up VI	0.00182815362
+19	Fiercest Faction	Rare	15367	Outdoor Attack Up VI	0.00182815362
+19	Fiercest Faction	Rare	15378	Emergency Guard VI	0.00182815362
+19	Fiercest Faction	Rare	15398	Affinity MAX Barrier VI	0.00182815362
+19	Fiercest Faction	Rare	567	Saint's Necklace (Common)	0.00731261447
+19	Fiercest Faction	Rare	568	Saint's Necklace (Rare)	0.00731261447
+19	Fiercest Faction	Rare	569	Saint's Necklace (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	465	Augmented Vision Kit (Common)	0.00731261447
+19	Fiercest Faction	Rare	468	Charm Bangle (Common)	0.00731261447
+19	Fiercest Faction	Rare	474	Seven-League Circlet (Common)	0.00731261447
+19	Fiercest Faction	Rare	498	Twin Trunks Vest (Common)	0.00731261447
+19	Fiercest Faction	Rare	507	Vivid Mitts (Common)	0.00731261447
+19	Fiercest Faction	Rare	510	Dauntless Boots (Common)	0.00731261447
+19	Fiercest Faction	Rare	513	Sunlight Choker (Common)	0.00731261447
+19	Fiercest Faction	Rare	525	Staunch Boots (Common)	0.00731261447
+19	Fiercest Faction	Rare	552	Enlightened Loincloth (Common)	0.00731261447
+19	Fiercest Faction	Rare	555	Glamorous Swimsuit (Common)	0.00731261447
+19	Fiercest Faction	Rare	558	Vanish Hood (Common)	0.00731261447
+19	Fiercest Faction	Rare	561	Platinum Nopon Mask (Common)	0.00731261447
+19	Fiercest Faction	Rare	573	Beatific Medal (Common)	0.00731261447
+19	Fiercest Faction	Rare	466	Augmented Vision Kit (Rare)	0.00731261447
+19	Fiercest Faction	Rare	469	Charm Bangle (Rare)	0.00731261447
+19	Fiercest Faction	Rare	475	Seven-League Circlet (Rare)	0.00731261447
+19	Fiercest Faction	Rare	499	Twin Trunks Vest (Rare)	0.00731261447
+19	Fiercest Faction	Rare	508	Vivid Mitts (Rare)	0.00731261447
+19	Fiercest Faction	Rare	511	Dauntless Boots (Rare)	0.00731261447
+19	Fiercest Faction	Rare	514	Sunlight Choker (Rare)	0.00731261447
+19	Fiercest Faction	Rare	526	Staunch Boots (Rare)	0.00731261447
+19	Fiercest Faction	Rare	553	Enlightened Loincloth (Rare)	0.00731261447
+19	Fiercest Faction	Rare	556	Glamorous Swimsuit (Rare)	0.00731261447
+19	Fiercest Faction	Rare	559	Vanish Hood (Rare)	0.00731261447
+19	Fiercest Faction	Rare	562	Platinum Nopon Mask (Rare)	0.00731261447
+19	Fiercest Faction	Rare	574	Beatific Medal (Rare)	0.00731261447
+19	Fiercest Faction	Rare	467	Augmented Vision Kit (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	470	Charm Bangle (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	476	Seven-League Circlet (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	500	Twin Trunks Vest (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	509	Vivid Mitts (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	512	Dauntless Boots (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	515	Sunlight Choker (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	527	Staunch Boots (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	554	Enlightened Loincloth (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	557	Glamorous Swimsuit (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	560	Vanish Hood (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	563	Platinum Nopon Mask (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	575	Beatific Medal (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	15365	Aggro Attack Up VI	0.00365630724
+19	Fiercest Faction	Rare	15376	Evasion Focus VI	0.00365630724
+19	Fiercest Faction	Rare	15379	Endurance VI	0.00365630724
+19	Fiercest Faction	Rare	15382	Topple Resist VI	0.00365630724
+19	Fiercest Faction	Rare	15385	Blowdown Resist VI	0.00365630724
+19	Fiercest Faction	Rare	15387	Auto-Attack Stealth VI	0.00365630724
+19	Fiercest Faction	Rare	15389	Arts Stealth VI	0.00365630724
+19	Fiercest Faction	Rare	15398	Affinity MAX Barrier VI	0.00365630724
+19	Fiercest Faction	Rare	15405	Affinity MAX Acc VI	0.00365630724
+19	Fiercest Faction	Rare	15406	Jamming VI	0.00365630724
+19	Fiercest Faction	Rare	10028	Shaft Chip	0.00731261447
+19	Fiercest Faction	Rare	10032	Booster Chip	0.00731261447
+19	Fiercest Faction	Rare	10036	Hexagon Chip	0.00731261447
+19	Fiercest Faction	Rare	10040	Spiral Chip	0.00731261447
+19	Fiercest Faction	Rare	10044	Winonaite Chip	0.00731261447
+19	Fiercest Faction	Rare	10048	Angrite Chip	0.00731261447
+19	Fiercest Faction	Rare	15377	Swift Evasion VI	0.00365630724
+19	Fiercest Faction	Rare	15391	Arts Heal VI	0.00731261447
+19	Fiercest Faction	Rare	456	Consul Greaves (Common)	0.0146252289
+19	Fiercest Faction	Rare	489	Abyss Masque (Common)	0.0146252289
+19	Fiercest Faction	Rare	495	Survivor's Footgear (Common)	0.0146252289
+19	Fiercest Faction	Rare	501	Beast-Hide Vest (Common)	0.0146252289
+19	Fiercest Faction	Rare	504	Prairie Cap (Common)	0.0146252289
+19	Fiercest Faction	Rare	519	Crimson Headband (Common)	0.0146252289
+19	Fiercest Faction	Rare	531	Consul Pauldrons (Common)	0.0146252289
+19	Fiercest Faction	Rare	534	Divine Vambraces (Common)	0.0146252289
+19	Fiercest Faction	Rare	540	Tachyon Scarf (Common)	0.0146252289
+19	Fiercest Faction	Rare	576	Carbon Gauntlet (Common)	0.0146252289
+19	Fiercest Faction	Rare	457	Consul Greaves (Rare)	0.0146252289
+19	Fiercest Faction	Rare	490	Abyss Masque (Rare)	0.0146252289
+19	Fiercest Faction	Rare	496	Survivor's Footgear (Rare)	0.0146252289
+19	Fiercest Faction	Rare	502	Beast-Hide Vest (Rare)	0.0146252289
+19	Fiercest Faction	Rare	505	Prairie Cap (Rare)	0.0146252289
+19	Fiercest Faction	Rare	520	Crimson Headband (Rare)	0.0146252289
+19	Fiercest Faction	Rare	532	Consul Pauldrons (Rare)	0.0146252289
+19	Fiercest Faction	Rare	535	Divine Vambraces (Rare)	0.0146252289
+19	Fiercest Faction	Rare	541	Tachyon Scarf (Rare)	0.0146252289
+19	Fiercest Faction	Rare	577	Carbon Gauntlet (Rare)	0.0146252289
+19	Fiercest Faction	Rare	458	Consul Greaves (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	491	Abyss Masque (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	497	Survivor's Footgear (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	503	Beast-Hide Vest (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	506	Prairie Cap (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	521	Crimson Headband (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	533	Consul Pauldrons (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	536	Divine Vambraces (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	542	Tachyon Scarf (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	578	Carbon Gauntlet (Legendary)	0.0146252289
+19	Fiercest Faction	Rare	471	Belemnite Bangle (Common)	0.00731261447
+19	Fiercest Faction	Rare	477	Fighter's Circlet (Common)	0.00731261447
+19	Fiercest Faction	Rare	522	Black Cube (Common)	0.00731261447
+19	Fiercest Faction	Rare	543	Rainbow Belt (Common)	0.00731261447
+19	Fiercest Faction	Rare	472	Belemnite Bangle (Rare)	0.00731261447
+19	Fiercest Faction	Rare	478	Fighter's Circlet (Rare)	0.00731261447
+19	Fiercest Faction	Rare	523	Black Cube (Rare)	0.00731261447
+19	Fiercest Faction	Rare	544	Rainbow Belt (Rare)	0.00731261447
+19	Fiercest Faction	Rare	473	Belemnite Bangle (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	479	Fighter's Circlet (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	524	Black Cube (Legendary)	0.00731261447
+19	Fiercest Faction	Rare	545	Rainbow Belt (Legendary)	0.00731261447
+19	Fiercest Faction	Legendary	15365	Aggro Attack Up VI	0.004514673
+19	Fiercest Faction	Legendary	15376	Evasion Focus VI	0.004514673
+19	Fiercest Faction	Legendary	15379	Endurance VI	0.004514673
+19	Fiercest Faction	Legendary	15382	Topple Resist VI	0.004514673
+19	Fiercest Faction	Legendary	15385	Blowdown Resist VI	0.004514673
+19	Fiercest Faction	Legendary	15387	Auto-Attack Stealth VI	0.004514673
+19	Fiercest Faction	Legendary	15389	Arts Stealth VI	0.004514673
+19	Fiercest Faction	Legendary	15398	Affinity MAX Barrier VI	0.004514673
+19	Fiercest Faction	Legendary	15405	Affinity MAX Acc VI	0.004514673
+19	Fiercest Faction	Legendary	15406	Jamming VI	0.004514673
+19	Fiercest Faction	Legendary	10028	Shaft Chip	0.009029346
+19	Fiercest Faction	Legendary	10032	Booster Chip	0.009029346
+19	Fiercest Faction	Legendary	10036	Hexagon Chip	0.009029346
+19	Fiercest Faction	Legendary	10040	Spiral Chip	0.009029346
+19	Fiercest Faction	Legendary	10044	Winonaite Chip	0.009029346
+19	Fiercest Faction	Legendary	10048	Angrite Chip	0.009029346
+19	Fiercest Faction	Legendary	15377	Swift Evasion VI	0.004514673
+19	Fiercest Faction	Legendary	15391	Arts Heal VI	0.004514673
+19	Fiercest Faction	Legendary	456	Consul Greaves (Common)	0.0180586912
+19	Fiercest Faction	Legendary	489	Abyss Masque (Common)	0.0180586912
+19	Fiercest Faction	Legendary	495	Survivor's Footgear (Common)	0.0180586912
+19	Fiercest Faction	Legendary	501	Beast-Hide Vest (Common)	0.0180586912
+19	Fiercest Faction	Legendary	504	Prairie Cap (Common)	0.0180586912
+19	Fiercest Faction	Legendary	519	Crimson Headband (Common)	0.0180586912
+19	Fiercest Faction	Legendary	531	Consul Pauldrons (Common)	0.0180586912
+19	Fiercest Faction	Legendary	534	Divine Vambraces (Common)	0.0180586912
+19	Fiercest Faction	Legendary	540	Tachyon Scarf (Common)	0.0180586912
+19	Fiercest Faction	Legendary	576	Carbon Gauntlet (Common)	0.0180586912
+19	Fiercest Faction	Legendary	457	Consul Greaves (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	490	Abyss Masque (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	496	Survivor's Footgear (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	502	Beast-Hide Vest (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	505	Prairie Cap (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	520	Crimson Headband (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	532	Consul Pauldrons (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	535	Divine Vambraces (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	541	Tachyon Scarf (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	577	Carbon Gauntlet (Rare)	0.0180586912
+19	Fiercest Faction	Legendary	458	Consul Greaves (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	491	Abyss Masque (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	497	Survivor's Footgear (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	503	Beast-Hide Vest (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	506	Prairie Cap (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	521	Crimson Headband (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	533	Consul Pauldrons (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	536	Divine Vambraces (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	542	Tachyon Scarf (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	578	Carbon Gauntlet (Legendary)	0.0180586912
+19	Fiercest Faction	Legendary	471	Belemnite Bangle (Common)	0.009029346
+19	Fiercest Faction	Legendary	477	Fighter's Circlet (Common)	0.009029346
+19	Fiercest Faction	Legendary	522	Black Cube (Common)	0.009029346
+19	Fiercest Faction	Legendary	543	Rainbow Belt (Common)	0.009029346
+19	Fiercest Faction	Legendary	472	Belemnite Bangle (Rare)	0.009029346
+19	Fiercest Faction	Legendary	478	Fighter's Circlet (Rare)	0.009029346
+19	Fiercest Faction	Legendary	523	Black Cube (Rare)	0.009029346
+19	Fiercest Faction	Legendary	544	Rainbow Belt (Rare)	0.009029346
+19	Fiercest Faction	Legendary	473	Belemnite Bangle (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	479	Fighter's Circlet (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	524	Black Cube (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	545	Rainbow Belt (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	15353	Physical Defense Up VI	0.0022573364
+19	Fiercest Faction	Legendary	15354	Ether Defense Up VI	0.0022573364
+19	Fiercest Faction	Legendary	15061	Blade Combo Boost VI	0.0022573364
+19	Fiercest Faction	Legendary	15132	Ultimate Shield	0.0022573364
+19	Fiercest Faction	Legendary	15380	HP Attack Boost VI	0.0022573364
+19	Fiercest Faction	Legendary	15381	Break Resist VI	0.0022573364
+19	Fiercest Faction	Legendary	15388	Aggro Boost VI	0.0022573364
+19	Fiercest Faction	Legendary	15390	Arts Aggro Boost VI	0.0022573364
+19	Fiercest Faction	Legendary	15393	Damage Heal VI	0.0022573364
+19	Fiercest Faction	Legendary	15319	Fast Blade Switch VI	0.0022573364
+19	Fiercest Faction	Legendary	10052	Shining Star Chip	0.004514673
+19	Fiercest Faction	Legendary	10053	Moon Matter Chip	0.004514673
+19	Fiercest Faction	Legendary	10054	Sunlight Chip	0.004514673
+19	Fiercest Faction	Legendary	10058	Dilaton Chip	0.004514673
+19	Fiercest Faction	Legendary	10059	Preon Chip	0.004514673
+19	Fiercest Faction	Legendary	10060	Tachyon Chip	0.004514673
+19	Fiercest Faction	Legendary	15392	Movement Heal VI	0.004514673
+19	Fiercest Faction	Legendary	15393	Damage Heal VI	0.0022573364
+19	Fiercest Faction	Legendary	15399	Affinity MAX Atk VI	0.0022573364
+19	Fiercest Faction	Legendary	15400	Affinity MAX Evade VI	0.0022573364
+19	Fiercest Faction	Legendary	459	Infinity Greaves (Common)	0.009029346
+19	Fiercest Faction	Legendary	480	Ocean Earring (Common)	0.009029346
+19	Fiercest Faction	Legendary	483	Seven-Seas Earring (Common)	0.009029346
+19	Fiercest Faction	Legendary	516	Alexandrite (Common)	0.009029346
+19	Fiercest Faction	Legendary	546	Goliath Ring (Common)	0.009029346
+19	Fiercest Faction	Legendary	582	Master Scope (Common)	0.0180586912
+19	Fiercest Faction	Legendary	460	Infinity Greaves (Rare)	0.009029346
+19	Fiercest Faction	Legendary	481	Ocean Earring (Rare)	0.009029346
+19	Fiercest Faction	Legendary	484	Seven-Seas Earring (Rare)	0.009029346
+19	Fiercest Faction	Legendary	517	Alexandrite (Rare)	0.009029346
+19	Fiercest Faction	Legendary	547	Goliath Ring (Rare)	0.009029346
+19	Fiercest Faction	Legendary	583	Master Scope (Rare)	0.009029346
+19	Fiercest Faction	Legendary	461	Infinity Greaves (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	482	Ocean Earring (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	485	Seven-Seas Earring (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	518	Alexandrite (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	548	Goliath Ring (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	584	Master Scope (Legendary)	0.009029346
+19	Fiercest Faction	Legendary	25407	Ultimate Weaponry	0.009029346
+20	9th Imp. Armored Div.	Common	15356	Beast Hunter VI	0.008333334
+20	9th Imp. Armored Div.	Common	15357	Insect Hunter VI	0.008333334
+20	9th Imp. Armored Div.	Common	15358	Aerial Hunter VI	0.008333334
+20	9th Imp. Armored Div.	Common	15359	Aquatic Hunter VI	0.008333334
+20	9th Imp. Armored Div.	Common	15360	Humanoid Hunter VI	0.008333334
+20	9th Imp. Armored Div.	Common	15361	Machine Hunter VI	0.008333334
+20	9th Imp. Armored Div.	Common	15362	Titan Hunter VI	0.008333334
+20	9th Imp. Armored Div.	Common	15364	Ambush Boost VI	0.008333334
+20	9th Imp. Armored Div.	Common	15366	Indoor Attack Up VI	0.008333334
+20	9th Imp. Armored Div.	Common	15367	Outdoor Attack Up VI	0.008333334
+20	9th Imp. Armored Div.	Common	15378	Emergency Guard VI	0.008333334
+20	9th Imp. Armored Div.	Common	15383	Launch Resist VI	0.008333334
+20	9th Imp. Armored Div.	Common	15384	Smash Resist VI	0.008333334
+20	9th Imp. Armored Div.	Common	15386	Knockback Resist VI	0.008333334
+20	9th Imp. Armored Div.	Common	15394	Night Vision VI	0.008333334
+20	9th Imp. Armored Div.	Common	15395	Sunlight Eye VI	0.008333334
+20	9th Imp. Armored Div.	Common	15396	Reflect Damage Up VI	0.008333334
+20	9th Imp. Armored Div.	Common	15397	Opening Art VI	0.008333334
+20	9th Imp. Armored Div.	Common	15401	Specials Lv 1 Plus VI	0.008333334
+20	9th Imp. Armored Div.	Common	15402	Specials Lv 2 Plus VI	0.008333334
+20	9th Imp. Armored Div.	Common	15403	Specials Lv 3 Plus VI	0.008333334
+20	9th Imp. Armored Div.	Common	15404	Specials Lv 4 Plus VI	0.008333334
+20	9th Imp. Armored Div.	Common	10004	Silver Chip	0.008333334
+20	9th Imp. Armored Div.	Common	10008	Gold Chip	0.008333334
+20	9th Imp. Armored Div.	Common	10012	Horn Chip	0.008333334
+20	9th Imp. Armored Div.	Common	10016	Forest Chip	0.008333334
+20	9th Imp. Armored Div.	Common	10020	Fluorite Chip	0.008333334
+20	9th Imp. Armored Div.	Common	10024	Zircon Chip	0.008333334
+20	9th Imp. Armored Div.	Common	15352	Critical Up VI	0.008333334
+20	9th Imp. Armored Div.	Common	15355	Block Rate Up VI	0.008333334
+20	9th Imp. Armored Div.	Common	15363	Fusion Combo Up VI	0.008333334
+20	9th Imp. Armored Div.	Common	15366	Indoor Attack Up VI	0.008333334
+20	9th Imp. Armored Div.	Common	15367	Outdoor Attack Up VI	0.008333334
+20	9th Imp. Armored Div.	Common	15378	Emergency Guard VI	0.008333334
+20	9th Imp. Armored Div.	Common	15398	Affinity MAX Barrier VI	0.0166666675
+20	9th Imp. Armored Div.	Common	567	Saint's Necklace (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	568	Saint's Necklace (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	569	Saint's Necklace (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	465	Augmented Vision Kit (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	468	Charm Bangle (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	474	Seven-League Circlet (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	498	Twin Trunks Vest (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	507	Vivid Mitts (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	510	Dauntless Boots (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	513	Sunlight Choker (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	525	Staunch Boots (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	552	Enlightened Loincloth (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	555	Glamorous Swimsuit (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	558	Vanish Hood (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	561	Platinum Nopon Mask (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	573	Beatific Medal (Common)	0.0166666675
+20	9th Imp. Armored Div.	Common	466	Augmented Vision Kit (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	469	Charm Bangle (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	475	Seven-League Circlet (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	499	Twin Trunks Vest (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	508	Vivid Mitts (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	511	Dauntless Boots (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	514	Sunlight Choker (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	526	Staunch Boots (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	553	Enlightened Loincloth (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	556	Glamorous Swimsuit (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	559	Vanish Hood (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	562	Platinum Nopon Mask (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	574	Beatific Medal (Rare)	0.0166666675
+20	9th Imp. Armored Div.	Common	467	Augmented Vision Kit (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	470	Charm Bangle (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	476	Seven-League Circlet (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	500	Twin Trunks Vest (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	509	Vivid Mitts (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	512	Dauntless Boots (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	515	Sunlight Choker (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	527	Staunch Boots (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	554	Enlightened Loincloth (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	557	Glamorous Swimsuit (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	560	Vanish Hood (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	563	Platinum Nopon Mask (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Common	575	Beatific Medal (Legendary)	0.0166666675
+20	9th Imp. Armored Div.	Rare	15356	Beast Hunter VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15357	Insect Hunter VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15358	Aerial Hunter VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15359	Aquatic Hunter VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15360	Humanoid Hunter VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15361	Machine Hunter VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15362	Titan Hunter VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15364	Ambush Boost VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15366	Indoor Attack Up VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15367	Outdoor Attack Up VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15378	Emergency Guard VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15383	Launch Resist VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15384	Smash Resist VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15386	Knockback Resist VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15394	Night Vision VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15395	Sunlight Eye VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15396	Reflect Damage Up VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15397	Opening Art VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15401	Specials Lv 1 Plus VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15402	Specials Lv 2 Plus VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15403	Specials Lv 3 Plus VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15404	Specials Lv 4 Plus VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	10004	Silver Chip	0.00334448158
+20	9th Imp. Armored Div.	Rare	10008	Gold Chip	0.00334448158
+20	9th Imp. Armored Div.	Rare	10012	Horn Chip	0.00334448158
+20	9th Imp. Armored Div.	Rare	10016	Forest Chip	0.00334448158
+20	9th Imp. Armored Div.	Rare	10020	Fluorite Chip	0.00334448158
+20	9th Imp. Armored Div.	Rare	10024	Zircon Chip	0.00334448158
+20	9th Imp. Armored Div.	Rare	15352	Critical Up VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15355	Block Rate Up VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15363	Fusion Combo Up VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15366	Indoor Attack Up VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15367	Outdoor Attack Up VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15378	Emergency Guard VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	15398	Affinity MAX Barrier VI	0.00334448158
+20	9th Imp. Armored Div.	Rare	567	Saint's Necklace (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	568	Saint's Necklace (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	569	Saint's Necklace (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	465	Augmented Vision Kit (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	468	Charm Bangle (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	474	Seven-League Circlet (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	498	Twin Trunks Vest (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	507	Vivid Mitts (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	510	Dauntless Boots (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	513	Sunlight Choker (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	525	Staunch Boots (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	552	Enlightened Loincloth (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	555	Glamorous Swimsuit (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	558	Vanish Hood (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	561	Platinum Nopon Mask (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	573	Beatific Medal (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	466	Augmented Vision Kit (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	469	Charm Bangle (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	475	Seven-League Circlet (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	499	Twin Trunks Vest (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	508	Vivid Mitts (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	511	Dauntless Boots (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	514	Sunlight Choker (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	526	Staunch Boots (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	553	Enlightened Loincloth (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	556	Glamorous Swimsuit (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	559	Vanish Hood (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	562	Platinum Nopon Mask (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	574	Beatific Medal (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	467	Augmented Vision Kit (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	470	Charm Bangle (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	476	Seven-League Circlet (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	500	Twin Trunks Vest (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	509	Vivid Mitts (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	512	Dauntless Boots (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	515	Sunlight Choker (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	527	Staunch Boots (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	554	Enlightened Loincloth (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	557	Glamorous Swimsuit (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	560	Vanish Hood (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	563	Platinum Nopon Mask (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	575	Beatific Medal (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	15365	Aggro Attack Up VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15376	Evasion Focus VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15379	Endurance VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15382	Topple Resist VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15385	Blowdown Resist VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15387	Auto-Attack Stealth VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15389	Arts Stealth VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15398	Affinity MAX Barrier VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15405	Affinity MAX Acc VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15406	Jamming VI	0.006688963
+20	9th Imp. Armored Div.	Rare	10028	Shaft Chip	0.006688963
+20	9th Imp. Armored Div.	Rare	10032	Booster Chip	0.006688963
+20	9th Imp. Armored Div.	Rare	10036	Hexagon Chip	0.006688963
+20	9th Imp. Armored Div.	Rare	10040	Spiral Chip	0.006688963
+20	9th Imp. Armored Div.	Rare	10044	Winonaite Chip	0.006688963
+20	9th Imp. Armored Div.	Rare	10048	Angrite Chip	0.006688963
+20	9th Imp. Armored Div.	Rare	15377	Swift Evasion VI	0.006688963
+20	9th Imp. Armored Div.	Rare	15391	Arts Heal VI	0.006688963
+20	9th Imp. Armored Div.	Rare	456	Consul Greaves (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	489	Abyss Masque (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	495	Survivor's Footgear (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	501	Beast-Hide Vest (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	504	Prairie Cap (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	519	Crimson Headband (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	531	Consul Pauldrons (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	534	Divine Vambraces (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	540	Tachyon Scarf (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	576	Carbon Gauntlet (Common)	0.0133779263
+20	9th Imp. Armored Div.	Rare	457	Consul Greaves (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	490	Abyss Masque (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	496	Survivor's Footgear (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	502	Beast-Hide Vest (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	505	Prairie Cap (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	520	Crimson Headband (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	532	Consul Pauldrons (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	535	Divine Vambraces (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	541	Tachyon Scarf (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	577	Carbon Gauntlet (Rare)	0.0133779263
+20	9th Imp. Armored Div.	Rare	458	Consul Greaves (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	491	Abyss Masque (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	497	Survivor's Footgear (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	503	Beast-Hide Vest (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	506	Prairie Cap (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	521	Crimson Headband (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	533	Consul Pauldrons (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	536	Divine Vambraces (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	542	Tachyon Scarf (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	578	Carbon Gauntlet (Legendary)	0.0133779263
+20	9th Imp. Armored Div.	Rare	471	Belemnite Bangle (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	477	Fighter's Circlet (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	522	Black Cube (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	543	Rainbow Belt (Common)	0.006688963
+20	9th Imp. Armored Div.	Rare	472	Belemnite Bangle (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	478	Fighter's Circlet (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	523	Black Cube (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	544	Rainbow Belt (Rare)	0.006688963
+20	9th Imp. Armored Div.	Rare	473	Belemnite Bangle (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	479	Fighter's Circlet (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	524	Black Cube (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Rare	545	Rainbow Belt (Legendary)	0.006688963
+20	9th Imp. Armored Div.	Legendary	15365	Aggro Attack Up VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15376	Evasion Focus VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15379	Endurance VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15382	Topple Resist VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15385	Blowdown Resist VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15387	Auto-Attack Stealth VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15389	Arts Stealth VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15398	Affinity MAX Barrier VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15405	Affinity MAX Acc VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15406	Jamming VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	10028	Shaft Chip	0.008196721
+20	9th Imp. Armored Div.	Legendary	10032	Booster Chip	0.008196721
+20	9th Imp. Armored Div.	Legendary	10036	Hexagon Chip	0.008196721
+20	9th Imp. Armored Div.	Legendary	10040	Spiral Chip	0.008196721
+20	9th Imp. Armored Div.	Legendary	10044	Winonaite Chip	0.008196721
+20	9th Imp. Armored Div.	Legendary	10048	Angrite Chip	0.008196721
+20	9th Imp. Armored Div.	Legendary	15377	Swift Evasion VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	15391	Arts Heal VI	0.008196721
+20	9th Imp. Armored Div.	Legendary	456	Consul Greaves (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	489	Abyss Masque (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	495	Survivor's Footgear (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	501	Beast-Hide Vest (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	504	Prairie Cap (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	519	Crimson Headband (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	531	Consul Pauldrons (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	534	Divine Vambraces (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	540	Tachyon Scarf (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	576	Carbon Gauntlet (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	457	Consul Greaves (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	490	Abyss Masque (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	496	Survivor's Footgear (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	502	Beast-Hide Vest (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	505	Prairie Cap (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	520	Crimson Headband (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	532	Consul Pauldrons (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	535	Divine Vambraces (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	541	Tachyon Scarf (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	577	Carbon Gauntlet (Rare)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	458	Consul Greaves (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	491	Abyss Masque (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	497	Survivor's Footgear (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	503	Beast-Hide Vest (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	506	Prairie Cap (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	521	Crimson Headband (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	533	Consul Pauldrons (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	536	Divine Vambraces (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	542	Tachyon Scarf (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	578	Carbon Gauntlet (Legendary)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	471	Belemnite Bangle (Common)	0.008196721
+20	9th Imp. Armored Div.	Legendary	477	Fighter's Circlet (Common)	0.008196721
+20	9th Imp. Armored Div.	Legendary	522	Black Cube (Common)	0.008196721
+20	9th Imp. Armored Div.	Legendary	543	Rainbow Belt (Common)	0.008196721
+20	9th Imp. Armored Div.	Legendary	472	Belemnite Bangle (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	478	Fighter's Circlet (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	523	Black Cube (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	544	Rainbow Belt (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	473	Belemnite Bangle (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	479	Fighter's Circlet (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	524	Black Cube (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	545	Rainbow Belt (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	15353	Physical Defense Up VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15354	Ether Defense Up VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15061	Blade Combo Boost VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15132	Ultimate Shield	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15380	HP Attack Boost VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15381	Break Resist VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15388	Aggro Boost VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15390	Arts Aggro Boost VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15393	Damage Heal VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15319	Fast Blade Switch VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	10052	Shining Star Chip	0.00409836043
+20	9th Imp. Armored Div.	Legendary	10053	Moon Matter Chip	0.00409836043
+20	9th Imp. Armored Div.	Legendary	10054	Sunlight Chip	0.00409836043
+20	9th Imp. Armored Div.	Legendary	10058	Dilaton Chip	0.00409836043
+20	9th Imp. Armored Div.	Legendary	10059	Preon Chip	0.00409836043
+20	9th Imp. Armored Div.	Legendary	10060	Tachyon Chip	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15392	Movement Heal VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15393	Damage Heal VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15399	Affinity MAX Atk VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	15400	Affinity MAX Evade VI	0.00409836043
+20	9th Imp. Armored Div.	Legendary	459	Infinity Greaves (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	480	Ocean Earring (Common)	0.008196721
+20	9th Imp. Armored Div.	Legendary	483	Seven-Seas Earring (Common)	0.0163934417
+20	9th Imp. Armored Div.	Legendary	516	Alexandrite (Common)	0.008196721
+20	9th Imp. Armored Div.	Legendary	546	Goliath Ring (Common)	0.008196721
+20	9th Imp. Armored Div.	Legendary	582	Master Scope (Common)	0.008196721
+20	9th Imp. Armored Div.	Legendary	460	Infinity Greaves (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	481	Ocean Earring (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	484	Seven-Seas Earring (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	517	Alexandrite (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	547	Goliath Ring (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	583	Master Scope (Rare)	0.008196721
+20	9th Imp. Armored Div.	Legendary	461	Infinity Greaves (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	482	Ocean Earring (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	485	Seven-Seas Earring (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	518	Alexandrite (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	548	Goliath Ring (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	584	Master Scope (Legendary)	0.008196721
+20	9th Imp. Armored Div.	Legendary	25407	Ultimate Weaponry	0.0163934417
+21	Call the Exterminators	Common	15030	Insect Hunter V	0.01710864
+21	Call the Exterminators	Common	15040	Aquatic Hunter V	0.01710864
+21	Call the Exterminators	Common	15025	Beast Hunter V	0.01710864
+21	Call the Exterminators	Common	15035	Aerial Hunter V	0.01710864
+21	Call the Exterminators	Common	15045	Humanoid Hunter V	0.01710864
+21	Call the Exterminators	Common	15055	Titan Hunter V	0.01710864
+21	Call the Exterminators	Common	15050	Machine Hunter V	0.01710864
+21	Call the Exterminators	Common	15071	Ambush Boost V	0.01710864
+21	Call the Exterminators	Common	15081	Aggro Attack Up V	0.01710864
+21	Call the Exterminators	Common	15086	Indoor Attack Up V	0.01710864
+21	Call the Exterminators	Common	15096	Fire Def Up V	0.01710864
+21	Call the Exterminators	Common	15101	Water Def Up V	0.01710864
+21	Call the Exterminators	Common	15106	Earth Def Up V	0.01710864
+21	Call the Exterminators	Common	15111	Wind Def Up V	0.01710864
+21	Call the Exterminators	Common	15116	Electric Def Up V	0.01710864
+21	Call the Exterminators	Common	15121	Ice Def Up V	0.01710864
+21	Call the Exterminators	Common	15126	Dark Def Up V	0.01710864
+21	Call the Exterminators	Common	15131	Light Def Up V	0.01710864
+21	Call the Exterminators	Common	15163	Emergency Guard V	0.01710864
+21	Call the Exterminators	Common	15173	HP Attack Boost V	0.01710864
+21	Call the Exterminators	Common	15178	Spike Defense V	0.01710864
+21	Call the Exterminators	Common	15188	Topple Resist V	0.01710864
+21	Call the Exterminators	Common	15193	Launch Resist V	0.01710864
+21	Call the Exterminators	Common	15203	Blowdown Resist V	0.01710864
+21	Call the Exterminators	Common	15218	Shackle Blade Resist V	0.01710864
+21	Call the Exterminators	Common	15223	Auto-Attack Stealth V	0.01710864
+21	Call the Exterminators	Common	15228	Aggro Boost V	0.01710864
+21	Call the Exterminators	Common	15243	Arts Heal V	0.01710864
+21	Call the Exterminators	Common	15258	Night Vision V	0.01710864
+21	Call the Exterminators	Common	15268	Reflect Damage Up V	0.01710864
+21	Call the Exterminators	Common	15278	Opening Art V	0.01710864
+21	Call the Exterminators	Common	15283	Telepathy V	0.01710864
+21	Call the Exterminators	Common	15293	Affinity MAX Barrier V	0.01710864
+21	Call the Exterminators	Common	15298	Affinity MAX Atk V	0.01710864
+21	Call the Exterminators	Common	15313	Shoulder to Shoulder V	0.01710864
+21	Call the Exterminators	Common	15324	Specials Lv 1 Plus V	0.01710864
+21	Call the Exterminators	Common	15329	Specials Lv 2 Plus V	0.01710864
+21	Call the Exterminators	Common	15349	Jamming V	0.01710864
+21	Call the Exterminators	Common	333	Avant-Garde Medal (Legendary)	0.00427716
+21	Call the Exterminators	Common	345	Ancient Banner (Legendary)	0.00427716
+21	Call the Exterminators	Common	354	Bloody Orb (Legendary)	0.00427716
+21	Call the Exterminators	Common	405	Critical Symbol (Legendary)	0.00427716
+21	Call the Exterminators	Common	116	Resurrection Symbol (Legendary)	0.00427716
+21	Call the Exterminators	Common	408	Sword Attachment (Legendary)	0.00427716
+21	Call the Exterminators	Common	409	Scimitar Attachment (Legendary)	0.00427716
+21	Call the Exterminators	Common	416	Scythe Attachment (Legendary)	0.00427716
+21	Call the Exterminators	Common	431	Rebirth Amulet (Legendary)	0.00427716
+21	Call the Exterminators	Common	432	Beta Scope (Legendary)	0.00427716
+21	Call the Exterminators	Common	10046	Howardite Chip	0.00855432
+21	Call the Exterminators	Common	10047	Aubrite Chip	0.00855432
+21	Call the Exterminators	Common	10050	Axion Chip	0.00855432
+21	Call the Exterminators	Common	10051	Mirror Matter Chip	0.00855432
+21	Call the Exterminators	Common	15364	Ambush Boost VI	0.01710864
+21	Call the Exterminators	Common	15383	Launch Resist VI	0.02566296
+21	Call the Exterminators	Common	15384	Smash Resist VI	0.02566296
+21	Call the Exterminators	Common	15385	Blowdown Resist VI	0.02566296
+21	Call the Exterminators	Common	15386	Knockback Resist VI	0.02566296
+21	Call the Exterminators	Common	15396	Reflect Damage Up VI	0.02566296
+21	Call the Exterminators	Common	15397	Opening Art VI	0.02566296
+21	Call the Exterminators	Common	528	War God Banner (Common)	0.005988024
+21	Call the Exterminators	Common	537	Demon Orb (Common)	0.005988024
+21	Call the Exterminators	Common	549	Violent Stone (Common)	0.005988024
+21	Call the Exterminators	Common	564	Gargantuan Feather (Common)	0.005988024
+21	Call the Exterminators	Common	579	Noise Dampener (Common)	0.005988024
+21	Call the Exterminators	Common	529	War God Banner (Rare)	0.005988024
+21	Call the Exterminators	Common	538	Demon Orb (Rare)	0.005988024
+21	Call the Exterminators	Common	550	Violent Stone (Rare)	0.005988024
+21	Call the Exterminators	Common	565	Gargantuan Feather (Rare)	0.005988024
+21	Call the Exterminators	Common	580	Noise Dampener (Rare)	0.005988024
+21	Call the Exterminators	Common	530	War God Banner (Legendary)	0.005988024
+21	Call the Exterminators	Common	539	Demon Orb (Legendary)	0.005988024
+21	Call the Exterminators	Common	551	Violent Stone (Legendary)	0.005988024
+21	Call the Exterminators	Common	566	Gargantuan Feather (Legendary)	0.005988024
+21	Call the Exterminators	Common	581	Noise Dampener (Legendary)	0.005988024
+21	Call the Exterminators	Common	488	Terror Masque (Legendary)	0.005988024
+21	Call the Exterminators	Common	494	Envoy's Footgear (Legendary)	0.005988024
+21	Call the Exterminators	Rare	15030	Insect Hunter V	0.009199632
+21	Call the Exterminators	Rare	15040	Aquatic Hunter V	0.009199632
+21	Call the Exterminators	Rare	15025	Beast Hunter V	0.009199632
+21	Call the Exterminators	Rare	15035	Aerial Hunter V	0.009199632
+21	Call the Exterminators	Rare	15045	Humanoid Hunter V	0.009199632
+21	Call the Exterminators	Rare	15055	Titan Hunter V	0.009199632
+21	Call the Exterminators	Rare	15050	Machine Hunter V	0.009199632
+21	Call the Exterminators	Rare	15071	Ambush Boost V	0.009199632
+21	Call the Exterminators	Rare	15081	Aggro Attack Up V	0.009199632
+21	Call the Exterminators	Rare	15086	Indoor Attack Up V	0.009199632
+21	Call the Exterminators	Rare	15096	Fire Def Up V	0.009199632
+21	Call the Exterminators	Rare	15101	Water Def Up V	0.009199632
+21	Call the Exterminators	Rare	15106	Earth Def Up V	0.009199632
+21	Call the Exterminators	Rare	15111	Wind Def Up V	0.009199632
+21	Call the Exterminators	Rare	15116	Electric Def Up V	0.009199632
+21	Call the Exterminators	Rare	15121	Ice Def Up V	0.009199632
+21	Call the Exterminators	Rare	15126	Dark Def Up V	0.009199632
+21	Call the Exterminators	Rare	15131	Light Def Up V	0.009199632
+21	Call the Exterminators	Rare	15163	Emergency Guard V	0.009199632
+21	Call the Exterminators	Rare	15173	HP Attack Boost V	0.009199632
+21	Call the Exterminators	Rare	15178	Spike Defense V	0.009199632
+21	Call the Exterminators	Rare	15188	Topple Resist V	0.009199632
+21	Call the Exterminators	Rare	15193	Launch Resist V	0.009199632
+21	Call the Exterminators	Rare	15203	Blowdown Resist V	0.009199632
+21	Call the Exterminators	Rare	15218	Shackle Blade Resist V	0.009199632
+21	Call the Exterminators	Rare	15223	Auto-Attack Stealth V	0.009199632
+21	Call the Exterminators	Rare	15228	Aggro Boost V	0.009199632
+21	Call the Exterminators	Rare	15243	Arts Heal V	0.009199632
+21	Call the Exterminators	Rare	15258	Night Vision V	0.009199632
+21	Call the Exterminators	Rare	15268	Reflect Damage Up V	0.009199632
+21	Call the Exterminators	Rare	15278	Opening Art V	0.009199632
+21	Call the Exterminators	Rare	15283	Telepathy V	0.009199632
+21	Call the Exterminators	Rare	15293	Affinity MAX Barrier V	0.009199632
+21	Call the Exterminators	Rare	15298	Affinity MAX Atk V	0.009199632
+21	Call the Exterminators	Rare	15313	Shoulder to Shoulder V	0.009199632
+21	Call the Exterminators	Rare	15324	Specials Lv 1 Plus V	0.009199632
+21	Call the Exterminators	Rare	15329	Specials Lv 2 Plus V	0.009199632
+21	Call the Exterminators	Rare	15349	Jamming V	0.009199632
+21	Call the Exterminators	Rare	333	Avant-Garde Medal (Legendary)	0.002299908
+21	Call the Exterminators	Rare	345	Ancient Banner (Legendary)	0.002299908
+21	Call the Exterminators	Rare	354	Bloody Orb (Legendary)	0.002299908
+21	Call the Exterminators	Rare	405	Critical Symbol (Legendary)	0.002299908
+21	Call the Exterminators	Rare	116	Resurrection Symbol (Legendary)	0.002299908
+21	Call the Exterminators	Rare	408	Sword Attachment (Legendary)	0.002299908
+21	Call the Exterminators	Rare	409	Scimitar Attachment (Legendary)	0.002299908
+21	Call the Exterminators	Rare	416	Scythe Attachment (Legendary)	0.002299908
+21	Call the Exterminators	Rare	431	Rebirth Amulet (Legendary)	0.002299908
+21	Call the Exterminators	Rare	432	Beta Scope (Legendary)	0.002299908
+21	Call the Exterminators	Rare	10046	Howardite Chip	0.004599816
+21	Call the Exterminators	Rare	10047	Aubrite Chip	0.004599816
+21	Call the Exterminators	Rare	10050	Axion Chip	0.004599816
+21	Call the Exterminators	Rare	10051	Mirror Matter Chip	0.004599816
+21	Call the Exterminators	Rare	15364	Ambush Boost VI	0.009199632
+21	Call the Exterminators	Rare	15383	Launch Resist VI	0.0137994476
+21	Call the Exterminators	Rare	15384	Smash Resist VI	0.0137994476
+21	Call the Exterminators	Rare	15385	Blowdown Resist VI	0.0137994476
+21	Call the Exterminators	Rare	15386	Knockback Resist VI	0.0137994476
+21	Call the Exterminators	Rare	15396	Reflect Damage Up VI	0.0137994476
+21	Call the Exterminators	Rare	15397	Opening Art VI	0.0137994476
+21	Call the Exterminators	Rare	528	War God Banner (Common)	0.00321987132
+21	Call the Exterminators	Rare	537	Demon Orb (Common)	0.00321987132
+21	Call the Exterminators	Rare	549	Violent Stone (Common)	0.00321987132
+21	Call the Exterminators	Rare	564	Gargantuan Feather (Common)	0.00321987132
+21	Call the Exterminators	Rare	579	Noise Dampener (Common)	0.00321987132
+21	Call the Exterminators	Rare	529	War God Banner (Rare)	0.00321987132
+21	Call the Exterminators	Rare	538	Demon Orb (Rare)	0.00321987132
+21	Call the Exterminators	Rare	550	Violent Stone (Rare)	0.00321987132
+21	Call the Exterminators	Rare	565	Gargantuan Feather (Rare)	0.00321987132
+21	Call the Exterminators	Rare	580	Noise Dampener (Rare)	0.00321987132
+21	Call the Exterminators	Rare	530	War God Banner (Legendary)	0.00321987132
+21	Call the Exterminators	Rare	539	Demon Orb (Legendary)	0.00321987132
+21	Call the Exterminators	Rare	551	Violent Stone (Legendary)	0.00321987132
+21	Call the Exterminators	Rare	566	Gargantuan Feather (Legendary)	0.00321987132
+21	Call the Exterminators	Rare	581	Noise Dampener (Legendary)	0.00321987132
+21	Call the Exterminators	Rare	488	Terror Masque (Legendary)	0.00321987132
+21	Call the Exterminators	Rare	494	Envoy's Footgear (Legendary)	0.00321987132
+21	Call the Exterminators	Rare	15010	Physical Defense Up V	0.009199632
+21	Call the Exterminators	Rare	15020	Block Rate Up V	0.009199632
+21	Call the Exterminators	Rare	15066	Fusion Combo Up V	0.009199632
+21	Call the Exterminators	Rare	15076	Reflect Immunity	0.009199632
+21	Call the Exterminators	Rare	15091	Outdoor Attack Up V	0.009199632
+21	Call the Exterminators	Rare	15153	Evasion Focus V	0.009199632
+21	Call the Exterminators	Rare	15183	Break Resist V	0.009199632
+21	Call the Exterminators	Rare	15198	Smash Resist V	0.009199632
+21	Call the Exterminators	Rare	15208	Knockback Resist V	0.009199632
+21	Call the Exterminators	Rare	15238	Arts Aggro Boost V	0.009199632
+21	Call the Exterminators	Rare	15263	Sunlight Eye V	0.009199632
+21	Call the Exterminators	Rare	15273	Range Boost Up V	0.009199632
+21	Call the Exterminators	Rare	15288	Helping Hand V	0.009199632
+21	Call the Exterminators	Rare	15308	Hunter's Chemistry V	0.009199632
+21	Call the Exterminators	Rare	15318	Fast Blade Switch V	0.009199632
+21	Call the Exterminators	Rare	15334	Specials Lv 3 Plus V	0.009199632
+21	Call the Exterminators	Rare	15339	Specials Lv 4 Plus V	0.009199632
+21	Call the Exterminators	Rare	15344	Affinity MAX Acc V	0.009199632
+21	Call the Exterminators	Rare	300	Titanium Vest (Legendary)	0.002299908
+21	Call the Exterminators	Rare	303	Ceramic Belt (Legendary)	0.002299908
+21	Call the Exterminators	Rare	306	Fiber Hat (Legendary)	0.002299908
+21	Call the Exterminators	Rare	309	Carbon Gloves (Legendary)	0.002299908
+21	Call the Exterminators	Rare	312	Ester Shoes (Legendary)	0.002299908
+21	Call the Exterminators	Rare	315	Comet Choker (Legendary)	0.002299908
+21	Call the Exterminators	Rare	336	Optical Headband (Legendary)	0.002299908
+21	Call the Exterminators	Rare	342	Graphite Greaves (Legendary)	0.002299908
+21	Call the Exterminators	Rare	348	Jet Pauldrons (Legendary)	0.002299908
+21	Call the Exterminators	Rare	351	Hero Vambraces (Legendary)	0.002299908
+21	Call the Exterminators	Rare	357	Quantum Scarf (Legendary)	0.002299908
+21	Call the Exterminators	Rare	383	World Tree Ward (Legendary)	0.002299908
+21	Call the Exterminators	Rare	389	Holy Necklace (Legendary)	0.002299908
+21	Call the Exterminators	Rare	393	Round Table Medal (Legendary)	0.002299908
+21	Call the Exterminators	Rare	396	Nano-Metal Gauntlet (Legendary)	0.002299908
+21	Call the Exterminators	Rare	399	Hi-Tech Eyepatch (Legendary)	0.002299908
+21	Call the Exterminators	Rare	10056	Positron Chip	0.004599816
+21	Call the Exterminators	Rare	15356	Beast Hunter VI	0.009199632
+21	Call the Exterminators	Rare	15357	Insect Hunter VI	0.009199632
+21	Call the Exterminators	Rare	15358	Aerial Hunter VI	0.009199632
+21	Call the Exterminators	Rare	15359	Aquatic Hunter VI	0.009199632
+21	Call the Exterminators	Rare	15360	Humanoid Hunter VI	0.009199632
+21	Call the Exterminators	Rare	15361	Machine Hunter VI	0.009199632
+21	Call the Exterminators	Rare	15362	Titan Hunter VI	0.009199632
+21	Call the Exterminators	Rare	15382	Topple Resist VI	0.009199632
+21	Call the Exterminators	Rare	15387	Auto-Attack Stealth VI	0.009199632
+21	Call the Exterminators	Rare	15388	Aggro Boost VI	0.009199632
+21	Call the Exterminators	Rare	15389	Arts Stealth VI	0.009199632
+21	Call the Exterminators	Rare	15390	Arts Aggro Boost VI	0.009199632
+21	Call the Exterminators	Rare	15394	Night Vision VI	0.009199632
+21	Call the Exterminators	Rare	15395	Sunlight Eye VI	0.009199632
+21	Call the Exterminators	Rare	15401	Specials Lv 1 Plus VI	0.009199632
+21	Call the Exterminators	Rare	15402	Specials Lv 2 Plus VI	0.009199632
+21	Call the Exterminators	Rare	15403	Specials Lv 3 Plus VI	0.009199632
+21	Call the Exterminators	Rare	15404	Specials Lv 4 Plus VI	0.009199632
+21	Call the Exterminators	Rare	465	Augmented Vision Kit (Common)	0.002299908
+21	Call the Exterminators	Rare	468	Charm Bangle (Common)	0.002299908
+21	Call the Exterminators	Rare	474	Seven-League Circlet (Common)	0.002299908
+21	Call the Exterminators	Rare	498	Twin Trunks Vest (Common)	0.002299908
+21	Call the Exterminators	Rare	507	Vivid Mitts (Common)	0.002299908
+21	Call the Exterminators	Rare	510	Dauntless Boots (Common)	0.002299908
+21	Call the Exterminators	Rare	513	Sunlight Choker (Common)	0.002299908
+21	Call the Exterminators	Rare	525	Staunch Boots (Common)	0.002299908
+21	Call the Exterminators	Rare	552	Enlightened Loincloth (Common)	0.002299908
+21	Call the Exterminators	Rare	555	Glamorous Swimsuit (Common)	0.002299908
+21	Call the Exterminators	Rare	558	Vanish Hood (Common)	0.002299908
+21	Call the Exterminators	Rare	561	Platinum Nopon Mask (Common)	0.002299908
+21	Call the Exterminators	Rare	573	Beatific Medal (Common)	0.002299908
+21	Call the Exterminators	Rare	466	Augmented Vision Kit (Rare)	0.002299908
+21	Call the Exterminators	Rare	469	Charm Bangle (Rare)	0.002299908
+21	Call the Exterminators	Rare	475	Seven-League Circlet (Rare)	0.002299908
+21	Call the Exterminators	Rare	499	Twin Trunks Vest (Rare)	0.002299908
+21	Call the Exterminators	Rare	508	Vivid Mitts (Rare)	0.002299908
+21	Call the Exterminators	Rare	511	Dauntless Boots (Rare)	0.002299908
+21	Call the Exterminators	Rare	514	Sunlight Choker (Rare)	0.002299908
+21	Call the Exterminators	Rare	526	Staunch Boots (Rare)	0.002299908
+21	Call the Exterminators	Rare	553	Enlightened Loincloth (Rare)	0.002299908
+21	Call the Exterminators	Rare	556	Glamorous Swimsuit (Rare)	0.002299908
+21	Call the Exterminators	Rare	559	Vanish Hood (Rare)	0.002299908
+21	Call the Exterminators	Rare	562	Platinum Nopon Mask (Rare)	0.002299908
+21	Call the Exterminators	Rare	574	Beatific Medal (Rare)	0.002299908
+21	Call the Exterminators	Rare	467	Augmented Vision Kit (Legendary)	0.002299908
+21	Call the Exterminators	Rare	470	Charm Bangle (Legendary)	0.002299908
+21	Call the Exterminators	Rare	476	Seven-League Circlet (Legendary)	0.002299908
+21	Call the Exterminators	Rare	500	Twin Trunks Vest (Legendary)	0.002299908
+21	Call the Exterminators	Rare	509	Vivid Mitts (Legendary)	0.002299908
+21	Call the Exterminators	Rare	512	Dauntless Boots (Legendary)	0.002299908
+21	Call the Exterminators	Rare	515	Sunlight Choker (Legendary)	0.002299908
+21	Call the Exterminators	Rare	527	Staunch Boots (Legendary)	0.002299908
+21	Call the Exterminators	Rare	554	Enlightened Loincloth (Legendary)	0.002299908
+21	Call the Exterminators	Rare	557	Glamorous Swimsuit (Legendary)	0.002299908
+21	Call the Exterminators	Rare	560	Vanish Hood (Legendary)	0.002299908
+21	Call the Exterminators	Rare	563	Platinum Nopon Mask (Legendary)	0.002299908
+21	Call the Exterminators	Rare	575	Beatific Medal (Legendary)	0.002299908
+21	Call the Exterminators	Legendary	15010	Physical Defense Up V	0.0118694361
+21	Call the Exterminators	Legendary	15020	Block Rate Up V	0.0118694361
+21	Call the Exterminators	Legendary	15066	Fusion Combo Up V	0.0118694361
+21	Call the Exterminators	Legendary	15076	Reflect Immunity	0.0118694361
+21	Call the Exterminators	Legendary	15091	Outdoor Attack Up V	0.0118694361
+21	Call the Exterminators	Legendary	15153	Evasion Focus V	0.0118694361
+21	Call the Exterminators	Legendary	15183	Break Resist V	0.0118694361
+21	Call the Exterminators	Legendary	15198	Smash Resist V	0.0118694361
+21	Call the Exterminators	Legendary	15208	Knockback Resist V	0.0118694361
+21	Call the Exterminators	Legendary	15238	Arts Aggro Boost V	0.0118694361
+21	Call the Exterminators	Legendary	15263	Sunlight Eye V	0.0118694361
+21	Call the Exterminators	Legendary	15273	Range Boost Up V	0.0118694361
+21	Call the Exterminators	Legendary	15288	Helping Hand V	0.0118694361
+21	Call the Exterminators	Legendary	15308	Hunter's Chemistry V	0.0118694361
+21	Call the Exterminators	Legendary	15318	Fast Blade Switch V	0.0118694361
+21	Call the Exterminators	Legendary	15334	Specials Lv 3 Plus V	0.0118694361
+21	Call the Exterminators	Legendary	15339	Specials Lv 4 Plus V	0.0118694361
+21	Call the Exterminators	Legendary	15344	Affinity MAX Acc V	0.0118694361
+21	Call the Exterminators	Legendary	300	Titanium Vest (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	303	Ceramic Belt (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	306	Fiber Hat (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	309	Carbon Gloves (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	312	Ester Shoes (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	315	Comet Choker (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	336	Optical Headband (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	342	Graphite Greaves (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	348	Jet Pauldrons (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	351	Hero Vambraces (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	357	Quantum Scarf (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	383	World Tree Ward (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	389	Holy Necklace (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	393	Round Table Medal (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	10056	Positron Chip	0.005934718
+21	Call the Exterminators	Legendary	15356	Beast Hunter VI	0.0118694361
+21	Call the Exterminators	Legendary	15357	Insect Hunter VI	0.0118694361
+21	Call the Exterminators	Legendary	15358	Aerial Hunter VI	0.0118694361
+21	Call the Exterminators	Legendary	15359	Aquatic Hunter VI	0.0118694361
+21	Call the Exterminators	Legendary	15360	Humanoid Hunter VI	0.0118694361
+21	Call the Exterminators	Legendary	15361	Machine Hunter VI	0.0118694361
+21	Call the Exterminators	Legendary	15362	Titan Hunter VI	0.0118694361
+21	Call the Exterminators	Legendary	15382	Topple Resist VI	0.0118694361
+21	Call the Exterminators	Legendary	15387	Auto-Attack Stealth VI	0.0118694361
+21	Call the Exterminators	Legendary	15388	Aggro Boost VI	0.0118694361
+21	Call the Exterminators	Legendary	15389	Arts Stealth VI	0.0118694361
+21	Call the Exterminators	Legendary	15390	Arts Aggro Boost VI	0.0118694361
+21	Call the Exterminators	Legendary	15394	Night Vision VI	0.0118694361
+21	Call the Exterminators	Legendary	15395	Sunlight Eye VI	0.0118694361
+21	Call the Exterminators	Legendary	15401	Specials Lv 1 Plus VI	0.0118694361
+21	Call the Exterminators	Legendary	15402	Specials Lv 2 Plus VI	0.0118694361
+21	Call the Exterminators	Legendary	15403	Specials Lv 3 Plus VI	0.0118694361
+21	Call the Exterminators	Legendary	15404	Specials Lv 4 Plus VI	0.0118694361
+21	Call the Exterminators	Legendary	465	Augmented Vision Kit (Common)	0.002967359
+21	Call the Exterminators	Legendary	468	Charm Bangle (Common)	0.002967359
+21	Call the Exterminators	Legendary	474	Seven-League Circlet (Common)	0.002967359
+21	Call the Exterminators	Legendary	498	Twin Trunks Vest (Common)	0.002967359
+21	Call the Exterminators	Legendary	507	Vivid Mitts (Common)	0.002967359
+21	Call the Exterminators	Legendary	510	Dauntless Boots (Common)	0.002967359
+21	Call the Exterminators	Legendary	513	Sunlight Choker (Common)	0.002967359
+21	Call the Exterminators	Legendary	525	Staunch Boots (Common)	0.002967359
+21	Call the Exterminators	Legendary	552	Enlightened Loincloth (Common)	0.002967359
+21	Call the Exterminators	Legendary	555	Glamorous Swimsuit (Common)	0.002967359
+21	Call the Exterminators	Legendary	558	Vanish Hood (Common)	0.002967359
+21	Call the Exterminators	Legendary	561	Platinum Nopon Mask (Common)	0.002967359
+21	Call the Exterminators	Legendary	573	Beatific Medal (Common)	0.002967359
+21	Call the Exterminators	Legendary	466	Augmented Vision Kit (Rare)	0.002967359
+21	Call the Exterminators	Legendary	469	Charm Bangle (Rare)	0.002967359
+21	Call the Exterminators	Legendary	475	Seven-League Circlet (Rare)	0.002967359
+21	Call the Exterminators	Legendary	499	Twin Trunks Vest (Rare)	0.002967359
+21	Call the Exterminators	Legendary	508	Vivid Mitts (Rare)	0.002967359
+21	Call the Exterminators	Legendary	511	Dauntless Boots (Rare)	0.002967359
+21	Call the Exterminators	Legendary	514	Sunlight Choker (Rare)	0.002967359
+21	Call the Exterminators	Legendary	526	Staunch Boots (Rare)	0.002967359
+21	Call the Exterminators	Legendary	553	Enlightened Loincloth (Rare)	0.002967359
+21	Call the Exterminators	Legendary	556	Glamorous Swimsuit (Rare)	0.002967359
+21	Call the Exterminators	Legendary	559	Vanish Hood (Rare)	0.002967359
+21	Call the Exterminators	Legendary	562	Platinum Nopon Mask (Rare)	0.002967359
+21	Call the Exterminators	Legendary	574	Beatific Medal (Rare)	0.002967359
+21	Call the Exterminators	Legendary	467	Augmented Vision Kit (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	470	Charm Bangle (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	476	Seven-League Circlet (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	500	Twin Trunks Vest (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	509	Vivid Mitts (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	512	Dauntless Boots (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	515	Sunlight Choker (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	527	Staunch Boots (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	554	Enlightened Loincloth (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	557	Glamorous Swimsuit (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	560	Vanish Hood (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	563	Platinum Nopon Mask (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	575	Beatific Medal (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	15005	Critical Up V	0.0118694361
+21	Call the Exterminators	Legendary	15015	Ether Defense Up V	0.0118694361
+21	Call the Exterminators	Legendary	15060	Blade Combo Boost V	0.0118694361
+21	Call the Exterminators	Legendary	15158	Swift Evasion V	0.0118694361
+21	Call the Exterminators	Legendary	15168	Endurance V	0.0118694361
+21	Call the Exterminators	Legendary	15233	Arts Stealth V	0.0118694361
+21	Call the Exterminators	Legendary	15248	Movement Heal V	0.0118694361
+21	Call the Exterminators	Legendary	15253	Damage Heal V	0.0118694361
+21	Call the Exterminators	Legendary	15303	Affinity MAX Evade V	0.0118694361
+21	Call the Exterminators	Legendary	10057	Hadron Chip	0.005934718
+21	Call the Exterminators	Legendary	15353	Physical Defense Up VI	0.0118694361
+21	Call the Exterminators	Legendary	15354	Ether Defense Up VI	0.0118694361
+21	Call the Exterminators	Legendary	15368	Fire Def Up VI	0.0178041551
+21	Call the Exterminators	Legendary	15369	Water Def Up VI	0.0178041551
+21	Call the Exterminators	Legendary	15370	Wind Def Up VI	0.0178041551
+21	Call the Exterminators	Legendary	15371	Earth Def Up VI	0.0178041551
+21	Call the Exterminators	Legendary	15372	Electric Def Up VI	0.0178041551
+21	Call the Exterminators	Legendary	15373	Ice Def Up VI	0.0178041551
+21	Call the Exterminators	Legendary	15374	Light Def Up VI	0.0178041551
+21	Call the Exterminators	Legendary	15375	Dark Def Up VI	0.0178041551
+21	Call the Exterminators	Legendary	15381	Break Resist VI	0.0118694361
+21	Call the Exterminators	Legendary	15405	Affinity MAX Acc VI	0.0118694361
+21	Call the Exterminators	Legendary	456	Consul Greaves (Common)	0.002967359
+21	Call the Exterminators	Legendary	489	Abyss Masque (Common)	0.002967359
+21	Call the Exterminators	Legendary	495	Survivor's Footgear (Common)	0.002967359
+21	Call the Exterminators	Legendary	501	Beast-Hide Vest (Common)	0.002967359
+21	Call the Exterminators	Legendary	504	Prairie Cap (Common)	0.002967359
+21	Call the Exterminators	Legendary	519	Crimson Headband (Common)	0.005934718
+21	Call the Exterminators	Legendary	531	Consul Pauldrons (Common)	0.002967359
+21	Call the Exterminators	Legendary	534	Divine Vambraces (Common)	0.002967359
+21	Call the Exterminators	Legendary	540	Tachyon Scarf (Common)	0.005934718
+21	Call the Exterminators	Legendary	576	Carbon Gauntlet (Common)	0.002967359
+21	Call the Exterminators	Legendary	457	Consul Greaves (Rare)	0.002967359
+21	Call the Exterminators	Legendary	490	Abyss Masque (Rare)	0.002967359
+21	Call the Exterminators	Legendary	496	Survivor's Footgear (Rare)	0.002967359
+21	Call the Exterminators	Legendary	502	Beast-Hide Vest (Rare)	0.002967359
+21	Call the Exterminators	Legendary	505	Prairie Cap (Rare)	0.002967359
+21	Call the Exterminators	Legendary	520	Crimson Headband (Rare)	0.002967359
+21	Call the Exterminators	Legendary	532	Consul Pauldrons (Rare)	0.002967359
+21	Call the Exterminators	Legendary	535	Divine Vambraces (Rare)	0.002967359
+21	Call the Exterminators	Legendary	541	Tachyon Scarf (Rare)	0.002967359
+21	Call the Exterminators	Legendary	577	Carbon Gauntlet (Rare)	0.002967359
+21	Call the Exterminators	Legendary	458	Consul Greaves (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	491	Abyss Masque (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	497	Survivor's Footgear (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	503	Beast-Hide Vest (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	506	Prairie Cap (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	521	Crimson Headband (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	533	Consul Pauldrons (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	536	Divine Vambraces (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	542	Tachyon Scarf (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	578	Carbon Gauntlet (Legendary)	0.002967359
+21	Call the Exterminators	Legendary	25406	Intermediate Weaponry	0.005934718
+22	Attack of the Aspar	Common	15030	Insect Hunter V	0.0114285713
+22	Attack of the Aspar	Common	15040	Aquatic Hunter V	0.0114285713
+22	Attack of the Aspar	Common	15025	Beast Hunter V	0.0114285713
+22	Attack of the Aspar	Common	15035	Aerial Hunter V	0.0114285713
+22	Attack of the Aspar	Common	15045	Humanoid Hunter V	0.0114285713
+22	Attack of the Aspar	Common	15055	Titan Hunter V	0.0114285713
+22	Attack of the Aspar	Common	15050	Machine Hunter V	0.0114285713
+22	Attack of the Aspar	Common	15071	Ambush Boost V	0.0114285713
+22	Attack of the Aspar	Common	15081	Aggro Attack Up V	0.0114285713
+22	Attack of the Aspar	Common	15086	Indoor Attack Up V	0.0114285713
+22	Attack of the Aspar	Common	15096	Fire Def Up V	0.0114285713
+22	Attack of the Aspar	Common	15101	Water Def Up V	0.0114285713
+22	Attack of the Aspar	Common	15106	Earth Def Up V	0.0114285713
+22	Attack of the Aspar	Common	15111	Wind Def Up V	0.0114285713
+22	Attack of the Aspar	Common	15116	Electric Def Up V	0.0114285713
+22	Attack of the Aspar	Common	15121	Ice Def Up V	0.0114285713
+22	Attack of the Aspar	Common	15126	Dark Def Up V	0.0114285713
+22	Attack of the Aspar	Common	15131	Light Def Up V	0.0114285713
+22	Attack of the Aspar	Common	15163	Emergency Guard V	0.0114285713
+22	Attack of the Aspar	Common	15173	HP Attack Boost V	0.0114285713
+22	Attack of the Aspar	Common	15178	Spike Defense V	0.0114285713
+22	Attack of the Aspar	Common	15188	Topple Resist V	0.0114285713
+22	Attack of the Aspar	Common	15193	Launch Resist V	0.0114285713
+22	Attack of the Aspar	Common	15203	Blowdown Resist V	0.0114285713
+22	Attack of the Aspar	Common	15218	Shackle Blade Resist V	0.0114285713
+22	Attack of the Aspar	Common	15223	Auto-Attack Stealth V	0.0114285713
+22	Attack of the Aspar	Common	15228	Aggro Boost V	0.0114285713
+22	Attack of the Aspar	Common	15243	Arts Heal V	0.0114285713
+22	Attack of the Aspar	Common	15258	Night Vision V	0.0114285713
+22	Attack of the Aspar	Common	15268	Reflect Damage Up V	0.0114285713
+22	Attack of the Aspar	Common	15278	Opening Art V	0.0114285713
+22	Attack of the Aspar	Common	15283	Telepathy V	0.0114285713
+22	Attack of the Aspar	Common	15293	Affinity MAX Barrier V	0.0114285713
+22	Attack of the Aspar	Common	15298	Affinity MAX Atk V	0.0114285713
+22	Attack of the Aspar	Common	15313	Shoulder to Shoulder V	0.0114285713
+22	Attack of the Aspar	Common	15324	Specials Lv 1 Plus V	0.0114285713
+22	Attack of the Aspar	Common	15329	Specials Lv 2 Plus V	0.0114285713
+22	Attack of the Aspar	Common	15349	Jamming V	0.0114285713
+22	Attack of the Aspar	Common	333	Avant-Garde Medal (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	345	Ancient Banner (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	354	Bloody Orb (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	405	Critical Symbol (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	116	Resurrection Symbol (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	408	Sword Attachment (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	409	Scimitar Attachment (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	416	Scythe Attachment (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	431	Rebirth Amulet (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	432	Beta Scope (Legendary)	0.0114285713
+22	Attack of the Aspar	Common	10046	Howardite Chip	0.0114285713
+22	Attack of the Aspar	Common	10047	Aubrite Chip	0.0114285713
+22	Attack of the Aspar	Common	10050	Axion Chip	0.0114285713
+22	Attack of the Aspar	Common	10051	Mirror Matter Chip	0.0114285713
+22	Attack of the Aspar	Common	15364	Ambush Boost VI	0.0114285713
+22	Attack of the Aspar	Common	15383	Launch Resist VI	0.0171428565
+22	Attack of the Aspar	Common	15384	Smash Resist VI	0.0171428565
+22	Attack of the Aspar	Common	15385	Blowdown Resist VI	0.0171428565
+22	Attack of the Aspar	Common	15386	Knockback Resist VI	0.0171428565
+22	Attack of the Aspar	Common	15396	Reflect Damage Up VI	0.0171428565
+22	Attack of the Aspar	Common	15397	Opening Art VI	0.0171428565
+22	Attack of the Aspar	Common	528	War God Banner (Common)	0.0171428565
+22	Attack of the Aspar	Common	537	Demon Orb (Common)	0.0171428565
+22	Attack of the Aspar	Common	549	Violent Stone (Common)	0.0171428565
+22	Attack of the Aspar	Common	564	Gargantuan Feather (Common)	0.0171428565
+22	Attack of the Aspar	Common	579	Noise Dampener (Common)	0.0171428565
+22	Attack of the Aspar	Common	529	War God Banner (Rare)	0.0171428565
+22	Attack of the Aspar	Common	538	Demon Orb (Rare)	0.0171428565
+22	Attack of the Aspar	Common	550	Violent Stone (Rare)	0.0171428565
+22	Attack of the Aspar	Common	565	Gargantuan Feather (Rare)	0.0171428565
+22	Attack of the Aspar	Common	580	Noise Dampener (Rare)	0.0171428565
+22	Attack of the Aspar	Common	530	War God Banner (Legendary)	0.0171428565
+22	Attack of the Aspar	Common	539	Demon Orb (Legendary)	0.0171428565
+22	Attack of the Aspar	Common	551	Violent Stone (Legendary)	0.0171428565
+22	Attack of the Aspar	Common	566	Gargantuan Feather (Legendary)	0.0171428565
+22	Attack of the Aspar	Common	581	Noise Dampener (Legendary)	0.0171428565
+22	Attack of the Aspar	Common	488	Terror Masque (Legendary)	0.0171428565
+22	Attack of the Aspar	Common	494	Envoy's Footgear (Legendary)	0.0171428565
+22	Attack of the Aspar	Rare	15030	Insect Hunter V	0.00557103055
+22	Attack of the Aspar	Rare	15040	Aquatic Hunter V	0.00557103055
+22	Attack of the Aspar	Rare	15025	Beast Hunter V	0.00557103055
+22	Attack of the Aspar	Rare	15035	Aerial Hunter V	0.00557103055
+22	Attack of the Aspar	Rare	15045	Humanoid Hunter V	0.00557103055
+22	Attack of the Aspar	Rare	15055	Titan Hunter V	0.00557103055
+22	Attack of the Aspar	Rare	15050	Machine Hunter V	0.00557103055
+22	Attack of the Aspar	Rare	15071	Ambush Boost V	0.00557103055
+22	Attack of the Aspar	Rare	15081	Aggro Attack Up V	0.00557103055
+22	Attack of the Aspar	Rare	15086	Indoor Attack Up V	0.00557103055
+22	Attack of the Aspar	Rare	15096	Fire Def Up V	0.00557103055
+22	Attack of the Aspar	Rare	15101	Water Def Up V	0.00557103055
+22	Attack of the Aspar	Rare	15106	Earth Def Up V	0.00557103055
+22	Attack of the Aspar	Rare	15111	Wind Def Up V	0.00557103055
+22	Attack of the Aspar	Rare	15116	Electric Def Up V	0.00557103055
+22	Attack of the Aspar	Rare	15121	Ice Def Up V	0.00557103055
+22	Attack of the Aspar	Rare	15126	Dark Def Up V	0.00557103055
+22	Attack of the Aspar	Rare	15131	Light Def Up V	0.00557103055
+22	Attack of the Aspar	Rare	15163	Emergency Guard V	0.00557103055
+22	Attack of the Aspar	Rare	15173	HP Attack Boost V	0.00557103055
+22	Attack of the Aspar	Rare	15178	Spike Defense V	0.00557103055
+22	Attack of the Aspar	Rare	15188	Topple Resist V	0.00557103055
+22	Attack of the Aspar	Rare	15193	Launch Resist V	0.00557103055
+22	Attack of the Aspar	Rare	15203	Blowdown Resist V	0.00557103055
+22	Attack of the Aspar	Rare	15218	Shackle Blade Resist V	0.00557103055
+22	Attack of the Aspar	Rare	15223	Auto-Attack Stealth V	0.00557103055
+22	Attack of the Aspar	Rare	15228	Aggro Boost V	0.00557103055
+22	Attack of the Aspar	Rare	15243	Arts Heal V	0.00557103055
+22	Attack of the Aspar	Rare	15258	Night Vision V	0.00557103055
+22	Attack of the Aspar	Rare	15268	Reflect Damage Up V	0.00557103055
+22	Attack of the Aspar	Rare	15278	Opening Art V	0.00557103055
+22	Attack of the Aspar	Rare	15283	Telepathy V	0.00557103055
+22	Attack of the Aspar	Rare	15293	Affinity MAX Barrier V	0.00557103055
+22	Attack of the Aspar	Rare	15298	Affinity MAX Atk V	0.00557103055
+22	Attack of the Aspar	Rare	15313	Shoulder to Shoulder V	0.00557103055
+22	Attack of the Aspar	Rare	15324	Specials Lv 1 Plus V	0.00557103055
+22	Attack of the Aspar	Rare	15329	Specials Lv 2 Plus V	0.00557103055
+22	Attack of the Aspar	Rare	15349	Jamming V	0.00557103055
+22	Attack of the Aspar	Rare	333	Avant-Garde Medal (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	345	Ancient Banner (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	354	Bloody Orb (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	405	Critical Symbol (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	116	Resurrection Symbol (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	408	Sword Attachment (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	409	Scimitar Attachment (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	416	Scythe Attachment (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	431	Rebirth Amulet (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	432	Beta Scope (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	10046	Howardite Chip	0.00557103055
+22	Attack of the Aspar	Rare	10047	Aubrite Chip	0.00557103055
+22	Attack of the Aspar	Rare	10050	Axion Chip	0.00557103055
+22	Attack of the Aspar	Rare	10051	Mirror Matter Chip	0.00557103055
+22	Attack of the Aspar	Rare	15364	Ambush Boost VI	0.00557103055
+22	Attack of the Aspar	Rare	15383	Launch Resist VI	0.008356546
+22	Attack of the Aspar	Rare	15384	Smash Resist VI	0.008356546
+22	Attack of the Aspar	Rare	15385	Blowdown Resist VI	0.008356546
+22	Attack of the Aspar	Rare	15386	Knockback Resist VI	0.008356546
+22	Attack of the Aspar	Rare	15396	Reflect Damage Up VI	0.008356546
+22	Attack of the Aspar	Rare	15397	Opening Art VI	0.008356546
+22	Attack of the Aspar	Rare	528	War God Banner (Common)	0.008356546
+22	Attack of the Aspar	Rare	537	Demon Orb (Common)	0.008356546
+22	Attack of the Aspar	Rare	549	Violent Stone (Common)	0.008356546
+22	Attack of the Aspar	Rare	564	Gargantuan Feather (Common)	0.008356546
+22	Attack of the Aspar	Rare	579	Noise Dampener (Common)	0.008356546
+22	Attack of the Aspar	Rare	529	War God Banner (Rare)	0.008356546
+22	Attack of the Aspar	Rare	538	Demon Orb (Rare)	0.008356546
+22	Attack of the Aspar	Rare	550	Violent Stone (Rare)	0.008356546
+22	Attack of the Aspar	Rare	565	Gargantuan Feather (Rare)	0.008356546
+22	Attack of the Aspar	Rare	580	Noise Dampener (Rare)	0.008356546
+22	Attack of the Aspar	Rare	530	War God Banner (Legendary)	0.008356546
+22	Attack of the Aspar	Rare	539	Demon Orb (Legendary)	0.008356546
+22	Attack of the Aspar	Rare	551	Violent Stone (Legendary)	0.008356546
+22	Attack of the Aspar	Rare	566	Gargantuan Feather (Legendary)	0.008356546
+22	Attack of the Aspar	Rare	581	Noise Dampener (Legendary)	0.008356546
+22	Attack of the Aspar	Rare	488	Terror Masque (Legendary)	0.008356546
+22	Attack of the Aspar	Rare	494	Envoy's Footgear (Legendary)	0.008356546
+22	Attack of the Aspar	Rare	15010	Physical Defense Up V	0.00557103055
+22	Attack of the Aspar	Rare	15020	Block Rate Up V	0.00557103055
+22	Attack of the Aspar	Rare	15066	Fusion Combo Up V	0.00557103055
+22	Attack of the Aspar	Rare	15076	Reflect Immunity	0.00557103055
+22	Attack of the Aspar	Rare	15091	Outdoor Attack Up V	0.00557103055
+22	Attack of the Aspar	Rare	15153	Evasion Focus V	0.00557103055
+22	Attack of the Aspar	Rare	15183	Break Resist V	0.00557103055
+22	Attack of the Aspar	Rare	15198	Smash Resist V	0.00557103055
+22	Attack of the Aspar	Rare	15208	Knockback Resist V	0.00557103055
+22	Attack of the Aspar	Rare	15238	Arts Aggro Boost V	0.00557103055
+22	Attack of the Aspar	Rare	15263	Sunlight Eye V	0.00557103055
+22	Attack of the Aspar	Rare	15273	Range Boost Up V	0.00557103055
+22	Attack of the Aspar	Rare	15288	Helping Hand V	0.00557103055
+22	Attack of the Aspar	Rare	15308	Hunter's Chemistry V	0.00557103055
+22	Attack of the Aspar	Rare	15318	Fast Blade Switch V	0.00557103055
+22	Attack of the Aspar	Rare	15334	Specials Lv 3 Plus V	0.00557103055
+22	Attack of the Aspar	Rare	15339	Specials Lv 4 Plus V	0.00557103055
+22	Attack of the Aspar	Rare	15344	Affinity MAX Acc V	0.00557103055
+22	Attack of the Aspar	Rare	300	Titanium Vest (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	303	Ceramic Belt (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	306	Fiber Hat (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	309	Carbon Gloves (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	312	Ester Shoes (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	315	Comet Choker (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	336	Optical Headband (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	342	Graphite Greaves (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	348	Jet Pauldrons (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	351	Hero Vambraces (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	357	Quantum Scarf (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	383	World Tree Ward (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	389	Holy Necklace (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	393	Round Table Medal (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	396	Nano-Metal Gauntlet (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	399	Hi-Tech Eyepatch (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	10056	Positron Chip	0.00557103055
+22	Attack of the Aspar	Rare	15356	Beast Hunter VI	0.00557103055
+22	Attack of the Aspar	Rare	15357	Insect Hunter VI	0.00557103055
+22	Attack of the Aspar	Rare	15358	Aerial Hunter VI	0.00557103055
+22	Attack of the Aspar	Rare	15359	Aquatic Hunter VI	0.00557103055
+22	Attack of the Aspar	Rare	15360	Humanoid Hunter VI	0.00557103055
+22	Attack of the Aspar	Rare	15361	Machine Hunter VI	0.00557103055
+22	Attack of the Aspar	Rare	15362	Titan Hunter VI	0.00557103055
+22	Attack of the Aspar	Rare	15382	Topple Resist VI	0.00557103055
+22	Attack of the Aspar	Rare	15387	Auto-Attack Stealth VI	0.00557103055
+22	Attack of the Aspar	Rare	15388	Aggro Boost VI	0.00557103055
+22	Attack of the Aspar	Rare	15389	Arts Stealth VI	0.00557103055
+22	Attack of the Aspar	Rare	15390	Arts Aggro Boost VI	0.00557103055
+22	Attack of the Aspar	Rare	15394	Night Vision VI	0.00557103055
+22	Attack of the Aspar	Rare	15395	Sunlight Eye VI	0.00557103055
+22	Attack of the Aspar	Rare	15401	Specials Lv 1 Plus VI	0.00557103055
+22	Attack of the Aspar	Rare	15402	Specials Lv 2 Plus VI	0.00557103055
+22	Attack of the Aspar	Rare	15403	Specials Lv 3 Plus VI	0.00557103055
+22	Attack of the Aspar	Rare	15404	Specials Lv 4 Plus VI	0.00557103055
+22	Attack of the Aspar	Rare	465	Augmented Vision Kit (Common)	0.00557103055
+22	Attack of the Aspar	Rare	468	Charm Bangle (Common)	0.00557103055
+22	Attack of the Aspar	Rare	474	Seven-League Circlet (Common)	0.00557103055
+22	Attack of the Aspar	Rare	498	Twin Trunks Vest (Common)	0.00557103055
+22	Attack of the Aspar	Rare	507	Vivid Mitts (Common)	0.00557103055
+22	Attack of the Aspar	Rare	510	Dauntless Boots (Common)	0.00557103055
+22	Attack of the Aspar	Rare	513	Sunlight Choker (Common)	0.00557103055
+22	Attack of the Aspar	Rare	525	Staunch Boots (Common)	0.00557103055
+22	Attack of the Aspar	Rare	552	Enlightened Loincloth (Common)	0.00557103055
+22	Attack of the Aspar	Rare	555	Glamorous Swimsuit (Common)	0.00557103055
+22	Attack of the Aspar	Rare	558	Vanish Hood (Common)	0.00557103055
+22	Attack of the Aspar	Rare	561	Platinum Nopon Mask (Common)	0.00557103055
+22	Attack of the Aspar	Rare	573	Beatific Medal (Common)	0.00557103055
+22	Attack of the Aspar	Rare	466	Augmented Vision Kit (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	469	Charm Bangle (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	475	Seven-League Circlet (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	499	Twin Trunks Vest (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	508	Vivid Mitts (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	511	Dauntless Boots (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	514	Sunlight Choker (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	526	Staunch Boots (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	553	Enlightened Loincloth (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	556	Glamorous Swimsuit (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	559	Vanish Hood (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	562	Platinum Nopon Mask (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	574	Beatific Medal (Rare)	0.00557103055
+22	Attack of the Aspar	Rare	467	Augmented Vision Kit (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	470	Charm Bangle (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	476	Seven-League Circlet (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	500	Twin Trunks Vest (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	509	Vivid Mitts (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	512	Dauntless Boots (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	515	Sunlight Choker (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	527	Staunch Boots (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	554	Enlightened Loincloth (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	557	Glamorous Swimsuit (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	560	Vanish Hood (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	563	Platinum Nopon Mask (Legendary)	0.00557103055
+22	Attack of the Aspar	Rare	575	Beatific Medal (Legendary)	0.00557103055
+22	Attack of the Aspar	Legendary	15010	Physical Defense Up V	0.00662251655
+22	Attack of the Aspar	Legendary	15020	Block Rate Up V	0.00662251655
+22	Attack of the Aspar	Legendary	15066	Fusion Combo Up V	0.00662251655
+22	Attack of the Aspar	Legendary	15076	Reflect Immunity	0.00662251655
+22	Attack of the Aspar	Legendary	15091	Outdoor Attack Up V	0.00662251655
+22	Attack of the Aspar	Legendary	15153	Evasion Focus V	0.00662251655
+22	Attack of the Aspar	Legendary	15183	Break Resist V	0.00662251655
+22	Attack of the Aspar	Legendary	15198	Smash Resist V	0.00662251655
+22	Attack of the Aspar	Legendary	15208	Knockback Resist V	0.00662251655
+22	Attack of the Aspar	Legendary	15238	Arts Aggro Boost V	0.00662251655
+22	Attack of the Aspar	Legendary	15263	Sunlight Eye V	0.00662251655
+22	Attack of the Aspar	Legendary	15273	Range Boost Up V	0.00662251655
+22	Attack of the Aspar	Legendary	15288	Helping Hand V	0.00662251655
+22	Attack of the Aspar	Legendary	15308	Hunter's Chemistry V	0.00662251655
+22	Attack of the Aspar	Legendary	15318	Fast Blade Switch V	0.00662251655
+22	Attack of the Aspar	Legendary	15334	Specials Lv 3 Plus V	0.00662251655
+22	Attack of the Aspar	Legendary	15339	Specials Lv 4 Plus V	0.00662251655
+22	Attack of the Aspar	Legendary	15344	Affinity MAX Acc V	0.00662251655
+22	Attack of the Aspar	Legendary	300	Titanium Vest (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	303	Ceramic Belt (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	306	Fiber Hat (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	309	Carbon Gloves (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	312	Ester Shoes (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	315	Comet Choker (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	336	Optical Headband (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	342	Graphite Greaves (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	348	Jet Pauldrons (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	351	Hero Vambraces (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	357	Quantum Scarf (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	383	World Tree Ward (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	389	Holy Necklace (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	393	Round Table Medal (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	10056	Positron Chip	0.00662251655
+22	Attack of the Aspar	Legendary	15356	Beast Hunter VI	0.00662251655
+22	Attack of the Aspar	Legendary	15357	Insect Hunter VI	0.00662251655
+22	Attack of the Aspar	Legendary	15358	Aerial Hunter VI	0.00662251655
+22	Attack of the Aspar	Legendary	15359	Aquatic Hunter VI	0.00662251655
+22	Attack of the Aspar	Legendary	15360	Humanoid Hunter VI	0.00662251655
+22	Attack of the Aspar	Legendary	15361	Machine Hunter VI	0.00662251655
+22	Attack of the Aspar	Legendary	15362	Titan Hunter VI	0.00662251655
+22	Attack of the Aspar	Legendary	15382	Topple Resist VI	0.00662251655
+22	Attack of the Aspar	Legendary	15387	Auto-Attack Stealth VI	0.00662251655
+22	Attack of the Aspar	Legendary	15388	Aggro Boost VI	0.00662251655
+22	Attack of the Aspar	Legendary	15389	Arts Stealth VI	0.00662251655
+22	Attack of the Aspar	Legendary	15390	Arts Aggro Boost VI	0.00662251655
+22	Attack of the Aspar	Legendary	15394	Night Vision VI	0.00662251655
+22	Attack of the Aspar	Legendary	15395	Sunlight Eye VI	0.00662251655
+22	Attack of the Aspar	Legendary	15401	Specials Lv 1 Plus VI	0.00662251655
+22	Attack of the Aspar	Legendary	15402	Specials Lv 2 Plus VI	0.00662251655
+22	Attack of the Aspar	Legendary	15403	Specials Lv 3 Plus VI	0.00662251655
+22	Attack of the Aspar	Legendary	15404	Specials Lv 4 Plus VI	0.00662251655
+22	Attack of the Aspar	Legendary	465	Augmented Vision Kit (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	468	Charm Bangle (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	474	Seven-League Circlet (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	498	Twin Trunks Vest (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	507	Vivid Mitts (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	510	Dauntless Boots (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	513	Sunlight Choker (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	525	Staunch Boots (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	552	Enlightened Loincloth (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	555	Glamorous Swimsuit (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	558	Vanish Hood (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	561	Platinum Nopon Mask (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	573	Beatific Medal (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	466	Augmented Vision Kit (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	469	Charm Bangle (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	475	Seven-League Circlet (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	499	Twin Trunks Vest (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	508	Vivid Mitts (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	511	Dauntless Boots (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	514	Sunlight Choker (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	526	Staunch Boots (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	553	Enlightened Loincloth (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	556	Glamorous Swimsuit (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	559	Vanish Hood (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	562	Platinum Nopon Mask (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	574	Beatific Medal (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	467	Augmented Vision Kit (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	470	Charm Bangle (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	476	Seven-League Circlet (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	500	Twin Trunks Vest (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	509	Vivid Mitts (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	512	Dauntless Boots (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	515	Sunlight Choker (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	527	Staunch Boots (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	554	Enlightened Loincloth (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	557	Glamorous Swimsuit (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	560	Vanish Hood (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	563	Platinum Nopon Mask (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	575	Beatific Medal (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	15005	Critical Up V	0.00662251655
+22	Attack of the Aspar	Legendary	15015	Ether Defense Up V	0.00662251655
+22	Attack of the Aspar	Legendary	15060	Blade Combo Boost V	0.00662251655
+22	Attack of the Aspar	Legendary	15158	Swift Evasion V	0.00662251655
+22	Attack of the Aspar	Legendary	15168	Endurance V	0.00662251655
+22	Attack of the Aspar	Legendary	15233	Arts Stealth V	0.00662251655
+22	Attack of the Aspar	Legendary	15248	Movement Heal V	0.00662251655
+22	Attack of the Aspar	Legendary	15253	Damage Heal V	0.00662251655
+22	Attack of the Aspar	Legendary	15303	Affinity MAX Evade V	0.00662251655
+22	Attack of the Aspar	Legendary	10057	Hadron Chip	0.00662251655
+22	Attack of the Aspar	Legendary	15353	Physical Defense Up VI	0.00662251655
+22	Attack of the Aspar	Legendary	15354	Ether Defense Up VI	0.00662251655
+22	Attack of the Aspar	Legendary	15368	Fire Def Up VI	0.009933775
+22	Attack of the Aspar	Legendary	15369	Water Def Up VI	0.009933775
+22	Attack of the Aspar	Legendary	15370	Wind Def Up VI	0.009933775
+22	Attack of the Aspar	Legendary	15371	Earth Def Up VI	0.009933775
+22	Attack of the Aspar	Legendary	15372	Electric Def Up VI	0.009933775
+22	Attack of the Aspar	Legendary	15373	Ice Def Up VI	0.009933775
+22	Attack of the Aspar	Legendary	15374	Light Def Up VI	0.009933775
+22	Attack of the Aspar	Legendary	15375	Dark Def Up VI	0.009933775
+22	Attack of the Aspar	Legendary	15381	Break Resist VI	0.00662251655
+22	Attack of the Aspar	Legendary	15405	Affinity MAX Acc VI	0.00662251655
+22	Attack of the Aspar	Legendary	456	Consul Greaves (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	489	Abyss Masque (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	495	Survivor's Footgear (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	501	Beast-Hide Vest (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	504	Prairie Cap (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	519	Crimson Headband (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	531	Consul Pauldrons (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	534	Divine Vambraces (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	540	Tachyon Scarf (Common)	0.0132450331
+22	Attack of the Aspar	Legendary	576	Carbon Gauntlet (Common)	0.00662251655
+22	Attack of the Aspar	Legendary	457	Consul Greaves (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	490	Abyss Masque (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	496	Survivor's Footgear (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	502	Beast-Hide Vest (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	505	Prairie Cap (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	520	Crimson Headband (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	532	Consul Pauldrons (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	535	Divine Vambraces (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	541	Tachyon Scarf (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	577	Carbon Gauntlet (Rare)	0.00662251655
+22	Attack of the Aspar	Legendary	458	Consul Greaves (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	491	Abyss Masque (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	497	Survivor's Footgear (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	503	Beast-Hide Vest (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	506	Prairie Cap (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	521	Crimson Headband (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	533	Consul Pauldrons (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	536	Divine Vambraces (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	542	Tachyon Scarf (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	578	Carbon Gauntlet (Legendary)	0.00662251655
+22	Attack of the Aspar	Legendary	25406	Intermediate Weaponry	0.0132450331
+23	Titan Battleship Assault	Common	15007	Physical Defense Up II	0.0222222228
+23	Titan Battleship Assault	Common	15027	Insect Hunter II	0.0222222228
+23	Titan Battleship Assault	Common	15037	Aquatic Hunter II	0.0222222228
+23	Titan Battleship Assault	Common	15047	Machine Hunter II	0.0222222228
+23	Titan Battleship Assault	Common	15052	Titan Hunter II	0.0222222228
+23	Titan Battleship Assault	Common	15063	Fusion Combo Up II	0.0222222228
+23	Titan Battleship Assault	Common	15073	Reflect Immunity	0.0222222228
+23	Titan Battleship Assault	Common	15083	Indoor Attack Up II	0.0222222228
+23	Titan Battleship Assault	Common	15093	Fire Def Up II	0.0222222228
+23	Titan Battleship Assault	Common	15098	Water Def Up II	0.0222222228
+23	Titan Battleship Assault	Common	15103	Earth Def Up II	0.0222222228
+23	Titan Battleship Assault	Common	15108	Wind Def Up II	0.0222222228
+23	Titan Battleship Assault	Common	15113	Electric Def Up II	0.0222222228
+23	Titan Battleship Assault	Common	15118	Ice Def Up II	0.0222222228
+23	Titan Battleship Assault	Common	15123	Dark Def Up II	0.0222222228
+23	Titan Battleship Assault	Common	15128	Light Def Up II	0.0222222228
+23	Titan Battleship Assault	Common	15150	Evasion Focus II	0.0222222228
+23	Titan Battleship Assault	Common	15160	Emergency Guard II	0.0222222228
+23	Titan Battleship Assault	Common	15170	HP Attack Boost II	0.0222222228
+23	Titan Battleship Assault	Common	15180	Break Resist II	0.0222222228
+23	Titan Battleship Assault	Common	15190	Launch Resist II	0.0222222228
+23	Titan Battleship Assault	Common	15200	Blowdown Resist II	0.0222222228
+23	Titan Battleship Assault	Common	15220	Auto-Attack Stealth II	0.0222222228
+23	Titan Battleship Assault	Common	15230	Arts Stealth II	0.0222222228
+23	Titan Battleship Assault	Common	15240	Arts Heal II	0.0222222228
+23	Titan Battleship Assault	Common	15250	Damage Heal II	0.0222222228
+23	Titan Battleship Assault	Common	15260	Sunlight Eye II	0.0222222228
+23	Titan Battleship Assault	Common	15270	Range Boost Up II	0.0222222228
+23	Titan Battleship Assault	Common	15275	Opening Art II	0.0222222228
+23	Titan Battleship Assault	Common	15285	Helping Hand II	0.0222222228
+23	Titan Battleship Assault	Common	15295	Affinity MAX Atk II	0.0222222228
+23	Titan Battleship Assault	Common	15305	Hunter's Chemistry II	0.0222222228
+23	Titan Battleship Assault	Common	15315	Fast Blade Switch II	0.0222222228
+23	Titan Battleship Assault	Common	15346	Jamming II	0.0222222228
+23	Titan Battleship Assault	Common	15351	Element Orb Prioritizer	0.0222222228
+23	Titan Battleship Assault	Common	298	Gear Vest (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	301	Steam Belt (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	304	Bolt Hat (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	323	Smithy Gloves (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	325	Spring Shoes (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	327	Gold Gear Choker (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	331	Classic Medal (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	334	Iron Headband (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	340	Mechanized Greaves (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	343	Swordfighting Banner (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	349	Apprentice Vambraces (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	355	Chrome Scarf (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	361	Soldier Ring (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	365	Assault Stone (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	373	Camo Hood (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	376	Metal Nopon Mask (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	400	Silver Earrings (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	421	Katana Attachment (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	422	Ball Attachment (Legendary)	0.0111111114
+23	Titan Battleship Assault	Common	10027	Magnet Chip	0.0111111114
+23	Titan Battleship Assault	Rare	15007	Physical Defense Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15027	Insect Hunter II	0.00732600736
+23	Titan Battleship Assault	Rare	15037	Aquatic Hunter II	0.00732600736
+23	Titan Battleship Assault	Rare	15047	Machine Hunter II	0.00732600736
+23	Titan Battleship Assault	Rare	15052	Titan Hunter II	0.00732600736
+23	Titan Battleship Assault	Rare	15063	Fusion Combo Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15073	Reflect Immunity	0.00732600736
+23	Titan Battleship Assault	Rare	15083	Indoor Attack Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15093	Fire Def Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15098	Water Def Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15103	Earth Def Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15108	Wind Def Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15113	Electric Def Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15118	Ice Def Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15123	Dark Def Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15128	Light Def Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15150	Evasion Focus II	0.00732600736
+23	Titan Battleship Assault	Rare	15160	Emergency Guard II	0.00732600736
+23	Titan Battleship Assault	Rare	15170	HP Attack Boost II	0.00732600736
+23	Titan Battleship Assault	Rare	15180	Break Resist II	0.00732600736
+23	Titan Battleship Assault	Rare	15190	Launch Resist II	0.00732600736
+23	Titan Battleship Assault	Rare	15200	Blowdown Resist II	0.00732600736
+23	Titan Battleship Assault	Rare	15220	Auto-Attack Stealth II	0.00732600736
+23	Titan Battleship Assault	Rare	15230	Arts Stealth II	0.00732600736
+23	Titan Battleship Assault	Rare	15240	Arts Heal II	0.00732600736
+23	Titan Battleship Assault	Rare	15250	Damage Heal II	0.00732600736
+23	Titan Battleship Assault	Rare	15260	Sunlight Eye II	0.00732600736
+23	Titan Battleship Assault	Rare	15270	Range Boost Up II	0.00732600736
+23	Titan Battleship Assault	Rare	15275	Opening Art II	0.00732600736
+23	Titan Battleship Assault	Rare	15285	Helping Hand II	0.00732600736
+23	Titan Battleship Assault	Rare	15295	Affinity MAX Atk II	0.00732600736
+23	Titan Battleship Assault	Rare	15305	Hunter's Chemistry II	0.00732600736
+23	Titan Battleship Assault	Rare	15315	Fast Blade Switch II	0.00732600736
+23	Titan Battleship Assault	Rare	15346	Jamming II	0.00732600736
+23	Titan Battleship Assault	Rare	15351	Element Orb Prioritizer	0.00732600736
+23	Titan Battleship Assault	Rare	298	Gear Vest (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	301	Steam Belt (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	304	Bolt Hat (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	323	Smithy Gloves (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	325	Spring Shoes (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	327	Gold Gear Choker (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	331	Classic Medal (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	334	Iron Headband (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	340	Mechanized Greaves (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	343	Swordfighting Banner (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	349	Apprentice Vambraces (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	355	Chrome Scarf (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	361	Soldier Ring (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	365	Assault Stone (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	373	Camo Hood (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	376	Metal Nopon Mask (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	400	Silver Earrings (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	421	Katana Attachment (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	422	Ball Attachment (Legendary)	0.00366300368
+23	Titan Battleship Assault	Rare	10027	Magnet Chip	0.00366300368
+23	Titan Battleship Assault	Rare	15002	Critical Up II	0.0146520147
+23	Titan Battleship Assault	Rare	15012	Ether Defense Up II	0.0146520147
+23	Titan Battleship Assault	Rare	15017	Block Rate Up II	0.0146520147
+23	Titan Battleship Assault	Rare	15022	Beast Hunter II	0.0146520147
+23	Titan Battleship Assault	Rare	15032	Aerial Hunter II	0.0146520147
+23	Titan Battleship Assault	Rare	15042	Humanoid Hunter II	0.0146520147
+23	Titan Battleship Assault	Rare	15057	Blade Combo Boost II	0.0146520147
+23	Titan Battleship Assault	Rare	15068	Ambush Boost II	0.0146520147
+23	Titan Battleship Assault	Rare	15078	Aggro Attack Up II	0.0146520147
+23	Titan Battleship Assault	Rare	15088	Outdoor Attack Up II	0.0146520147
+23	Titan Battleship Assault	Rare	15155	Swift Evasion II	0.0146520147
+23	Titan Battleship Assault	Rare	15165	Endurance II	0.0146520147
+23	Titan Battleship Assault	Rare	15175	Spike Defense II	0.0146520147
+23	Titan Battleship Assault	Rare	15185	Topple Resist II	0.0146520147
+23	Titan Battleship Assault	Rare	15195	Smash Resist II	0.0146520147
+23	Titan Battleship Assault	Rare	15205	Knockback Resist II	0.0146520147
+23	Titan Battleship Assault	Rare	15215	Shackle Blade Resist II	0.0146520147
+23	Titan Battleship Assault	Rare	15225	Aggro Boost II	0.0146520147
+23	Titan Battleship Assault	Rare	15235	Arts Aggro Boost II	0.0146520147
+23	Titan Battleship Assault	Rare	15245	Movement Heal II	0.0146520147
+23	Titan Battleship Assault	Rare	15255	Night Vision II	0.0146520147
+23	Titan Battleship Assault	Rare	15265	Reflect Damage Up II	0.0146520147
+23	Titan Battleship Assault	Rare	15280	Telepathy II	0.0146520147
+23	Titan Battleship Assault	Rare	15290	Affinity MAX Barrier II	0.0146520147
+23	Titan Battleship Assault	Rare	15300	Affinity MAX Evade II	0.0146520147
+23	Titan Battleship Assault	Rare	15310	Shoulder to Shoulder II	0.0146520147
+23	Titan Battleship Assault	Rare	15321	Specials Lv 1 Plus II	0.0146520147
+23	Titan Battleship Assault	Rare	15326	Specials Lv 2 Plus II	0.0146520147
+23	Titan Battleship Assault	Rare	15331	Specials Lv 3 Plus II	0.0146520147
+23	Titan Battleship Assault	Rare	15336	Specials Lv 4 Plus II	0.0146520147
+23	Titan Battleship Assault	Rare	15341	Affinity MAX Acc II	0.0146520147
+23	Titan Battleship Assault	Rare	15350	Element Orb Ender	0.0146520147
+23	Titan Battleship Assault	Rare	307	Rainbow Gloves (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	310	Shell Shoes (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	313	Nacre Choker (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	328	Garnet (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	337	Moon Cube (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	346	Spiked Pauldrons (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	358	White Belt (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	379	Silver Feather (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	382	Spirit Tree Ward (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	386	Promise Ring (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	391	Chivalric Medal (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	394	Gauntlet (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	423	Knuckle Attachment (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	427	Love Thread (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	435	Overclocking Bangle (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	437	Lavender Potpourri (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	439	Sage's Auspices (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	440	Incense of Calm (Legendary)	0.00732600736
+23	Titan Battleship Assault	Rare	10015	Glass Chip	0.00732600736
+23	Titan Battleship Assault	Rare	10035	Pentagon Chip	0.00732600736
+23	Titan Battleship Assault	Rare	462	Night-vision Kit (Common)	0.00915751
+23	Titan Battleship Assault	Rare	570	Marble Cameo (Common)	0.00915751
+23	Titan Battleship Assault	Rare	463	Night-vision Kit (Rare)	0.00915751
+23	Titan Battleship Assault	Rare	571	Marble Cameo (Rare)	0.00915751
+23	Titan Battleship Assault	Rare	464	Night-vision Kit (Legendary)	0.00915751
+23	Titan Battleship Assault	Rare	572	Marble Cameo (Legendary)	0.00915751
+23	Titan Battleship Assault	Legendary	15002	Critical Up II	0.014035088
+23	Titan Battleship Assault	Legendary	15012	Ether Defense Up II	0.014035088
+23	Titan Battleship Assault	Legendary	15017	Block Rate Up II	0.014035088
+23	Titan Battleship Assault	Legendary	15022	Beast Hunter II	0.014035088
+23	Titan Battleship Assault	Legendary	15032	Aerial Hunter II	0.014035088
+23	Titan Battleship Assault	Legendary	15042	Humanoid Hunter II	0.014035088
+23	Titan Battleship Assault	Legendary	15057	Blade Combo Boost II	0.014035088
+23	Titan Battleship Assault	Legendary	15068	Ambush Boost II	0.014035088
+23	Titan Battleship Assault	Legendary	15078	Aggro Attack Up II	0.014035088
+23	Titan Battleship Assault	Legendary	15088	Outdoor Attack Up II	0.014035088
+23	Titan Battleship Assault	Legendary	15155	Swift Evasion II	0.014035088
+23	Titan Battleship Assault	Legendary	15165	Endurance II	0.014035088
+23	Titan Battleship Assault	Legendary	15175	Spike Defense II	0.014035088
+23	Titan Battleship Assault	Legendary	15185	Topple Resist II	0.014035088
+23	Titan Battleship Assault	Legendary	15195	Smash Resist II	0.014035088
+23	Titan Battleship Assault	Legendary	15205	Knockback Resist II	0.014035088
+23	Titan Battleship Assault	Legendary	15215	Shackle Blade Resist II	0.014035088
+23	Titan Battleship Assault	Legendary	15225	Aggro Boost II	0.014035088
+23	Titan Battleship Assault	Legendary	15235	Arts Aggro Boost II	0.014035088
+23	Titan Battleship Assault	Legendary	15245	Movement Heal II	0.014035088
+23	Titan Battleship Assault	Legendary	15255	Night Vision II	0.014035088
+23	Titan Battleship Assault	Legendary	15265	Reflect Damage Up II	0.014035088
+23	Titan Battleship Assault	Legendary	15280	Telepathy II	0.014035088
+23	Titan Battleship Assault	Legendary	15290	Affinity MAX Barrier II	0.014035088
+23	Titan Battleship Assault	Legendary	15300	Affinity MAX Evade II	0.014035088
+23	Titan Battleship Assault	Legendary	15310	Shoulder to Shoulder II	0.014035088
+23	Titan Battleship Assault	Legendary	15321	Specials Lv 1 Plus II	0.014035088
+23	Titan Battleship Assault	Legendary	15326	Specials Lv 2 Plus II	0.014035088
+23	Titan Battleship Assault	Legendary	15331	Specials Lv 3 Plus II	0.014035088
+23	Titan Battleship Assault	Legendary	15336	Specials Lv 4 Plus II	0.014035088
+23	Titan Battleship Assault	Legendary	15341	Affinity MAX Acc II	0.014035088
+23	Titan Battleship Assault	Legendary	15350	Element Orb Ender	0.014035088
+23	Titan Battleship Assault	Legendary	307	Rainbow Gloves (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	310	Shell Shoes (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	313	Nacre Choker (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	328	Garnet (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	337	Moon Cube (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	346	Spiked Pauldrons (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	358	White Belt (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	379	Silver Feather (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	382	Spirit Tree Ward (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	386	Promise Ring (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	391	Chivalric Medal (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	394	Gauntlet (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	423	Knuckle Attachment (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	427	Love Thread (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	435	Overclocking Bangle (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	437	Lavender Potpourri (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	439	Sage's Auspices (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	440	Incense of Calm (Legendary)	0.007017544
+23	Titan Battleship Assault	Legendary	10015	Glass Chip	0.007017544
+23	Titan Battleship Assault	Legendary	10035	Pentagon Chip	0.007017544
+23	Titan Battleship Assault	Legendary	462	Night-vision Kit (Common)	0.00877193
+23	Titan Battleship Assault	Legendary	570	Marble Cameo (Common)	0.00877193
+23	Titan Battleship Assault	Legendary	463	Night-vision Kit (Rare)	0.00877193
+23	Titan Battleship Assault	Legendary	571	Marble Cameo (Rare)	0.00877193
+23	Titan Battleship Assault	Legendary	464	Night-vision Kit (Legendary)	0.00877193
+23	Titan Battleship Assault	Legendary	572	Marble Cameo (Legendary)	0.00877193
+23	Titan Battleship Assault	Legendary	15008	Physical Defense Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15028	Insect Hunter III	0.007017544
+23	Titan Battleship Assault	Legendary	15038	Aquatic Hunter III	0.007017544
+23	Titan Battleship Assault	Legendary	15048	Machine Hunter III	0.007017544
+23	Titan Battleship Assault	Legendary	15053	Titan Hunter III	0.007017544
+23	Titan Battleship Assault	Legendary	15064	Fusion Combo Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15074	Reflect Immunity	0.007017544
+23	Titan Battleship Assault	Legendary	15084	Indoor Attack Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15094	Fire Def Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15099	Water Def Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15104	Earth Def Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15109	Wind Def Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15114	Electric Def Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15119	Ice Def Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15124	Dark Def Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15129	Light Def Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15151	Evasion Focus III	0.007017544
+23	Titan Battleship Assault	Legendary	15161	Emergency Guard III	0.007017544
+23	Titan Battleship Assault	Legendary	15171	HP Attack Boost III	0.007017544
+23	Titan Battleship Assault	Legendary	15181	Break Resist III	0.007017544
+23	Titan Battleship Assault	Legendary	15191	Launch Resist III	0.007017544
+23	Titan Battleship Assault	Legendary	15201	Blowdown Resist III	0.007017544
+23	Titan Battleship Assault	Legendary	15221	Auto-Attack Stealth III	0.007017544
+23	Titan Battleship Assault	Legendary	15231	Arts Stealth III	0.007017544
+23	Titan Battleship Assault	Legendary	15241	Arts Heal III	0.007017544
+23	Titan Battleship Assault	Legendary	15251	Damage Heal III	0.007017544
+23	Titan Battleship Assault	Legendary	15261	Sunlight Eye III	0.007017544
+23	Titan Battleship Assault	Legendary	15271	Range Boost Up III	0.007017544
+23	Titan Battleship Assault	Legendary	15276	Opening Art III	0.007017544
+23	Titan Battleship Assault	Legendary	15286	Helping Hand III	0.007017544
+23	Titan Battleship Assault	Legendary	15296	Affinity MAX Atk III	0.007017544
+23	Titan Battleship Assault	Legendary	15306	Hunter's Chemistry III	0.007017544
+23	Titan Battleship Assault	Legendary	15316	Fast Blade Switch III	0.007017544
+23	Titan Battleship Assault	Legendary	15347	Jamming III	0.007017544
+23	Titan Battleship Assault	Legendary	299	Jade Vest (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	302	Silver Belt (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	305	Pearl Hat (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	332	Modern Medal (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	335	Ice Headband (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	341	Crystal Greaves (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	344	Goddess Banner (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	353	Eraser Orb (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	356	Unicorn Scarf (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	362	Berserk Ring (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	374	Skeleton Hood (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	377	Gold Nopon Mask (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	388	Affection Necklace (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	398	Leader's Eyepatch (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	404	Burst Symbol (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	407	Infinity Symbol (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	410	Ring Attachment (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	414	Whip Attachment (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	415	Edge Attachment (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	425	Cheer Treat (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	430	Healing Amulet (Legendary)	0.003508772
+23	Titan Battleship Assault	Legendary	10031	Motor Chip	0.003508772
+23	Titan Battleship Assault	Legendary	10043	Ureilite Chip	0.003508772
+23	Titan Battleship Assault	Legendary	486	Terror Masque (Common)	0.005263158
+23	Titan Battleship Assault	Legendary	492	Envoy's Footgear (Common)	0.005263158
+23	Titan Battleship Assault	Legendary	487	Terror Masque (Rare)	0.005263158
+23	Titan Battleship Assault	Legendary	493	Envoy's Footgear (Rare)	0.005263158
+23	Titan Battleship Assault	Legendary	488	Terror Masque (Legendary)	0.005263158
+23	Titan Battleship Assault	Legendary	494	Envoy's Footgear (Legendary)	0.005263158
+23	Titan Battleship Assault	Legendary	25405	Weaponry for Noobs	0.007017544
+24	This Year's Heropon	Common	15030	Insect Hunter V	0.008130081
+24	This Year's Heropon	Common	15040	Aquatic Hunter V	0.008130081
+24	This Year's Heropon	Common	15025	Beast Hunter V	0.008130081
+24	This Year's Heropon	Common	15035	Aerial Hunter V	0.008130081
+24	This Year's Heropon	Common	15045	Humanoid Hunter V	0.008130081
+24	This Year's Heropon	Common	15055	Titan Hunter V	0.008130081
+24	This Year's Heropon	Common	15050	Machine Hunter V	0.008130081
+24	This Year's Heropon	Common	15071	Ambush Boost V	0.008130081
+24	This Year's Heropon	Common	15081	Aggro Attack Up V	0.008130081
+24	This Year's Heropon	Common	15086	Indoor Attack Up V	0.008130081
+24	This Year's Heropon	Common	15096	Fire Def Up V	0.008130081
+24	This Year's Heropon	Common	15101	Water Def Up V	0.008130081
+24	This Year's Heropon	Common	15106	Earth Def Up V	0.008130081
+24	This Year's Heropon	Common	15111	Wind Def Up V	0.008130081
+24	This Year's Heropon	Common	15116	Electric Def Up V	0.008130081
+24	This Year's Heropon	Common	15121	Ice Def Up V	0.008130081
+24	This Year's Heropon	Common	15126	Dark Def Up V	0.008130081
+24	This Year's Heropon	Common	15131	Light Def Up V	0.008130081
+24	This Year's Heropon	Common	15163	Emergency Guard V	0.008130081
+24	This Year's Heropon	Common	15173	HP Attack Boost V	0.008130081
+24	This Year's Heropon	Common	15178	Spike Defense V	0.008130081
+24	This Year's Heropon	Common	15188	Topple Resist V	0.008130081
+24	This Year's Heropon	Common	15193	Launch Resist V	0.008130081
+24	This Year's Heropon	Common	15203	Blowdown Resist V	0.008130081
+24	This Year's Heropon	Common	15218	Shackle Blade Resist V	0.008130081
+24	This Year's Heropon	Common	15223	Auto-Attack Stealth V	0.008130081
+24	This Year's Heropon	Common	15228	Aggro Boost V	0.008130081
+24	This Year's Heropon	Common	15243	Arts Heal V	0.008130081
+24	This Year's Heropon	Common	15258	Night Vision V	0.008130081
+24	This Year's Heropon	Common	15268	Reflect Damage Up V	0.008130081
+24	This Year's Heropon	Common	15278	Opening Art V	0.008130081
+24	This Year's Heropon	Common	15283	Telepathy V	0.008130081
+24	This Year's Heropon	Common	15293	Affinity MAX Barrier V	0.008130081
+24	This Year's Heropon	Common	15298	Affinity MAX Atk V	0.008130081
+24	This Year's Heropon	Common	15313	Shoulder to Shoulder V	0.008130081
+24	This Year's Heropon	Common	15324	Specials Lv 1 Plus V	0.008130081
+24	This Year's Heropon	Common	15329	Specials Lv 2 Plus V	0.008130081
+24	This Year's Heropon	Common	15349	Jamming V	0.008130081
+24	This Year's Heropon	Common	333	Avant-Garde Medal (Legendary)	0.016260162
+24	This Year's Heropon	Common	345	Ancient Banner (Legendary)	0.016260162
+24	This Year's Heropon	Common	354	Bloody Orb (Legendary)	0.016260162
+24	This Year's Heropon	Common	405	Critical Symbol (Legendary)	0.016260162
+24	This Year's Heropon	Common	116	Resurrection Symbol (Legendary)	0.016260162
+24	This Year's Heropon	Common	408	Sword Attachment (Legendary)	0.016260162
+24	This Year's Heropon	Common	409	Scimitar Attachment (Legendary)	0.016260162
+24	This Year's Heropon	Common	416	Scythe Attachment (Legendary)	0.016260162
+24	This Year's Heropon	Common	431	Rebirth Amulet (Legendary)	0.016260162
+24	This Year's Heropon	Common	432	Beta Scope (Legendary)	0.016260162
+24	This Year's Heropon	Common	10046	Howardite Chip	0.008130081
+24	This Year's Heropon	Common	10047	Aubrite Chip	0.008130081
+24	This Year's Heropon	Common	10050	Axion Chip	0.008130081
+24	This Year's Heropon	Common	10051	Mirror Matter Chip	0.008130081
+24	This Year's Heropon	Common	15364	Ambush Boost VI	0.008130081
+24	This Year's Heropon	Common	15383	Launch Resist VI	0.0121951215
+24	This Year's Heropon	Common	15384	Smash Resist VI	0.0121951215
+24	This Year's Heropon	Common	15385	Blowdown Resist VI	0.0121951215
+24	This Year's Heropon	Common	15386	Knockback Resist VI	0.0121951215
+24	This Year's Heropon	Common	15396	Reflect Damage Up VI	0.0121951215
+24	This Year's Heropon	Common	15397	Opening Art VI	0.0121951215
+24	This Year's Heropon	Common	528	War God Banner (Common)	0.024390243
+24	This Year's Heropon	Common	537	Demon Orb (Common)	0.024390243
+24	This Year's Heropon	Common	549	Violent Stone (Common)	0.024390243
+24	This Year's Heropon	Common	564	Gargantuan Feather (Common)	0.024390243
+24	This Year's Heropon	Common	579	Noise Dampener (Common)	0.024390243
+24	This Year's Heropon	Common	529	War God Banner (Rare)	0.024390243
+24	This Year's Heropon	Common	538	Demon Orb (Rare)	0.024390243
+24	This Year's Heropon	Common	550	Violent Stone (Rare)	0.024390243
+24	This Year's Heropon	Common	565	Gargantuan Feather (Rare)	0.024390243
+24	This Year's Heropon	Common	580	Noise Dampener (Rare)	0.024390243
+24	This Year's Heropon	Common	530	War God Banner (Legendary)	0.024390243
+24	This Year's Heropon	Common	539	Demon Orb (Legendary)	0.024390243
+24	This Year's Heropon	Common	551	Violent Stone (Legendary)	0.024390243
+24	This Year's Heropon	Common	566	Gargantuan Feather (Legendary)	0.024390243
+24	This Year's Heropon	Common	581	Noise Dampener (Legendary)	0.024390243
+24	This Year's Heropon	Common	488	Terror Masque (Legendary)	0.024390243
+24	This Year's Heropon	Common	494	Envoy's Footgear (Legendary)	0.024390243
+24	This Year's Heropon	Rare	15030	Insect Hunter V	0.00363636366
+24	This Year's Heropon	Rare	15040	Aquatic Hunter V	0.00363636366
+24	This Year's Heropon	Rare	15025	Beast Hunter V	0.00363636366
+24	This Year's Heropon	Rare	15035	Aerial Hunter V	0.00363636366
+24	This Year's Heropon	Rare	15045	Humanoid Hunter V	0.00363636366
+24	This Year's Heropon	Rare	15055	Titan Hunter V	0.00363636366
+24	This Year's Heropon	Rare	15050	Machine Hunter V	0.00363636366
+24	This Year's Heropon	Rare	15071	Ambush Boost V	0.00363636366
+24	This Year's Heropon	Rare	15081	Aggro Attack Up V	0.00363636366
+24	This Year's Heropon	Rare	15086	Indoor Attack Up V	0.00363636366
+24	This Year's Heropon	Rare	15096	Fire Def Up V	0.00363636366
+24	This Year's Heropon	Rare	15101	Water Def Up V	0.00363636366
+24	This Year's Heropon	Rare	15106	Earth Def Up V	0.00363636366
+24	This Year's Heropon	Rare	15111	Wind Def Up V	0.00363636366
+24	This Year's Heropon	Rare	15116	Electric Def Up V	0.00363636366
+24	This Year's Heropon	Rare	15121	Ice Def Up V	0.00363636366
+24	This Year's Heropon	Rare	15126	Dark Def Up V	0.00363636366
+24	This Year's Heropon	Rare	15131	Light Def Up V	0.00363636366
+24	This Year's Heropon	Rare	15163	Emergency Guard V	0.00363636366
+24	This Year's Heropon	Rare	15173	HP Attack Boost V	0.00363636366
+24	This Year's Heropon	Rare	15178	Spike Defense V	0.00363636366
+24	This Year's Heropon	Rare	15188	Topple Resist V	0.00363636366
+24	This Year's Heropon	Rare	15193	Launch Resist V	0.00363636366
+24	This Year's Heropon	Rare	15203	Blowdown Resist V	0.00363636366
+24	This Year's Heropon	Rare	15218	Shackle Blade Resist V	0.00363636366
+24	This Year's Heropon	Rare	15223	Auto-Attack Stealth V	0.00363636366
+24	This Year's Heropon	Rare	15228	Aggro Boost V	0.00363636366
+24	This Year's Heropon	Rare	15243	Arts Heal V	0.00363636366
+24	This Year's Heropon	Rare	15258	Night Vision V	0.00363636366
+24	This Year's Heropon	Rare	15268	Reflect Damage Up V	0.00363636366
+24	This Year's Heropon	Rare	15278	Opening Art V	0.00363636366
+24	This Year's Heropon	Rare	15283	Telepathy V	0.00363636366
+24	This Year's Heropon	Rare	15293	Affinity MAX Barrier V	0.00363636366
+24	This Year's Heropon	Rare	15298	Affinity MAX Atk V	0.00363636366
+24	This Year's Heropon	Rare	15313	Shoulder to Shoulder V	0.00363636366
+24	This Year's Heropon	Rare	15324	Specials Lv 1 Plus V	0.00363636366
+24	This Year's Heropon	Rare	15329	Specials Lv 2 Plus V	0.00363636366
+24	This Year's Heropon	Rare	15349	Jamming V	0.00363636366
+24	This Year's Heropon	Rare	333	Avant-Garde Medal (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	345	Ancient Banner (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	354	Bloody Orb (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	405	Critical Symbol (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	116	Resurrection Symbol (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	408	Sword Attachment (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	409	Scimitar Attachment (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	416	Scythe Attachment (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	431	Rebirth Amulet (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	432	Beta Scope (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	10046	Howardite Chip	0.00363636366
+24	This Year's Heropon	Rare	10047	Aubrite Chip	0.00363636366
+24	This Year's Heropon	Rare	10050	Axion Chip	0.00363636366
+24	This Year's Heropon	Rare	10051	Mirror Matter Chip	0.00363636366
+24	This Year's Heropon	Rare	15364	Ambush Boost VI	0.00363636366
+24	This Year's Heropon	Rare	15383	Launch Resist VI	0.00545454537
+24	This Year's Heropon	Rare	15384	Smash Resist VI	0.00545454537
+24	This Year's Heropon	Rare	15385	Blowdown Resist VI	0.00545454537
+24	This Year's Heropon	Rare	15386	Knockback Resist VI	0.00545454537
+24	This Year's Heropon	Rare	15396	Reflect Damage Up VI	0.00545454537
+24	This Year's Heropon	Rare	15397	Opening Art VI	0.00545454537
+24	This Year's Heropon	Rare	528	War God Banner (Common)	0.0109090907
+24	This Year's Heropon	Rare	537	Demon Orb (Common)	0.0109090907
+24	This Year's Heropon	Rare	549	Violent Stone (Common)	0.0109090907
+24	This Year's Heropon	Rare	564	Gargantuan Feather (Common)	0.0109090907
+24	This Year's Heropon	Rare	579	Noise Dampener (Common)	0.0109090907
+24	This Year's Heropon	Rare	529	War God Banner (Rare)	0.0109090907
+24	This Year's Heropon	Rare	538	Demon Orb (Rare)	0.0109090907
+24	This Year's Heropon	Rare	550	Violent Stone (Rare)	0.0109090907
+24	This Year's Heropon	Rare	565	Gargantuan Feather (Rare)	0.0109090907
+24	This Year's Heropon	Rare	580	Noise Dampener (Rare)	0.0109090907
+24	This Year's Heropon	Rare	530	War God Banner (Legendary)	0.0109090907
+24	This Year's Heropon	Rare	539	Demon Orb (Legendary)	0.0109090907
+24	This Year's Heropon	Rare	551	Violent Stone (Legendary)	0.0109090907
+24	This Year's Heropon	Rare	566	Gargantuan Feather (Legendary)	0.0109090907
+24	This Year's Heropon	Rare	581	Noise Dampener (Legendary)	0.0109090907
+24	This Year's Heropon	Rare	488	Terror Masque (Legendary)	0.0109090907
+24	This Year's Heropon	Rare	494	Envoy's Footgear (Legendary)	0.0109090907
+24	This Year's Heropon	Rare	15010	Physical Defense Up V	0.00363636366
+24	This Year's Heropon	Rare	15020	Block Rate Up V	0.00363636366
+24	This Year's Heropon	Rare	15066	Fusion Combo Up V	0.00363636366
+24	This Year's Heropon	Rare	15076	Reflect Immunity	0.00363636366
+24	This Year's Heropon	Rare	15091	Outdoor Attack Up V	0.00363636366
+24	This Year's Heropon	Rare	15153	Evasion Focus V	0.00363636366
+24	This Year's Heropon	Rare	15183	Break Resist V	0.00363636366
+24	This Year's Heropon	Rare	15198	Smash Resist V	0.00363636366
+24	This Year's Heropon	Rare	15208	Knockback Resist V	0.00363636366
+24	This Year's Heropon	Rare	15238	Arts Aggro Boost V	0.00363636366
+24	This Year's Heropon	Rare	15263	Sunlight Eye V	0.00363636366
+24	This Year's Heropon	Rare	15273	Range Boost Up V	0.00363636366
+24	This Year's Heropon	Rare	15288	Helping Hand V	0.00363636366
+24	This Year's Heropon	Rare	15308	Hunter's Chemistry V	0.00363636366
+24	This Year's Heropon	Rare	15318	Fast Blade Switch V	0.00363636366
+24	This Year's Heropon	Rare	15334	Specials Lv 3 Plus V	0.00363636366
+24	This Year's Heropon	Rare	15339	Specials Lv 4 Plus V	0.00363636366
+24	This Year's Heropon	Rare	15344	Affinity MAX Acc V	0.00363636366
+24	This Year's Heropon	Rare	300	Titanium Vest (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	303	Ceramic Belt (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	306	Fiber Hat (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	309	Carbon Gloves (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	312	Ester Shoes (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	315	Comet Choker (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	336	Optical Headband (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	342	Graphite Greaves (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	348	Jet Pauldrons (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	351	Hero Vambraces (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	357	Quantum Scarf (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	383	World Tree Ward (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	389	Holy Necklace (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	393	Round Table Medal (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	396	Nano-Metal Gauntlet (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	399	Hi-Tech Eyepatch (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	10056	Positron Chip	0.00363636366
+24	This Year's Heropon	Rare	15356	Beast Hunter VI	0.00363636366
+24	This Year's Heropon	Rare	15357	Insect Hunter VI	0.00363636366
+24	This Year's Heropon	Rare	15358	Aerial Hunter VI	0.00363636366
+24	This Year's Heropon	Rare	15359	Aquatic Hunter VI	0.00363636366
+24	This Year's Heropon	Rare	15360	Humanoid Hunter VI	0.00363636366
+24	This Year's Heropon	Rare	15361	Machine Hunter VI	0.00363636366
+24	This Year's Heropon	Rare	15362	Titan Hunter VI	0.00363636366
+24	This Year's Heropon	Rare	15382	Topple Resist VI	0.00363636366
+24	This Year's Heropon	Rare	15387	Auto-Attack Stealth VI	0.00363636366
+24	This Year's Heropon	Rare	15388	Aggro Boost VI	0.00363636366
+24	This Year's Heropon	Rare	15389	Arts Stealth VI	0.00363636366
+24	This Year's Heropon	Rare	15390	Arts Aggro Boost VI	0.00363636366
+24	This Year's Heropon	Rare	15394	Night Vision VI	0.00363636366
+24	This Year's Heropon	Rare	15395	Sunlight Eye VI	0.00727272732
+24	This Year's Heropon	Rare	15401	Specials Lv 1 Plus VI	0.00363636366
+24	This Year's Heropon	Rare	15402	Specials Lv 2 Plus VI	0.00363636366
+24	This Year's Heropon	Rare	15403	Specials Lv 3 Plus VI	0.00363636366
+24	This Year's Heropon	Rare	15404	Specials Lv 4 Plus VI	0.00363636366
+24	This Year's Heropon	Rare	465	Augmented Vision Kit (Common)	0.00727272732
+24	This Year's Heropon	Rare	468	Charm Bangle (Common)	0.00727272732
+24	This Year's Heropon	Rare	474	Seven-League Circlet (Common)	0.00727272732
+24	This Year's Heropon	Rare	498	Twin Trunks Vest (Common)	0.00727272732
+24	This Year's Heropon	Rare	507	Vivid Mitts (Common)	0.00727272732
+24	This Year's Heropon	Rare	510	Dauntless Boots (Common)	0.00727272732
+24	This Year's Heropon	Rare	513	Sunlight Choker (Common)	0.0145454546
+24	This Year's Heropon	Rare	525	Staunch Boots (Common)	0.00727272732
+24	This Year's Heropon	Rare	552	Enlightened Loincloth (Common)	0.00727272732
+24	This Year's Heropon	Rare	555	Glamorous Swimsuit (Common)	0.00727272732
+24	This Year's Heropon	Rare	558	Vanish Hood (Common)	0.00727272732
+24	This Year's Heropon	Rare	561	Platinum Nopon Mask (Common)	0.0145454546
+24	This Year's Heropon	Rare	573	Beatific Medal (Common)	0.00727272732
+24	This Year's Heropon	Rare	466	Augmented Vision Kit (Rare)	0.00727272732
+24	This Year's Heropon	Rare	469	Charm Bangle (Rare)	0.00727272732
+24	This Year's Heropon	Rare	475	Seven-League Circlet (Rare)	0.00727272732
+24	This Year's Heropon	Rare	499	Twin Trunks Vest (Rare)	0.00727272732
+24	This Year's Heropon	Rare	508	Vivid Mitts (Rare)	0.00727272732
+24	This Year's Heropon	Rare	511	Dauntless Boots (Rare)	0.00727272732
+24	This Year's Heropon	Rare	514	Sunlight Choker (Rare)	0.00727272732
+24	This Year's Heropon	Rare	526	Staunch Boots (Rare)	0.00727272732
+24	This Year's Heropon	Rare	553	Enlightened Loincloth (Rare)	0.00727272732
+24	This Year's Heropon	Rare	556	Glamorous Swimsuit (Rare)	0.00727272732
+24	This Year's Heropon	Rare	559	Vanish Hood (Rare)	0.00727272732
+24	This Year's Heropon	Rare	562	Platinum Nopon Mask (Rare)	0.00727272732
+24	This Year's Heropon	Rare	574	Beatific Medal (Rare)	0.00727272732
+24	This Year's Heropon	Rare	467	Augmented Vision Kit (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	470	Charm Bangle (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	476	Seven-League Circlet (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	500	Twin Trunks Vest (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	509	Vivid Mitts (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	512	Dauntless Boots (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	515	Sunlight Choker (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	527	Staunch Boots (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	554	Enlightened Loincloth (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	557	Glamorous Swimsuit (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	560	Vanish Hood (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	563	Platinum Nopon Mask (Legendary)	0.00727272732
+24	This Year's Heropon	Rare	575	Beatific Medal (Legendary)	0.00727272732
+24	This Year's Heropon	Legendary	15010	Physical Defense Up V	0.004255319
+24	This Year's Heropon	Legendary	15020	Block Rate Up V	0.004255319
+24	This Year's Heropon	Legendary	15066	Fusion Combo Up V	0.004255319
+24	This Year's Heropon	Legendary	15076	Reflect Immunity	0.004255319
+24	This Year's Heropon	Legendary	15091	Outdoor Attack Up V	0.004255319
+24	This Year's Heropon	Legendary	15153	Evasion Focus V	0.004255319
+24	This Year's Heropon	Legendary	15183	Break Resist V	0.004255319
+24	This Year's Heropon	Legendary	15198	Smash Resist V	0.004255319
+24	This Year's Heropon	Legendary	15208	Knockback Resist V	0.004255319
+24	This Year's Heropon	Legendary	15238	Arts Aggro Boost V	0.004255319
+24	This Year's Heropon	Legendary	15263	Sunlight Eye V	0.004255319
+24	This Year's Heropon	Legendary	15273	Range Boost Up V	0.004255319
+24	This Year's Heropon	Legendary	15288	Helping Hand V	0.004255319
+24	This Year's Heropon	Legendary	15308	Hunter's Chemistry V	0.004255319
+24	This Year's Heropon	Legendary	15318	Fast Blade Switch V	0.004255319
+24	This Year's Heropon	Legendary	15334	Specials Lv 3 Plus V	0.004255319
+24	This Year's Heropon	Legendary	15339	Specials Lv 4 Plus V	0.004255319
+24	This Year's Heropon	Legendary	15344	Affinity MAX Acc V	0.004255319
+24	This Year's Heropon	Legendary	300	Titanium Vest (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	303	Ceramic Belt (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	306	Fiber Hat (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	309	Carbon Gloves (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	312	Ester Shoes (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	315	Comet Choker (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	336	Optical Headband (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	342	Graphite Greaves (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	348	Jet Pauldrons (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	351	Hero Vambraces (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	357	Quantum Scarf (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	383	World Tree Ward (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	389	Holy Necklace (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	393	Round Table Medal (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	396	Nano-Metal Gauntlet (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	399	Hi-Tech Eyepatch (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	10056	Positron Chip	0.004255319
+24	This Year's Heropon	Legendary	15356	Beast Hunter VI	0.004255319
+24	This Year's Heropon	Legendary	15357	Insect Hunter VI	0.004255319
+24	This Year's Heropon	Legendary	15358	Aerial Hunter VI	0.004255319
+24	This Year's Heropon	Legendary	15359	Aquatic Hunter VI	0.004255319
+24	This Year's Heropon	Legendary	15360	Humanoid Hunter VI	0.004255319
+24	This Year's Heropon	Legendary	15361	Machine Hunter VI	0.004255319
+24	This Year's Heropon	Legendary	15362	Titan Hunter VI	0.004255319
+24	This Year's Heropon	Legendary	15382	Topple Resist VI	0.004255319
+24	This Year's Heropon	Legendary	15387	Auto-Attack Stealth VI	0.004255319
+24	This Year's Heropon	Legendary	15388	Aggro Boost VI	0.004255319
+24	This Year's Heropon	Legendary	15389	Arts Stealth VI	0.004255319
+24	This Year's Heropon	Legendary	15390	Arts Aggro Boost VI	0.004255319
+24	This Year's Heropon	Legendary	15394	Night Vision VI	0.004255319
+24	This Year's Heropon	Legendary	15395	Sunlight Eye VI	0.004255319
+24	This Year's Heropon	Legendary	15401	Specials Lv 1 Plus VI	0.004255319
+24	This Year's Heropon	Legendary	15402	Specials Lv 2 Plus VI	0.004255319
+24	This Year's Heropon	Legendary	15403	Specials Lv 3 Plus VI	0.004255319
+24	This Year's Heropon	Legendary	15404	Specials Lv 4 Plus VI	0.004255319
+24	This Year's Heropon	Legendary	465	Augmented Vision Kit (Common)	0.008510638
+24	This Year's Heropon	Legendary	468	Charm Bangle (Common)	0.008510638
+24	This Year's Heropon	Legendary	474	Seven-League Circlet (Common)	0.008510638
+24	This Year's Heropon	Legendary	498	Twin Trunks Vest (Common)	0.008510638
+24	This Year's Heropon	Legendary	507	Vivid Mitts (Common)	0.008510638
+24	This Year's Heropon	Legendary	510	Dauntless Boots (Common)	0.008510638
+24	This Year's Heropon	Legendary	513	Sunlight Choker (Common)	0.008510638
+24	This Year's Heropon	Legendary	525	Staunch Boots (Common)	0.008510638
+24	This Year's Heropon	Legendary	552	Enlightened Loincloth (Common)	0.008510638
+24	This Year's Heropon	Legendary	555	Glamorous Swimsuit (Common)	0.008510638
+24	This Year's Heropon	Legendary	558	Vanish Hood (Common)	0.008510638
+24	This Year's Heropon	Legendary	561	Platinum Nopon Mask (Common)	0.008510638
+24	This Year's Heropon	Legendary	573	Beatific Medal (Common)	0.008510638
+24	This Year's Heropon	Legendary	466	Augmented Vision Kit (Rare)	0.008510638
+24	This Year's Heropon	Legendary	469	Charm Bangle (Rare)	0.008510638
+24	This Year's Heropon	Legendary	475	Seven-League Circlet (Rare)	0.008510638
+24	This Year's Heropon	Legendary	499	Twin Trunks Vest (Rare)	0.008510638
+24	This Year's Heropon	Legendary	508	Vivid Mitts (Rare)	0.008510638
+24	This Year's Heropon	Legendary	511	Dauntless Boots (Rare)	0.008510638
+24	This Year's Heropon	Legendary	514	Sunlight Choker (Rare)	0.008510638
+24	This Year's Heropon	Legendary	526	Staunch Boots (Rare)	0.008510638
+24	This Year's Heropon	Legendary	553	Enlightened Loincloth (Rare)	0.008510638
+24	This Year's Heropon	Legendary	556	Glamorous Swimsuit (Rare)	0.008510638
+24	This Year's Heropon	Legendary	559	Vanish Hood (Rare)	0.008510638
+24	This Year's Heropon	Legendary	562	Platinum Nopon Mask (Rare)	0.008510638
+24	This Year's Heropon	Legendary	574	Beatific Medal (Rare)	0.008510638
+24	This Year's Heropon	Legendary	467	Augmented Vision Kit (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	470	Charm Bangle (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	476	Seven-League Circlet (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	500	Twin Trunks Vest (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	509	Vivid Mitts (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	512	Dauntless Boots (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	515	Sunlight Choker (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	527	Staunch Boots (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	554	Enlightened Loincloth (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	557	Glamorous Swimsuit (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	560	Vanish Hood (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	563	Platinum Nopon Mask (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	575	Beatific Medal (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	15005	Critical Up V	0.004255319
+24	This Year's Heropon	Legendary	15015	Ether Defense Up V	0.004255319
+24	This Year's Heropon	Legendary	15060	Blade Combo Boost V	0.004255319
+24	This Year's Heropon	Legendary	15158	Swift Evasion V	0.004255319
+24	This Year's Heropon	Legendary	15168	Endurance V	0.004255319
+24	This Year's Heropon	Legendary	15233	Arts Stealth V	0.004255319
+24	This Year's Heropon	Legendary	15248	Movement Heal V	0.004255319
+24	This Year's Heropon	Legendary	15253	Damage Heal V	0.004255319
+24	This Year's Heropon	Legendary	15303	Affinity MAX Evade V	0.004255319
+24	This Year's Heropon	Legendary	10057	Hadron Chip	0.004255319
+24	This Year's Heropon	Legendary	15353	Physical Defense Up VI	0.004255319
+24	This Year's Heropon	Legendary	15354	Ether Defense Up VI	0.004255319
+24	This Year's Heropon	Legendary	15368	Fire Def Up VI	0.00638297852
+24	This Year's Heropon	Legendary	15369	Water Def Up VI	0.00638297852
+24	This Year's Heropon	Legendary	15370	Wind Def Up VI	0.00638297852
+24	This Year's Heropon	Legendary	15371	Earth Def Up VI	0.00638297852
+24	This Year's Heropon	Legendary	15372	Electric Def Up VI	0.00638297852
+24	This Year's Heropon	Legendary	15373	Ice Def Up VI	0.00638297852
+24	This Year's Heropon	Legendary	15374	Light Def Up VI	0.00638297852
+24	This Year's Heropon	Legendary	15375	Dark Def Up VI	0.00638297852
+24	This Year's Heropon	Legendary	15381	Break Resist VI	0.004255319
+24	This Year's Heropon	Legendary	15405	Affinity MAX Acc VI	0.004255319
+24	This Year's Heropon	Legendary	456	Consul Greaves (Common)	0.008510638
+24	This Year's Heropon	Legendary	489	Abyss Masque (Common)	0.008510638
+24	This Year's Heropon	Legendary	495	Survivor's Footgear (Common)	0.008510638
+24	This Year's Heropon	Legendary	501	Beast-Hide Vest (Common)	0.008510638
+24	This Year's Heropon	Legendary	504	Prairie Cap (Common)	0.008510638
+24	This Year's Heropon	Legendary	519	Crimson Headband (Common)	0.008510638
+24	This Year's Heropon	Legendary	531	Consul Pauldrons (Common)	0.008510638
+24	This Year's Heropon	Legendary	534	Divine Vambraces (Common)	0.008510638
+24	This Year's Heropon	Legendary	540	Tachyon Scarf (Common)	0.008510638
+24	This Year's Heropon	Legendary	576	Carbon Gauntlet (Common)	0.008510638
+24	This Year's Heropon	Legendary	457	Consul Greaves (Rare)	0.008510638
+24	This Year's Heropon	Legendary	490	Abyss Masque (Rare)	0.008510638
+24	This Year's Heropon	Legendary	496	Survivor's Footgear (Rare)	0.008510638
+24	This Year's Heropon	Legendary	502	Beast-Hide Vest (Rare)	0.008510638
+24	This Year's Heropon	Legendary	505	Prairie Cap (Rare)	0.008510638
+24	This Year's Heropon	Legendary	520	Crimson Headband (Rare)	0.008510638
+24	This Year's Heropon	Legendary	532	Consul Pauldrons (Rare)	0.008510638
+24	This Year's Heropon	Legendary	535	Divine Vambraces (Rare)	0.008510638
+24	This Year's Heropon	Legendary	541	Tachyon Scarf (Rare)	0.008510638
+24	This Year's Heropon	Legendary	577	Carbon Gauntlet (Rare)	0.008510638
+24	This Year's Heropon	Legendary	458	Consul Greaves (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	491	Abyss Masque (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	497	Survivor's Footgear (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	503	Beast-Hide Vest (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	506	Prairie Cap (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	521	Crimson Headband (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	533	Consul Pauldrons (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	536	Divine Vambraces (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	542	Tachyon Scarf (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	578	Carbon Gauntlet (Legendary)	0.008510638
+24	This Year's Heropon	Legendary	25406	Intermediate Weaponry	0.008510638
 \.
 
 
@@ -53187,6 +61564,14 @@ ALTER TABLE ONLY xeno2.blade_chances
 
 
 --
+-- Name: blade_favorite_pouch_categories_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_favorite_pouch_categories
+    ADD CONSTRAINT blade_favorite_pouch_categories_pkey PRIMARY KEY (blade, pouch_category);
+
+
+--
 -- Name: blade_favorite_pouch_items_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -53567,6 +61952,14 @@ ALTER TABLE ONLY xeno2.blade_battle_skills
 
 ALTER TABLE ONLY xeno2.blade_battle_skills
     ADD CONSTRAINT blade_battle_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
+
+
+--
+-- Name: blade_favorite_pouch_categories_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_favorite_pouch_categories
+    ADD CONSTRAINT blade_favorite_pouch_categories_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
 
 
 --
