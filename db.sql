@@ -197,6 +197,19 @@ CREATE TABLE xeno2.blade_battle_skills (
 ALTER TABLE xeno2.blade_battle_skills OWNER TO poppi;
 
 --
+-- Name: blade_blade_arts; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_blade_arts (
+    blade text NOT NULL,
+    blade_art text NOT NULL,
+    recast smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_blade_arts OWNER TO poppi;
+
+--
 -- Name: blade_chances; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -4862,6 +4875,117 @@ Shulk	Monado Speed
 Fiora	Warrior Valkyrie
 Fiora	Explosion of Energy
 Fiora	Unwavering Courage
+\.
+
+
+--
+-- Data for Name: blade_blade_arts; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_blade_arts (blade, blade_art, recast) FROM stdin;
+Pyra	Accuracy Up	75
+Pyra	Arts Plus	125
+Mythra	Critical Up	75
+Mythra	Recharge Boost	100
+Pneuma	Recharge Boost	50
+Pneuma	Critical Up	50
+Pneuma	Arts Plus	50
+Dromarch	Debuff Cancel	75
+Dromarch	Accuracy Up	100
+Roc	Back Attack Up	75
+Roc	Arts Plus	100
+Brighid	Absorb Damage	75
+Brighid	Draw Aggro	75
+Pandoria	Arts Plus	75
+Pandoria	Recharge Boost	125
+Nia	Debuff Cancel	50
+Nia	Absorb Damage	150
+Aegaeon	Accuracy Up	75
+Aegaeon	Nullify Reaction	150
+Godfrey	Arts Plus	125
+Godfrey	Draw Aggro	100
+Wulfric	Critical Up	75
+Wulfric	Arts Plus	75
+Perceval	Critical Up	50
+Vale	Back Attack Up	75
+Vale	Critical Up	100
+Vale	Arts Plus	100
+Agate	Critical Up	75
+Agate	Accuracy Up	75
+Gorg	Absorb Damage	75
+Gorg	Nullify Reaction	75
+Boreas	Accuracy Up	100
+Boreas	Recharge Boost	150
+Dagas	Arts Plus	75
+Dagas	Critical Up	75
+Dagas (Weak)	Arts Plus	150
+Dagas (Weak)	Critical Up	150
+Kasandra	Draw Aggro	125
+Kasandra	Arts Plus	125
+Praxis	Accuracy Up	75
+Praxis	Critical Up	100
+Theory	Accuracy Up	75
+Theory	Nullify Reaction	125
+Perun	Accuracy Up	125
+Perun	Nullify Reaction	125
+Perun	Debuff Cancel	125
+Kora	Back Attack Up	50
+Azami	Arts Plus	75
+Azami	Accuracy Up	125
+Ursula	Debuff Cancel	50
+Newt	Absorb Damage	125
+Newt	Nullify Reaction	125
+Newt	Draw Aggro	150
+Nim	Accuracy Up	75
+Nim	Back Attack Up	100
+Sheba	Critical Up	75
+Sheba	Back Attack Up	100
+Sheba	Arts Plus	100
+Vess	Absorb Damage	100
+Adenine	Accuracy Up	75
+Adenine	Debuff Cancel	100
+Electra	Absorb Damage	100
+Electra	Draw Aggro	150
+Zenobia	Recharge Boost	125
+Zenobia	Arts Plus	100
+Zenobia	Critical Up	100
+Finch	Nullify Reaction	100
+Finch	Debuff Cancel	100
+Finch	Draw Aggro	150
+Floren	Debuff Cancel	100
+Floren	Back Attack Up	100
+KOS-MOS	Recharge Boost	75
+KOS-MOS	Arts Plus	75
+KOS-MOS	Critical Up	75
+Herald	Arts Plus	50
+Herald	Critical Up	50
+Dahlia	Arts Plus	100
+Dahlia	Accuracy Up	125
+Sever	Recharge Boost	75
+Sever	Critical Up	75
+Akhos	Debuff Cancel	75
+Akhos	Absorb Damage	75
+Patroka	Arts Plus	75
+Patroka	Critical Up	75
+Mikhail	Nullify Reaction	75
+Mikhail	Debuff Cancel	75
+Mikhail	Arts Plus	75
+Obrona	Recharge Boost	50
+Perdido	Critical Up	50
+Perdido	Accuracy Up	100
+Cressidus	Draw Aggro	50
+Cressidus	Arts Plus	75
+T-elos	Arts Plus	75
+T-elos	Critical Up	100
+Poppibuster	Recharge Boost	75
+Poppibuster	Draw Aggro	100
+Poppibuster	Nullify Reaction	100
+Shulk	Accuracy Up	75
+Shulk	Debuff Cancel	100
+Shulk	Back Attack Up	100
+Fiora	Critical Up	75
+Fiora	Arts Plus	100
+Fiora	Recharge Boost	100
 \.
 
 
@@ -61556,6 +61680,14 @@ ALTER TABLE ONLY xeno2.blade_battle_skills
 
 
 --
+-- Name: blade_blade_arts_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_blade_arts
+    ADD CONSTRAINT blade_blade_arts_pkey PRIMARY KEY (blade, blade_art);
+
+
+--
 -- Name: blade_chances_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -61952,6 +62084,14 @@ ALTER TABLE ONLY xeno2.blade_battle_skills
 
 ALTER TABLE ONLY xeno2.blade_battle_skills
     ADD CONSTRAINT blade_battle_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
+
+
+--
+-- Name: blade_blade_arts_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_blade_arts
+    ADD CONSTRAINT blade_blade_arts_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
 
 
 --
