@@ -292,7 +292,8 @@ class Xenoblade2:
                     STRING_AGG(DISTINCT blade_battle_skills.skill, E'\n'),
                     STRING_AGG(DISTINCT blade_field_skills.skill, E'\n'),
                     STRING_AGG(DISTINCT pouch_items.name, E'\n'),
-                    STRING_AGG(DISTINCT pouch_category, E'\n')
+                    STRING_AGG(DISTINCT pouch_category, E'\n'),
+                    STRING_AGG(DISTINCT blade_art, E'\n')
                 FROM xeno2.blades
                 JOIN xeno2.blade_battle_skills
                 ON blades.name=blade_battle_skills.blade
@@ -304,6 +305,8 @@ class Xenoblade2:
                 ON blade_favorite_pouch_items.pouch_item=pouch_items.id
                 LEFT JOIN xeno2.blade_favorite_pouch_categories
                 ON blades.name=blade_favorite_pouch_categories.blade
+                LEFT JOIN xeno2.blade_blade_arts
+                ON blades.name=blade_blade_arts.blade
                 WHERE LOWER(blades.name)=$1
                 GROUP BY blades.name;
                 """
@@ -313,7 +316,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2blade_search, name=name)
 
-        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, battle_skills, field_skills, favorite_items, favorite_categories = record
+        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, battle_skills, field_skills, favorite_items, favorite_categories, blade_arts = record
 
         embed = discord.Embed(title=name)
         embed.add_field(name='Gender', value=gender)
@@ -329,6 +332,7 @@ class Xenoblade2:
         embed.add_field(name='Field Skills', value=field_skills or 'None', inline=False)
         embed.add_field(name='Favorite Pouch Items', value=favorite_items or 'None')
         embed.add_field(name='Favorite Pouch Categories', value=favorite_categories or 'None')
+        embed.add_field(name='Blade Arts', value=blade_arts or 'None')
 
         await ctx.send(embed=embed)
 
