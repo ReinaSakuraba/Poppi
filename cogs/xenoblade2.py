@@ -277,6 +277,39 @@ class Xenoblade2:
         """Gives information for a Xenoblade Chronicles 2 blade."""
 
         query = """
+                WITH battle_skills AS (
+                    SELECT
+                        blade,
+                        STRING_AGG(skill, E'\n') AS battle_skills
+                    FROM xeno2.blade_battle_skills
+                    GROUP BY blade
+                ), field_skills AS (
+                    SELECT
+                        blade,
+                        STRING_AGG(skill, E'\n') AS field_skills
+                    FROM xeno2.blade_field_skills
+                    GROUP BY blade
+                ), favorite_items AS (
+                    SELECT
+                        blade,
+                        STRING_AGG(name, E'\n') AS favorite_items
+                    FROM xeno2.blade_favorite_pouch_items
+                    JOIN xeno2.pouch_items
+                    ON pouch_item=id
+                    GROUP BY blade
+                ), favorite_categories AS (
+                    SELECT
+                        blade,
+                        STRING_AGG(pouch_category, E'\n') AS favorite_categories
+                    FROM xeno2.blade_favorite_pouch_categories
+                    GROUP BY blade
+                ), blade_arts AS (
+                    SELECT
+                        blade,
+                        STRING_AGG(blade_art, E'\n') AS blade_arts
+                    FROM xeno2.blade_blade_arts
+                    GROUP BY blade
+                )
                 SELECT
                     blades.name,
                     gender,
@@ -289,26 +322,23 @@ class Xenoblade2:
                     voice_actor,
                     illustrator,
                     merc_name,
-                    STRING_AGG(DISTINCT blade_battle_skills.skill, E'\n'),
-                    STRING_AGG(DISTINCT blade_field_skills.skill, E'\n'),
-                    STRING_AGG(DISTINCT pouch_items.name, E'\n'),
-                    STRING_AGG(DISTINCT pouch_category, E'\n'),
-                    STRING_AGG(DISTINCT blade_art, E'\n')
+                    battle_skills,
+                    field_skills,
+                    favorite_items,
+                    favorite_categories,
+                    blade_arts
                 FROM xeno2.blades
-                JOIN xeno2.blade_battle_skills
-                ON blades.name=blade_battle_skills.blade
-                LEFT JOIN xeno2.blade_field_skills
-                ON blades.name=blade_field_skills.blade
-                LEFT JOIN xeno2.blade_favorite_pouch_items
-                ON blades.name=blade_favorite_pouch_items.blade
-                LEFT JOIN xeno2.pouch_items
-                ON blade_favorite_pouch_items.pouch_item=pouch_items.id
-                LEFT JOIN xeno2.blade_favorite_pouch_categories
-                ON blades.name=blade_favorite_pouch_categories.blade
-                LEFT JOIN xeno2.blade_blade_arts
-                ON blades.name=blade_blade_arts.blade
-                WHERE LOWER(blades.name)=$1
-                GROUP BY blades.name;
+                JOIN battle_skills
+                ON name=battle_skills.blade
+                LEFT JOIN field_skills
+                ON name=field_skills.blade
+                LEFT JOIN favorite_items
+                ON name=favorite_items.blade
+                LEFT JOIN favorite_categories
+                ON name=favorite_categories.blade
+                JOIN blade_arts
+                ON name=blade_arts.blade
+                WHERE LOWER(name)=$1;
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
