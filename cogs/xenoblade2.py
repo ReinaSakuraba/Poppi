@@ -309,6 +309,12 @@ class Xenoblade2:
                         STRING_AGG(blade_art, E'\n') AS blade_arts
                     FROM xeno2.blade_blade_arts
                     GROUP BY blade
+                ), blade_specials AS (
+                    SELECT
+                        blade,
+                        STRING_AGG(level || ': ' || special, E'\n' ORDER BY level) AS specials
+                    FROM xeno2.blade_specials
+                    GROUP BY blade
                 )
                 SELECT
                     blades.name,
@@ -322,6 +328,7 @@ class Xenoblade2:
                     voice_actor,
                     illustrator,
                     merc_name,
+                    specials,
                     battle_skills,
                     field_skills,
                     favorite_items,
@@ -332,6 +339,8 @@ class Xenoblade2:
                          ELSE 'None'
                     END AS stat_mod
                 FROM xeno2.blades
+                JOIN blade_specials
+                ON name=blade_specials.blade
                 JOIN battle_skills
                 ON name=battle_skills.blade
                 LEFT JOIN field_skills
@@ -352,7 +361,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2blade_search, name=name)
 
-        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, battle_skills, field_skills, favorite_items, favorite_categories, blade_arts, stat_mod = record
+        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, blade_specials, battle_skills, field_skills, favorite_items, favorite_categories, blade_arts, stat_mod = record
 
         embed = discord.Embed(title=name)
         embed.add_field(name='Gender', value=gender)
@@ -365,6 +374,7 @@ class Xenoblade2:
         embed.add_field(name='Voice Actors', value=voice_actor)
         embed.add_field(name='Illustrator', value=illustrator)
         embed.add_field(name='Mercenary Name', value=merc_name)
+        embed.add_field(name='Specials', value=blade_specials, inline=False)
         embed.add_field(name='Battle Skills', value=battle_skills, inline=False)
         embed.add_field(name='Field Skills', value=field_skills or 'None', inline=False)
         embed.add_field(name='Favorite Pouch Items', value=favorite_items or 'None')
