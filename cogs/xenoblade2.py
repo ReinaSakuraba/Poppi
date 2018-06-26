@@ -185,6 +185,7 @@ class Xenoblade2:
                 SELECT
                     name,
                     specials.level,
+                    blade,
                     type,
                     damage_ratio,
                     COUNT(hit) AS hits,
@@ -220,8 +221,10 @@ class Xenoblade2:
                 ON name=damage_ratios.special
                 LEFT JOIN hit_data
                 ON name=hit_data.special
+                LEFT JOIN xeno2.blade_specials
+                ON name=blade_specials.special
                 WHERE LOWER(name)=$1
-                GROUP BY name, damage_ratio;
+                GROUP BY name, damage_ratio, blade;
                 """
 
         record = await ctx.pool.fetchrow(query, name.lower())
@@ -229,10 +232,12 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2special_search, name=name)
 
-        name, level, type_, damage_ratio, hits, range_, reaction, description, caption, distance, radius, hate, accuracy_mod, crit_mod, hit_frames, reaction_data, ratios = record
+        name, level, blade, type_, damage_ratio, hits, range_, reaction, description, caption, distance, radius, hate, accuracy_mod, crit_mod, hit_frames, reaction_data, ratios = record
 
         embed = discord.Embed(title=name, description=caption)
         embed.add_field(name='Type', value=type_)
+        if blade:
+            embed.add_field(name='Blade', value=blade)
         embed.add_field(name='Hits', value=hits)
         embed.add_field(name='Range', value=range_)
         embed.add_field(name='Special Level', value=level)
