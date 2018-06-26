@@ -12,19 +12,16 @@ class ErrorHandler:
         commands.NoPrivateMessage: 'The "{command_name}" command may not be used in Direct Messages.',
         utils.MissingPerms: '```\n{exception}\n```'
     }
+    ignored = (commands.CommandNotFound, commands.UserInputError, commands.CheckFailure)
 
     async def on_command_error(self, ctx, exception):
         exception = getattr(exception, 'original', exception)
 
-        try:
-            message = self.handler[type(exception)]
-        except KeyError:
-            pass
-        else:
+        message = self.handler.get(type(exception))
+        if message:
             return await ctx.send(message.format(exception=exception, command_name=ctx.command.qualified_name))
 
-        ignored = (commands.CommandNotFound, commands.UserInputError, commands.CheckFailure)
-        if isinstance(exception, ignored):
+        if isinstance(exception, self.ignored):
             return
 
         embed = discord.Embed(title=f'Command Exception', color=discord.Color.red())
