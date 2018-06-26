@@ -326,7 +326,11 @@ class Xenoblade2:
                     field_skills,
                     favorite_items,
                     favorite_categories,
-                    blade_arts
+                    blade_arts,
+                    CASE WHEN stat IS NOT NULL
+                         THEN '+' || mod || '%' || ' ' || stat
+                         ELSE 'None'
+                    END AS stat_mod
                 FROM xeno2.blades
                 JOIN battle_skills
                 ON name=battle_skills.blade
@@ -338,6 +342,8 @@ class Xenoblade2:
                 ON name=favorite_categories.blade
                 LEFT JOIN blade_arts
                 ON name=blade_arts.blade
+                LEFT JOIN xeno2.blade_stat_mods
+                ON name=blade_stat_mods.blade
                 WHERE LOWER(name)=$1;
                 """
 
@@ -346,7 +352,7 @@ class Xenoblade2:
         if record is None:
             return await ctx.invoke(self.xc2blade_search, name=name)
 
-        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, battle_skills, field_skills, favorite_items, favorite_categories, blade_arts = record
+        name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, battle_skills, field_skills, favorite_items, favorite_categories, blade_arts, stat_mod = record
 
         embed = discord.Embed(title=name)
         embed.add_field(name='Gender', value=gender)
@@ -355,6 +361,7 @@ class Xenoblade2:
         embed.add_field(name='Element', value=element)
         embed.add_field(name='Aux Core Slots', value=aux_cores)
         embed.add_field(name='Defenses', value=f'Physical Defense: {phys_def}%\nEther Defense: {ether_def}%')
+        embed.add_field(name='Stat Mod', value=stat_mod)
         embed.add_field(name='Voice Actors', value=voice_actor)
         embed.add_field(name='Illustrator', value=illustrator)
         embed.add_field(name='Mercenary Name', value=merc_name)
