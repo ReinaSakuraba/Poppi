@@ -273,6 +273,19 @@ CREATE TABLE xeno2.blade_skill_enhance (
 ALTER TABLE xeno2.blade_skill_enhance OWNER TO poppi;
 
 --
+-- Name: blade_specials; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_specials (
+    blade text NOT NULL,
+    level smallint NOT NULL,
+    special text
+);
+
+
+ALTER TABLE xeno2.blade_specials OWNER TO poppi;
+
+--
 -- Name: blade_stat_mods; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -6742,6 +6755,167 @@ Unwavering Courage	2	3615
 Unwavering Courage	3	3616
 Unwavering Courage	4	3617
 Unwavering Courage	5	3618
+\.
+
+
+--
+-- Data for Name: blade_specials; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_specials (blade, level, special) FROM stdin;
+Pyra	1	Flame Nova
+Pyra	2	Prominence Revolt
+Pyra	3	Blazing End
+Mythra	1	Ray of Punishment
+Mythra	2	Photon Edge
+Mythra	3	Lightning Buster
+Pneuma	1	Starburst
+Pneuma	2	Radiant Flare
+Pneuma	3	Genesis Saber
+Dromarch	1	Raging Tiger
+Dromarch	2	Aqua Wave
+Dromarch	3	Wild Roar
+Poppi α	1	Poppi Spinning Slash
+Poppi α	2	Noponic Storm
+Poppi α	3	Poppi Drill
+Poppi QT	1	Poppi Missile
+Poppi QT	2	Poppi Crushing Blow
+Poppi QT	3	Noponic Destruction
+Poppi QTπ	1	Poppi Ignition
+Poppi QTπ	2	Noponic Axion
+Poppi QTπ	3	Poppi Unlimited
+Roc	1	Death Wing
+Roc	2	Crushing Twister
+Roc	3	Feather Typhoon
+Brighid	1	Heat Haze
+Brighid	2	Will-o'-the-Wisp
+Brighid	3	Swirling Dragon
+Pandoria	1	Lightning Force
+Pandoria	2	Electric Circus
+Pandoria	3	Thunder Doom
+Nia	1	Last Hope
+Nia	2	Merciful Heart
+Nia	3	Redeeming Strike
+Aegaeon	1	Water Moon
+Aegaeon	2	Breaking Wave
+Aegaeon	3	Midnight Mist
+Godfrey	1	Tough Break
+Godfrey	2	Cold Judgment
+Godfrey	3	Justice Blizzard
+Wulfric	1	Brutal Lance
+Wulfric	2	Termination Blast
+Wulfric	3	Hellbound
+Perceval	1	Dark Serpent
+Perceval	2	Blade Vortex
+Perceval	3	Grim Moon
+Vale	1	Blood Altar
+Vale	2	Tainted Palace
+Vale	3	Accursed Prison
+Agate	1	Heliodor Passion
+Agate	2	Star Beryl Courage
+Agate	3	Rhodochrosite Might
+Gorg	1	Innocent Teardrop
+Gorg	2	Bittersweet Dreams
+Gorg	3	Leave Me Alone
+Boreas	1	Open Wide!
+Boreas	2	Snack On This!
+Boreas	3	Gobble 'em Up!
+Dagas	1	Flame Crown
+Dagas	2	Tyrant Crush
+Dagas	3	Kaiser Flare
+Dagas (Weak)	1	Flame Crown (Weak)
+Dagas (Weak)	2	Tyrant Crush (Weak)
+Dagas (Weak)	3	Kaiser Flare (Weak)
+Kasandra	1	Sentimental Burst
+Kasandra	2	Hidden Emotion
+Kasandra	3	Secret Desire
+Praxis	1	Foam Blast
+Praxis	2	Geyser Spring
+Praxis	3	Fierce Deluge
+Theory	1	Ice Slash
+Theory	2	Frost Banish
+Theory	3	Rebel Sister
+Perun	1	Cold Sever
+Perun	2	Punishment Strike
+Perun	3	Extinction Icicle
+Kora	1	Electric Pompom
+Kora	2	Vivid Love
+Kora	3	Angelic Drop
+Azami	1	Nightmare Rondeau
+Azami	2	Shadow Rhapsody
+Azami	3	Decadent Finale
+Ursula	1	Beary Strong
+Ursula	2	Beary Helpful
+Ursula	3	Beary-Go-Round
+Newt	1	Flaming Slashwave
+Newt	2	Immolating Cleave
+Newt	3	Extreme Gutsy Spirit
+Nim	1	Fierce Healer
+Nim	2	Wild Grappler
+Nim	3	Organic Automata
+Sheba	1	Dessert Bomb
+Sheba	2	Tea Leaves
+Sheba	3	Golden Font
+Vess	1	Healing Bolt
+Vess	2	Ball Lightning
+Vess	3	Thunderstrike
+Adenine	1	Harness the Wind
+Adenine	2	Slipstream
+Adenine	3	Mortal Storm
+Electra	1	Bang-Bang Bound
+Electra	2	Shocking Assault
+Electra	3	Rolling Thunder
+Zenobia	1	Diabolic Zephyr
+Zenobia	2	Adamantine Axe
+Zenobia	3	Ascension Blade
+Finch	1	Blast of Fresh Air
+Finch	2	Whoopsie Crazy
+Finch	3	Wake-Up Whirl
+Floren	1	Lavender Drive
+Floren	2	Lilium Dance
+Floren	3	Physalis Judgment
+KOS-MOS	1	R-Blade
+KOS-MOS	2	H-Effect R
+KOS-MOS	3	F-G-Shot
+Herald	1	Empyrean Salvo
+Herald	2	The Heavens Open
+Herald	3	Final Retribution
+Dahlia	1	Crystal Blizzard
+Dahlia	2	Snowblind
+Dahlia	3	Frost Queen
+Sever	1	Storm Edge
+Sever	2	Engrave
+Sever	3	Death Match
+Akhos	1	White Wave
+Akhos	2	Sacred Wyrm
+Akhos	3	Dark Judgment
+Patroka	1	Swallow's Flight
+Patroka	2	Great Garland
+Patroka	3	Dragonfly Slash
+Mikhail	1	Crow Beat
+Mikhail	2	Crow Feather
+Mikhail	3	Final Crow
+Obrona	1	Shred
+Obrona	2	Skewer
+Obrona	3	Cruel World
+Perdido	1	Diamond Crash
+Perdido	2	Diamond Flight
+Perdido	3	Diamond Hands
+Cressidus	1	Dead Ball
+Cressidus	2	Berserk March
+Cressidus	3	Earth Breath
+T-elos	1	ECHIDNA
+T-elos	2	MAGDALENE 16
+T-elos	3	T-SKYLLA
+Poppibuster	1	Buster Cyclone
+Poppibuster	2	Buster Cannon
+Poppibuster	3	Buster Mirage
+Shulk	1	Monado Purge
+Shulk	2	Monado Cyclone
+Shulk	3	Monado Buster
+Fiora	1	Hidden Thorn
+Fiora	2	Power Smash
+Fiora	3	Lacerate
 \.
 
 
@@ -61804,6 +61978,14 @@ ALTER TABLE ONLY xeno2.blade_skill_enhance
 
 
 --
+-- Name: blade_specials_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_specials
+    ADD CONSTRAINT blade_specials_pkey PRIMARY KEY (blade, level);
+
+
+--
 -- Name: blade_stat_mods_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -62224,6 +62406,22 @@ ALTER TABLE ONLY xeno2.blade_skill_enhance
 
 ALTER TABLE ONLY xeno2.blade_skill_enhance
     ADD CONSTRAINT blade_skill_enhance_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
+
+
+--
+-- Name: blade_specials_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_specials
+    ADD CONSTRAINT blade_specials_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
+
+
+--
+-- Name: blade_specials_special_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_specials
+    ADD CONSTRAINT blade_specials_special_fkey FOREIGN KEY (special) REFERENCES xeno2.specials(name);
 
 
 --
