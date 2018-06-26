@@ -364,22 +364,23 @@ class Xenoblade2:
         name, gender, race, weapon, element, aux_cores, phys_def, ether_def, voice_actor, illustrator, merc_name, blade_specials, battle_skills, field_skills, favorite_items, favorite_categories, blade_arts, stat_mod = record
 
         embed = discord.Embed(title=name)
+
         embed.add_field(name='Gender', value=gender)
         embed.add_field(name='Race', value=race)
         embed.add_field(name='Weapon', value=weapon)
         embed.add_field(name='Element', value=element)
         embed.add_field(name='Aux Core Slots', value=aux_cores)
-        embed.add_field(name='Defenses', value=f'Physical Defense: {phys_def}%\nEther Defense: {ether_def}%')
         embed.add_field(name='Stat Mod', value=stat_mod)
+        embed.add_field(name='Defenses', value=f'Physical Defense: {phys_def}%\nEther Defense: {ether_def}%', inline=False)
+        embed.add_field(name='Specials', value=blade_specials)
+        embed.add_field(name='Battle Skills', value=battle_skills)
+        embed.add_field(name='Field Skills', value=field_skills)
+        embed.add_field(name='Blade Arts', value=blade_arts)
+        embed.add_field(name='Favorite Pouch Items', value=favorite_items)
+        embed.add_field(name='Favorite Pouch Categories', value=favorite_categories)
         embed.add_field(name='Voice Actors', value=voice_actor)
         embed.add_field(name='Illustrator', value=illustrator)
         embed.add_field(name='Mercenary Name', value=merc_name)
-        embed.add_field(name='Specials', value=blade_specials, inline=False)
-        embed.add_field(name='Battle Skills', value=battle_skills, inline=False)
-        embed.add_field(name='Field Skills', value=field_skills or 'None', inline=False)
-        embed.add_field(name='Favorite Pouch Items', value=favorite_items or 'None')
-        embed.add_field(name='Favorite Pouch Categories', value=favorite_categories or 'None')
-        embed.add_field(name='Blade Arts', value=blade_arts or 'None')
 
         await ctx.send(embed=embed)
 
