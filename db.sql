@@ -273,6 +273,19 @@ CREATE TABLE xeno2.blade_skill_enhance (
 ALTER TABLE xeno2.blade_skill_enhance OWNER TO poppi;
 
 --
+-- Name: blade_stat_mods; Type: TABLE; Schema: xeno2; Owner: poppi
+--
+
+CREATE TABLE xeno2.blade_stat_mods (
+    blade text NOT NULL,
+    stat text NOT NULL,
+    mod smallint NOT NULL
+);
+
+
+ALTER TABLE xeno2.blade_stat_mods OWNER TO poppi;
+
+--
 -- Name: blades; Type: TABLE; Schema: xeno2; Owner: poppi
 --
 
@@ -6729,6 +6742,61 @@ Unwavering Courage	2	3615
 Unwavering Courage	3	3616
 Unwavering Courage	4	3617
 Unwavering Courage	5	3618
+\.
+
+
+--
+-- Data for Name: blade_stat_mods; Type: TABLE DATA; Schema: xeno2; Owner: poppi
+--
+
+COPY xeno2.blade_stat_mods (blade, stat, mod) FROM stdin;
+Pyra	Strength	10
+Mythra	Ether	10
+Dromarch	Ether	10
+Roc	Dexterity	15
+Brighid	Agility	15
+Pandoria	Strength	10
+Nia	Max HP	15
+Aegaeon	Agility	15
+Godfrey	Max HP	15
+Wulfric	Strength	15
+Perceval	Agility	10
+Vale	Ether	15
+Agate	Dexterity	10
+Gorg	Max HP	15
+Boreas	Max HP	15
+Dagas	Strength	10
+Dagas (Weak)	Strength	5
+Kasandra	Max HP	15
+Praxis	Dexterity	10
+Theory	Agility	15
+Perun	Dexterity	10
+Kora	Ether	10
+Azami	Ether	15
+Ursula	Agility	10
+Newt	Max HP	20
+Nim	Dexterity	10
+Sheba	Ether	15
+Vess	Max HP	10
+Adenine	Dexterity	15
+Electra	Max HP	15
+Zenobia	Strength	15
+Finch	Agility	15
+Floren	Ether	10
+KOS-MOS	Ether	20
+Herald	Strength	15
+Dahlia	Dexterity	10
+Sever	Strength	15
+Akhos	Ether	15
+Patroka	Strength	15
+Mikhail	Agility	15
+Obrona	Agility	20
+Perdido	Strength	10
+Cressidus	Max HP	20
+T-elos	Strength	15
+Poppibuster	Agility	15
+Shulk	Ether	20
+Fiora	Strength	15
 \.
 
 
@@ -61736,6 +61804,14 @@ ALTER TABLE ONLY xeno2.blade_skill_enhance
 
 
 --
+-- Name: blade_stat_mods_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_stat_mods
+    ADD CONSTRAINT blade_stat_mods_pkey PRIMARY KEY (blade);
+
+
+--
 -- Name: blades_pkey; Type: CONSTRAINT; Schema: xeno2; Owner: poppi
 --
 
@@ -62148,6 +62224,14 @@ ALTER TABLE ONLY xeno2.blade_skill_enhance
 
 ALTER TABLE ONLY xeno2.blade_skill_enhance
     ADD CONSTRAINT blade_skill_enhance_skill_fkey FOREIGN KEY (skill) REFERENCES xeno2.battle_skills(name);
+
+
+--
+-- Name: blade_stat_mods_blade_fkey; Type: FK CONSTRAINT; Schema: xeno2; Owner: poppi
+--
+
+ALTER TABLE ONLY xeno2.blade_stat_mods
+    ADD CONSTRAINT blade_stat_mods_blade_fkey FOREIGN KEY (blade) REFERENCES xeno2.blades(name);
 
 
 --
