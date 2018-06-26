@@ -336,7 +336,7 @@ class Xenoblade2:
                 ON name=favorite_items.blade
                 LEFT JOIN favorite_categories
                 ON name=favorite_categories.blade
-                JOIN blade_arts
+                LEFT JOIN blade_arts
                 ON name=blade_arts.blade
                 WHERE LOWER(name)=$1;
                 """
