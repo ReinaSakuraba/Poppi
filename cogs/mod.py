@@ -148,7 +148,7 @@ class Mod:
 
         await ctx.send(f'{user.display_name} has been globally unbanned from using the bot.')
 
-    @utils.group(invoke_without_command=True)
+    @utils.group()
     @utils.mod_or_permissions(manage_channels=True)
     async def ignore(self, ctx):
         """Handles the bot's ignore lists.
@@ -158,10 +158,12 @@ class Mod:
         to be used in a private message context. Users with Manage
         Guild or Mod role can still invoke the bot in ignored channels.
         """
-        pass
+
+        if ctx.invoked_subcommand is None:
+            help_cmd = ctx.bot.get_command('help')
+            await ctx.invoke(help_cmd, 'ignore')
 
     @ignore.command(name='channel')
-    @utils.mod_or_permissions(manage_channels=True)
     async def ignore_channel(self, ctx, *, channel: discord.TextChannel = None):
         """Ignores a specific channel from being processed.
 
@@ -186,7 +188,6 @@ class Mod:
         await ctx.send(f'{channel.name} is now being ignored in this server.')
 
     @ignore.command(name='all')
-    @utils.mod_or_permissions(manage_channels=True)
     async def ignore_all(self, ctx):
         """Ignores all channels in this server from being processed."""
 
@@ -205,7 +206,6 @@ class Mod:
         await ctx.send('All channels are now being ignored.')
 
     @ignore.command(name='list')
-    @utils.mod_or_permissions(manage_channels=True)
     async def ignore_list(self, ctx):
         """Tells you what channels are currently ignored in this server."""
 
