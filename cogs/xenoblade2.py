@@ -341,7 +341,7 @@ class Xenoblade2:
                     blade_arts,
                     CASE WHEN stat IS NOT NULL
                          THEN '+' || mod || '%' || ' ' || stat
-                         ELSE 'None'
+                         ELSE NULL
                     END AS stat_mod
                 FROM xeno2.blades
                 JOIN blade_specials
