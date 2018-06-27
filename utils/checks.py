@@ -63,8 +63,8 @@ def mod_or_permissions(**perms):
 
 def requires_starboard():
     async def predicate(ctx):
-        if ctx.guild is None:
-            return False
+        if not isinstance(ctx.channel, discord.abc.GuildChannel):
+            raise commands.NoPrivateMessage
 
         query = "SELECT 1 FROM starboards WHERE guild_id=$1;"
         exists = await ctx.pool.fetchval(query, ctx.guild.id)
