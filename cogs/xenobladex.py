@@ -221,15 +221,41 @@ class XenobladeX:
         """Gives you information about an augment."""
 
         query = """
+                WITH augment_create AS (
+                    SELECT
+                        augment_create.name,
+                        STRING_AGG(
+                            CASE WHEN tickets != 0 THEN amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)'
+                                 ELSE amount || ' ' || items.name
+                            END, E'\n') || E'\n' ||
+                        '(' || SUM(amount * tickets) || ' Total Tickets)' AS create_materials
+                    FROM xenox.augment_create
+                    JOIN xenox.items
+                    ON augment_create.material = items.name
+                    GROUP BY augment_create.name
+                ), augment_upgrade AS (
+                    SELECT
+                        augment_upgrade.name,
+                        STRING_AGG(amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)', E'\n') ||
+                        E'\n' || '(' || SUM(amount * tickets) || ' Total Tickets)' AS upgrade_materials
+                    FROM xenox.augment_upgrade
+                    JOIN xenox.items
+                    ON augment_upgrade.material = items.name
+                    GROUP BY augment_upgrade.name
+                )
                 SELECT
                     augments.name,
                     effect,
-                    rarity,
                     sell_price,
-                    miranium
+                    rarity,
+                    miranium,
+                    create_materials,
+                    upgrade_materials
                 FROM xenox.augments
-                JOIN xenox.affixes
-                ON augments.name = affixes.name
+                LEFT JOIN augment_create
+                ON augments.name=augment_create.name
+                LEFT JOIN augment_upgrade
+                ON augments.name=augment_upgrade.name
                 WHERE LOWER(augments.name)=$1;
                 """
 
@@ -238,34 +264,7 @@ class XenobladeX:
         if record is None:
             return await self.show_possibilities(ctx, 'augments', name)
 
-        name, effect, rarity, price, miranium = record
-
-        query = """
-                SELECT
-                    STRING_AGG(
-                        CASE WHEN tickets != 0 THEN amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)'
-                             ELSE amount || ' ' || items.name
-                        END, E'\n') || E'\n' ||
-                    '(' || SUM(amount * tickets) || ' Total Tickets)'
-                FROM xenox.augment_create
-                JOIN xenox.items
-                ON augment_create.material = items.name
-                WHERE augment_create.name = $1;
-                """
-
-        created = await ctx.pool.fetchval(query, name)
-
-        query = """
-                SELECT
-                    STRING_AGG(amount || ' ' || items.name  || ' (' || amount * tickets || ' Tickets)', E'\n') ||
-                    E'\n' || '(' || SUM(amount * tickets) || ' Total Tickets)'
-                FROM xenox.augment_upgrade
-                JOIN xenox.items
-                ON augment_upgrade.material = items.name
-                WHERE augment_upgrade.name = $1;
-                """
-
-        upgrade = await ctx.pool.fetchval(query, name)
+        name, effect, price, rarity, miranium, created, upgrade = record
 
         embed = discord.Embed(title=name, color=self.colors[rarity], description=effect)
 
