@@ -106,8 +106,9 @@ class Stars:
         if channel is None:
             return await ctx.send('Message\'s channel was deleted.')
 
-        message = await channel.get_message(message_id)
-        if message is None:
+        try:
+            message = await channel.get_message(message_id)
+        except discord.NotFound:
             return await ctx.send('Original message was deleted.')
 
         content, embed = self.create_post(message, stars)
@@ -311,9 +312,9 @@ class Stars:
         if channel is None:
             return await ctx.send('Message\'s channel was deleted. Please retry.')
 
-        message = await channel.get_message(message_id)
-
-        if message is None:
+        try:
+            message = await channel.get_message(message_id)
+        except discord.NotFound:
             return await ctx.send('Original message was deleted. Please retry.')
 
         content, embed = self.create_post(message, stars)
@@ -367,9 +368,9 @@ class Stars:
 
             return await self.star_message(chan, record['message_id'], user_id)
 
-        message = await channel.get_message(message_id)
-
-        if message is None:
+        try:
+            message = await channel.get_message(message_id)
+        except discord.NotFound:
             return
 
         if (len(message.content) == 0 and len(message.attachments) == 0) or message.type is not discord.MessageType.default:
@@ -416,7 +417,10 @@ class Stars:
             query = "UPDATE starboard_entries SET bot_message_id=$1 WHERE message_id=$2;"
             await self.bot.pool.execute(query, new_msg.id, message.id)
         else:
-            new_msg = await star_channel.get_message(bot_message_id)
+            try:
+                new_msg = await star_channel.get_message(bot_message_id)
+            except discord.NotFound:
+                return
             await new_msg.edit(content=content, embed=embed)
 
     async def unstar_message(self, channel, message_id, user_id):
@@ -466,8 +470,9 @@ class Stars:
         if bot_message_id is None:
             return
 
-        bot_message = await star_channel.get_message(bot_message_id)
-        if bot_message is None:
+        try:
+            bot_message = await star_channel.get_message(bot_message_id)
+        except discord.NotFound:
             return
 
         if stars < starboard['threshold']:
@@ -475,8 +480,9 @@ class Stars:
             await self.bot.pool.execute(query, message_id)
             await bot_message.delete()
         else:
-            msg = await channel.get_message(message_id)
-            if msg is None:
+            try:
+                msg = await channel.get_message(message_id)
+            except discord.NotFound:
                 return
 
             content, embed = self.create_post(msg, stars)
