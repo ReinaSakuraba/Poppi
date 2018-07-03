@@ -5,3 +5,4 @@ game = '@Poppi help' # The game status to be set
 prefix = '&' # The default command prefix
 feedback_channel = 123456789123456 # The channel to send feedback and error logs to
 youtube_key = '' # The YouTube API key to be used for YouTube commands
+apixu_key = '' # The apixu API key used for the weather command
