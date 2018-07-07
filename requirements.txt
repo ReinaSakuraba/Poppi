@@ -7,3 +7,4 @@ youtube_dl
 pillow
 click
 yarl<1.2
+html2text
