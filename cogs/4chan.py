@@ -1,5 +1,7 @@
 import random
+import datetime
 
+import discord
 from discord.ext import commands
 import html2text
 from discord.ext.commands.cooldowns import BucketType
@@ -19,14 +21,14 @@ class Chan:
 
             data = await r.json()
 
-        await ctx.send(self.get_random_post(data))
+        await ctx.send(embed=self.get_random_post(data, board))
 
     @four_chan.error
     async def four_chan_error(self, ctx, exception):
         if isinstance(exception, commands.CommandOnCooldown):
             await ctx.send(exception)
 
-    def get_random_post(self, data):
+    def get_random_post(self, data, board):
         thread = random.choice(data['threads'])
         post = random.choice(thread['posts'])
         comment = post.get('com')
@@ -34,7 +36,25 @@ class Chan:
         if comment is None:
             return self.get_random_post(data)
 
-        return self.parser.handle(comment)
+        no = post['no']
+        resto = post['resto'] if post['resto'] != 0 else no
+
+        embed = discord.Embed()
+        embed.description = self.parser.handle(comment)
+        embed.set_author(name=post['name'])
+        embed.timestamp = datetime.datetime.fromtimestamp(post['time'])
+        embed.title = f'No. {no}'
+        embed.url = f'https://boards.4chan.org/{board}/thread/{resto}#p{no}'
+
+        try:
+            filename = f'{post["tim"]}{post["ext"]}'
+            fileurl = f'https://i.4cdn.org/{board}/{filename}'
+        except KeyError:
+            pass
+        else:
+            embed.add_field(name='Attachment', value=fileurl)
+
+        return embed
 
 
 def setup(bot):
