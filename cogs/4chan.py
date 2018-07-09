@@ -34,7 +34,7 @@ class Chan:
         comment = post.get('com')
 
         if comment is None:
-            return self.get_random_post(data)
+            return self.get_random_post(data, board)
 
         no = post['no']
         resto = post['resto'] if post['resto'] != 0 else no
