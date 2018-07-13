@@ -47,12 +47,12 @@ class Chan:
         embed.url = f'https://boards.4chan.org/{board}/thread/{resto}#p{no}'
 
         try:
-            filename = f'{post["tim"]}{post["ext"]}'
-            fileurl = f'https://i.4cdn.org/{board}/{filename}'
+            filename = f'{post["filename"]}{post["ext"]}'
+            fileurl = f'https://i.4cdn.org/{board}/{post["tim"]}{post["ext"]}'
         except KeyError:
             pass
         else:
-            embed.add_field(name='Attachment', value=fileurl)
+            embed.add_field(name='Attachment', value=f'[{filename}]({fileurl})')
 
         return embed
 
