@@ -36,11 +36,16 @@ class Chan:
         if comment is None:
             return self.get_random_post(data, board)
 
+        parsed_comment = self.parser.handle(comment)
+
+        if len(parsed_comment) > 2000:
+            return self.get_random_post(data, board)
+
         no = post['no']
         resto = post['resto'] if post['resto'] != 0 else no
 
         embed = discord.Embed()
-        embed.description = self.parser.handle(comment)
+        embed.description = parsed_comment
         embed.set_author(name=post['name'])
         embed.timestamp = datetime.datetime.fromtimestamp(post['time'])
         embed.title = f'No. {no}'
