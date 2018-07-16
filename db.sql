@@ -892,19 +892,22 @@ CREATE TABLE xenox.class_skills (
 ALTER TABLE xenox.class_skills OWNER TO poppi;
 
 --
--- Name: class_stats; Type: TABLE; Schema: xenox; Owner: poppi
+-- Name: class_stats; Type: VIEW; Schema: xenox; Owner: poppi
 --
 
-CREATE TABLE xenox.class_stats (
-    class text NOT NULL,
-    hp numeric(3,2) NOT NULL,
-    macc numeric(3,2) NOT NULL,
-    racc numeric(3,2) NOT NULL,
-    matk numeric(3,2) NOT NULL,
-    ratk numeric(3,2) NOT NULL,
-    eva numeric(3,2) NOT NULL,
-    pot numeric(3,2) NOT NULL
-);
+CREATE VIEW xenox.class_stats AS
+ SELECT DISTINCT COALESCE(class_names.name, party_member_names.name) AS class,
+    class_info."HpMaxCoe" AS hp,
+    class_info."DexFightCoe" AS macc,
+    class_info."DexShootCoe" AS racc,
+    class_info."DodgeCoe" AS eva,
+    class_info."PowFightCoe" AS matk,
+    class_info."PowShootCoe" AS ratk,
+    class_info."PowMindCoe" AS pot
+   FROM (((xbx.chr_classinfo class_info
+     LEFT JOIN xbx.chr_classlist_ms class_names ON (((class_info.row_id <= 16) AND (class_info."Name" = class_names.row_id))))
+     LEFT JOIN xbx.def_pclist party_members ON (((class_info.row_id >= 17) AND (party_members."ClassType" = class_info.row_id))))
+     LEFT JOIN xbx.def_pclist_ms party_member_names ON ((party_members."Name" = party_member_names.row_id)));
 
 
 ALTER TABLE xenox.class_stats OWNER TO poppi;
@@ -34486,48 +34489,6 @@ Mia	Tactical Analyst	17
 
 
 --
--- Data for Name: class_stats; Type: TABLE DATA; Schema: xenox; Owner: poppi
---
-
-COPY xenox.class_stats (class, hp, macc, racc, matk, ratk, eva, pot) FROM stdin;
-Drifter	1.00	1.00	1.00	1.00	1.00	1.00	1.00
-Striker	1.10	0.95	1.00	1.20	0.90	1.15	0.65
-Samurai Gunner	1.20	1.00	1.10	1.15	1.05	1.15	0.75
-Duelist	1.25	1.05	1.00	1.25	1.20	1.00	0.85
-Shield Trooper	1.40	0.95	1.00	1.40	1.00	1.00	0.60
-Bastion Warrior	1.50	0.95	1.05	1.60	1.10	1.05	0.70
-Commando	0.85	1.10	1.10	0.90	1.00	1.30	0.90
-Winged Viper	0.95	1.15	1.15	0.95	1.10	1.35	1.00
-Full Metal Jaguar	1.00	1.20	1.20	1.00	1.15	1.40	1.10
-Partisan Eagle	1.00	1.05	1.10	1.05	1.30	1.05	0.90
-Astral Crusader	1.10	1.10	1.05	1.10	1.60	1.10	1.00
-Enforcer	0.75	0.95	1.00	0.80	1.20	1.00	1.25
-Psycorruptor	0.80	0.95	1.10	0.85	1.40	1.05	1.40
-Mastermind	0.90	1.00	1.10	0.90	1.30	1.10	1.60
-Blast Fencer	1.10	1.00	1.00	1.10	1.10	1.05	1.10
-Galactic Knight	1.20	1.10	1.05	1.20	1.20	1.10	1.20
-Nagi	1.25	1.05	1.00	1.25	1.20	1.00	0.85
-L	1.40	0.95	1.00	1.40	1.00	1.00	0.60
-Lao	1.20	1.05	1.10	1.05	1.30	1.20	0.90
-H.B.	1.40	0.95	1.00	1.40	1.00	1.00	0.60
-Gwin	1.20	1.00	1.10	1.15	1.05	1.15	0.75
-Frye	1.20	1.00	1.10	1.15	1.05	1.15	0.75
-Doug	1.10	1.00	1.00	1.10	1.10	1.05	1.10
-Yelv	1.10	1.00	1.00	1.10	1.10	1.05	1.10
-Boze	1.00	1.05	1.10	1.05	1.30	1.05	0.90
-Phog	0.95	1.15	1.15	0.95	1.10	1.35	1.00
-Elma	1.15	1.15	1.15	0.95	1.10	1.35	1.60
-Lin	1.40	0.95	1.00	1.40	1.00	1.00	0.60
-Celica	0.80	0.95	1.10	0.85	1.40	1.05	1.40
-Irina	0.80	0.95	1.10	0.85	1.40	1.05	1.40
-Murderess	0.95	1.00	1.00	1.00	1.00	1.00	1.00
-Alexa	1.00	1.05	1.10	1.05	1.30	1.05	0.90
-Hope	0.80	1.00	1.00	1.00	1.00	1.00	1.00
-Mia	0.80	0.95	1.10	0.85	1.40	1.05	1.40
-\.
-
-
---
 -- Data for Name: classes; Type: TABLE DATA; Schema: xenox; Owner: poppi
 --
 
@@ -35539,14 +35500,6 @@ ALTER TABLE ONLY xenox.class_skills
 
 
 --
--- Name: class_stats_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
---
-
-ALTER TABLE ONLY xenox.class_stats
-    ADD CONSTRAINT class_stats_pkey PRIMARY KEY (class);
-
-
---
 -- Name: classes_pkey; Type: CONSTRAINT; Schema: xenox; Owner: poppi
 --
 
@@ -35919,14 +35872,6 @@ ALTER TABLE ONLY xenox.class_skills
 
 ALTER TABLE ONLY xenox.class_skills
     ADD CONSTRAINT class_skills_skill_fkey FOREIGN KEY (skill) REFERENCES xenox.skills(name);
-
-
---
--- Name: class_stats_class_fkey; Type: FK CONSTRAINT; Schema: xenox; Owner: poppi
---
-
-ALTER TABLE ONLY xenox.class_stats
-    ADD CONSTRAINT class_stats_class_fkey FOREIGN KEY (class) REFERENCES xenox.classes(name);
 
 
 --
