@@ -399,14 +399,14 @@ class XenobladeX:
         if record is None:
             return await self.show_possibilities(ctx, 'classes', name)
 
-        hp = math.floor(((((10000 - 250) / (99 - 1)) * (level - 1)) + 250) * float(record['hp']))
+        hp = math.floor(((((10000 - 250) / (99 - 1)) * (level - 1)) + 250) * record['hp'] / 100)
         tp = 3000
-        racc = math.floor(((((360 - 105) / (99 - 1)) * (level - 1)) + 105) * float(record['racc']))
-        macc = math.floor(((((370 - 104) / (99 - 1)) * (level - 1)) + 104) * float(record['macc']))
-        ratk = math.floor(((((80 - 14) / (99 - 1)) * (level - 1)) + 14) * float(record['ratk']))
-        matk = math.floor(((((120 - 18) / (99 - 1)) * (level - 1)) + 18) * float(record['matk']))
-        eva = math.floor(((((180 - 10) / (99 - 1)) * (level - 1)) + 10) * float(record['eva']))
-        pot = math.floor(((((100 - 10) / (99 - 1)) * (level - 1)) + 10) * float(record['pot']))
+        racc = math.floor(((((360 - 105) / (99 - 1)) * (level - 1)) + 105) * record['racc'] / 100)
+        macc = math.floor(((((370 - 104) / (99 - 1)) * (level - 1)) + 104) * record['macc'] / 100)
+        ratk = math.floor(((((80 - 14) / (99 - 1)) * (level - 1)) + 14) * record['ratk'] / 100)
+        matk = math.floor(((((120 - 18) / (99 - 1)) * (level - 1)) + 18) * record['matk'] / 100)
+        eva = math.floor(((((180 - 10) / (99 - 1)) * (level - 1)) + 10) * record['eva'] / 100)
+        pot = math.floor(((((100 - 10) / (99 - 1)) * (level - 1)) + 10) * record['pot'] / 100)
 
         fmt = f'```\nHP: {hp}\n' \
               f'TP: {tp}\n' \
@@ -449,13 +449,13 @@ class XenobladeX:
             return await self.show_possibilities(ctx, 'classes', name)
 
         name, melee, ranged, slots, max_level, hp, macc, racc, matk, ratk, eva, pot = record
-        stats = f'HP: {hp:0%}\n' \
-                f'Ranged Accuracy: {racc:0%}\n' \
-                f'Melee Accuracy: {macc:0%}\n' \
-                f'Ranged Attack: {ratk:0%}\n' \
-                f'Melee Attack: {matk:0%}\n' \
-                f'Evasion: {eva:0%}\n' \
-                f'Potential: {pot:0%}'
+        stats = f'HP: {hp}%\n' \
+                f'Ranged Accuracy: {racc}%\n' \
+                f'Melee Accuracy: {macc}%\n' \
+                f'Ranged Attack: {ratk}%\n' \
+                f'Melee Attack: {matk}%\n' \
+                f'Evasion: {eva}%\n' \
+                f'Potential: {pot}%'
 
         query = """
                 SELECT
