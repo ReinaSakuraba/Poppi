@@ -384,6 +384,9 @@ class XenobladeX:
 
         await ctx.send(fmt)
 
+    def calc_stats(self, stat_1, stat_99, level, stat_mod):
+        return math.floor(((((stat_99 - stat_1) / (99 - 1)) * (level - 1)) + stat_1) * stat_mod / 100)
+
     @commands.command()
     async def stat(self, ctx, level: int, *, name: str.lower = 'drifter'):
         """Calculates stats for a class."""
@@ -399,14 +402,14 @@ class XenobladeX:
         if record is None:
             return await self.show_possibilities(ctx, 'classes', name)
 
-        hp = math.floor(((((10000 - 250) / (99 - 1)) * (level - 1)) + 250) * record['hp'] / 100)
+        hp = self.calc_stats(250, 10000, level, record['hp'])
         tp = 3000
-        racc = math.floor(((((360 - 105) / (99 - 1)) * (level - 1)) + 105) * record['racc'] / 100)
-        macc = math.floor(((((370 - 104) / (99 - 1)) * (level - 1)) + 104) * record['macc'] / 100)
-        ratk = math.floor(((((80 - 14) / (99 - 1)) * (level - 1)) + 14) * record['ratk'] / 100)
-        matk = math.floor(((((120 - 18) / (99 - 1)) * (level - 1)) + 18) * record['matk'] / 100)
-        eva = math.floor(((((180 - 10) / (99 - 1)) * (level - 1)) + 10) * record['eva'] / 100)
-        pot = math.floor(((((100 - 10) / (99 - 1)) * (level - 1)) + 10) * record['pot'] / 100)
+        racc = self.calc_stats(105, 360, level, record['racc'])
+        macc = self.calc_stats(104, 370, level, record['macc'])
+        ratk = self.calc_stats(14, 80, level, record['ratk'])
+        matk = self.calc_stats(18, 120, level, record['matk'])
+        eva = self.calc_stats(10, 180, level, record['eva'])
+        pot = self.calc_stats(10, 100, level, record['pot'])
 
         fmt = f'```\nHP: {hp}\n' \
               f'TP: {tp}\n' \
