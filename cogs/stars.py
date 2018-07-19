@@ -520,8 +520,6 @@ class Stars:
         embed.description = message.content
         embed.timestamp = message.created_at
         embed.color = self.star_gradient_colour(stars)
-        embed.title = 'Jump URL'
-        embed.url = message.jump_url
 
         embed.set_author(name=message.author.display_name, icon_url=message.author.avatar_url_as(format='png'))
 
@@ -543,6 +541,8 @@ class Stars:
 
         if attachments:
             embed.add_field(name='Attachments', value='\n'.join(attachments))
+
+        embed.add_field(name='Jump To', value=message.jump_url, inline=True)
 
         return content, embed
 
