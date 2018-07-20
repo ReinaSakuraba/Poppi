@@ -1067,6 +1067,14 @@ class Xenoblade2:
         except Exception as e:
             await ctx.send(e)
 
+    @commands.command()
+    async def say(self, ctx):
+        """Says a random Poppi quote."""
+
+        query = """SELECT quote FROM poppi_quotes ORDER BY RANDOM() LIMIT 1;"""
+
+        await ctx.send(await ctx.pool.fetchval(query))
+
 
 def setup(bot: Bot):
     bot.add_cog(Xenoblade2())
