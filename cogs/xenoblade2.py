@@ -1068,7 +1068,7 @@ class Xenoblade2:
             await ctx.send(e)
 
     @commands.command()
-    async def say(self, ctx):
+    async def say(self, ctx: utils.Context):
         """Says a random Poppi quote."""
 
         query = """SELECT quote FROM poppi_quotes ORDER BY RANDOM() LIMIT 1;"""
