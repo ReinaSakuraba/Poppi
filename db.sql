@@ -32720,8 +32720,8 @@ COPY xeno2.weapon_filenames (id, filename) FROM stdin;
 395	wi_wp070101
 396	wi_wp070101
 397	wi_wp140901
-398	\N
-399	\N
+398	dlc24_wi_wp403011
+399	dlc24_wi_wp403011
 \.
 
 
