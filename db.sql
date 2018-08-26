@@ -26963,298 +26963,318 @@ COPY xeno2.enhance_captions (id, caption) FROM stdin;
 25	Counters Driver Arts with [ML:Enhance kind=Param1 ]% of physical damage and Blowdown.
 26	Restores [ML:Enhance kind=Param1 ]% HP of damage dealt after a successful auto-attack.
 27	Restores [ML:Enhance kind=Param1 ]% HP of damage dealt when a Driver Art connects.
-28	Restores [ML:Enhance kind=Param1 ]% HP of damage dealt when a Special connects.
-29	Restores [ML:Enhance kind=Param1 ]% HP each time an enemy is defeated.
-30	Absorbs [ML:Enhance kind=Param1 ]% of critical damage dealt as HP.
-31	Increases critical damage by [ML:Enhance kind=Param1 ]%.
-32	Adds a [ML:Enhance kind=Param1 ]% chance of attacking again after a successful auto-attack.
-33	Increases damage dealt from the front by [ML:Enhance kind=Param1 ]%.
-34	Increases damage dealt from the side by [ML:Enhance kind=Param1 ]%.
-35	Increases damage dealt from the back by [ML:Enhance kind=Param1 ]%.
-36	Increases damage dealt by a surprise attack by [ML:Enhance kind=Param1 ]%.
-37	Increases damage dealt to toppled enemies by [ML:Enhance kind=Param1 ]%.
-38	Increases damage dealt to launched enemies by [ML:Enhance kind=Param1 ]%.
-39	Increases smash damage by [ML:Enhance kind=Param1 ]%.
-40	Increases damage dealt to higher-level enemies by [ML:Enhance kind=Param1 ]%.
-41	Increases damage dealt when an ally is incapacitated by [ML:Enhance kind=Param1 ]%.
-42	Adds a [ML:Enhance kind=Param1 ]% chance of dealing a guard-annulling attack.
-43	Annuls reflect.
-44	Increases damage dealt by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or less.
-45	Increases damage dealt by [ML:Enhance kind=Param1 ]% [ML:Enhance ] seconds after the start of battle.
-46	Increases damage dealt for each enemy incapacitated by [ML:Enhance kind=Param1 ]% (max: [ML:Enhance ]%).
-47	Extends Break duration by [ML:Enhance kind=Param1 ]%.
-48	Extends Topple duration by [ML:Enhance kind=Param1 ]%.
-49	Extends Launch duration by [ML:Enhance kind=Param1 ]%.
-50	Increases auto-attack damage by [ML:Enhance kind=Param1 ]%.
-51	Increases damage dealt to enemies targeting user by [ML:Enhance kind=Param1 ]%.
-52	Increases damage dealt indoors by [ML:Enhance kind=Param1 ]%.
-53	Increases damage dealt outdoors by [ML:Enhance kind=Param1 ]%.
-54	Increases damage dealt per Blade Switch by [ML:Enhance kind=Param1 ]% (max: [ML:Enhance ]%).
-55	Increases damage dealt while Blade is the opposite gender by [ML:Enhance kind=Param1 ]%.
-56	Reduces enemy Topple resist by [ML:Enhance kind=Param1 ]%.
-57	Reduces enemy Launch resist by [ML:Enhance kind=Param1 ]%.
-58	On Block, gives [ML:Enhance kind=Param1 ]% chance to completely deflect enemy attack.
-59	Improves evasion by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or lower.
-60	Improves evasion by [ML:Enhance kind=Param1 ]% while moving.
-61	Boosts block rate by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or lower.
-62	Reduces damage from enemies within a 5m radius by [ML:Enhance kind=Param1 ]%.
-63	Reduces damage taken by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or lower.
-64	Increases damage dealt by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or higher.
-65	Reduces Spike damage taken by [ML:Enhance kind=Param1 ]%.
-66	Boosts Break resistance by [ML:Enhance kind=Param1 ]%.
-67	Boosts Topple resistance by [ML:Enhance kind=Param1 ]%.
-68	Boosts Launch resistance by [ML:Enhance kind=Param1 ]%.
-69	Boosts Smash resistance by [ML:Enhance kind=Param1 ]%.
-70	Boosts Blowdown resistance by [ML:Enhance kind=Param1 ]%.
-71	Boosts Knockback resistance by [ML:Enhance kind=Param1 ]%.
-72	Boosts resistance to defense annulling attacks by [ML:Enhance kind=Param1 ]%.
-73	Nullifies elemental effects from an enemy by [ML:Enhance kind=Param1 ]%.
-74	Reduces aggro drawn from auto-attacks by [ML:Enhance kind=Param1 ]%.
-75	Increases aggro drawn from auto-attacks by [ML:Enhance kind=Param1 ]%.
-76	Reduces aggro drawn from Specials and Driver Arts by [ML:Enhance kind=Param1 ]%.
-77	Reduces aggro drawn from Driver Arts by [ML:Enhance kind=Param1 ]%.
-78	Reduces aggro drawn from Specials by [ML:Enhance kind=Param1 ]%.
-79	Increases aggro drawn from Specials and Driver Arts by [ML:Enhance kind=Param1 ]%.
-80	Increases aggro drawn from Driver Arts by [ML:Enhance kind=Param1 ]%.
-81	Increases aggro drawn from Specials by [ML:Enhance kind=Param1 ]%.
-82	Increases aggro reduction by [ML:Enhance kind=Param1 ]%.
-83	Increases aggro by [ML:Enhance kind=Param1 ] every second.
-84	Increases aggro by [ML:Enhance kind=Param1 ] every second.
-85	Increases aggro by [ML:Enhance kind=Param1 ] every second.
-86	Increases aggro by [ML:Enhance kind=Param1 ] every second.
-87	Increases aggro by [ML:Enhance kind=Param1 ] every second.
-88	Lets you start each battle with some aggro already accumulated.
-89	Start each battle with [ML:Enhance kind=Param1 ] aggro.
-90	Start each battle with [ML:Enhance kind=Param1 ] aggro.
-91	Start each battle with [ML:Enhance kind=Param1 ] aggro.
-92	Start each battle with [ML:Enhance kind=Param1 ] aggro.
-93	Increases the HP restored when being revived by [ML:Enhance kind=Param1 ]%.
-94	Increases the HP restored when reviving a teammate by [ML:Enhance kind=Param1 ]%.
-95	Improves the effect of Healing Arts by [ML:Enhance kind=Param1 ]%.
-96	Increases HP restored to self (not using HP Potions) by [ML:Enhance kind=Param1 ]%.
-97	Boosts recharge for Specials after canceling by [ML:Enhance kind=Param1 ]%.
-98	Adds [ML:Enhance kind=Param1 ]% to damage ratio after canceling an auto-attack.
-99	[ML:Enhance kind=Param1 ]% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).
-100	Increases Accuracy during the night by [ML:Enhance kind=Param1 ]%.
-101	Increases Accuracy during the day by [ML:Enhance kind=Param1 ]%.
-102	Boosts experience received from defeating enemies by [ML:Enhance kind=Param1 ]%.
-103	Boosts WP received from defeating enemies by [ML:Enhance kind=Param1 ]%.
-104	Increases the strength of elemental effects user has inflicted by [ML:Enhance kind=Param1 ]%.
-105	Increases the duration of elemental effects user has inflicted by [ML:Enhance kind=Param1 ]%.
-106	Fills Party Gauge by [ML:Enhance kind=Param1 ] on "Excellent" Specials
-107	Fills Party Gauge by [ML:Enhance kind=Param1 ] on "Excellent" Specials.
-108	Fills Party Gauge by [ML:Enhance kind=Param1 ] on "Excellent" Specials.
-109	Fills the Party Gauge by [ML:Enhance kind=Param1 ] for each critical hit delivered.
-110	Fills the Party Gauge by [ML:Enhance kind=Param1 ] for each Driver Art used.
-111	[ML:Enhance kind=Param1 ]% more damage dealt for each enemy in the battle (max: [ML:Enhance ]%).
-112	Increases reflect damage by [ML:Enhance kind=Param1 ]%.
-113	Increases critical hit rate during a Chain Attack by [ML:Enhance kind=Param1 ]%.
-114	Heals [ML:Enhance kind=Param1 ]% HP each time a Chain Attack is initiated.
-115	Revives Driver each time a Chain Attack is initiated.
-116	Fills the Party Gauge by [ML:Enhance kind=Param1 ] at the end of each Chain Attack.
-117	Adds [ML:Enhance kind=Param1 ]m to the range of Ether Cannon.
-118	Restores [ML:Enhance kind=Param1 ]% HP to teammates when incapacitated.
-119	Increases damage dealt by [ML:Enhance kind=Param1 ]% for the first Driver Art per battle.
-120	[ML:Enhance kind=Param1 ]% chance to reset recharge for an enemy Art when a Special connects.
-121	Prevents deflections when an enemy guards an attack.
-122	Increases the enemy gold drop rate by [ML:Enhance kind=Param1 ]%.
-123	Increases the enemy item drop rate by [ML:Enhance kind=Param1 ]%.
-124	Increases the attack power of all weapon classes by [ML:Enhance kind=Param1 ]%.
-125	Prevents Affinity loss when a teammate falls in battle.
-126	Increases Affinity by [ML:Enhance kind=Param1 ]% after winning a Special button challenge.
-127	Increases Affinity by [ML:Enhance kind=Param1 ] when a fellow Driver misses an attack.
-128	Increases Affinity by [ML:Enhance kind=Param1 ] when a fellow Driver takes damage.
-129	Increases chance of triggering Blade Arts by [ML:Enhance kind=Param1 ]%.
-130	Increases Blade Arts duration time by [ML:Enhance kind=Param1 ]%.
-131	When Affinity reaches max, grant party damage barrier of [ML:Enhance kind=Param1 ]% of max HP.
-132	Increases damage dealt by [ML:Enhance kind=Param1 ]% when Affinity is at max.
-133	Increases evasion rate by [ML:Enhance kind=Param1 ]% when Affinity is at max.
-134	Increases Affinity by [ML:Enhance kind=Param1 ] when starting a battle with the initiative.
-135	Increases Affinity by [ML:Enhance kind=Param1 ] when the enemy starts with the initiative.
-136	Reduces the cooldown time for a Blade Switch by [ML:Enhance kind=Param1 ]%.
-137	Heals [ML:Enhance kind=Param1 ]% of party's HP upon performing a Blade Switch.
-138	Extends the range of Driver-Blade Affinity by [ML:Enhance kind=Param1 ]cm.
-139	Increases Lv [ML:Enhance kind=Param1 ] Special damage by [ML:Enhance kind=Param2 ]%.
-140	Adds a [ML:Enhance kind=Param1 ]% chance to create a small HP Potion for each connecting hit.
-141	Boosts the effect of HP Potions by [ML:Enhance kind=Param1 ]%.
-142	Special has [ML:Enhance kind=Param2 ]% chance to defeat non-boss foes with up to [ML:Enhance kind=Param1 ]% HP.
-143	Increases accuracy and evasion rate of team by [ML:Enhance kind=Param1 ]% at max Affinity.
-144	Can initiate elemental combo at random.
-145	Reduces Blade Combo damage received from enemies by [ML:Enhance kind=Param1 ]%.
-146	Adds [ML:Enhance kind=Param1 ]% to damage dealt for each attack Driver evades (max: [ML:Enhance ]%).
-147	Boosts Arts recharge by [ML:Enhance kind=Param1 ]% at max Affinity.
-148	Reduces aggro build-up from attacks by [ML:Enhance kind=Param1 ]%.
-149	Boosts physical and ether defense by [ML:Enhance kind=Param1 ]%.
-150	Adds [ML:Enhance kind=Param1 ]% chance for user to land perfect hits and evade enemy attacks.
-151	Adds [ML:Enhance kind=Param1 ]% chance to reflect attacks.
-152	After achieving max Affinity in combat, evade enemy attacks for [ML:Enhance kind=Param1 ] seconds.
-153	Increases damage dealt to toppled or launched enemies by [ML:Enhance kind=Param1 ]%.
-154	Adds [ML:Enhance kind=Param1 ]% chance to incapacitate enemy (fails on bosses and uniques).
-155	Reduces party damage taken by [ML:Enhance kind=Param1 ]% at max Affinity.
-156	Increases damage and AOE of party attacks by [ML:Enhance kind=Param1 ]% at max Affinity.
-157	Heals party for [ML:Enhance kind=Param1 ]% HP when defeating an enemy.
-158	Increases effectiveness of party healing by [ML:Enhance kind=Param1 ]% when at max Affinity.
-159	Slightly raises aggro every second and increases all attack aggro by [ML:Enhance kind=Param2 ]%.
-160	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% less damage if ally has low HP or is felled.
-161	[ML:Enhance kind=Param1 ]% chance to stop enemy moving for [ML:Enhance kind=Param2 ] secs after landing a Special.
-162	The lower the HP of the Driver, the more powerful the Special.
-163	Reduces severity of elemental effect inflicted by the enemy by [ML:Enhance kind=Param1 ]%.
-164	Adds [ML:Enhance kind=Param1 ]% chance to prevent reactions to enemy Driver Combos.
-165	Restores party's HP on starting Fusion Combo. Effect improves with difficulty.
-166	Increases attack power as gold is collected during battle (max: [ML:Enhance kind=Param2 ]%).
-167	Adds [ML:Enhance kind=Param1 ]% chance to drop gold upon landing a hit.
-168	Reduces recharge of enemies in battle by [ML:Enhance kind=Param1 ]% when at max Affinity.
-169	Increases damage dealt by [ML:Enhance kind=Param1 ]% when battling a boss or unique enemy.
-170	[ML:Enhance kind=Param1 ]% chance to not deplete recharge after a Driver Art or Special.
-171	Annuls enemy defense and increases Special damage dealt by [ML:Enhance kind=Param1 ]%.
-172	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% more damage when at max Affinity.
-173	Adds [ML:Enhance kind=Param1 ]% chance to annul defense.
-174	[ML:Enhance kind=Param1 ]% chance to flip enemy defense, granting more damage vs higher values.
-175	Increases damage dealt when elemental weakness exploited (affects all).
-176	Adds [ML:Enhance kind=Param1 ]% chance of Blowdown on enemy upon being attacked (affects all).
-177	Increases auto-attack speed by [ML:Enhance kind=Param1 ]%.
-178	Guarantees auto-attacks to hit twice and increases damage dealt by [ML:Enhance kind=Param1 ]%.
-179	Increases dmg dealt to toppled enemies by [ML:Enhance kind=Param1 ]%, extending Topple duration.
-180	Drains [ML:Enhance kind=Param1 ]% of current HP when using the Art. Evasion during Art.
-181	Reduces [ML:Enhance kind=Param1 ]% of aggro toward user upon landing a hit.
-182	Recharges Arts used by [ML:Enhance kind=Param1 ]% upon landing a critical hit.
-183	Recharges Art or Special used by [ML:Enhance kind=Param1 ]% upon landing a critical hit.
-184	Increases Affinity by [ML:Enhance kind=Param1 ] when using a Special.
-185	Reduces enemy Break resist by [ML:Enhance kind=Param1 ]%.
-186	Increases damage dealt by [ML:Enhance kind=Param1 ]% each time a Special is used (max: [ML:Enhance ]%)
-187	Adds [ML:Enhance kind=Param1 ]% chance of Knockback when attacked by an enemy.
-188	Increases accuracy by [ML:Enhance kind=Param1 ]% at max Affinity.
-189	Extends time HP Potions remain on the ground by [ML:Enhance kind=Param1 ] seconds (affects all).
-190	Increases damage dealt by [ML:Enhance kind=Param1 ]% for each female in battle (except self).
-191	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% less damage at max Affinity.
-192	Boosts critical hit rate by [ML:Enhance kind=Param1 ]% when selected in chain attack (affects all).
-193	Deals damage to all enemies when swapped in via Blade Switch.
-194	Expands the window of opportunity for canceling by [ML:Enhance kind=Param1 ]%.
-195	When landing a hit, restores [ML:Enhance kind=Param1 ]% of damage dealt to the whole party.
-196	Adds [ML:Enhance kind=Param1 ]% buffer time to combos if switching to a combo-requesting Blade.
-197	Increases damage dealt by the party by [ML:Enhance kind=Param1 ]% when at max Affinity.
-198	Greatly enhances the Driver's abilities through the power of the Aegis.
-199	Greatly enhances the party's abilities through the power of the Aegis.
-200	Reduces fire damage received by [ML:Enhance kind=Param2 ]%.
-201	Reduces water damage received by [ML:Enhance kind=Param2 ]%.
-202	Reduces wind damage received by [ML:Enhance kind=Param2 ]%.
-203	Reduces earth damage received by [ML:Enhance kind=Param2 ]%.
-204	Reduces electric damage received by [ML:Enhance kind=Param2 ]%.
-205	Reduces ice damage received by [ML:Enhance kind=Param2 ]%.
-206	Reduces light damage received by [ML:Enhance kind=Param2 ]%.
-207	Reduces dark damage received by [ML:Enhance kind=Param2 ]%.
-208	Increases attack power ratio by [ML:Enhance kind=Param1 ]% at the start of a Chain Attack.
-209	Increases damage dealt to beasts by [ML:Enhance kind=Param2 ]%.
-210	Increases damage dealt to insects by [ML:Enhance kind=Param2 ]%.
-211	Increases damage dealt to aerial creatures by [ML:Enhance kind=Param2 ]%.
-212	Increases damage dealt to aquatic organisms by [ML:Enhance kind=Param2 ]%.
-213	Increases damage dealt to humanoids by [ML:Enhance kind=Param2 ]%.
-214	Increases damage dealt to machines by [ML:Enhance kind=Param2 ]%.
-215	Increases damage dealt to Titans by [ML:Enhance kind=Param2 ]%.
-216	[ML:Enhance kind=Param2 ]% chance of felling a beast on attack (fails on bosses/uniques).
-217	[ML:Enhance kind=Param2 ]% chance of felling an insect on attack (fails on bosses/uniques).
-218	[ML:Enhance kind=Param2 ]% chance of felling an aerial foe on attack (fails on bosses/uniques).
-219	[ML:Enhance kind=Param2 ]% chance of felling an aquatic foe on attack (fails on bosses/uniques).
-220	[ML:Enhance kind=Param2 ]% chance of felling a humanoid on attack (fails on bosses/uniques).
-221	[ML:Enhance kind=Param2 ]% chance of felling a machine on attack (fails on bosses/uniques).
-222	[ML:Enhance kind=Param2 ]% chance of felling a Titan on attack (fails on bosses/uniques).
-223	Restores [ML:Enhance kind=Param1 ]% HP every second while HP is [ML:Enhance ]% or less.
-224	Restores [ML:Enhance kind=Param1 ]% HP when using a Driver Art.
-225	Restores [ML:Enhance kind=Param1 ]% HP when canceling an auto-attack with a Driver Art.
-226	Adds [ML:Enhance ]% chance of restoring [ML:Enhance kind=Param1 ]% HP after taking a hit.
-227	Restores [ML:Enhance kind=Param1 ]% HP every second while moving.
-228	Periodically restores [ML:Enhance kind=Param1 ]% HP to entire party while at max Affinity.
-229	On Block, Fire damage is absorbed, restoring HP instead of taking damage.
-230	On Block, Water damage is absorbed, restoring HP instead of taking damage.
-231	On Block, Wind damage is absorbed, restoring HP instead of taking damage.
-232	On Block, Earth damage is absorbed, restoring HP instead of taking damage.
-233	On Block, Electric damage is absorbed, restoring HP instead of taking damage.
-234	On Block, Ice damage is absorbed, restoring HP instead of taking damage.
-235	On Block, Light damage is absorbed, restoring HP instead of taking damage.
-236	On Block, Dark damage is absorbed, restoring HP instead of taking damage.
-237	On Block, Fire damage is reflected, damaging the enemy instead.
-238	On Block, Water damage is reflected, damaging the enemy instead.
-239	On Block, Wind damage is reflected, damaging the enemy instead.
-240	On Block, Earth damage is reflected, damaging the enemy instead.
-241	On Block, Electric damage is reflected, damaging the enemy instead.
-242	On Block, Ice damage is reflected, damaging the enemy instead.
-243	On Block, Light damage is reflected, damaging the enemy instead.
-244	On Block, Dark damage is reflected, damaging the enemy instead.
-245	Increases attack power of Aegis Sword-class weapons by [ML:Enhance kind=Param2 ]%.
-246	Increases attack power of Catalyst Scimitar-class weapons by [ML:Enhance kind=Param2 ]%.
-247	Increases attack power of Twin Rings-class weapons by [ML:Enhance kind=Param2 ]%.
-248	Increases attack power of Drill Shield-class weapons by [ML:Enhance kind=Param2 ]%.
-249	Increases attack power of Mech Arms-class weapons by [ML:Enhance kind=Param2 ]%.
-250	Increases attack power of Variable Saber-class weapons by [ML:Enhance kind=Param2 ]%.
-251	Increases attack power of Whipsword-class weapons by [ML:Enhance kind=Param2 ]%.
-252	Increases attack power of Big Bang Edge-class weapons by [ML:Enhance kind=Param2 ]%.
-253	Increases attack power of Dual Scythes-class weapons by [ML:Enhance kind=Param2 ]%.
-254	Increases attack power of Greataxe-class weapons by [ML:Enhance kind=Param2 ]%.
-255	Increases attack power of Megalance-class weapons by [ML:Enhance kind=Param2 ]%.
-256	Increases attack power of Ether Cannon-class weapons by [ML:Enhance kind=Param2 ]%.
-257	Increases attack power of Shield Hammer-class weapons by [ML:Enhance kind=Param2 ]%.
-258	Increases attack power of Chroma Katana-class weapons by [ML:Enhance kind=Param2 ]%.
-259	Increases attack power of Bitball-class weapons by [ML:Enhance kind=Param2 ]%.
-260	Increases attack power of Knuckle Claws-class weapons by [ML:Enhance kind=Param2 ]%.
-261	Restores [ML:Enhance kind=Param1 ]% HP when guarding. Recharges other Arts when attacked.
-262	Adds [ML:Enhance kind=Param1 ]% chance of evading ranged attacks.
-263	Allows use of the Driver Art assigned to X at the start of battle.
-264	Allows use of the Driver Art assigned to Y at the start of battle.
-265	Allows use of the Driver Art assigned to B at the start of battle.
-266	Lets you use a Driver Art after canceling a Driver Art.
-267	Shortens cooldown time by [ML:Enhance kind=Param1 ]% for each Art ready after a Blade Switch.
-268	Boosts taunt resistance by [ML:Enhance kind=Param1 ]%.
-269	Boosts Driver shackle resistance by [ML:Enhance kind=Param1 ]%.
-270	Boosts Blade shackle resistance by [ML:Enhance kind=Param1 ]%.
-271	Destroys an element orb at random when Elemental Burst triggers.
-272	Spawns a small HP Potion on hit, with a [ML:Enhance kind=Param1 ]% chance to spawn 2.
-273	Destroys an element orb when hit with an opposing element in a Chain Attack.
-274	Adds [ML:Enhance kind=Param1 ]% chance to damage nearby element orbs during a Chain Attack.
-275	Targets damaged element orbs when not using opposing element in a Chain.
-276	Increases resistance to Stench by [ML:Enhance kind=Param1 ]%.
-277	Spawns a small HP Potion when landing a hit.
-278	Adds an element when performing a Blade Combo with [ML:Enhance kind=Param1 ]% probability.
-279	Evade enemy attacks during Driver Arts.
-280	When a Driver is incapacitated, [ML:Enhance kind=Param1 ]% of aggro is retained.
-281	At max Affinity w/ Pandoria: R and + to awaken for a time (once per battle).
-282	Increases dmg a Driver deals by [ML:Enhance kind=Param1 ]% (max: [ML:Enhance ]%) each time they fall.
-283	Increases auto-attack speed by [ML:Enhance kind=Param1 ]% and Arts speed by [ML:Enhance kind=Param2 ]%.
-284	Increases dmg of lv4 Special by [ML:Enhance kind=Param1 ]% each time it's used (max: [ML:Enhance ]%).
-285	Can negate powerful enemy attack via button challenge ([ML:Enhance kind=Param1 ] sec cooldown).
-286	[ML:Enhance kind=Param1 ]% chance to remove awakened status from enemy when using Special.
-287	Increases party critical hit rate by [ML:Enhance kind=Param1 ]% at max Affinity.
-288	Increases damage dealt by [ML:Enhance kind=Param1 ]% each time a critical hit is dealt (max: [ML:Enhance ]%).
-289	Deals [ML:Enhance kind=Param1 ]% ether damage to all foes in combat when you evade an attack.
-290	Gives [ML:Enhance ]% chance to restore [ML:Enhance kind=Param1 ]% HP when you evade an attack.
-291	Boosts recharge for Driver Arts by [ML:Enhance kind=Param1 ] when you evade an attack.
-292	Increases damage dealt by party by [ML:Enhance kind=Param1 ]% when a Launched enemy is hit.
-293	Increases damage dealt by [ML:Enhance kind=Param1 ]% per HP Potion picked up (max: [ML:Enhance ]%).
-294	Increases item drop collection range by [ML:Enhance kind=Param1 ]cm.
-295	Increases movement speed in combat by [ML:Enhance kind=Param1 ]%.
-296	Boosts Nullify Heal resistance by [ML:Enhance kind=Param1 ]%.
-297	Boosts Doom resistance by [ML:Enhance kind=Param1 ]%.
-298	Boosts resistance to Party-Gauge- draining attacks by [ML:Enhance kind=Param1 ]%.
-299	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% more damage.
-300	Take [ML:Enhance kind=Param1 ]% less and deal [ML:Enhance kind=Param2 ]% less damage.
-301	スキル効果
-302	スキル効果
-303	スキル効果
-304	スキル効果
-305	スキル効果
-306	スキル効果
-307	スキル効果
-308	スキル効果
-309	スキル効果
-310	スキル効果
-311	スキル効果
-312	スキル効果
-313	スキル効果
-314	スキル効果
+28	特殊効果
+29	Restores [ML:Enhance kind=Param1 ]% HP of damage dealt when a Special connects.
+30	Restores [ML:Enhance kind=Param1 ]% HP each time an enemy is defeated.
+31	Absorbs [ML:Enhance kind=Param1 ]% of critical damage dealt as HP.
+32	Increases critical damage by [ML:Enhance kind=Param1 ]%.
+33	Adds a [ML:Enhance kind=Param1 ]% chance of attacking again after a successful auto-attack.
+34	Increases damage dealt from the front by [ML:Enhance kind=Param1 ]%.
+35	Increases damage dealt from the side by [ML:Enhance kind=Param1 ]%.
+36	Increases damage dealt from the back by [ML:Enhance kind=Param1 ]%.
+37	Increases damage dealt by a surprise attack by [ML:Enhance kind=Param1 ]%.
+38	Increases damage dealt to toppled enemies by [ML:Enhance kind=Param1 ]%.
+39	Increases damage dealt to launched enemies by [ML:Enhance kind=Param1 ]%.
+40	Increases smash damage by [ML:Enhance kind=Param1 ]%.
+41	Increases damage dealt to higher-level enemies by [ML:Enhance kind=Param1 ]%.
+42	Increases damage dealt when an ally is incapacitated by [ML:Enhance kind=Param1 ]%.
+43	Adds a [ML:Enhance kind=Param1 ]% chance of dealing a guard-annulling attack.
+44	Annuls reflect.
+45	Increases damage dealt by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or less.
+46	Increases damage dealt by [ML:Enhance kind=Param1 ]% [ML:Enhance ] seconds after the start of battle.
+47	Increases damage dealt for each enemy incapacitated by [ML:Enhance kind=Param1 ]% (max: [ML:Enhance ]%).
+48	Extends Break duration by [ML:Enhance kind=Param1 ]%.
+49	Extends Topple duration by [ML:Enhance kind=Param1 ]%.
+50	Extends Launch duration by [ML:Enhance kind=Param1 ]%.
+51	Increases auto-attack damage by [ML:Enhance kind=Param1 ]%.
+52	Increases damage dealt to enemies targeting user by [ML:Enhance kind=Param1 ]%.
+53	Increases damage dealt indoors by [ML:Enhance kind=Param1 ]%.
+54	Increases damage dealt outdoors by [ML:Enhance kind=Param1 ]%.
+55	Increases damage dealt per Blade Switch by [ML:Enhance kind=Param1 ]% (max: [ML:Enhance ]%).
+56	Increases damage dealt while Blade is the opposite gender by [ML:Enhance kind=Param1 ]%.
+57	Reduces enemy Topple resist.
+58	Reduces enemy Launch resist.
+59	On Block, gives [ML:Enhance kind=Param1 ]% chance to completely deflect enemy attack.
+60	Improves evasion by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or lower.
+61	Improves evasion by [ML:Enhance kind=Param1 ]% while moving.
+62	Boosts block rate by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or lower.
+63	Reduces damage from enemies within a 5m radius by [ML:Enhance kind=Param1 ]%.
+64	Reduces damage taken by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or lower.
+65	Increases damage dealt by [ML:Enhance kind=Param2 ]% when HP is [ML:Enhance kind=Param1 ]% or higher.
+66	Reduces Spike damage taken by [ML:Enhance kind=Param1 ]%.
+67	Boosts Break resistance by [ML:Enhance kind=Param1 ]%.
+68	Boosts Topple resistance by [ML:Enhance kind=Param1 ]%.
+69	Boosts Launch resistance by [ML:Enhance kind=Param1 ]%.
+70	Boosts Smash resistance by [ML:Enhance kind=Param1 ]%.
+71	Boosts Blowdown resistance by [ML:Enhance kind=Param1 ]%.
+72	Boosts Knockback resistance by [ML:Enhance kind=Param1 ]%.
+73	Boosts resistance to defense annulling attacks by [ML:Enhance kind=Param1 ]%.
+74	Nullifies elemental effects from an enemy by [ML:Enhance kind=Param1 ]%.
+75	Reduces aggro drawn from auto-attacks by [ML:Enhance kind=Param1 ]%.
+76	Increases aggro drawn from auto-attacks by [ML:Enhance kind=Param1 ]%.
+77	Reduces aggro drawn from Specials and Driver Arts by [ML:Enhance kind=Param1 ]%.
+78	Reduces aggro drawn from Driver Arts by [ML:Enhance kind=Param1 ]%.
+79	Reduces aggro drawn from Specials by [ML:Enhance kind=Param1 ]%.
+80	特殊効果
+81	Increases aggro drawn from Specials and Driver Arts by [ML:Enhance kind=Param1 ]%.
+82	Increases aggro drawn from Driver Arts by [ML:Enhance kind=Param1 ]%.
+83	Increases aggro drawn from Specials by [ML:Enhance kind=Param1 ]%.
+84	特殊効果
+85	Increases aggro reduction by [ML:Enhance kind=Param1 ]%.
+86	Increases aggro every second.
+87	Increases aggro every second. (Minor effect.)
+88	Increases aggro every second. (Medium effect.)
+89	Increases aggro every second. (Major effect.)
+90	Increases aggro every second. (Extra-major effect.)
+91	Lets you start each battle with some aggro already accumulated.
+92	Start each battle with aggro. (Minor effect.)
+93	Start each battle with aggro. (Medium effect.)
+94	Start each battle with aggro. (Major effect.)
+95	Start each battle with aggro. (Extra-major effect.)
+96	Increases the HP restored when being revived by [ML:Enhance kind=Param1 ]%.
+97	Increases the HP restored when reviving a teammate by [ML:Enhance kind=Param1 ]%.
+98	Improves the effect of Healing Arts by [ML:Enhance kind=Param1 ]%.
+99	Increases HP restored to self (not using HP Potions) by [ML:Enhance kind=Param1 ]%.
+100	Boosts recharge for Specials after canceling by [ML:Enhance kind=Param1 ]%.
+101	Adds [ML:Enhance kind=Param1 ]% to damage ratio after canceling an auto-attack.
+102	[ML:Enhance kind=Param1 ]% chance to survive hit with 1 HP + 5 secs invincibility (once per battle).
+103	Increases Accuracy during the night by [ML:Enhance kind=Param1 ]%.
+104	Increases Accuracy during the day by [ML:Enhance kind=Param1 ]%.
+105	Boosts experience received from defeating enemies by [ML:Enhance kind=Param1 ]%.
+106	Boosts WP received from defeating enemies by [ML:Enhance kind=Param1 ]%.
+107	Increases the strength of elemental effects user has inflicted by [ML:Enhance kind=Param1 ]%.
+108	Increases the duration of elemental effects user has inflicted by [ML:Enhance kind=Param1 ]%.
+109	Slightly fills the Party Gauge when an "Excellent" is scored during a Special.
+110	Fills Party Gauge on "Excellent" Specials. (Minor effect.)
+111	Fills Party Gauge on "Excellent" Specials. (Major effect.)
+112	Slightly fills the Party Gauge for each critical hit delivered.
+113	Fills the Party Gauge by [ML:Enhance kind=Param1 ] for each critical hit delivered.
+114	Slightly fills the Party Gauge for each Driver Art used.
+115	特殊効果
+116	[ML:Enhance kind=Param1 ]% more damage dealt for each enemy in the battle (max: [ML:Enhance ]%).
+117	Increases reflect damage by [ML:Enhance kind=Param1 ]%.
+118	Increases critical hit rate during a Chain Attack by [ML:Enhance kind=Param1 ]%.
+119	Heals [ML:Enhance kind=Param1 ]% HP each time a Chain Attack is initiated.
+120	Revives Driver each time a Chain Attack is initiated.
+121	Slightly fills the Party Gauge at the end of each Chain Attack.
+122	Adds [ML:Enhance kind=Param1 ]m to the range of Ether Cannon.
+123	Restores [ML:Enhance kind=Param1 ]% HP to teammates when incapacitated.
+124	Increases damage dealt by [ML:Enhance kind=Param1 ]% for the first Driver Art per battle.
+125	特殊効果
+126	[ML:Enhance kind=Param1 ]% chance to reset recharge for an enemy Art when a Special connects.
+127	Prevents deflections when an enemy guards an attack.
+128	Increases the enemy gold drop rate by [ML:Enhance kind=Param1 ]%.
+129	Increases the enemy item drop rate by [ML:Enhance kind=Param1 ]%.
+130	Increases the attack power of all weapon classes by [ML:Enhance kind=Param1 ]%.
+131	Prevents Affinity loss when a teammate falls in battle.
+132	Increases Affinity by [ML:Enhance kind=Param1 ]% after winning a Special button challenge.
+133	Increases Affinity by [ML:Enhance kind=Param1 ] when a fellow Driver misses an attack.
+134	Increases Affinity by [ML:Enhance kind=Param1 ] when a fellow Driver takes damage.
+135	Increases chance of triggering Blade Arts by [ML:Enhance kind=Param1 ]%.
+136	Increases Blade Arts duration time by [ML:Enhance kind=Param1 ]%.
+137	When Affinity reaches max, grant party damage barrier of [ML:Enhance kind=Param1 ]% of max HP.
+138	Increases damage dealt by [ML:Enhance kind=Param1 ]% when Affinity is at max.
+139	Increases evasion rate by [ML:Enhance kind=Param1 ]% when Affinity is at max.
+140	Increases Affinity by [ML:Enhance kind=Param1 ] when starting a battle with the initiative.
+141	Increases Affinity by [ML:Enhance kind=Param1 ] when the enemy starts with the initiative.
+142	Reduces the cooldown time for a Blade Switch by [ML:Enhance kind=Param1 ]%.
+143	Heals [ML:Enhance kind=Param1 ]% of party's HP upon performing a Blade Switch.
+144	Extends the range of Driver-Blade Affinity by [ML:Enhance kind=Param1 ]cm.
+145	Increases Lv [ML:Enhance kind=Param1 ] Special damage by [ML:Enhance kind=Param2 ]%.
+146	Adds a [ML:Enhance kind=Param1 ]% chance to create a small HP Potion for each connecting hit.
+147	Boosts the effect of HP Potions by [ML:Enhance kind=Param1 ]%.
+148	Special has [ML:Enhance kind=Param2 ]% chance to defeat non-boss foes with up to [ML:Enhance kind=Param1 ]% HP.
+149	Increases accuracy and evasion rate of team by [ML:Enhance kind=Param1 ]% at max Affinity.
+150	Can initiate elemental combo at random.
+151	Reduces Blade Combo damage received from enemies by [ML:Enhance kind=Param1 ]%.
+152	Adds [ML:Enhance kind=Param1 ]% to damage dealt for each attack Driver evades (max: [ML:Enhance ]%).
+153	スキル効果
+222	Increases damage dealt to Titans by [ML:Enhance kind=Param2 ]%.
+154	Boosts Arts recharge by [ML:Enhance kind=Param1 ]% at max Affinity.
+155	Reduces aggro build-up from attacks by [ML:Enhance kind=Param1 ]%.
+156	Boosts physical and ether defense by [ML:Enhance kind=Param1 ]%.
+157	Adds [ML:Enhance kind=Param1 ]% chance for user to land perfect hits and evade enemy attacks.
+158	Adds [ML:Enhance kind=Param1 ]% chance to reflect attacks.
+159	After achieving max Affinity in combat, evade enemy attacks for [ML:Enhance kind=Param1 ] seconds.
+160	Increases damage dealt to toppled or launched enemies by [ML:Enhance kind=Param1 ]%.
+161	Adds [ML:Enhance kind=Param1 ]% chance to incapacitate enemy (fails on bosses and uniques).
+162	Reduces party damage taken by [ML:Enhance kind=Param1 ]% at max Affinity.
+163	Increases damage and AOE of party attacks by [ML:Enhance kind=Param1 ]% at max Affinity.
+164	Heals party for [ML:Enhance kind=Param1 ]% HP when defeating an enemy.
+165	Increases effectiveness of party healing by [ML:Enhance kind=Param1 ]% when at max Affinity.
+166	Slightly raises aggro every second and increases all attack aggro by [ML:Enhance kind=Param2 ]%.
+167	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% less damage if ally has low HP or is felled.
+168	[ML:Enhance kind=Param1 ]% chance to stop enemy moving for [ML:Enhance kind=Param2 ] secs after landing a Special.
+169	The lower the HP of the Driver, the more powerful the Special.
+170	Reduces severity of elemental effect inflicted by the enemy by [ML:Enhance kind=Param1 ]%.
+171	Adds [ML:Enhance kind=Param1 ]% chance to prevent reactions to enemy Driver Combos.
+172	Restores party's HP on starting Fusion Combo. Effect improves with difficulty.
+173	Increases attack power as gold is collected during battle (max: [ML:Enhance kind=Param2 ]%).
+174	Adds [ML:Enhance kind=Param1 ]% chance to drop gold upon landing a hit.
+175	Reduces recharge of enemies in battle by [ML:Enhance kind=Param1 ]% when at max Affinity.
+176	Increases damage dealt by [ML:Enhance kind=Param1 ]% when battling a boss or unique enemy.
+177	[ML:Enhance kind=Param1 ]% chance to not deplete recharge after a Driver Art or Special.
+178	Annuls enemy defense and increases Special damage dealt by [ML:Enhance kind=Param1 ]%.
+179	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% more damage when at max Affinity.
+180	Adds [ML:Enhance kind=Param1 ]% chance to annul defense.
+181	[ML:Enhance kind=Param1 ]% chance to flip enemy defense, granting more damage vs higher values.
+182	Increases damage dealt when elemental weakness exploited (affects all).
+183	Adds [ML:Enhance kind=Param1 ]% chance of Blowdown on enemy upon being attacked (affects all).
+184	Increases auto-attack speed by [ML:Enhance kind=Param1 ]%.
+185	Guarantees auto-attacks to hit twice and increases damage dealt by [ML:Enhance kind=Param1 ]%.
+186	Increases dmg dealt to toppled enemies by [ML:Enhance kind=Param1 ]%, extending Topple duration.
+187	Drains [ML:Enhance kind=Param1 ]% of current HP when using the Art. Evasion during Art.
+188	Reduces [ML:Enhance kind=Param1 ]% of aggro toward user upon landing a hit.
+189	Recharges Arts used by [ML:Enhance kind=Param1 ]% upon landing a critical hit.
+190	Recharges Art or Special used by [ML:Enhance kind=Param1 ]% upon landing a critical hit.
+191	Increases Affinity by [ML:Enhance kind=Param1 ] when using a Special.
+192	Reduces enemy Break resist.
+193	Increases damage dealt by [ML:Enhance kind=Param1 ]% each time a Special is used (max: [ML:Enhance ]%)
+194	Adds [ML:Enhance kind=Param1 ]% chance of Knockback when attacked by an enemy.
+195	Increases accuracy by [ML:Enhance kind=Param1 ]% at max Affinity.
+196	Extends time HP Potions remain on the ground by [ML:Enhance kind=Param1 ] seconds (affects all).
+197	Increases damage dealt by [ML:Enhance kind=Param1 ]% for each female in battle (except self).
+198	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% less damage at max Affinity.
+199	Boosts critical hit rate by [ML:Enhance kind=Param1 ]% when selected in chain attack (affects all).
+200	Deals damage to all enemies when swapped in via Blade Switch.
+201	Expands the window of opportunity for canceling by [ML:Enhance kind=Param1 ]%.
+202	When landing a hit, restores [ML:Enhance kind=Param1 ]% of damage dealt to the whole party.
+203	Adds [ML:Enhance kind=Param1 ]% buffer time to combos if switching to a combo-requesting Blade.
+204	Increases damage dealt by the party by [ML:Enhance kind=Param1 ]% when at max Affinity.
+205	Greatly enhances the Driver's abilities through the power of the Aegis.
+206	Greatly enhances the party's abilities through the power of the Aegis.
+207	Reduces fire damage received by [ML:Enhance kind=Param2 ]%.
+208	Reduces water damage received by [ML:Enhance kind=Param2 ]%.
+209	Reduces wind damage received by [ML:Enhance kind=Param2 ]%.
+210	Reduces earth damage received by [ML:Enhance kind=Param2 ]%.
+211	Reduces electric damage received by [ML:Enhance kind=Param2 ]%.
+212	Reduces ice damage received by [ML:Enhance kind=Param2 ]%.
+213	Reduces light damage received by [ML:Enhance kind=Param2 ]%.
+214	Reduces dark damage received by [ML:Enhance kind=Param2 ]%.
+215	Increases attack power ratio at the start of a Chain Attack.
+216	Increases damage dealt to beasts by [ML:Enhance kind=Param2 ]%.
+217	Increases damage dealt to insects by [ML:Enhance kind=Param2 ]%.
+218	Increases damage dealt to aerial creatures by [ML:Enhance kind=Param2 ]%.
+219	Increases damage dealt to aquatic organisms by [ML:Enhance kind=Param2 ]%.
+220	Increases damage dealt to humanoids by [ML:Enhance kind=Param2 ]%.
+221	Increases damage dealt to machines by [ML:Enhance kind=Param2 ]%.
+223	[ML:Enhance kind=Param2 ]% chance of felling a beast on attack (fails on bosses/uniques).
+224	[ML:Enhance kind=Param2 ]% chance of felling an insect on attack (fails on bosses/uniques).
+225	[ML:Enhance kind=Param2 ]% chance of felling an aerial foe on attack (fails on bosses/uniques).
+226	[ML:Enhance kind=Param2 ]% chance of felling an aquatic foe on attack (fails on bosses/uniques).
+227	[ML:Enhance kind=Param2 ]% chance of felling a humanoid on attack (fails on bosses/uniques).
+228	[ML:Enhance kind=Param2 ]% chance of felling a machine on attack (fails on bosses/uniques).
+229	[ML:Enhance kind=Param2 ]% chance of felling a Titan on attack (fails on bosses/uniques).
+230	Restores [ML:Enhance kind=Param1 ]% HP every second while HP is [ML:Enhance ]% or less.
+231	Restores [ML:Enhance kind=Param1 ]% HP when using a Driver Art.
+232	特殊効果
+233	Restores [ML:Enhance kind=Param1 ]% HP when canceling an auto-attack with a Driver Art.
+234	特殊効果
+235	Adds [ML:Enhance ]% chance of restoring [ML:Enhance kind=Param1 ]% HP after taking a hit.
+236	Restores [ML:Enhance kind=Param1 ]% HP every second while moving.
+237	Periodically restores [ML:Enhance kind=Param1 ]% HP to entire party while at max Affinity.
+238	On Block, Fire damage is absorbed, restoring HP instead of taking damage.
+239	On Block, Water damage is absorbed, restoring HP instead of taking damage.
+240	On Block, Wind damage is absorbed, restoring HP instead of taking damage.
+241	On Block, Earth damage is absorbed, restoring HP instead of taking damage.
+242	On Block, Electric damage is absorbed, restoring HP instead of taking damage.
+243	On Block, Ice damage is absorbed, restoring HP instead of taking damage.
+244	On Block, Light damage is absorbed, restoring HP instead of taking damage.
+245	On Block, Dark damage is absorbed, restoring HP instead of taking damage.
+246	On Block, Fire damage is reflected, damaging the enemy instead.
+247	On Block, Water damage is reflected, damaging the enemy instead.
+248	On Block, Wind damage is reflected, damaging the enemy instead.
+249	On Block, Earth damage is reflected, damaging the enemy instead.
+250	On Block, Electric damage is reflected, damaging the enemy instead.
+251	On Block, Ice damage is reflected, damaging the enemy instead.
+252	On Block, Light damage is reflected, damaging the enemy instead.
+253	On Block, Dark damage is reflected, damaging the enemy instead.
+254	Increases attack power of Aegis Sword-class weapons by [ML:Enhance kind=Param2 ]%.
+255	Increases attack power of Catalyst Scimitar-class weapons by [ML:Enhance kind=Param2 ]%.
+256	Increases attack power of Twin Rings-class weapons by [ML:Enhance kind=Param2 ]%.
+257	Increases attack power of Drill Shield-class weapons by [ML:Enhance kind=Param2 ]%.
+258	Increases attack power of Mech Arms-class weapons by [ML:Enhance kind=Param2 ]%.
+259	Increases attack power of Variable Saber-class weapons by [ML:Enhance kind=Param2 ]%.
+260	Increases attack power of Whipsword-class weapons by [ML:Enhance kind=Param2 ]%.
+261	Increases attack power of Big Bang Edge-class weapons by [ML:Enhance kind=Param2 ]%.
+262	Increases attack power of Dual Scythes-class weapons by [ML:Enhance kind=Param2 ]%.
+263	Increases attack power of Greataxe-class weapons by [ML:Enhance kind=Param2 ]%.
+264	Increases attack power of Megalance-class weapons by [ML:Enhance kind=Param2 ]%.
+265	Increases attack power of Ether Cannon-class weapons by [ML:Enhance kind=Param2 ]%.
+266	Increases attack power of Shield Hammer-class weapons by [ML:Enhance kind=Param2 ]%.
+267	Increases attack power of Chroma Katana-class weapons by [ML:Enhance kind=Param2 ]%.
+268	Increases attack power of Bitball-class weapons by [ML:Enhance kind=Param2 ]%.
+269	Increases attack power of Knuckle Claws-class weapons by [ML:Enhance kind=Param2 ]%.
+270	Restores [ML:Enhance kind=Param1 ]% HP when guarding. Recharges other Arts when attacked.
+271	Adds [ML:Enhance kind=Param1 ]% chance of evading ranged attacks.
+272	Allows use of the Driver Art assigned to X at the start of battle.
+273	特殊効果
+274	Allows use of the Driver Art assigned to Y at the start of battle.
+275	特殊効果
+276	Allows use of the Driver Art assigned to B at the start of battle.
+277	特殊効果
+278	Lets you use a Driver Art after canceling a Driver Art.
+279	Shortens cooldown time relative to the no. of Arts ready after a Blade Switch.
+280	Boosts taunt resistance by [ML:Enhance kind=Param1 ]%.
+281	Boosts Driver shackle resistance by [ML:Enhance kind=Param1 ]%.
+282	Boosts Blade shackle resistance by [ML:Enhance kind=Param1 ]%.
+283	Destroys an element orb at random when Elemental Burst triggers.
+284	Spawns a small HP Potion on hit, with a [ML:Enhance kind=Param1 ]% chance to spawn 2.
+285	Destroys an element orb when hit with an opposing element in a Chain Attack.
+286	Adds [ML:Enhance kind=Param1 ]% chance to damage nearby element orbs during a Chain Attack.
+287	Targets damaged element orbs when not using opposing element in a Chain.
+288	Increases resistance to Stench by [ML:Enhance kind=Param1 ]%.
+289	Spawns a small HP Potion when landing a hit.
+290	Adds an element when performing a Blade Combo with [ML:Enhance kind=Param1 ]% probability.
+291	Evade enemy attacks during Driver Arts.
+292	特殊効果
+293	When a Driver is incapacitated, [ML:Enhance kind=Param1 ]% of aggro is retained.
+294	At max Affinity w/ Pandoria: R and + to awaken for a time (once per battle).
+295	Increases dmg a Driver deals by [ML:Enhance kind=Param1 ]% (max: [ML:Enhance ]%) each time they fall.
+296	Increases auto-attack speed by [ML:Enhance kind=Param1 ]% and Arts speed by [ML:Enhance kind=Param2 ]%.
+297	Increases dmg of lv4 Special by [ML:Enhance kind=Param1 ]% each time it's used (max: [ML:Enhance ]%).
+298	Can negate powerful enemy attack via button challenge ([ML:Enhance kind=Param1 ] sec cooldown).
+299	[ML:Enhance kind=Param1 ]% chance to remove awakened status from enemy when using Special.
+300	Increases party critical hit rate by [ML:Enhance kind=Param1 ]% at max Affinity.
+301	Increases damage dealt by [ML:Enhance kind=Param1 ]% each time a critical hit is dealt (max: [ML:Enhance ]%).
+302	Deals [ML:Enhance kind=Param1 ]% ether damage to all foes in combat when you evade an attack.
+303	Gives [ML:Enhance ]% chance to restore [ML:Enhance kind=Param1 ]% HP when you evade an attack.
+304	Boosts recharge for Driver Arts by [ML:Enhance kind=Param1 ] when you evade an attack.
+305	Increase dmg. dealt by [ML:Enhance kind=Param1 ]% and eva. rate by [ML:Enhance kind=Param2 ]% when Affinity is at max.
+306	Increases damage dealt by party by [ML:Enhance kind=Param1 ]% when a Launched enemy is hit.
+307	Increases damage dealt by [ML:Enhance kind=Param1 ]% per HP Potion picked up (max: [ML:Enhance ]%).
+308	Increases item drop collection range by [ML:Enhance kind=Param1 ]cm.
+309	Increases movement speed in combat by [ML:Enhance kind=Param1 ]%.
+310	Boosts Nullify Heal resistance by [ML:Enhance kind=Param1 ]%.
+311	Boosts Doom resistance by [ML:Enhance kind=Param1 ]%.
+312	Boosts resistance to Party-Gauge- draining attacks by [ML:Enhance kind=Param1 ]%.
+313	Deal [ML:Enhance kind=Param1 ]% more and take [ML:Enhance kind=Param2 ]% more damage.
+314	Take [ML:Enhance kind=Param1 ]% less and deal [ML:Enhance kind=Param2 ]% less damage.
 315	スキル効果
 316	スキル効果
 317	スキル効果
-318	スキル効果
-319	スキル効果
+318	On using Special, has [ML:Enhance kind=Param1 ]% chance to purge enemy rage status.
+319	With Elma in battle, press R and - to engage. Uses P.Gauge, lasts [ML:Enhance kind=Param1 ] secs.
+320	Increases damage dealt by [ML:Enhance kind=Param1 ]% and critical rate by [ML:Enhance kind=Param2 ]% at max Affinity.
+321	スキル効果
+322	スキル効果
+323	スキル効果
+324	スキル効果
+325	スキル効果
+326	スキル効果
+327	スキル効果
+328	スキル効果
+329	スキル効果
+330	スキル効果
+331	スキル効果
+332	スキル効果
+333	スキル効果
+334	Reduces terrain damage by [ML:Enhance kind=Param1 ]%.
+335	On Special, Driver receives afterimage, evading next [ML:Enhance kind=Param1 ] attack(s).
+336	スキル効果
+337	スキル効果
+338	スキル効果
+339	スキル効果
 \.
 
 
