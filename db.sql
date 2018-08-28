@@ -30304,6 +30304,60 @@ Lacerate	3	600
 Lacerate	4	640
 Lacerate	5	680
 Lacerate	6	714
+Fuga Daemonum	1	390
+Fuga Daemonum	2	470
+Fuga Daemonum	3	550
+Fuga Daemonum	4	630
+Fuga Daemonum	5	710
+Fuga Daemonum	6	768
+Lacerna Noctis	1	640
+Lacerna Noctis	2	730
+Lacerna Noctis	3	820
+Lacerna Noctis	4	910
+Lacerna Noctis	5	1000
+Lacerna Noctis	6	1102
+Ex Tenebris Lux	1	900
+Ex Tenebris Lux	2	1010
+Ex Tenebris Lux	3	1120
+Ex Tenebris Lux	4	1230
+Ex Tenebris Lux	5	1340
+Ex Tenebris Lux	6	1428
+Go! Great Star!	1	300
+Go! Great Star!	2	350
+Go! Great Star!	3	400
+Go! Great Star!	4	450
+Go! Great Star!	5	500
+Go! Great Star!	6	528
+Go! Shooting Star!	1	400
+Go! Shooting Star!	2	460
+Go! Shooting Star!	3	520
+Go! Shooting Star!	4	580
+Go! Shooting Star!	5	640
+Go! Shooting Star!	6	696
+Go! Lucky Star!	1	500
+Go! Lucky Star!	2	570
+Go! Lucky Star!	3	640
+Go! Lucky Star!	4	710
+Go! Lucky Star!	5	780
+Go! Lucky Star!	6	850
+Sliding Slinger	1	345
+Sliding Slinger	2	390
+Sliding Slinger	3	430
+Sliding Slinger	4	470
+Sliding Slinger	5	510
+Sliding Slinger	6	552
+Hundred Shells	1	500
+Hundred Shells	2	550
+Hundred Shells	3	600
+Hundred Shells	4	650
+Hundred Shells	5	700
+Hundred Shells	6	725
+Violent Streak	1	675
+Violent Streak	2	720
+Violent Streak	3	770
+Violent Streak	4	820
+Violent Streak	5	870
+Violent Streak	6	918
 \.
 
 
@@ -30312,1266 +30366,1320 @@ Lacerate	6	714
 --
 
 COPY xeno2.special_enhance (special, level, caption) FROM stdin;
-Flame Nova	1	2853
-Flame Nova	2	2854
-Flame Nova	3	2855
-Flame Nova	4	2856
-Flame Nova	5	2857
-Flame Nova	6	2857
-Prominence Revolt	1	2953
-Prominence Revolt	2	2954
-Prominence Revolt	3	2955
-Prominence Revolt	4	2956
-Prominence Revolt	5	2957
-Prominence Revolt	6	2957
-Blazing End	1	2933
-Blazing End	2	2934
-Blazing End	3	2935
-Blazing End	4	2936
-Blazing End	5	2937
-Blazing End	6	2937
-Ray of Punishment	1	2953
-Ray of Punishment	2	2954
-Ray of Punishment	3	2955
-Ray of Punishment	4	2956
-Ray of Punishment	5	2957
-Ray of Punishment	6	2957
-Photon Edge	1	2973
-Photon Edge	2	2974
-Photon Edge	3	2975
-Photon Edge	4	2976
-Photon Edge	5	2977
-Photon Edge	6	2977
-Lightning Buster	1	2983
-Lightning Buster	2	2984
-Lightning Buster	3	2985
-Lightning Buster	4	2986
-Lightning Buster	5	2987
-Lightning Buster	6	2987
-Starburst	1	2973
-Starburst	2	2974
-Starburst	3	2975
-Starburst	4	2976
-Starburst	5	2977
-Starburst	6	2977
-Radiant Flare	1	2973
-Radiant Flare	2	2974
-Radiant Flare	3	2975
-Radiant Flare	4	2976
-Radiant Flare	5	2977
-Radiant Flare	6	2977
-Genesis Saber	1	2973
-Genesis Saber	2	2974
-Genesis Saber	3	2975
-Genesis Saber	4	2976
-Genesis Saber	5	2977
-Genesis Saber	6	2977
-Last Hope	1	2923
-Last Hope	2	2924
-Last Hope	3	2925
-Last Hope	4	2926
-Last Hope	5	2927
-Last Hope	6	2927
-Merciful Heart	1	3013
-Merciful Heart	2	3014
-Merciful Heart	3	3015
-Merciful Heart	4	3016
-Merciful Heart	5	3017
-Merciful Heart	6	3017
-Redeeming Strike	1	3028
-Redeeming Strike	2	3029
-Redeeming Strike	3	3030
-Redeeming Strike	4	3031
-Redeeming Strike	5	3032
-Redeeming Strike	6	3032
-Raging Tiger	1	2928
-Raging Tiger	2	2929
-Raging Tiger	3	2930
-Raging Tiger	4	2931
-Raging Tiger	5	2932
-Raging Tiger	6	2932
-Aqua Wave	1	3028
-Aqua Wave	2	3029
-Aqua Wave	3	3030
-Aqua Wave	4	3031
-Aqua Wave	5	3032
-Aqua Wave	6	3032
-Wild Roar	1	3013
-Wild Roar	2	3014
-Wild Roar	3	3015
-Wild Roar	4	3016
-Wild Roar	5	3017
-Wild Roar	6	3017
-Heat Haze	1	3003
-Heat Haze	2	3004
-Heat Haze	3	3005
-Heat Haze	4	3006
-Heat Haze	5	3007
-Heat Haze	6	3007
-Will-o'-the-Wisp	1	2958
-Will-o'-the-Wisp	2	2959
-Will-o'-the-Wisp	3	2960
-Will-o'-the-Wisp	4	2961
-Will-o'-the-Wisp	5	2962
-Will-o'-the-Wisp	6	2962
-Swirling Dragon	1	2983
-Swirling Dragon	2	2984
-Swirling Dragon	3	2985
-Swirling Dragon	4	2986
-Swirling Dragon	5	2987
-Swirling Dragon	6	2987
-Lightning Force	1	2878
-Lightning Force	2	2879
-Lightning Force	3	2880
-Lightning Force	4	2881
-Lightning Force	5	2882
-Lightning Force	6	2882
-Electric Circus	1	2933
-Electric Circus	2	2934
-Electric Circus	3	2935
-Electric Circus	4	2936
-Electric Circus	5	2937
-Electric Circus	6	2937
-Thunder Doom	1	2933
-Thunder Doom	2	2934
-Thunder Doom	3	2935
-Thunder Doom	4	2936
-Thunder Doom	5	2937
-Thunder Doom	6	2937
-Death Wing	1	2863
-Death Wing	2	2864
-Death Wing	3	2865
-Death Wing	4	2866
-Death Wing	5	2867
-Death Wing	6	2867
-Crushing Twister	1	2983
-Crushing Twister	2	2984
-Crushing Twister	3	2985
-Crushing Twister	4	2986
-Crushing Twister	5	2987
-Crushing Twister	6	2987
-Feather Typhoon	1	2898
-Feather Typhoon	2	2899
-Feather Typhoon	3	2900
-Feather Typhoon	4	2901
-Feather Typhoon	5	2902
-Feather Typhoon	6	2902
-Storm Edge	1	2933
-Storm Edge	2	2934
-Storm Edge	3	2935
-Storm Edge	4	2936
-Storm Edge	5	2937
-Storm Edge	6	2937
-Engrave	1	3003
-Engrave	2	3004
-Engrave	3	3005
-Engrave	4	3006
-Engrave	5	3007
-Engrave	6	3007
-Death Match	1	2973
-Death Match	2	2974
-Death Match	3	2975
-Death Match	4	2976
-Death Match	5	2977
-Death Match	6	2977
-White Wave	1	3028
-White Wave	2	3029
-White Wave	3	3030
-White Wave	4	3031
-White Wave	5	3032
-White Wave	6	3032
-Sacred Wyrm	1	2993
-Sacred Wyrm	2	2994
-Sacred Wyrm	3	2995
-Sacred Wyrm	4	2996
-Sacred Wyrm	5	2997
-Sacred Wyrm	6	2997
-Dark Judgment	1	2923
-Dark Judgment	2	2924
-Dark Judgment	3	2925
-Dark Judgment	4	2926
-Dark Judgment	5	2927
-Dark Judgment	6	2927
-Swallow's Flight	1	2933
-Swallow's Flight	2	2934
-Swallow's Flight	3	2935
-Swallow's Flight	4	2936
-Swallow's Flight	5	2937
-Swallow's Flight	6	2937
-Great Garland	1	2953
-Great Garland	2	2954
-Great Garland	3	2955
-Great Garland	4	2956
-Great Garland	5	2957
-Great Garland	6	2957
-Dragonfly Slash	1	2983
-Dragonfly Slash	2	2984
-Dragonfly Slash	3	2985
-Dragonfly Slash	4	2986
-Dragonfly Slash	5	2987
-Dragonfly Slash	6	2987
-Crow Beat	1	3003
-Crow Beat	2	3004
-Crow Beat	3	3005
-Crow Beat	4	3006
-Crow Beat	5	3007
-Crow Beat	6	3007
-Crow Feather	1	2958
-Crow Feather	2	2959
-Crow Feather	3	2960
-Crow Feather	4	2961
-Crow Feather	5	2962
-Crow Feather	6	2962
-Final Crow	1	2988
-Final Crow	2	2989
-Final Crow	3	2990
-Final Crow	4	2991
-Final Crow	5	2992
-Final Crow	6	2992
-Shred	1	2948
-Shred	2	2949
-Shred	3	2950
-Shred	4	2951
-Shred	5	2952
-Shred	6	2952
-Skewer	1	2993
-Skewer	2	2994
-Skewer	3	2995
-Skewer	4	2996
-Skewer	5	2997
-Skewer	6	2997
-Cruel World	1	2973
-Cruel World	2	2974
-Cruel World	3	2975
-Cruel World	4	2976
-Cruel World	5	2977
-Cruel World	6	2977
-Diamond Crash	1	2953
-Diamond Crash	2	2954
-Diamond Crash	3	2955
-Diamond Crash	4	2956
-Diamond Crash	5	2957
-Diamond Crash	6	2957
-Diamond Flight	1	3018
-Diamond Flight	2	3019
-Diamond Flight	3	3020
-Diamond Flight	4	3021
-Diamond Flight	5	3022
-Diamond Flight	6	3022
-Diamond Hands	1	2973
-Diamond Hands	2	2974
-Diamond Hands	3	2975
-Diamond Hands	4	2976
-Diamond Hands	5	2977
-Diamond Hands	6	2977
-Dead Ball	1	2973
-Dead Ball	2	2974
-Dead Ball	3	2975
-Dead Ball	4	2976
-Dead Ball	5	2977
-Dead Ball	6	2977
-Berserk March	1	3003
-Berserk March	2	3004
-Berserk March	3	3005
-Berserk March	4	3006
-Berserk March	5	3007
-Berserk March	6	3007
-Earth Breath	1	3028
-Earth Breath	2	3029
-Earth Breath	3	3030
-Earth Breath	4	3031
-Earth Breath	5	3032
-Earth Breath	6	3032
-Water Moon	1	2973
-Water Moon	2	2974
-Water Moon	3	2975
-Water Moon	4	2976
-Water Moon	5	2977
-Water Moon	6	2977
-Breaking Wave	1	2933
-Breaking Wave	2	2934
-Breaking Wave	3	2935
-Breaking Wave	4	2936
-Breaking Wave	5	2937
-Breaking Wave	6	2937
-Midnight Mist	1	2988
-Midnight Mist	2	2989
-Midnight Mist	3	2990
-Midnight Mist	4	2991
-Midnight Mist	5	2992
-Midnight Mist	6	2992
-Tough Break	1	2988
-Tough Break	2	2989
-Tough Break	3	2990
-Tough Break	4	2991
-Tough Break	5	2992
-Tough Break	6	2992
-Cold Judgment	1	2953
-Cold Judgment	2	2954
-Cold Judgment	3	2955
-Cold Judgment	4	2956
-Cold Judgment	5	2957
-Cold Judgment	6	2957
-Justice Blizzard	1	2983
-Justice Blizzard	2	2984
-Justice Blizzard	3	2985
-Justice Blizzard	4	2986
-Justice Blizzard	5	2987
-Justice Blizzard	6	2987
-Brutal Lance	1	2953
-Brutal Lance	2	2954
-Brutal Lance	3	2955
-Brutal Lance	4	2956
-Brutal Lance	5	2957
-Brutal Lance	6	2957
-Termination Blast	1	2983
-Termination Blast	2	2984
-Termination Blast	3	2985
-Termination Blast	4	2986
-Termination Blast	5	2987
-Termination Blast	6	2987
-Hellbound	1	2973
-Hellbound	2	2974
-Hellbound	3	2975
-Hellbound	4	2976
-Hellbound	5	2977
-Hellbound	6	2977
-Dark Serpent	1	3003
-Dark Serpent	2	3004
-Dark Serpent	3	3005
-Dark Serpent	4	3006
-Dark Serpent	5	3007
-Dark Serpent	6	3007
-Blade Vortex	1	2988
-Blade Vortex	2	2989
-Blade Vortex	3	2990
-Blade Vortex	4	2991
-Blade Vortex	5	2992
-Blade Vortex	6	2992
-Grim Moon	1	3033
-Grim Moon	2	3034
-Grim Moon	3	3035
-Grim Moon	4	3036
-Grim Moon	5	3037
-Grim Moon	6	3037
-Innocent Teardrop	1	3023
-Innocent Teardrop	2	3024
-Innocent Teardrop	3	3025
-Innocent Teardrop	4	3026
-Innocent Teardrop	5	3027
-Innocent Teardrop	6	3027
-Bittersweet Dreams	1	3018
-Bittersweet Dreams	2	3019
-Bittersweet Dreams	3	3020
-Bittersweet Dreams	4	3021
-Bittersweet Dreams	5	3022
-Bittersweet Dreams	6	3022
-Leave Me Alone	1	2953
-Leave Me Alone	2	2954
-Leave Me Alone	3	2955
-Leave Me Alone	4	2956
-Leave Me Alone	5	2957
-Leave Me Alone	6	2957
-Flame Crown (Weak)	1	2868
-Flame Crown (Weak)	2	2869
-Flame Crown (Weak)	3	2870
-Flame Crown (Weak)	4	2871
-Flame Crown (Weak)	5	2872
-Flame Crown (Weak)	6	2872
-Tyrant Crush (Weak)	1	2933
-Tyrant Crush (Weak)	2	2934
-Tyrant Crush (Weak)	3	2935
-Tyrant Crush (Weak)	4	2936
-Tyrant Crush (Weak)	5	2937
-Tyrant Crush (Weak)	6	2937
-Kaiser Flare (Weak)	1	2983
-Kaiser Flare (Weak)	2	2984
-Kaiser Flare (Weak)	3	2985
-Kaiser Flare (Weak)	4	2986
-Kaiser Flare (Weak)	5	2987
-Kaiser Flare (Weak)	6	2987
-Flame Crown	1	2868
-Flame Crown	2	2869
-Flame Crown	3	2870
-Flame Crown	4	2871
-Flame Crown	5	2872
-Flame Crown	6	2872
-Tyrant Crush	1	2933
-Tyrant Crush	2	2934
-Tyrant Crush	3	2935
-Tyrant Crush	4	2936
-Tyrant Crush	5	2937
-Tyrant Crush	6	2937
-Kaiser Flare	1	2983
-Kaiser Flare	2	2984
-Kaiser Flare	3	2985
-Kaiser Flare	4	2986
-Kaiser Flare	5	2987
-Kaiser Flare	6	2987
-Open Wide!	1	2928
-Open Wide!	2	2929
-Open Wide!	3	2930
-Open Wide!	4	2931
-Open Wide!	5	2932
-Open Wide!	6	2932
-Snack On This!	1	2923
-Snack On This!	2	2924
-Snack On This!	3	2925
-Snack On This!	4	2926
-Snack On This!	5	2927
-Snack On This!	6	2927
-Gobble 'em Up!	1	3028
-Gobble 'em Up!	2	3029
-Gobble 'em Up!	3	3030
-Gobble 'em Up!	4	3031
-Gobble 'em Up!	5	3032
-Gobble 'em Up!	6	3032
-Lavender Drive	1	2958
-Lavender Drive	2	2959
-Lavender Drive	3	2960
-Lavender Drive	4	2961
-Lavender Drive	5	2962
-Lavender Drive	6	2962
-Lilium Dance	1	3028
-Lilium Dance	2	3029
-Lilium Dance	3	3030
-Lilium Dance	4	3031
-Lilium Dance	5	3032
-Lilium Dance	6	3032
-Physalis Judgment	1	3013
-Physalis Judgment	2	3014
-Physalis Judgment	3	3015
-Physalis Judgment	4	3016
-Physalis Judgment	5	3017
-Physalis Judgment	6	3017
-Sentimental Burst	1	3003
-Sentimental Burst	2	3004
-Sentimental Burst	3	3005
-Sentimental Burst	4	3006
-Sentimental Burst	5	3007
-Sentimental Burst	6	3007
-Hidden Emotion	1	2988
-Hidden Emotion	2	2989
-Hidden Emotion	3	2990
-Hidden Emotion	4	2991
-Hidden Emotion	5	2992
-Hidden Emotion	6	2992
-Secret Desire	1	2983
-Secret Desire	2	2984
-Secret Desire	3	2985
-Secret Desire	4	2986
-Secret Desire	5	2987
-Secret Desire	6	2987
-Foam Blast	1	3018
-Foam Blast	2	3019
-Foam Blast	3	3020
-Foam Blast	4	3021
-Foam Blast	5	3022
-Foam Blast	6	3022
-Geyser Spring	1	2973
-Geyser Spring	2	2974
-Geyser Spring	3	2975
-Geyser Spring	4	2976
-Geyser Spring	5	2977
-Geyser Spring	6	2977
-Fierce Deluge	1	2943
-Fierce Deluge	2	2944
-Fierce Deluge	3	2945
-Fierce Deluge	4	2946
-Fierce Deluge	5	2947
-Fierce Deluge	6	2947
-Ice Slash	1	3003
-Ice Slash	2	3004
-Ice Slash	3	3005
-Ice Slash	4	3006
-Ice Slash	5	3007
-Ice Slash	6	3007
-Frost Banish	1	2988
-Frost Banish	2	2989
-Frost Banish	3	2990
-Frost Banish	4	2991
-Frost Banish	5	2992
-Frost Banish	6	2992
-Rebel Sister	1	2933
-Rebel Sister	2	2934
-Rebel Sister	3	2935
-Rebel Sister	4	2936
-Rebel Sister	5	2937
-Rebel Sister	6	2937
-Cold Sever	1	2943
-Cold Sever	2	2944
-Cold Sever	3	2945
-Cold Sever	4	2946
-Cold Sever	5	2947
-Cold Sever	6	2947
-Punishment Strike	1	3018
-Punishment Strike	2	3019
-Punishment Strike	3	3020
-Punishment Strike	4	3021
-Punishment Strike	5	3022
-Punishment Strike	6	3022
-Extinction Icicle	1	2968
-Extinction Icicle	2	2969
-Extinction Icicle	3	2970
-Extinction Icicle	4	2971
-Extinction Icicle	5	2972
-Extinction Icicle	6	2972
-Electric Pompom	1	2958
-Electric Pompom	2	2959
-Electric Pompom	3	2960
-Electric Pompom	4	2961
-Electric Pompom	5	2962
-Electric Pompom	6	2962
-Vivid Love	1	3013
-Vivid Love	2	3014
-Vivid Love	3	3015
-Vivid Love	4	3016
-Vivid Love	5	3017
-Vivid Love	6	3017
-Angelic Drop	1	3028
-Angelic Drop	2	3029
-Angelic Drop	3	3030
-Angelic Drop	4	3031
-Angelic Drop	5	3032
-Angelic Drop	6	3032
-Nightmare Rondeau	1	2983
-Nightmare Rondeau	2	2984
-Nightmare Rondeau	3	2985
-Nightmare Rondeau	4	2986
-Nightmare Rondeau	5	2987
-Nightmare Rondeau	6	2987
-Shadow Rhapsody	1	2983
-Shadow Rhapsody	2	2984
-Shadow Rhapsody	3	2985
-Shadow Rhapsody	4	2986
-Shadow Rhapsody	5	2987
-Shadow Rhapsody	6	2987
-Decadent Finale	1	2983
-Decadent Finale	2	2984
-Decadent Finale	3	2985
-Decadent Finale	4	2986
-Decadent Finale	5	2987
-Decadent Finale	6	2987
-Beary Strong	1	3013
-Beary Strong	2	3014
-Beary Strong	3	3015
-Beary Strong	4	3016
-Beary Strong	5	3017
-Beary Strong	6	3017
-Beary Helpful	1	3028
-Beary Helpful	2	3029
-Beary Helpful	3	3030
-Beary Helpful	4	3031
-Beary Helpful	5	3032
-Beary Helpful	6	3032
-Beary-Go-Round	1	2983
-Beary-Go-Round	2	2984
-Beary-Go-Round	3	2985
-Beary-Go-Round	4	2986
-Beary-Go-Round	5	2987
-Beary-Go-Round	6	2987
-Flaming Slashwave	1	3003
-Flaming Slashwave	2	3004
-Flaming Slashwave	3	3005
-Flaming Slashwave	4	3006
-Flaming Slashwave	5	3007
-Flaming Slashwave	6	3007
-Immolating Cleave	1	2958
-Immolating Cleave	2	2959
-Immolating Cleave	3	2960
-Immolating Cleave	4	2961
-Immolating Cleave	5	2962
-Immolating Cleave	6	2962
-Extreme Gutsy Spirit	1	2973
-Extreme Gutsy Spirit	2	2974
-Extreme Gutsy Spirit	3	2975
-Extreme Gutsy Spirit	4	2976
-Extreme Gutsy Spirit	5	2977
-Extreme Gutsy Spirit	6	2977
-Fierce Healer	1	3028
-Fierce Healer	2	3029
-Fierce Healer	3	3030
-Fierce Healer	4	3031
-Fierce Healer	5	3032
-Fierce Healer	6	3032
-Wild Grappler	1	3013
-Wild Grappler	2	3014
-Wild Grappler	3	3015
-Wild Grappler	4	3016
-Wild Grappler	5	3017
-Wild Grappler	6	3017
-Organic Automata	1	3028
-Organic Automata	2	3029
-Organic Automata	3	3030
-Organic Automata	4	3031
-Organic Automata	5	3032
-Organic Automata	6	3032
-Dessert Bomb	1	2993
-Dessert Bomb	2	2994
-Dessert Bomb	3	2995
-Dessert Bomb	4	2996
-Dessert Bomb	5	2997
-Dessert Bomb	6	2997
-Tea Leaves	1	2933
-Tea Leaves	2	2934
-Tea Leaves	3	2935
-Tea Leaves	4	2936
-Tea Leaves	5	2937
-Tea Leaves	6	2937
-Golden Font	1	3038
-Golden Font	2	3039
-Golden Font	3	3040
-Golden Font	4	3041
-Golden Font	5	3042
-Golden Font	6	3042
-Healing Bolt	1	3028
-Healing Bolt	2	3029
-Healing Bolt	3	3030
-Healing Bolt	4	3031
-Healing Bolt	5	3032
-Healing Bolt	6	3032
-Ball Lightning	1	2878
-Ball Lightning	2	2879
-Ball Lightning	3	2880
-Ball Lightning	4	2881
-Ball Lightning	5	2882
-Ball Lightning	6	2882
-Thunderstrike	1	3013
-Thunderstrike	2	3014
-Thunderstrike	3	3015
-Thunderstrike	4	3016
-Thunderstrike	5	3017
-Thunderstrike	6	3017
-Harness the Wind	1	3018
-Harness the Wind	2	3019
-Harness the Wind	3	3020
-Harness the Wind	4	3021
-Harness the Wind	5	3022
-Harness the Wind	6	3022
-Slipstream	1	2973
-Slipstream	2	2974
-Slipstream	3	2975
-Slipstream	4	2976
-Slipstream	5	2977
-Slipstream	6	2977
-Mortal Storm	1	2973
-Mortal Storm	2	2974
-Mortal Storm	3	2975
-Mortal Storm	4	2976
-Mortal Storm	5	2977
-Mortal Storm	6	2977
-Bang-Bang Bound	1	2953
-Bang-Bang Bound	2	2954
-Bang-Bang Bound	3	2955
-Bang-Bang Bound	4	2956
-Bang-Bang Bound	5	2957
-Bang-Bang Bound	6	2957
-Shocking Assault	1	2958
-Shocking Assault	2	2959
-Shocking Assault	3	2960
-Shocking Assault	4	2961
-Shocking Assault	5	2962
-Shocking Assault	6	2962
-Rolling Thunder	1	3003
-Rolling Thunder	2	3004
-Rolling Thunder	3	3005
-Rolling Thunder	4	3006
-Rolling Thunder	5	3007
-Rolling Thunder	6	3007
-Diabolic Zephyr	1	2983
-Diabolic Zephyr	2	2984
-Diabolic Zephyr	3	2985
-Diabolic Zephyr	4	2986
-Diabolic Zephyr	5	2987
-Diabolic Zephyr	6	2987
-Adamantine Axe	1	2953
-Adamantine Axe	2	2954
-Adamantine Axe	3	2955
-Adamantine Axe	4	2956
-Adamantine Axe	5	2957
-Adamantine Axe	6	2957
-Ascension Blade	1	2963
-Ascension Blade	2	2964
-Ascension Blade	3	2965
-Ascension Blade	4	2966
-Ascension Blade	5	2967
-Ascension Blade	6	2967
-Blast of Fresh Air	1	3023
-Blast of Fresh Air	2	3024
-Blast of Fresh Air	3	3025
-Blast of Fresh Air	4	3026
-Blast of Fresh Air	5	3027
-Blast of Fresh Air	6	3027
-Whoopsie Crazy	1	3003
-Whoopsie Crazy	2	3004
-Whoopsie Crazy	3	3005
-Whoopsie Crazy	4	3006
-Whoopsie Crazy	5	3007
-Whoopsie Crazy	6	3007
-Wake-Up Whirl	1	2953
-Wake-Up Whirl	2	2954
-Wake-Up Whirl	3	2955
-Wake-Up Whirl	4	2956
-Wake-Up Whirl	5	2957
-Wake-Up Whirl	6	2957
-R-Blade	1	2933
-R-Blade	2	2934
-R-Blade	3	2935
-R-Blade	4	2936
-R-Blade	5	2937
-R-Blade	6	2937
-H-Effect R	1	3028
-H-Effect R	2	3029
-H-Effect R	3	3030
-H-Effect R	4	3031
-H-Effect R	5	3032
-H-Effect R	6	3032
-F-G-Shot	1	2973
-F-G-Shot	2	2974
-F-G-Shot	3	2975
-F-G-Shot	4	2976
-F-G-Shot	5	2977
-F-G-Shot	6	2977
-Empyrean Salvo	1	2933
-Empyrean Salvo	2	2934
-Empyrean Salvo	3	2935
-Empyrean Salvo	4	2936
-Empyrean Salvo	5	2937
-Empyrean Salvo	6	2937
-The Heavens Open	1	2973
-The Heavens Open	2	2974
-The Heavens Open	3	2975
-The Heavens Open	4	2976
-The Heavens Open	5	2977
-The Heavens Open	6	2977
-Final Retribution	1	2983
-Final Retribution	2	2984
-Final Retribution	3	2985
-Final Retribution	4	2986
-Final Retribution	5	2987
-Final Retribution	6	2987
-Blood Altar	1	2983
-Blood Altar	2	2984
-Blood Altar	3	2985
-Blood Altar	4	2986
-Blood Altar	5	2987
-Blood Altar	6	2987
-Tainted Palace	1	2888
-Tainted Palace	2	2889
-Tainted Palace	3	2890
-Tainted Palace	4	2891
-Tainted Palace	5	2892
-Tainted Palace	6	2892
-Accursed Prison	1	2973
-Accursed Prison	2	2974
-Accursed Prison	3	2975
-Accursed Prison	4	2976
-Accursed Prison	5	2977
-Accursed Prison	6	2977
-Heliodor Passion	1	2958
-Heliodor Passion	2	2959
-Heliodor Passion	3	2960
-Heliodor Passion	4	2961
-Heliodor Passion	5	2962
-Heliodor Passion	6	2962
-Star Beryl Courage	1	2953
-Star Beryl Courage	2	2954
-Star Beryl Courage	3	2955
-Star Beryl Courage	4	2956
-Star Beryl Courage	5	2957
-Star Beryl Courage	6	2957
-Rhodochrosite Might	1	2933
-Rhodochrosite Might	2	2934
-Rhodochrosite Might	3	2935
-Rhodochrosite Might	4	2936
-Rhodochrosite Might	5	2937
-Rhodochrosite Might	6	2937
-Crystal Blizzard	1	2933
-Crystal Blizzard	2	2934
-Crystal Blizzard	3	2935
-Crystal Blizzard	4	2936
-Crystal Blizzard	5	2937
-Crystal Blizzard	6	2937
-Snowblind	1	3013
-Snowblind	2	3014
-Snowblind	3	3015
-Snowblind	4	3016
-Snowblind	5	3017
-Snowblind	6	3017
-Frost Queen	1	3028
-Frost Queen	2	3029
-Frost Queen	3	3030
-Frost Queen	4	3031
-Frost Queen	5	3032
-Frost Queen	6	3032
-Stream Edge	1	2973
-Stream Edge	2	2974
-Stream Edge	3	2975
-Stream Edge	4	2976
-Stream Edge	5	2977
-Stream Edge	6	2977
-Falling Axe	1	2953
-Falling Axe	2	2954
-Falling Axe	3	2955
-Falling Axe	4	2956
-Falling Axe	5	2957
-Falling Axe	6	2957
-Axe Throw	1	2868
-Axe Throw	2	2869
-Axe Throw	3	2870
-Axe Throw	4	2871
-Axe Throw	5	2872
-Axe Throw	6	2872
-Round Break	1	2953
-Round Break	2	2954
-Round Break	3	2955
-Round Break	4	2956
-Round Break	5	2957
-Round Break	6	2957
-Boomerang Spear	1	2858
-Boomerang Spear	2	2859
-Boomerang Spear	3	2860
-Boomerang Spear	4	2861
-Boomerang Spear	5	2862
-Boomerang Spear	6	2862
-Splash Lance	1	3018
-Splash Lance	2	3019
-Splash Lance	3	3020
-Splash Lance	4	3021
-Splash Lance	5	3022
-Splash Lance	6	3022
-Sidewinder	1	2878
-Sidewinder	2	2879
-Sidewinder	3	2880
-Sidewinder	4	2881
-Sidewinder	5	2882
-Sidewinder	6	2882
-Aerial Trigger	1	2953
-Aerial Trigger	2	2954
-Aerial Trigger	3	2955
-Aerial Trigger	4	2956
-Aerial Trigger	5	2957
-Aerial Trigger	6	2957
-Swing Cannon	1	2993
-Swing Cannon	2	2994
-Swing Cannon	3	2995
-Swing Cannon	4	2996
-Swing Cannon	5	2997
-Swing Cannon	6	2997
-Shield Charge	1	2938
-Shield Charge	2	2939
-Shield Charge	3	2940
-Shield Charge	4	2941
-Shield Charge	5	2942
-Shield Charge	6	2942
-Smash Circle	1	3003
-Smash Circle	2	3004
-Smash Circle	3	3005
-Smash Circle	4	3006
-Smash Circle	5	3007
-Smash Circle	6	3007
-Hammer Beat	1	2953
-Hammer Beat	2	2954
-Hammer Beat	3	2955
-Hammer Beat	4	2956
-Hammer Beat	5	2957
-Hammer Beat	6	2957
-Excelsior Slash	1	2973
-Excelsior Slash	2	2974
-Excelsior Slash	3	2975
-Excelsior Slash	4	2976
-Excelsior Slash	5	2977
-Excelsior Slash	6	2977
-Triple Edge	1	3003
-Triple Edge	2	3004
-Triple Edge	3	3005
-Triple Edge	4	3006
-Triple Edge	5	3007
-Triple Edge	6	3007
-Multi-Raid	1	2988
-Multi-Raid	2	2989
-Multi-Raid	3	2990
-Multi-Raid	4	2991
-Multi-Raid	5	2992
-Multi-Raid	6	2992
-Grenade Throw	1	2953
-Grenade Throw	2	2954
-Grenade Throw	3	2955
-Grenade Throw	4	2956
-Grenade Throw	5	2957
-Grenade Throw	6	2957
-Grim Sphere	1	3028
-Grim Sphere	2	3029
-Grim Sphere	3	3030
-Grim Sphere	4	3031
-Grim Sphere	5	3032
-Grim Sphere	6	3032
-Shrapnel	1	2923
-Shrapnel	2	2924
-Shrapnel	3	2925
-Shrapnel	4	2926
-Shrapnel	5	2927
-Shrapnel	6	2927
-Flying Knuckle	1	3013
-Flying Knuckle	2	3014
-Flying Knuckle	3	3015
-Flying Knuckle	4	3016
-Flying Knuckle	5	3017
-Flying Knuckle	6	3017
-Assault Rush	1	2928
-Assault Rush	2	2929
-Assault Rush	3	2930
-Assault Rush	4	2931
-Assault Rush	5	2932
-Assault Rush	6	2932
-Executioner	1	3028
-Executioner	2	3029
-Executioner	3	3030
-Executioner	4	3031
-Executioner	5	3032
-Executioner	6	3032
-Axe Break	1	2933
-Axe Break	2	2934
-Axe Break	3	2935
-Axe Break	4	2936
-Axe Break	5	2937
-Axe Break	6	2937
-Ground Charge	1	2953
-Ground Charge	2	2954
-Ground Charge	3	2955
-Ground Charge	4	2956
-Ground Charge	5	2957
-Ground Charge	6	2957
-War Swing	1	2973
-War Swing	2	2974
-War Swing	3	2975
-War Swing	4	2976
-War Swing	5	2977
-War Swing	6	2977
-Speed Glaive	1	2943
-Speed Glaive	2	2944
-Speed Glaive	3	2945
-Speed Glaive	4	2946
-Speed Glaive	5	2947
-Speed Glaive	6	2947
-Beam Halberd	1	2973
-Beam Halberd	2	2974
-Beam Halberd	3	2975
-Beam Halberd	4	2976
-Beam Halberd	5	2977
-Beam Halberd	6	2977
-Hair Trigger	1	3018
-Hair Trigger	2	3019
-Hair Trigger	3	3020
-Hair Trigger	4	3021
-Hair Trigger	5	3022
-Hair Trigger	6	3022
-Beam Bomber	1	2993
-Beam Bomber	2	2994
-Beam Bomber	3	2995
-Beam Bomber	4	2996
-Beam Bomber	5	2997
-Beam Bomber	6	2997
-Zero Burst	1	2958
-Zero Burst	2	2959
-Zero Burst	3	2960
-Zero Burst	4	2961
-Zero Burst	5	2962
-Zero Burst	6	2962
-Spinning Laser	1	2973
-Spinning Laser	2	2974
-Spinning Laser	3	2975
-Spinning Laser	4	2976
-Spinning Laser	5	2977
-Spinning Laser	6	2977
-Wheel Crash	1	2938
-Wheel Crash	2	2939
-Wheel Crash	3	2940
-Wheel Crash	4	2941
-Wheel Crash	5	2942
-Wheel Crash	6	2942
-Ground Impulse	1	2958
-Ground Impulse	2	2959
-Ground Impulse	3	2960
-Ground Impulse	4	2961
-Ground Impulse	5	2962
-Ground Impulse	6	2962
-Turn Strike	1	3003
-Turn Strike	2	3004
-Turn Strike	3	3005
-Turn Strike	4	3006
-Turn Strike	5	3007
-Turn Strike	6	3007
-Drop Edge	1	2953
-Drop Edge	2	2954
-Drop Edge	3	2955
-Drop Edge	4	2956
-Drop Edge	5	2957
-Drop Edge	6	2957
-Counter Spin	1	3003
-Counter Spin	2	3004
-Counter Spin	3	3005
-Counter Spin	4	3006
-Counter Spin	5	3007
-Counter Spin	6	3007
-Magnum Edge	1	2988
-Magnum Edge	2	2989
-Magnum Edge	3	2990
-Magnum Edge	4	2991
-Magnum Edge	5	2992
-Magnum Edge	6	2992
-Metal Blast	1	2953
-Metal Blast	2	2954
-Metal Blast	3	2955
-Metal Blast	4	2956
-Metal Blast	5	2957
-Metal Blast	6	2957
-Wrecking Ball	1	3013
-Wrecking Ball	2	3014
-Wrecking Ball	3	3015
-Wrecking Ball	4	3016
-Wrecking Ball	5	3017
-Wrecking Ball	6	3017
-Violent Swing	1	3028
-Violent Swing	2	3029
-Violent Swing	3	3030
-Violent Swing	4	3031
-Violent Swing	5	3032
-Violent Swing	6	3032
-Bomber Tackle	1	2928
-Bomber Tackle	2	2929
-Bomber Tackle	3	2930
-Bomber Tackle	4	2931
-Bomber Tackle	5	2932
-Bomber Tackle	6	2932
-Head Shaker	1	2958
-Head Shaker	2	2959
-Head Shaker	3	2960
-Head Shaker	4	2961
-Head Shaker	5	2962
-Head Shaker	6	2962
-Knuckle Purge	1	3013
-Knuckle Purge	2	3014
-Knuckle Purge	3	3015
-Knuckle Purge	4	3016
-Knuckle Purge	5	3017
-Knuckle Purge	6	3017
-Axe Strike	1	2953
-Axe Strike	2	2954
-Axe Strike	3	2955
-Axe Strike	4	2956
-Axe Strike	5	2957
-Axe Strike	6	2957
-Megaslash	1	2933
-Megaslash	2	2934
-Megaslash	3	2935
-Megaslash	4	2936
-Megaslash	5	2937
-Megaslash	6	2937
-Flying Cutter	1	2853
-Flying Cutter	2	2854
-Flying Cutter	3	2855
-Flying Cutter	4	2856
-Flying Cutter	5	2857
-Flying Cutter	6	2857
-Multi-Edge	1	3023
-Multi-Edge	2	3024
-Multi-Edge	3	3025
-Multi-Edge	4	3026
-Multi-Edge	5	3027
-Multi-Edge	6	3027
-Trident Buster	1	2953
-Trident Buster	2	2954
-Trident Buster	3	2955
-Trident Buster	4	2956
-Trident Buster	5	2957
-Trident Buster	6	2957
-Spiral Spear	1	2993
-Spiral Spear	2	2994
-Spiral Spear	3	2995
-Spiral Spear	4	2996
-Spiral Spear	5	2997
-Spiral Spear	6	2997
-Flash Barrel	1	2953
-Flash Barrel	2	2954
-Flash Barrel	3	2955
-Flash Barrel	4	2956
-Flash Barrel	5	2957
-Flash Barrel	6	2957
-Blink Bullet	1	2993
-Blink Bullet	2	2994
-Blink Bullet	3	2995
-Blink Bullet	4	2996
-Blink Bullet	5	2997
-Blink Bullet	6	2997
-Beam Barrage	1	2973
-Beam Barrage	2	2974
-Beam Barrage	3	2975
-Beam Barrage	4	2976
-Beam Barrage	5	2977
-Beam Barrage	6	2977
-Aerial Shield	1	2938
-Aerial Shield	2	2939
-Aerial Shield	3	2940
-Aerial Shield	4	2941
-Aerial Shield	5	2942
-Aerial Shield	6	2942
-Drum Roll	1	2958
-Drum Roll	2	2959
-Drum Roll	3	2960
-Drum Roll	4	2961
-Drum Roll	5	2962
-Drum Roll	6	2962
-Hammer Rush	1	2983
-Hammer Rush	2	2984
-Hammer Rush	3	2985
-Hammer Rush	4	2986
-Hammer Rush	5	2987
-Hammer Rush	6	2987
-Sword Dance	1	2973
-Sword Dance	2	2974
-Sword Dance	3	2975
-Sword Dance	4	2976
-Sword Dance	5	2977
-Sword Dance	6	2977
-Rage Cutter	1	3003
-Rage Cutter	2	3004
-Rage Cutter	3	3005
-Rage Cutter	4	3006
-Rage Cutter	5	3007
-Rage Cutter	6	3007
-Air Slash	1	2988
-Air Slash	2	2989
-Air Slash	3	2990
-Air Slash	4	2991
-Air Slash	5	2992
-Air Slash	6	2992
-Flash Bomb	1	2928
-Flash Bomb	2	2929
-Flash Bomb	3	2930
-Flash Bomb	4	2931
-Flash Bomb	5	2932
-Flash Bomb	6	2932
-Power Effect	1	3028
-Power Effect	2	3029
-Power Effect	3	3030
-Power Effect	4	3031
-Power Effect	5	3032
-Power Effect	6	3032
-Rumble Sphere	1	3013
-Rumble Sphere	2	3014
-Rumble Sphere	3	3015
-Rumble Sphere	4	3016
-Rumble Sphere	5	3017
-Rumble Sphere	6	3017
-Thermal Payload	1	3013
-Thermal Payload	2	3014
-Thermal Payload	3	3015
-Thermal Payload	4	3016
-Thermal Payload	5	3017
-Thermal Payload	6	3017
-Leg Blast	1	2928
-Leg Blast	2	2929
-Leg Blast	3	2930
-Leg Blast	4	2931
-Leg Blast	5	2932
-Leg Blast	6	2932
-Flash Blow	1	3028
-Flash Blow	2	3029
-Flash Blow	3	3030
-Flash Blow	4	3031
-Flash Blow	5	3032
-Flash Blow	6	3032
-Ripple Drive	1	3028
-Ripple Drive	2	3029
-Ripple Drive	3	3030
-Ripple Drive	4	3031
-Ripple Drive	5	3032
-Ripple Drive	6	3032
-Dual Fang	1	3028
-Dual Fang	2	3029
-Dual Fang	3	3030
-Dual Fang	4	3031
-Dual Fang	5	3032
-Dual Fang	6	3032
-Screw Edge	1	3013
-Screw Edge	2	3014
-Screw Edge	3	3015
-Screw Edge	4	3016
-Screw Edge	5	3017
-Screw Edge	6	3017
-ECHIDNA	1	2933
-ECHIDNA	2	2934
-ECHIDNA	3	2935
-ECHIDNA	4	2936
-ECHIDNA	5	2937
-ECHIDNA	6	2937
-MAGDALENE 16	1	2963
-MAGDALENE 16	2	2964
-MAGDALENE 16	3	2965
-MAGDALENE 16	4	2966
-MAGDALENE 16	5	2967
-MAGDALENE 16	6	2967
-T-SKYLLA	1	2973
-T-SKYLLA	2	2974
-T-SKYLLA	3	2975
-T-SKYLLA	4	2976
-T-SKYLLA	5	2977
-T-SKYLLA	6	2977
-Buster Cyclone	1	3003
-Buster Cyclone	2	3004
-Buster Cyclone	3	3005
-Buster Cyclone	4	3006
-Buster Cyclone	5	3007
-Buster Cyclone	6	3007
-Buster Cannon	1	2973
-Buster Cannon	2	2974
-Buster Cannon	3	2975
-Buster Cannon	4	2976
-Buster Cannon	5	2977
-Buster Cannon	6	2977
-Buster Mirage	1	2988
-Buster Mirage	2	2989
-Buster Mirage	3	2990
-Buster Mirage	4	2991
-Buster Mirage	5	2992
-Buster Mirage	6	2992
-Monado Purge	1	3664
-Monado Purge	2	3665
-Monado Purge	3	3666
-Monado Purge	4	3667
-Monado Purge	5	3668
-Monado Purge	6	3668
-Monado Cyclone	1	2933
-Monado Cyclone	2	2934
-Monado Cyclone	3	2935
-Monado Cyclone	4	2936
-Monado Cyclone	5	2937
-Monado Cyclone	6	2937
-Monado Buster	1	2973
-Monado Buster	2	2974
-Monado Buster	3	2975
-Monado Buster	4	2976
-Monado Buster	5	2977
-Monado Buster	6	2977
-Hidden Thorn	1	3013
-Hidden Thorn	2	3014
-Hidden Thorn	3	3015
-Hidden Thorn	4	3016
-Hidden Thorn	5	3017
-Hidden Thorn	6	3017
-Power Smash	1	2928
-Power Smash	2	2929
-Power Smash	3	2930
-Power Smash	4	2931
-Power Smash	5	2932
-Power Smash	6	2932
-Lacerate	1	3028
-Lacerate	2	3029
-Lacerate	3	3030
-Lacerate	4	3031
-Lacerate	5	3032
-Lacerate	6	3032
+Blazing End	1	2975
+Blazing End	2	2976
+Blazing End	3	2977
+Blazing End	4	2978
+Blazing End	5	2979
+Blazing End	6	2979
+Flame Nova	1	2895
+Flame Nova	2	2896
+Flame Nova	3	2897
+Flame Nova	4	2898
+Flame Nova	5	2899
+Flame Nova	6	2899
+Prominence Revolt	1	2995
+Prominence Revolt	2	2996
+Prominence Revolt	3	2997
+Prominence Revolt	4	2998
+Prominence Revolt	5	2999
+Prominence Revolt	6	2999
+Ray of Punishment	1	2995
+Ray of Punishment	2	2996
+Ray of Punishment	3	2997
+Ray of Punishment	4	2998
+Ray of Punishment	5	2999
+Ray of Punishment	6	2999
+Lightning Buster	1	3025
+Lightning Buster	2	3026
+Lightning Buster	3	3027
+Lightning Buster	4	3028
+Lightning Buster	5	3029
+Lightning Buster	6	3029
+Photon Edge	1	3015
+Photon Edge	2	3016
+Photon Edge	3	3017
+Photon Edge	4	3018
+Photon Edge	5	3019
+Photon Edge	6	3019
+Starburst	1	3015
+Starburst	2	3016
+Starburst	3	3017
+Starburst	4	3018
+Starburst	5	3019
+Starburst	6	3019
+Radiant Flare	1	3015
+Radiant Flare	2	3016
+Radiant Flare	3	3017
+Radiant Flare	4	3018
+Radiant Flare	5	3019
+Radiant Flare	6	3019
+Genesis Saber	1	3015
+Genesis Saber	2	3016
+Genesis Saber	3	3017
+Genesis Saber	4	3018
+Genesis Saber	5	3019
+Genesis Saber	6	3019
+Last Hope	1	2965
+Last Hope	2	2966
+Last Hope	3	2967
+Last Hope	4	2968
+Last Hope	5	2969
+Last Hope	6	2969
+Merciful Heart	1	3055
+Merciful Heart	2	3056
+Merciful Heart	3	3057
+Merciful Heart	4	3058
+Merciful Heart	5	3059
+Merciful Heart	6	3059
+Redeeming Strike	1	3070
+Redeeming Strike	2	3071
+Redeeming Strike	3	3072
+Redeeming Strike	4	3073
+Redeeming Strike	5	3074
+Redeeming Strike	6	3074
+Raging Tiger	1	2970
+Raging Tiger	2	2971
+Raging Tiger	3	2972
+Raging Tiger	4	2973
+Raging Tiger	5	2974
+Raging Tiger	6	2974
+Aqua Wave	1	3070
+Aqua Wave	2	3071
+Aqua Wave	3	3072
+Aqua Wave	4	3073
+Aqua Wave	5	3074
+Aqua Wave	6	3074
+Wild Roar	1	3055
+Wild Roar	2	3056
+Wild Roar	3	3057
+Wild Roar	4	3058
+Wild Roar	5	3059
+Wild Roar	6	3059
+Heat Haze	1	3045
+Heat Haze	2	3046
+Heat Haze	3	3047
+Heat Haze	4	3048
+Heat Haze	5	3049
+Heat Haze	6	3049
+Will-o'-the-Wisp	1	3000
+Will-o'-the-Wisp	2	3001
+Will-o'-the-Wisp	3	3002
+Will-o'-the-Wisp	4	3003
+Will-o'-the-Wisp	5	3004
+Will-o'-the-Wisp	6	3004
+Swirling Dragon	1	3025
+Swirling Dragon	2	3026
+Swirling Dragon	3	3027
+Swirling Dragon	4	3028
+Swirling Dragon	5	3029
+Swirling Dragon	6	3029
+Lightning Force	1	2920
+Lightning Force	2	2921
+Lightning Force	3	2922
+Lightning Force	4	2923
+Lightning Force	5	2924
+Lightning Force	6	2924
+Electric Circus	1	2975
+Electric Circus	2	2976
+Electric Circus	3	2977
+Electric Circus	4	2978
+Electric Circus	5	2979
+Electric Circus	6	2979
+Thunder Doom	1	2975
+Thunder Doom	2	2976
+Thunder Doom	3	2977
+Thunder Doom	4	2978
+Thunder Doom	5	2979
+Thunder Doom	6	2979
+Death Wing	1	2905
+Death Wing	2	2906
+Death Wing	3	2907
+Death Wing	4	2908
+Death Wing	5	2909
+Death Wing	6	2909
+Crushing Twister	1	3025
+Crushing Twister	2	3026
+Crushing Twister	3	3027
+Crushing Twister	4	3028
+Crushing Twister	5	3029
+Crushing Twister	6	3029
+Feather Typhoon	1	2940
+Feather Typhoon	2	2941
+Feather Typhoon	3	2942
+Feather Typhoon	4	2943
+Feather Typhoon	5	2944
+Feather Typhoon	6	2944
+Storm Edge	1	2975
+Storm Edge	2	2976
+Storm Edge	3	2977
+Storm Edge	4	2978
+Storm Edge	5	2979
+Storm Edge	6	2979
+Engrave	1	3045
+Engrave	2	3046
+Engrave	3	3047
+Engrave	4	3048
+Engrave	5	3049
+Engrave	6	3049
+Death Match	1	3015
+Death Match	2	3016
+Death Match	3	3017
+Death Match	4	3018
+Death Match	5	3019
+Death Match	6	3019
+White Wave	1	3070
+White Wave	2	3071
+White Wave	3	3072
+White Wave	4	3073
+White Wave	5	3074
+White Wave	6	3074
+Sacred Wyrm	1	3035
+Sacred Wyrm	2	3036
+Sacred Wyrm	3	3037
+Sacred Wyrm	4	3038
+Sacred Wyrm	5	3039
+Sacred Wyrm	6	3039
+Dark Judgment	1	2965
+Dark Judgment	2	2966
+Dark Judgment	3	2967
+Dark Judgment	4	2968
+Dark Judgment	5	2969
+Dark Judgment	6	2969
+Swallow's Flight	1	2975
+Swallow's Flight	2	2976
+Swallow's Flight	3	2977
+Swallow's Flight	4	2978
+Swallow's Flight	5	2979
+Swallow's Flight	6	2979
+Great Garland	1	2995
+Great Garland	2	2996
+Great Garland	3	2997
+Great Garland	4	2998
+Great Garland	5	2999
+Great Garland	6	2999
+Dragonfly Slash	1	3025
+Dragonfly Slash	2	3026
+Dragonfly Slash	3	3027
+Dragonfly Slash	4	3028
+Dragonfly Slash	5	3029
+Dragonfly Slash	6	3029
+Crow Beat	1	3045
+Crow Beat	2	3046
+Crow Beat	3	3047
+Crow Beat	4	3048
+Crow Beat	5	3049
+Crow Beat	6	3049
+Crow Feather	1	3000
+Crow Feather	2	3001
+Crow Feather	3	3002
+Crow Feather	4	3003
+Crow Feather	5	3004
+Crow Feather	6	3004
+Final Crow	1	3030
+Final Crow	2	3031
+Final Crow	3	3032
+Final Crow	4	3033
+Final Crow	5	3034
+Final Crow	6	3034
+Shred	1	2990
+Shred	2	2991
+Shred	3	2992
+Shred	4	2993
+Shred	5	2994
+Shred	6	2994
+Skewer	1	3035
+Skewer	2	3036
+Skewer	3	3037
+Skewer	4	3038
+Skewer	5	3039
+Skewer	6	3039
+Cruel World	1	3015
+Cruel World	2	3016
+Cruel World	3	3017
+Cruel World	4	3018
+Cruel World	5	3019
+Cruel World	6	3019
+Diamond Crash	1	2995
+Diamond Crash	2	2996
+Diamond Crash	3	2997
+Diamond Crash	4	2998
+Diamond Crash	5	2999
+Diamond Crash	6	2999
+Diamond Flight	1	3060
+Diamond Flight	2	3061
+Diamond Flight	3	3062
+Diamond Flight	4	3063
+Diamond Flight	5	3064
+Diamond Flight	6	3064
+Diamond Hands	1	3015
+Diamond Hands	2	3016
+Diamond Hands	3	3017
+Diamond Hands	4	3018
+Diamond Hands	5	3019
+Diamond Hands	6	3019
+Dead Ball	1	3015
+Dead Ball	2	3016
+Dead Ball	3	3017
+Dead Ball	4	3018
+Dead Ball	5	3019
+Dead Ball	6	3019
+Berserk March	1	3045
+Berserk March	2	3046
+Berserk March	3	3047
+Berserk March	4	3048
+Berserk March	5	3049
+Berserk March	6	3049
+Earth Breath	1	3070
+Earth Breath	2	3071
+Earth Breath	3	3072
+Earth Breath	4	3073
+Earth Breath	5	3074
+Earth Breath	6	3074
+Water Moon	1	3015
+Water Moon	2	3016
+Water Moon	3	3017
+Water Moon	4	3018
+Water Moon	5	3019
+Water Moon	6	3019
+Breaking Wave	1	2975
+Breaking Wave	2	2976
+Breaking Wave	3	2977
+Breaking Wave	4	2978
+Breaking Wave	5	2979
+Breaking Wave	6	2979
+Midnight Mist	1	3030
+Midnight Mist	2	3031
+Midnight Mist	3	3032
+Midnight Mist	4	3033
+Midnight Mist	5	3034
+Midnight Mist	6	3034
+Tough Break	1	3030
+Tough Break	2	3031
+Tough Break	3	3032
+Tough Break	4	3033
+Tough Break	5	3034
+Tough Break	6	3034
+Cold Judgment	1	2995
+Cold Judgment	2	2996
+Cold Judgment	3	2997
+Cold Judgment	4	2998
+Cold Judgment	5	2999
+Cold Judgment	6	2999
+Justice Blizzard	1	3025
+Justice Blizzard	2	3026
+Justice Blizzard	3	3027
+Justice Blizzard	4	3028
+Justice Blizzard	5	3029
+Justice Blizzard	6	3029
+Brutal Lance	1	2995
+Brutal Lance	2	2996
+Brutal Lance	3	2997
+Brutal Lance	4	2998
+Brutal Lance	5	2999
+Brutal Lance	6	2999
+Termination Blast	1	3025
+Termination Blast	2	3026
+Termination Blast	3	3027
+Termination Blast	4	3028
+Termination Blast	5	3029
+Termination Blast	6	3029
+Hellbound	1	3015
+Hellbound	2	3016
+Hellbound	3	3017
+Hellbound	4	3018
+Hellbound	5	3019
+Hellbound	6	3019
+Dark Serpent	1	3045
+Dark Serpent	2	3046
+Dark Serpent	3	3047
+Dark Serpent	4	3048
+Dark Serpent	5	3049
+Dark Serpent	6	3049
+Blade Vortex	1	3030
+Blade Vortex	2	3031
+Blade Vortex	3	3032
+Blade Vortex	4	3033
+Blade Vortex	5	3034
+Blade Vortex	6	3034
+Grim Moon	1	3075
+Grim Moon	2	3076
+Grim Moon	3	3077
+Grim Moon	4	3078
+Grim Moon	5	3079
+Grim Moon	6	3079
+Innocent Teardrop	1	3065
+Innocent Teardrop	2	3066
+Innocent Teardrop	3	3067
+Innocent Teardrop	4	3068
+Innocent Teardrop	5	3069
+Innocent Teardrop	6	3069
+Bittersweet Dreams	1	3060
+Bittersweet Dreams	2	3061
+Bittersweet Dreams	3	3062
+Bittersweet Dreams	4	3063
+Bittersweet Dreams	5	3064
+Bittersweet Dreams	6	3064
+Leave Me Alone	1	2995
+Leave Me Alone	2	2996
+Leave Me Alone	3	2997
+Leave Me Alone	4	2998
+Leave Me Alone	5	2999
+Leave Me Alone	6	2999
+Flame Crown (Weak)	1	2910
+Flame Crown (Weak)	2	2911
+Flame Crown (Weak)	3	2912
+Flame Crown (Weak)	4	2913
+Flame Crown (Weak)	5	2914
+Flame Crown (Weak)	6	2914
+Tyrant Crush (Weak)	1	2975
+Tyrant Crush (Weak)	2	2976
+Tyrant Crush (Weak)	3	2977
+Tyrant Crush (Weak)	4	2978
+Tyrant Crush (Weak)	5	2979
+Tyrant Crush (Weak)	6	2979
+Kaiser Flare (Weak)	1	3025
+Kaiser Flare (Weak)	2	3026
+Kaiser Flare (Weak)	3	3027
+Kaiser Flare (Weak)	4	3028
+Kaiser Flare (Weak)	5	3029
+Kaiser Flare (Weak)	6	3029
+Flame Crown	1	2910
+Flame Crown	2	2911
+Flame Crown	3	2912
+Flame Crown	4	2913
+Flame Crown	5	2914
+Flame Crown	6	2914
+Tyrant Crush	1	2975
+Tyrant Crush	2	2976
+Tyrant Crush	3	2977
+Tyrant Crush	4	2978
+Tyrant Crush	5	2979
+Tyrant Crush	6	2979
+Kaiser Flare	1	3025
+Kaiser Flare	2	3026
+Kaiser Flare	3	3027
+Kaiser Flare	4	3028
+Kaiser Flare	5	3029
+Kaiser Flare	6	3029
+Open Wide!	1	2970
+Open Wide!	2	2971
+Open Wide!	3	2972
+Open Wide!	4	2973
+Open Wide!	5	2974
+Open Wide!	6	2974
+Snack On This!	1	2965
+Snack On This!	2	2966
+Snack On This!	3	2967
+Snack On This!	4	2968
+Snack On This!	5	2969
+Snack On This!	6	2969
+Gobble 'em Up!	1	3070
+Gobble 'em Up!	2	3071
+Gobble 'em Up!	3	3072
+Gobble 'em Up!	4	3073
+Gobble 'em Up!	5	3074
+Gobble 'em Up!	6	3074
+Lavender Drive	1	3000
+Lavender Drive	2	3001
+Lavender Drive	3	3002
+Lavender Drive	4	3003
+Lavender Drive	5	3004
+Lavender Drive	6	3004
+Lilium Dance	1	3070
+Lilium Dance	2	3071
+Lilium Dance	3	3072
+Lilium Dance	4	3073
+Lilium Dance	5	3074
+Lilium Dance	6	3074
+Physalis Judgment	1	3055
+Physalis Judgment	2	3056
+Physalis Judgment	3	3057
+Physalis Judgment	4	3058
+Physalis Judgment	5	3059
+Physalis Judgment	6	3059
+Sentimental Burst	1	3045
+Sentimental Burst	2	3046
+Sentimental Burst	3	3047
+Sentimental Burst	4	3048
+Sentimental Burst	5	3049
+Sentimental Burst	6	3049
+Hidden Emotion	1	3030
+Hidden Emotion	2	3031
+Hidden Emotion	3	3032
+Hidden Emotion	4	3033
+Hidden Emotion	5	3034
+Hidden Emotion	6	3034
+Secret Desire	1	3025
+Secret Desire	2	3026
+Secret Desire	3	3027
+Secret Desire	4	3028
+Secret Desire	5	3029
+Secret Desire	6	3029
+Foam Blast	1	3060
+Foam Blast	2	3061
+Foam Blast	3	3062
+Foam Blast	4	3063
+Foam Blast	5	3064
+Foam Blast	6	3064
+Geyser Spring	1	3015
+Geyser Spring	2	3016
+Geyser Spring	3	3017
+Geyser Spring	4	3018
+Geyser Spring	5	3019
+Geyser Spring	6	3019
+Fierce Deluge	1	2985
+Fierce Deluge	2	2986
+Fierce Deluge	3	2987
+Fierce Deluge	4	2988
+Fierce Deluge	5	2989
+Fierce Deluge	6	2989
+Ice Slash	1	3045
+Ice Slash	2	3046
+Ice Slash	3	3047
+Ice Slash	4	3048
+Ice Slash	5	3049
+Ice Slash	6	3049
+Frost Banish	1	3030
+Frost Banish	2	3031
+Frost Banish	3	3032
+Frost Banish	4	3033
+Frost Banish	5	3034
+Frost Banish	6	3034
+Rebel Sister	1	2975
+Rebel Sister	2	2976
+Rebel Sister	3	2977
+Rebel Sister	4	2978
+Rebel Sister	5	2979
+Rebel Sister	6	2979
+Cold Sever	1	2985
+Cold Sever	2	2986
+Cold Sever	3	2987
+Cold Sever	4	2988
+Cold Sever	5	2989
+Cold Sever	6	2989
+Punishment Strike	1	3060
+Punishment Strike	2	3061
+Punishment Strike	3	3062
+Punishment Strike	4	3063
+Punishment Strike	5	3064
+Punishment Strike	6	3064
+Extinction Icicle	1	3010
+Extinction Icicle	2	3011
+Extinction Icicle	3	3012
+Extinction Icicle	4	3013
+Extinction Icicle	5	3014
+Extinction Icicle	6	3014
+Electric Pompom	1	3000
+Electric Pompom	2	3001
+Electric Pompom	3	3002
+Electric Pompom	4	3003
+Electric Pompom	5	3004
+Electric Pompom	6	3004
+Vivid Love	1	3055
+Vivid Love	2	3056
+Vivid Love	3	3057
+Vivid Love	4	3058
+Vivid Love	5	3059
+Vivid Love	6	3059
+Angelic Drop	1	3070
+Angelic Drop	2	3071
+Angelic Drop	3	3072
+Angelic Drop	4	3073
+Angelic Drop	5	3074
+Angelic Drop	6	3074
+Nightmare Rondeau	1	3025
+Nightmare Rondeau	2	3026
+Nightmare Rondeau	3	3027
+Nightmare Rondeau	4	3028
+Nightmare Rondeau	5	3029
+Nightmare Rondeau	6	3029
+Shadow Rhapsody	1	3025
+Shadow Rhapsody	2	3026
+Shadow Rhapsody	3	3027
+Shadow Rhapsody	4	3028
+Shadow Rhapsody	5	3029
+Shadow Rhapsody	6	3029
+Decadent Finale	1	3025
+Decadent Finale	2	3026
+Decadent Finale	3	3027
+Decadent Finale	4	3028
+Decadent Finale	5	3029
+Decadent Finale	6	3029
+Beary Strong	1	3055
+Beary Strong	2	3056
+Beary Strong	3	3057
+Beary Strong	4	3058
+Beary Strong	5	3059
+Beary Strong	6	3059
+Beary Helpful	1	3070
+Beary Helpful	2	3071
+Beary Helpful	3	3072
+Beary Helpful	4	3073
+Beary Helpful	5	3074
+Beary Helpful	6	3074
+Beary-Go-Round	1	3025
+Beary-Go-Round	2	3026
+Beary-Go-Round	3	3027
+Beary-Go-Round	4	3028
+Beary-Go-Round	5	3029
+Beary-Go-Round	6	3029
+Flaming Slashwave	1	3045
+Flaming Slashwave	2	3046
+Flaming Slashwave	3	3047
+Flaming Slashwave	4	3048
+Flaming Slashwave	5	3049
+Flaming Slashwave	6	3049
+Immolating Cleave	1	3000
+Immolating Cleave	2	3001
+Immolating Cleave	3	3002
+Immolating Cleave	4	3003
+Immolating Cleave	5	3004
+Immolating Cleave	6	3004
+Extreme Gutsy Spirit	1	3015
+Extreme Gutsy Spirit	2	3016
+Extreme Gutsy Spirit	3	3017
+Extreme Gutsy Spirit	4	3018
+Extreme Gutsy Spirit	5	3019
+Extreme Gutsy Spirit	6	3019
+Fierce Healer	1	3070
+Fierce Healer	2	3071
+Fierce Healer	3	3072
+Fierce Healer	4	3073
+Fierce Healer	5	3074
+Fierce Healer	6	3074
+Wild Grappler	1	3055
+Wild Grappler	2	3056
+Wild Grappler	3	3057
+Wild Grappler	4	3058
+Wild Grappler	5	3059
+Wild Grappler	6	3059
+Organic Automata	1	3070
+Organic Automata	2	3071
+Organic Automata	3	3072
+Organic Automata	4	3073
+Organic Automata	5	3074
+Organic Automata	6	3074
+Dessert Bomb	1	3035
+Dessert Bomb	2	3036
+Dessert Bomb	3	3037
+Dessert Bomb	4	3038
+Dessert Bomb	5	3039
+Dessert Bomb	6	3039
+Tea Leaves	1	2975
+Tea Leaves	2	2976
+Tea Leaves	3	2977
+Tea Leaves	4	2978
+Tea Leaves	5	2979
+Tea Leaves	6	2979
+Golden Font	1	3080
+Golden Font	2	3081
+Golden Font	3	3082
+Golden Font	4	3083
+Golden Font	5	3084
+Golden Font	6	3084
+Healing Bolt	1	3070
+Healing Bolt	2	3071
+Healing Bolt	3	3072
+Healing Bolt	4	3073
+Healing Bolt	5	3074
+Healing Bolt	6	3074
+Ball Lightning	1	2920
+Ball Lightning	2	2921
+Ball Lightning	3	2922
+Ball Lightning	4	2923
+Ball Lightning	5	2924
+Ball Lightning	6	2924
+Thunderstrike	1	3055
+Thunderstrike	2	3056
+Thunderstrike	3	3057
+Thunderstrike	4	3058
+Thunderstrike	5	3059
+Thunderstrike	6	3059
+Harness the Wind	1	3060
+Harness the Wind	2	3061
+Harness the Wind	3	3062
+Harness the Wind	4	3063
+Harness the Wind	5	3064
+Harness the Wind	6	3064
+Slipstream	1	3015
+Slipstream	2	3016
+Slipstream	3	3017
+Slipstream	4	3018
+Slipstream	5	3019
+Slipstream	6	3019
+Mortal Storm	1	3015
+Mortal Storm	2	3016
+Mortal Storm	3	3017
+Mortal Storm	4	3018
+Mortal Storm	5	3019
+Mortal Storm	6	3019
+Bang-Bang Bound	1	2995
+Bang-Bang Bound	2	2996
+Bang-Bang Bound	3	2997
+Bang-Bang Bound	4	2998
+Bang-Bang Bound	5	2999
+Bang-Bang Bound	6	2999
+Shocking Assault	1	3000
+Shocking Assault	2	3001
+Shocking Assault	3	3002
+Shocking Assault	4	3003
+Shocking Assault	5	3004
+Shocking Assault	6	3004
+Rolling Thunder	1	3045
+Rolling Thunder	2	3046
+Rolling Thunder	3	3047
+Rolling Thunder	4	3048
+Rolling Thunder	5	3049
+Rolling Thunder	6	3049
+Diabolic Zephyr	1	3025
+Diabolic Zephyr	2	3026
+Diabolic Zephyr	3	3027
+Diabolic Zephyr	4	3028
+Diabolic Zephyr	5	3029
+Diabolic Zephyr	6	3029
+Adamantine Axe	1	2995
+Adamantine Axe	2	2996
+Adamantine Axe	3	2997
+Adamantine Axe	4	2998
+Adamantine Axe	5	2999
+Adamantine Axe	6	2999
+Ascension Blade	1	3005
+Ascension Blade	2	3006
+Ascension Blade	3	3007
+Ascension Blade	4	3008
+Ascension Blade	5	3009
+Ascension Blade	6	3009
+Blast of Fresh Air	1	3065
+Blast of Fresh Air	2	3066
+Blast of Fresh Air	3	3067
+Blast of Fresh Air	4	3068
+Blast of Fresh Air	5	3069
+Blast of Fresh Air	6	3069
+Whoopsie Crazy	1	3045
+Whoopsie Crazy	2	3046
+Whoopsie Crazy	3	3047
+Whoopsie Crazy	4	3048
+Whoopsie Crazy	5	3049
+Whoopsie Crazy	6	3049
+Wake-Up Whirl	1	2995
+Wake-Up Whirl	2	2996
+Wake-Up Whirl	3	2997
+Wake-Up Whirl	4	2998
+Wake-Up Whirl	5	2999
+Wake-Up Whirl	6	2999
+R-Blade	1	2975
+R-Blade	2	2976
+R-Blade	3	2977
+R-Blade	4	2978
+R-Blade	5	2979
+R-Blade	6	2979
+H-Effect R	1	3070
+H-Effect R	2	3071
+H-Effect R	3	3072
+H-Effect R	4	3073
+H-Effect R	5	3074
+H-Effect R	6	3074
+F-G-Shot	1	3015
+F-G-Shot	2	3016
+F-G-Shot	3	3017
+F-G-Shot	4	3018
+F-G-Shot	5	3019
+F-G-Shot	6	3019
+Empyrean Salvo	1	2975
+Empyrean Salvo	2	2976
+Empyrean Salvo	3	2977
+Empyrean Salvo	4	2978
+Empyrean Salvo	5	2979
+Empyrean Salvo	6	2979
+The Heavens Open	1	3015
+The Heavens Open	2	3016
+The Heavens Open	3	3017
+The Heavens Open	4	3018
+The Heavens Open	5	3019
+The Heavens Open	6	3019
+Final Retribution	1	3025
+Final Retribution	2	3026
+Final Retribution	3	3027
+Final Retribution	4	3028
+Final Retribution	5	3029
+Final Retribution	6	3029
+Blood Altar	1	3025
+Blood Altar	2	3026
+Blood Altar	3	3027
+Blood Altar	4	3028
+Blood Altar	5	3029
+Blood Altar	6	3029
+Tainted Palace	1	2930
+Tainted Palace	2	2931
+Tainted Palace	3	2932
+Tainted Palace	4	2933
+Tainted Palace	5	2934
+Tainted Palace	6	2934
+Accursed Prison	1	3015
+Accursed Prison	2	3016
+Accursed Prison	3	3017
+Accursed Prison	4	3018
+Accursed Prison	5	3019
+Accursed Prison	6	3019
+Heliodor Passion	1	3000
+Heliodor Passion	2	3001
+Heliodor Passion	3	3002
+Heliodor Passion	4	3003
+Heliodor Passion	5	3004
+Heliodor Passion	6	3004
+Star Beryl Courage	1	2995
+Star Beryl Courage	2	2996
+Star Beryl Courage	3	2997
+Star Beryl Courage	4	2998
+Star Beryl Courage	5	2999
+Star Beryl Courage	6	2999
+Rhodochrosite Might	1	2975
+Rhodochrosite Might	2	2976
+Rhodochrosite Might	3	2977
+Rhodochrosite Might	4	2978
+Rhodochrosite Might	5	2979
+Rhodochrosite Might	6	2979
+Crystal Blizzard	1	2975
+Crystal Blizzard	2	2976
+Crystal Blizzard	3	2977
+Crystal Blizzard	4	2978
+Crystal Blizzard	5	2979
+Crystal Blizzard	6	2979
+Snowblind	1	3055
+Snowblind	2	3056
+Snowblind	3	3057
+Snowblind	4	3058
+Snowblind	5	3059
+Snowblind	6	3059
+Frost Queen	1	3070
+Frost Queen	2	3071
+Frost Queen	3	3072
+Frost Queen	4	3073
+Frost Queen	5	3074
+Frost Queen	6	3074
+Stream Edge	1	3015
+Stream Edge	2	3016
+Stream Edge	3	3017
+Stream Edge	4	3018
+Stream Edge	5	3019
+Stream Edge	6	3019
+Falling Axe	1	2995
+Falling Axe	2	2996
+Falling Axe	3	2997
+Falling Axe	4	2998
+Falling Axe	5	2999
+Falling Axe	6	2999
+Axe Throw	1	2910
+Axe Throw	2	2911
+Axe Throw	3	2912
+Axe Throw	4	2913
+Axe Throw	5	2914
+Axe Throw	6	2914
+Round Break	1	2995
+Round Break	2	2996
+Round Break	3	2997
+Round Break	4	2998
+Round Break	5	2999
+Round Break	6	2999
+Boomerang Spear	1	2900
+Boomerang Spear	2	2901
+Boomerang Spear	3	2902
+Boomerang Spear	4	2903
+Boomerang Spear	5	2904
+Boomerang Spear	6	2904
+Splash Lance	1	3060
+Splash Lance	2	3061
+Splash Lance	3	3062
+Splash Lance	4	3063
+Splash Lance	5	3064
+Splash Lance	6	3064
+Sidewinder	1	2920
+Sidewinder	2	2921
+Sidewinder	3	2922
+Sidewinder	4	2923
+Sidewinder	5	2924
+Sidewinder	6	2924
+Aerial Trigger	1	2995
+Aerial Trigger	2	2996
+Aerial Trigger	3	2997
+Aerial Trigger	4	2998
+Aerial Trigger	5	2999
+Aerial Trigger	6	2999
+Swing Cannon	1	3035
+Swing Cannon	2	3036
+Swing Cannon	3	3037
+Swing Cannon	4	3038
+Swing Cannon	5	3039
+Swing Cannon	6	3039
+Shield Charge	1	2980
+Shield Charge	2	2981
+Shield Charge	3	2982
+Shield Charge	4	2983
+Shield Charge	5	2984
+Shield Charge	6	2984
+Smash Circle	1	3045
+Smash Circle	2	3046
+Smash Circle	3	3047
+Smash Circle	4	3048
+Smash Circle	5	3049
+Smash Circle	6	3049
+Hammer Beat	1	2995
+Hammer Beat	2	2996
+Hammer Beat	3	2997
+Hammer Beat	4	2998
+Hammer Beat	5	2999
+Hammer Beat	6	2999
+Excelsior Slash	1	3015
+Excelsior Slash	2	3016
+Excelsior Slash	3	3017
+Excelsior Slash	4	3018
+Excelsior Slash	5	3019
+Excelsior Slash	6	3019
+Triple Edge	1	3045
+Triple Edge	2	3046
+Triple Edge	3	3047
+Triple Edge	4	3048
+Triple Edge	5	3049
+Triple Edge	6	3049
+Multi-Raid	1	3030
+Multi-Raid	2	3031
+Multi-Raid	3	3032
+Multi-Raid	4	3033
+Multi-Raid	5	3034
+Multi-Raid	6	3034
+Grenade Throw	1	2995
+Grenade Throw	2	2996
+Grenade Throw	3	2997
+Grenade Throw	4	2998
+Grenade Throw	5	2999
+Grenade Throw	6	2999
+Grim Sphere	1	3070
+Grim Sphere	2	3071
+Grim Sphere	3	3072
+Grim Sphere	4	3073
+Grim Sphere	5	3074
+Grim Sphere	6	3074
+Shrapnel	1	2965
+Shrapnel	2	2966
+Shrapnel	3	2967
+Shrapnel	4	2968
+Shrapnel	5	2969
+Shrapnel	6	2969
+Flying Knuckle	1	3055
+Flying Knuckle	2	3056
+Flying Knuckle	3	3057
+Flying Knuckle	4	3058
+Flying Knuckle	5	3059
+Flying Knuckle	6	3059
+Assault Rush	1	2970
+Assault Rush	2	2971
+Assault Rush	3	2972
+Assault Rush	4	2973
+Assault Rush	5	2974
+Assault Rush	6	2974
+Executioner	1	3070
+Executioner	2	3071
+Executioner	3	3072
+Executioner	4	3073
+Executioner	5	3074
+Executioner	6	3074
+Axe Break	1	2975
+Axe Break	2	2976
+Axe Break	3	2977
+Axe Break	4	2978
+Axe Break	5	2979
+Axe Break	6	2979
+Ground Charge	1	2995
+Ground Charge	2	2996
+Ground Charge	3	2997
+Ground Charge	4	2998
+Ground Charge	5	2999
+Ground Charge	6	2999
+War Swing	1	3015
+War Swing	2	3016
+War Swing	3	3017
+War Swing	4	3018
+War Swing	5	3019
+War Swing	6	3019
+Speed Glaive	1	2985
+Speed Glaive	2	2986
+Speed Glaive	3	2987
+Speed Glaive	4	2988
+Speed Glaive	5	2989
+Speed Glaive	6	2989
+Beam Halberd	1	3015
+Beam Halberd	2	3016
+Beam Halberd	3	3017
+Beam Halberd	4	3018
+Beam Halberd	5	3019
+Beam Halberd	6	3019
+Hair Trigger	1	3060
+Hair Trigger	2	3061
+Hair Trigger	3	3062
+Hair Trigger	4	3063
+Hair Trigger	5	3064
+Hair Trigger	6	3064
+Beam Bomber	1	3035
+Beam Bomber	2	3036
+Beam Bomber	3	3037
+Beam Bomber	4	3038
+Beam Bomber	5	3039
+Beam Bomber	6	3039
+Zero Burst	1	3000
+Zero Burst	2	3001
+Zero Burst	3	3002
+Zero Burst	4	3003
+Zero Burst	5	3004
+Zero Burst	6	3004
+Spinning Laser	1	3015
+Spinning Laser	2	3016
+Spinning Laser	3	3017
+Spinning Laser	4	3018
+Spinning Laser	5	3019
+Spinning Laser	6	3019
+Wheel Crash	1	2980
+Wheel Crash	2	2981
+Wheel Crash	3	2982
+Wheel Crash	4	2983
+Wheel Crash	5	2984
+Wheel Crash	6	2984
+Ground Impulse	1	3000
+Ground Impulse	2	3001
+Ground Impulse	3	3002
+Ground Impulse	4	3003
+Ground Impulse	5	3004
+Ground Impulse	6	3004
+Turn Strike	1	3045
+Turn Strike	2	3046
+Turn Strike	3	3047
+Turn Strike	4	3048
+Turn Strike	5	3049
+Turn Strike	6	3049
+Drop Edge	1	2995
+Drop Edge	2	2996
+Drop Edge	3	2997
+Drop Edge	4	2998
+Drop Edge	5	2999
+Drop Edge	6	2999
+Counter Spin	1	3045
+Counter Spin	2	3046
+Counter Spin	3	3047
+Counter Spin	4	3048
+Counter Spin	5	3049
+Counter Spin	6	3049
+Magnum Edge	1	3030
+Magnum Edge	2	3031
+Magnum Edge	3	3032
+Magnum Edge	4	3033
+Magnum Edge	5	3034
+Magnum Edge	6	3034
+Metal Blast	1	2995
+Metal Blast	2	2996
+Metal Blast	3	2997
+Metal Blast	4	2998
+Metal Blast	5	2999
+Metal Blast	6	2999
+Wrecking Ball	1	3055
+Wrecking Ball	2	3056
+Wrecking Ball	3	3057
+Wrecking Ball	4	3058
+Wrecking Ball	5	3059
+Wrecking Ball	6	3059
+Violent Swing	1	3070
+Violent Swing	2	3071
+Violent Swing	3	3072
+Violent Swing	4	3073
+Violent Swing	5	3074
+Violent Swing	6	3074
+Bomber Tackle	1	2970
+Bomber Tackle	2	2971
+Bomber Tackle	3	2972
+Bomber Tackle	4	2973
+Bomber Tackle	5	2974
+Bomber Tackle	6	2974
+Head Shaker	1	3000
+Head Shaker	2	3001
+Head Shaker	3	3002
+Head Shaker	4	3003
+Head Shaker	5	3004
+Head Shaker	6	3004
+Knuckle Purge	1	3055
+Knuckle Purge	2	3056
+Knuckle Purge	3	3057
+Knuckle Purge	4	3058
+Knuckle Purge	5	3059
+Knuckle Purge	6	3059
+Axe Strike	1	2995
+Axe Strike	2	2996
+Axe Strike	3	2997
+Axe Strike	4	2998
+Axe Strike	5	2999
+Axe Strike	6	2999
+Megaslash	1	2975
+Megaslash	2	2976
+Megaslash	3	2977
+Megaslash	4	2978
+Megaslash	5	2979
+Megaslash	6	2979
+Flying Cutter	1	2895
+Flying Cutter	2	2896
+Flying Cutter	3	2897
+Flying Cutter	4	2898
+Flying Cutter	5	2899
+Flying Cutter	6	2899
+Multi-Edge	1	3065
+Multi-Edge	2	3066
+Multi-Edge	3	3067
+Multi-Edge	4	3068
+Multi-Edge	5	3069
+Multi-Edge	6	3069
+Trident Buster	1	2995
+Trident Buster	2	2996
+Trident Buster	3	2997
+Trident Buster	4	2998
+Trident Buster	5	2999
+Trident Buster	6	2999
+Spiral Spear	1	3035
+Spiral Spear	2	3036
+Spiral Spear	3	3037
+Spiral Spear	4	3038
+Spiral Spear	5	3039
+Spiral Spear	6	3039
+Flash Barrel	1	2995
+Flash Barrel	2	2996
+Flash Barrel	3	2997
+Flash Barrel	4	2998
+Flash Barrel	5	2999
+Flash Barrel	6	2999
+Blink Bullet	1	3035
+Blink Bullet	2	3036
+Blink Bullet	3	3037
+Blink Bullet	4	3038
+Blink Bullet	5	3039
+Blink Bullet	6	3039
+Beam Barrage	1	3015
+Beam Barrage	2	3016
+Beam Barrage	3	3017
+Beam Barrage	4	3018
+Beam Barrage	5	3019
+Beam Barrage	6	3019
+Aerial Shield	1	2980
+Aerial Shield	2	2981
+Aerial Shield	3	2982
+Aerial Shield	4	2983
+Aerial Shield	5	2984
+Aerial Shield	6	2984
+Drum Roll	1	3000
+Drum Roll	2	3001
+Drum Roll	3	3002
+Drum Roll	4	3003
+Drum Roll	5	3004
+Drum Roll	6	3004
+Hammer Rush	1	3025
+Hammer Rush	2	3026
+Hammer Rush	3	3027
+Hammer Rush	4	3028
+Hammer Rush	5	3029
+Hammer Rush	6	3029
+Sword Dance	1	3015
+Sword Dance	2	3016
+Sword Dance	3	3017
+Sword Dance	4	3018
+Sword Dance	5	3019
+Sword Dance	6	3019
+Rage Cutter	1	3045
+Rage Cutter	2	3046
+Rage Cutter	3	3047
+Rage Cutter	4	3048
+Rage Cutter	5	3049
+Rage Cutter	6	3049
+Air Slash	1	3030
+Air Slash	2	3031
+Air Slash	3	3032
+Air Slash	4	3033
+Air Slash	5	3034
+Air Slash	6	3034
+Flash Bomb	1	2970
+Flash Bomb	2	2971
+Flash Bomb	3	2972
+Flash Bomb	4	2973
+Flash Bomb	5	2974
+Flash Bomb	6	2974
+Power Effect	1	3070
+Power Effect	2	3071
+Power Effect	3	3072
+Power Effect	4	3073
+Power Effect	5	3074
+Power Effect	6	3074
+Rumble Sphere	1	3055
+Rumble Sphere	2	3056
+Rumble Sphere	3	3057
+Rumble Sphere	4	3058
+Rumble Sphere	5	3059
+Rumble Sphere	6	3059
+Thermal Payload	1	3055
+Thermal Payload	2	3056
+Thermal Payload	3	3057
+Thermal Payload	4	3058
+Thermal Payload	5	3059
+Thermal Payload	6	3059
+Leg Blast	1	2970
+Leg Blast	2	2971
+Leg Blast	3	2972
+Leg Blast	4	2973
+Leg Blast	5	2974
+Leg Blast	6	2974
+Flash Blow	1	3070
+Flash Blow	2	3071
+Flash Blow	3	3072
+Flash Blow	4	3073
+Flash Blow	5	3074
+Flash Blow	6	3074
+Ripple Drive	1	3070
+Ripple Drive	2	3071
+Ripple Drive	3	3072
+Ripple Drive	4	3073
+Ripple Drive	5	3074
+Ripple Drive	6	3074
+Dual Fang	1	3070
+Dual Fang	2	3071
+Dual Fang	3	3072
+Dual Fang	4	3073
+Dual Fang	5	3074
+Dual Fang	6	3074
+Screw Edge	1	3055
+Screw Edge	2	3056
+Screw Edge	3	3057
+Screw Edge	4	3058
+Screw Edge	5	3059
+Screw Edge	6	3059
+ECHIDNA	1	2975
+ECHIDNA	2	2976
+ECHIDNA	3	2977
+ECHIDNA	4	2978
+ECHIDNA	5	2979
+ECHIDNA	6	2979
+MAGDALENE 16	1	3005
+MAGDALENE 16	2	3006
+MAGDALENE 16	3	3007
+MAGDALENE 16	4	3008
+MAGDALENE 16	5	3009
+MAGDALENE 16	6	3009
+T-SKYLLA	1	3015
+T-SKYLLA	2	3016
+T-SKYLLA	3	3017
+T-SKYLLA	4	3018
+T-SKYLLA	5	3019
+T-SKYLLA	6	3019
+Buster Cyclone	1	3045
+Buster Cyclone	2	3046
+Buster Cyclone	3	3047
+Buster Cyclone	4	3048
+Buster Cyclone	5	3049
+Buster Cyclone	6	3049
+Buster Cannon	1	3015
+Buster Cannon	2	3016
+Buster Cannon	3	3017
+Buster Cannon	4	3018
+Buster Cannon	5	3019
+Buster Cannon	6	3019
+Buster Mirage	1	3030
+Buster Mirage	2	3031
+Buster Mirage	3	3032
+Buster Mirage	4	3033
+Buster Mirage	5	3034
+Buster Mirage	6	3034
+Monado Purge	1	3708
+Monado Purge	2	3709
+Monado Purge	3	3710
+Monado Purge	4	3711
+Monado Purge	5	3712
+Monado Purge	6	3712
+Monado Cyclone	1	2975
+Monado Cyclone	2	2976
+Monado Cyclone	3	2977
+Monado Cyclone	4	2978
+Monado Cyclone	5	2979
+Monado Cyclone	6	2979
+Monado Buster	1	3015
+Monado Buster	2	3016
+Monado Buster	3	3017
+Monado Buster	4	3018
+Monado Buster	5	3019
+Monado Buster	6	3019
+Hidden Thorn	1	3055
+Hidden Thorn	2	3056
+Hidden Thorn	3	3057
+Hidden Thorn	4	3058
+Hidden Thorn	5	3059
+Hidden Thorn	6	3059
+Power Smash	1	2970
+Power Smash	2	2971
+Power Smash	3	2972
+Power Smash	4	2973
+Power Smash	5	2974
+Power Smash	6	2974
+Lacerate	1	3070
+Lacerate	2	3071
+Lacerate	3	3072
+Lacerate	4	3073
+Lacerate	5	3074
+Lacerate	6	3074
+Fuga Daemonum	1	3085
+Fuga Daemonum	2	3086
+Fuga Daemonum	3	3087
+Fuga Daemonum	4	3088
+Fuga Daemonum	5	3089
+Fuga Daemonum	6	3089
+Lacerna Noctis	1	3713
+Lacerna Noctis	2	3714
+Lacerna Noctis	3	3715
+Lacerna Noctis	4	3716
+Lacerna Noctis	5	3717
+Lacerna Noctis	6	3717
+Ex Tenebris Lux	1	3718
+Ex Tenebris Lux	2	3719
+Ex Tenebris Lux	3	3720
+Ex Tenebris Lux	4	3721
+Ex Tenebris Lux	5	3722
+Ex Tenebris Lux	6	3722
+Go! Great Star!	1	3055
+Go! Great Star!	2	3056
+Go! Great Star!	3	3057
+Go! Great Star!	4	3058
+Go! Great Star!	5	3059
+Go! Great Star!	6	3059
+Go! Shooting Star!	1	3070
+Go! Shooting Star!	2	3071
+Go! Shooting Star!	3	3072
+Go! Shooting Star!	4	3073
+Go! Shooting Star!	5	3074
+Go! Shooting Star!	6	3074
+Go! Lucky Star!	1	3015
+Go! Lucky Star!	2	3016
+Go! Lucky Star!	3	3017
+Go! Lucky Star!	4	3018
+Go! Lucky Star!	5	3019
+Go! Lucky Star!	6	3019
+Sliding Slinger	1	3005
+Sliding Slinger	2	3006
+Sliding Slinger	3	3007
+Sliding Slinger	4	3008
+Sliding Slinger	5	3009
+Sliding Slinger	6	3009
+Hundred Shells	1	2990
+Hundred Shells	2	2991
+Hundred Shells	3	2992
+Hundred Shells	4	2993
+Hundred Shells	5	2994
+Hundred Shells	6	2994
+Violent Streak	1	3015
+Violent Streak	2	3016
+Violent Streak	3	3017
+Violent Streak	4	3018
+Violent Streak	5	3019
+Violent Streak	6	3019
 \.
 
 
@@ -32351,6 +32459,80 @@ Power Smash	5	34
 Power Smash	6	40
 Lacerate	1	11
 Lacerate	2	46
+Fuga Daemonum	1	103
+Lacerna Noctis	1	39
+Lacerna Noctis	2	54
+Lacerna Noctis	3	61
+Lacerna Noctis	4	70
+Lacerna Noctis	5	77
+Ex Tenebris Lux	1	49
+Ex Tenebris Lux	2	54
+Ex Tenebris Lux	3	61
+Ex Tenebris Lux	4	68
+Ex Tenebris Lux	5	76
+Ex Tenebris Lux	6	102
+Ex Tenebris Lux	7	120
+Ex Tenebris Lux	8	122
+Ex Tenebris Lux	9	124
+Ex Tenebris Lux	10	126
+Ex Tenebris Lux	11	129
+Ex Tenebris Lux	12	131
+Ex Tenebris Lux	13	133
+Go! Great Star!	1	36
+Go! Great Star!	2	40
+Go! Great Star!	3	44
+Go! Great Star!	4	48
+Go! Great Star!	5	52
+Go! Great Star!	6	56
+Go! Great Star!	7	60
+Go! Shooting Star!	1	1
+Go! Shooting Star!	2	32
+Go! Shooting Star!	3	38
+Go! Shooting Star!	4	42
+Go! Shooting Star!	5	46
+Go! Shooting Star!	6	52
+Go! Shooting Star!	7	58
+Go! Shooting Star!	8	68
+Go! Shooting Star!	9	73
+Go! Shooting Star!	10	74
+Go! Lucky Star!	1	1
+Go! Lucky Star!	2	26
+Go! Lucky Star!	3	133
+Go! Lucky Star!	4	137
+Sliding Slinger	1	8
+Sliding Slinger	2	11
+Sliding Slinger	3	14
+Sliding Slinger	4	17
+Hundred Shells	1	6
+Hundred Shells	2	14
+Hundred Shells	3	22
+Hundred Shells	4	32
+Hundred Shells	5	38
+Hundred Shells	6	45
+Hundred Shells	7	50
+Hundred Shells	8	61
+Hundred Shells	9	73
+Hundred Shells	10	79
+Hundred Shells	11	82
+Hundred Shells	12	89
+Hundred Shells	13	98
+Hundred Shells	14	116
+Violent Streak	1	54
+Violent Streak	2	60
+Violent Streak	3	74
+Violent Streak	4	78
+Violent Streak	5	86
+Violent Streak	6	88
+Violent Streak	7	106
+Violent Streak	8	110
+Violent Streak	9	114
+Violent Streak	10	118
+Violent Streak	11	128
+Violent Streak	12	132
+Violent Streak	13	136
+Violent Streak	14	140
+Violent Streak	15	148
+Violent Streak	16	156
 \.
 
 
@@ -32597,6 +32779,59 @@ Flash Blow	5	1
 Flash Blow	6	1
 Flash Blow	7	1
 Flash Blow	8	3
+Lacerna Noctis	1	1
+Lacerna Noctis	2	2
+Lacerna Noctis	3	2
+Lacerna Noctis	4	2
+Lacerna Noctis	5	2
+Ex Tenebris Lux	1	1
+Ex Tenebris Lux	2	1
+Ex Tenebris Lux	3	1
+Ex Tenebris Lux	4	1
+Ex Tenebris Lux	5	1
+Ex Tenebris Lux	6	2
+Ex Tenebris Lux	7	3
+Ex Tenebris Lux	8	3
+Ex Tenebris Lux	9	3
+Ex Tenebris Lux	10	3
+Ex Tenebris Lux	11	3
+Ex Tenebris Lux	12	3
+Ex Tenebris Lux	13	3
+Go! Great Star!	1	1
+Go! Great Star!	2	1
+Go! Great Star!	3	1
+Go! Great Star!	4	1
+Go! Great Star!	5	1
+Go! Great Star!	6	1
+Go! Great Star!	7	6
+Go! Shooting Star!	1	255
+Go! Shooting Star!	2	1
+Go! Shooting Star!	3	1
+Go! Shooting Star!	4	1
+Go! Shooting Star!	5	1
+Go! Shooting Star!	6	1
+Go! Shooting Star!	7	1
+Go! Shooting Star!	8	1
+Go! Shooting Star!	9	255
+Go! Shooting Star!	10	6
+Go! Lucky Star!	1	255
+Go! Lucky Star!	2	1
+Go! Lucky Star!	3	255
+Go! Lucky Star!	4	2
+Hundred Shells	1	1
+Hundred Shells	2	1
+Hundred Shells	3	1
+Hundred Shells	4	1
+Hundred Shells	5	1
+Hundred Shells	6	1
+Hundred Shells	7	1
+Hundred Shells	8	1
+Hundred Shells	9	1
+Hundred Shells	10	1
+Hundred Shells	11	1
+Hundred Shells	12	1
+Hundred Shells	13	1
+Hundred Shells	14	5
 \.
 
 
@@ -32668,6 +32903,16 @@ Buster Mirage	2	Knockback Lv 1
 Buster Mirage	5	Knockback Lv 1
 Buster Mirage	6	Knockback Lv 2
 Monado Buster	1	Blowdown Lv 2
+Fuga Daemonum	1	Knockback Lv 2
+Lacerna Noctis	2	Knockback Lv 1
+Lacerna Noctis	3	Knockback Lv 1
+Lacerna Noctis	4	Knockback Lv 1
+Lacerna Noctis	5	Knockback Lv 1
+Ex Tenebris Lux	6	Blowdown Lv 2
+Go! Great Star!	7	Blowdown Lv 1
+Go! Shooting Star!	10	Blowdown Lv 3
+Go! Lucky Star!	2	Knockback Lv 1
+Go! Lucky Star!	4	Blowdown Lv 5
 \.
 
 
@@ -32895,6 +33140,15 @@ Monado Buster	3	Ether	Ahead	A powerful slash using the true power of the Monado.
 Hidden Thorn	1	Physical	One Target	Quickly close in on the enemy and dice them into submission.	10	0	5	25	25
 Power Smash	2	Physical	Circle (Target)	Charge up power, then unleash it in a series of airborne spinning attacks.	10	5	5	25	25
 Lacerate	3	Physical	One Target	Deliver a rising attack, followed up with a strong downward blow.	10	0	5	25	25
+Fuga Daemonum	1	Ether	Circle (Target)	Slash foes in the surrounding area with blades made of light.	10	5	25	25	25
+Lacerna Noctis	2	Ether	Ahead	Lead with a mighty cleaving blow, then follow-up with a cape swipe.	10	3	25	50	50
+Ex Tenebris Lux	3	Ether	One Target	A dual-sword combo assault using the power of Durandal.	10	0	25	100	100
+Go! Great Star!	1	Ether	Ahead	Cram the Bitball full of ether, then spin it and make it blow up.	10	3	5	25	25
+Go! Shooting Star!	2	Ether	Ahead	Set off a series of ether explosions, capped with one last big one.	10	3	5	25	50
+Go! Lucky Star!	3	Ether	One Target	Set up the Bitball, then spike it for a truly giant boom.	10	4	5	25	100
+Sliding Slinger	1	Ether	One Target	Slide forward while concentrating fire on the enemy.	10	0	5	25	25
+Hundred Shells	2	Ether	Ahead	Swing your swords downward to send shockwaves flying at your foes.	10	3	5	25	50
+Violent Streak	3	Ether	Circle (Target)	Blast all enemies in the vicinity with an unstoppable barrage of fire.	10	8	5	50	100
 \.
 
 
