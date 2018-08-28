@@ -15502,6 +15502,8 @@ Lead Chip	Primitive Ball
 Lead Chip	Primitive Knuckles
 Lead Chip	Monado (Lead)
 Lead Chip	Well-Used Blades (Lead)
+Lead Chip	Archetype Ralzes (Lead)
+Lead Chip	Halteclere (Lead)
 Tin Chip	Plain Sword
 Tin Chip	Plain Scimitar
 Tin Chip	Plain Rings
@@ -15520,6 +15522,8 @@ Tin Chip	Plain Ball
 Tin Chip	Plain Knuckles
 Tin Chip	Monado (Tin)
 Tin Chip	Well-Used Blades (Tin)
+Tin Chip	Archetype Ralzes (Tin)
+Tin Chip	Halteclere (Tin)
 Bronze Chip	Flatform Sword
 Bronze Chip	Flatform Scimitar
 Bronze Chip	Flatform Rings
@@ -15538,6 +15542,8 @@ Bronze Chip	Flatform Ball
 Bronze Chip	Flatform Knuckles
 Bronze Chip	Monado (Bronze)
 Bronze Chip	Well-Used Blades (Bronze)
+Bronze Chip	Archetype Ralzes (Bronze)
+Bronze Chip	Halteclere (Bronze)
 Silver Chip	Ornate Sword
 Silver Chip	Ornate Scimitar
 Silver Chip	Rings of Plenty
@@ -15556,6 +15562,8 @@ Silver Chip	Ornate Ball
 Silver Chip	Ornate Knuckles
 Silver Chip	Monado (Silver)
 Silver Chip	Well-Used Blades (Silver)
+Silver Chip	Archetype Ralzes (Silver)
+Silver Chip	Halteclere (Silver)
 Iron Chip	Breaker Sword
 Iron Chip	Breaker Scimitar
 Iron Chip	Breaker Rings
@@ -15574,6 +15582,8 @@ Iron Chip	Breaker Ball
 Iron Chip	Breaker Knuckles
 Iron Chip	Monado (Iron)
 Iron Chip	Well-Used Blades (Iron)
+Iron Chip	Archetype Ralzes (Iron)
+Iron Chip	Halteclere (Iron)
 Cobalt Chip	Duelist's Sword
 Cobalt Chip	Duelist's Scimitar
 Cobalt Chip	Duelist's Rings
@@ -15592,6 +15602,8 @@ Cobalt Chip	Duelist's Ball
 Cobalt Chip	Duelist's Knuckles
 Cobalt Chip	Monado (Cobalt)
 Cobalt Chip	Well-Used Blades (Cobalt)
+Cobalt Chip	Archetype Ralzes (Cobalt)
+Cobalt Chip	Halteclere (Cobalt)
 Steel Chip	Battle Sword
 Steel Chip	Battle Scimitar
 Steel Chip	Battle Rings
@@ -15610,6 +15622,8 @@ Steel Chip	Battle Ball
 Steel Chip	Battle Knuckles
 Steel Chip	Monado (Steel)
 Steel Chip	Well-Used Blades (Steel)
+Steel Chip	Archetype Ralzes (Steel)
+Steel Chip	Halteclere (Steel)
 Gold Chip	Snare Sword
 Gold Chip	Snare Scimitar
 Gold Chip	Plunder Rings
@@ -15628,6 +15642,8 @@ Gold Chip	Snare Ball
 Gold Chip	Snare Knuckles
 Gold Chip	Monado (Gold)
 Gold Chip	Well-Used Blades (Gold)
+Gold Chip	Archetype Ralzes (Gold)
+Gold Chip	Halteclere (Gold)
 Fang Chip	Sword of the Fox
 Fang Chip	Scimitar of Shores
 Fang Chip	Wild Rings
@@ -15646,6 +15662,8 @@ Fang Chip	Wooden Ball
 Fang Chip	Knuckles of the Crow
 Fang Chip	Monado (Fang)
 Fang Chip	Well-Used Blades (Fang)
+Fang Chip	Archetype Ralzes (Fang)
+Fang Chip	Halteclere (Fang)
 Wing Chip	Sword of the Dingo
 Wing Chip	Scimitar of Waves
 Wing Chip	Howling Rings
@@ -15664,6 +15682,8 @@ Wing Chip	Maple Ball
 Wing Chip	Peak Knuckles
 Wing Chip	Monado (Wing)
 Wing Chip	Well-Used Blades (Wing)
+Wing Chip	Archetype Ralzes (Wing)
+Wing Chip	Halteclere (Wing)
 Scale Chip	Sword of the Lycaon
 Scale Chip	Scimitar of Calm
 Scale Chip	Shell Rings
@@ -15682,6 +15702,8 @@ Scale Chip	Birch Ball
 Scale Chip	Crested Knuckles
 Scale Chip	Monado (Scale)
 Scale Chip	Well-Used Blades (Scale)
+Scale Chip	Archetype Ralzes (Scale)
+Scale Chip	Halteclere (Scale)
 Horn Chip	Sword of the Jackal
 Horn Chip	Scimitar of Affection
 Horn Chip	Rings of the Earth
@@ -15700,6 +15722,8 @@ Horn Chip	Pine Ball
 Horn Chip	Titan Knuckles
 Horn Chip	Monado (Horn)
 Horn Chip	Well-Used Blades (Horn)
+Horn Chip	Archetype Ralzes (Horn)
+Horn Chip	Halteclere (Horn)
 Wood Chip	Sword of the Jaguar
 Wood Chip	Scimitar of Purity
 Wood Chip	Ripper Rings
@@ -15718,6 +15742,8 @@ Wood Chip	Linden Ball
 Wood Chip	Raider's Knuckles
 Wood Chip	Monado (Wood)
 Wood Chip	Well-Used Blades (Wood)
+Wood Chip	Archetype Ralzes (Wood)
+Wood Chip	Halteclere (Wood)
 Flower Chip	Sword of the Lynx
 Flower Chip	Scimitar of Splendor
 Flower Chip	Dicer Rings
@@ -15736,6 +15762,8 @@ Flower Chip	Camellia Ball
 Flower Chip	Jawbone Knuckles
 Flower Chip	Monado (Flower)
 Flower Chip	Well-Used Blades (Flower)
+Flower Chip	Archetype Ralzes (Flower)
+Flower Chip	Halteclere (Flower)
 Glass Chip	Sword of the Puma
 Glass Chip	Scimitar of Integrity
 Glass Chip	Slicer Rings
@@ -15754,6 +15782,8 @@ Glass Chip	Magnolia Ball
 Glass Chip	Bear Knuckles
 Glass Chip	Monado (Glass)
 Glass Chip	Well-Used Blades (Glass)
+Glass Chip	Archetype Ralzes (Glass)
+Glass Chip	Halteclere (Glass)
 Forest Chip	Insect Slayer
 Forest Chip	Scimitar of Grace
 Forest Chip	Slasher Rings
@@ -15772,6 +15802,8 @@ Forest Chip	Ivy Ball
 Forest Chip	Chimaera Knuckles
 Forest Chip	Monado (Forest)
 Forest Chip	Well-Used Blades (Forest)
+Forest Chip	Archetype Ralzes (Forest)
+Forest Chip	Halteclere (Forest)
 Turquoise Chip	Knight's Sword
 Turquoise Chip	Knight's Scimitar
 Turquoise Chip	Knight's Rings
@@ -15790,6 +15822,8 @@ Turquoise Chip	Knight's Ball
 Turquoise Chip	Knight's Knuckles
 Turquoise Chip	Monado (Turquoise)
 Turquoise Chip	Well-Used Blades (Turquoise)
+Turquoise Chip	Archetype Ralzes (Turquoise)
+Turquoise Chip	Halteclere (Turquoise)
 Spinel Chip	Guardian's Sword
 Spinel Chip	Guardian's Scimitar
 Spinel Chip	Guardian's Rings
@@ -15808,6 +15842,8 @@ Spinel Chip	Guardian's Ball
 Spinel Chip	Guardian's Knuckles
 Spinel Chip	Monado (Spinel)
 Spinel Chip	Well-Used Blades (Spinel)
+Spinel Chip	Archetype Ralzes (Spinel)
+Spinel Chip	Halteclere (Spinel)
 Amethyst Chip	Cavalry Sword
 Amethyst Chip	Scimitar of Prayer
 Amethyst Chip	Rings of the Maiden
@@ -15826,6 +15862,8 @@ Amethyst Chip	Chancy Ball
 Amethyst Chip	Face Punchers
 Amethyst Chip	Monado (Amethyst)
 Amethyst Chip	Well-Used Blades (Amethyst)
+Amethyst Chip	Archetype Ralzes (Amethyst)
+Amethyst Chip	Halteclere (Amethyst)
 Fluorite Chip	Valkyrie's Sword
 Fluorite Chip	Valkyrie's Scimitar
 Fluorite Chip	Valkyrie's Rings
@@ -15844,6 +15882,8 @@ Fluorite Chip	Valkyrie's Ball
 Fluorite Chip	Valkyrie's Knuckles
 Fluorite Chip	Monado (Fluorite)
 Fluorite Chip	Well-Used Blades (Fluorite)
+Fluorite Chip	Archetype Ralzes (Fluorite)
+Fluorite Chip	Halteclere (Fluorite)
 Garnet Chip	Paladin's Sword
 Garnet Chip	Paladin's Scimitar
 Garnet Chip	Paladin's Rings
@@ -15862,6 +15902,8 @@ Garnet Chip	Paladin's Ball
 Garnet Chip	Paladin's Knuckles
 Garnet Chip	Monado (Garnet)
 Garnet Chip	Well-Used Blades (Garnet)
+Garnet Chip	Archetype Ralzes (Garnet)
+Garnet Chip	Halteclere (Garnet)
 Aquamarine Chip	Holy Sword
 Aquamarine Chip	Holy Scimitar
 Aquamarine Chip	Holy Rings
@@ -15880,6 +15922,8 @@ Aquamarine Chip	Holy Ball
 Aquamarine Chip	Holy Knuckles
 Aquamarine Chip	Monado (Aquamarine)
 Aquamarine Chip	Well-Used Blades (Aquamarine)
+Aquamarine Chip	Archetype Ralzes (Aquamarine)
+Aquamarine Chip	Halteclere (Aquamarine)
 Opal Chip	Sword of Valor
 Opal Chip	Scimitar of Valor
 Opal Chip	Rings of Valor
@@ -15898,6 +15942,8 @@ Opal Chip	Ball of Valor
 Opal Chip	Knuckles of Valor
 Opal Chip	Monado (Opal)
 Opal Chip	Well-Used Blades (Opal)
+Opal Chip	Archetype Ralzes (Opal)
+Opal Chip	Halteclere (Opal)
 Zircon Chip	Zephyr Sword
 Zircon Chip	Winged Scimitar
 Zircon Chip	Airslash Rings
@@ -15916,6 +15962,8 @@ Zircon Chip	Homing Ball
 Zircon Chip	Kaiser Knuckles
 Zircon Chip	Monado (Zircon)
 Zircon Chip	Well-Used Blades (Zircon)
+Zircon Chip	Archetype Ralzes (Zircon)
+Zircon Chip	Halteclere (Zircon)
 Coil Chip	Custom Sword
 Coil Chip	Custom Scimitar
 Coil Chip	Custom Rings
@@ -15934,6 +15982,8 @@ Coil Chip	Custom Ball
 Coil Chip	Custom Knuckles
 Coil Chip	Monado (Coil)
 Coil Chip	Well-Used Blades (Coil)
+Coil Chip	Archetype Ralzes (Coil)
+Coil Chip	Halteclere (Coil)
 Chain Chip	Clockwork Sword
 Chain Chip	Clockwork Scimitar
 Chain Chip	Clockwork Rings
@@ -15952,6 +16002,8 @@ Chain Chip	Clockwork Ball
 Chain Chip	Clockwork Knuckles
 Chain Chip	Monado (Chain)
 Chain Chip	Well-Used Blades (Chain)
+Chain Chip	Archetype Ralzes (Chain)
+Chain Chip	Halteclere (Chain)
 Magnet Chip	Technical Sword
 Magnet Chip	Scimitar of the Owl
 Magnet Chip	Rings of Revival
@@ -15970,6 +16022,8 @@ Magnet Chip	Stealth Ball
 Magnet Chip	Brawler Knuckles
 Magnet Chip	Monado (Magnet)
 Magnet Chip	Well-Used Blades (Magnet)
+Magnet Chip	Archetype Ralzes (Magnet)
+Magnet Chip	Halteclere (Magnet)
 Shaft Chip	Accelerator Sword
 Shaft Chip	Accelerator Scimitar
 Shaft Chip	Accelerator Rings
@@ -15988,6 +16042,8 @@ Shaft Chip	Accelerator Ball
 Shaft Chip	Accelerator Knuckles
 Shaft Chip	Monado (Shaft)
 Shaft Chip	Well-Used Blades (Shaft)
+Shaft Chip	Archetype Ralzes (Shaft)
+Shaft Chip	Halteclere (Shaft)
 Battery Chip	Turbine Sword
 Battery Chip	Turbine Scimitar
 Battery Chip	Turbine Rings
@@ -16006,6 +16062,8 @@ Battery Chip	Turbine Ball
 Battery Chip	Turbine Knuckles
 Battery Chip	Monado (Battery)
 Battery Chip	Well-Used Blades (Battery)
+Battery Chip	Archetype Ralzes (Battery)
+Battery Chip	Halteclere (Battery)
 Engine Chip	Ceramic Sword
 Engine Chip	Ceramic Scimitar
 Engine Chip	Ceramic Rings
@@ -16024,6 +16082,8 @@ Engine Chip	Ceramic Ball
 Engine Chip	Ceramic Knuckles
 Engine Chip	Monado (Engine)
 Engine Chip	Well-Used Blades (Engine)
+Engine Chip	Archetype Ralzes (Engine)
+Engine Chip	Halteclere (Engine)
 Motor Chip	Mechanized Sword
 Motor Chip	Mechanized Scimitar
 Motor Chip	Mechanized Rings
@@ -16042,6 +16102,8 @@ Motor Chip	Mechanized Ball
 Motor Chip	Mechanized Knuckles
 Motor Chip	Monado (Motor)
 Motor Chip	Well-Used Blades (Motor)
+Motor Chip	Archetype Ralzes (Motor)
+Motor Chip	Halteclere (Motor)
 Booster Chip	Machine Slayer
 Booster Chip	Machine Cleaver
 Booster Chip	Ferrous Rings
@@ -16060,6 +16122,8 @@ Booster Chip	Advanced Ball
 Booster Chip	Thunderstrikers
 Booster Chip	Monado (Booster)
 Booster Chip	Well-Used Blades (Booster)
+Booster Chip	Archetype Ralzes (Booster)
+Booster Chip	Halteclere (Booster)
 Tri-Chip	Ancient Sword
 Tri-Chip	Ancient Scimitar
 Tri-Chip	Ancient Rings
@@ -16078,6 +16142,8 @@ Tri-Chip	Ancient Ball
 Tri-Chip	Ancient Knuckles
 Tri-Chip	Monado (Tri-Chip)
 Tri-Chip	Well-Used Blades (Tri-Chip)
+Tri-Chip	Archetype Ralzes (Tri-Chip)
+Tri-Chip	Halteclere (Tri-Chip)
 Rhombus Chip	Elder Sword
 Rhombus Chip	Elder Scimitar
 Rhombus Chip	Elder Rings
@@ -16096,6 +16162,8 @@ Rhombus Chip	Elder Ball
 Rhombus Chip	Elder Knuckles
 Rhombus Chip	Monado (Rhombus)
 Rhombus Chip	Well-Used Blades (Rhombus)
+Rhombus Chip	Archetype Ralzes (Rhombus)
+Rhombus Chip	Halteclere (Rhombus)
 Pentagon Chip	Blessed Sword
 Pentagon Chip	Furtive Scimitar
 Pentagon Chip	Rage of the Oceans
@@ -16114,6 +16182,8 @@ Pentagon Chip	Spirit Ball
 Pentagon Chip	Mirage Knuckles
 Pentagon Chip	Monado (Pentagon)
 Pentagon Chip	Well-Used Blades (Pentagon)
+Pentagon Chip	Archetype Ralzes (Pentagon)
+Pentagon Chip	Halteclere (Pentagon)
 Hexagon Chip	Legendary Sword
 Hexagon Chip	Legendary Scimitar
 Hexagon Chip	Legendary Rings
@@ -16132,6 +16202,8 @@ Hexagon Chip	Legendary Ball
 Hexagon Chip	Legendary Knuckles
 Hexagon Chip	Monado (Hexagon)
 Hexagon Chip	Well-Used Blades (Hexagon)
+Hexagon Chip	Archetype Ralzes (Hexagon)
+Hexagon Chip	Halteclere (Hexagon)
 Sphere Chip	Agarthan Sword
 Sphere Chip	Agarthan Scimitar
 Sphere Chip	Agarthan Rings
@@ -16150,6 +16222,8 @@ Sphere Chip	Agarthan Ball
 Sphere Chip	Agarthan Knuckles
 Sphere Chip	Monado (Sphere)
 Sphere Chip	Well-Used Blades (Sphere)
+Sphere Chip	Archetype Ralzes (Sphere)
+Sphere Chip	Halteclere (Sphere)
 Cube Chip	Sword of El Dorado
 Cube Chip	Scimitar of El Dorado
 Cube Chip	Rings of El Dorado
@@ -16168,6 +16242,8 @@ Cube Chip	Ball of El Dorado
 Cube Chip	Knuckles of El Dorado
 Cube Chip	Monado (Cube)
 Cube Chip	Well-Used Blades (Cube)
+Cube Chip	Archetype Ralzes (Cube)
+Cube Chip	Halteclere (Cube)
 Polygon Chip	Sword of Eden
 Polygon Chip	Scimitar of Eden
 Polygon Chip	Rings of Eden
@@ -16186,6 +16262,8 @@ Polygon Chip	Ball of Eden
 Polygon Chip	Knuckles of Eden
 Polygon Chip	Monado (Polygon)
 Polygon Chip	Well-Used Blades (Polygon)
+Polygon Chip	Archetype Ralzes (Polygon)
+Polygon Chip	Halteclere (Polygon)
 Spiral Chip	King of Sharks
 Spiral Chip	The Kraken
 Spiral Chip	Marine Slayers
@@ -16204,6 +16282,8 @@ Spiral Chip	Jewel of Yore
 Spiral Chip	Fists of the Advent
 Spiral Chip	Monado (Spiral)
 Spiral Chip	Well-Used Blades (Spiral)
+Spiral Chip	Archetype Ralzes (Spiral)
+Spiral Chip	Halteclere (Spiral)
 Lodranite Chip	Adamant Sword
 Lodranite Chip	Adamant Scimitar
 Lodranite Chip	Adamant Rings
@@ -16222,6 +16302,8 @@ Lodranite Chip	Adamant Ball
 Lodranite Chip	Adamant Knuckles
 Lodranite Chip	Monado (Lodranite)
 Lodranite Chip	Well-Used Blades (Lodranite)
+Lodranite Chip	Archetype Ralzes (Lodranite)
+Lodranite Chip	Halteclere (Lodranite)
 Brachinite Chip	Wootz Sword
 Brachinite Chip	Wootz Scimitar
 Brachinite Chip	Wootz Rings
@@ -16240,6 +16322,8 @@ Brachinite Chip	Wootz Ball
 Brachinite Chip	Wootz Knuckles
 Brachinite Chip	Monado (Brachinite)
 Brachinite Chip	Well-Used Blades (Brachinite)
+Brachinite Chip	Archetype Ralzes (Brachinite)
+Brachinite Chip	Halteclere (Brachinite)
 Ureilite Chip	Energy Edge
 Ureilite Chip	Assassin's Scimitar
 Ureilite Chip	Rings of Serendipity
@@ -16258,6 +16342,8 @@ Ureilite Chip	The Peacemaker
 Ureilite Chip	Fists of Healing
 Ureilite Chip	Monado (Ureilite)
 Ureilite Chip	Well-Used Blades (Ureilite)
+Ureilite Chip	Archetype Ralzes (Ureilite)
+Ureilite Chip	Halteclere (Ureilite)
 Winonaite Chip	Orichalcum Sword
 Winonaite Chip	Orichalcum Scimitar
 Winonaite Chip	Orichalcum Rings
@@ -16276,6 +16362,8 @@ Winonaite Chip	Orichalcum Ball
 Winonaite Chip	Orichalcum Knuckles
 Winonaite Chip	Monado (Winonaite)
 Winonaite Chip	Well-Used Blades (Winonaite)
+Winonaite Chip	Archetype Ralzes (Winonaite)
+Winonaite Chip	Halteclere (Winonaite)
 Nakhlite Chip	Sigma Sword
 Nakhlite Chip	Sigma Scimitar
 Nakhlite Chip	Sigma Rings
@@ -16294,6 +16382,8 @@ Nakhlite Chip	Sigma Ball
 Nakhlite Chip	Sigma Knuckles
 Nakhlite Chip	Monado (Nakhlite)
 Nakhlite Chip	Well-Used Blades (Nakhlite)
+Nakhlite Chip	Archetype Ralzes (Nakhlite)
+Nakhlite Chip	Halteclere (Nakhlite)
 Howardite Chip	Delta Sword
 Howardite Chip	Delta Scimitar
 Howardite Chip	Delta Rings
@@ -16312,6 +16402,8 @@ Howardite Chip	Delta Ball
 Howardite Chip	Delta Knuckles
 Howardite Chip	Monado (Howardite)
 Howardite Chip	Well-Used Blades (Howardite)
+Howardite Chip	Archetype Ralzes (Howardite)
+Howardite Chip	Halteclere (Howardite)
 Aubrite Chip	Godspeed Sword
 Aubrite Chip	Energy Scimitar
 Aubrite Chip	Invisible Rings
@@ -16330,6 +16422,8 @@ Aubrite Chip	Cypher
 Aubrite Chip	Lambda Knuckles
 Aubrite Chip	Monado (Aubrite)
 Aubrite Chip	Well-Used Blades (Aubrite)
+Aubrite Chip	Archetype Ralzes (Aubrite)
+Aubrite Chip	Halteclere (Aubrite)
 Angrite Chip	Saintslayer Brand
 Angrite Chip	Seraphsbane
 Angrite Chip	Deity Erasers
@@ -16348,6 +16442,8 @@ Angrite Chip	Omega Ball
 Angrite Chip	Spirits of the Knife
 Angrite Chip	Monado (Angrite)
 Angrite Chip	Well-Used Blades (Angrite)
+Angrite Chip	Archetype Ralzes (Angrite)
+Angrite Chip	Halteclere (Angrite)
 Dark Matter Chip	Sword of Despair
 Dark Matter Chip	Scimitar of Despair
 Dark Matter Chip	Rings of Despair
@@ -16366,6 +16462,8 @@ Dark Matter Chip	Ball of Despair
 Dark Matter Chip	Knuckles of Despair
 Dark Matter Chip	Monado (Dark Matter)
 Dark Matter Chip	Well-Used Blades (Dark Matter)
+Dark Matter Chip	Archetype Ralzes (Dark Matter)
+Dark Matter Chip	Halteclere (Dark Matter)
 Axion Chip	Sword of Chaos
 Axion Chip	Scimitar of Chaos
 Axion Chip	Rings of Chaos
@@ -16384,6 +16482,8 @@ Axion Chip	Ball of Chaos
 Axion Chip	Knuckles of Chaos
 Axion Chip	Monado (Axion)
 Axion Chip	Well-Used Blades (Axion)
+Axion Chip	Archetype Ralzes (Axion)
+Axion Chip	Halteclere (Axion)
 Mirror Matter Chip	Mutinous Sword
 Mirror Matter Chip	Supersonic Scimitar
 Mirror Matter Chip	Rings of the Kingslayer
@@ -16402,6 +16502,8 @@ Mirror Matter Chip	Public Enemy No. 1
 Mirror Matter Chip	Hands of Ruin
 Mirror Matter Chip	Monado (Mirror Matter)
 Mirror Matter Chip	Well-Used Blades (Mirror Matter)
+Mirror Matter Chip	Archetype Ralzes (Mirror Matter)
+Mirror Matter Chip	Halteclere (Mirror Matter)
 Shining Star Chip	Sword of Thanatos
 Shining Star Chip	Scimitar of Thanatos
 Shining Star Chip	Rings of Thanatos
@@ -16420,6 +16522,8 @@ Shining Star Chip	Ball of Thanatos
 Shining Star Chip	Knuckles of Thanatos
 Shining Star Chip	Monado (Shining Star)
 Shining Star Chip	Well-Used Blades (Shining Star)
+Shining Star Chip	Archetype Ralzes (Shining Star)
+Shining Star Chip	Halteclere (Shining Star)
 Moon Matter Chip	Sword of Banishing
 Moon Matter Chip	Scimitar of Banishing
 Moon Matter Chip	Rings of Banishing
@@ -16438,6 +16542,8 @@ Moon Matter Chip	Ball of Banishing
 Moon Matter Chip	Knuckles of Banishing
 Moon Matter Chip	Monado (Moon Matter)
 Moon Matter Chip	Well-Used Blades (Moon Matter)
+Moon Matter Chip	Archetype Ralzes (Moon Matter)
+Moon Matter Chip	Halteclere (Moon Matter)
 Sunlight Chip	Eater of Souls
 Sunlight Chip	The Trickster
 Sunlight Chip	Specters
@@ -16456,6 +16562,8 @@ Sunlight Chip	Morningstar Ascending
 Sunlight Chip	Sacrifice
 Sunlight Chip	Monado (Sunlight)
 Sunlight Chip	Well-Used Blades (Sunlight)
+Sunlight Chip	Archetype Ralzes (Sunlight)
+Sunlight Chip	Halteclere (Sunlight)
 Photon Chip	Sword of Origin
 Photon Chip	Scimitar of Origin
 Photon Chip	Rings of Origin
@@ -16474,6 +16582,8 @@ Photon Chip	Ball of Origin
 Photon Chip	Knuckles of Origin
 Photon Chip	Monado (Photon)
 Photon Chip	Well-Used Blades (Photon)
+Photon Chip	Archetype Ralzes (Photon)
+Photon Chip	Halteclere (Photon)
 Positron Chip	Eternal Sword
 Positron Chip	Eternal Scimitar
 Positron Chip	Eternal Rings
@@ -16492,6 +16602,8 @@ Positron Chip	Eternal Ball
 Positron Chip	Eternal Knuckles
 Positron Chip	Monado (Positron)
 Positron Chip	Well-Used Blades (Positron)
+Positron Chip	Archetype Ralzes (Positron)
+Positron Chip	Halteclere (Positron)
 Hadron Chip	Final Sword
 Hadron Chip	Final Scimitar
 Hadron Chip	Final Rings
@@ -16510,6 +16622,8 @@ Hadron Chip	Final Ball
 Hadron Chip	Final Knuckles
 Hadron Chip	Monado (Hadron)
 Hadron Chip	Well-Used Blades (Hadron)
+Hadron Chip	Archetype Ralzes (Hadron)
+Hadron Chip	Halteclere (Hadron)
 Dilaton Chip	Satellite Sword
 Dilaton Chip	Satellite Scimitar
 Dilaton Chip	Satellite Rings
@@ -16528,6 +16642,8 @@ Dilaton Chip	Satellite Ball
 Dilaton Chip	Satellite Knuckles
 Dilaton Chip	Monado (Dilaton)
 Dilaton Chip	Well-Used Blades (Dilaton)
+Dilaton Chip	Archetype Ralzes (Dilaton)
+Dilaton Chip	Halteclere (Dilaton)
 Preon Chip	Meteorite Sword
 Preon Chip	Meteorite Scimitar
 Preon Chip	Meteorite Rings
@@ -16546,6 +16662,8 @@ Preon Chip	Meteorite Ball
 Preon Chip	Meteorite Knuckles
 Preon Chip	Monado (Preon)
 Preon Chip	Well-Used Blades (Preon)
+Preon Chip	Archetype Ralzes (Preon)
+Preon Chip	Halteclere (Preon)
 Tachyon Chip	Shooting Star
 Tachyon Chip	Scimitar of Creation
 Tachyon Chip	Transmigration
@@ -16564,6 +16682,8 @@ Tachyon Chip	Eclipse of Reason
 Tachyon Chip	The First Principle
 Tachyon Chip	Monado (Tachyon)
 Tachyon Chip	Well-Used Blades (Tachyon)
+Tachyon Chip	Archetype Ralzes (Tachyon)
+Tachyon Chip	Halteclere (Tachyon)
 \.
 
 
