@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.5.12
--- Dumped by pg_dump version 9.5.12
+-- Dumped from database version 9.5.14
+-- Dumped by pg_dump version 9.5.14
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -818,7 +818,8 @@ ALTER TABLE xenox.augment_upgrade OWNER TO poppi;
 
 CREATE VIEW xenox.augments AS
  WITH augments AS (
-         SELECT aug_names.name,
+         SELECT btl_itemskill_inner.row_id AS id,
+            aug_names.name,
             btl_itemskill_inner."enhanceID",
             btl_itemskill_inner."Rare",
             btl_itemskill_inner."Price",
@@ -826,7 +827,8 @@ CREATE VIEW xenox.augments AS
            FROM (xbx.btl_itemskill_inner
              JOIN xbx.battleskill_ms aug_names ON ((btl_itemskill_inner."Name" = aug_names.row_id)))
         UNION ALL
-         SELECT aug_names.name,
+         SELECT (btl_itemskill_doll.row_id + 3667) AS id,
+            aug_names.name,
             btl_itemskill_doll."enhanceID",
             btl_itemskill_doll."Rare",
             btl_itemskill_doll."Price",
@@ -834,7 +836,8 @@ CREATE VIEW xenox.augments AS
            FROM (xbx.btl_itemskill_doll
              JOIN xbx.battleskill_dl_ms aug_names ON ((btl_itemskill_doll."Name" = aug_names.row_id)))
         )
- SELECT augments.name,
+ SELECT augments.id,
+    augments.name,
     xenox.format_caption(captions.name, enhance.ratio, enhance.param1, enhance.param2) AS effect,
     augments."Price" AS sell_price,
         CASE
