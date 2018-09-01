@@ -492,7 +492,7 @@ class XenobladeX:
     async def show_possibilities(self, ctx, table_name, name):
         query = f"""
                 SELECT
-                    STRING_AGG(name, E'\n' ORDER BY SIMILARITY(name, $1) DESC)
+                    ARRAY_AGG(name ORDER BY SIMILARITY(name, $1) DESC)
                 FROM xenox.{table_name}
                 WHERE name % $1;
                 """
@@ -505,7 +505,14 @@ class XenobladeX:
         if not possibilities:
             return await ctx.send(f'{type_name} not found.')
 
-        await ctx.send(f'{type_name} not found. Did you mean...\n{possibilities}')
+        results = [f'{index}: {name}' for index, name in enumerate(possibilities, 1)]
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
+            paginator.embed.colour = 0x738bd7
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
 
     async def search_entries(self, ctx, table_name, name):
         query = f"""
