@@ -384,7 +384,8 @@ class XenobladeX:
 
         await ctx.send(fmt)
 
-    def calc_stats(self, stat_1, stat_99, level, stat_mod):
+    @staticmethod
+    def calc_stats(stat_1, stat_99, level, stat_mod):
         return math.floor(((((stat_99 - stat_1) / (99 - 1)) * (level - 1)) + stat_1) * stat_mod / 100)
 
     @commands.command()
