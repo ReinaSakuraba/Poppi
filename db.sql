@@ -23187,408 +23187,408 @@ Specials Lv 4 Plus VI	Glory Angler	1
 --
 
 COPY xeno2.cores (name, caption, unrefined_sell_price, refined_sell_price, rarity, material_type, material_amount) FROM stdin;
-Critical Up I	256	700	900	Common	Common	4
-Critical Up II	257	1800	2300	Common	Common	8
-Critical Up III	258	2800	3600	Rare	Rare	3
-Critical Up IV	259	3500	4600	Rare	Rare	6
-Critical Up V	260	3800	4900	Legendary	Legendary	2
-Physical Defense Up I	262	700	900	Common	Common	4
-Physical Defense Up II	263	1900	2500	Common	Common	8
-Physical Defense Up III	264	3100	4000	Rare	Rare	3
-Physical Defense Up IV	265	5200	6800	Rare	Rare	6
-Physical Defense Up V	266	5700	7400	Legendary	Legendary	2
-Ether Defense Up I	268	1000	1300	Common	Common	4
-Ether Defense Up II	269	2700	3500	Common	Common	8
-Ether Defense Up III	270	4200	5500	Rare	Rare	3
-Ether Defense Up IV	271	5200	6800	Rare	Rare	6
-Ether Defense Up V	272	5700	7400	Legendary	Legendary	2
-Block Rate Up I	274	800	900	Common	Ore	3
-Block Rate Up II	275	2200	2400	Common	Ore	6
-Block Rate Up III	276	3500	3900	Rare	Ore	9
-Block Rate Up IV	277	4300	4700	Rare	Ore	12
-Block Rate Up V	278	4700	5200	Legendary	Ore	15
-Beast Hunter I	280	500	600	Common	Insect	3
-Beast Hunter II	281	1300	1400	Common	Insect	6
-Beast Hunter III	282	2100	2300	Rare	Insect	9
-Beast Hunter IV	283	2600	2900	Rare	Insect	12
-Beast Hunter V	284	2800	3100	Legendary	Insect	15
-Insect Hunter I	286	300	300	Common	Flower	3
-Insect Hunter II	287	900	1000	Common	Flower	6
-Insect Hunter III	288	1600	1800	Rare	Flower	9
-Insect Hunter IV	289	2100	2300	Rare	Flower	12
-Insect Hunter V	290	2800	3100	Legendary	Flower	15
-Aerial Hunter I	292	500	600	Common	Fish	3
-Aerial Hunter II	293	1300	1400	Common	Fish	6
-Aerial Hunter III	294	2100	2300	Rare	Fish	9
-Aerial Hunter IV	295	2600	2900	Rare	Fish	12
-Aerial Hunter V	296	2800	3100	Legendary	Fish	15
-Aquatic Hunter I	298	300	300	Common	Tree	3
-Aquatic Hunter II	299	900	1000	Common	Tree	6
-Aquatic Hunter III	300	1600	1800	Rare	Tree	9
-Aquatic Hunter IV	301	2100	2300	Rare	Tree	12
-Aquatic Hunter V	302	2800	3100	Legendary	Tree	15
-Humanoid Hunter I	304	500	600	Common	Vegetable	3
-Humanoid Hunter II	305	1300	1400	Common	Vegetable	6
-Humanoid Hunter III	306	2100	2300	Rare	Vegetable	9
-Humanoid Hunter IV	307	2600	2900	Rare	Vegetable	12
-Humanoid Hunter V	308	2800	3100	Legendary	Vegetable	15
-Machine Hunter I	310	300	300	Common	Mechanical	3
-Machine Hunter II	311	900	1000	Common	Mechanical	6
-Machine Hunter III	312	1600	1800	Rare	Mechanical	9
-Machine Hunter IV	313	2100	2300	Rare	Mechanical	12
-Machine Hunter V	314	2800	3100	Legendary	Mechanical	15
-Titan Hunter I	316	300	300	Common	Tree	3
-Titan Hunter II	317	900	1000	Common	Tree	6
-Titan Hunter III	318	1600	1800	Rare	Tree	9
-Titan Hunter IV	319	2100	2300	Rare	Tree	12
-Titan Hunter V	320	2800	3100	Legendary	Tree	15
-Blade Combo Boost I	322	1000	1500	Common	Specific	0
-Blade Combo Boost II	323	2700	4100	Common	Specific	0
-Blade Combo Boost III	324	4200	6300	Rare	Specific	0
-Blade Combo Boost IV	325	5200	7800	Rare	Specific	0
-Blade Combo Boost V	326	5700	8600	Legendary	Specific	0
-Blade Combo Boost VI	327	6300	9500	Legendary	Specific	0
-Fusion Combo Up I	328	400	500	Common	Common	4
-Fusion Combo Up II	329	1300	1700	Common	Common	8
-Fusion Combo Up III	330	2100	2700	Rare	Rare	3
-Fusion Combo Up IV	331	3500	4600	Rare	Rare	6
-Fusion Combo Up V	332	3800	4900	Legendary	Legendary	2
-Ambush Boost I	334	300	300	Common	Insect	3
-Ambush Boost II	335	900	1000	Common	Insect	6
-Ambush Boost III	336	1400	1500	Rare	Insect	9
-Ambush Boost IV	337	1700	1900	Rare	Insect	12
-Ambush Boost V	338	1900	2100	Legendary	Insect	15
-Reflect Immunity	344	1900	2100	Legendary	Fish	15
-Aggro Attack Up I	345	1000	1500	Common	Specific	0
-Aggro Attack Up II	346	2700	4100	Common	Specific	0
-Aggro Attack Up III	347	4200	6300	Rare	Specific	0
-Aggro Attack Up IV	348	5200	7800	Rare	Specific	0
-Aggro Attack Up V	349	5700	8600	Legendary	Specific	0
-Indoor Attack Up I	351	300	300	Common	Insect	3
-Indoor Attack Up II	352	900	1000	Common	Insect	6
-Indoor Attack Up III	353	1600	1800	Rare	Insect	9
-Indoor Attack Up IV	354	2600	2900	Rare	Insect	12
-Indoor Attack Up V	355	2800	3100	Legendary	Insect	15
-Outdoor Attack Up I	357	500	600	Common	Tree	3
-Outdoor Attack Up II	358	1300	1400	Common	Tree	6
-Outdoor Attack Up III	359	2100	2300	Rare	Tree	9
-Outdoor Attack Up IV	360	2600	2900	Rare	Tree	12
-Outdoor Attack Up V	361	2800	3100	Legendary	Tree	15
-Fire Def Up I	363	400	400	Common	Ore	3
-Fire Def Up II	364	1300	1400	Common	Ore	6
-Fire Def Up III	365	2100	2300	Rare	Ore	9
-Fire Def Up IV	366	2800	3100	Rare	Ore	12
-Fire Def Up V	367	3500	3900	Legendary	Ore	15
-Water Def Up I	369	400	400	Common	Fish	3
-Water Def Up II	370	1300	1400	Common	Fish	6
-Water Def Up III	371	2100	2300	Rare	Fish	9
-Water Def Up IV	372	2800	3100	Rare	Fish	12
-Water Def Up V	373	3500	3900	Legendary	Fish	15
-Earth Def Up I	381	400	400	Common	Tree	3
-Earth Def Up II	382	1300	1400	Common	Tree	6
-Earth Def Up III	383	2100	2300	Rare	Tree	9
-Earth Def Up IV	384	2800	3100	Rare	Tree	12
-Earth Def Up V	385	3500	3900	Legendary	Tree	15
-Wind Def Up I	375	400	400	Common	Flower	3
-Wind Def Up II	376	1300	1400	Common	Flower	6
-Wind Def Up III	377	2100	2300	Rare	Flower	9
-Wind Def Up IV	378	2800	3100	Rare	Flower	12
-Wind Def Up V	379	3500	3900	Legendary	Flower	15
-Electric Def Up I	387	400	400	Common	Mechanical	3
-Electric Def Up II	388	1300	1400	Common	Mechanical	6
-Electric Def Up III	389	2100	2300	Rare	Mechanical	9
-Electric Def Up IV	390	2800	3100	Rare	Mechanical	12
-Electric Def Up V	391	3500	3900	Legendary	Mechanical	15
-Ice Def Up I	393	400	400	Common	Vegetable	3
-Ice Def Up II	394	1300	1400	Common	Vegetable	6
-Ice Def Up III	395	2100	2300	Rare	Vegetable	9
-Ice Def Up IV	396	2800	3100	Rare	Vegetable	12
-Ice Def Up V	397	3500	3900	Legendary	Vegetable	15
-Dark Def Up I	405	400	400	Common	Ore	3
-Dark Def Up II	406	1300	1400	Common	Ore	6
-Dark Def Up III	407	2100	2300	Rare	Ore	9
-Dark Def Up IV	408	2800	3100	Rare	Ore	12
-Dark Def Up V	409	3500	3900	Legendary	Ore	15
-Light Def Up I	399	400	400	Common	Mechanical	3
-Light Def Up II	400	1300	1400	Common	Mechanical	6
-Light Def Up III	401	2100	2300	Rare	Mechanical	9
-Light Def Up IV	402	2800	3100	Rare	Mechanical	12
-Light Def Up V	403	3500	3900	Legendary	Mechanical	15
-Ultimate Shield	411	4200	6300	Legendary	Specific	0
-Fire Absorb	412	3500	5300	Legendary	Specific	0
-Water Absorb	413	3500	5300	Legendary	Specific	0
-Earth Absorb	415	3500	5300	Legendary	Specific	0
-Wind Absorb	414	3500	5300	Legendary	Specific	0
-Electric Absorb	416	3500	5300	Legendary	Specific	0
-Ice Absorb	417	3500	5300	Legendary	Specific	0
-Dark Absorb	419	3500	5300	Legendary	Specific	0
-Light Absorb	418	3500	5300	Legendary	Specific	0
-Fire Reflect	420	3800	4900	Legendary	Legendary	2
-Water Reflect	421	3800	4900	Legendary	Legendary	2
-Earth Reflect	423	3800	4900	Legendary	Legendary	2
-Wind Reflect	422	3800	4900	Legendary	Legendary	2
-Electric Reflect	424	3800	4900	Legendary	Legendary	2
-Ice Reflect	425	3800	4900	Legendary	Legendary	2
-Dark Reflect	427	3800	4900	Legendary	Legendary	2
-Light Reflect	426	3800	4900	Legendary	Legendary	2
-Evasion Focus I	428	700	900	Common	Common	4
-Evasion Focus II	429	1300	1700	Common	Common	8
-Evasion Focus III	430	2100	2700	Rare	Rare	3
-Evasion Focus IV	431	3500	4600	Rare	Rare	6
-Evasion Focus V	432	3800	4900	Legendary	Legendary	2
-Swift Evasion I	434	700	1100	Common	Specific	0
-Swift Evasion II	435	1800	2700	Common	Specific	0
-Swift Evasion III	436	2800	4200	Rare	Specific	0
-Swift Evasion IV	437	3500	5300	Rare	Specific	0
-Swift Evasion V	438	3800	5700	Legendary	Specific	0
-Emergency Guard I	440	400	400	Common	Flower	3
-Emergency Guard II	441	1300	1400	Common	Flower	6
-Emergency Guard III	442	2100	2300	Rare	Flower	9
-Emergency Guard IV	443	3500	3900	Rare	Flower	12
-Emergency Guard V	444	3800	4200	Legendary	Flower	15
-Endurance I	446	700	900	Common	Common	4
-Endurance II	447	1800	2300	Common	Common	8
-Endurance III	448	2800	3600	Rare	Rare	3
-Endurance IV	449	3500	4600	Rare	Rare	6
-Endurance V	450	3800	4900	Legendary	Legendary	2
-HP Attack Boost I	452	700	900	Common	Common	4
-HP Attack Boost II	453	1300	1700	Common	Common	8
-HP Attack Boost III	454	2100	2700	Rare	Rare	3
-HP Attack Boost IV	455	3500	4600	Rare	Rare	6
-HP Attack Boost V	456	3800	4900	Legendary	Legendary	2
-Spike Defense I	458	700	800	Common	Vegetable	3
-Spike Defense II	459	1800	2000	Common	Vegetable	6
-Spike Defense III	460	2800	3100	Rare	Vegetable	9
-Spike Defense IV	461	3500	3900	Rare	Vegetable	12
-Spike Defense V	462	3800	4200	Legendary	Vegetable	15
-Break Resist I	463	900	1200	Common	Common	4
-Break Resist II	464	2500	3300	Common	Common	8
-Break Resist III	465	4200	5500	Rare	Rare	3
-Break Resist IV	466	6900	9000	Rare	Rare	6
-Break Resist V	467	7600	9900	Legendary	Legendary	2
-Topple Resist I	469	1200	1600	Common	Common	4
-Topple Resist II	470	3100	4000	Common	Common	8
-Topple Resist III	471	4900	6400	Rare	Rare	3
-Topple Resist IV	472	6000	7800	Rare	Rare	6
-Topple Resist V	473	6600	8600	Legendary	Legendary	2
-Launch Resist I	475	700	900	Common	Common	4
-Launch Resist II	476	1900	2500	Common	Common	8
-Launch Resist III	477	3100	4000	Rare	Rare	3
-Launch Resist IV	478	5200	6800	Rare	Rare	6
-Launch Resist V	479	5700	7400	Legendary	Legendary	2
-Smash Resist I	481	700	900	Common	Common	4
-Smash Resist II	482	1800	2300	Common	Common	8
-Smash Resist III	483	2800	3600	Rare	Rare	3
-Smash Resist IV	484	3500	4600	Rare	Rare	6
-Smash Resist V	485	3800	4900	Legendary	Legendary	2
-Blowdown Resist I	487	300	400	Common	Common	4
-Blowdown Resist II	488	900	1200	Common	Common	8
-Blowdown Resist III	489	1600	2100	Rare	Rare	3
-Blowdown Resist IV	490	2600	3400	Rare	Rare	6
-Blowdown Resist V	491	2800	3600	Legendary	Legendary	2
-Knockback Resist I	493	500	700	Common	Common	4
-Knockback Resist II	494	1300	1700	Common	Common	8
-Knockback Resist III	495	2100	2700	Rare	Rare	3
-Knockback Resist IV	496	2600	3400	Rare	Rare	6
-Knockback Resist V	497	2800	3600	Legendary	Legendary	2
-Annul Resist I	499	300	300	Common	Fish	3
-Annul Resist II	500	900	1000	Common	Fish	6
-Annul Resist III	501	1600	1800	Rare	Fish	9
-Annul Resist IV	502	2600	2900	Rare	Fish	12
-Annul Resist V	503	2800	3100	Legendary	Fish	15
-Shackle Blade Resist I	655	700	800	Common	Flower	3
-Shackle Blade Resist II	656	1800	2000	Common	Flower	6
-Shackle Blade Resist III	657	2800	3100	Rare	Flower	9
-Shackle Blade Resist IV	658	3500	3900	Rare	Flower	12
-Shackle Blade Resist V	659	3800	4200	Legendary	Flower	15
-Auto-Attack Stealth I	504	700	900	Common	Common	4
-Auto-Attack Stealth II	505	1900	2500	Common	Common	8
-Auto-Attack Stealth III	506	3100	4000	Rare	Rare	3
-Auto-Attack Stealth IV	507	5200	6800	Rare	Rare	6
-Auto-Attack Stealth V	508	5700	7400	Legendary	Legendary	2
-Aggro Boost I	510	1000	1300	Common	Common	4
-Aggro Boost II	511	2700	3500	Common	Common	8
-Aggro Boost III	512	4200	5500	Rare	Rare	3
-Aggro Boost IV	513	5200	6800	Rare	Rare	6
-Aggro Boost V	514	5700	7400	Legendary	Legendary	2
-Arts Stealth I	516	700	900	Common	Common	4
-Arts Stealth II	517	1900	2500	Common	Common	8
-Arts Stealth III	518	3100	4000	Rare	Rare	3
-Arts Stealth IV	519	5200	6800	Rare	Rare	6
-Arts Stealth V	520	5700	7400	Legendary	Legendary	2
-Arts Aggro Boost I	522	1000	1300	Common	Common	4
-Arts Aggro Boost II	523	2700	3500	Common	Common	8
-Arts Aggro Boost III	524	4200	5500	Rare	Rare	3
-Arts Aggro Boost IV	525	5200	6800	Rare	Rare	6
-Arts Aggro Boost V	526	5700	7400	Legendary	Legendary	2
-Arts Heal I	528	500	800	Common	Specific	0
-Arts Heal II	529	1600	2400	Common	Specific	0
-Arts Heal III	530	2600	3900	Rare	Specific	0
-Arts Heal IV	531	4300	6500	Rare	Specific	0
-Arts Heal V	532	4700	7100	Legendary	Specific	0
-Movement Heal I	534	700	1100	Common	Specific	0
-Movement Heal II	535	1800	2700	Common	Specific	0
-Movement Heal III	536	2800	4200	Rare	Specific	0
-Movement Heal IV	537	3500	5300	Rare	Specific	0
-Movement Heal V	538	3800	5700	Legendary	Specific	0
-Damage Heal I	540	500	800	Common	Specific	0
-Damage Heal II	541	1600	2400	Common	Specific	0
-Damage Heal III	542	2600	3900	Rare	Specific	0
-Damage Heal IV	543	4300	6500	Rare	Specific	0
-Damage Heal V	544	4700	7100	Legendary	Specific	0
-Night Vision I	546	300	300	Common	Insect	3
-Night Vision II	547	900	1000	Common	Insect	6
-Night Vision III	548	1400	1500	Rare	Insect	9
-Night Vision IV	549	1700	1900	Rare	Insect	12
-Night Vision V	550	1900	2100	Legendary	Insect	15
-Sunlight Eye I	552	200	200	Common	Tree	3
-Sunlight Eye II	553	600	700	Common	Tree	6
-Sunlight Eye III	554	1000	1100	Rare	Tree	9
-Sunlight Eye IV	555	1700	1900	Rare	Tree	12
-Sunlight Eye V	556	1900	2100	Legendary	Tree	15
-Reflect Damage Up I	558	300	400	Common	Common	4
-Reflect Damage Up II	559	900	1200	Common	Common	8
-Reflect Damage Up III	560	1400	1800	Rare	Rare	3
-Reflect Damage Up IV	561	1700	2200	Rare	Rare	6
-Reflect Damage Up V	562	1900	2500	Legendary	Legendary	2
-Range Boost Up I	564	300	300	Common	Flower	3
-Range Boost Up II	565	900	1000	Common	Flower	6
-Range Boost Up III	566	1600	1800	Rare	Flower	9
-Range Boost Up IV	567	2600	2900	Rare	Flower	12
-Range Boost Up V	568	2800	3100	Legendary	Flower	15
-Opening Art I	569	200	200	Common	Fish	3
-Opening Art II	570	600	700	Common	Fish	6
-Opening Art III	571	1000	1100	Rare	Fish	9
-Opening Art IV	572	1700	1900	Rare	Fish	12
-Opening Art V	573	1900	2100	Legendary	Fish	15
-Telepathy I	575	700	1100	Common	Specific	0
-Telepathy II	576	1800	2700	Common	Specific	0
-Telepathy III	577	2800	4200	Rare	Specific	0
-Telepathy IV	578	3500	5300	Rare	Specific	0
-Telepathy V	579	3800	5700	Legendary	Specific	0
-Helping Hand I	580	400	500	Common	Common	4
-Helping Hand II	581	1300	1700	Common	Common	8
-Helping Hand III	582	2100	2700	Rare	Rare	3
-Helping Hand IV	583	3500	4600	Rare	Rare	6
-Helping Hand V	584	3800	4900	Legendary	Legendary	2
-Affinity MAX Barrier I	585	500	600	Common	Vegetable	3
-Affinity MAX Barrier II	586	1300	1400	Common	Vegetable	6
-Affinity MAX Barrier III	587	2100	2300	Rare	Vegetable	9
-Affinity MAX Barrier IV	588	2600	2900	Rare	Vegetable	12
-Affinity MAX Barrier V	589	2800	3100	Legendary	Vegetable	15
-Affinity MAX Atk I	591	700	900	Common	Common	4
-Affinity MAX Atk II	592	1900	2500	Common	Common	8
-Affinity MAX Atk III	593	3100	4000	Rare	Rare	3
-Affinity MAX Atk IV	594	5200	6800	Rare	Rare	6
-Affinity MAX Atk V	595	5700	7400	Legendary	Legendary	2
-Affinity MAX Evade I	597	1000	1500	Common	Specific	0
-Affinity MAX Evade II	598	2700	4100	Common	Specific	0
-Affinity MAX Evade III	599	4200	6300	Rare	Specific	0
-Affinity MAX Evade IV	600	5200	7800	Rare	Specific	0
-Affinity MAX Evade V	601	5700	8600	Legendary	Specific	0
-Hunter's Chemistry I	603	300	300	Common	Vegetable	3
-Hunter's Chemistry II	604	900	1000	Common	Vegetable	6
-Hunter's Chemistry III	605	1600	1800	Rare	Vegetable	9
-Hunter's Chemistry IV	606	2600	2900	Rare	Vegetable	12
-Hunter's Chemistry V	607	2800	3100	Legendary	Vegetable	15
-Shoulder to Shoulder I	608	500	600	Common	Flower	3
-Shoulder to Shoulder II	609	1300	1400	Common	Flower	6
-Shoulder to Shoulder III	610	2100	2300	Rare	Flower	9
-Shoulder to Shoulder IV	611	2600	2900	Rare	Flower	12
-Shoulder to Shoulder V	612	2800	3100	Legendary	Flower	15
-Fast Blade Switch I	613	900	1400	Common	Specific	0
-Fast Blade Switch II	614	2500	3800	Common	Specific	0
-Fast Blade Switch III	615	4200	6300	Rare	Specific	0
-Fast Blade Switch IV	616	6900	10400	Rare	Specific	0
-Fast Blade Switch V	617	7600	11400	Legendary	Specific	0
-Fast Blade Switch VI	618	8400	12600	Legendary	Specific	0
-Specials Lv 1 Plus I	619	700	800	Common	Vegetable	3
-Specials Lv 1 Plus II	620	1800	2000	Common	Vegetable	6
-Specials Lv 1 Plus III	621	2800	3100	Rare	Vegetable	9
-Specials Lv 1 Plus IV	622	3500	3900	Rare	Vegetable	12
-Specials Lv 1 Plus V	623	3800	4200	Legendary	Vegetable	15
-Specials Lv 2 Plus I	625	700	900	Common	Common	4
-Specials Lv 2 Plus II	626	1800	2300	Common	Common	8
-Specials Lv 2 Plus III	627	2800	3600	Rare	Rare	3
-Specials Lv 2 Plus IV	628	3500	4600	Rare	Rare	6
-Specials Lv 2 Plus V	629	3800	4900	Legendary	Legendary	2
-Specials Lv 3 Plus I	631	700	1100	Common	Specific	0
-Specials Lv 3 Plus II	632	1800	2700	Common	Specific	0
-Specials Lv 3 Plus III	633	2800	4200	Rare	Specific	0
-Specials Lv 3 Plus IV	634	3500	5300	Rare	Specific	0
-Specials Lv 3 Plus V	635	3800	5700	Legendary	Specific	0
-Specials Lv 4 Plus I	637	700	1100	Common	Specific	0
-Specials Lv 4 Plus II	638	1800	2700	Common	Specific	0
-Specials Lv 4 Plus III	639	2800	4200	Rare	Specific	0
-Specials Lv 4 Plus IV	640	3500	5300	Rare	Specific	0
-Specials Lv 4 Plus V	641	3800	5700	Legendary	Specific	0
-Affinity MAX Acc I	643	800	1000	Common	Common	4
-Affinity MAX Acc II	644	2200	2900	Common	Common	8
-Affinity MAX Acc III	645	3500	4600	Rare	Rare	3
-Affinity MAX Acc IV	646	4300	5600	Rare	Rare	6
-Affinity MAX Acc V	647	4700	6100	Legendary	Legendary	2
-Jamming I	649	400	500	Common	Common	4
-Jamming II	650	1300	1700	Common	Common	8
-Jamming III	651	2100	2700	Rare	Rare	3
-Jamming IV	652	3500	4600	Rare	Rare	6
-Jamming V	653	3800	4900	Legendary	Legendary	2
-Element Orb Ender	660	2700	3500	Rare	Common	8
-Element Orb Prioritizer	661	1400	1500	Common	Mechanical	3
-Critical Up VI	261	4800	6200	Legendary	Legendary	3
-Physical Defense Up VI	267	7100	9200	Legendary	Legendary	3
-Ether Defense Up VI	273	7100	9200	Legendary	Legendary	3
-Block Rate Up VI	279	5900	6500	Legendary	Ore	18
-Beast Hunter VI	285	3500	3900	Legendary	Insect	18
-Insect Hunter VI	291	3500	3900	Legendary	Flower	18
-Aerial Hunter VI	297	3500	3900	Legendary	Fish	18
-Aquatic Hunter VI	303	3500	3900	Legendary	Tree	18
-Humanoid Hunter VI	309	3500	3900	Legendary	Vegetable	18
-Machine Hunter VI	315	3500	3900	Legendary	Mechanical	18
-Titan Hunter VI	321	3500	3900	Legendary	Tree	18
-Fusion Combo Up VI	333	4800	6200	Legendary	Legendary	3
-Ambush Boost VI	339	2400	2600	Legendary	Insect	18
-Aggro Attack Up VI	350	7100	10700	Legendary	Specific	0
-Indoor Attack Up VI	356	3500	3900	Legendary	Insect	18
-Outdoor Attack Up VI	362	3500	3900	Legendary	Tree	18
-Fire Def Up VI	368	4400	4800	Legendary	Ore	18
-Water Def Up VI	374	4400	4800	Legendary	Fish	18
-Wind Def Up VI	380	4400	4800	Legendary	Flower	18
-Earth Def Up VI	386	4400	4800	Legendary	Tree	18
-Electric Def Up VI	392	4400	4800	Legendary	Mechanical	18
-Ice Def Up VI	398	4400	4800	Legendary	Vegetable	18
-Light Def Up VI	404	4400	4800	Legendary	Mechanical	18
-Dark Def Up VI	410	4400	4800	Legendary	Ore	18
-Evasion Focus VI	433	4800	6200	Legendary	Legendary	3
-Swift Evasion VI	439	4800	7200	Legendary	Specific	0
-Emergency Guard VI	445	4800	5300	Legendary	Flower	18
-Endurance VI	451	4800	6200	Legendary	Legendary	3
-HP Attack Boost VI	457	4800	6200	Legendary	Legendary	3
-Break Resist VI	468	9500	12400	Legendary	Legendary	3
-Topple Resist VI	474	8300	10800	Legendary	Legendary	3
-Launch Resist VI	480	7100	9200	Legendary	Legendary	3
-Smash Resist VI	486	4800	6200	Legendary	Legendary	3
-Blowdown Resist VI	492	3500	4600	Legendary	Legendary	3
-Knockback Resist VI	498	3500	4600	Legendary	Legendary	3
-Auto-Attack Stealth VI	509	7100	9200	Legendary	Legendary	3
-Aggro Boost VI	515	7100	9200	Legendary	Legendary	3
-Arts Stealth VI	521	7100	9200	Legendary	Legendary	3
-Arts Aggro Boost VI	527	7100	9200	Legendary	Legendary	3
-Arts Heal VI	533	5900	8900	Legendary	Specific	0
-Movement Heal VI	539	4800	7200	Legendary	Specific	0
-Damage Heal VI	545	5900	8900	Legendary	Specific	0
-Night Vision VI	551	2400	2600	Legendary	Insect	18
-Sunlight Eye VI	557	2400	2600	Legendary	Tree	18
-Reflect Damage Up VI	563	2400	3100	Legendary	Legendary	3
-Opening Art VI	574	2400	2600	Legendary	Fish	18
-Affinity MAX Barrier VI	590	3500	3900	Legendary	Vegetable	18
-Affinity MAX Atk VI	596	7100	9200	Legendary	Legendary	3
-Affinity MAX Evade VI	602	7100	10700	Legendary	Specific	0
-Specials Lv 1 Plus VI	624	4800	5300	Legendary	Vegetable	18
-Specials Lv 2 Plus VI	630	4800	6200	Legendary	Legendary	3
-Specials Lv 3 Plus VI	636	4800	7200	Legendary	Specific	0
-Specials Lv 4 Plus VI	642	4800	7200	Legendary	Specific	0
-Affinity MAX Acc VI	648	5900	7700	Legendary	Legendary	3
-Jamming VI	654	4800	6200	Legendary	Legendary	3
+Critical Up II	263	1800	2300	Common	Common	8
+Critical Up III	264	2800	3600	Rare	Rare	3
+Critical Up IV	265	3500	4600	Rare	Rare	6
+Physical Defense Up I	268	700	900	Common	Common	4
+Physical Defense Up II	269	1900	2500	Common	Common	8
+Physical Defense Up III	270	3100	4000	Rare	Rare	3
+Physical Defense Up IV	271	5200	6800	Rare	Rare	6
+Physical Defense Up V	272	5700	7400	Legendary	Legendary	2
+Ether Defense Up I	274	1000	1300	Common	Common	4
+Ether Defense Up II	275	2700	3500	Common	Common	8
+Ether Defense Up III	276	4200	5500	Rare	Rare	3
+Ether Defense Up IV	277	5200	6800	Rare	Rare	6
+Ether Defense Up V	278	5700	7400	Legendary	Legendary	2
+Block Rate Up I	280	800	900	Common	Ore	3
+Block Rate Up II	281	2200	2400	Common	Ore	6
+Block Rate Up III	282	3500	3900	Rare	Ore	9
+Block Rate Up IV	283	4300	4700	Rare	Ore	12
+Block Rate Up V	284	4700	5200	Legendary	Ore	15
+Beast Hunter I	286	500	600	Common	Insect	3
+Beast Hunter II	287	1300	1400	Common	Insect	6
+Beast Hunter III	288	2100	2300	Rare	Insect	9
+Beast Hunter IV	289	2600	2900	Rare	Insect	12
+Insect Hunter I	292	300	300	Common	Flower	3
+Insect Hunter II	293	900	1000	Common	Flower	6
+Insect Hunter III	294	1600	1800	Rare	Flower	9
+Insect Hunter IV	295	2100	2300	Rare	Flower	12
+Insect Hunter V	296	2800	3100	Legendary	Flower	15
+Aerial Hunter I	298	500	600	Common	Fish	3
+Aerial Hunter II	299	1300	1400	Common	Fish	6
+Aerial Hunter III	300	2100	2300	Rare	Fish	9
+Aerial Hunter IV	301	2600	2900	Rare	Fish	12
+Aerial Hunter V	302	2800	3100	Legendary	Fish	15
+Aquatic Hunter I	304	300	300	Common	Tree	3
+Aquatic Hunter II	305	900	1000	Common	Tree	6
+Aquatic Hunter III	306	1600	1800	Rare	Tree	9
+Aquatic Hunter IV	307	2100	2300	Rare	Tree	12
+Aquatic Hunter V	308	2800	3100	Legendary	Tree	15
+Humanoid Hunter I	310	500	600	Common	Vegetable	3
+Humanoid Hunter III	312	2100	2300	Rare	Vegetable	9
+Humanoid Hunter IV	313	2600	2900	Rare	Vegetable	12
+Humanoid Hunter V	314	2800	3100	Legendary	Vegetable	15
+Machine Hunter I	316	300	300	Common	Mechanical	3
+Machine Hunter II	317	900	1000	Common	Mechanical	6
+Machine Hunter III	318	1600	1800	Rare	Mechanical	9
+Machine Hunter IV	319	2100	2300	Rare	Mechanical	12
+Machine Hunter V	320	2800	3100	Legendary	Mechanical	15
+Titan Hunter I	322	300	300	Common	Tree	3
+Titan Hunter II	323	900	1000	Common	Tree	6
+Titan Hunter III	324	1600	1800	Rare	Tree	9
+Titan Hunter IV	325	2100	2300	Rare	Tree	12
+Titan Hunter V	326	2800	3100	Legendary	Tree	15
+Blade Combo Boost I	328	1000	1500	Common	Specific	0
+Blade Combo Boost II	329	2700	4100	Common	Specific	0
+Blade Combo Boost III	330	4200	6300	Rare	Specific	0
+Blade Combo Boost IV	331	5200	7800	Rare	Specific	0
+Blade Combo Boost V	332	5700	8600	Legendary	Specific	0
+Fusion Combo Up I	334	400	500	Common	Common	4
+Fusion Combo Up II	335	1300	1700	Common	Common	8
+Fusion Combo Up III	336	2100	2700	Rare	Rare	3
+Fusion Combo Up IV	337	3500	4600	Rare	Rare	6
+Fusion Combo Up V	338	3800	4900	Legendary	Legendary	2
+Ambush Boost I	340	300	300	Common	Insect	3
+Ambush Boost II	341	900	1000	Common	Insect	6
+Ambush Boost III	342	1400	1500	Rare	Insect	9
+Ambush Boost IV	343	1700	1900	Rare	Insect	12
+Ambush Boost V	344	1900	2100	Legendary	Insect	15
+Reflect Immunity	350	1900	2100	Legendary	Fish	15
+Aggro Attack Up I	351	1000	1500	Common	Specific	0
+Aggro Attack Up II	352	2700	4100	Common	Specific	0
+Aggro Attack Up III	353	4200	6300	Rare	Specific	0
+Aggro Attack Up IV	354	5200	7800	Rare	Specific	0
+Aggro Attack Up V	355	5700	8600	Legendary	Specific	0
+Indoor Attack Up I	357	300	300	Common	Insect	3
+Indoor Attack Up II	358	900	1000	Common	Insect	6
+Indoor Attack Up III	359	1600	1800	Rare	Insect	9
+Indoor Attack Up IV	360	2600	2900	Rare	Insect	12
+Outdoor Attack Up I	363	500	600	Common	Tree	3
+Outdoor Attack Up II	364	1300	1400	Common	Tree	6
+Outdoor Attack Up III	365	2100	2300	Rare	Tree	9
+Outdoor Attack Up IV	366	2600	2900	Rare	Tree	12
+Outdoor Attack Up V	367	2800	3100	Legendary	Tree	15
+Fire Def Up I	369	400	400	Common	Ore	3
+Fire Def Up II	370	1300	1400	Common	Ore	6
+Fire Def Up III	371	2100	2300	Rare	Ore	9
+Fire Def Up IV	372	2800	3100	Rare	Ore	12
+Fire Def Up V	373	3500	3900	Legendary	Ore	15
+Water Def Up I	375	400	400	Common	Fish	3
+Water Def Up II	376	1300	1400	Common	Fish	6
+Water Def Up III	377	2100	2300	Rare	Fish	9
+Water Def Up IV	378	2800	3100	Rare	Fish	12
+Water Def Up V	379	3500	3900	Legendary	Fish	15
+Earth Def Up I	387	400	400	Common	Tree	3
+Earth Def Up II	388	1300	1400	Common	Tree	6
+Earth Def Up III	389	2100	2300	Rare	Tree	9
+Earth Def Up IV	390	2800	3100	Rare	Tree	12
+Earth Def Up V	391	3500	3900	Legendary	Tree	15
+Wind Def Up II	382	1300	1400	Common	Flower	6
+Wind Def Up III	383	2100	2300	Rare	Flower	9
+Wind Def Up IV	384	2800	3100	Rare	Flower	12
+Wind Def Up V	385	3500	3900	Legendary	Flower	15
+Electric Def Up I	393	400	400	Common	Mechanical	3
+Electric Def Up II	394	1300	1400	Common	Mechanical	6
+Electric Def Up III	395	2100	2300	Rare	Mechanical	9
+Electric Def Up IV	396	2800	3100	Rare	Mechanical	12
+Electric Def Up V	397	3500	3900	Legendary	Mechanical	15
+Ice Def Up I	399	400	400	Common	Vegetable	3
+Ice Def Up II	400	1300	1400	Common	Vegetable	6
+Ice Def Up IV	402	2800	3100	Rare	Vegetable	12
+Ice Def Up V	403	3500	3900	Legendary	Vegetable	15
+Dark Def Up I	411	400	400	Common	Ore	3
+Dark Def Up II	412	1300	1400	Common	Ore	6
+Dark Def Up III	413	2100	2300	Rare	Ore	9
+Dark Def Up IV	414	2800	3100	Rare	Ore	12
+Light Def Up I	405	400	400	Common	Mechanical	3
+Light Def Up II	406	1300	1400	Common	Mechanical	6
+Light Def Up III	407	2100	2300	Rare	Mechanical	9
+Light Def Up IV	408	2800	3100	Rare	Mechanical	12
+Light Def Up V	409	3500	3900	Legendary	Mechanical	15
+Ultimate Shield	417	4200	6300	Legendary	Specific	0
+Fire Absorb	418	3500	5300	Legendary	Specific	0
+Water Absorb	419	3500	5300	Legendary	Specific	0
+Earth Absorb	421	3500	5300	Legendary	Specific	0
+Wind Absorb	420	3500	5300	Legendary	Specific	0
+Electric Absorb	422	3500	5300	Legendary	Specific	0
+Ice Absorb	423	3500	5300	Legendary	Specific	0
+Dark Absorb	425	3500	5300	Legendary	Specific	0
+Light Absorb	424	3500	5300	Legendary	Specific	0
+Water Reflect	427	3800	4900	Legendary	Legendary	2
+Earth Reflect	429	3800	4900	Legendary	Legendary	2
+Wind Reflect	428	3800	4900	Legendary	Legendary	2
+Electric Reflect	430	3800	4900	Legendary	Legendary	2
+Ice Reflect	431	3800	4900	Legendary	Legendary	2
+Dark Reflect	433	3800	4900	Legendary	Legendary	2
+Light Reflect	432	3800	4900	Legendary	Legendary	2
+Evasion Focus I	434	700	900	Common	Common	4
+Evasion Focus II	435	1300	1700	Common	Common	8
+Evasion Focus III	436	2100	2700	Rare	Rare	3
+Evasion Focus IV	437	3500	4600	Rare	Rare	6
+Evasion Focus V	438	3800	4900	Legendary	Legendary	2
+Swift Evasion I	440	700	1100	Common	Specific	0
+Swift Evasion II	441	1800	2700	Common	Specific	0
+Swift Evasion III	442	2800	4200	Rare	Specific	0
+Swift Evasion IV	443	3500	5300	Rare	Specific	0
+Swift Evasion V	444	3800	5700	Legendary	Specific	0
+Emergency Guard I	446	400	400	Common	Flower	3
+Emergency Guard III	448	2100	2300	Rare	Flower	9
+Emergency Guard IV	449	3500	3900	Rare	Flower	12
+Emergency Guard V	450	3800	4200	Legendary	Flower	15
+Endurance I	452	700	900	Common	Common	4
+Endurance II	453	1800	2300	Common	Common	8
+Endurance III	454	2800	3600	Rare	Rare	3
+Endurance IV	455	3500	4600	Rare	Rare	6
+Endurance V	456	3800	4900	Legendary	Legendary	2
+HP Attack Boost I	458	700	900	Common	Common	4
+HP Attack Boost II	459	1300	1700	Common	Common	8
+HP Attack Boost III	460	2100	2700	Rare	Rare	3
+HP Attack Boost IV	461	3500	4600	Rare	Rare	6
+HP Attack Boost V	462	3800	4900	Legendary	Legendary	2
+Spike Defense I	464	700	800	Common	Vegetable	3
+Spike Defense II	465	1800	2000	Common	Vegetable	6
+Spike Defense III	466	2800	3100	Rare	Vegetable	9
+Spike Defense IV	467	3500	3900	Rare	Vegetable	12
+Spike Defense V	468	3800	4200	Legendary	Vegetable	15
+Break Resist I	469	900	1200	Common	Common	4
+Break Resist II	470	2500	3300	Common	Common	8
+Break Resist IV	472	6900	9000	Rare	Rare	6
+Break Resist V	473	7600	9900	Legendary	Legendary	2
+Topple Resist I	475	1200	1600	Common	Common	4
+Topple Resist II	476	3100	4000	Common	Common	8
+Topple Resist III	477	4900	6400	Rare	Rare	3
+Topple Resist IV	478	6000	7800	Rare	Rare	6
+Topple Resist V	479	6600	8600	Legendary	Legendary	2
+Launch Resist I	481	700	900	Common	Common	4
+Launch Resist II	482	1900	2500	Common	Common	8
+Launch Resist III	483	3100	4000	Rare	Rare	3
+Launch Resist IV	484	5200	6800	Rare	Rare	6
+Launch Resist V	485	5700	7400	Legendary	Legendary	2
+Smash Resist I	487	700	900	Common	Common	4
+Smash Resist II	488	1800	2300	Common	Common	8
+Smash Resist III	489	2800	3600	Rare	Rare	3
+Smash Resist IV	490	3500	4600	Rare	Rare	6
+Blowdown Resist I	493	300	400	Common	Common	4
+Blowdown Resist II	494	900	1200	Common	Common	8
+Blowdown Resist III	495	1600	2100	Rare	Rare	3
+Blowdown Resist IV	496	2600	3400	Rare	Rare	6
+Blowdown Resist V	497	2800	3600	Legendary	Legendary	2
+Knockback Resist I	499	500	700	Common	Common	4
+Knockback Resist II	500	1300	1700	Common	Common	8
+Knockback Resist III	501	2100	2700	Rare	Rare	3
+Knockback Resist IV	502	2600	3400	Rare	Rare	6
+Knockback Resist V	503	2800	3600	Legendary	Legendary	2
+Annul Resist I	505	300	300	Common	Fish	3
+Annul Resist II	506	900	1000	Common	Fish	6
+Annul Resist III	507	1600	1800	Rare	Fish	9
+Annul Resist IV	508	2600	2900	Rare	Fish	12
+Annul Resist V	509	2800	3100	Legendary	Fish	15
+Shackle Blade Resist I	661	700	800	Common	Flower	3
+Shackle Blade Resist III	663	2800	3100	Rare	Flower	9
+Shackle Blade Resist IV	664	3500	3900	Rare	Flower	12
+Shackle Blade Resist V	665	3800	4200	Legendary	Flower	15
+Auto-Attack Stealth I	510	700	900	Common	Common	4
+Auto-Attack Stealth II	511	1900	2500	Common	Common	8
+Auto-Attack Stealth III	512	3100	4000	Rare	Rare	3
+Auto-Attack Stealth IV	513	5200	6800	Rare	Rare	6
+Auto-Attack Stealth V	514	5700	7400	Legendary	Legendary	2
+Aggro Boost I	516	1000	1300	Common	Common	4
+Aggro Boost II	517	2700	3500	Common	Common	8
+Aggro Boost III	518	4200	5500	Rare	Rare	3
+Aggro Boost IV	519	5200	6800	Rare	Rare	6
+Aggro Boost V	520	5700	7400	Legendary	Legendary	2
+Arts Stealth I	522	700	900	Common	Common	4
+Arts Stealth II	523	1900	2500	Common	Common	8
+Arts Stealth III	524	3100	4000	Rare	Rare	3
+Arts Stealth IV	525	5200	6800	Rare	Rare	6
+Arts Aggro Boost I	528	1000	1300	Common	Common	4
+Arts Aggro Boost II	529	2700	3500	Common	Common	8
+Arts Aggro Boost III	530	4200	5500	Rare	Rare	3
+Arts Aggro Boost IV	531	5200	6800	Rare	Rare	6
+Arts Aggro Boost V	532	5700	7400	Legendary	Legendary	2
+Arts Heal I	534	500	800	Common	Specific	0
+Arts Heal II	535	1600	2400	Common	Specific	0
+Arts Heal IV	537	4300	6500	Rare	Specific	0
+Arts Heal V	538	4700	7100	Legendary	Specific	0
+Movement Heal I	540	700	1100	Common	Specific	0
+Movement Heal II	541	1800	2700	Common	Specific	0
+Movement Heal III	542	2800	4200	Rare	Specific	0
+Movement Heal IV	543	3500	5300	Rare	Specific	0
+Movement Heal V	544	3800	5700	Legendary	Specific	0
+Damage Heal I	546	500	800	Common	Specific	0
+Damage Heal II	547	1600	2400	Common	Specific	0
+Damage Heal III	548	2600	3900	Rare	Specific	0
+Damage Heal IV	549	4300	6500	Rare	Specific	0
+Damage Heal V	550	4700	7100	Legendary	Specific	0
+Night Vision I	552	300	300	Common	Insect	3
+Night Vision II	553	900	1000	Common	Insect	6
+Night Vision III	554	1400	1500	Rare	Insect	9
+Night Vision IV	555	1700	1900	Rare	Insect	12
+Sunlight Eye I	558	200	200	Common	Tree	3
+Sunlight Eye II	559	600	700	Common	Tree	6
+Sunlight Eye III	560	1000	1100	Rare	Tree	9
+Sunlight Eye IV	561	1700	1900	Rare	Tree	12
+Sunlight Eye V	562	1900	2100	Legendary	Tree	15
+Reflect Damage Up I	564	300	400	Common	Common	4
+Reflect Damage Up II	565	900	1200	Common	Common	8
+Reflect Damage Up III	566	1400	1800	Rare	Rare	3
+Reflect Damage Up IV	567	1700	2200	Rare	Rare	6
+Reflect Damage Up V	568	1900	2500	Legendary	Legendary	2
+Range Boost Up I	570	300	300	Common	Flower	3
+Range Boost Up II	571	900	1000	Common	Flower	6
+Range Boost Up III	572	1600	1800	Rare	Flower	9
+Range Boost Up IV	573	2600	2900	Rare	Flower	12
+Range Boost Up V	574	2800	3100	Legendary	Flower	15
+Opening Art I	575	200	200	Common	Fish	3
+Opening Art II	576	600	700	Common	Fish	6
+Opening Art III	577	1000	1100	Rare	Fish	9
+Opening Art V	579	1900	2100	Legendary	Fish	15
+Telepathy I	581	700	1100	Common	Specific	0
+Telepathy II	582	1800	2700	Common	Specific	0
+Telepathy III	583	2800	4200	Rare	Specific	0
+Telepathy IV	584	3500	5300	Rare	Specific	0
+Telepathy V	585	3800	5700	Legendary	Specific	0
+Helping Hand I	586	400	500	Common	Common	4
+Helping Hand II	587	1300	1700	Common	Common	8
+Helping Hand III	588	2100	2700	Rare	Rare	3
+Helping Hand IV	589	3500	4600	Rare	Rare	6
+Helping Hand V	590	3800	4900	Legendary	Legendary	2
+Affinity MAX Barrier I	591	500	600	Common	Vegetable	3
+Affinity MAX Barrier III	593	2100	2300	Rare	Vegetable	9
+Affinity MAX Barrier IV	594	2600	2900	Rare	Vegetable	12
+Affinity MAX Barrier V	595	2800	3100	Legendary	Vegetable	15
+Affinity MAX Atk I	597	700	900	Common	Common	4
+Affinity MAX Atk II	598	1900	2500	Common	Common	8
+Affinity MAX Atk III	599	3100	4000	Rare	Rare	3
+Affinity MAX Atk IV	600	5200	6800	Rare	Rare	6
+Affinity MAX Atk V	601	5700	7400	Legendary	Legendary	2
+Affinity MAX Evade I	603	1000	1500	Common	Specific	0
+Affinity MAX Evade II	604	2700	4100	Common	Specific	0
+Affinity MAX Evade III	605	4200	6300	Rare	Specific	0
+Affinity MAX Evade IV	606	5200	7800	Rare	Specific	0
+Affinity MAX Evade V	607	5700	8600	Legendary	Specific	0
+Hunter's Chemistry I	609	300	300	Common	Vegetable	3
+Hunter's Chemistry II	610	900	1000	Common	Vegetable	6
+Hunter's Chemistry III	611	1600	1800	Rare	Vegetable	9
+Hunter's Chemistry IV	612	2600	2900	Rare	Vegetable	12
+Hunter's Chemistry V	613	2800	3100	Legendary	Vegetable	15
+Shoulder to Shoulder I	614	500	600	Common	Flower	3
+Shoulder to Shoulder II	615	1300	1400	Common	Flower	6
+Shoulder to Shoulder III	616	2100	2300	Rare	Flower	9
+Shoulder to Shoulder IV	617	2600	2900	Rare	Flower	12
+Fast Blade Switch I	619	900	1400	Common	Specific	0
+Fast Blade Switch II	620	2500	3800	Common	Specific	0
+Fast Blade Switch III	621	4200	6300	Rare	Specific	0
+Fast Blade Switch IV	622	6900	10400	Rare	Specific	0
+Fast Blade Switch V	623	7600	11400	Legendary	Specific	0
+Fast Blade Switch VI	624	8400	12600	Legendary	Specific	0
+Specials Lv 1 Plus I	625	700	800	Common	Vegetable	3
+Specials Lv 1 Plus II	626	1800	2000	Common	Vegetable	6
+Specials Lv 1 Plus III	627	2800	3100	Rare	Vegetable	9
+Specials Lv 1 Plus IV	628	3500	3900	Rare	Vegetable	12
+Specials Lv 1 Plus V	629	3800	4200	Legendary	Vegetable	15
+Specials Lv 2 Plus I	631	700	900	Common	Common	4
+Specials Lv 2 Plus II	632	1800	2300	Common	Common	8
+Specials Lv 2 Plus III	633	2800	3600	Rare	Rare	3
+Specials Lv 2 Plus IV	634	3500	4600	Rare	Rare	6
+Specials Lv 2 Plus V	635	3800	4900	Legendary	Legendary	2
+Specials Lv 3 Plus I	637	700	1100	Common	Specific	0
+Specials Lv 3 Plus II	638	1800	2700	Common	Specific	0
+Specials Lv 3 Plus III	639	2800	4200	Rare	Specific	0
+Specials Lv 3 Plus IV	640	3500	5300	Rare	Specific	0
+Specials Lv 4 Plus I	643	700	1100	Common	Specific	0
+Specials Lv 4 Plus II	644	1800	2700	Common	Specific	0
+Specials Lv 4 Plus III	645	2800	4200	Rare	Specific	0
+Specials Lv 4 Plus IV	646	3500	5300	Rare	Specific	0
+Specials Lv 4 Plus V	647	3800	5700	Legendary	Specific	0
+Affinity MAX Acc I	649	800	1000	Common	Common	4
+Affinity MAX Acc II	650	2200	2900	Common	Common	8
+Affinity MAX Acc III	651	3500	4600	Rare	Rare	3
+Affinity MAX Acc IV	652	4300	5600	Rare	Rare	6
+Critical Up I	262	700	900	Common	Common	4
+Critical Up V	266	3800	4900	Legendary	Legendary	2
+Beast Hunter V	290	2800	3100	Legendary	Insect	15
+Humanoid Hunter II	311	1300	1400	Common	Vegetable	6
+Blade Combo Boost VI	333	6300	9500	Legendary	Specific	0
+Indoor Attack Up V	361	2800	3100	Legendary	Insect	15
+Wind Def Up I	381	400	400	Common	Flower	3
+Ice Def Up III	401	2100	2300	Rare	Vegetable	9
+Dark Def Up V	415	3500	3900	Legendary	Ore	15
+Fire Reflect	426	3800	4900	Legendary	Legendary	2
+Emergency Guard II	447	1300	1400	Common	Flower	6
+Break Resist III	471	4200	5500	Rare	Rare	3
+Smash Resist V	491	3800	4900	Legendary	Legendary	2
+Shackle Blade Resist II	662	1800	2000	Common	Flower	6
+Arts Stealth V	526	5700	7400	Legendary	Legendary	2
+Arts Heal III	536	2600	3900	Rare	Specific	0
+Night Vision V	556	1900	2100	Legendary	Insect	15
+Opening Art IV	578	1700	1900	Rare	Fish	12
+Affinity MAX Barrier II	592	1300	1400	Common	Vegetable	6
+Shoulder to Shoulder V	618	2800	3100	Legendary	Flower	15
+Specials Lv 3 Plus V	641	3800	5700	Legendary	Specific	0
+Affinity MAX Acc V	653	4700	6100	Legendary	Legendary	2
+Jamming I	655	400	500	Common	Common	4
+Jamming II	656	1300	1700	Common	Common	8
+Jamming III	657	2100	2700	Rare	Rare	3
+Jamming IV	658	3500	4600	Rare	Rare	6
+Jamming V	659	3800	4900	Legendary	Legendary	2
+Element Orb Ender	666	2700	3500	Rare	Common	8
+Element Orb Prioritizer	667	1400	1500	Common	Mechanical	3
+Critical Up VI	267	4800	6200	Legendary	Legendary	3
+Physical Defense Up VI	273	7100	9200	Legendary	Legendary	3
+Ether Defense Up VI	279	7100	9200	Legendary	Legendary	3
+Block Rate Up VI	285	5900	6500	Legendary	Ore	18
+Beast Hunter VI	291	3500	3900	Legendary	Insect	18
+Insect Hunter VI	297	3500	3900	Legendary	Flower	18
+Aerial Hunter VI	303	3500	3900	Legendary	Fish	18
+Aquatic Hunter VI	309	3500	3900	Legendary	Tree	18
+Humanoid Hunter VI	315	3500	3900	Legendary	Vegetable	18
+Machine Hunter VI	321	3500	3900	Legendary	Mechanical	18
+Titan Hunter VI	327	3500	3900	Legendary	Tree	18
+Fusion Combo Up VI	339	4800	6200	Legendary	Legendary	3
+Ambush Boost VI	345	2400	2600	Legendary	Insect	18
+Aggro Attack Up VI	356	7100	10700	Legendary	Specific	0
+Indoor Attack Up VI	362	3500	3900	Legendary	Insect	18
+Outdoor Attack Up VI	368	3500	3900	Legendary	Tree	18
+Fire Def Up VI	374	4400	4800	Legendary	Ore	18
+Water Def Up VI	380	4400	4800	Legendary	Fish	18
+Wind Def Up VI	386	4400	4800	Legendary	Flower	18
+Earth Def Up VI	392	4400	4800	Legendary	Tree	18
+Electric Def Up VI	398	4400	4800	Legendary	Mechanical	18
+Ice Def Up VI	404	4400	4800	Legendary	Vegetable	18
+Light Def Up VI	410	4400	4800	Legendary	Mechanical	18
+Dark Def Up VI	416	4400	4800	Legendary	Ore	18
+Evasion Focus VI	439	4800	6200	Legendary	Legendary	3
+Swift Evasion VI	445	4800	7200	Legendary	Specific	0
+Emergency Guard VI	451	4800	5300	Legendary	Flower	18
+Endurance VI	457	4800	6200	Legendary	Legendary	3
+HP Attack Boost VI	463	4800	6200	Legendary	Legendary	3
+Break Resist VI	474	9500	12400	Legendary	Legendary	3
+Topple Resist VI	480	8300	10800	Legendary	Legendary	3
+Launch Resist VI	486	7100	9200	Legendary	Legendary	3
+Smash Resist VI	492	4800	6200	Legendary	Legendary	3
+Blowdown Resist VI	498	3500	4600	Legendary	Legendary	3
+Knockback Resist VI	504	3500	4600	Legendary	Legendary	3
+Auto-Attack Stealth VI	515	7100	9200	Legendary	Legendary	3
+Aggro Boost VI	521	7100	9200	Legendary	Legendary	3
+Arts Stealth VI	527	7100	9200	Legendary	Legendary	3
+Arts Aggro Boost VI	533	7100	9200	Legendary	Legendary	3
+Arts Heal VI	539	5900	8900	Legendary	Specific	0
+Movement Heal VI	545	4800	7200	Legendary	Specific	0
+Damage Heal VI	551	5900	8900	Legendary	Specific	0
+Night Vision VI	557	2400	2600	Legendary	Insect	18
+Sunlight Eye VI	563	2400	2600	Legendary	Tree	18
+Reflect Damage Up VI	569	2400	3100	Legendary	Legendary	3
+Opening Art VI	580	2400	2600	Legendary	Fish	18
+Affinity MAX Barrier VI	596	3500	3900	Legendary	Vegetable	18
+Affinity MAX Atk VI	602	7100	9200	Legendary	Legendary	3
+Affinity MAX Evade VI	608	7100	10700	Legendary	Specific	0
+Specials Lv 1 Plus VI	630	4800	5300	Legendary	Vegetable	18
+Specials Lv 2 Plus VI	636	4800	6200	Legendary	Legendary	3
+Specials Lv 3 Plus VI	642	4800	7200	Legendary	Specific	0
+Specials Lv 4 Plus VI	648	4800	7200	Legendary	Specific	0
+Affinity MAX Acc VI	654	5900	7700	Legendary	Legendary	3
+Jamming VI	660	4800	6200	Legendary	Legendary	3
 \.
 
 
