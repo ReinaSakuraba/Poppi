@@ -1,5 +1,7 @@
 import random
 import asyncio
+import itertools
+from collections import defaultdict, deque
 
 
 class Playlist(asyncio.Queue):
@@ -10,6 +12,30 @@ class Playlist(asyncio.Queue):
         return len(self._queue)
 
     def shuffle(self):
+        entries = defaultdict(list)
+
+        for entry in self:
+            entries[entry.requester.id].append(entry)
+
+        for requester_entries in entries.values():
+            entry_length = len(requester_entries)
+
+            random.shuffle(requester_entries)
+
+            if entry_length == 1:
+                requester_entries[0].position = random.random()
+            else:
+                for i, entry in enumerate(requester_entries, 1):
+                    entry.position = 1 / (entry_length + 1) * i + random.random() / 10 - 0.05
+
+        shuffled = sorted(itertools.chain(*entries.values()), key=lambda x: x.position)
+
+        for entry in shuffled:
+            del entry.position
+
+        self._queue = deque(shuffled)
+
+    def true_shuffle(self):
         random.shuffle(self._queue)
 
     def clear(self):
