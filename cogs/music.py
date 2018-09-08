@@ -211,31 +211,34 @@ class Music:
         else:
             vc.resume()
 
-    @commands.command(name='join')
-    async def _join(self, ctx, *, channel: discord.VoiceChannel):
-        """Joins a voice channel."""
-        if ctx.author.voice is None:
-            return await ctx.send('You need to be in a voice channel.')
-        vc = ctx.guild.voice_client
-        if vc is not None:
-            return await ctx.send('Already in a voice channel.')
+    @commands.command(aliases=['join'])
+    async def summon(self, ctx, *, channel: discord.VoiceChannel = None):
+        """Summons the bot to a voice channel."""
 
-        await channel.connect()
-        await ctx.send(f'Connected to {channel.name}.')
+        channel = getattr(ctx.author.voice, 'channel', channel)
 
-    @commands.command()
-    async def summon(self, ctx):
-        """Summons the bot to join your voice channel."""
-        voice = ctx.author.voice
-        if voice is None:
-            await ctx.send('You are not in a voice channel.')
+        if channel is None:
+            return await ctx.send('No channel to join. Please either specify a valid channel or join one.')
+
+        vc = ctx.voice_client
+
+        if vc is None:
+            try:
+                await channel.connect(timeout=10)
+            except asyncio.TimeoutError:
+                return await ctx.send('Unable to connect to the voice channel at this time. Please try again.')
+
+            return await ctx.send(f'Connected to {channel.name}.')
+
+        if channel == vc.channel:
             return
 
-        vc = ctx.guild.voice_client
-        if vc is not None:
-            await vc.move_to(voice.channel)
-        else:
-            return await voice.channel.connect()
+        try:
+            await vc.move_to(channel)
+        except Exception:
+            return await ctx.send('Unable to move to this channel.')
+
+        await ctx.send(f'Moved to {channel.name}.')
 
     @commands.command()
     @utils.mod_or_permissions(manage_guild=True)
@@ -344,13 +347,19 @@ class Music:
         The list of supported sites can be found here:
         https://rg3.github.io/youtube-dl/supportedsites.html
         """
-        if ctx.author.voice is None:
-            return await ctx.send('You need to be in a voice channel.')
-        vc = ctx.guild.voice_client
+
+        vc = ctx.voice_client
+
         if vc is None:
-            vc = await ctx.invoke(self.summon)
+            await ctx.invoke(self.summon)
+            vc = ctx.voice_client
+
             if vc is None:
                 return
+
+        else:
+            if ctx.author not in vc.channel.members:
+                return await ctx.send(f'You must be in {vc.channel.name} to request songs.')
 
         try:
             source = await YTDLSource.from_url(ctx, query)
