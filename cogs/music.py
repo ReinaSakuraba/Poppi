@@ -179,6 +179,16 @@ class Music:
             except:
                 pass
 
+    async def __local_check(self, ctx):
+        if ctx.invoked_with == 'help':
+            return True
+
+        if not ctx.guild:
+            await ctx.send('Music commands cannot be used in DMs.')
+            return False
+
+        return True
+
     async def on_voice_state_update(self, member, before, after):
         vc = member.guild.voice_client
         if vc is None:
