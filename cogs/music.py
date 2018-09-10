@@ -1,5 +1,8 @@
 import re
+import random
 import asyncio
+import itertools
+from collections import defaultdict
 
 import lavalink
 import discord
@@ -289,6 +292,40 @@ class Music:
             await paginator.paginate()
         except Exception as e:
             await ctx.send(e)
+
+    @commands.command()
+    async def shuffle(self, ctx):
+        """Shuffles the current queue."""
+
+        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+
+        if len(player.queue) == 0:
+            return await ctx.send('There\'s nothing in the queue! Why not queue something?')
+
+        entries = defaultdict(list)
+
+        for entry in player.queue:
+            entries[entry.requester].append(entry)
+
+        for requester_entries in entries.values():
+            entry_length = len(requester_entries)
+
+            random.shuffle(requester_entries)
+
+            if entry_length == 1:
+                requester_entries[0].position = random.random()
+            else:
+                for i, entry in enumerate(requester_entries, 1):
+                    entry.position = 1 / (entry_length + 1) * i + random.random() / 10 - 0.05
+
+        shuffled = sorted(itertools.chain(*entries.values()), key=lambda x: x.position)
+
+        for entry in shuffled:
+            del entry.position
+
+        player.queue = shuffled
+
+        await ctx.send('The queue has been shuffled.')
 
     @staticmethod
     def format_time(seconds):
