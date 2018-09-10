@@ -6,6 +6,7 @@ import psutil
 import aiohttp
 import discord
 from discord.ext import commands
+import lavalink
 
 import config
 import utils
@@ -30,6 +31,8 @@ class Bot(commands.Bot):
         self.pool = pool
         self.prefixes = utils.Config('prefixes.json', loop=self.loop)
         self.session = aiohttp.ClientSession(loop=self.loop)
+        self.lavalink = lavalink.Client(bot=self, loop=self.loop, rest_port=config.lava_rest,
+                                        ws_port=config.lava_ws, password=config.lava_pass)
         self.process = psutil.Process()
 
         for extension in self.startup_extensions:
