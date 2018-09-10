@@ -142,6 +142,21 @@ class Music:
 
         await ctx.send(f'Moved track to **{self.format_time(track_time)}**')
 
+    @commands.command()
+    async def remove(self, ctx, index: int):
+        """Removes a song from the queue."""
+
+        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+
+        if not player.queue:
+            return await ctx.send('Nothing queued.')
+
+        if index > len(player.queue) or index < 1:
+            return await ctx.send(f'Index has to be greater than or equal to 1 and less than or equal to {len(player.queue)}.')
+
+        removed = player.queue.pop(index - 1)
+
+        await ctx.send(f'Removed {removed.title} from the queue.')
 
     @commands.command()
     async def play(self, ctx, *, query):
