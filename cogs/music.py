@@ -175,6 +175,19 @@ class Music:
         await ctx.send('Queue cleared.')
 
     @commands.command()
+    async def repeat(self, ctx):
+        """Causes songs to repeat until disabled."""
+
+        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+
+        if not player.is_playing:
+            return await ctx.send('Nothing playing.')
+
+        player.repeat = not player.repeat
+
+        await ctx.send(f'Repeat {"enabled" if player.repeat else "disabled"}.')
+
+    @commands.command()
     async def play(self, ctx, *, query):
         """Plays a song.
 
