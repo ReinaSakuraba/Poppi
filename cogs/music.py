@@ -99,6 +99,8 @@ class Music:
 
     @commands.command(aliases=['resume'])
     async def pause(self, ctx):
+        """Pauses or resumes the currently playing song."""
+
         player = self.bot.lavalink.players.get(ctx.guild.id)
 
         if not player.is_playing:
