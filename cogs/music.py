@@ -162,6 +162,19 @@ class Music:
         await ctx.send(f'Removed {removed.title} from the queue.')
 
     @commands.command()
+    async def clear(self, ctx):
+        """Clears all songs from the queue."""
+
+        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+
+        if len(player.queue) == 0:
+            return await ctx.send('Nothing queued.')
+
+        player.queue = []
+
+        await ctx.send('Queue cleared.')
+
+    @commands.command()
     async def play(self, ctx, *, query):
         """Plays a song.
 
