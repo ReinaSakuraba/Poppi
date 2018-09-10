@@ -182,7 +182,7 @@ class Music:
 
         else:
             if ctx.author not in player.connected_channel.members:
-                return await ctx.send(f'You must be in {vc.channel.name} to request songs.')
+                return await ctx.send(f'You must be in {player.connected_channel.name} to request songs.')
 
 
         query = query.strip('<>')
