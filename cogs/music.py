@@ -255,6 +255,24 @@ class Music:
 
         await ctx.send(embed=embed)
 
+    @commands.command()
+    async def queue(self, ctx):
+        """Shows the current queue."""
+
+        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+
+        if len(player.queue) == 0:
+            return await ctx.send('There\'s nothing in the queue! Why not queue something?')
+
+        songs = [f'{i}: [{track.title}]({track.uri})\nRequested by {ctx.guild.get_member(track.requester)}' for i, track in enumerate(player.queue, 1)]
+
+        try:
+            paginator = utils.EmbedPaginator(ctx, entries=songs, per_page=10)
+            paginator.embed.colour = 0x738bd7
+            await paginator.paginate()
+        except Exception as e:
+            await ctx.send(e)
+
     @staticmethod
     def format_time(seconds):
         seconds //= 1000
