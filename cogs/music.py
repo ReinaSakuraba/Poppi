@@ -175,21 +175,43 @@ class Music:
         if not results or not results['tracks']:
             return await ctx.send('Nothing found!')
 
-        embed = discord.Embed(colour=ctx.guild.me.top_role.colour)
+        embed = discord.Embed()
 
-        if results['loadType'] == "PLAYLIST_LOADED":
+        time_until = 0
+        time_remaining = 0
+
+        for track in player.queue:
+            time_until += track.duration
+
+        if player.is_playing:
+            time_remaining = player.current.duration - player.position
+
+        time_until += time_remaining
+
+        time_until_playing = 'Up next!' if time_until == 0 or time_until == time_remaining else utils.human_time(time_until // 1000)
+
+        if results['loadType'] == 'PLAYLIST_LOADED':
             tracks = results['tracks']
 
+            duration = 0
+
             for track in tracks:
+                duration += track['info']['length']
                 player.add(requester=ctx.author.id, track=track)
 
-            embed.title = "Playlist Enqueued!"
-            embed.description = f"{results['playlistInfo']['name']} - {len(tracks)} tracks"
+            embed.title = f'Enqueued {results["playlistInfo"]["name"]}'
+            embed.add_field(name='Tracks', value=len(tracks))
+            embed.add_field(name='Duration', value=utils.human_time(duration // 1000))
+            embed.add_field(name='Time until playing', value=time_until_playing)
             await ctx.send(embed=embed)
         else:
             track = results['tracks'][0]
-            embed.title = "Track Enqueued"
-            embed.description = f'[{track["info"]["title"]}]({track["info"]["uri"]})'
+            embed.title = f'Enqueued {track["info"]["title"]}'
+            embed.url = track['info']['uri']
+            if 'youtube' in embed.url:
+                embed.set_thumbnail(url=f'https://img.youtube.com/vi/{track["info"]["identifier"]}/default.jpg')
+            embed.add_field(name='Duration', value=utils.human_time(track['info']['length'] // 1000))
+            embed.add_field(name='Time until playing', value=time_until_playing)
             await ctx.send(embed=embed)
             player.add(requester=ctx.author.id, track=track)
 
