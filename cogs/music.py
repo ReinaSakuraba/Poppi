@@ -236,7 +236,7 @@ class Music:
 
         time_until_playing = f'Up next!' if time_until == 0 else utils.human_time(time_until // 1000)
 
-        if time_until == time_remaining:
+        if time_until == time_remaining and time_until != 0:
             time_until_playing += ' (Next!)'
 
         if results['loadType'] == 'PLAYLIST_LOADED':
