@@ -143,7 +143,7 @@ class Music:
 
         await player.seek(track_time)
 
-        await ctx.send(f'Moved track to **{self.format_time(track_time)}**')
+        await ctx.send(f'Moved track to **{utils.digital_time(track_time // 1000)}**')
 
     @commands.command()
     async def remove(self, ctx, index: int):
@@ -284,7 +284,7 @@ class Music:
 
         embed.add_field(name='Requester', value=ctx.guild.get_member(player.current.requester))
 
-        position = self.format_time(player.position)
+        position = utils.digital_time(player.position // 1000)
 
         if player.current.stream:
             dur = 'LIVE'
@@ -298,7 +298,7 @@ class Music:
             index = player.position * progress_bar_length / player.current.duration
             fmt = f'{index / progress_bar_length:.0%}' \
                   f'{ends}{filled * round(index)}{unfilled * (progress_bar_length - round(index))}{ends}' \
-                  f'{position}/{self.format_time(player.current.duration)}'
+                  f'{position}/{utils.digital_time(player.current.duration // 1000)}'
             embed.description = fmt
 
 
@@ -355,14 +355,6 @@ class Music:
         player.queue = shuffled
 
         await ctx.send('The queue has been shuffled.')
-
-    @staticmethod
-    def format_time(seconds):
-        seconds //= 1000
-
-        if seconds >= 3600:
-            return f'{seconds//3600:02}:{seconds%3600//60:02}:{seconds%60:02}'
-        return f'{seconds//60:02}:{seconds%60:02}'
 
 
 def setup(bot):

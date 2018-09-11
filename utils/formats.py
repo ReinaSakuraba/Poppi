@@ -3,7 +3,7 @@ import datetime
 from dateutil.relativedelta import relativedelta
 
 
-__all__ = ('plural', 'human_join', 'human_time', 'human_timedelta', 'TabularData')
+__all__ = ('plural', 'human_join', 'human_time', 'human_timedelta', 'digital_time', 'TabularData')
 
 
 def plural(name, value, *, ending='s'):
@@ -51,6 +51,10 @@ def human_timedelta(dt, *, source=None):
     now = source or datetime.datetime.utcnow()
     delta = dt - now
     return human_time(delta.total_seconds())
+
+
+def digital_time(seconds):
+    return f'{seconds//3600:02}:' * (seconds >= 3600) + f'{seconds%3600//60:02}:{seconds%60:02}'
 
 
 class TabularData:
