@@ -29,7 +29,8 @@ class Music:
                 embed = discord.Embed()
                 embed.url = event.track.uri
                 embed.title = f'Now playing {event.track.title}'
-                embed.add_field(name='Duration', value=utils.human_time(event.track.duration // 1000))
+                if not event.track.stream:
+                    embed.add_field(name='Duration', value=utils.human_time(event.track.duration // 1000))
                 embed.add_field(name='Requester', value=channel.guild.get_member(event.track.requester), inline=False)
                 embed.set_thumbnail(url=event.track.thumbnail)
 
@@ -258,7 +259,8 @@ class Music:
             embed.url = track['info']['uri']
             if 'youtube' in embed.url:
                 embed.set_thumbnail(url=f'https://img.youtube.com/vi/{track["info"]["identifier"]}/default.jpg')
-            embed.add_field(name='Duration', value=utils.human_time(track['info']['length'] // 1000))
+            if not track['info']['isStream']:
+                embed.add_field(name='Duration', value=utils.human_time(track['info']['length'] // 1000))
             embed.add_field(name='Time until playing', value=time_until_playing)
             await ctx.send(embed=embed)
             player.add(requester=ctx.author.id, track=track)
@@ -286,7 +288,7 @@ class Music:
         position = utils.digital_time(player.position // 1000)
 
         if player.current.stream:
-            dur = 'LIVE'
+            duration = 'LIVE'
             embed.description = f'{position}/{duration}'
         else:
             progress_bar_length = 10
