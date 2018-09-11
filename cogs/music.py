@@ -122,7 +122,7 @@ class Music:
 
         player = ctx.player
 
-        if not volume:
+        if volume is None:
             return await ctx.send(f'Volume is set to {player.volume}%.')
 
         await player.set_volume(volume)
@@ -201,9 +201,8 @@ class Music:
 
         if not player.is_connected:
             await ctx.invoke(self.summon)
-            player = ctx.player
 
-            if player is None:
+            if not player.is_connected:
                 return
 
         else:
