@@ -44,7 +44,7 @@ class Music:
         if channel is None:
             return await ctx.send('No channel to join. Please either specify a valid channel or join one.')
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.is_connected:
             try:
@@ -73,7 +73,7 @@ class Music:
         This also clears the queue.
         """
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.is_connected:
             return await ctx.send('Not in a voice channel.')
@@ -92,7 +92,7 @@ class Music:
         are required to vote to skip for the song to be skipped.
         """
 
-        player = self.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.is_playing:
             return await ctx.send('Not playing.')
@@ -104,7 +104,7 @@ class Music:
     async def pause(self, ctx):
         """Pauses or resumes the currently playing song."""
 
-        player = self.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.is_playing:
             return await ctx.send('Not playing.')
@@ -120,7 +120,7 @@ class Music:
     async def volume(self, ctx, volume: int = None):
         """Sets the volume of the currently playing song."""
 
-        player = self.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not volume:
             return await ctx.send(f'Volume is set to {player.volume}%.')
@@ -132,7 +132,7 @@ class Music:
     async def seek(self, ctx, seconds: int):
         """Seeks the song forwards or back."""
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.is_playing:
             return await ctx.send('Not playing.')
@@ -149,7 +149,7 @@ class Music:
     async def remove(self, ctx, index: int):
         """Removes a song from the queue."""
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.queue:
             return await ctx.send('Nothing queued.')
@@ -165,7 +165,7 @@ class Music:
     async def clear(self, ctx):
         """Clears all songs from the queue."""
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if len(player.queue) == 0:
             return await ctx.send('Nothing queued.')
@@ -178,7 +178,7 @@ class Music:
     async def repeat(self, ctx):
         """Causes songs to repeat until disabled."""
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.is_playing:
             return await ctx.send('Nothing playing.')
@@ -197,11 +197,11 @@ class Music:
         This command automatically searches as well from YouTube.
         """
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.is_connected:
             await ctx.invoke(self.summon)
-            player = ctx.bot.lavalink.players.get(ctx.guild.id)
+            player = ctx.player
 
             if player is None:
                 return
@@ -271,7 +271,7 @@ class Music:
     async def playing(self, ctx):
         """Shows info about the currently playing song."""
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if not player.current:
             return await ctx.send('Not currently playing anything.')
@@ -308,7 +308,7 @@ class Music:
     async def queue(self, ctx):
         """Shows the current queue."""
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if len(player.queue) == 0:
             return await ctx.send('There\'s nothing in the queue! Why not queue something?')
@@ -326,7 +326,7 @@ class Music:
     async def shuffle(self, ctx):
         """Shuffles the current queue."""
 
-        player = ctx.bot.lavalink.players.get(ctx.guild.id)
+        player = ctx.player
 
         if len(player.queue) == 0:
             return await ctx.send('There\'s nothing in the queue! Why not queue something?')
