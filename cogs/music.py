@@ -37,11 +37,12 @@ class Music:
                 await channel.send(embed=embed)
         elif isinstance(event, lavalink.Events.QueueEndEvent):
             await asyncio.sleep(60)
-            await event.player.disconnect()
+            if len(event.player.queue) == 0:
+                await event.player.disconnect()
 
-            channel = self.bot.get_channel(event.player.fetch('channel'))
-            if channel:
-                await channel.send('Disconnected because of inactivity.')
+                channel = self.bot.get_channel(event.player.fetch('channel'))
+                if channel:
+                    await channel.send('Disconnected because of inactivity.')
 
     async def on_voice_state_update(self, member, before, after):
         player = self.bot.lavalink.players.get(member.guild.id)
