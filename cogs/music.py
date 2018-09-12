@@ -1,4 +1,5 @@
 import re
+import math
 import random
 import asyncio
 import itertools
@@ -14,6 +15,47 @@ import utils
 url_rx = re.compile('https?:\/\/(?:www\.)?.+')
 
 
+class Track:
+    def __init__(self, track, requester, channel):
+        self.track = track['track']
+        self.identifier = track['info']['identifier']
+        self.can_seek = track['info']['isSeekable']
+        self.author = track['info']['author']
+        self.duration = track['info']['length']
+        self.stream = track['info']['isStream']
+        self.title = track['info']['title']
+        self.uri = track['info']['uri']
+
+        self.thumbnail = f'https://img.youtube.com/vi/{self.identifier}/maxresdefault.jpg' if 'youtube' in self.uri else ''
+
+        self.requester = requester
+        self.channel = channel
+
+
+class Player(lavalink.DefaultPlayer):
+    def add(self, track):
+        self.queue.append(track)
+
+    async def play(self):
+        if self.repeat and self.current is not None:
+            self.repeat = False
+            self.queue.insert(0, self.current)
+
+        self.current = None
+        self.position = 0
+        self.paused = False
+
+        if not self.queue:
+            await self.stop()
+            await self._lavalink.dispatch_event(lavalink.QueueEndEvent(self))
+        else:
+            track = self.queue.pop(0)
+
+            self.current = track
+            await self._lavalink.ws.send(op='play', guildId=self.guild_id, track=track.track)
+            await self._lavalink.dispatch_event(lavalink.TrackStartEvent(self, track))
+
+
 class Music:
     def __init__(self, bot):
         self.bot = bot
@@ -24,17 +66,15 @@ class Music:
 
     async def track_hook(self, event):
         if isinstance(event, lavalink.Events.TrackStartEvent):
-            channel = self.bot.get_channel(event.player.fetch('channel'))
-            if channel:
-                embed = discord.Embed()
-                embed.url = event.track.uri
-                embed.title = f'Now playing {event.track.title}'
-                if not event.track.stream:
-                    embed.add_field(name='Duration', value=utils.human_time(event.track.duration // 1000))
-                embed.add_field(name='Requester', value=channel.guild.get_member(event.track.requester), inline=False)
-                embed.set_thumbnail(url=event.track.thumbnail)
+            embed = discord.Embed()
+            embed.url = event.track.uri
+            embed.title = f'Now playing {event.track.title}'
+            if not event.track.stream:
+                embed.add_field(name='Duration', value=utils.human_time(event.track.duration // 1000))
+            embed.add_field(name='Requester', value=event.track.requester, inline=False)
+            embed.set_thumbnail(url=event.track.thumbnail)
 
-                await channel.send(embed=embed)
+            await event.track.channel.send(embed=embed)
         elif isinstance(event, lavalink.Events.QueueEndEvent):
             await asyncio.sleep(60)
             if len(event.player.queue) == 0 and not event.player.is_playing:
@@ -211,7 +251,7 @@ class Music:
 
     @commands.command()
     async def repeat(self, ctx):
-        """Causes songs to repeat until disabled."""
+        """The currently playing wong will be repeated once."""
 
         player = ctx.player
 
@@ -220,7 +260,7 @@ class Music:
 
         player.repeat = not player.repeat
 
-        await ctx.send(f'Repeat {"enabled" if player.repeat else "disabled"}.')
+        await ctx.send(f'Currently playing song will {"" if player.repeat else "not "}repeat.')
 
     @commands.command()
     async def play(self, ctx, *, query):
@@ -280,7 +320,7 @@ class Music:
 
             for track in tracks:
                 duration += track['info']['length']
-                player.add(requester=ctx.author.id, track=track)
+                player.add(Track(track, ctx.author, ctx.channel))
 
             embed.title = f'Enqueued {results["playlistInfo"]["name"]}'
             embed.add_field(name='Tracks', value=len(tracks))
@@ -297,7 +337,7 @@ class Music:
                 embed.add_field(name='Duration', value=utils.human_time(track['info']['length'] // 1000))
             embed.add_field(name='Time until playing', value=time_until_playing)
             await ctx.send(embed=embed)
-            player.add(requester=ctx.author.id, track=track)
+            player.add(Track(track, ctx.author, ctx.channel))
 
         if not player.is_playing:
             await player.play()
@@ -317,7 +357,7 @@ class Music:
 
         embed.set_thumbnail(url=player.current.thumbnail)
 
-        embed.add_field(name='Requester', value=ctx.guild.get_member(player.current.requester))
+        embed.add_field(name='Requester', value=player.current.requester)
 
         position = utils.digital_time(player.position // 1000)
 
@@ -348,7 +388,7 @@ class Music:
         if len(player.queue) == 0:
             return await ctx.send('There\'s nothing in the queue! Why not queue something?')
 
-        songs = [f'{i}: [{track.title}]({track.uri})\nRequested by {ctx.guild.get_member(track.requester)}' for i, track in enumerate(player.queue, 1)]
+        songs = [f'{i}: [{track.title}]({track.uri})\nRequested by {track.requester}' for i, track in enumerate(player.queue, 1)]
 
         try:
             paginator = utils.EmbedPaginator(ctx, entries=songs, per_page=10)
@@ -369,7 +409,7 @@ class Music:
         entries = defaultdict(list)
 
         for entry in player.queue:
-            entries[entry.requester].append(entry)
+            entries[entry.requester.id].append(entry)
 
         for requester_entries in entries.values():
             entry_length = len(requester_entries)
