@@ -35,6 +35,39 @@ class Music:
                 embed.set_thumbnail(url=event.track.thumbnail)
 
                 await channel.send(embed=embed)
+        elif isinstance(event, lavalink.Events.QueueEndEvent):
+            await asyncio.sleep(60)
+            await event.player.disconnect()
+
+            channel = self.bot.get_channel(event.player.fetch('channel'))
+            if channel:
+                await channel.send('Disconnected because of inactivity.')
+
+    async def on_voice_state_update(self, member, before, after):
+        player = self.bot.lavalink.players.get(member.guild.id)
+
+        if not player.is_connected:
+            return
+
+        channel = player.connected_channel
+        before_channel = before.channel
+        after_channel = after.channel
+
+        if channel not in (before_channel, after_channel):
+            return
+
+        if len(channel.members) == 1:
+            await player.set_pause(True)
+            await asyncio.sleep(60)
+
+            if len(channel.members) == 1:
+                player.queue.clear()
+                await player.disconnect()
+                chan = self.bot.get_channel(player.fetch('channel'))
+                if chan:
+                    await chan.send('Disconnected because of inactivity.')
+        else:
+            await player.set_pause(False)
 
     @commands.command(aliases=['join'])
     async def summon(self, ctx, *, channel: discord.VoiceChannel = None):
