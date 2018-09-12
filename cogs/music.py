@@ -35,27 +35,29 @@ class Track:
 
 
 class Player(lavalink.DefaultPlayer):
-    def add(self, track):
-        self.queue.append(track)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.queue = utils.Playlist()
+
+    async def add(self, track):
+        await self.queue.put(track)
 
     async def play(self):
-        if self.repeat and self.current is not None:
-            self.repeat = False
-            self.queue.insert(0, self.current)
-
-        self.current = None
-        self.position = 0
-        self.paused = False
-
-        if not self.queue:
+        if len(self.queue) == 0:
+            self.current = None
             await self.stop()
             await self._lavalink.dispatch_event(lavalink.QueueEndEvent(self))
         else:
-            track = self.queue.pop(0)
+            track = self.current if self.repeat else await self.queue.get()
+            self.repeat = False
 
             self.current = track
             await self._lavalink.ws.send(op='play', guildId=self.guild_id, track=track.track)
             await self._lavalink.dispatch_event(lavalink.TrackStartEvent(self, track))
+
+        self.position = 0
+        self.paused = False
 
 
 class Music:
@@ -339,7 +341,7 @@ class Music:
                 embed.add_field(name='Duration', value=utils.human_time(track['info']['length'] // 1000))
             embed.add_field(name='Time until playing', value=time_until_playing)
             await ctx.send(embed=embed)
-            player.add(Track(track, ctx.author, ctx.channel))
+            await player.add(Track(track, ctx.author, ctx.channel))
 
         if not player.is_playing:
             await player.play()
@@ -408,28 +410,7 @@ class Music:
         if len(player.queue) == 0:
             return await ctx.send('There\'s nothing in the queue! Why not queue something?')
 
-        entries = defaultdict(list)
-
-        for entry in player.queue:
-            entries[entry.requester.id].append(entry)
-
-        for requester_entries in entries.values():
-            entry_length = len(requester_entries)
-
-            random.shuffle(requester_entries)
-
-            if entry_length == 1:
-                requester_entries[0].position = random.random()
-            else:
-                for i, entry in enumerate(requester_entries, 1):
-                    entry.position = 1 / (entry_length + 1) * i + random.random() / 10 - 0.05
-
-        shuffled = sorted(itertools.chain(*entries.values()), key=lambda x: x.position)
-
-        for entry in shuffled:
-            del entry.position
-
-        player.queue = shuffled
+        player.queue.shuffle()
 
         await ctx.send('The queue has been shuffled.')
 
