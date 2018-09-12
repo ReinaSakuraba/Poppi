@@ -17,14 +17,16 @@ url_rx = re.compile('https?:\/\/(?:www\.)?.+')
 
 class Track:
     def __init__(self, track, requester, channel):
+        info = track['info']
+
         self.track = track['track']
-        self.identifier = track['info']['identifier']
-        self.can_seek = track['info']['isSeekable']
-        self.author = track['info']['author']
-        self.duration = track['info']['length']
-        self.stream = track['info']['isStream']
-        self.title = track['info']['title']
-        self.uri = track['info']['uri']
+        self.identifier = info['identifier']
+        self.can_seek = info['isSeekable']
+        self.author = info['author']
+        self.duration = info['length']
+        self.stream = info['isStream']
+        self.title = info['title']
+        self.uri = info['uri']
 
         self.thumbnail = f'https://img.youtube.com/vi/{self.identifier}/maxresdefault.jpg' if 'youtube' in self.uri else ''
 
