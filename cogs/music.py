@@ -324,7 +324,7 @@ class Music:
 
             for track in tracks:
                 duration += track['info']['length']
-                player.add(Track(track, ctx.author, ctx.channel))
+                await player.add(Track(track, ctx.author, ctx.channel))
 
             embed.title = f'Enqueued {results["playlistInfo"]["name"]}'
             embed.add_field(name='Tracks', value=len(tracks))
