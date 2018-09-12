@@ -37,7 +37,7 @@ class Music:
                 await channel.send(embed=embed)
         elif isinstance(event, lavalink.Events.QueueEndEvent):
             await asyncio.sleep(60)
-            if len(event.player.queue) == 0:
+            if len(event.player.queue) == 0 and not event.player.is_playing:
                 await event.player.disconnect()
 
                 channel = self.bot.get_channel(event.player.fetch('channel'))
