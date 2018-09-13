@@ -81,7 +81,7 @@ class Music:
             await event.track.channel.send(embed=embed)
         elif isinstance(event, lavalink.Events.QueueEndEvent):
             await asyncio.sleep(60)
-            if len(event.player.queue) == 0 and not event.player.is_playing:
+            if len(event.player.queue) == 0 and not event.player.is_playing and event.player.is_connected:
                 await event.player.disconnect()
 
                 channel = self.bot.get_channel(event.player.fetch('channel'))
@@ -105,7 +105,7 @@ class Music:
             await player.set_pause(True)
             await asyncio.sleep(60)
 
-            if len(channel.members) == 1:
+            if len(channel.members) == 1 and player.is_connected:
                 player.queue.clear()
                 await player.disconnect()
                 chan = self.bot.get_channel(player.fetch('channel'))
