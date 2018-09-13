@@ -236,7 +236,8 @@ class Music:
         if index > len(player.queue) or index < 1:
             return await ctx.send(f'Index has to be greater than or equal to 1 and less than or equal to {len(player.queue)}.')
 
-        removed = player.queue.pop(index - 1)
+        removed = player.queue._queue[index - 1]
+        player.queue._queue.remove(removed)
 
         await ctx.send(f'Removed {removed.title} from the queue.')
 
