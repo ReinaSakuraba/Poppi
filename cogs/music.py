@@ -44,7 +44,7 @@ class Player(lavalink.DefaultPlayer):
         await self.queue.put(track)
 
     async def play(self):
-        if len(self.queue) == 0:
+        if len(self.queue) == 0 and not self.repeat:
             self.current = None
             await self.stop()
             await self._lavalink.dispatch_event(lavalink.QueueEndEvent(self))
