@@ -5310,6 +5310,15 @@ Shulk	Monado Speed
 Fiora	Warrior Valkyrie
 Fiora	Explosion of Energy
 Fiora	Unwavering Courage
+Corvin	Ensis Lucis
+Corvin	Alae Custodiae
+Corvin	Ictus
+Crossette	Pyrotechnics
+Crossette	Gathering Sparks
+Crossette	Alchemy Adept
+Elma	Overdrive
+Elma	Crisis Catalyst
+Elma	Background Noise
 \.
 
 
@@ -5421,6 +5430,14 @@ Shulk	Back Attack Up	100
 Fiora	Critical Up	75
 Fiora	Arts Plus	100
 Fiora	Recharge Boost	100
+Corvin	Recharge Boost	75
+Corvin	Accuracy Up	75
+Corvin	Debuff Cancel	75
+Crossette	Critical Up	75
+Crossette	Arts Plus	75
+Elma	Critical Up	75
+Elma	Recharge Boost	75
+Elma	Arts Plus	100
 \.
 
 
@@ -5712,6 +5729,12 @@ Shulk	Vegetables
 Shulk	Literature
 Fiora	Seafood
 Fiora	Cosmetics
+Corvin	Drinks
+Corvin	Board Games
+Crossette	Staple Foods
+Crossette	Desserts
+Elma	Seafood
+Elma	Arts
 \.
 
 
@@ -5820,6 +5843,12 @@ Shulk	40263
 Shulk	40174
 Fiora	40228
 Fiora	40039
+Corvin	40015
+Corvin	40033
+Crossette	40267
+Crossette	40273
+Elma	40213
+Elma	40205
 \.
 
 
@@ -5976,6 +6005,15 @@ Shulk	Ancient Wisdom
 Fiora	Ichthyology
 Fiora	Fortitude
 Fiora	Nopon Wisdom
+Corvin	Light Mastery
+Corvin	Forestry
+Corvin	Ancient Wisdom
+Crossette	Ardent Cooking
+Crossette	Agronomy
+Crossette	Fortitude
+Elma	Keen Eye
+Elma	Focus
+Elma	Lockpicking
 \.
 
 
@@ -7370,6 +7408,15 @@ Shulk	3	Monado Buster
 Fiora	1	Hidden Thorn
 Fiora	2	Power Smash
 Fiora	3	Lacerate
+Corvin	1	Fuga Daemonum
+Corvin	2	Lacerna Noctis
+Corvin	3	Ex Tenebris Lux
+Crossette	1	Go! Great Star!
+Crossette	2	Go! Shooting Star!
+Crossette	3	Go! Lucky Star!
+Elma	1	Sliding Slinger
+Elma	2	Hundred Shells
+Elma	3	Violent Streak
 \.
 
 
@@ -7425,6 +7472,9 @@ T-elos	Strength	15
 Poppibuster	Agility	15
 Shulk	Ether	20
 Fiora	Strength	15
+Corvin	Agility	20
+Crossette	Ether	20
+Elma	Ether	20
 \.
 
 
@@ -7484,6 +7534,9 @@ T-elos	Female	Humanoid	Greataxe	Dark	3	20	20	Caitlin Thorburn\nMariko Suzuki	MUG
 Poppibuster	4	Humanoid	Shield Hammer	Light	3	40	35	Arina Ii / Nicholas Rowe\nMisaki Kuno / Yasuyuki Kase	Masatsugu Saito	Buster Battalion
 Shulk	Male	Humanoid	Monado	Light	3	20	20	Adam Howden\nShintaro Asanuma	Kunihiko Tanaka	Monado Busters
 Fiora	Female	Humanoid	Knives	Wind	3	10	15	Carina Reeves\nEri Nakao	Kunihiko Tanaka	Colony Nine Irregulars
+Corvin	Male	Human	Uchigatana	Light	3	35	45	Freddie Fox\nAyumu Murase	Shingo Adachi	Hrafnagud
+Crossette	Female	Human	Bitball	Fire	3	25	25	Morgan Cambs\nNatsumi Takamori	Atto	Starmine Squad
+Elma	Female	Human	Dual Swords	Dark	3	30	25	Caitlin Glass\nHouko Kuwashima	Kunihiko Tanaka	Team Elma
 \.
 
 
@@ -27911,6 +27964,7 @@ Transport Mastery	Mercenary	Skillful at moving lots of goods quickly. Exclusivel
 Industry Mastery	Mercenary	Skillful at machine repairs and upkeep. Exclusively for Merc Missions.	1	1	3
 Production Mastery	Mercenary	Skillful at deftly making things. Exclusively for Merc Missions.	1	1	3
 Eye for Beauty	Rare	Looks for girls to add to her entourage. Skill exclusive to Sheba.	3	1	3
+Ardent Cooking	Rare	The power to prepare food like Pyra's. Skill exclusive to Crossette.	3	1	5
 \.
 
 
