@@ -230,7 +230,7 @@ class Music:
 
         player = ctx.player
 
-        if not player.queue:
+        if len(player.queue) == 0:
             return await ctx.send('Nothing queued.')
 
         if index > len(player.queue) or index < 1:
@@ -250,7 +250,7 @@ class Music:
         if len(player.queue) == 0:
             return await ctx.send('Nothing queued.')
 
-        player.queue = []
+        player.queue.clear()
 
         await ctx.send('Queue cleared.')
 
