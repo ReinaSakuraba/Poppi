@@ -128,11 +128,8 @@ class Tags:
 
         original = ctx.message
 
-        def check(msg):
-            return msg.author == ctx.author and ctx.channel == msg.channel
-
         try:
-            name = await ctx.bot.wait_for('message', timeout=30.0, check=check)
+            name = await ctx.bot.wait_for('message', timeout=30.0, check=lambda msg: msg.author == ctx.author and ctx.channel == msg.channel and msg.content)
         except asyncio.TimeoutError:
             return await ctx.send('You took too long. Goodbye.')
 
@@ -151,7 +148,7 @@ class Tags:
         await ctx.send(f'Neat. So the name is {name}. What about the tag\'s content?')
 
         try:
-            msg = await ctx.bot.wait_for('message', check=check, timeout=300.0)
+            msg = await ctx.bot.wait_for('message', check=lambda msg: msg.author == ctx.author and ctx.channel == msg.channel, timeout=300.0)
         except asyncio.TimeoutError:
             return await ctx.send('You took too long. Goodbye.')
 
