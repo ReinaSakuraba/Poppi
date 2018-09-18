@@ -3,7 +3,6 @@ asyncpg
 python-dateutil
 parsedatetime
 psutil
-youtube_dl
 pillow
 click
 yarl<1.2
