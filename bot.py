@@ -10,7 +10,7 @@ import lavalink
 
 import config
 import utils
-import cogs
+from cogs import music
 
 
 def _get_prefix(bot, message, *, mentions=True):
@@ -34,7 +34,7 @@ class Bot(commands.Bot):
         self.session = aiohttp.ClientSession(loop=self.loop)
         self.lavalink = lavalink.Client(bot=self, loop=self.loop, rest_port=config.lava_rest,
                                         ws_port=config.lava_ws, password=config.lava_pass,
-                                        player=cogs.music.Player)
+                                        player=music.Player)
         self.process = psutil.Process()
 
         for extension in self.startup_extensions:
