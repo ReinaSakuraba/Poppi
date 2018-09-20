@@ -15,6 +15,15 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
+-- Name: xeno1; Type: SCHEMA; Schema: -; Owner: poppi
+--
+
+CREATE SCHEMA xeno1;
+
+
+ALTER SCHEMA xeno1 OWNER TO poppi;
+
+--
 -- Name: xeno2; Type: SCHEMA; Schema: -; Owner: poppi
 --
 
@@ -92,6 +101,35 @@ END; $$;
 
 
 ALTER FUNCTION xenox.format_caption(caption text, ratio smallint, param_one integer, param_two integer) OWNER TO reina;
+
+--
+-- Name: skills; Type: VIEW; Schema: xeno1; Owner: poppi
+--
+
+CREATE VIEW xeno1.skills AS
+ SELECT skills.name,
+    replace(captions.help, '@'::text, ' '::text) AS description,
+        CASE
+            WHEN (skills.shape = 1) THEN 'Circle'::text
+            WHEN (skills.shape = 2) THEN 'Square'::text
+            WHEN (skills.shape = 3) THEN 'Hexagon'::text
+            WHEN (skills.shape = 4) THEN 'Star'::text
+            WHEN (skills.shape = 5) THEN 'Diamond'::text
+            ELSE NULL::text
+        END AS shape,
+    (skills."point_PP" * 100) AS sp_cost,
+    skills."point_SP" AS link_cost,
+        CASE
+            WHEN ((skills.val1 <> 0) AND (buffs.val_type = 3)) THEN (((buffs.name || ': '::text) || skills.val1) || '%'::text)
+            WHEN ((skills.val1 <> 0) AND (buffs.val_type = 1)) THEN ((buffs.name || ': '::text) || skills.val1)
+            ELSE buffs.name
+        END AS effect
+   FROM ((xb1."BTL_PSVskill" skills
+     JOIN xb1."MNU_PSskil" captions ON ((skills.row_id = captions.row_id)))
+     JOIN xb1."BTL_PSSlist" buffs ON ((skills.skill = buffs.row_id)));
+
+
+ALTER TABLE xeno1.skills OWNER TO poppi;
 
 SET default_tablespace = '';
 
