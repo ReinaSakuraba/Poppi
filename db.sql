@@ -15,6 +15,15 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
+-- Name: tgc; Type: SCHEMA; Schema: -; Owner: poppi
+--
+
+CREATE SCHEMA tgc;
+
+
+ALTER SCHEMA tgc OWNER TO poppi;
+
+--
 -- Name: xeno1; Type: SCHEMA; Schema: -; Owner: poppi
 --
 
@@ -101,6 +110,61 @@ END; $$;
 
 
 ALTER FUNCTION xenox.format_caption(caption text, ratio smallint, param_one integer, param_two integer) OWNER TO reina;
+
+--
+-- Name: crafts; Type: VIEW; Schema: tgc; Owner: poppi
+--
+
+CREATE VIEW tgc.crafts AS
+ SELECT driver_names.name AS driver,
+    shop_names.name,
+    camp_captions.name AS description
+   FROM (((((xb2."MNU_DriverInfo" pouch_create
+     JOIN xb2."CHR_Dr" drivers ON ((pouch_create.driver_id = drivers.row_id)))
+     JOIN xb2.chr_dr_ms driver_names ON ((drivers."Name" = driver_names.row_id)))
+     JOIN xb2."MNU_ShopList" shops ON ((pouch_create.shop_id = shops.row_id)))
+     JOIN xb2.fld_shopname shop_names ON ((shops."Name" = shop_names.row_id)))
+     JOIN xb2.menu_camp_ms camp_captions ON ((pouch_create.summary_msg = camp_captions.row_id)));
+
+
+ALTER TABLE tgc.crafts OWNER TO poppi;
+
+--
+-- Name: pouch_item_crafts; Type: VIEW; Schema: tgc; Owner: poppi
+--
+
+CREATE VIEW tgc.pouch_item_crafts AS
+ WITH create_items AS (
+         SELECT shop_names.name AS craft,
+            unnest(ARRAY[task1."Name", task2."Name", task3."Name", task4."Name", task5."Name", task6."Name", task7."Name", task8."Name", add_task1."Name", add_task2."Name", add_task3."Name", add_task4."Name", add_task5."Name", add_task6."Name", add_task7."Name", add_task8."Name"]) AS item
+           FROM (((((((((((((((((((xb2."MNU_DriverInfo" pouch_create
+             JOIN xb2."MNU_ShopList" shops ON ((pouch_create.shop_id = shops.row_id)))
+             JOIN xb2.fld_shopname shop_names ON ((shops."Name" = shop_names.row_id)))
+             JOIN xb2."MNU_ShopChange" shop_items ON ((shops."TableID" = shop_items.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" task1 ON ((shop_items."DefTaskSet1" = task1.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" task2 ON ((shop_items."DefTaskSet2" = task2.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" task3 ON ((shop_items."DefTaskSet3" = task3.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" task4 ON ((shop_items."DefTaskSet4" = task4.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" task5 ON ((shop_items."DefTaskSet5" = task5.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" task6 ON ((shop_items."DefTaskSet6" = task6.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" task7 ON ((shop_items."DefTaskSet7" = task7.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" task8 ON ((shop_items."DefTaskSet8" = task8.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" add_task1 ON ((shop_items."AddTaskSet1" = add_task1.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" add_task2 ON ((shop_items."AddTaskSet2" = add_task2.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" add_task3 ON ((shop_items."AddTaskSet3" = add_task3.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" add_task4 ON ((shop_items."AddTaskSet4" = add_task4.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" add_task5 ON ((shop_items."AddTaskSet5" = add_task5.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" add_task6 ON ((shop_items."AddTaskSet6" = add_task6.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" add_task7 ON ((shop_items."AddTaskSet7" = add_task7.row_id)))
+             LEFT JOIN xb2."MNU_ShopChangeTask" add_task8 ON ((shop_items."AddTaskSet8" = add_task8.row_id)))
+        )
+ SELECT create_items.craft,
+    item_names.name AS item
+   FROM (create_items
+     JOIN xb2.fld_shopchange item_names ON ((create_items.item = item_names.row_id)));
+
+
+ALTER TABLE tgc.pouch_item_crafts OWNER TO poppi;
 
 --
 -- Name: skills; Type: VIEW; Schema: xeno1; Owner: poppi
