@@ -136,32 +136,17 @@ ALTER TABLE tgc.crafts OWNER TO poppi;
 CREATE VIEW tgc.pouch_item_crafts AS
  WITH create_items AS (
          SELECT shop_names.name AS craft,
-            unnest(ARRAY[task1."Name", task2."Name", task3."Name", task4."Name", task5."Name", task6."Name", task7."Name", task8."Name", add_task1."Name", add_task2."Name", add_task3."Name", add_task4."Name", add_task5."Name", add_task6."Name", add_task7."Name", add_task8."Name"]) AS item
-           FROM (((((((((((((((((((xb2."MNU_DriverInfo" pouch_create
+            unnest(ARRAY[shop_items."DefTaskSet1", shop_items."DefTaskSet2", shop_items."DefTaskSet3", shop_items."DefTaskSet4", shop_items."DefTaskSet5", shop_items."DefTaskSet6", shop_items."DefTaskSet7", shop_items."DefTaskSet8", shop_items."AddTaskSet1", shop_items."AddTaskSet2", shop_items."AddTaskSet3", shop_items."AddTaskSet4", shop_items."AddTaskSet5", shop_items."AddTaskSet6", shop_items."AddTaskSet7", shop_items."AddTaskSet8"]) AS item
+           FROM (((xb2."MNU_DriverInfo" pouch_create
              JOIN xb2."MNU_ShopList" shops ON ((pouch_create.shop_id = shops.row_id)))
              JOIN xb2.fld_shopname shop_names ON ((shops."Name" = shop_names.row_id)))
              JOIN xb2."MNU_ShopChange" shop_items ON ((shops."TableID" = shop_items.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" task1 ON ((shop_items."DefTaskSet1" = task1.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" task2 ON ((shop_items."DefTaskSet2" = task2.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" task3 ON ((shop_items."DefTaskSet3" = task3.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" task4 ON ((shop_items."DefTaskSet4" = task4.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" task5 ON ((shop_items."DefTaskSet5" = task5.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" task6 ON ((shop_items."DefTaskSet6" = task6.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" task7 ON ((shop_items."DefTaskSet7" = task7.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" task8 ON ((shop_items."DefTaskSet8" = task8.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" add_task1 ON ((shop_items."AddTaskSet1" = add_task1.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" add_task2 ON ((shop_items."AddTaskSet2" = add_task2.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" add_task3 ON ((shop_items."AddTaskSet3" = add_task3.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" add_task4 ON ((shop_items."AddTaskSet4" = add_task4.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" add_task5 ON ((shop_items."AddTaskSet5" = add_task5.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" add_task6 ON ((shop_items."AddTaskSet6" = add_task6.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" add_task7 ON ((shop_items."AddTaskSet7" = add_task7.row_id)))
-             LEFT JOIN xb2."MNU_ShopChangeTask" add_task8 ON ((shop_items."AddTaskSet8" = add_task8.row_id)))
         )
  SELECT create_items.craft,
     item_names.name AS item
-   FROM (create_items
-     JOIN xb2.fld_shopchange item_names ON ((create_items.item = item_names.row_id)));
+   FROM ((create_items
+     JOIN xb2."MNU_ShopChangeTask" task ON ((create_items.item = task.row_id)))
+     JOIN xb2.fld_shopchange item_names ON ((task."Name" = item_names.row_id)));
 
 
 ALTER TABLE tgc.pouch_item_crafts OWNER TO poppi;
