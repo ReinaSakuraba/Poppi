@@ -47,6 +47,73 @@ class TheGoldenCountry:
 
         await self.search_entries(ctx, name, 'crafts', type_name='Craft')
 
+    @utils.group(invoke_without_command=True)
+    async def tgcpouch(self, ctx, *, name: str):
+        """Gives information for a The Golden Country pouch item."""
+
+        query = """
+                WITH pouch_captions AS (
+                    SELECT
+                        pouch_item,
+                        STRING_AGG(caption, E'\n') AS captions
+                    FROM tgc.pouch_item_effects
+                    GROUP BY pouch_item
+                ), pouch_materials AS (
+                    SELECT
+                        item,
+                        STRING_AGG(material || ' x' || amount, E'\n') AS materials
+                    FROM tgc.pouch_item_create_materials
+                    GROUP BY item
+                )
+                SELECT
+                    name,
+                    rarity,
+                    category,
+                    sell_price,
+                    time,
+                    trust,
+                    max_carry,
+                    captions,
+                    materials
+                FROM tgc.pouch_items
+                JOIN pouch_captions
+                ON name=pouch_item
+                JOIN pouch_materials
+                ON name=item
+                WHERE LOWER(name)=$1;
+                """
+
+        record = await ctx.pool.fetchrow(query, name.lower())
+
+        if record is None:
+            return await ctx.invoke(self.tgcpouch_search, name=name)
+
+        name, rarity, category, sell_price, time, trust, max_carry, captions, materials = record
+
+        embed = discord.Embed(title=name)
+        embed.add_field(name='Category', value=category)
+        embed.add_field(name='Rarity', value=rarity)
+        embed.add_field(name='Sell Price', value=sell_price)
+        embed.add_field(name='Max Carry', value=max_carry)
+        embed.add_field(name='Trust', value=trust)
+        embed.add_field(name='Effect Time', value=f'{time} minutes')
+        embed.add_field(name='Effects', value=captions, inline=False)
+        embed.add_field(name='Materials', value=materials, inline=False)
+
+        await ctx.send(embed=embed)
+
+    @tgcpouch.command(name='all')
+    async def tgcpouch_all(self, ctx: utils.Context):
+        """Lists all The Golden Country pouch items."""
+
+        await self.all_entries(ctx, 'pouch_items')
+
+    @tgcpouch.command(name='search')
+    async def tgcpouch_search(self, ctx: utils.Context, *, name: str):
+        """Searches for a The Golden Country pouch item."""
+
+        await self.search_entries(ctx, name, 'pouch_item', type_name='Pouch item')
+
     async def search_entries(self, ctx: utils.Context, name: str, *table_names: str, type_name: str):
         base_query = """
                      SELECT name, SIMILARITY(name, $1)
