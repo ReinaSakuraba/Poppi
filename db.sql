@@ -181,6 +181,38 @@ CREATE VIEW tgc.pouch_item_create_materials AS
 ALTER TABLE tgc.pouch_item_create_materials OWNER TO poppi;
 
 --
+-- Name: pouch_item_effects; Type: VIEW; Schema: tgc; Owner: poppi
+--
+
+CREATE VIEW tgc.pouch_item_effects AS
+ WITH create_tasks AS (
+         SELECT unnest(ARRAY[shop_items."DefTaskSet1", shop_items."DefTaskSet2", shop_items."DefTaskSet3", shop_items."DefTaskSet4", shop_items."DefTaskSet5", shop_items."DefTaskSet6", shop_items."DefTaskSet7", shop_items."DefTaskSet8", shop_items."AddTaskSet1", shop_items."AddTaskSet2", shop_items."AddTaskSet3", shop_items."AddTaskSet4", shop_items."AddTaskSet5", shop_items."AddTaskSet6", shop_items."AddTaskSet7", shop_items."AddTaskSet8"]) AS item
+           FROM ((xb2."MNU_DriverInfo" pouch_create
+             JOIN xb2."MNU_ShopList" shops ON ((pouch_create.shop_id = shops.row_id)))
+             JOIN xb2."MNU_ShopChange" shop_items ON ((shops."TableID" = shop_items.row_id)))
+        ), pouch_buffs AS (
+         SELECT item_names.name,
+            ARRAY[pouch_item_buffs."PBuff1", pouch_item_buffs."PBuff2", pouch_item_buffs."PBuff3"] AS captions,
+            ARRAY[pouch_item_buffs."PBuffParam1", pouch_item_buffs."PBuffParam2", pouch_item_buffs."PBuffParam3"] AS "values"
+           FROM (((((create_tasks
+             JOIN xb2."MNU_ShopChangeTask" task ON ((create_tasks.item = task.row_id)))
+             JOIN xb2.fld_shopchange item_names ON ((task."Name" = item_names.row_id)))
+             JOIN xb2.itm_favorite pouch_names ON ((item_names.name = pouch_names.name)))
+             JOIN xb2."ITM_FavoriteList" pouch_items ON ((pouch_items."Name" = pouch_names.row_id)))
+             JOIN xb2."BTL_PouchBuffSet" pouch_item_buffs ON ((pouch_items."Type" = pouch_item_buffs.row_id)))
+        )
+ SELECT pouch_buffs.name AS pouch_item,
+    replace(replace(pouch_captions.name, '[ML:PouchParam ]'::text, ((a.value)::numeric(4,1))::text), '
+'::text, ' '::text) AS caption
+   FROM (((pouch_buffs
+     JOIN LATERAL UNNEST(pouch_buffs.captions, pouch_buffs."values") a(caption, value) ON (true))
+     JOIN xb2."BTL_PouchBuff" pouch_buff ON ((a.caption = pouch_buff.row_id)))
+     JOIN xb2.btl_pouchbuff_ms pouch_captions ON ((pouch_buff."Name" = pouch_captions.row_id)));
+
+
+ALTER TABLE tgc.pouch_item_effects OWNER TO poppi;
+
+--
 -- Name: pouch_items; Type: VIEW; Schema: tgc; Owner: poppi
 --
 
