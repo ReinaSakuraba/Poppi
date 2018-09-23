@@ -152,6 +152,81 @@ CREATE VIEW tgc.pouch_item_crafts AS
 ALTER TABLE tgc.pouch_item_crafts OWNER TO poppi;
 
 --
+-- Name: pouch_item_create_materials; Type: VIEW; Schema: tgc; Owner: poppi
+--
+
+CREATE VIEW tgc.pouch_item_create_materials AS
+ WITH create_tasks AS (
+         SELECT unnest(ARRAY[shop_items."DefTaskSet1", shop_items."DefTaskSet2", shop_items."DefTaskSet3", shop_items."DefTaskSet4", shop_items."DefTaskSet5", shop_items."DefTaskSet6", shop_items."DefTaskSet7", shop_items."DefTaskSet8", shop_items."AddTaskSet1", shop_items."AddTaskSet2", shop_items."AddTaskSet3", shop_items."AddTaskSet4", shop_items."AddTaskSet5", shop_items."AddTaskSet6", shop_items."AddTaskSet7", shop_items."AddTaskSet8"]) AS item
+           FROM ((xb2."MNU_DriverInfo" pouch_create
+             JOIN xb2."MNU_ShopList" shops ON ((pouch_create.shop_id = shops.row_id)))
+             JOIN xb2."MNU_ShopChange" shop_items ON ((shops."TableID" = shop_items.row_id)))
+        ), create_items AS (
+         SELECT item_names_1.name AS item,
+            ARRAY[task."SetItem1", task."SetItem2", task."SetItem3", task."SetItem4", task."SetItem5"] AS mats,
+            ARRAY[task."SetNumber1", task."SetNumber2", task."SetNumber3", task."SetNumber4", task."SetNumber5"] AS amounts
+           FROM ((create_tasks
+             JOIN xb2."MNU_ShopChangeTask" task ON ((create_tasks.item = task.row_id)))
+             JOIN xb2.fld_shopchange item_names_1 ON ((task."Name" = item_names_1.row_id)))
+        )
+ SELECT create_items.item,
+    item_names.name AS material,
+    a.amount
+   FROM (((create_items
+     JOIN LATERAL UNNEST(create_items.mats, create_items.amounts) a(mat, amount) ON (true))
+     JOIN xb2."ITM_CollectionList" collection_items ON ((a.mat = collection_items.row_id)))
+     JOIN xb2.itm_collection item_names ON ((collection_items."Name" = item_names.row_id)));
+
+
+ALTER TABLE tgc.pouch_item_create_materials OWNER TO poppi;
+
+--
+-- Name: pouch_items; Type: VIEW; Schema: tgc; Owner: poppi
+--
+
+CREATE VIEW tgc.pouch_items AS
+ WITH create_tasks AS (
+         SELECT unnest(ARRAY[shop_items."DefTaskSet1", shop_items."DefTaskSet2", shop_items."DefTaskSet3", shop_items."DefTaskSet4", shop_items."DefTaskSet5", shop_items."DefTaskSet6", shop_items."DefTaskSet7", shop_items."DefTaskSet8", shop_items."AddTaskSet1", shop_items."AddTaskSet2", shop_items."AddTaskSet3", shop_items."AddTaskSet4", shop_items."AddTaskSet5", shop_items."AddTaskSet6", shop_items."AddTaskSet7", shop_items."AddTaskSet8"]) AS item
+           FROM ((xb2."MNU_DriverInfo" pouch_create
+             JOIN xb2."MNU_ShopList" shops ON ((pouch_create.shop_id = shops.row_id)))
+             JOIN xb2."MNU_ShopChange" shop_items ON ((shops."TableID" = shop_items.row_id)))
+        )
+ SELECT item_names.name,
+        CASE
+            WHEN (pouch_items."Category" = 12) THEN 'Staple Foods'::text
+            WHEN (pouch_items."Category" = 13) THEN 'Vegetables'::text
+            WHEN (pouch_items."Category" = 14) THEN 'Meat'::text
+            WHEN (pouch_items."Category" = 15) THEN 'Seafood'::text
+            WHEN (pouch_items."Category" = 16) THEN 'Desserts'::text
+            WHEN (pouch_items."Category" = 17) THEN 'Drinks'::text
+            WHEN (pouch_items."Category" = 18) THEN 'Instruments'::text
+            WHEN (pouch_items."Category" = 19) THEN 'Arts'::text
+            WHEN (pouch_items."Category" = 20) THEN 'Literature'::text
+            WHEN (pouch_items."Category" = 21) THEN 'Board Games'::text
+            WHEN (pouch_items."Category" = 22) THEN 'Cosmetics'::text
+            WHEN (pouch_items."Category" = 23) THEN 'Textiles'::text
+            ELSE NULL::text
+        END AS category,
+    pouch_items."Price" AS sell_price,
+        CASE
+            WHEN (pouch_items."Rarity" = 0) THEN 'Common'::text
+            WHEN (pouch_items."Rarity" = 1) THEN 'Rare'::text
+            WHEN (pouch_items."Rarity" = 2) THEN 'Legendary'::text
+            ELSE NULL::text
+        END AS rarity,
+    pouch_items."ValueMax" AS max_carry,
+    pouch_items."Time" AS "time",
+    pouch_items."TrustPoint" AS trust
+   FROM ((((create_tasks
+     JOIN xb2."MNU_ShopChangeTask" task ON ((create_tasks.item = task.row_id)))
+     JOIN xb2.fld_shopchange item_names ON ((task."Name" = item_names.row_id)))
+     JOIN xb2.itm_favorite pouch_names ON ((item_names.name = pouch_names.name)))
+     JOIN xb2."ITM_FavoriteList" pouch_items ON ((pouch_items."Name" = pouch_names.row_id)));
+
+
+ALTER TABLE tgc.pouch_items OWNER TO poppi;
+
+--
 -- Name: skills; Type: VIEW; Schema: xeno1; Owner: poppi
 --
 
