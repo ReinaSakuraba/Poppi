@@ -18,7 +18,7 @@ class Mod:
             return False
 
         perms = ctx.author.permissions_in(ctx.channel)
-        if perms.manage_guild:
+        if perms.manage_messages:
             return True
 
         if ctx.guild:
