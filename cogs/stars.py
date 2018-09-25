@@ -344,7 +344,27 @@ class Stars:
         async with self.lock:
             await method(channel, payload.message_id, payload.user_id)
 
+    async def can_star(self, channel, message_id, user_id):
+        if self.bot.owner.id == user_id:
+            return True
+
+        is_globally_plonked = await self.bot.get_cog('Mod').is_plonked(self.bot.pool, user_id)
+
+        if is_globally_plonked:
+            return False
+
+        perms = channel.guild.get_member(user_id).permissions_in(channel)
+        if perms.manage_messages:
+            return True
+
+        is_plonked = await self.bot.get_cog('Mod').is_plonked(self.bot.pool, user_id, channel.guild.id)
+
+        return not is_plonked
+
     async def star_message(self, channel, message_id, user_id):
+        if not await self.can_star(channel, message_id, user_id):
+            return
+
         query = "SELECT * FROM starboards WHERE guild_id=$1;"
         starboard = await self.bot.pool.fetchrow(query, channel.guild.id)
 
