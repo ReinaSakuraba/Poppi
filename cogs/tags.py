@@ -1,5 +1,6 @@
 import re
 import asyncio
+from unittest.mock import Mock
 
 import asyncpg
 import discord
@@ -10,8 +11,9 @@ from .prefix import valid_prefix
 
 
 class Tags:
-    def __init__(self, pool):
-        self.pool = pool
+    def __init__(self, bot):
+        self.bot = bot
+        self.pool = bot.pool
         self.config = utils.Config('tag_prefixes.json')
 
     async def __error(self, ctx, exception):
@@ -528,6 +530,16 @@ class Tags:
         if not view.skip_string(prefix):
             return
 
+        mock_ctx = Mock()
+        mock_ctx.bot = self.bot
+        mock_ctx.pool = self.pool
+        mock_ctx.guild = message.guild
+        mock_ctx.channel = message.channel
+        mock_ctx.author = message.author
+
+        if not await self.bot.get_cog('Mod')._Mod__global_check(mock_ctx):
+            return
+
         tag_name = view.read_rest().strip()
         query = 'SELECT id, content FROM tags WHERE location_id=$1 AND LOWER(name)=$2;'
         row = await self.pool.fetchrow(query, message.guild.id, tag_name.lower())
@@ -548,4 +560,4 @@ class Tags:
             await self.pool.execute(query, message.guild.id, message.channel.id, message.author.id, prefix, 'tag')
 
 def setup(bot):
-    bot.add_cog(Tags(bot.pool))
+    bot.add_cog(Tags(bot))
