@@ -1149,6 +1149,25 @@ CREATE TABLE xenox.skills (
 ALTER TABLE xenox.skills OWNER TO poppi;
 
 --
+-- Name: soul_voices; Type: VIEW; Schema: xenox; Owner: poppi
+--
+
+CREATE VIEW xenox.soul_voices AS
+ SELECT voice_names.name,
+    voice_captions.name AS trigger,
+    (soul_data."DispTime" / 30) AS uptime,
+    (soul_data."CoolTime" / 30) AS cooldown,
+    soul_data."Ratio" AS trigger_chance,
+    soul_voices."Priority" AS priority
+   FROM (((xbx.btl_soultrigger soul_voices
+     JOIN xbx.btl_soulvoicesystem voice_names ON ((soul_voices."Name" = voice_names.row_id)))
+     JOIN xbx.btl_soulvoicesystem voice_captions ON ((soul_voices."Caption" = voice_captions.row_id)))
+     JOIN xbx.btl_souldata soul_data ON ((soul_voices."Voice1" = soul_data.row_id)));
+
+
+ALTER TABLE xenox.soul_voices OWNER TO poppi;
+
+--
 -- Data for Name: accessories; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
