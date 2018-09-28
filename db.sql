@@ -1168,6 +1168,36 @@ CREATE VIEW xenox.soul_voices AS
 ALTER TABLE xenox.soul_voices OWNER TO poppi;
 
 --
+-- Name: voice_effects; Type: VIEW; Schema: xenox; Owner: poppi
+--
+
+CREATE VIEW xenox.voice_effects AS
+ WITH voices AS (
+         SELECT voice_names.name,
+            unnest(ARRAY[soul_voices."Voice1", soul_voices."Voice2", soul_voices."Voice3"]) AS voice_effect
+           FROM (xbx.btl_soultrigger soul_voices
+             JOIN xbx.btl_soulvoicesystem voice_names ON ((soul_voices."Name" = voice_names.row_id)))
+        )
+ SELECT voices.name,
+        CASE
+            WHEN (voice_data."SoulCode" = 1) THEN 'Melee'::text
+            WHEN (voice_data."SoulCode" = 2) THEN 'Ranged'::text
+            WHEN (voice_data."SoulCode" = 3) THEN 'Debuff'::text
+            WHEN (voice_data."SoulCode" = 5) THEN 'Buff'::text
+            WHEN (voice_data."SoulCode" = 6) THEN 'Aura'::text
+            WHEN (voice_data."SoulCode" = 7) THEN 'Overdrive'::text
+            ELSE NULL::text
+        END AS art_type,
+    voice_captions.name AS effect
+   FROM (((voices
+     JOIN xbx.btl_souldata voice_data ON ((voices.voice_effect = voice_data.row_id)))
+     JOIN xbx.btl_soularts voice_effects ON ((voice_data."ArtsJob" = voice_effects.row_id)))
+     JOIN xbx.btl_soularts_ms voice_captions ON ((voice_effects."Name" = voice_captions.row_id)));
+
+
+ALTER TABLE xenox.voice_effects OWNER TO poppi;
+
+--
 -- Data for Name: accessories; Type: TABLE DATA; Schema: xeno2; Owner: poppi
 --
 
