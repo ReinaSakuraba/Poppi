@@ -490,6 +490,41 @@ class XenobladeX:
 
         await ctx.send(embed=embed)
 
+    @utils.group(invoke_without_command=True)
+    async def sv(self, ctx, *, name: str.lower):
+        """Gives you information about a Soul Voice."""
+
+        query = """
+                SELECT
+                    soul_voices.name,
+                    trigger,
+                    uptime || ' Seconds',
+                    cooldown || ' Seconds',
+                    trigger_chance || '%',
+                    priority,
+                    STRING_AGG(art_type || ': ' || effect, E'\n')
+                FROM xenox.soul_voices
+                JOIN xenox.voice_effects
+                ON soul_voices.name=voice_effects.name
+                WHERE LOWER(soul_voices.name)=$1
+                GROUP BY soul_voices.name, trigger, uptime, cooldown, trigger_chance, priority;
+                """
+        record = await ctx.pool.fetchrow(query, name)
+
+        if record is None:
+            return await self.show_possibilities(ctx, 'soul_voices', name)
+
+        name, trigger, uptime, cooldown, trigger_chance, priority, effects = record
+
+        embed = discord.Embed(title=name, description=trigger)
+        embed.add_field(name='Uptime', value=uptime)
+        embed.add_field(name='Cooldown', value=cooldown)
+        embed.add_field(name='Trigger Chance', value=trigger_chance)
+        embed.add_field(name='Priority', value=priority)
+        embed.add_field(name='Effects', value=effects, inline=False)
+
+        await ctx.send(embed=embed)
+
     async def show_possibilities(self, ctx, table_name, name):
         query = f"""
                 SELECT
