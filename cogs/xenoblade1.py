@@ -48,6 +48,11 @@ class Xenoblade:
 
         await utils.search_entries(ctx, 'xeno1', name, 'skills', type_name='Skill')
 
+    @xc1skill.error
+    async def xc1skill_error(self, ctx: utils.Context, exception: Exception):
+        if isinstance(exception, commands.MissingRequiredArgument):
+            await ctx.send('Missing skill name.')
+
 
 def setup(bot):
     bot.add_cog(Xenoblade())
