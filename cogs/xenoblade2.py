@@ -131,13 +131,13 @@ class Xenoblade2:
     async def xc2art_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 arts."""
 
-        await self.all_entries(ctx, 'arts')
+        await utils.all_entries(ctx, 'xeno2', 'arts')
 
     @xc2art.command(name='search')
     async def xc2art_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 art."""
 
-        await self.search_entries(ctx, name, 'arts', type_name='Art')
+        await utils.search_entries(ctx, 'xeno2', name, 'arts', type_name='Art')
 
     @xc2art.error
     @xc2art_search.error
@@ -263,13 +263,13 @@ class Xenoblade2:
     async def xc2special_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 specials."""
 
-        await self.all_entries(ctx, 'specials')
+        await utils.all_entries(ctx, 'xeno2', 'specials')
 
     @xc2special.command(name='search')
     async def xc2special_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 special."""
 
-        await self.search_entries(ctx, name, 'specials', type_name='Special')
+        await utils.search_entries(ctx, 'xeno2', name, 'specials', type_name='Special')
 
     @xc2special.error
     @xc2special_search.error
@@ -393,13 +393,13 @@ class Xenoblade2:
     async def xc2blade_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 blades."""
 
-        await self.all_entries(ctx, 'blades')
+        await utils.all_entries(ctx, 'xeno2', 'blades')
 
     @xc2blade.command(name='search')
     async def xc2blade_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 blade."""
 
-        await self.search_entries(ctx, name, 'blades', type_name='Blade')
+        await utils.search_entries(ctx, 'xeno2', name, 'blades', type_name='Blade')
 
     @xc2blade.error
     @xc2blade_search.error
@@ -516,13 +516,13 @@ class Xenoblade2:
     async def xc2skill_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 skills."""
 
-        await self.all_entries(ctx, 'skills', 'battle_skills', 'field_skills')
+        await utils.all_entries(ctx, 'xeno2', 'skills', 'battle_skills', 'field_skills')
 
     @xc2skill.command(name='search')
     async def xc2skill_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 skill."""
 
-        await self.search_entries(ctx, name, 'skills', 'battle_skills', 'field_skills', type_name='Skill')
+        await utils.search_entries(ctx, 'xeno2', name, 'skills', 'battle_skills', 'field_skills', type_name='Skill')
 
     @xc2skill.error
     @xc2skill_search.error
@@ -619,13 +619,13 @@ class Xenoblade2:
     async def xc2weapon_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 weapons."""
 
-        await self.all_entries(ctx, 'weapons')
+        await utils.all_entries(ctx, 'xeno2', 'weapons')
 
     @xc2weapon.command(name='search')
     async def xc2weapon_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 weapon."""
 
-        await self.search_entries(ctx, name, 'weapons', type_name='Weapon')
+        await utils.search_entries(ctx, 'xeno2', name, 'weapons', type_name='Weapon')
 
     @xc2weapon.error
     @xc2weapon_search.error
@@ -674,13 +674,13 @@ class Xenoblade2:
     async def xc2chip_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 core chips."""
 
-        await self.all_entries(ctx, 'chips')
+        await utils.all_entries(ctx, 'xeno2', 'chips')
 
     @xc2chip.command(name='search')
     async def xc2chip_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 core chip."""
 
-        await self.search_entries(ctx, name, 'chips', type_name='Chip')
+        await utils.search_entries(ctx, 'xeno2', name, 'chips', type_name='Chip')
 
     @xc2chip.error
     @xc2chip_search.error
@@ -732,13 +732,13 @@ class Xenoblade2:
     async def xc2core_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 aux cores."""
 
-        await self.all_entries(ctx, 'cores')
+        await utils.all_entries(ctx, 'xeno2', 'cores')
 
     @xc2core.command(name='search')
     async def xc2core_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 aux core."""
 
-        await self.search_entries(ctx, name, 'cores', type_name='Core')
+        await utils.search_entries(ctx, 'xeno2', name, 'cores', type_name='Core')
 
     @xc2core.error
     @xc2core_search.error
@@ -779,13 +779,13 @@ class Xenoblade2:
     async def xc2accessory_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 accessories."""
 
-        await self.all_entries(ctx, 'accessories')
+        await utils.all_entries(ctx, 'xeno2', 'accessories')
 
     @xc2accessory.command(name='search')
     async def xc2accessory_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 accessory."""
 
-        await self.search_entries(ctx, name, 'accessories', type_name='Accessory')
+        await utils.search_entries(ctx, 'xeno2', name, 'accessories', type_name='Accessory')
 
     @xc2accessory.error
     @xc2accessory_search.error
@@ -845,13 +845,13 @@ class Xenoblade2:
     async def xc2pouch_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 pouch items."""
 
-        await self.all_entries(ctx, 'pouch_items')
+        await utils.all_entries(ctx, 'xeno2', 'pouch_items')
 
     @xc2pouch.command(name='search')
     async def xc2pouch_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 pouch item."""
 
-        await self.search_entries(ctx, name, 'pouch_items', type_name='Pouch item')
+        await utils.search_entries(ctx, name, 'xeno2', 'pouch_items', type_name='Pouch item')
 
     @xc2pouch.error
     @xc2pouch_search.error
@@ -904,13 +904,13 @@ class Xenoblade2:
     async def xc2class_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 classes."""
 
-        await self.all_entries(ctx, 'classes')
+        await utils.all_entries(ctx, 'xeno2', 'classes')
 
     @xc2class.command(name='search')
     async def xc2class_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 class."""
 
-        await self.search_entries(ctx, name, 'classes', type_name='Class')
+        await utils.search_entries(ctx, 'xeno2', name, 'classes', type_name='Class')
 
     @xc2class.error
     @xc2class_search.error
@@ -961,13 +961,13 @@ class Xenoblade2:
     async def xc2collection_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 collection points."""
 
-        await self.all_entries(ctx, 'collection_points')
+        await utils.all_entries(ctx, 'xeno2', 'collection_points')
 
     @xc2collection.command(name='search')
     async def xc2collection_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade Chronicles 2 collection point."""
 
-        await self.search_entries(ctx, name, 'collection_points', type_name='Collection point')
+        await utils.search_entries(ctx, 'xeno2', name, 'collection_points', type_name='Collection point')
 
     @xc2collection.error
     @xc2collection_search.error
@@ -1012,60 +1012,6 @@ class Xenoblade2:
         render = table.render()
 
         await ctx.send(f'```\n{render}\n```')
-
-    async def search_entries(self, ctx: utils.Context, name: str, *table_names: str, type_name: str):
-        base_query = """
-                     SELECT name, SIMILARITY(name, $1)
-                     FROM xeno2.{0}
-                     WHERE name % $1
-                     """
-
-        formatted_query = "UNION".join(base_query.format(table_name) for table_name in table_names)
-
-        query = f"""
-                SELECT DISTINCT name, similarity
-                FROM (
-                    {formatted_query}
-                ) AS a
-                ORDER BY similarity DESC;
-                """
-
-        results = [f'{index}: {name}' for index, (name, _) in enumerate(await ctx.pool.fetch(query, name), 1)]
-
-        if not results:
-            return await ctx.send(f'{type_name} not found.')
-
-        try:
-            paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
-            paginator.embed.colour = 0x738bd7
-            await paginator.paginate()
-        except Exception as e:
-            await ctx.send(e)
-
-    async def all_entries(self, ctx: utils.Context, *table_names: str):
-        base_query = """
-                     SELECT name
-                     FROM xeno2.{0}
-                     """
-
-        formatted_query = "UNION".join(base_query.format(table_name) for table_name in table_names)
-
-        query = f"""
-                SELECT DISTINCT name
-                FROM (
-                    {formatted_query}
-                ) AS a
-                ORDER BY name;
-                """
-
-        results = [f'{index}: {name}' for index, (name,) in enumerate(await ctx.pool.fetch(query), 1)]
-
-        try:
-            paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
-            paginator.embed.colour = 0x738bd7
-            await paginator.paginate()
-        except Exception as e:
-            await ctx.send(e)
 
     @commands.command()
     async def say(self, ctx: utils.Context):
