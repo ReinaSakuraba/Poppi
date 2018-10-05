@@ -615,7 +615,7 @@ class Xenoblade2:
 
         await ctx.send(file=discord.File(f'xeno2/weapons/{filename}_0.png', f'{name}.png'))
 
-    @xc2weapon.command(name='all')
+    @xc2weapon.command(name='all', ignore_extra=False)
     async def xc2weapon_all(self, ctx: utils.Context):
         """Lists all Xenoblade Chronicles 2 weapons."""
 
@@ -628,10 +628,13 @@ class Xenoblade2:
         await utils.search_entries(ctx, 'xeno2', name, 'weapons', type_name='Weapon')
 
     @xc2weapon.error
+    @xc2weapon_all.error
     @xc2weapon_search.error
     async def xc2weapon_error(self, ctx: utils.Context, error: Exception):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Missing weapon name.')
+        elif isinstance(error, commands.TooManyArguments):
+            await ctx.invoke(self.xc2weapon, name=ctx.message.content[len(ctx.prefix) + 10:])
 
     @utils.group(invoke_without_command=True)
     async def xc2chip(self, ctx: utils.Context, *, name: str):
