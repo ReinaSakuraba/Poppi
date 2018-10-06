@@ -47,6 +47,8 @@ async def {0}_search_error(ctx, error):
 
 
 class XenobladeX:
+    """Commands for Xenoblade Chronicles X info."""
+
     classes = [
         'Drifter', 'Deulist', 'Bastion Warrior', 'Full Metal Jaguar',
         'Astral Crusader', 'Mastermind', 'Galactic Knight'

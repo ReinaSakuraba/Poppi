@@ -8,6 +8,8 @@ import utils
 
 
 class Xenoblade2:
+    """Commands for Xenoblade Chronicles 2 info."""
+
     @utils.group(invoke_without_command=True)
     async def xc2art(self, ctx: utils.Context, *, name: str):
         """Gives information for a Xenoblade Chronicles 2 art."""

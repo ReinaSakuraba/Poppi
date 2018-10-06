@@ -5,6 +5,8 @@ import utils
 
 
 class Xenoblade:
+    """Commands for Xenoblade Chronicles info."""
+
     @utils.group(invoke_without_command=True)
     async def xc1skill(self, ctx, *, name: str):
         """Gives information for a Xenoblade Chronicles skill."""
