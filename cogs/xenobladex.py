@@ -124,7 +124,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await self.show_possibilities(ctx, 'skills', name)
+            return await ctx.invoke(self.skill_search, name=name)
 
         name, effect, learned = record
 
@@ -138,13 +138,13 @@ class XenobladeX:
     async def skill_all(self, ctx):
         """Lists all skills."""
 
-        await self.all_entries(ctx, 'skills')
+        await utils.all_entries(ctx, 'xenox', 'skills')
 
     @skill.command(name='search')
     async def skill_search(self, ctx, *, name: str):
         """Searches for a skill."""
 
-        await self.search_entries(ctx, 'skills', name)
+        await utils.search_entries(ctx, 'xenox', name, 'skills', type_name='Skill')
 
     @skill.error
     @skill_search.error
@@ -264,7 +264,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await self.show_possibilities(ctx, 'augments', name)
+            return await ctx.invoke(self.augment_search, name=name)
 
         name, effect, price, rarity, miranium, created, upgrade = record
 
@@ -287,13 +287,13 @@ class XenobladeX:
     async def augment_all(self, ctx):
         """Lists all augments."""
 
-        await self.all_entries(ctx, 'augments')
+        await utils.all_entries(ctx, 'xenox', 'augments')
 
     @augment.command(name='search')
     async def augment_search(self, ctx, *, name: str):
         """Searches for an augment."""
 
-        await self.search_entries(ctx, 'augments', name)
+        await utils.search_entries(ctx, 'xenox', name, 'augments', type_name='Augment')
 
     @augment.error
     @augment_search.error
@@ -403,7 +403,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await self.show_possibilities(ctx, 'classes', name)
+            return await utils.search_entries(ctx, 'xenox', 'classes', name)
 
         hp = self.calc_stats(250, 10000, level, record['hp'])
         tp = 3000
@@ -452,7 +452,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await self.show_possibilities(ctx, 'classes', name)
+            return await utils.search_entries(ctx, 'xenox', name, 'classes', type_name='Class')
 
         name, melee, ranged, slots, max_level, hp, macc, racc, matk, ratk, eva, pot = record
         stats = f'HP: {hp}%\n' \
@@ -514,7 +514,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await self.show_possibilities(ctx, 'soul_voices', name)
+            return await utils.search_entries(ctx, 'xenox', name, 'soul_voices', type_name='Soul Voice')
 
         name, trigger, uptime, cooldown, trigger_chance, priority, effects = record
 
@@ -526,72 +526,6 @@ class XenobladeX:
         embed.add_field(name='Effects', value=effects, inline=False)
 
         await ctx.send(embed=embed)
-
-    async def show_possibilities(self, ctx, table_name, name):
-        query = f"""
-                SELECT
-                    ARRAY_AGG(name ORDER BY SIMILARITY(name, $1) DESC)
-                FROM xenox.{table_name}
-                WHERE name % $1;
-                """
-
-        possibilities = await ctx.pool.fetchval(query, name)
-
-        strip = 2 if table_name.endswith('es') else 1
-        type_name = table_name[:-strip].title()
-
-        if not possibilities:
-            return await ctx.send(f'{type_name} not found.')
-
-        results = [f'{index}: {name}' for index, name in enumerate(possibilities, 1)]
-
-        try:
-            paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
-            paginator.embed.colour = 0x738bd7
-            await paginator.paginate()
-        except Exception as e:
-            await ctx.send(e)
-
-    async def search_entries(self, ctx, table_name, name):
-        query = f"""
-                SELECT ARRAY(
-                    SELECT name
-                    FROM xenox.{table_name}
-                    WHERE name % $1
-                    ORDER BY SIMILARITY(name, $1) DESC
-                );
-                """
-
-        results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query, name), 1)]
-
-        if not results:
-            strip = 2 if table_name.endswith('es') else 1
-            type_name = table_name[:-strip].title()
-            return await ctx.send(f'{type_name} not found.')
-
-        try:
-            paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
-            paginator.embed.colour = 0x738bd7
-            await paginator.paginate()
-        except Exception as e:
-            await ctx.send(e)
-
-    async def all_entries(self, ctx, table_name):
-        query = f"""
-                SELECT ARRAY(
-                    SELECT name
-                    FROM xenox.{table_name}
-                );
-                """
-
-        results = [f'{index}: {row}' for index, row in enumerate(await ctx.pool.fetchval(query), 1)]
-
-        try:
-            paginator = utils.EmbedPaginator(ctx, entries=results, per_page=15)
-            paginator.embed.colour = 0x738bd7
-            await paginator.paginate()
-        except Exception as e:
-            await ctx.send(e)
 
 
 def setup(bot):
