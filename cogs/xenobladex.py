@@ -425,7 +425,7 @@ class XenobladeX:
 
         await ctx.send(fmt)
 
-    @commands.command(name='class')
+    @utils.group(name='class', invoke_without_command=True)
     async def _class(self, ctx, *, name: str.lower):
         """Shows information for a class."""
 
@@ -452,7 +452,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await utils.search_entries(ctx, 'xenox', name, 'classes', type_name='Class')
+            return await ctx.invoke(self._class_search, name=name)
 
         name, melee, ranged, slots, max_level, hp, macc, racc, matk, ratk, eva, pot = record
         stats = f'HP: {hp}%\n' \
@@ -491,6 +491,24 @@ class XenobladeX:
         embed.add_field(name='Stats', value=stats)
 
         await ctx.send(embed=embed)
+
+    @_class.command(name='all')
+    async def _class_all(self, ctx):
+        """Lists all classes."""
+
+        await utils.all_entries(ctx, 'xenox', 'classes')
+
+    @_class.command(name='search')
+    async def _class_search(self, ctx, *, name: str):
+        """Searches for a class."""
+
+        await utils.search_entries(ctx, 'xenox', name, 'classes', type_name='Class')
+
+    @_class.error
+    @_class_search.error
+    async def _class_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing class name.')
 
     @utils.group(invoke_without_command=True)
     async def sv(self, ctx, *, name: str.lower):
