@@ -545,6 +545,24 @@ class XenobladeX:
 
         await ctx.send(embed=embed)
 
+    @sv.command(name='all')
+    async def sv_all(self, ctx):
+        """Lists all Soul Voices."""
+
+        await utils.all_entries(ctx, 'xenox', 'soul_voices')
+
+    @sv.command(name='search')
+    async def sv_search(self, ctx, *, name: str):
+        """Searches for a Soul Voice."""
+
+        await utils.search_entries(ctx, 'xenox', name, 'soul_voices', type_name='Soul Voice')
+
+    @sv.error
+    @sv_search.error
+    async def sv_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('Missing Soul Voice name.')
+
 
 def setup(bot):
     bot.add_cog(XenobladeX())
