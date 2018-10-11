@@ -379,6 +379,8 @@ class XenobladeX:
 
     @commands.command()
     async def loadout(self, ctx):
+        """Gives you a random build to use."""
+
         fmt = f'Class: {random.choice(self.classes)}\n' \
               f'Melee Weapon: {random.choice(self.melee_weapons)}\n' \
               f'Ranged Weapon: {random.choice(self.ranged_weapons)}\n' \
