@@ -405,7 +405,7 @@ class XenobladeX:
         record = await ctx.pool.fetchrow(query, name)
 
         if record is None:
-            return await utils.search_entries(ctx, 'xenox', 'classes', name)
+            return await ctx.invoke(self._class_search, name=name)
 
         hp = self.calc_stats(250, 10000, level, record['hp'])
         tp = 3000
