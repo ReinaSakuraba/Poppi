@@ -106,53 +106,6 @@ class XenobladeX:
             raise RuntimeError(f'{entry_type} not found. Did you mean...\n{possible_entries}')
 
     @utils.group(invoke_without_command=True)
-    async def skill(self, ctx, *, name: str.lower):
-        """Gives you information about a skill."""
-
-        query = """
-                SELECT
-                    name,
-                    effect,
-                    STRING_AGG(class || ' ' || level, E'\n') AS learned
-                FROM xenox.skills
-                JOIN xenox.class_skills
-                ON skills.name = class_skills.skill
-                WHERE LOWER(name)=$1
-                GROUP BY name;
-                """
-
-        record = await ctx.pool.fetchrow(query, name)
-
-        if record is None:
-            return await ctx.invoke(self.skill_search, name=name)
-
-        name, effect, learned = record
-
-        embed = discord.Embed(title=name, description=effect)
-        embed.set_thumbnail(url='attachment://skill.png')
-        embed.add_field(name='Learned', value=learned)
-
-        await ctx.send(file=discord.File(f'xenox/skills/{name}.png', 'skill.png'), embed=embed)
-
-    @skill.command(name='all')
-    async def skill_all(self, ctx):
-        """Lists all skills."""
-
-        await utils.all_entries(ctx, 'xenox', 'skills')
-
-    @skill.command(name='search')
-    async def skill_search(self, ctx, *, name: str):
-        """Searches for a skill."""
-
-        await utils.search_entries(ctx, 'xenox', name, 'skills', type_name='Skill')
-
-    @skill.error
-    @skill_search.error
-    async def skill_error(self, ctx, error):
-        if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send('Missing skill name.')
-
-    @utils.group(invoke_without_command=True)
     async def art(self, ctx, *, art: str):
         """Gives you information about an art."""
         try:
