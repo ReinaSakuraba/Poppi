@@ -216,6 +216,7 @@ class Xenoblade:
         await self.search_entries(ctx, name, *thing[invoked_with.lower()], type_name='Skill')
 
     @skill.error
+    @skill_search.error
     async def skill_error(self, ctx: utils.Context, exception: Exception):
         if isinstance(exception, commands.MissingRequiredArgument):
             await ctx.send('Missing skill name.')
