@@ -159,6 +159,11 @@ class Xenoblade:
     async def skill(self, ctx, *, name: str):
         """Gives information for a Xenoblade skill."""
 
+        view = commands.view.StringView(ctx.message.content)
+        view.skip_string(ctx.prefix)
+
+        invoked_with = commands.view.quoted_word(view).strip()
+
         thing = {
             'skill': (XC1Skill, XCXSkill, XC2Skill),
             'xc1skill': (XC1Skill,),
@@ -168,7 +173,7 @@ class Xenoblade:
 
         embeds = []
 
-        for ass in thing[ctx.invoked_with.lower()]:
+        for ass in thing[invoked_with.lower()]:
             record = await ctx.pool.fetchrow(ass.query, name.lower())
             if record:
                 embeds.append(ass.embed(record))
@@ -179,7 +184,7 @@ class Xenoblade:
         for embed in embeds:
             await ctx.send(embed=embed)
 
-    @skill.command(name='all')
+    @skill.command(name='all', ignore_extra=False)
     async def skill_all(self, ctx):
         """Gives all Xenoblade skills."""
 
@@ -217,9 +222,19 @@ class Xenoblade:
 
     @skill.error
     @skill_search.error
+    @skill_all.error
     async def skill_error(self, ctx: utils.Context, exception: Exception):
         if isinstance(exception, commands.MissingRequiredArgument):
             await ctx.send('Missing skill name.')
+        elif isinstance(exception, commands.TooManyArguments):
+            view = commands.view.StringView(ctx.message.content)
+            view.skip_string(ctx.prefix)
+
+            invoked_with = commands.view.quoted_word(view)
+            view.skip_ws()
+            name = view.read_rest()
+
+            await ctx.invoke(self.skill, name=name)
 
     async def search_entries(self, ctx: utils.Context, name: str, *table_names, type_name: str):
         base_query = """
