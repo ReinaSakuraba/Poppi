@@ -156,7 +156,7 @@ class XC2Skill:
 
 class Xenoblade:
     @utils.group(aliases=['xc1skill', 'xcxskill', 'xc2skill'], invoke_without_command=True)
-    async def skill(self, ctx, *, name: str):
+    async def skill(self, ctx: utils.Context, *, name: str):
         """Gives information for a Xenoblade skill."""
 
         view = commands.view.StringView(ctx.message.content)
@@ -185,7 +185,7 @@ class Xenoblade:
             await ctx.send(embed=embed)
 
     @skill.command(name='all', ignore_extra=False)
-    async def skill_all(self, ctx):
+    async def skill_all(self, ctx: utils.Context):
         """Gives all Xenoblade skills."""
 
         view = commands.view.StringView(ctx.message.content)
@@ -203,7 +203,7 @@ class Xenoblade:
         await self.all_entries(ctx, *thing[invoked_with.lower()])
 
     @skill.command(name='search')
-    async def skill_search(self, ctx, *, name: str):
+    async def skill_search(self, ctx: utils.Context, *, name: str):
         """Searches for a Xenoblade skill."""
 
         view = commands.view.StringView(ctx.message.content)
