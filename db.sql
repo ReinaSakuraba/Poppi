@@ -35326,22 +35326,22 @@ Yelv	Subterfuge	12
 Yelv	Astral Purge	13
 Yelv	Novalibrium	14
 Yelv	Galactic Cataclysm	15
-Boze	Spiral Horn	1
-Boze	Shrapnel	1
-Boze	Arcing Horn	2
-Boze	Eagle Eye	3
-Boze	Raijin	4
-Boze	Vortex	5
-Boze	First Down	6
-Boze	Overwhelm	7
-Boze	Hair Trigger	8
-Boze	Sidewinder	9
-Boze	Ghost Sniper	10
-Boze	Slayonet	11
-Boze	Hawkeye	12
-Boze	Speed Demon	13
-Boze	Intercept	14
-Boze	Trident Buster	15
+Bozé	Spiral Horn	1
+Bozé	Shrapnel	1
+Bozé	Arcing Horn	2
+Bozé	Eagle Eye	3
+Bozé	Raijin	4
+Bozé	Vortex	5
+Bozé	First Down	6
+Bozé	Overwhelm	7
+Bozé	Hair Trigger	8
+Bozé	Sidewinder	9
+Bozé	Ghost Sniper	10
+Bozé	Slayonet	11
+Bozé	Hawkeye	12
+Bozé	Speed Demon	13
+Bozé	Intercept	14
+Bozé	Trident Buster	15
 Phog	Back Slash	1
 Phog	Sliding Slinger	1
 Phog	Upper Hand	2
@@ -35669,14 +35669,14 @@ Yelv	Knight's Soul	14
 Yelv	Supreme Sword	15
 Yelv	Secondary Accelerator	16
 Yelv	Synchrony	17
-Boze	Master Edge	7
-Boze	Killshot	9
-Boze	Electric Guard	11
-Boze	Electric Boost	13
-Boze	Knock 'n' Shock	14
-Boze	Quick Reload	15
-Boze	Conductive Strike	16
-Boze	TP Overdrive	17
+Bozé	Master Edge	7
+Bozé	Killshot	9
+Bozé	Electric Guard	11
+Bozé	Electric Boost	13
+Bozé	Knock 'n' Shock	14
+Bozé	Quick Reload	15
+Bozé	Conductive Strike	16
+Bozé	TP Overdrive	17
 Phog	Agile Gunslinger	7
 Phog	Steady Hand	9
 Phog	Background Noise	11
@@ -35781,7 +35781,7 @@ Gwin	Longsword	Assault Rifle	3	20
 Frye	Longsword	Gatling Gun	3	20
 Doug	Photon Saber	Raygun	4	20
 Yelv	Photon Saber	Raygun	3	20
-Boze	Javelin	Sniper Rifle	3	20
+Bozé	Javelin	Sniper Rifle	3	20
 Phog	Dual Swords	Dual Guns	3	20
 Elma	Dual Swords	Dual Guns	4	20
 Lin	Shield	Gatling Gun	3	20
