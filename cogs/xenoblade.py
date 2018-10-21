@@ -164,7 +164,7 @@ class Xenoblade:
 
         invoked_with = commands.view.quoted_word(view).strip()
 
-        thing = {
+        subcommands = {
             'skill': (XC1Skill, XCXSkill, XC2Skill),
             'xc1skill': (XC1Skill,),
             'xcxskill': (XCXSkill,),
@@ -173,10 +173,10 @@ class Xenoblade:
 
         embeds = []
 
-        for ass in thing[invoked_with.lower()]:
-            record = await ctx.pool.fetchrow(ass.query, name.lower())
+        for response in subcommands[invoked_with.lower()]:
+            record = await ctx.pool.fetchrow(response.query, name.lower())
             if record:
-                embeds.append(ass.embed(record))
+                embeds.append(response.embed(record))
 
         if len(embeds) == 0:
             return await ctx.invoke(self.skill_search, name=name)
@@ -193,14 +193,14 @@ class Xenoblade:
 
         invoked_with = commands.view.quoted_word(view).strip()
 
-        thing = {
+        subcommands = {
             'skill': ('xeno1.skills', 'xenox.skills', 'xeno2.skills', 'xeno2.battle_skills', 'xeno2.field_skills'),
             'xc1skill': ('xeno1.skills',),
             'xcxskill': ('xenox.skills',),
             'xc2skill': ('xeno2.skills', 'xeno2.battle_skills', 'xeno2.field_skills')
         }
 
-        await self.all_entries(ctx, *thing[invoked_with.lower()])
+        await self.all_entries(ctx, *subcommands[invoked_with.lower()])
 
     @skill.command(name='search')
     async def skill_search(self, ctx: utils.Context, *, name: str):
@@ -211,14 +211,14 @@ class Xenoblade:
 
         invoked_with = commands.view.quoted_word(view).strip()
 
-        thing = {
+        subcommands = {
             'skill': ('xeno1.skills', 'xenox.skills', 'xeno2.skills', 'xeno2.battle_skills', 'xeno2.field_skills'),
             'xc1skill': ('xeno1.skills',),
             'xcxskill': ('xenox.skills',),
             'xc2skill': ('xeno2.skills', 'xeno2.battle_skills', 'xeno2.field_skills')
         }
 
-        await self.search_entries(ctx, name, *thing[invoked_with.lower()], type_name='Skill')
+        await self.search_entries(ctx, name, *subcommands[invoked_with.lower()], type_name='Skill')
 
     @skill.error
     @skill_search.error
