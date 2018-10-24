@@ -25,7 +25,7 @@ def _get_prefix(bot, message, *, mentions=True):
 class Bot(commands.Bot):
     def __init__(self, *, pool, **kwargs):
         super().__init__(command_prefix=_get_prefix, description=config.description,
-                          pm_help=None, game=discord.Game(name=config.game), **kwargs)
+                         pm_help=None, game=discord.Game(name=config.game), **kwargs)
 
         self.all_commands = utils.CaseInsensitiveDict(self.all_commands)
 
