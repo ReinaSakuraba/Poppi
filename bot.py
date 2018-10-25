@@ -53,11 +53,8 @@ class Bot(commands.Bot):
         info = await self.application_info()
         self.owner_id = info.owner.id
 
-        feedback_channel = self.get_channel(config.feedback_channel)
-        if feedback_channel is None:
+        if self.feedback_channel is None:
             self.remove_command('feedback')
-        else:
-            self.feedback_channel = feedback_channel
 
     async def set_prefixes(self, guild_id, prefixes):
         if len(prefixes) > 10:
@@ -86,6 +83,10 @@ class Bot(commands.Bot):
     @property
     def startup_extensions(self):
         return [f'cogs.{x.stem}' for x in Path('cogs').glob('*.py')]
+
+    @property
+    def feedback_channel(self):
+        return self.get_channel(config.feedback_channel)
 
     @property
     def config(self):
