@@ -1,8 +1,10 @@
 import datetime
 import traceback
 from pathlib import Path
+from typing import List
 
 import psutil
+import asyncpg
 import aiohttp
 import discord
 from discord.ext import commands
@@ -13,17 +15,8 @@ import utils
 from cogs import music
 
 
-def _get_prefix(bot, message, *, mentions=True):
-    prefixes = commands.when_mentioned(bot, message) if mentions else []
-    if message.guild is None:
-        prefixes.append(config.prefix)
-    else:
-        prefixes.extend(bot.prefixes.get(message.guild.id, [config.prefix]))
-    return prefixes
-
-
 class Bot(commands.Bot):
-    def __init__(self, *, pool, **kwargs):
+    def __init__(self, *, pool: asyncpg.pool.Pool, **kwargs):
         super().__init__(command_prefix=_get_prefix, description=config.description,
                          pm_help=None, game=discord.Game(name=config.game), **kwargs)
 
@@ -56,36 +49,36 @@ class Bot(commands.Bot):
         if self.feedback_channel is None:
             self.remove_command('feedback')
 
-    async def set_prefixes(self, guild_id, prefixes):
+    async def set_prefixes(self, guild_id: int, prefixes: List[str]):
         if len(prefixes) > 10:
             raise RuntimeError('Cannot have more than 10 custom prefixes.')
 
         await self.prefixes.put(guild_id, sorted(set(prefixes), reverse=True))
 
     @property
-    def owner(self):
+    def owner(self) -> discord.User:
         return self.get_user(self.owner_id)
 
     @property
-    def uptime(self):
+    def uptime(self) -> str:
         return utils.human_timedelta(datetime.datetime.utcnow(), source=self.start_time)
 
     @property
-    def memory_usage(self):
+    def memory_usage(self) -> str:
         memory_usage = self.process.memory_full_info().uss / 1024 ** 2
         return f'{memory_usage:.2f} MiB'
 
     @property
-    def cpu_usage(self):
+    def cpu_usage(self) -> str:
         cpu_usage = self.process.cpu_percent() / psutil.cpu_count()
         return f'{cpu_usage}%'
 
     @property
-    def startup_extensions(self):
+    def startup_extensions(self) -> List[str]:
         return [f'cogs.{x.stem}' for x in Path('cogs').glob('*.py')]
 
     @property
-    def feedback_channel(self):
+    def feedback_channel(self) -> discord.TextChannel:
         return self.get_channel(config.feedback_channel)
 
     @property
@@ -100,14 +93,14 @@ class Bot(commands.Bot):
         print(f'Logged in as {self.user}')
         print('---------')
 
-    async def on_message(self, message):
+    async def on_message(self, message: discord.Message):
         if message.author.bot:
             return
 
         ctx = await self.get_context(message, cls=utils.Context)
         await self.invoke(ctx)
 
-    async def on_command(self, ctx):
+    async def on_command(self, ctx: utils.Context):
         guild_id = ctx.guild.id if ctx.guild else None
         query = """
                 INSERT INTO commands (
@@ -119,3 +112,12 @@ class Bot(commands.Bot):
                 ) VALUES ($1, $2, $3, $4, $5);
                 """
         await self.pool.execute(query, guild_id, ctx.channel.id, ctx.author.id, ctx.prefix, ctx.command.qualified_name)
+
+
+def _get_prefix(bot: Bot, message: discord.Message, *, mentions: bool = True) -> List[str]:
+    prefixes = commands.when_mentioned(bot, message) if mentions else []
+    if message.guild is None:
+        prefixes.append(config.prefix)
+    else:
+        prefixes.extend(bot.prefixes.get(message.guild.id, [config.prefix]))
+    return prefixes
