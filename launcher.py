@@ -111,7 +111,7 @@ async def create_db(pool):
             ) VALUES
                 ('Common Core Crystal', 500),
                 ('Rare Core Crystal', 5000),
-                ('Legendary Core Crystal'. 30000),
+                ('Legendary Core Crystal', 30000),
                 ('Sheba''s Core Crystal', 500000)
             ON CONFLICT (item, price)
             DO UPDATE SET price = excluded.price;
