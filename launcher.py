@@ -7,7 +7,7 @@ from bot import Bot
 import config
 
 
-async def create_db(pool):
+async def create_db(pool: asyncpg.pool.Pool):
     query = """
             CREATE TABLE IF NOT EXISTS commands (
                 guild_id BIGINT,
