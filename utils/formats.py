@@ -1,4 +1,5 @@
 import datetime
+from typing import List
 
 from dateutil.relativedelta import relativedelta
 
@@ -6,11 +7,11 @@ from dateutil.relativedelta import relativedelta
 __all__ = ('plural', 'human_join', 'human_time', 'human_timedelta', 'digital_time', 'TabularData')
 
 
-def plural(name, value, *, ending='s'):
+def plural(name: str, value: int, *, ending: str = 's') -> str:
     return f'{value} {name}{ending * (value != 1)}'
 
 
-def human_join(seq, *, delim=', ', final='and', oxford=True):
+def human_join(seq: List[str], *, delim: str = ', ', final: str = 'and', oxford: bool = True) -> str:
     if not seq:
         return ''
 
@@ -19,7 +20,7 @@ def human_join(seq, *, delim=', ', final='and', oxford=True):
     return f' {final} '.join(seq)
 
 
-def human_time(seconds):
+def human_time(seconds: int) -> str:
     seconds = int(seconds)
     if seconds == 0:
         return '0 seconds'
@@ -47,13 +48,13 @@ def human_time(seconds):
     return formatted_time + ' ago' * is_negative
 
 
-def human_timedelta(dt, *, source=None):
+def human_timedelta(dt: datetime.datetime, *, source: datetime.datetime = None) -> str:
     now = source or datetime.datetime.utcnow()
     delta = dt - now
     return human_time(delta.total_seconds())
 
 
-def digital_time(seconds):
+def digital_time(seconds: int) -> str:
     return f'{seconds//3600:02}:' * (seconds >= 3600) + f'{seconds%3600//60:02}:{seconds%60:02}'
 
 
@@ -63,11 +64,11 @@ class TabularData:
         self._columns = []
         self._rows = []
 
-    def set_columns(self, columns):
+    def set_columns(self, columns: List[str]):
         self._columns = columns
         self._widths = [len(c) + 2 for c in columns]
 
-    def add_row(self, row):
+    def add_row(self, row: List[str]):
         rows = [str(r) for r in row]
         self._rows.append(rows)
         for index, element in enumerate(rows):
@@ -75,11 +76,11 @@ class TabularData:
             if width > self._widths[index]:
                 self._widths[index] = width
 
-    def add_rows(self, rows):
+    def add_rows(self, rows: List[List[str]]):
         for row in rows:
             self.add_row(row)
 
-    def render(self):
+    def render(self) -> str:
         sep = '+'.join('-' * w for w in self._widths)
         sep = f'+{sep}+'
 
