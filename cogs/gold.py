@@ -265,7 +265,10 @@ class Gold:
             'rare': 'Rare Core Crystal',
             'legendary core crystal': 'Legendary Core Crystal',
             'legendary core': 'Legendary Core Crystal',
-            'legendary': 'Legendary Core Crystal'
+            'legendary': 'Legendary Core Crystal',
+            'sheba\'s core crystal': 'Sheba\'s Core Crystal',
+            'sheba\'s core': 'Sheba\'s Core Crystal',
+            'sheba': 'Sheba\'s Core Crystal',
         }
 
         try:
@@ -278,6 +281,26 @@ class Gold:
 
         if not amount:
             return await ctx.send('You do not have that Core Crystal.')
+
+        if core == 'Sheba\'s Core Crystal':
+            query = "SELECT 1 FROM pulled_blades WHERE user_id=$1 AND blade='Sheba'"
+            has_sheba = await ctx.pool.fetchval(query, ctx.author.id)
+            if has_sheba:
+                return await ctx.send('You\'ve already pulled Sheba.')
+
+            query = """
+                    INSERT INTO pulled_blades (
+                        user_id,
+                        blade,
+                        common
+                    ) VALUES ($1, $2, $3);
+                    """
+            await ctx.pool.execute(query, ctx.author.id, 'Sheba', False)
+
+            query = "UPDATE inventory SET amount=amount-1 WHERE user_id=$1 AND item=$2;"
+            await ctx.pool.execute(query, ctx.author.id, core)
+
+            await ctx.send('You pulled Sheba!')
 
         core_multipliers = {
             'Common Core Crystal': 1,
