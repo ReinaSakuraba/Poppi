@@ -2,7 +2,7 @@ import random
 import asyncio
 import itertools
 from collections import defaultdict, deque
-from typing import List, Set
+from typing import Set
 
 import discord
 
