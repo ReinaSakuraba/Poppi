@@ -2,6 +2,9 @@ import random
 import asyncio
 import itertools
 from collections import defaultdict, deque
+from typing import List, Set
+
+import discord
 
 
 class Playlist(asyncio.Queue):
@@ -42,9 +45,9 @@ class Playlist(asyncio.Queue):
         self._queue.clear()
 
     @property
-    def duration(self):
+    def duration(self) -> int:
         return sum(entry.length for entry in self)
 
     @property
-    def requesters(self):
+    def requesters(self) -> Set[discord.Member]:
         return {entry.requester for entry in self}
