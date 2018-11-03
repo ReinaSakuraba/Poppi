@@ -559,5 +559,6 @@ class Tags:
                     """
             await self.pool.execute(query, message.guild.id, message.channel.id, message.author.id, prefix, 'tag')
 
+
 def setup(bot):
     bot.add_cog(Tags(bot))
