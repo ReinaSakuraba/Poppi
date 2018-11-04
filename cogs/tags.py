@@ -409,6 +409,8 @@ class Tags:
 
     @tag.group(name='stats', invoke_without_command=True)
     async def tag_stats(self, ctx, *, member: discord.Member = None):
+        """Gives tag statistics for a member."""
+
         member = member or ctx.author
 
         embed = discord.Embed(color=member.color)
@@ -452,6 +454,8 @@ class Tags:
 
     @tag_stats.command(name='server')
     async def tag_stats_server(self, ctx):
+        """Gives tag statistics for the server."""
+
         embed = discord.Embed(title='Server Tag Stats')
 
         query = 'SELECT COUNT(*) FROM tags WHERE location_id=$1;'
