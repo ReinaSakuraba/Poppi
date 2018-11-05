@@ -50,7 +50,6 @@ class Tags:
         names = '\n'.join(possible_tags)
         raise RuntimeError(f'Tag not found. Did you mean...\n{names}')
 
-
     @utils.group(invoke_without_command=True)
     async def tag(self, ctx, *, tag: utils.TagName):
         """Allows you to tag text for later retrieval.
@@ -81,7 +80,6 @@ class Tags:
         except RuntimeError as e:
             return await ctx.send(e)
 
-
         transformations = {
             re.escape(c): '\\' + c
             for c in ('*', '`', '_', '~', '\\', '<')
@@ -110,6 +108,8 @@ class Tags:
                 ) VALUES ($1, $2, $3, $4);
                 """
 
+        content = await commands.clean_content().convert(ctx, content)
+
         try:
             await ctx.pool.execute(query, name, content, ctx.author.id, ctx.guild.id)
         except asyncpg.UniqueViolationError:
@@ -128,12 +128,15 @@ class Tags:
 
         await ctx.send('Hello. What would you like the tag name to be?')
 
-        original = ctx.message
+        def check(msg):
+            return msg.author == ctx.author and msg.channel == ctx.channel
 
         try:
-            name = await ctx.bot.wait_for('message', timeout=30.0, check=lambda msg: msg.author == ctx.author and ctx.channel == msg.channel and msg.content)
+            name = await ctx.bot.wait_for('message', timeout=30.0, check=check)
         except asyncio.TimeoutError:
             return await ctx.send('You took too long. Goodbye.')
+
+        ctx.message = name
 
         try:
             name = await utils.TagName().convert(ctx, name.content)
@@ -144,20 +147,21 @@ class Tags:
         exists = await ctx.pool.fetchval(query, ctx.guild.id, name.lower())
 
         if exists:
-            msg = f'Sorry. A tag with that name already exists. Redo the command "{ctx.prefix}tag make" to retry.'
-            return await ctx.send(msg)
+            fmt = f'Sorry. A tag with that name already exists. Redo the command "{ctx.prefix}tag make" to retry.'
+            return await ctx.send(fmt)
 
         await ctx.send(f'Neat. So the name is {name}. What about the tag\'s content?')
 
         try:
-            msg = await ctx.bot.wait_for('message', check=lambda msg: msg.author == ctx.author and ctx.channel == msg.channel, timeout=300.0)
+            message = await ctx.bot.wait_for('message', timeout=300.0, check=check)
         except asyncio.TimeoutError:
             return await ctx.send('You took too long. Goodbye.')
 
-        content = await commands.clean_content().convert(ctx, msg.content)
+        ctx.message = message
+        content = await commands.clean_content().convert(ctx, message.content)
 
-        if msg.attachments:
-            content = f'{content}\n{msg.attachments[0].url}'
+        if len(message.attachments) != 0:
+            content = f'{content}\n{" ".join(attachment.url for attachment in message.attachments)}'
 
         await ctx.invoke(self.tag_create, name=name, content=content)
 
