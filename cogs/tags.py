@@ -90,7 +90,9 @@ class Tags:
             return transformations.get(re.escape(obj.group(0)), '')
 
         pattern = re.compile('|'.join(transformations.keys()))
-        await ctx.send(pattern.sub(replace, row['content']))
+
+        converted = await utils.CleanContent().convert(ctx, pattern.sub(replace, row['content']))
+        await ctx.send(converted)
 
     @tag.command(name='create')
     async def tag_create(self, ctx, name: utils.TagName, *,
