@@ -552,7 +552,9 @@ class Tags:
         query = 'SELECT id, content FROM tags WHERE location_id=$1 AND LOWER(name)=$2;'
         row = await self.pool.fetchrow(query, message.guild.id, tag_name.lower())
         if row:
-            await message.channel.send(row['content'])
+            converted = await utils.CleanContent().convert(mock_ctx, row['content'])
+            await message.channel.send(converted)
+
             query = 'UPDATE tags SET uses = uses + 1 WHERE id=$1'
             await self.pool.execute(query, row['id'])
 
