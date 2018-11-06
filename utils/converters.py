@@ -9,7 +9,7 @@ from discord.ext import commands
 from . import CaseInsensitiveDict
 
 
-__all__ = ('Group', 'group', 'EmojiConverter', 'Emoji', 'CommandConverter', 'Query', 'TagName', 'Time')
+__all__ = ('Group', 'group', 'EmojiConverter', 'Emoji', 'CommandConverter', 'Query', 'CleanContent', 'TagName', 'Time')
 
 
 class Group(commands.Group):
@@ -109,7 +109,60 @@ class Query(commands.Converter):
         return params
 
 
-class TagName(commands.clean_content):
+class CleanContent(commands.Converter):
+    mass_re = re.compile(r'@(everyone|here)')
+    user_re = re.compile(r'<@!?([0-9]+)>')
+    role_re = re.compile(r'<@&([0-9]+)>')
+    chan_re = re.compile(r'<#([0-9]+)>')
+
+    def __init__(self, *, transform_members=True, use_nicknames=True, transform_roles=True, transform_channels=False,
+                 transform_everyone=True):
+        self.use_nicknames = use_nicknames
+        self.transform_members = transform_members
+        self.transform_roles = transform_roles
+        self.transform_channels = transform_channels
+        self.transform_everyone = transform_everyone
+
+    async def convert(self, ctx, argument):
+        def resolve_member(match):
+            member_id = int(match.group(1))
+            member = ctx.guild.get_member(member_id)
+            if member is None:
+                return '@deleted-user'
+
+            return f'@{member.display_name}' if self.use_nicknames else f'@{member.name}'
+
+        def resolve_role(match):
+            role_id = int(match.group(1))
+            role = ctx.guild.get_role(role_id)
+            return f'@{role.name}' if role else '@deleted-role'
+
+        def resolve_channel(match):
+            channel_id = int(match.group(1))
+            channel = ctx.guild.get_channel(channel_id)
+            return f'#{channel.name}' if channel else '#deleted-channel'
+
+        tranformations = (
+            (self.user_re, resolve_member, self.transform_members),
+            (self.role_re, resolve_role, self.transform_roles),
+            (self.chan_re, resolve_channel, self.transform_channels),
+            (self.mass_re, '@\u200b\\1', self.transform_everyone)
+        )
+
+        converted = argument
+
+        for (regex, sub, to_clean) in tranformations:
+            if to_clean:
+                converted = regex.sub(sub, converted)
+
+        return converted
+
+
+class TagName(CleanContent):
+    def __init__(self, *, lower=False, transform_channels=True, **kwargs):
+        super().__init__(transform_channels=transform_channels, **kwargs)
+        self.lower = lower
+
     async def convert(self, ctx, argument):
         converted = await super().convert(ctx, argument)
 
@@ -119,7 +172,7 @@ class TagName(commands.clean_content):
         if len(converted) > 100:
             raise commands.BadArgument('Tag name cannot have over 100 characters.')
 
-        return converted
+        return converted.lower() if self.lower else converted
 
 
 class Time(commands.Converter):

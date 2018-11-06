@@ -63,7 +63,8 @@ class Tags:
         except RuntimeError as e:
             return await ctx.send(e)
 
-        await ctx.send(row['content'])
+        converted = await utils.CleanContent().convert(ctx, row['content'])
+        await ctx.send(converted)
 
         query = 'UPDATE tags SET uses = uses + 1 WHERE id=$1'
         await ctx.pool.execute(query, row['id'])
@@ -92,7 +93,8 @@ class Tags:
         await ctx.send(pattern.sub(replace, row['content']))
 
     @tag.command(name='create')
-    async def tag_create(self, ctx, name: utils.TagName, *, content: str):
+    async def tag_create(self, ctx, name: utils.TagName, *,
+                         content: utils.CleanContent(transform_roles=False, transform_members=False)):
         """Creates a new tag owned by you.
 
         This tag is server-specific and cannot be used in other servers.
@@ -107,8 +109,6 @@ class Tags:
                     location_id
                 ) VALUES ($1, $2, $3, $4);
                 """
-
-        content = await commands.clean_content().convert(ctx, content)
 
         try:
             await ctx.pool.execute(query, name, content, ctx.author.id, ctx.guild.id)
@@ -136,8 +136,6 @@ class Tags:
         except asyncio.TimeoutError:
             return await ctx.send('You took too long. Goodbye.')
 
-        ctx.message = name
-
         try:
             name = await utils.TagName().convert(ctx, name.content)
         except commands.BadArgument as e:
@@ -157,11 +155,10 @@ class Tags:
         except asyncio.TimeoutError:
             return await ctx.send('You took too long. Goodbye.')
 
-        ctx.message = message
-        content = await commands.clean_content().convert(ctx, message.content)
+        content = await utils.CleanContent(transform_roles=False, transform_members=False).convert(ctx, message.content)
 
         if len(message.attachments) != 0:
-            content = f'{content}\n{" ".join(attachment.url for attachment in message.attachments)}'
+            content = f'{content}\n{" ".join([attachment.url for attachment in message.attachments])}'
 
         await ctx.invoke(self.tag_create, name=name, content=content)
 
@@ -171,7 +168,7 @@ class Tags:
             await ctx.send(f'Please call just {ctx.prefix}tag make.')
 
     @tag.command(name='remove', aliases=['delete'])
-    async def tag_remove(self, ctx, *, name: utils.TagName):
+    async def tag_remove(self, ctx, *, name: utils.TagName(lower=True)):
         """Removes a tag that you own.
 
         The tag owner can always delete their own tags. If someone requests
@@ -179,7 +176,7 @@ class Tags:
         delete it.
         """
 
-        params = [name.lower(), ctx.guild.id]
+        params = [name, ctx.guild.id]
         pred = ''
 
         try:
@@ -204,7 +201,8 @@ class Tags:
         await ctx.send('Tag successfully removed.')
 
     @tag.command(name='edit')
-    async def tag_edit(self, ctx, name: utils.TagName, *, content: commands.clean_content):
+    async def tag_edit(self, ctx, name: utils.TagName(lower=True), *,
+                       content: utils.CleanContent(transform_roles=False, transform_members=False)):
         """Modifies an existing tag that you own.
 
         This command completely replaces the original text. If
@@ -213,7 +211,7 @@ class Tags:
         """
 
         query = 'UPDATE tags SET content=$1 WHERE LOWER(name)=$2 AND location_id=$3 AND owner_id=$4 RETURNING 1;'
-        status = await ctx.pool.fetchval(query, content, name.lower(), ctx.guild.id, ctx.author.id)
+        status = await ctx.pool.fetchval(query, content, name, ctx.guild.id, ctx.author.id)
 
         if not status:
             return await ctx.send('Either this tag does not exist or you do not have permission to edit it.')
@@ -221,7 +219,7 @@ class Tags:
         await ctx.send('Tag successfully edited.')
 
     @tag.command(name='rename')
-    async def tag_rename(self, ctx, name: utils.TagName, *, new_name: utils.TagName):
+    async def tag_rename(self, ctx, name: utils.TagName(lower=True), *, new_name: utils.TagName):
         """Renames an existing tag that you own.
 
         This command completely replaces the original name.
@@ -229,7 +227,7 @@ class Tags:
 
         query = 'UPDATE tags SET name=$1 WHERE LOWER(name)=$2 AND location_id=$3 AND owner_id=$4 RETURNING 1;'
         try:
-            status = await ctx.pool.fetchval(query, new_name, name.lower(), ctx.guild.id, ctx.author.id)
+            status = await ctx.pool.fetchval(query, new_name, name, ctx.guild.id, ctx.author.id)
         except asyncpg.UniqueViolationError:
             return await ctx.send('A tag with that name already exists.')
 
@@ -371,7 +369,7 @@ class Tags:
         await ctx.send(f'{row["name"]}: {row["content"]}')
 
     @tag.command(name='info')
-    async def tag_info(self, ctx, *, tag: utils.TagName):
+    async def tag_info(self, ctx, *, tag: utils.TagName(lower=True)):
         """Retrieves info about a tag.
 
         The info includes things like the owner and how many times it was used.
@@ -395,7 +393,7 @@ class Tags:
                 WHERE location_id=$1
                 AND LOWER(name)=$2;
                 """
-        row = await ctx.pool.fetchrow(query, ctx.guild.id, tag.lower())
+        row = await ctx.pool.fetchrow(query, ctx.guild.id, tag)
         if row is None:
             return await ctx.send('Tag not found.')
 
