@@ -92,7 +92,7 @@ class Tags:
         await ctx.send(pattern.sub(replace, row['content']))
 
     @tag.command(name='create')
-    async def tag_create(self, ctx, name: utils.TagName, *, content: commands.clean_content):
+    async def tag_create(self, ctx, name: utils.TagName, *, content: str):
         """Creates a new tag owned by you.
 
         This tag is server-specific and cannot be used in other servers.
