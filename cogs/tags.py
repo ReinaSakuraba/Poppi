@@ -18,8 +18,9 @@ class Tags:
 
     async def __error(self, ctx, exception):
         if isinstance(exception, commands.UserInputError):
-            if ctx.command.qualified_name == 'tag make':
+            if hasattr(ctx.command, 'on_error'):
                 return
+
             await ctx.send(exception)
 
     async def get_tag(self, guild_id, name, *, pool):
