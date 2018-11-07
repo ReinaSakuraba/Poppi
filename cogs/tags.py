@@ -118,7 +118,7 @@ class Tags:
         except asyncpg.UniqueViolationError:
             await ctx.send('This tag already exists.')
         else:
-            await ctx.send(f'Tag {name} succesfully created.')
+            await ctx.send(f'Tag {name} successfully created.')
 
     @tag.command(name='make', ignore_extra=False)
     async def tag_make(self, ctx):
