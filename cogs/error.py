@@ -3,6 +3,7 @@ import traceback
 import discord
 from discord.ext import commands
 
+from bot import Bot
 import utils
 
 
@@ -14,7 +15,7 @@ class ErrorHandler:
     }
     ignored = (commands.CommandNotFound, commands.UserInputError, commands.CheckFailure)
 
-    async def on_command_error(self, ctx, exception):
+    async def on_command_error(self, ctx: utils.Context, exception: commands.CommandError):
         exception = getattr(exception, 'original', exception)
 
         message = self.handler.get(type(exception))
@@ -40,5 +41,5 @@ class ErrorHandler:
         await ctx.bot.feedback_channel.send(embed=embed)
 
 
-def setup(bot):
+def setup(bot: Bot):
     bot.add_cog(ErrorHandler())
