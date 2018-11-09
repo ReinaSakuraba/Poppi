@@ -3,19 +3,22 @@ import datetime
 import discord
 from discord.ext import commands
 
+from bot import Bot
+import utils
+
 
 class Weather:
-    @commands.command(name='weather', aliases=['w', 'conditions'])
-    async def get_weather(self, ctx, *, location: str = None):
+    @commands.command(aliases=['w', 'conditions'])
+    async def weather(self, ctx: utils.Context, *, location: str):
         """Check the weather in a location"""
-        if location is None:
-            return await ctx.send('Please provide a location to get Weather Information for.')
 
         base = f'http://api.apixu.com/v1/forecast.json?key={ctx.bot.config.apixu_key}&q={location}'
 
         async with ctx.session.get(base) as r:
             if r.status != 200:
-                return await ctx.send('There was an error with your request. Please try again with a different location.')
+                msg = 'There was an error with your request. Please try again with a different location.'
+                return await ctx.send(msg)
+
             data = await r.json()
 
         location = data['location']
@@ -24,8 +27,7 @@ class Weather:
         forecast = data['forecast']['forecastday'][0]['day']
 
         colour = 0xfeff3f if current['is_day'] != 0 else 0x37074b
-        embed = discord.Embed(title=f'Weather for {locmsg}',
-                              description=f'*{current["condition"]["text"]}*',
+        embed = discord.Embed(title=f'Weather for {locmsg}', description=f'*{current["condition"]["text"]}*',
                               colour=colour)
         embed.set_thumbnail(url=f'http:{current["condition"]["icon"]}')
         embed.add_field(name='Temperature', value=f'{current["temp_c"]}°C | {current["temp_f"]}°F')
@@ -43,6 +45,11 @@ class Weather:
 
         await ctx.send(embed=embed)
 
+    @weather.error
+    async def weather_error(self, ctx: utils.Context, exception: commands.CommandError):
+        if isinstance(exception, commands.MissingRequiredArgument):
+            await ctx.send('Please provide a location to get Weather Information for.')
 
-def setup(bot):
+
+def setup(bot: Bot):
     bot.add_cog(Weather())
