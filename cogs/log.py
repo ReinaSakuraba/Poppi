@@ -15,7 +15,7 @@ class Log:
         commands.NoPrivateMessage: 'The "{command_name}" command may not be used in Direct Messages.',
         utils.MissingPerms: '```\n{exception}\n```'
     }
-    ignored = (commands.CommandNotFound, commands.UserInputError, commands.CheckFailure)
+    ignored = (commands.CommandNotFound, commands.UserInputError, commands.CheckFailure, discord.HTTPException)
 
     def __init__(self, bot):
         self.bot = bot
