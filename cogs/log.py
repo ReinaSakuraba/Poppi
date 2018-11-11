@@ -31,7 +31,7 @@ class Log:
             return
 
         embed = discord.Embed(title=f'Command Exception', color=discord.Color.red())
-        embed.set_footer(text='Occured on')
+        embed.set_footer(text='Occurred on')
         embed.timestamp = ctx.message.created_at
 
         exc = ''.join(traceback.format_exception(type(exception), exception, exception.__traceback__, chain=False))
