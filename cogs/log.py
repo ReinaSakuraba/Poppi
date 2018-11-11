@@ -58,10 +58,10 @@ class Log:
         embed = discord.Embed(title=f'{event.title()} Server', color=color, timestamp=datetime.datetime.now())
         embed.add_field(name='Server', value=f'{guild.name} - {guild.id}', inline=False)
         embed.add_field(name='Owner', value=f'{guild.owner} - {guild.owner.id}', inline=False)
-        embed.add_field(name='Members', value=guild.member_count)
+        embed.add_field(name='Members', value=str(guild.member_count))
         embed.add_field(name='Bots', value=f'{bots} - {bots/guild.member_count:.2%}')
-        embed.add_field(name='Channels', value=len(guild.channels))
-        embed.add_field(name='Roles', value=len(guild.roles))
+        embed.add_field(name='Channels', value=str(len(guild.channels)))
+        embed.add_field(name='Roles', value=str(len(guild.roles)))
         embed.set_footer(text=event.title())
 
         parameters = {'embed': embed}
